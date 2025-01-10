@@ -1,0 +1,21 @@
+@import './components/tooltip.scss'; // lower specificity
+@import './components/channel.scss';
+@import './components/channel-description.scss';
+@import './components/content-renderer.scss';
+@import './components/error-tooltip.scss';
+@import './components/horizontal-divider.scss';
+@import './components/label.scss';
+@import './components/moveable-marker.scss';
+@import './components/pick-marker.scss';
+@import './components/follow-pick-marker.scss';
+@import './components/measure-window-selection.scss';
+@import './components/selection-window.scss';
+@import './components/signal-detection.scss';
+@import './components/station.scss';
+@import './components/ruler.scss';
+@import './components/theoretical-phase-window.scss';
+@import './components/uncertainty-marker.scss';
+@import './components/vertical-marker.scss';
+@import './components/weavess-display-panel.scss';
+@import './components/x-axis.scss';
+@import './components/y-axis.scss';

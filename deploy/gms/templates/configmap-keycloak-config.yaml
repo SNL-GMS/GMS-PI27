@@ -1,0 +1,11 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: keycloak-config
+  annotations:
+    "helm.sh/resource-policy": keep
+data:
+  client_id: {{ .Values.keycloak.clientId | quote }}
+  realm: {{ .Values.keycloak.realm | quote }}
+  url: {{ .Values.keycloak.url | quote }}

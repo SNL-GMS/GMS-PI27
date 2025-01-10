@@ -1,0 +1,70 @@
+[
+    {
+        "name": "default",
+        "constraints": [
+        {
+                "constraintType": "DEFAULT"
+        }
+       ],
+       "parameters": {
+           "lowerFrequencyBoundHz": 5.0,
+           "upperFrequencyBoundHz": 6.0,
+           "frequencySamplingMode": "LOG",
+           "frequencySamplingCount": 1024
+       }
+    },
+    {
+      "name": "ASAR-Values",
+      "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {"type": "EQ", "negated": false},
+            "value": ["ASAR"],
+            "priority": 100
+        }
+        ],
+         "parameters": {
+           "lowerFrequencyBoundHz": 7.0,
+           "upperFrequencyBoundHz": 8.0,
+           "frequencySamplingMode": "LINEAR",
+           "frequencySamplingCount": 2048
+        }
+    },
+    {
+      "name": "channelBand-Values",
+      "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "channelBand",
+            "operator": {"type": "EQ", "negated": false},
+            "value": ["S"],
+            "priority": 80
+        }
+        ],
+         "parameters": {
+           "lowerFrequencyBoundHz": 9.0,
+           "upperFrequencyBoundHz": 10.0,
+           "frequencySamplingMode": "LOG",
+           "frequencySamplingCount": 4098
+        }
+    },
+    {
+      "name": "channelInstrument-Values",
+      "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "channelInstrument",
+            "operator": {"type": "EQ", "negated": false},
+            "value": ["H"],
+            "priority": 70
+        }
+        ],
+         "parameters": {
+           "lowerFrequencyBoundHz": 1e-3,
+           "upperFrequencyBoundHz": 1e-1,
+           "frequencySamplingMode": "LINEAR",
+           "frequencySamplingCount": 2
+        }
+    }
+]

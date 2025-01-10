@@ -1,0 +1,34 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+    api project(':signal-detection-coi')
+    api project(':spring-persistence-api')
+    api libs.org.apache.commons.commons.lang3
+
+    implementation project(':spring-framework-utilities')
+    implementation project(':caching-utils')
+    
+    implementation project(':event-connector')
+    implementation project(':event-management-api')
+    implementation project(':event-utility')
+    api project(':event-coi')
+    
+    api project(':signal-detection-coi')
+    implementation project(':signal-detection-dao')
+    implementation project(':signal-detection-accessor')
+    implementation project(':signal-detection-database-connector')
+
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+
+    testImplementation project(':test-utils')
+    
+    testImplementation libs.com.h2database.h2
+    testImplementation project(':test-utils')
+    testImplementation(testFixtures(project(':event-coi')))
+    testImplementation(testFixtures(project(':signal-detection-coi')))
+    testImplementation(testFixtures(project(':station-definition-coi')))
+}

@@ -1,0 +1,116 @@
+{
+    "name": "mkar-default-b-default-default-p,s-filter",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "MKAR"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelBand",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "B"
+            ],
+            "priority": 80
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "phase",
+            "operator": {
+                "type": "IN",
+                "negated": false
+            },
+            "value": [
+                "P",
+                "S"
+            ],
+            "priority": 50
+        }
+    ],
+    "parameters": {
+        "filterDefinitionsForDistanceRangesByUsage": {
+            "ONSET": [
+                {
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.5 1.5 3 BP non-causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "DETECTION": [
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 0,
+                        "maxDistanceDeg": 90
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "1.0 5.0 3 BP causal"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 90,
+                        "maxDistanceDeg": 180
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "1.0 3.0 3 BP causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "FK": [
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 0,
+                        "maxDistanceDeg": 90
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "4.9 5.1 3 BP causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "AMPLITUDE": [
+                {
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "4.9 5.1 3 BP causal"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

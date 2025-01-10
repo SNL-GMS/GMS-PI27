@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`history component can render with no history - non-ideal state 1`] = `
+<div>
+  <div
+    class="base-display history-display-window gms-body-text"
+    tabindex="-1"
+  >
+     
+    <div
+      class="bp5-non-ideal-state bp5-non-ideal-state-vertical"
+    >
+      <div
+        class="bp5-non-ideal-state-visual"
+        style="font-size: 48px; line-height: 48px;"
+      >
+        <span
+          aria-hidden="true"
+          class="bp5-icon bp5-icon-select"
+          data-icon="select"
+          tabindex="-1"
+        />
+      </div>
+      <div
+        class="bp5-non-ideal-state-text"
+      >
+        <h4
+          class="bp5-heading"
+        >
+          No Interval Selected
+        </h4>
+        <div>
+          Select an interval in the Workflow Display to view undo/redo history
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

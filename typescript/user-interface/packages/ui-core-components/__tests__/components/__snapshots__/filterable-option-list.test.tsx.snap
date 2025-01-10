@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Core drop down Can filter down based on input 1`] = `
+<div>
+  <div
+    class="filterable-option-list"
+  >
+    <input
+      class="filterable-option-list__search"
+      placeholder="Search input"
+      style="width: 120px; margin-left: 0px;"
+      tabindex="0"
+      type="search"
+      value="alpha"
+    />
+    <div
+      class="filterable-option-list__list"
+      style="width: 120px; margin-left: 0px;"
+    >
+      <div
+        class="filterable-option-list-item__selected filterable-option-list-item"
+        data-cy="filterable-option-alpha"
+        id="alpha"
+        tabindex="0"
+      >
+        alpha
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Core drop down Renders 1`] = `
+<div>
+  <div
+    class="filterable-option-list"
+  >
+    <input
+      class="filterable-option-list__search"
+      placeholder="Search input"
+      style="width: 120px; margin-left: 0px;"
+      tabindex="0"
+      type="search"
+      value="o"
+    />
+    <div
+      class="filterable-option-list__list"
+      style="width: 120px; margin-left: 0px;"
+    />
+  </div>
+</div>
+`;
+
+exports[`Core drop down disables search given the disabled flag 1`] = `
+<div>
+  <div
+    class="filterable-option-list"
+  >
+    <input
+      class="filterable-option-list__search filterable-option-list__search--disabled"
+      disabled=""
+      placeholder="Search input"
+      style="width: 120px; margin-left: 0px;"
+      tabindex="0"
+      type="search"
+      value="o"
+    />
+    <div
+      class="filterable-option-list__list"
+      style="width: 120px; margin-left: 0px;"
+    />
+  </div>
+</div>
+`;

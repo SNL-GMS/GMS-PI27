@@ -1,0 +1,8 @@
+NAME       = jest-tests
+
+BUILD_ARGS = --build-arg 'MOZILLA_URL=$${MOZILLA_URL}' \
+             --build-arg CACHE_BUST=`date +%s`
+
+DOCKERFILE = Dockerfile.jest-tests
+
+include $(shell CI-MAKE-CONFIG-PATH)/Makefile.docker

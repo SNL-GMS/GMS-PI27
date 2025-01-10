@@ -1,0 +1,41 @@
+{
+    "name": "default-phase-filter",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "phase",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "S"
+            ],
+			"priority": 50
+        },
+		{
+            "constraintType": "STRING",
+            "criterion": "filter",
+            "operator": {
+                "type": "IN",
+                "negated": false
+            },
+            "value": [
+				"Detect",
+				"Onset",
+				"FK"
+            ],
+			"priority": 30
+        }
+    ],
+    "parameters": {
+        "filterDefinition": {
+			"$ref=global.filter-definition": [
+				{
+					"criterion": "name",
+					"value": "1.5 3.0 3 BP causal"
+				}
+			]
+		}
+    }
+}

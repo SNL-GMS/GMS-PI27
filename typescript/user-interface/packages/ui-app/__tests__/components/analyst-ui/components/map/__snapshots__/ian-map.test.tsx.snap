@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui map can mount map 1`] = `
+<div>
+  <div
+    class="bp5-non-ideal-state bp5-non-ideal-state-vertical"
+  >
+    <div
+      class="bp5-non-ideal-state-text"
+    >
+      <h4
+        class="bp5-heading"
+      >
+        Map
+      </h4>
+      <div>
+        Loading Display
+      </div>
+    </div>
+    <div
+      aria-label="loading"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      class="bp5-spinner bp5-intent-primary"
+      role="progressbar"
+    >
+      <div
+        class="bp5-spinner-animation"
+      >
+        <svg
+          height="50"
+          stroke-width="8.00"
+          viewBox="1.00 1.00 98.00 98.00"
+          width="50"
+        >
+          <path
+            class="bp5-spinner-track"
+            d="M 50,50 m 0,-45 a 45,45 0 1 1 0,90 a 45,45 0 1 1 0,-90"
+          />
+          <path
+            class="bp5-spinner-head"
+            d="M 50,50 m 0,-45 a 45,45 0 1 1 0,90 a 45,45 0 1 1 0,-90"
+            pathLength="280"
+            stroke-dasharray="280 280"
+            stroke-dashoffset="210"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ui map can mount map component 1`] = `
+<div>
+  <div
+    class="base-display ian-map-gl-container"
+    data-cy="ian-map-container"
+    tabindex="-1"
+  >
+     
+    <div
+      class="map-hotkeys"
+      role="tab"
+      style="height: 100%;"
+      tabindex="-1"
+    >
+      <div
+        class="cesium-viewer-toolbar"
+      >
+        <span
+          class="cesium-sceneModePicker-wrapper cesium-toolbar-button"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,9 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+    api project(':java-utilities')
+    implementation libs.org.junit.jupiter.junit.jupiter.base
+    implementation libs.org.assertj.assertj.core
+}

@@ -1,0 +1,15 @@
+@import '@blueprintjs/core/lib/scss/variables.scss';
+
+.qc-segment-selection-menu-table {
+  width: 1000px;
+  padding: 0.5rem 0rem 0rem 0rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  position: relative;
+
+  .ag-cell-value {
+    padding-left: 10px;
+  }
+}

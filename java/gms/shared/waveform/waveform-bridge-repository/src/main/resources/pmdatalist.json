@@ -1,0 +1,24 @@
+{
+    "pmList":[
+    {"sta": "ASAR.AS01", "chan": "SHZ", "processingOperation": "AMPLITUDE_MEASUREMENT_BEAM", "pmGroup": 3, "qcMaskId": 1000000000001, "startSample": 60, "qcMaskType": 60},
+    {"sta": "ASAR.AS01", "chan": "SHZ", "processingOperation": "AMPLITUDE_MEASUREMENT_BEAM", "pmGroup": 3, "qcMaskId": 3000000000303, "startSample": 0, "qcMaskType": 2060},
+    {"sta": "ASAR.AS01", "chan": "SHZ", "processingOperation": "AMPLITUDE_MEASUREMENT_BEAM", "pmGroup": 3, "qcMaskId": 3000000000304, "startSample": 0, "qcMaskType": 2040},
+    {"sta": "ASAR.AS01", "chan": "SHZ", "processingOperation": "AMPLITUDE_MEASUREMENT_BEAM", "pmGroup": 3, "qcMaskId": 3000000000305, "startSample": 0, "qcMaskType": 2030},
+    {"sta": "ASAR.AS01", "chan": "SHZ", "processingOperation": "AMPLITUDE_MEASUREMENT_BEAM", "pmGroup": 3, "qcMaskId": 3000000000306, "startSample": 0, "qcMaskType": 2010},
+    {"sta": "ASAR.AS01", "chan": "SHZ", "processingOperation": "AMPLITUDE_MEASUREMENT_BEAM", "pmGroup": 3, "qcMaskId": 3000000000307, "startSample": 0, "qcMaskType": 2020},
+    {"sta": "ASAR.AS01", "chan": "SHZ", "processingOperation": "AMPLITUDE_MEASUREMENT_BEAM", "pmGroup": 3, "qcMaskId": 1000000000001, "startSample": 4378, "qcMaskType": 40},
+    {"sta": "FINES.FIA0", "chan": "SHZ", "processingOperation": "DISPLAY_FILTER", "pmGroup": 10, "qcMaskId": 1000000000029, "startSample": 94727, "qcMaskType": 500},
+    {"sta": "FINES.FIA0", "chan": "SHZ", "processingOperation": "DISPLAY_FILTER", "pmGroup": 10, "qcMaskId": 1000000000029, "startSample": 102055, "qcMaskType": 40},    
+    {"sta": "FINES.FIA0", "chan": "SHZ", "processingOperation": "DISPLAY_FILTER", "pmGroup": 10, "qcMaskId": 1000000000029, "startSample": 101326, "qcMaskType": 200},
+    {"sta": "TORD.TOA0", "chan": "BHZ", "processingOperation": "SPECTROGRAM", "pmGroup": 23, "qcMaskId": 7000000000022, "startSample": 0, "qcMaskType": 600},
+    {"sta": "MAW.MAW", "chan": "BHE", "processingOperation": "VIRTUAL_BEAM", "pmGroup": 24, "qcMaskId": 1000000000052, "startSample": 5150, "qcMaskType": 200},
+    {"sta": "MAW.MAW", "chan": "BHE", "processingOperation": "VIRTUAL_BEAM", "pmGroup": 24, "qcMaskId": 1000000000052, "startSample": 17507, "qcMaskType": 10},
+    {"sta": "MAW.MAW", "chan": "BHE", "processingOperation": "VIRTUAL_BEAM", "pmGroup": 24, "qcMaskId": 1000000000052, "startSample": 24580, "qcMaskType": 400},
+    {"sta": "MAW.MAW", "chan": "BHE", "processingOperation": "VIRTUAL_BEAM", "pmGroup": 24, "qcMaskId": 1000000000052, "startSample": 38127, "qcMaskType": 500},
+    {"sta": "MAW.MAW", "chan": "BHE", "processingOperation": "VIRTUAL_BEAM", "pmGroup": 24, "qcMaskId": 1000000000052, "startSample": 68824, "qcMaskType": 100},
+    {"sta": "MAW.MAW", "chan": "BHE", "processingOperation": "VIRTUAL_BEAM", "pmGroup": 24, "qcMaskId": 1000000000052, "startSample": 83193, "qcMaskType": 30},
+    {"sta": "MAW.MAW", "chan": "BHE", "processingOperation": "VIRTUAL_BEAM", "pmGroup": 24, "qcMaskId": 1000000000052, "startSample": 84000, "qcMaskType": 50},
+    {"sta": "MAW.MAW", "chan": "BHE", "processingOperation": "VIRTUAL_BEAM", "pmGroup": 24, "qcMaskId": 1000000000052, "startSample": 84543, "qcMaskType": 300}
+]
+
+}

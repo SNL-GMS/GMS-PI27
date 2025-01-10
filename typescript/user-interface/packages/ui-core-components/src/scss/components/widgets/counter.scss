@@ -1,0 +1,35 @@
+.counter {
+  @include centerChildren;
+  background: var(--gms-prominent-background, $core-prominent-background);
+  height: 100%;
+  padding: 0 1em;
+  border-radius: $rounded-rectangle-radius;
+  font-size: 1rem;
+
+  &__entry {
+    @include centerChildren('vertical');
+    & + & {
+      margin-left: 1.5em;
+    }
+    &--disabled .counter__count {
+      --entry-color: var(--gms-soft, $core-soft);
+    }
+    &--clickable {
+      cursor: pointer;
+    }
+  }
+
+  &__count {
+    font-family: var(--gms-mono, $core-mono);
+    color: var(--entry-color, $core-main);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 0.5ch;
+    &--prefix {
+      opacity: 0.33;
+    }
+    &--main {
+      opacity: 1;
+    }
+  }
+}

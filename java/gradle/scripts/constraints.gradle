@@ -1,0 +1,29 @@
+dependencies.constraints {
+
+    // Dependencies not managed by the Platform
+    implementation libs.com.github.ffpojo.ffpojo
+    implementation libs.com.github.tomakehurst.wiremock.standalone
+    implementation libs.com.github.wendykierp.jtransforms
+    implementation libs.com.google.auto.service.auto.service
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+    implementation libs.com.google.auto.value.auto.value.annotations
+    implementation libs.com.google.guava.guava
+    implementation libs.com.mchange.c3p0
+    implementation libs.io.etcd.jetcd.core
+    implementation libs.io.hypersistence.hypersistence.utils.hibernate62
+    implementation libs.io.minio.minio
+    implementation libs.io.prometheus.jmx.jmx.prometheus.javaagent
+    implementation libs.io.swagger.core.v3.swagger.core
+    implementation libs.net.jodah.failsafe
+    implementation libs.net.logstash.logback.logstash.logback.encoder
+    implementation libs.nl.jqno.equalsverifier
+    implementation libs.org.apache.commons.commons.math3
+    implementation libs.org.apache.commons.commons.text
+    implementation libs.org.apache.httpcomponents.httpclient
+    implementation libs.org.apache.ignite.ignite.core
+    implementation libs.org.apache.ignite.ignite.kubernetes
+    implementation libs.org.apache.ignite.ignite.slf4j
+    implementation libs.org.msgpack.jackson.dataformat.msgpack
+    implementation libs.org.owasp.encoder.encoder
+    implementation libs.org.springdoc.springdoc.openapi.starter.webmvc.ui
+}

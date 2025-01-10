@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumericInputToolbarItem NumericInputToolbarItem renders directly 1`] = `
+<div>
+  <div>
+    <span
+      class="toolbar-numeric__label toolbar-numeric__label-left"
+    >
+      Numeric label
+    </span>
+    <div
+      class="numeric-input__wrapper"
+    >
+      <div
+        class="bp5-control-group bp5-fill bp5-numeric-input numeric-input undefined"
+      >
+        <div
+          class="bp5-input-group"
+        >
+          <input
+            aria-valuemax="43"
+            aria-valuemin="41"
+            aria-valuenow="42"
+            autocomplete="off"
+            class="bp5-input"
+            id="numericInput-0"
+            max="43"
+            min="41"
+            placeholder="Enter a number..."
+            role="spinbutton"
+            title="Hello Numeric"
+            type="text"
+            value="42"
+          />
+        </div>
+        <div
+          class="bp5-button-group bp5-vertical bp5-fixed"
+        >
+          <button
+            aria-controls="numericInput-0"
+            aria-label="increment"
+            class="bp5-button"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-chevron-up"
+            >
+              <svg
+                data-icon="chevron-up"
+                height="16"
+                role="img"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M254.2 134.2L174.2 214.2C170.6 217.8 165.6 220 160 220S149.4 217.8 145.8 214.2L65.8 134.2C62.2 130.6 60 125.6 60 120C60 109 69 100 80 100C85.6 100 90.6 102.2 94.2 105.8L160 171.8L225.8 106C229.4 102.2 234.4 100 240 100C251 100 260 109 260 120C260 125.6 257.8 130.6 254.2 134.2z"
+                  fill-rule="evenodd"
+                  transform="scale(0.05, -0.05) translate(-160, -160)"
+                  transform-origin="center"
+                />
+              </svg>
+            </span>
+          </button>
+          <button
+            aria-controls="numericInput-0"
+            aria-label="decrement"
+            class="bp5-button"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-chevron-down"
+            >
+              <svg
+                data-icon="chevron-down"
+                height="16"
+                role="img"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M240 220C234.4 220 229.4 217.8 225.8 214.2L160 148.2L94.2 214.2C90.6 217.8 85.6 220 80 220C69 220 60 211 60 200C60 194.4 62.2 189.4 65.8 185.8L145.8 105.8C149.4 102.2 154.4 100 160 100S170.6 102.2 174.2 105.8L254.2 185.8C257.8 189.4 260 194.4 260 200C260 211 251 220 240 220z"
+                  fill-rule="evenodd"
+                  transform="scale(0.05, -0.05) translate(-160, -160)"
+                  transform-origin="center"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NumericInputToolbarItem NumericInputToolbarItem renders with labelRight 1`] = `
+<div>
+  <div>
+    <div
+      class="numeric-input__wrapper"
+    >
+      <div
+        class="bp5-control-group bp5-fill bp5-numeric-input numeric-input undefined"
+      >
+        <div
+          class="bp5-input-group"
+        >
+          <input
+            aria-valuemax="43"
+            aria-valuemin="41"
+            aria-valuenow="42"
+            autocomplete="off"
+            class="bp5-input"
+            id="numericInput-1"
+            max="43"
+            min="41"
+            placeholder="Enter a number..."
+            role="spinbutton"
+            title="Hello Numeric"
+            type="text"
+            value="42"
+          />
+        </div>
+        <div
+          class="bp5-button-group bp5-vertical bp5-fixed"
+        >
+          <button
+            aria-controls="numericInput-1"
+            aria-label="increment"
+            class="bp5-button"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-chevron-up"
+            >
+              <svg
+                data-icon="chevron-up"
+                height="16"
+                role="img"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M254.2 134.2L174.2 214.2C170.6 217.8 165.6 220 160 220S149.4 217.8 145.8 214.2L65.8 134.2C62.2 130.6 60 125.6 60 120C60 109 69 100 80 100C85.6 100 90.6 102.2 94.2 105.8L160 171.8L225.8 106C229.4 102.2 234.4 100 240 100C251 100 260 109 260 120C260 125.6 257.8 130.6 254.2 134.2z"
+                  fill-rule="evenodd"
+                  transform="scale(0.05, -0.05) translate(-160, -160)"
+                  transform-origin="center"
+                />
+              </svg>
+            </span>
+          </button>
+          <button
+            aria-controls="numericInput-1"
+            aria-label="decrement"
+            class="bp5-button"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-chevron-down"
+            >
+              <svg
+                data-icon="chevron-down"
+                height="16"
+                role="img"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M240 220C234.4 220 229.4 217.8 225.8 214.2L160 148.2L94.2 214.2C90.6 217.8 85.6 220 80 220C69 220 60 211 60 200C60 194.4 62.2 189.4 65.8 185.8L145.8 105.8C149.4 102.2 154.4 100 160 100S170.6 102.2 174.2 105.8L254.2 185.8C257.8 189.4 260 194.4 260 200C260 211 251 220 240 220z"
+                  fill-rule="evenodd"
+                  transform="scale(0.05, -0.05) translate(-160, -160)"
+                  transform-origin="center"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <span
+      class="toolbar-numeric__label"
+    >
+      Numeric label right
+    </span>
+  </div>
+</div>
+`;

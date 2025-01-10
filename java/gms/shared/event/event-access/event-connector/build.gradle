@@ -1,0 +1,17 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+    api project(':event-dao')
+    api project(':signal-detection-dao')
+    api project(':common-connector')
+
+    api libs.org.hibernate.orm.hibernate.core
+    api libs.org.springframework.spring.context
+
+    implementation libs.com.google.guava.guava
+    
+    testImplementation(testFixtures(project(':event-coi')))
+    testImplementation libs.com.h2database.h2
+}

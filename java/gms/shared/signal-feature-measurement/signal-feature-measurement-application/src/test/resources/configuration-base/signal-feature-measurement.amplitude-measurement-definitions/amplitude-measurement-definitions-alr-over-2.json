@@ -1,0 +1,29 @@
+{
+    "name": "amplitude-measurement-definition-alr-over-2",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "amplitudeMeasurementType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "AMPLITUDE_ALR_OVER_2"
+            ]
+        }
+    ],
+    "parameters": {
+        "maxPeriod": 22,
+        "measurementMethod": "MAX_PEAK_TO_TROUGH",
+        "minPeriod": 18,
+        "phases": [
+            "LR"
+        ],
+        "removeFilterResponse": true,
+        "removeInstrumentResponse": true,
+        "smoothnessThreshold": 0.5,
+        "windowArrivalTimeLead": 0,
+        "windowDuration": 600
+    }
+}

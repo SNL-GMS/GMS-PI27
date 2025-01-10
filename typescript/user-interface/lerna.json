@@ -1,0 +1,11 @@
+{
+  "lerna": "8.0.1",
+  "npmClient": "yarn",
+  "packages": ["packages/*"],
+  "command": {
+    "run": {
+      "ignore": ["@gms/golden-layout"]
+    }
+  },
+  "version": "independent"
+}

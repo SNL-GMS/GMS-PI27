@@ -1,0 +1,439 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Workflow Panel matches snapshot with expected text 1`] = `
+<div>
+  <div
+    class="base-display "
+    tabindex="-1"
+  >
+    <div
+      role="tab"
+      style="height: 100%;"
+      tabindex="-1"
+    >
+      <div
+        class="workflow-panel"
+        data-cy="workflow-panel"
+        tabindex="0"
+      >
+        <div
+          class="toolbar"
+          style="width: 1884px;"
+        >
+          <div
+            class="toolbar__left-group"
+          >
+            <div
+              class="toolbar-item toolbar-item__left"
+            >
+              <div
+                class="toolbar-label-value"
+              >
+                <div
+                  class="ian-label-value-container"
+                >
+                  <div
+                    class="ian-label-value__label"
+                    data-cy="open-time-range-label"
+                  >
+                    Open Time Range: 
+                  </div>
+                  <div
+                    class="ian-label-value__value"
+                    data-cy="open-time-range-value"
+                    title="The opened time range"
+                  >
+                    <span
+                      class="monospace"
+                    >
+                      2021-01-01 11:20:00
+                    </span>
+                      to  
+                    <span
+                      class="monospace"
+                    >
+                      2021-01-01 13:00:00
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="toolbar-item toolbar-item__left"
+            >
+              <div
+                class="toolbar-label-value"
+                style="margin-left: 8em;"
+              >
+                <div
+                  class="ian-label-value-container"
+                >
+                  <div
+                    class="ian-label-value__label"
+                    data-cy="processing-stage-label"
+                  >
+                    Processing Stage: 
+                  </div>
+                  <div
+                    class="ian-label-value__value"
+                    data-cy="processing-stage-value"
+                    title="The opened processing stage"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="toolbar__center-group"
+          >
+            <div
+              class="toolbar__whitespace"
+              style="width: 1884px;"
+            />
+          </div>
+          <div
+            class="toolbar__right-group"
+          >
+            <div
+              class="toolbar-item
+                  "
+            >
+              <div>
+                <button
+                  class="bp5-button toolbar-button--icon-only"
+                  data-cy="workflow-doubleLeftArrowItem"
+                  style="width: 30px;"
+                  title="Pan the workflow to the left by 7 days (Shift + ←)"
+                  type="button"
+                >
+                  <span
+                    class="bp5-button-text"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="bp5-icon bp5-icon-standard bp5-icon-double-chevron-left"
+                      data-icon="double-chevron-left"
+                    />
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="toolbar-item
+                  "
+            >
+              <div>
+                <button
+                  class="bp5-button toolbar-button--icon-only"
+                  data-cy="workflow-singleLeftArrowItem"
+                  style="width: 30px;"
+                  title="Pan the workflow to the left by 1 day (←)"
+                  type="button"
+                >
+                  <span
+                    class="bp5-button-text"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="bp5-icon bp5-icon-standard bp5-icon-chevron-left"
+                      data-icon="chevron-left"
+                    />
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="toolbar-item
+                  "
+            >
+              <div>
+                <button
+                  class="bp5-button toolbar-button--icon-only"
+                  data-cy="workflow-singleRightArrowItem"
+                  style="width: 30px;"
+                  title="Pan the workflow to the right by 1 day (→)"
+                  type="button"
+                >
+                  <span
+                    class="bp5-button-text"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="bp5-icon bp5-icon-standard bp5-icon-chevron-right"
+                      data-icon="chevron-right"
+                    />
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="toolbar-item
+                  "
+            >
+              <div>
+                <button
+                  class="bp5-button toolbar-button--icon-only"
+                  data-cy="workflow-doubleRightArrowItem"
+                  style="width: 30px;"
+                  title="Pan the workflow to the right by 7 days (Shift + →)"
+                  type="button"
+                >
+                  <span
+                    class="bp5-button-text"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="bp5-icon bp5-icon-standard bp5-icon-double-chevron-right"
+                      data-icon="double-chevron-right"
+                    />
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="toolbar-item
+                  "
+            >
+              <div>
+                <button
+                  class="bp5-button bp5-align-left toolbar-button"
+                  data-cy="workflow-openAnythingButtonItem"
+                  title="Open anything"
+                  type="button"
+                >
+                  <span
+                    class="bp5-button-text"
+                  >
+                    <span />
+                    <span
+                      aria-hidden="true"
+                      class="bp5-icon bp5-icon-standard bp5-icon-search-template"
+                      data-icon="search-template"
+                    />
+                    <span>
+                      Open Anything...
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="non-ideal-loading-wrapper"
+        >
+          <div
+            class="workflow-table"
+            style="height: 1130px;"
+          >
+            <div
+              class="workflow-table-container"
+            >
+              <div
+                class="workflow-table__curtain-left"
+                style="height: 48px;"
+              />
+              <div
+                class="workflow-table__buttons"
+              >
+                <div
+                  class="workflow-button"
+                  data-cy="workflow-expand-AL1"
+                >
+                  <div
+                    class="workflow-button__expand_collapse"
+                  >
+                    <button
+                      class="bp5-button stage-row__expand-button"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="bp5-icon bp5-icon-standard bp5-icon-small-plus"
+                        data-icon="small-plus"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="workflow-button"
+                  data-cy="workflow-expand-Auto Network"
+                >
+                  <div
+                    class="workflow-button__expand_collapse"
+                  >
+                    <button
+                      class="bp5-button stage-row__expand-button"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="bp5-icon bp5-icon-standard bp5-icon-small-plus"
+                        data-icon="small-plus"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="workflow-day-boundary-container"
+                style="width: 120px; height: 48px;"
+              />
+              <div
+                data-cy="workflow-table__container"
+                role="presentation"
+                style="height: 48px;"
+              >
+                <div
+                  aria-label="grid"
+                  class="ReactVirtualized__Collection"
+                  role="grid"
+                  style="box-sizing: border-box; direction: ltr; height: 48px; position: relative; width: 1693px; will-change: transform; overflow-x: hidden; overflow-y: hidden;"
+                  tabindex="0"
+                >
+                  <div
+                    class="ReactVirtualized__Collection__innerScrollContainer"
+                    style="height: 48px; max-height: 48px; max-width: 120px; overflow: hidden; width: 120px;"
+                  >
+                    <div
+                      style="height: 24px; left: 0px; position: absolute; top: 0px; width: 4px;"
+                    />
+                    <div
+                      style="height: 24px; left: 0px; position: absolute; top: 0px; width: 120px;"
+                    >
+                      <div
+                        aria-expanded="false"
+                        class="core-tooltip bp5-popover-target"
+                      >
+                        <div
+                          class="interval-cell interval-cell--in-progress interval-cell--clickable"
+                          data-cy="INTERACTIVE"
+                          data-interval="generic-interval"
+                          data-sequence-interval="AL1"
+                          data-start-time="1622053587"
+                          data-testid="Open interval at 1622053587"
+                          role="button"
+                          tabindex="-1"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      style="height: 24px; left: 116px; position: absolute; top: 0px; width: 4px;"
+                    />
+                    <div
+                      style="height: 24px; left: 0px; position: absolute; top: 24px; width: 4px;"
+                    />
+                    <div
+                      style="height: 24px; left: 116px; position: absolute; top: 24px; width: 4px;"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="workflow-table__labels"
+                style="height: 48px;"
+              >
+                <div
+                  class="workflow-table-label"
+                  data-cy="workflow-table-label-AL1"
+                >
+                  <div>
+                    AL1
+                  </div>
+                </div>
+                <div
+                  class="workflow-table-label"
+                  data-cy="workflow-table-label-Auto Network"
+                >
+                  <div>
+                    Auto Network
+                  </div>
+                </div>
+              </div>
+              <div
+                class="workflow-table__curtain-right"
+                style="height: 48px;"
+              />
+            </div>
+            <div
+              class="workflow-table__time-axis"
+            >
+              <div
+                aria-label="grid"
+                class="ReactVirtualized__Collection"
+                role="grid"
+                style="box-sizing: border-box; direction: ltr; height: 16px; position: relative; width: 1693px; will-change: transform; overflow-x: hidden; overflow-y: auto;"
+                tabindex="0"
+              >
+                <div
+                  class="ReactVirtualized__Collection__innerScrollContainer"
+                  style="height: 48px; max-height: 48px; max-width: 120px; overflow: hidden; width: 120px;"
+                />
+              </div>
+              <div
+                class="time-axis-wrapper"
+                style="width: 1693px;"
+              >
+                <div
+                  class="time-axis"
+                >
+                  <svg
+                    height="25"
+                    style="fill: #fff;"
+                    width="120"
+                  >
+                    <g
+                      class="workflow-time-axis"
+                      fill="none"
+                      font-family="sans-serif"
+                      font-size="10"
+                      text-anchor="middle"
+                    >
+                      <path
+                        class="domain"
+                        d="M2,0.5H122"
+                        stroke="currentColor"
+                      />
+                      <g
+                        class="tick"
+                        opacity="1"
+                        transform="translate(69.1,0)"
+                      >
+                        <line
+                          stroke="currentColor"
+                          y2="6"
+                        />
+                        <text
+                          dy="0.71em"
+                          fill="currentColor"
+                          y="9"
+                        >
+                          19:00
+                        </text>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="workflow-time-range"
+              >
+                <span
+                  class="time-range-left"
+                >
+                  2021-05-26
+                </span>
+                <span
+                  class="time-range-right"
+                >
+                  2021-05-26
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

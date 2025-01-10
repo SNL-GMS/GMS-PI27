@@ -1,0 +1,16 @@
+{
+  "name": "feature-prediction-service",
+  "constraints": [
+    {
+      "constraintType": "DEFAULT"
+    }
+  ],
+  "parameters": {
+    "pluginByFeatureMeasurementType": {
+      "ARRIVAL_TIME": "bicubicSplineFeaturePredictor",
+      "SLOWNESS": "bicubicSplineFeaturePredictor",
+      "SOURCE_TO_RECEIVER_AZIMUTH": "bicubicSplineFeaturePredictor",
+      "RECEIVER_TO_SOURCE_AZIMUTH": "bicubicSplineFeaturePredictor"
+    }
+  }
+}

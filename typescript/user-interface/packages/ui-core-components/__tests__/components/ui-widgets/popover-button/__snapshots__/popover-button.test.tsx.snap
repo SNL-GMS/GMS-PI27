@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopoverButton renders 1`] = `
+<div>
+  <div>
+    <button
+      class="bp5-button bp5-align-left toolbar-button"
+      style="width: 150px;"
+      title="my tool tip"
+      type="button"
+    >
+      <span
+        class="bp5-button-text"
+      >
+        <span>
+          my label
+        </span>
+        <span
+          aria-hidden="true"
+          class="bp5-icon bp5-icon-standard bp5-icon-airplane"
+          data-icon="airplane"
+        />
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`PopoverButton renders as menu item 1`] = `
+<div>
+  <div>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        class="bp5-menu-item bp5-popover-dismiss"
+        label="opens dialog"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          class="bp5-menu-item-icon"
+        >
+          <span
+            aria-hidden="true"
+            class="bp5-icon bp5-icon-standard bp5-icon-menu-open"
+            data-icon="menu-open"
+            tabindex="-1"
+          />
+        </span>
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          my label
+        </div>
+        <span
+          class="bp5-menu-item-label"
+        >
+          opens dialog
+        </span>
+      </a>
+    </li>
+  </div>
+</div>
+`;

@@ -1,0 +1,38 @@
+plugins {
+    id('java-library')
+    id('java-test-fixtures')
+}
+
+dependencies {
+    // GMS Dependencies
+    api project(':workflow-coi')
+    api project(':signal-detection-coi')
+    api project(':common-coi-types')
+
+    implementation project(':java-utilities')
+
+    // Google AutoValue
+    api libs.com.google.guava.guava
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    // JSON Serialization
+    api libs.com.fasterxml.jackson.core.jackson.databind
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.jdk8
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.jsr310
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.guava
+
+    // Testing
+    testImplementation project(':test-utils')
+    testImplementation(testFixtures(project(':signal-detection-coi')))
+    testImplementation(testFixtures(project(':waveform-coi')))
+
+    // Test Fixture Dependencies
+    testFixturesApi(platform(libs.org.springframework.boot.spring.boot.dependencies))
+    testFixturesImplementation project(':event-dao')
+    testFixturesImplementation project(':signal-detection-dao')
+    testFixturesImplementation(testFixtures(project(':signal-detection-coi')))
+    testFixturesImplementation(testFixtures(project(':station-definition-coi')))
+    testFixturesImplementation(testFixtures(project(':waveform-coi')))
+    testImplementation(testFixtures(project(':station-definition-coi')))
+}

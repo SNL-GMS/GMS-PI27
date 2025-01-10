@@ -1,0 +1,336 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weavess Station renders 1`] = `
+<div>
+  <div
+    class="station station-split-expanded"
+    style="height: 153px;"
+  >
+    <div
+      class="channel"
+      data-cy="default-channel-id-channel"
+      data-testid="channel-wrapper"
+      style="height: 50px; max-height: 50px;"
+      tabindex="0"
+    >
+      <div
+        class="channel-label-container"
+        data-cy="default-channel-id-label"
+        style="height: 50px; width: 184px;"
+        tabindex="0"
+      >
+        <div
+          class="label"
+          tabindex="0"
+        >
+          <div
+            class="label-container"
+          >
+            <div
+              class="label-container-left-parent"
+            >
+              <div
+                class="label-container-left-parent-expansion-button"
+                data-cy="weavess-expand-parent"
+                data-cy-channel-name="default-channel-id"
+              >
+                -
+              </div>
+            </div>
+            <div
+              class="label-container-content"
+            >
+              <div
+                class="label-container-content-label"
+                data-cy="channel-label-default-channel-id"
+              >
+                <div>
+                  <span
+                    class="weavess-tooltip__target label-container-content"
+                  >
+                    <span
+                      aria-expanded="false"
+                      class="weavess-tooltip bp5-popover-target"
+                    >
+                      <span
+                        class="station-label-container"
+                        tabindex="0"
+                      >
+                        <div
+                          class="label-channel-name-row"
+                        >
+                          <span
+                            class="station-name"
+                          >
+                            default-channel-name
+                          </span>
+                          <span
+                            class="station-name__channel-name"
+                          >
+                             
+                          </span>
+                        </div>
+                      </span>
+                    </span>
+                    <div
+                      class="distance-azimuth"
+                    >
+                      <p>
+                        <span
+                          class="label-container-content-mask-indicator"
+                        >
+                          M
+                        </span>
+                      </p>
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <div
+                data-cy-contains-amplitude-markers="false"
+                style="height: 100%;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="channel-content-container"
+        style="height: 50px; width: calc(100% - 184px); left: 184px;"
+      >
+        <div
+          class="contentrenderer"
+          tabindex="0"
+        >
+          <div
+            class="contentrenderer-content contentrenderer-content--sticky"
+            style="width: calc(100% - 184);"
+          />
+          <div
+            class="contentrenderer-content"
+            data-cy-station-waveform="default-channel-id"
+            style="left: 184px; width: calc(100% - 184px);"
+          >
+            <div
+              class="contentrenderer-content-drag-indicator"
+            />
+            <div
+              class="contentrenderer-content-markers"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="channel"
+      data-cy="Splitchannel-channel"
+      data-testid="channel-wrapper"
+      style="height: 50px; max-height: 50px;"
+      tabindex="0"
+    >
+      <div
+        class="channel-label-container"
+        data-cy="Splitchannel-label"
+        style="height: 50px; width: 184px;"
+        tabindex="0"
+      >
+        <div
+          class="label"
+          tabindex="0"
+        >
+          <div
+            class="label-container"
+          >
+            <div
+              class="label-container-left-child"
+            />
+            <div
+              class="label-container-content"
+            >
+              <div
+                class="label-container-content-label"
+                data-cy="channel-label-Splitchannel"
+              >
+                <div>
+                  <span
+                    class="weavess-tooltip__target label-container-content"
+                  >
+                    <span
+                      aria-expanded="false"
+                      class="weavess-tooltip bp5-popover-target"
+                    >
+                      <span
+                        class="station-label-container"
+                        tabindex="0"
+                      >
+                        <div
+                          class="label-channel-name-row"
+                        >
+                          <span
+                            class="station-name__channel-name"
+                          >
+                            Splitchannel
+                          </span>
+                          <span
+                            class="station-name__channel-name"
+                          >
+                             
+                          </span>
+                        </div>
+                      </span>
+                    </span>
+                    <div
+                      class="distance-azimuth"
+                    >
+                      <p>
+                        <span
+                          class="label-container-content-mask-indicator"
+                        />
+                      </p>
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <div
+                data-cy-contains-amplitude-markers="false"
+                style="height: 100%;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="channel-content-container"
+        style="height: 50px; width: calc(100% - 184px); left: 184px;"
+      >
+        <div
+          class="contentrenderer"
+          tabindex="0"
+        >
+          <div
+            class="contentrenderer-content contentrenderer-content--sticky"
+            style="width: calc(100% - 184);"
+          />
+          <div
+            class="contentrenderer-content"
+            data-cy-station-waveform="Splitchannel"
+            style="left: 184px; width: calc(100% - 184px);"
+          >
+            <div
+              class="contentrenderer-content-drag-indicator"
+            />
+            <div
+              class="contentrenderer-content-markers"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="channel"
+      data-cy="channel-channel"
+      data-testid="channel-wrapper"
+      style="height: 50px; max-height: 50px;"
+      tabindex="0"
+    >
+      <div
+        class="channel-label-container"
+        data-cy="channel-label"
+        style="height: 50px; width: 184px;"
+        tabindex="0"
+      >
+        <div
+          class="label"
+          tabindex="0"
+        >
+          <div
+            class="label-container"
+          >
+            <div
+              class="label-container-left-child"
+            />
+            <div
+              class="label-container-content"
+            >
+              <div
+                class="label-container-content-label"
+                data-cy="channel-label-channel"
+              >
+                <div>
+                  <span
+                    class="weavess-tooltip__target label-container-content"
+                  >
+                    <span
+                      aria-expanded="false"
+                      class="weavess-tooltip bp5-popover-target"
+                    >
+                      <span
+                        class="station-label-container"
+                        tabindex="0"
+                      >
+                        <div
+                          class="label-channel-name-row"
+                        >
+                          <span
+                            class="station-name__channel-name"
+                          >
+                            channel
+                          </span>
+                          <span
+                            class="station-name__channel-name"
+                          >
+                             
+                          </span>
+                        </div>
+                      </span>
+                    </span>
+                    <div
+                      class="distance-azimuth"
+                    >
+                      <p>
+                        <span
+                          class="label-container-content-mask-indicator"
+                        />
+                      </p>
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <div
+                data-cy-contains-amplitude-markers="false"
+                style="height: 100%;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="channel-content-container"
+        style="height: 50px; width: calc(100% - 184px); left: 184px;"
+      >
+        <div
+          class="contentrenderer"
+          tabindex="0"
+        >
+          <div
+            class="contentrenderer-content contentrenderer-content--sticky"
+            style="width: calc(100% - 184);"
+          />
+          <div
+            class="contentrenderer-content"
+            data-cy-station-waveform="channel"
+            style="left: 184px; width: calc(100% - 184px);"
+          >
+            <div
+              class="contentrenderer-content-drag-indicator"
+            />
+            <div
+              class="contentrenderer-content-markers"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

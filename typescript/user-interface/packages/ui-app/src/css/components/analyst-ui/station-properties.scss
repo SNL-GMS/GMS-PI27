@@ -1,0 +1,42 @@
+.station-properties-display-window {
+  height: 100%;
+  width: 100%;
+  padding: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .bp5-non-ideal-state > .gms-group__label {
+    display: none;
+  }
+
+  .bp5-non-ideal-state > .gms-form-group__content {
+    margin-top: 4px;
+  }
+}
+
+.station-properties-panel {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.station-properties-table {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  // wrapper wraps a single table
+  &__wrapper {
+    height: 100%;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+}
+
+.channel-configuration-table {
+  padding-bottom: 0;
+}

@@ -1,0 +1,1520 @@
+[
+    {
+        "name": "ARCES-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["ARCES"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "ASAR-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["ASAR"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LINEAR",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "BOSA-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["BOSA"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "BRMAR-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["BRMAR"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "BRTR-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["BRTR"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "CMAR-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["CMAR"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "CPUP-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["CPUP"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "DBIC-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["DBIC"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "FINES-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["FINES"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "H08N-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H08N"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "H08S-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H08S"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "H10N-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H10N"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "H10S-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H10S"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "H11N-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H11N"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "H11S-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H11S"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "ILAR-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["ILAR"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "KSRS-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["KSRS"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "LBTB-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["LBTB"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "LPAZ-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["LPAZ"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "NOA-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["NOA"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "PDAR-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["PDAR"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "PLCA-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["PLCA"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "SPITS-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["SPITS"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "TXAR-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["TXAR"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "VNDA-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["VNDA"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "ARTI-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["ARTI"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "ATD-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["ATD"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "BELG-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["BELG"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "JAY-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["JAY"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "KAPI-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["KAPI"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "KIRV-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["KIRV"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "KLR-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["KLR"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "KVAR-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["KVAR"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "MA2-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["MA2"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "MDP-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["MDP"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "MMAI-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["MMAI"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "OBN-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["OBN"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "PCRV-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["PCRV"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "RCBR-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["RCBR"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "RPN-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["RPN"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "RRZ-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["RRZ"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "SEY-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["SEY"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "SNAA-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["SNAA"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "TIXI-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["TIXI"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "TLY-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["TLY"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "URZ-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["URZ"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "YAK-FAP-Values",
+        "constraints": [
+            {
+                "constraintType": "STRING",
+                "criterion": "station",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["YAK"],
+                "priority": 100
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelBand",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["S"],
+                "priority": 80
+            },
+            {
+                "constraintType": "STRING",
+                "criterion": "channelInstrument",
+                "operator": {"type": "EQ", "negated": false},
+                "value": ["H"],
+                "priority": 70
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 5,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    },
+    {
+        "name": "default-fap",
+        "constraints": [
+            {
+                "constraintType": "DEFAULT"
+            }
+        ],
+        "parameters": {
+            "lowerFrequencyBoundHz": 0.001,
+            "upperFrequencyBoundHz": 20,
+            "frequencySamplingMode": "LOG",
+            "frequencySamplingCount": 512
+        }
+    }
+]

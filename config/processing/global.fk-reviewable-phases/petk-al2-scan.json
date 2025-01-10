@@ -1,0 +1,35 @@
+{
+    "name": "petk-al2-scan",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "PETK"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "activity",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "AL2 Scan"
+            ],
+            "priority": 80
+        }
+    ],
+    "parameters": {
+        "phases": [
+            "Sn",
+            "LR"
+        ]
+    }
+}

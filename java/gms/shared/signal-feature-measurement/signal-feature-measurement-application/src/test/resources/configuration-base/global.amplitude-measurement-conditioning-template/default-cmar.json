@@ -1,0 +1,45 @@
+{
+    "name": "default-cmar",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "CMAR"
+            ],
+            "priority": 100
+        }
+    ],
+    "parameters": {
+        "rotationTemplate": {
+            "station": "CMAR",
+            "leadDuration": "PT60S",
+            "duration": "PT5M",
+            "sampleRateToleranceHz": 0.15,
+            "locationToleranceKm": 0.15,
+            "orientationAngleToleranceDeg": 0.15,
+            "inputChannelGroup": "CM31",
+            "inputChannels": [
+                "BHN",
+                "BHE"
+            ],
+            "rotationDescription": {
+                "phaseType": "S",
+                "samplingType": "NEAREST_SAMPLE",
+                "twoDimensional": true
+            }
+        },
+        "filterDefinition": {
+            "$ref=global.filter-definition": [
+                {
+                    "criterion": "name",
+                    "value": "0.8 4.5 3 BP causal"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,2546 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`station-properties-panel matches snapshot 1`] = `
+<div>
+  <div
+    class="station-properties-panel"
+  >
+    <div
+      class="toolbar"
+      style="width: 84px;"
+    >
+      <div
+        class="toolbar__left-group"
+      >
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div>
+            <div
+              class="dropdown-container"
+            >
+              <span
+                class="dropdown-label"
+              >
+                Effective At: 
+              </span>
+              <span
+                class="dropdown-selector"
+                data-cy="effective-at-dropdown"
+              >
+                <div
+                  class="bp5-html-select"
+                >
+                  <select
+                    style="min-width: 220px; width: 220px;"
+                    title="Select effective time to display"
+                  >
+                    <option
+                      value="some time"
+                    >
+                      Unknown
+                    </option>
+                  </select>
+                  <span
+                    class="bp5-icon bp5-icon-double-caret-vertical"
+                  >
+                    <svg
+                      data-icon="double-caret-vertical"
+                      height="16"
+                      role="img"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <title>
+                        Open dropdown
+                      </title>
+                      <path
+                        d="M100 180H220C231 180 240 189 240 200C240 205.6 237.8 210.6 234.2 214.2L174.2 274.2C170.6 277.8 165.6 280 160 280S149.4 277.8 145.8 274.2L85.8 214.2C82.2 210.6 80 205.6 80 200C80 189 89 180 100 180zM220 140H100C89 140 80 131 80 120C80 114.4 82.2 109.4 85.8 105.8L145.8 45.8C149.4 42.2 154.4 40 160 40S170.6 42.2 174.2 45.8L234.2 105.8C237.8 109.4 240 114.4 240 120C240 131 231 140 220 140z"
+                        fill-rule="evenodd"
+                        transform="scale(0.05, -0.05) translate(-160, -160)"
+                        transform-origin="center"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div>
+            <div>
+              <button
+                class="bp5-button bp5-align-left toolbar-button"
+                style="width: 220px;"
+                title="Select columns to be shown in the channel group table below"
+                type="button"
+              >
+                <span
+                  class="bp5-button-text"
+                >
+                  <span>
+                    Channel Group Columns
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="bp5-icon bp5-icon-standard bp5-icon-caret-down"
+                    data-icon="caret-down"
+                  />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div>
+            <div>
+              <button
+                class="bp5-button bp5-align-left toolbar-button"
+                style="width: 220px;"
+                title="Select columns to be shown in the channel table below"
+                type="button"
+              >
+                <span
+                  class="bp5-button-text"
+                >
+                  <span>
+                    Channel Columns
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="bp5-icon bp5-icon-standard bp5-icon-caret-down"
+                    data-icon="caret-down"
+                  />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="toolbar__center-group"
+      >
+        <div
+          class="toolbar__whitespace"
+          style="width: 84px;"
+        />
+      </div>
+      <div
+        class="toolbar__right-group"
+      />
+    </div>
+    <div
+      class="toolbar"
+      style="width: 84px;"
+    >
+      <div
+        class="toolbar__left-group"
+      >
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="station-label"
+              >
+                Station: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="station-value"
+                title="Currently selected station"
+              >
+                test
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="lat-label"
+              >
+                Lat: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="lat-value"
+                title="Station latitude"
+              >
+                Unknown°
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="lon-label"
+              >
+                Lon: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="lon-value"
+                title="Station longitude"
+              >
+                Unknown°
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="depth-label"
+              >
+                Depth: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="depth-value"
+                title="Depth (km)"
+              >
+                Unknown
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="elev-label"
+              >
+                Elev: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="elev-value"
+                title="Station elevation"
+              >
+                Unknown
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="type-label"
+              >
+                Type: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="type-value"
+                title="Single station or array"
+              >
+                Unknown
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="description-label"
+              >
+                Description: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="description-value"
+                title="Station description"
+              >
+                Unknown
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="toolbar__center-group"
+      >
+        <div
+          class="toolbar__whitespace"
+          style="width: 84px;"
+        />
+      </div>
+      <div
+        class="toolbar__right-group"
+      />
+    </div>
+    <div
+      class="divider-container"
+    >
+      <div
+        class="top-component"
+        style="height: 250px; min-height: 200px;"
+      >
+        <div
+          class="site-configuration-table ag-theme-dark station-properties-table with-separated-rows-color"
+          data-cy="site-configuration-table"
+        >
+          <h4
+            class="bp5-heading bp5-heading "
+          >
+            Channel Group Configuration
+          </h4>
+          <div
+            class="station-properties-table__wrapper"
+          >
+            <div
+              style="height: 100%;"
+            >
+              <!-- AG Grid -->
+              <div
+                class="ag-root-wrapper ag-ltr ag-layout-normal"
+              >
+                <div
+                  class="ag-root-wrapper-body ag-focus-managed ag-layout-normal"
+                >
+                  <div
+                    class="ag-tab-guard ag-tab-guard-top"
+                    role="presentation"
+                    tabindex="0"
+                  />
+                  <!-- AG Grid Body -->
+                  <div
+                    aria-colcount="9"
+                    aria-rowcount="1"
+                    class="ag-root ag-unselectable ag-layout-normal"
+                    role="grid"
+                  >
+                    <div
+                      class="ag-header ag-pivot-off"
+                      role="presentation"
+                      style="height: 49px; min-height: 49px;"
+                    >
+                      <div
+                        class="ag-pinned-left-header ag-hidden"
+                        role="presentation"
+                        style="width: 0px; min-width: 0px; max-width: 0px;"
+                      >
+                        <div
+                          aria-rowindex="1"
+                          class="ag-header-row ag-header-row-column"
+                          role="row"
+                          style="height: 48px; top: 0px; width: 0px;"
+                        />
+                      </div>
+                      <div
+                        class="ag-header-viewport "
+                        role="presentation"
+                      >
+                        <div
+                          class="ag-header-container"
+                          role="rowgroup"
+                          style="width: 1520px;"
+                        >
+                          <div
+                            aria-rowindex="1"
+                            class="ag-header-row ag-header-row-column"
+                            role="row"
+                            style="height: 48px; top: 0px; width: 1520px;"
+                          >
+                            <div
+                              aria-colindex="1"
+                              aria-description="Press ENTER to sort. Press CTRL ENTER to open column menu."
+                              aria-sort="none"
+                              class="ag-header-cell ag-header-cell-sortable table-header-cell ag-focus-managed"
+                              col-id="name"
+                              role="columnheader"
+                              style="left: 0px; width: 200px;"
+                              tabindex="-1"
+                              title="Name"
+                            >
+                              <div
+                                class="ag-header-cell-resize"
+                                role="presentation"
+                              />
+                              <div
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                role="presentation"
+                              >
+                                
+                
+                                <div
+                                  class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                />
+                                
+                
+                                <div
+                                  class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  ref="eWrapper"
+                                  role="presentation"
+                                >
+                                  
+                    
+                                  <input
+                                    class="ag-input-field-input ag-checkbox-input"
+                                    id="ag-3-input"
+                                    ref="eInput"
+                                    tabindex="-1"
+                                    type="checkbox"
+                                  />
+                                  
+                
+                                </div>
+                                
+            
+                              </div>
+                              <div
+                                class="ag-cell-label-container ag-header-cell-sorted-none"
+                                role="presentation"
+                              >
+                                
+            
+                                <span
+                                  aria-hidden="true"
+                                  class="ag-header-icon ag-header-cell-menu-button"
+                                  ref="eMenu"
+                                >
+                                  <span
+                                    class="ag-icon ag-icon-menu"
+                                    role="presentation"
+                                    unselectable="on"
+                                  />
+                                </span>
+                                
+            
+                                <div
+                                  class="ag-header-cell-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                >
+                                  
+                
+                                  <span
+                                    class="ag-header-cell-text"
+                                    ref="eText"
+                                  >
+                                    Name
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                    ref="eFilter"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-filter"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-order ag-hidden"
+                                    ref="eSortOrder"
+                                  />
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-ascending-icon ag-hidden"
+                                    ref="eSortAsc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-asc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-descending-icon ag-hidden"
+                                    ref="eSortDesc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-desc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-none-icon ag-hidden"
+                                    ref="eSortNone"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-none"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+            
+                                </div>
+                                
+        
+                              </div>
+                            </div>
+                            <div
+                              aria-colindex="2"
+                              aria-description="Press ENTER to sort. Press CTRL ENTER to open column menu."
+                              aria-sort="none"
+                              class="ag-header-cell ag-header-cell-sortable table-header-cell ag-focus-managed"
+                              col-id="effectiveAt"
+                              role="columnheader"
+                              style="left: 200px; width: 200px;"
+                              tabindex="-1"
+                              title="Effective at"
+                            >
+                              <div
+                                class="ag-header-cell-resize"
+                                role="presentation"
+                              />
+                              <div
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                role="presentation"
+                              >
+                                
+                
+                                <div
+                                  class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                />
+                                
+                
+                                <div
+                                  class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  ref="eWrapper"
+                                  role="presentation"
+                                >
+                                  
+                    
+                                  <input
+                                    class="ag-input-field-input ag-checkbox-input"
+                                    id="ag-4-input"
+                                    ref="eInput"
+                                    tabindex="-1"
+                                    type="checkbox"
+                                  />
+                                  
+                
+                                </div>
+                                
+            
+                              </div>
+                              <div
+                                class="ag-cell-label-container ag-header-cell-sorted-none"
+                                role="presentation"
+                              >
+                                
+            
+                                <span
+                                  aria-hidden="true"
+                                  class="ag-header-icon ag-header-cell-menu-button"
+                                  ref="eMenu"
+                                >
+                                  <span
+                                    class="ag-icon ag-icon-menu"
+                                    role="presentation"
+                                    unselectable="on"
+                                  />
+                                </span>
+                                
+            
+                                <div
+                                  class="ag-header-cell-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                >
+                                  
+                
+                                  <span
+                                    class="ag-header-cell-text"
+                                    ref="eText"
+                                  >
+                                    Effective at
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                    ref="eFilter"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-filter"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-order ag-hidden"
+                                    ref="eSortOrder"
+                                  />
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-ascending-icon ag-hidden"
+                                    ref="eSortAsc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-asc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-descending-icon ag-hidden"
+                                    ref="eSortDesc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-desc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-none-icon ag-hidden"
+                                    ref="eSortNone"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-none"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+            
+                                </div>
+                                
+        
+                              </div>
+                            </div>
+                            <div
+                              aria-colindex="3"
+                              aria-description="Press ENTER to sort. Press CTRL ENTER to open column menu."
+                              aria-sort="none"
+                              class="ag-header-cell ag-header-cell-sortable table-header-cell ag-focus-managed"
+                              col-id="effectiveUntil"
+                              role="columnheader"
+                              style="left: 400px; width: 200px;"
+                              tabindex="-1"
+                              title="Effective until"
+                            >
+                              <div
+                                class="ag-header-cell-resize"
+                                role="presentation"
+                              />
+                              <div
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                role="presentation"
+                              >
+                                
+                
+                                <div
+                                  class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                />
+                                
+                
+                                <div
+                                  class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  ref="eWrapper"
+                                  role="presentation"
+                                >
+                                  
+                    
+                                  <input
+                                    class="ag-input-field-input ag-checkbox-input"
+                                    id="ag-5-input"
+                                    ref="eInput"
+                                    tabindex="-1"
+                                    type="checkbox"
+                                  />
+                                  
+                
+                                </div>
+                                
+            
+                              </div>
+                              <div
+                                class="ag-cell-label-container ag-header-cell-sorted-none"
+                                role="presentation"
+                              >
+                                
+            
+                                <span
+                                  aria-hidden="true"
+                                  class="ag-header-icon ag-header-cell-menu-button"
+                                  ref="eMenu"
+                                >
+                                  <span
+                                    class="ag-icon ag-icon-menu"
+                                    role="presentation"
+                                    unselectable="on"
+                                  />
+                                </span>
+                                
+            
+                                <div
+                                  class="ag-header-cell-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                >
+                                  
+                
+                                  <span
+                                    class="ag-header-cell-text"
+                                    ref="eText"
+                                  >
+                                    Effective until
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                    ref="eFilter"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-filter"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-order ag-hidden"
+                                    ref="eSortOrder"
+                                  />
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-ascending-icon ag-hidden"
+                                    ref="eSortAsc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-asc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-descending-icon ag-hidden"
+                                    ref="eSortDesc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-desc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-none-icon ag-hidden"
+                                    ref="eSortNone"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-none"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+            
+                                </div>
+                                
+        
+                              </div>
+                            </div>
+                            <div
+                              aria-colindex="4"
+                              aria-description="Press ENTER to sort. Press CTRL ENTER to open column menu."
+                              aria-sort="none"
+                              class="ag-header-cell ag-header-cell-sortable table-header-cell ag-focus-managed"
+                              col-id="latitudeDegrees"
+                              role="columnheader"
+                              style="left: 600px; width: 105px;"
+                              tabindex="-1"
+                              title="Latitude in degrees"
+                            >
+                              <div
+                                class="ag-header-cell-resize"
+                                role="presentation"
+                              />
+                              <div
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                role="presentation"
+                              >
+                                
+                
+                                <div
+                                  class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                />
+                                
+                
+                                <div
+                                  class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  ref="eWrapper"
+                                  role="presentation"
+                                >
+                                  
+                    
+                                  <input
+                                    class="ag-input-field-input ag-checkbox-input"
+                                    id="ag-6-input"
+                                    ref="eInput"
+                                    tabindex="-1"
+                                    type="checkbox"
+                                  />
+                                  
+                
+                                </div>
+                                
+            
+                              </div>
+                              <div
+                                class="ag-cell-label-container ag-header-cell-sorted-none"
+                                role="presentation"
+                              >
+                                
+            
+                                <span
+                                  aria-hidden="true"
+                                  class="ag-header-icon ag-header-cell-menu-button"
+                                  ref="eMenu"
+                                >
+                                  <span
+                                    class="ag-icon ag-icon-menu"
+                                    role="presentation"
+                                    unselectable="on"
+                                  />
+                                </span>
+                                
+            
+                                <div
+                                  class="ag-header-cell-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                >
+                                  
+                
+                                  <span
+                                    class="ag-header-cell-text"
+                                    ref="eText"
+                                  >
+                                    Lat (°)
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                    ref="eFilter"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-filter"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-order ag-hidden"
+                                    ref="eSortOrder"
+                                  />
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-ascending-icon ag-hidden"
+                                    ref="eSortAsc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-asc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-descending-icon ag-hidden"
+                                    ref="eSortDesc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-desc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-none-icon ag-hidden"
+                                    ref="eSortNone"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-none"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+            
+                                </div>
+                                
+        
+                              </div>
+                            </div>
+                            <div
+                              aria-colindex="5"
+                              aria-description="Press ENTER to sort. Press CTRL ENTER to open column menu."
+                              aria-sort="none"
+                              class="ag-header-cell ag-header-cell-sortable table-header-cell ag-focus-managed"
+                              col-id="longitudeDegrees"
+                              role="columnheader"
+                              style="left: 705px; width: 105px;"
+                              tabindex="-1"
+                              title="Longitude in degrees"
+                            >
+                              <div
+                                class="ag-header-cell-resize"
+                                role="presentation"
+                              />
+                              <div
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                role="presentation"
+                              >
+                                
+                
+                                <div
+                                  class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                />
+                                
+                
+                                <div
+                                  class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  ref="eWrapper"
+                                  role="presentation"
+                                >
+                                  
+                    
+                                  <input
+                                    class="ag-input-field-input ag-checkbox-input"
+                                    id="ag-7-input"
+                                    ref="eInput"
+                                    tabindex="-1"
+                                    type="checkbox"
+                                  />
+                                  
+                
+                                </div>
+                                
+            
+                              </div>
+                              <div
+                                class="ag-cell-label-container ag-header-cell-sorted-none"
+                                role="presentation"
+                              >
+                                
+            
+                                <span
+                                  aria-hidden="true"
+                                  class="ag-header-icon ag-header-cell-menu-button"
+                                  ref="eMenu"
+                                >
+                                  <span
+                                    class="ag-icon ag-icon-menu"
+                                    role="presentation"
+                                    unselectable="on"
+                                  />
+                                </span>
+                                
+            
+                                <div
+                                  class="ag-header-cell-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                >
+                                  
+                
+                                  <span
+                                    class="ag-header-cell-text"
+                                    ref="eText"
+                                  >
+                                    Lon (°)
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                    ref="eFilter"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-filter"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-order ag-hidden"
+                                    ref="eSortOrder"
+                                  />
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-ascending-icon ag-hidden"
+                                    ref="eSortAsc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-asc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-descending-icon ag-hidden"
+                                    ref="eSortDesc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-desc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-none-icon ag-hidden"
+                                    ref="eSortNone"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-none"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+            
+                                </div>
+                                
+        
+                              </div>
+                            </div>
+                            <div
+                              aria-colindex="6"
+                              aria-description="Press ENTER to sort. Press CTRL ENTER to open column menu."
+                              aria-sort="none"
+                              class="ag-header-cell ag-header-cell-sortable table-header-cell ag-focus-managed"
+                              col-id="depthKm"
+                              role="columnheader"
+                              style="left: 810px; width: 105px;"
+                              tabindex="-1"
+                              title="Depth in kilometers"
+                            >
+                              <div
+                                class="ag-header-cell-resize"
+                                role="presentation"
+                              />
+                              <div
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                role="presentation"
+                              >
+                                
+                
+                                <div
+                                  class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                />
+                                
+                
+                                <div
+                                  class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  ref="eWrapper"
+                                  role="presentation"
+                                >
+                                  
+                    
+                                  <input
+                                    class="ag-input-field-input ag-checkbox-input"
+                                    id="ag-8-input"
+                                    ref="eInput"
+                                    tabindex="-1"
+                                    type="checkbox"
+                                  />
+                                  
+                
+                                </div>
+                                
+            
+                              </div>
+                              <div
+                                class="ag-cell-label-container ag-header-cell-sorted-none"
+                                role="presentation"
+                              >
+                                
+            
+                                <span
+                                  aria-hidden="true"
+                                  class="ag-header-icon ag-header-cell-menu-button"
+                                  ref="eMenu"
+                                >
+                                  <span
+                                    class="ag-icon ag-icon-menu"
+                                    role="presentation"
+                                    unselectable="on"
+                                  />
+                                </span>
+                                
+            
+                                <div
+                                  class="ag-header-cell-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                >
+                                  
+                
+                                  <span
+                                    class="ag-header-cell-text"
+                                    ref="eText"
+                                  >
+                                    Depth (km)
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                    ref="eFilter"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-filter"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-order ag-hidden"
+                                    ref="eSortOrder"
+                                  />
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-ascending-icon ag-hidden"
+                                    ref="eSortAsc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-asc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-descending-icon ag-hidden"
+                                    ref="eSortDesc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-desc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-none-icon ag-hidden"
+                                    ref="eSortNone"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-none"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+            
+                                </div>
+                                
+        
+                              </div>
+                            </div>
+                            <div
+                              aria-colindex="7"
+                              aria-description="Press ENTER to sort. Press CTRL ENTER to open column menu."
+                              aria-sort="none"
+                              class="ag-header-cell ag-header-cell-sortable table-header-cell ag-focus-managed"
+                              col-id="elevationKm"
+                              role="columnheader"
+                              style="left: 915px; width: 105px;"
+                              tabindex="-1"
+                              title="Elevation in kilometers"
+                            >
+                              <div
+                                class="ag-header-cell-resize"
+                                role="presentation"
+                              />
+                              <div
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                role="presentation"
+                              >
+                                
+                
+                                <div
+                                  class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                />
+                                
+                
+                                <div
+                                  class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  ref="eWrapper"
+                                  role="presentation"
+                                >
+                                  
+                    
+                                  <input
+                                    class="ag-input-field-input ag-checkbox-input"
+                                    id="ag-9-input"
+                                    ref="eInput"
+                                    tabindex="-1"
+                                    type="checkbox"
+                                  />
+                                  
+                
+                                </div>
+                                
+            
+                              </div>
+                              <div
+                                class="ag-cell-label-container ag-header-cell-sorted-none"
+                                role="presentation"
+                              >
+                                
+            
+                                <span
+                                  aria-hidden="true"
+                                  class="ag-header-icon ag-header-cell-menu-button"
+                                  ref="eMenu"
+                                >
+                                  <span
+                                    class="ag-icon ag-icon-menu"
+                                    role="presentation"
+                                    unselectable="on"
+                                  />
+                                </span>
+                                
+            
+                                <div
+                                  class="ag-header-cell-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                >
+                                  
+                
+                                  <span
+                                    class="ag-header-cell-text"
+                                    ref="eText"
+                                  >
+                                    Elev (km)
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                    ref="eFilter"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-filter"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-order ag-hidden"
+                                    ref="eSortOrder"
+                                  />
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-ascending-icon ag-hidden"
+                                    ref="eSortAsc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-asc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-descending-icon ag-hidden"
+                                    ref="eSortDesc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-desc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-none-icon ag-hidden"
+                                    ref="eSortNone"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-none"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+            
+                                </div>
+                                
+        
+                              </div>
+                            </div>
+                            <div
+                              aria-colindex="8"
+                              aria-description="Press ENTER to sort. Press CTRL ENTER to open column menu."
+                              aria-sort="none"
+                              class="ag-header-cell ag-header-cell-sortable table-header-cell ag-focus-managed"
+                              col-id="type"
+                              role="columnheader"
+                              style="left: 1020px; width: 200px;"
+                              tabindex="-1"
+                              title="Type"
+                            >
+                              <div
+                                class="ag-header-cell-resize"
+                                role="presentation"
+                              />
+                              <div
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                role="presentation"
+                              >
+                                
+                
+                                <div
+                                  class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                />
+                                
+                
+                                <div
+                                  class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  ref="eWrapper"
+                                  role="presentation"
+                                >
+                                  
+                    
+                                  <input
+                                    class="ag-input-field-input ag-checkbox-input"
+                                    id="ag-10-input"
+                                    ref="eInput"
+                                    tabindex="-1"
+                                    type="checkbox"
+                                  />
+                                  
+                
+                                </div>
+                                
+            
+                              </div>
+                              <div
+                                class="ag-cell-label-container ag-header-cell-sorted-none"
+                                role="presentation"
+                              >
+                                
+            
+                                <span
+                                  aria-hidden="true"
+                                  class="ag-header-icon ag-header-cell-menu-button"
+                                  ref="eMenu"
+                                >
+                                  <span
+                                    class="ag-icon ag-icon-menu"
+                                    role="presentation"
+                                    unselectable="on"
+                                  />
+                                </span>
+                                
+            
+                                <div
+                                  class="ag-header-cell-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                >
+                                  
+                
+                                  <span
+                                    class="ag-header-cell-text"
+                                    ref="eText"
+                                  >
+                                    Type
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                    ref="eFilter"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-filter"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-order ag-hidden"
+                                    ref="eSortOrder"
+                                  />
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-ascending-icon ag-hidden"
+                                    ref="eSortAsc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-asc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-descending-icon ag-hidden"
+                                    ref="eSortDesc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-desc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-none-icon ag-hidden"
+                                    ref="eSortNone"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-none"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+            
+                                </div>
+                                
+        
+                              </div>
+                            </div>
+                            <div
+                              aria-colindex="9"
+                              aria-description="Press ENTER to sort. Press CTRL ENTER to open column menu."
+                              aria-sort="none"
+                              class="ag-header-cell ag-header-cell-sortable table-header-cell ag-focus-managed"
+                              col-id="description"
+                              role="columnheader"
+                              style="left: 1220px; width: 300px;"
+                              tabindex="-1"
+                              title="Description"
+                            >
+                              <div
+                                class="ag-header-cell-resize"
+                                role="presentation"
+                              />
+                              <div
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                role="presentation"
+                              >
+                                
+                
+                                <div
+                                  class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                />
+                                
+                
+                                <div
+                                  class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  ref="eWrapper"
+                                  role="presentation"
+                                >
+                                  
+                    
+                                  <input
+                                    class="ag-input-field-input ag-checkbox-input"
+                                    id="ag-11-input"
+                                    ref="eInput"
+                                    tabindex="-1"
+                                    type="checkbox"
+                                  />
+                                  
+                
+                                </div>
+                                
+            
+                              </div>
+                              <div
+                                class="ag-cell-label-container ag-header-cell-sorted-none"
+                                role="presentation"
+                              >
+                                
+            
+                                <span
+                                  aria-hidden="true"
+                                  class="ag-header-icon ag-header-cell-menu-button"
+                                  ref="eMenu"
+                                >
+                                  <span
+                                    class="ag-icon ag-icon-menu"
+                                    role="presentation"
+                                    unselectable="on"
+                                  />
+                                </span>
+                                
+            
+                                <div
+                                  class="ag-header-cell-label"
+                                  ref="eLabel"
+                                  role="presentation"
+                                >
+                                  
+                
+                                  <span
+                                    class="ag-header-cell-text"
+                                    ref="eText"
+                                  >
+                                    Description
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                    ref="eFilter"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-filter"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-order ag-hidden"
+                                    ref="eSortOrder"
+                                  />
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-ascending-icon ag-hidden"
+                                    ref="eSortAsc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-asc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-descending-icon ag-hidden"
+                                    ref="eSortDesc"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-desc"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+                
+                                  <span
+                                    aria-hidden="true"
+                                    class="ag-header-icon ag-header-label-icon ag-sort-none-icon ag-hidden"
+                                    ref="eSortNone"
+                                  >
+                                    <span
+                                      class="ag-icon ag-icon-none"
+                                      role="presentation"
+                                      unselectable="on"
+                                    />
+                                  </span>
+                                  
+            
+                                </div>
+                                
+        
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="ag-pinned-right-header ag-hidden"
+                        role="presentation"
+                        style="width: 0px; min-width: 0px; max-width: 0px;"
+                      >
+                        <div
+                          aria-rowindex="1"
+                          class="ag-header-row ag-header-row-column"
+                          role="row"
+                          style="height: 48px; top: 0px; width: 0px;"
+                        />
+                      </div>
+                    </div>
+                    <!-- AG Pinned Top -->
+                    <div
+                      class="ag-floating-top"
+                      role="presentation"
+                      style="height: 0px; min-height: 0; display: none; overflow-y: hidden;"
+                    >
+                      <!-- AG Row Container topLeft -->
+                      <div
+                        class="ag-pinned-left-floating-top ag-hidden"
+                        role="presentation"
+                      />
+                      <!-- AG Row Container topCenter -->
+                      <div
+                        class="ag-floating-top-viewport"
+                        role="presentation"
+                      >
+                        <div
+                          class="ag-floating-top-container"
+                          role="presentation"
+                          style="width: 1520px;"
+                        />
+                      </div>
+                      <!-- AG Row Container topRight -->
+                      <div
+                        class="ag-pinned-right-floating-top ag-hidden"
+                        role="presentation"
+                      />
+                      <!-- AG Row Container topFullWidth -->
+                      <div
+                        class="ag-floating-top-full-width-container"
+                        role="presentation"
+                      />
+                    </div>
+                    <!-- AG Middle -->
+                    <div
+                      class="ag-body-viewport ag-row-no-animation ag-layout-normal"
+                      role="presentation"
+                    >
+                      <!-- AG Row Container left -->
+                      <div
+                        class="ag-pinned-left-cols-container ag-hidden"
+                        role="presentation"
+                        style="height: 1px;"
+                      />
+                      <!-- AG Row Container center -->
+                      <div
+                        class="ag-center-cols-clipper"
+                        role="presentation"
+                        style="height: 1px;"
+                      >
+                        <div
+                          class="ag-center-cols-viewport"
+                          role="presentation"
+                          style="height: 100%;"
+                        >
+                          <div
+                            class="ag-center-cols-container"
+                            role="presentation"
+                            style="height: 1px; width: 1520px;"
+                          />
+                        </div>
+                      </div>
+                      <!-- AG Row Container right -->
+                      <div
+                        class="ag-pinned-right-cols-container ag-hidden"
+                        role="presentation"
+                        style="height: 1px;"
+                      />
+                      <!-- AG Row Container fullWidth -->
+                      <div
+                        class="ag-full-width-container"
+                        role="presentation"
+                        style="height: 1px;"
+                      />
+                    </div>
+                    <!-- AG Pinned Bottom -->
+                    <div
+                      class="ag-floating-bottom"
+                      role="presentation"
+                      style="height: 0px; min-height: 0; display: none; overflow-y: hidden;"
+                    >
+                      <!-- AG Row Container bottomLeft -->
+                      <div
+                        class="ag-pinned-left-floating-bottom ag-hidden"
+                        role="presentation"
+                      />
+                      <!-- AG Row Container bottomCenter -->
+                      <div
+                        class="ag-floating-bottom-viewport"
+                        role="presentation"
+                      >
+                        <div
+                          class="ag-floating-bottom-container"
+                          role="presentation"
+                          style="width: 1520px;"
+                        />
+                      </div>
+                      <!-- AG Row Container bottomRight -->
+                      <div
+                        class="ag-pinned-right-floating-bottom ag-hidden"
+                        role="presentation"
+                      />
+                      <!-- AG Row Container bottomFullWidth -->
+                      <div
+                        class="ag-floating-bottom-full-width-container"
+                        role="presentation"
+                      />
+                    </div>
+                    <!-- AG Fake Horizontal Scroll -->
+                    <div
+                      aria-hidden="true"
+                      class="ag-body-horizontal-scroll"
+                      style="height: 0px; max-height: 0px; min-height: 0px;"
+                    >
+                      
+            
+                      <div
+                        class="ag-horizontal-left-spacer"
+                        ref="eLeftSpacer"
+                        style="width: 0px; max-width: 0px; min-width: 0px;"
+                      />
+                      
+            
+                      <div
+                        class="ag-body-horizontal-scroll-viewport"
+                        ref="eViewport"
+                        style="height: 0px; max-height: 0px; min-height: 0px;"
+                      >
+                        
+                
+                        <div
+                          class="ag-body-horizontal-scroll-container"
+                          ref="eContainer"
+                          style="height: 0px; max-height: 0px; min-height: 0px; width: 1520px;"
+                        />
+                        
+            
+                      </div>
+                      
+            
+                      <div
+                        class="ag-horizontal-right-spacer"
+                        ref="eRightSpacer"
+                        style="width: 0px; max-width: 0px; min-width: 0px;"
+                      />
+                      
+        
+                    </div>
+                    <!-- AG Overlay Wrapper -->
+                    <div
+                      aria-hidden="true"
+                      class="ag-overlay ag-hidden"
+                    >
+                      
+            
+                      <div
+                        class="ag-overlay-panel"
+                      >
+                        
+                
+                        <div
+                          class="ag-overlay-wrapper ag-layout-normal"
+                          ref="eOverlayWrapper"
+                        />
+                        
+            
+                      </div>
+                      
+        
+                    </div>
+                  </div>
+                  <div
+                    class="ag-tab-guard ag-tab-guard-bottom"
+                    role="presentation"
+                    tabindex="0"
+                  />
+                </div>
+                <div
+                  class="ag-paging-panel ag-unselectable ag-hidden"
+                  id="ag-2"
+                >
+                  
+                
+                  <span
+                    class="ag-paging-row-summary-panel"
+                    role="status"
+                  >
+                    
+                    
+                    <span
+                      class="ag-paging-row-summary-panel-number"
+                      id="ag-2-first-row"
+                      ref="lbFirstRowOnPage"
+                    />
+                    
+                    
+                    <span
+                      id="ag-2-to"
+                    >
+                      to
+                    </span>
+                    
+                    
+                    <span
+                      class="ag-paging-row-summary-panel-number"
+                      id="ag-2-last-row"
+                      ref="lbLastRowOnPage"
+                    />
+                    
+                    
+                    <span
+                      id="ag-2-of"
+                    >
+                      of
+                    </span>
+                    
+                    
+                    <span
+                      class="ag-paging-row-summary-panel-number"
+                      id="ag-2-row-count"
+                      ref="lbRecordCount"
+                    />
+                    
+                
+                  </span>
+                  
+                
+                  <span
+                    class="ag-paging-page-summary-panel"
+                    role="presentation"
+                  >
+                    
+                    
+                    <div
+                      aria-label="First Page"
+                      class="ag-paging-button"
+                      ref="btFirst"
+                      role="button"
+                    >
+                      <span
+                        class="ag-icon ag-icon-first"
+                        role="presentation"
+                        unselectable="on"
+                      />
+                    </div>
+                    
+                    
+                    <div
+                      aria-label="Previous Page"
+                      class="ag-paging-button"
+                      ref="btPrevious"
+                      role="button"
+                    >
+                      <span
+                        class="ag-icon ag-icon-previous"
+                        role="presentation"
+                        unselectable="on"
+                      />
+                    </div>
+                    
+                    
+                    <span
+                      class="ag-paging-description"
+                      role="status"
+                    >
+                      
+                        
+                      <span
+                        id="ag-2-start-page"
+                      >
+                        Page
+                      </span>
+                      
+                        
+                      <span
+                        class="ag-paging-number"
+                        id="ag-2-start-page-number"
+                        ref="lbCurrent"
+                      />
+                      
+                        
+                      <span
+                        id="ag-2-of-page"
+                      >
+                        of
+                      </span>
+                      
+                        
+                      <span
+                        class="ag-paging-number"
+                        id="ag-2-of-page-number"
+                        ref="lbTotal"
+                      />
+                      
+                    
+                    </span>
+                    
+                    
+                    <div
+                      aria-label="Next Page"
+                      class="ag-paging-button"
+                      ref="btNext"
+                      role="button"
+                    >
+                      <span
+                        class="ag-icon ag-icon-next"
+                        role="presentation"
+                        unselectable="on"
+                      />
+                    </div>
+                    
+                    
+                    <div
+                      aria-label="Last Page"
+                      class="ag-paging-button"
+                      ref="btLast"
+                      role="button"
+                    >
+                      <span
+                        class="ag-icon ag-icon-last"
+                        role="presentation"
+                        unselectable="on"
+                      />
+                    </div>
+                    
+                
+                  </span>
+                  
+            
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="horizontal-divider"
+      >
+        <div
+          class="horizontal-divider__target"
+        />
+        <div
+          class="horizontal-divider__spacer"
+        />
+        <svg
+          class="resize-handle"
+          height="7"
+          viewBox="0 0 18 7"
+          width="18"
+        >
+          <title>
+            Resize
+          </title>
+          <g
+            class="resize-handle-group"
+            data-name="resize-handle-group"
+          >
+            <rect
+              height="7"
+              rx="1"
+              width="2"
+            />
+            <rect
+              height="7"
+              rx="1"
+              width="2"
+              x="4"
+            />
+            <rect
+              height="7"
+              rx="1"
+              width="2"
+              x="8"
+            />
+            <rect
+              height="7"
+              rx="1"
+              width="2"
+              x="12"
+            />
+            <rect
+              height="7"
+              rx="1"
+              width="2"
+              x="16"
+            />
+          </g>
+        </svg>
+        <div
+          class="horizontal-divider__spacer"
+        />
+      </div>
+      <div
+        class="bottom-component"
+        style="height: 1px; min-height: 200px;"
+      >
+        <div
+          class="bp5-non-ideal-state bp5-non-ideal-state-vertical"
+        >
+          <div
+            class="bp5-non-ideal-state-visual"
+            style="font-size: 48px; line-height: 48px;"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-select"
+              data-icon="select"
+              tabindex="-1"
+            />
+          </div>
+          <div
+            class="bp5-non-ideal-state-text"
+          >
+            <h4
+              class="bp5-heading"
+            >
+              No Channel Selected
+            </h4>
+            <div>
+              Select a channel in the Channel Group Configuration table to view channel configuration data
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`station-properties-panel matches snapshot with [] station data 1`] = `
+<div>
+  <div
+    class="station-properties-panel"
+  >
+    <div
+      class="toolbar"
+      style="width: 84px;"
+    >
+      <div
+        class="toolbar__left-group"
+      >
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div>
+            <div
+              class="dropdown-container"
+            >
+              <span
+                class="dropdown-label"
+              >
+                Effective At: 
+              </span>
+              <span
+                class="dropdown-selector"
+                data-cy="effective-at-dropdown"
+              >
+                <div
+                  class="bp5-html-select"
+                >
+                  <select
+                    style="min-width: 220px; width: 220px;"
+                    title="Select effective time to display"
+                  >
+                    <option
+                      value="some time"
+                    >
+                      Unknown
+                    </option>
+                  </select>
+                  <span
+                    class="bp5-icon bp5-icon-double-caret-vertical"
+                  >
+                    <svg
+                      data-icon="double-caret-vertical"
+                      height="16"
+                      role="img"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <title>
+                        Open dropdown
+                      </title>
+                      <path
+                        d="M100 180H220C231 180 240 189 240 200C240 205.6 237.8 210.6 234.2 214.2L174.2 274.2C170.6 277.8 165.6 280 160 280S149.4 277.8 145.8 274.2L85.8 214.2C82.2 210.6 80 205.6 80 200C80 189 89 180 100 180zM220 140H100C89 140 80 131 80 120C80 114.4 82.2 109.4 85.8 105.8L145.8 45.8C149.4 42.2 154.4 40 160 40S170.6 42.2 174.2 45.8L234.2 105.8C237.8 109.4 240 114.4 240 120C240 131 231 140 220 140z"
+                        fill-rule="evenodd"
+                        transform="scale(0.05, -0.05) translate(-160, -160)"
+                        transform-origin="center"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div>
+            <div>
+              <button
+                class="bp5-button bp5-align-left toolbar-button"
+                style="width: 220px;"
+                title="Select columns to be shown in the channel group table below"
+                type="button"
+              >
+                <span
+                  class="bp5-button-text"
+                >
+                  <span>
+                    Channel Group Columns
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="bp5-icon bp5-icon-caret-down"
+                  >
+                    <svg
+                      data-icon="caret-down"
+                      height="16"
+                      role="img"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M12 6.5c0-.28-.22-.5-.5-.5h-7a.495.495 0 00-.37.83l3.5 4c.09.1.22.17.37.17s.28-.07.37-.17l3.5-4c.08-.09.13-.2.13-.33z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div>
+            <div>
+              <button
+                class="bp5-button bp5-align-left toolbar-button"
+                style="width: 220px;"
+                title="Select columns to be shown in the channel table below"
+                type="button"
+              >
+                <span
+                  class="bp5-button-text"
+                >
+                  <span>
+                    Channel Columns
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="bp5-icon bp5-icon-caret-down"
+                  >
+                    <svg
+                      data-icon="caret-down"
+                      height="16"
+                      role="img"
+                      viewBox="0 0 16 16"
+                      width="16"
+                    >
+                      <path
+                        d="M12 6.5c0-.28-.22-.5-.5-.5h-7a.495.495 0 00-.37.83l3.5 4c.09.1.22.17.37.17s.28-.07.37-.17l3.5-4c.08-.09.13-.2.13-.33z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="toolbar__center-group"
+      >
+        <div
+          class="toolbar__whitespace"
+          style="width: 84px;"
+        />
+      </div>
+      <div
+        class="toolbar__right-group"
+      />
+    </div>
+    <div
+      class="toolbar"
+      style="width: 84px;"
+    >
+      <div
+        class="toolbar__left-group"
+      >
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="station-label"
+              >
+                Station: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="station-value"
+                title="Currently selected station"
+              >
+                test
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="lat-label"
+              >
+                Lat: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="lat-value"
+                title="Station latitude"
+              >
+                Unknown°
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="lon-label"
+              >
+                Lon: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="lon-value"
+                title="Station longitude"
+              >
+                Unknown°
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="depth-label"
+              >
+                Depth: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="depth-value"
+                title="Depth (km)"
+              >
+                Unknown
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="elev-label"
+              >
+                Elev: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="elev-value"
+                title="Station elevation"
+              >
+                Unknown
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="type-label"
+              >
+                Type: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="type-value"
+                title="Single station or array"
+              >
+                Unknown
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="toolbar-item toolbar-item__left"
+        >
+          <div
+            class="toolbar-label-value"
+          >
+            <div
+              class="ian-label-value-container"
+            >
+              <div
+                class="ian-label-value__label"
+                data-cy="description-label"
+              >
+                Description: 
+              </div>
+              <div
+                class="ian-label-value__value"
+                data-cy="description-value"
+                title="Station description"
+              >
+                Unknown
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="toolbar__center-group"
+      >
+        <div
+          class="toolbar__whitespace"
+          style="width: 84px;"
+        />
+      </div>
+      <div
+        class="toolbar__right-group"
+      />
+    </div>
+    <div
+      class="bp5-non-ideal-state bp5-non-ideal-state-vertical"
+    >
+      <div
+        class="bp5-non-ideal-state-visual"
+        style="font-size: 48px; line-height: 48px;"
+      >
+        <span
+          aria-hidden="true"
+          class="bp5-icon bp5-icon-exclude-row"
+          data-icon="exclude-row"
+          tabindex="-1"
+        />
+      </div>
+      <div
+        class="bp5-non-ideal-state-text"
+      >
+        <h4
+          class="bp5-heading"
+        >
+          No Data for Selected Station
+        </h4>
+        <div>
+          There is no data available for this station
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

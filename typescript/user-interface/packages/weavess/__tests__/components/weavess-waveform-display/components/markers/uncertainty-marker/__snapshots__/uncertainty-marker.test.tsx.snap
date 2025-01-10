@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weavess Vertical Marker renders as expected 1`] = `
+<div>
+  <div
+    class="uncertainty-marker"
+  >
+    <div
+      class="uncertainty-marker__vertical uncertainty-marker__vertical--left"
+      style="border-left: 1.5px solid #ff0000; left: 91.85%;"
+    />
+    <div
+      class="uncertainty-marker__invisible-drag-target"
+      data-testid="uncertainty-marker"
+      style="left: 91.83999999999999%; right: 8.140000000000006%;"
+    />
+    <div
+      class="uncertainty-marker__horizontal"
+      style="border-top: 1.5px solid #ff0000; left: 91.85%; width: 0.15000000000000568%;"
+    />
+  </div>
+</div>
+`;
+
+exports[`Weavess Vertical Marker renders as right marker 1`] = `
+<div>
+  <div
+    class="uncertainty-marker"
+  >
+    <div
+      class="uncertainty-marker__vertical uncertainty-marker__vertical--right"
+      style="border-left: 1.5px solid #ff0000; left: 92.15%;"
+    />
+    <div
+      class="uncertainty-marker__invisible-drag-target"
+      data-testid="uncertainty-marker"
+      style="left: 92.14%; right: 7.8399999999999945%;"
+    />
+    <div
+      class="uncertainty-marker__horizontal"
+      style="border-top: 1.5px solid #ff0000; left: 92%; width: 0.15000000000000568%;"
+    />
+  </div>
+</div>
+`;

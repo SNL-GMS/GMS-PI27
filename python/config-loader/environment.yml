@@ -1,0 +1,19 @@
+# config-loader specific environment
+# Any dependencies added here should also be added to the combined environment file in python/gms-test-environment.yml
+#
+# After making any changes to this file, a clean config-loader environment needs to be created, and the lock file regenerated.
+# Run the script:
+# ./create-python-lock.sh
+#
+
+name: config-loader
+channels:
+  - conda-forge
+dependencies:
+  - flask-executor=1.0.0
+  - flask-sqlalchemy=3.0.3
+  - flask=3.0.1
+  - gunicorn=21.2.0
+  - python=3.10.13
+  - pyyaml=6.0.1
+  - requests=2.31.0

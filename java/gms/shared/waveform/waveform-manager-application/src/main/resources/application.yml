@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: waveform-manager
+  processing:
+    configuration-names: waveform-manager
+  codec:
+    max-in-memory-size: 20MB
+
+server:
+  compression:
+    enabled: true
+    mime-types: "text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json,application/msgpack"
+    min-response-size: 1024
+  servlet:
+    context-path: /waveform-manager-service
+
+gms:
+  persistence:
+    oracle:
+      account: gms_global_ro
+      unit: gms_station_definition
+
+qcMaskPersistenceUnitName: gms_qc_mask
+qcMaskDurationTimeConfig: qc-mask.qc-duration-time-parameters
+qcMaskJdbcUrlConfig: qc-mask.jdbc_url
+
+signalEnhancementConfiguration.hostname: 
+signalEnhancementConfiguration.port:
+signalEnhancementConfiguration.contextPath:
+signalEnhancementConfiguration.urlPaths.filterDefsByUsageForSDHs:
+
+stationDefinitionPersistenceUnitName: gms_station_definition
+signalDetectionPersistenceUnitName: gms_signal_detection
+
+monitoringOrgConfig: global.monitoring-org
+accountsByStageConfig: global.stage-accounts
+orderedStagesConfig: workflow-manager.workflow-definition
+waveformLeadLagConfig: signal-detection.waveform-lead-lag
+
+signalEnhancementConfiguration:
+  hostname: signal-enhancement-configuration-service
+  contextPath: /signal-enhancement-configuration
+  port: 8080
+  urlPaths:
+    filterDefsByUsageForSDHs: /default-filter-definitions-for-signal-detection-hypotheses
+
+instrumentResponseDefinitionConfig: station-definition.frequency-amplitude-phase-definition
+
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true

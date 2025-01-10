@@ -1,0 +1,68 @@
+{
+    "name": "event-mkar",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "beamType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "EVENT"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "MKAR"
+            ],
+            "priority": 90
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "phaseType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "P"
+            ],
+            "priority": 80
+        }
+    ],
+    "parameters": {
+        "leadDuration": "PT5S",
+        "beamDuration": "PT5M",
+        "orientationAngleToleranceDeg": 5.0,
+        "sampleRateToleranceHz": 0.5,
+        "minWaveformsToBeam": 2,
+        "inputChannelGroups": [
+            "MK01",
+            "MK02",
+            "MK03",
+            "MK04",
+            "MK05",
+            "MK06",
+            "MK07",
+            "MK08",
+            "MK09"
+        ],
+        "inputChannels": [
+            "SHZ"
+        ],
+        "beamDescriptionParams": {
+            "beamSummation": "COHERENT",
+            "beamType": "EVENT",
+            "samplingType": "NEAREST_SAMPLE",
+            "twoDimensional": true
+        }
+    }
+}

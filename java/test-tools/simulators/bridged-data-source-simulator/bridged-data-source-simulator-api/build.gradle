@@ -1,0 +1,19 @@
+plugins {
+    id 'java-library'
+    alias(libs.plugins.io.swagger.core.v3.swagger.gradle)
+}
+
+dependencies {
+    implementation libs.com.google.guava.guava
+    
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    // Serialization (dependencies are api as we expose our ObjectMapper as a singleton).
+    api libs.com.fasterxml.jackson.core.jackson.databind
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.jdk8
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.jsr310
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.guava
+
+    testImplementation 'gms:test-utils:LATEST'
+}

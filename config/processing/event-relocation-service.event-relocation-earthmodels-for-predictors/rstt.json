@@ -1,0 +1,19 @@
+{
+    "name": "rstt",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "predictor",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "rstt"
+            ]
+        }
+    ],
+    "parameters": {
+        "earthModel": "pdu202009Du.geotess"
+    }
+}

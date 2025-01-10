@@ -1,0 +1,104 @@
+#!/usr/bin/env python3
+
+# ----------------------------------------------------------------------------
+# This Python script was developed to auto update the operational time period
+# in config so that the 2019 static data set can be used with the interval
+# table in the Workflow Display.
+# ----------------------------------------------------------------------------
+import json
+import numpy as np
+from datetime import datetime
+from pathlib import Path
+
+# Update operational time period function
+
+
+def main():
+    config_dir = Path(__file__).resolve().parents[2] / "test/config"
+    workflow_config_file = (
+        config_dir / "ian/workflow-display-test/processing/"
+        "global.operational-time-period/default.json"
+    )
+    waveform_config_file = (
+        config_dir / "ian/waveforms-display-test/processing/"
+        "global.operational-time-period/default.json"
+    )
+    map_config_file = (
+        config_dir / "ian/map-display-test/processing/"
+        "global.operational-time-period/default.json"
+    )
+    seed_data_config_file = (
+        config_dir / "ian/seed-data-config/processing/"
+        "global.operational-time-period/default.json"
+    )
+
+    # If config files do not exist, exit
+    if not workflow_config_file.is_file():
+        print(f"File {workflow_config_file} does not exist.\nExiting\n")
+        exit()
+    elif not waveform_config_file.is_file():
+        print(f"File {waveform_config_file} does not exist.\nExiting\n")
+        exit()
+    elif not map_config_file.is_file():
+        print(f"File {map_config_file} does not exist.\nExiting\n")
+        exit()
+    elif not seed_data_config_file.is_file():
+        print(f"File {seed_data_config_file} does not exist.\nExiting\n")
+        exit()
+    else:
+        # Update operational time period
+        updateOTP(workflow_config_file)
+        updateOTP(waveform_config_file)
+        updateOTP(map_config_file)
+        updateOTP(seed_data_config_file)
+
+    # Confirm write
+    print("Operational time period updated.")
+
+
+def updateOTP(infile):
+    '''
+    This function is used to update the operational time period in config.
+    operationalPeriodStart and operationalPeriod end in
+    config/processing/global.operational-time-period/default.json will be
+    updated to reflect the number of elapsed hours since 2019-01-05 and
+    2019-01-06, respectively.
+
+    For I&T Testing
+    This function is used to update the operational time period in config.
+    operationalPeriodStart and operationalPeriod end in
+    test/config/ian/<applicable_directory>/processing/global.operational-time-period/default.json
+    will be updated to reflect the number of elapsed hours since 2019-01-05 and
+    2019-01-06, respectively.
+
+    :param infile: file path + name of config file to be adjusted
+    :return: no returns, but does overwrite the config file
+    '''
+
+    # Calculate opStart (operational time period start) and opEnd
+    # (operational time period end) to be the number of elapsed hours
+    # since 2018-10-05 and 2019-04-06, respectively; this is a 6 month
+    # time span with 3 months on either side of the seed data
+    opStart = np.floor(
+        (datetime.now() - datetime(2018, 10, 5)).total_seconds() / 3600
+    )  # yapf: disable
+    opEnd = np.floor(
+        (datetime.now() - datetime(2019, 4, 6)).total_seconds() / 3600
+    )  # yapf: disable
+
+    # Read in global.operational-time-period/default.json
+    f = open(infile)
+    data = json.load(f)
+
+    # Add calculated elapsed time to config file
+    parameters = data["parameters"]
+    parameters["operationalPeriodStart"] = f"PT{round(opStart)}H"
+    parameters["operationalPeriodEnd"] = f"PT{round(opEnd)}H"
+
+    # Write out config file with new values
+    with open(infile, "w") as outfile:
+        json.dump(data, outfile, indent=2)
+
+
+if __name__ == "__main__":
+    main()

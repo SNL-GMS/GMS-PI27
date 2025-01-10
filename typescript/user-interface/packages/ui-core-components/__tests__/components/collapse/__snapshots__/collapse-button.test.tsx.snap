@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollapseButton CollapseButton renders 1`] = `
+<div>
+  <button
+    class="bp5-button collapse-button--closed button--full-width"
+    type="button"
+  >
+    <span
+      class="bp5-button-text"
+    >
+      collapse-button
+    </span>
+    <span
+      aria-hidden="true"
+      class="bp5-icon bp5-icon-standard bp5-icon-caret-down"
+      data-icon="caret-down"
+    />
+  </button>
+  <div
+    class="bp5-collapse collapse-button__target--closed button--full-width"
+  >
+    <div
+      aria-hidden="true"
+      class="bp5-collapse-body"
+      style="transform: translateY(-undefinedpx);"
+    />
+  </div>
+</div>
+`;

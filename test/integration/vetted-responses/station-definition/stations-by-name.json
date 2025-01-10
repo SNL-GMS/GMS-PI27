@@ -1,0 +1,718 @@
+[
+    {
+        "allRawChannels": [
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS01.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS02.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS03.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS04.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS05.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS06.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS07.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS08.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS09.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS10.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS11.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS12.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS13.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS14.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS15.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS16.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS17.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS18.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS19.SHZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS31.BHE"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS31.BHN"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS31.BHZ"
+            }
+        ],
+        "channelGroups": [
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS01.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6215,
+                    "latitudeDegrees": -23.663224,
+                    "longitudeDegrees": 133.951993
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS01"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS02.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6367,
+                    "latitudeDegrees": -23.677631,
+                    "longitudeDegrees": 133.938215
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS02"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS03.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6602,
+                    "latitudeDegrees": -23.672871,
+                    "longitudeDegrees": 133.921262
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS03"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS04.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6835,
+                    "latitudeDegrees": -23.658175,
+                    "longitudeDegrees": 133.930481
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS04"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS05.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.7001,
+                    "latitudeDegrees": -23.647756,
+                    "longitudeDegrees": 133.948928
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS05"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS06.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6813,
+                    "latitudeDegrees": -23.646206,
+                    "longitudeDegrees": 133.972511
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS06"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS07.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6302,
+                    "latitudeDegrees": -23.664037,
+                    "longitudeDegrees": 133.971143
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS07"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS08.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6111,
+                    "latitudeDegrees": -23.679935,
+                    "longitudeDegrees": 133.961149
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS08"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS09.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6081,
+                    "latitudeDegrees": -23.698005,
+                    "longitudeDegrees": 133.942556
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS09"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS10.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.624,
+                    "latitudeDegrees": -23.695526,
+                    "longitudeDegrees": 133.915193
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS10"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS11.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6231,
+                    "latitudeDegrees": -23.676861,
+                    "longitudeDegrees": 133.898972
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS11"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS12.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6237,
+                    "latitudeDegrees": -23.664895,
+                    "longitudeDegrees": 133.90573
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS12"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS13.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6218,
+                    "latitudeDegrees": -23.650528,
+                    "longitudeDegrees": 133.895694
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS13"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS14.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6373,
+                    "latitudeDegrees": -23.650325,
+                    "longitudeDegrees": 133.911635
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS14"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS15.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6858,
+                    "latitudeDegrees": -23.634046,
+                    "longitudeDegrees": 133.913411
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS15"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS16.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.693,
+                    "latitudeDegrees": -23.635466,
+                    "longitudeDegrees": 133.931283
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS16"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS17.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6331,
+                    "latitudeDegrees": -23.663127,
+                    "longitudeDegrees": 133.992827
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS17"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS18.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.6079,
+                    "latitudeDegrees": -23.68858,
+                    "longitudeDegrees": 133.982023
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS18"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS19.SHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0274,
+                    "elevationKm": 0.5935,
+                    "latitudeDegrees": -23.702838,
+                    "longitudeDegrees": 133.96378
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS19"
+            },
+            {
+                "channels": [
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS31.BHE"
+                    },
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS31.BHN"
+                    },
+                    {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ASAR.AS31.BHZ"
+                    }
+                ],
+                "description": "Alice_Springs_Array,_Australia",
+                "location": {
+                    "depthKm": 0.0518,
+                    "elevationKm": 0.6273,
+                    "latitudeDegrees": -23.665134,
+                    "longitudeDegrees": 133.905261
+                },
+                "type": "PHYSICAL_SITE",
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "AS31"
+            }
+        ],
+        "description": "Alice_Springs_Array,_Australia",
+        "location": {
+            "depthKm": 0.0,
+            "elevationKm": 0.6273,
+            "latitudeDegrees": -23.665134,
+            "longitudeDegrees": 133.905261
+        },
+        "relativePositionChannelPairs": [
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS01.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 4.7646,
+                    "northDisplacementKm": 0.2106,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS02.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 3.3595,
+                    "northDisplacementKm": -1.3837,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS03.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 1.6313,
+                    "northDisplacementKm": -0.8565,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS04.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 2.5714,
+                    "northDisplacementKm": 0.7701,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS05.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 4.4526,
+                    "northDisplacementKm": 1.9229,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS06.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 6.8574,
+                    "northDisplacementKm": 2.0935,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS07.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 6.717,
+                    "northDisplacementKm": 0.1199,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS08.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 5.6974,
+                    "northDisplacementKm": -1.6394,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS09.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 3.8014,
+                    "northDisplacementKm": -3.6389,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS10.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 1.0124,
+                    "northDisplacementKm": -3.3641,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS11.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": -0.6417,
+                    "northDisplacementKm": -1.2991,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS12.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 0.0478,
+                    "northDisplacementKm": 0.0265,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS13.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": -0.9757,
+                    "northDisplacementKm": 1.6154,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS14.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 0.6499,
+                    "northDisplacementKm": 1.6392,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS15.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 0.8311,
+                    "northDisplacementKm": 3.4411,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS16.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 2.6536,
+                    "northDisplacementKm": 3.2837,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS17.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 8.9278,
+                    "northDisplacementKm": 0.2194,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS18.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 7.8248,
+                    "northDisplacementKm": -2.5973,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS19.SHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 5.9645,
+                    "northDisplacementKm": -4.1746,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS31.BHE"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 0.0,
+                    "northDisplacementKm": 0.0,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS31.BHN"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 0.0,
+                    "northDisplacementKm": 0.0,
+                    "verticalDisplacementKm": 0.0
+                }
+            },
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": "ASAR.AS31.BHZ"
+                },
+                "relativePosition": {
+                    "eastDisplacementKm": 0.0,
+                    "northDisplacementKm": 0.0,
+                    "verticalDisplacementKm": 0.0
+                }
+            }
+        ],
+        "type": "SEISMIC_ARRAY",
+        "effectiveAt": "2010-05-21T00:00:00Z",
+        "name": "ASAR"
+    }
+]

@@ -1,0 +1,7 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api project(':waveform-coi')
+
+    testImplementation(testFixtures(project(':waveform-coi')))
+}

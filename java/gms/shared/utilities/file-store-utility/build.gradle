@@ -1,0 +1,21 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+
+    implementation project(':frameworks-configuration-repository')
+    implementation project(':frameworks-configuration-commonobjects')
+    implementation project(':java-utilities')
+
+    api libs.org.springframework.spring.context
+
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    implementation project(':frameworks-osd-commonobjects')
+    implementation libs.io.minio.minio
+
+    // -- WebClient
+    implementation libs.org.springframework.spring.webflux
+}

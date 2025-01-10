@@ -1,0 +1,30 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation project(':fk-plugin')
+    implementation project(':fk-coi')
+    implementation project(':waveform-coi')
+    implementation project(":frameworks-control")
+    implementation project(":fk-control-api")
+    implementation project(':plugin-registry')
+    implementation project(':waveform-api')
+    implementation project(':station-definition-api')
+    implementation project(':station-definition-accessor')
+    implementation project(':common-coi-types')
+    implementation project(':java-utilities')
+
+    testImplementation project(':test-utils')
+    testImplementation(testFixtures(project(':waveform-coi')))
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':fk-coi')))
+    
+    implementation libs.org.apache.httpcomponents.httpclient
+
+    // FK Plugins (TBD)
+    runtimeOnly project(':fk-spectrum-algorithm')
+    runtimeOnly project(':fk-attributes-plugin')
+ 
+    // Google AutoValue
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+}

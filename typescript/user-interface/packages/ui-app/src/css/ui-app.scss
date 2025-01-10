@@ -1,0 +1,53 @@
+// As of Dart Sass 2.0.0, !global assignments won't be able to declare new variables.
+$ag-background-color: null;
+$ag-border-color: null;
+$ag-cell-horizontal-border: null;
+$ag-foreground-color: null;
+$ag-header-background-color: null;
+$ag-header-background-color: null;
+$ag-icon-color: null;
+$ag-editor-background-color: null;
+$ag-hover-color: null;
+$ag-odd-row-background-color: null;
+$ag-panel-background-color: null;
+$ag-row-group-indent-size: null;
+$ag-primary-color: null;
+$ag-selected-color: null;
+$ag-value-change-delta-up-color: null;
+$ag-value-change-value-highlight-background-color: null;
+
+// TODO Correct from using a relative path here; currently required for hot reloading to work for scss from other packages
+//@import '@gms/weavess/src/scss/weavess.scss';
+@import '../../../weavess/src/scss/weavess.scss';
+//@import '@gms/ui-core-components/src/scss/ui-core-components.scss';
+@import '../../../ui-core-components/src/scss/ui-core-components.scss';
+
+@import 'cesium/../Source/Widgets/widgets.css';
+
+// Global definitions
+@import './gms-colors.scss';
+@import './gms-fonts.scss';
+@import './utils/_all.scss';
+
+@import 'react-toastify/dist/ReactToastify.min.css';
+@import '@blueprintjs/core/lib/css/blueprint.css';
+@import '@blueprintjs/icons/lib/css/blueprint-icons.css';
+@import '@blueprintjs/datetime/lib/css/blueprint-datetime.css';
+@import '@blueprintjs/core/lib/scss/variables.scss';
+@import '@blueprintjs/select/lib/css/blueprint-select.css';
+
+// App scss files
+@import './goldenlayout-base.scss';
+@import './gms-ag-grid-overrides.scss';
+@import './gms-base.scss';
+@import './gms-blueprint-theme-overrides.scss';
+@import './gms-core-component-overrides.scss';
+@import './gms-weavess-overrides.scss';
+@import './goldenlayout-blueprint-theme.scss';
+@import './components/_all.scss';
+@import './components/analyst-ui/_all.scss';
+@import './components/common-ui/_all.scss';
+
+body {
+  font-family: $gms-sans;
+}

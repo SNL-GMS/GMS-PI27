@@ -1,0 +1,77 @@
+{
+    "name": "amplitude-a5-over-2-mkar",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "MKAR"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "amplitudeMeasurementType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "AMPLITUDE_A5_OVER_2"
+            ],
+            "priority": 90 
+
+        }
+    ],
+    "parameters": {
+        "beamformingTemplate": {
+            "station": "MKAR",
+            "leadDuration": "PT5S",
+            "beamDuration": "PT5M",
+            "sampleRateToleranceHz": 0.5,
+            "orientationAngleToleranceDeg": 5,
+            "minWaveformsToBeam": 2, 
+            "inputChannelGroups": [
+                "MK01",
+                "MK02",
+                "MK03",
+                "MK04",
+                "MK05",
+                "MK06",
+                "MK07",
+                "MK08",
+                "MK09"
+            ],
+            "inputChannels": [
+                "SHZ"
+            ],
+            "beamDescriptionParams": {
+                "twoDimensional": true,
+                "beamType": "AMPLITUDE", 
+                "phaseType": "P", 
+                "beamSummation": "COHERENT",
+                "samplingType": "NEAREST_NEIGHBOR",
+                "preFilterDefinition": {
+                    "$ref=global.filter-definition": [
+                        {
+                            "criterion": "name",
+                            "value": "0.8 4.5 3 BP causal"
+                        }
+                    ] 
+                }
+            }
+        },
+        "filterDefinition": {
+            "$ref=global.filter-definition": [
+                {
+                    "criterion": "name",
+                    "value": "0.8 4.5 3 BP causal"
+                }
+            ] 
+        }
+    }
+}

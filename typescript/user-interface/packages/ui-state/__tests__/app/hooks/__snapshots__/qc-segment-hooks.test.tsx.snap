@@ -1,0 +1,394 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`qc segment hooks filterQcSegmentsByChannelNames filters a QcSegmentRecord for the provided unique name 1`] = `
+{
+  "PDAR.PD01.SHZ": {
+    "qcSegment2TestId": {
+      "channel": {
+        "canonicalName": "PDAR.PD01.SHZ",
+        "channelBandType": "SHORT_PERIOD",
+        "channelDataType": "SEISMIC",
+        "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+        "channelOrientationCode": "Z",
+        "channelOrientationType": "VERTICAL",
+        "configuredInputs": [],
+        "description": "Raw Channel created from ReferenceChannel 2fabc2d3-858b-3e85-9f47-e2ee72060f0b with version d767395c-850e-36f8-a6f2-a1c7398440e4",
+        "effectiveAt": 1636503404,
+        "effectiveForRequestTime": 1636503405,
+        "effectiveUntil": 1660701599.984,
+        "location": {
+          "depthKm": 0.0381,
+          "elevationKm": 2.192,
+          "latitudeDegrees": 42.7765,
+          "longitudeDegrees": -109.58314,
+        },
+        "name": "PDAR.PD01.SHZ",
+        "nominalSampleRateHz": 20,
+        "orientationAngles": {
+          "horizontalAngleDeg": -1,
+          "verticalAngleDeg": 0,
+        },
+        "processingDefinition": {},
+        "processingMetadata": {
+          "CHANNEL_GROUP": "PD01",
+        },
+        "station": {
+          "name": "PDAR",
+        },
+        "units": "NANOMETERS_PER_COUNT",
+      },
+      "id": "qcSegment2TestId",
+      "versionHistory": [
+        {
+          "category": "UNPROCESSED",
+          "channels": [
+            {
+              "effectiveAt": 1636503404,
+              "name": "PDAR.PD01.SHZ",
+            },
+          ],
+          "createdBy": "User 1",
+          "discoveredOn": undefined,
+          "endTime": 100,
+          "id": {
+            "effectiveAt": 0,
+            "parentQcSegmentId": "qcSegment2TestId",
+          },
+          "rationale": "",
+          "rejected": false,
+          "stageId": undefined,
+          "startTime": 0,
+          "type": "AGGREGATE",
+        },
+      ],
+    },
+    "qcSegmentTestId": {
+      "channel": {
+        "canonicalName": "PDAR.PD01.SHZ",
+        "channelBandType": "SHORT_PERIOD",
+        "channelDataType": "SEISMIC",
+        "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+        "channelOrientationCode": "Z",
+        "channelOrientationType": "VERTICAL",
+        "configuredInputs": [],
+        "description": "Raw Channel created from ReferenceChannel 2fabc2d3-858b-3e85-9f47-e2ee72060f0b with version d767395c-850e-36f8-a6f2-a1c7398440e4",
+        "effectiveAt": 1636503404,
+        "effectiveForRequestTime": 1636503405,
+        "effectiveUntil": 1660701599.984,
+        "location": {
+          "depthKm": 0.0381,
+          "elevationKm": 2.192,
+          "latitudeDegrees": 42.7765,
+          "longitudeDegrees": -109.58314,
+        },
+        "name": "PDAR.PD01.SHZ",
+        "nominalSampleRateHz": 20,
+        "orientationAngles": {
+          "horizontalAngleDeg": -1,
+          "verticalAngleDeg": 0,
+        },
+        "processingDefinition": {},
+        "processingMetadata": {
+          "CHANNEL_GROUP": "PD01",
+        },
+        "station": {
+          "name": "PDAR",
+        },
+        "units": "NANOMETERS_PER_COUNT",
+      },
+      "id": "qcSegmentTestId",
+      "versionHistory": [
+        {
+          "category": "ANALYST_DEFINED",
+          "channels": [
+            {
+              "effectiveAt": 1636503404,
+              "name": "PDAR.PD01.SHZ",
+            },
+          ],
+          "createdBy": "User 1",
+          "discoveredOn": undefined,
+          "endTime": 1636503704,
+          "id": {
+            "effectiveAt": 0,
+            "parentQcSegmentId": "qcSegmentTestId",
+          },
+          "rationale": "",
+          "rejected": false,
+          "stageId": undefined,
+          "startTime": 1636503404,
+          "type": "AGGREGATE",
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`qc segment hooks filterQcSegmentsByChannelNames filters a QcSegmentRecord for the provided unique name 2`] = `
+{
+  "PDAR.PD01.SHZ": {
+    "qcSegment2TestId": {
+      "channel": {
+        "canonicalName": "PDAR.PD01.SHZ",
+        "channelBandType": "SHORT_PERIOD",
+        "channelDataType": "SEISMIC",
+        "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+        "channelOrientationCode": "Z",
+        "channelOrientationType": "VERTICAL",
+        "configuredInputs": [],
+        "description": "Raw Channel created from ReferenceChannel 2fabc2d3-858b-3e85-9f47-e2ee72060f0b with version d767395c-850e-36f8-a6f2-a1c7398440e4",
+        "effectiveAt": 1636503404,
+        "effectiveForRequestTime": 1636503405,
+        "effectiveUntil": 1660701599.984,
+        "location": {
+          "depthKm": 0.0381,
+          "elevationKm": 2.192,
+          "latitudeDegrees": 42.7765,
+          "longitudeDegrees": -109.58314,
+        },
+        "name": "PDAR.PD01.SHZ",
+        "nominalSampleRateHz": 20,
+        "orientationAngles": {
+          "horizontalAngleDeg": -1,
+          "verticalAngleDeg": 0,
+        },
+        "processingDefinition": {},
+        "processingMetadata": {
+          "CHANNEL_GROUP": "PD01",
+        },
+        "station": {
+          "name": "PDAR",
+        },
+        "units": "NANOMETERS_PER_COUNT",
+      },
+      "id": "qcSegment2TestId",
+      "versionHistory": [
+        {
+          "category": "UNPROCESSED",
+          "channels": [
+            {
+              "effectiveAt": 1636503404,
+              "name": "PDAR.PD01.SHZ",
+            },
+          ],
+          "createdBy": "User 1",
+          "discoveredOn": undefined,
+          "endTime": 100,
+          "id": {
+            "effectiveAt": 0,
+            "parentQcSegmentId": "qcSegment2TestId",
+          },
+          "rationale": "",
+          "rejected": false,
+          "stageId": undefined,
+          "startTime": 0,
+          "type": "AGGREGATE",
+        },
+      ],
+    },
+    "qcSegmentTestId": {
+      "channel": {
+        "canonicalName": "PDAR.PD01.SHZ",
+        "channelBandType": "SHORT_PERIOD",
+        "channelDataType": "SEISMIC",
+        "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+        "channelOrientationCode": "Z",
+        "channelOrientationType": "VERTICAL",
+        "configuredInputs": [],
+        "description": "Raw Channel created from ReferenceChannel 2fabc2d3-858b-3e85-9f47-e2ee72060f0b with version d767395c-850e-36f8-a6f2-a1c7398440e4",
+        "effectiveAt": 1636503404,
+        "effectiveForRequestTime": 1636503405,
+        "effectiveUntil": 1660701599.984,
+        "location": {
+          "depthKm": 0.0381,
+          "elevationKm": 2.192,
+          "latitudeDegrees": 42.7765,
+          "longitudeDegrees": -109.58314,
+        },
+        "name": "PDAR.PD01.SHZ",
+        "nominalSampleRateHz": 20,
+        "orientationAngles": {
+          "horizontalAngleDeg": -1,
+          "verticalAngleDeg": 0,
+        },
+        "processingDefinition": {},
+        "processingMetadata": {
+          "CHANNEL_GROUP": "PD01",
+        },
+        "station": {
+          "name": "PDAR",
+        },
+        "units": "NANOMETERS_PER_COUNT",
+      },
+      "id": "qcSegmentTestId",
+      "versionHistory": [
+        {
+          "category": "ANALYST_DEFINED",
+          "channels": [
+            {
+              "effectiveAt": 1636503404,
+              "name": "PDAR.PD01.SHZ",
+            },
+          ],
+          "createdBy": "User 1",
+          "discoveredOn": undefined,
+          "endTime": 1636503704,
+          "id": {
+            "effectiveAt": 0,
+            "parentQcSegmentId": "qcSegmentTestId",
+          },
+          "rationale": "",
+          "rejected": false,
+          "stageId": undefined,
+          "startTime": 1636503404,
+          "type": "AGGREGATE",
+        },
+      ],
+    },
+  },
+  "PDAR.PD02.SHZ": {
+    "qcSegment3TestId": {
+      "channel": {
+        "canonicalName": "PDAR.PD02.SHZ",
+        "channelBandType": "SHORT_PERIOD",
+        "channelDataType": "SEISMIC",
+        "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+        "channelOrientationCode": "Z",
+        "channelOrientationType": "VERTICAL",
+        "configuredInputs": [],
+        "description": "Raw Channel created from ReferenceChannel 04abdfb2-0fac-37cd-8b9e-18a997362ea6 with version d621a702-3f21-34ba-8bae-fd242438152b",
+        "effectiveAt": 1636503404,
+        "effectiveForRequestTime": 1636503405,
+        "effectiveUntil": 1660701599.984,
+        "location": {
+          "depthKm": 0.0381,
+          "elevationKm": 2.207,
+          "latitudeDegrees": 42.77818,
+          "longitudeDegrees": -109.5663,
+        },
+        "name": "PDAR.PD02.SHZ",
+        "nominalSampleRateHz": 20,
+        "orientationAngles": {
+          "horizontalAngleDeg": -1,
+          "verticalAngleDeg": 0,
+        },
+        "processingDefinition": {},
+        "processingMetadata": {
+          "CHANNEL_GROUP": "PD02",
+        },
+        "station": {
+          "name": "PDAR",
+        },
+        "units": "NANOMETERS_PER_COUNT",
+      },
+      "id": "qcSegment3TestId",
+      "versionHistory": [
+        {
+          "category": "UNPROCESSED",
+          "channels": [
+            {
+              "effectiveAt": 1636503404,
+              "name": "PDAR.PD01.SHZ",
+            },
+          ],
+          "createdBy": "User 1",
+          "discoveredOn": undefined,
+          "endTime": 100,
+          "id": {
+            "effectiveAt": 0,
+            "parentQcSegmentId": "qcSegment3TestId",
+          },
+          "rationale": "",
+          "rejected": false,
+          "stageId": undefined,
+          "startTime": 0,
+          "type": "AGGREGATE",
+        },
+        {
+          "category": "ANALYST_DEFINED",
+          "channels": [
+            {
+              "effectiveAt": 1636503404,
+              "name": "PDAR.PD01.SHZ",
+            },
+          ],
+          "createdBy": "User 1",
+          "discoveredOn": undefined,
+          "endTime": 100,
+          "id": {
+            "effectiveAt": 0,
+            "parentQcSegmentId": "qcSegment3TestId",
+          },
+          "rationale": "",
+          "rejected": false,
+          "stageId": undefined,
+          "startTime": 0,
+          "type": "AGGREGATE",
+        },
+      ],
+    },
+    "qcSegment4TestId": {
+      "channel": {
+        "canonicalName": "PDAR.PD02.SHZ",
+        "channelBandType": "SHORT_PERIOD",
+        "channelDataType": "SEISMIC",
+        "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+        "channelOrientationCode": "Z",
+        "channelOrientationType": "VERTICAL",
+        "configuredInputs": [],
+        "description": "Raw Channel created from ReferenceChannel 04abdfb2-0fac-37cd-8b9e-18a997362ea6 with version d621a702-3f21-34ba-8bae-fd242438152b",
+        "effectiveAt": 1636503404,
+        "effectiveForRequestTime": 1636503405,
+        "effectiveUntil": 1660701599.984,
+        "location": {
+          "depthKm": 0.0381,
+          "elevationKm": 2.207,
+          "latitudeDegrees": 42.77818,
+          "longitudeDegrees": -109.5663,
+        },
+        "name": "PDAR.PD02.SHZ",
+        "nominalSampleRateHz": 20,
+        "orientationAngles": {
+          "horizontalAngleDeg": -1,
+          "verticalAngleDeg": 0,
+        },
+        "processingDefinition": {},
+        "processingMetadata": {
+          "CHANNEL_GROUP": "PD02",
+        },
+        "station": {
+          "name": "PDAR",
+        },
+        "units": "NANOMETERS_PER_COUNT",
+      },
+      "id": "qcSegment4TestId",
+      "versionHistory": [
+        {
+          "category": undefined,
+          "channels": [
+            {
+              "effectiveAt": 1636503404,
+              "name": "PDAR.PD01.SHZ",
+            },
+          ],
+          "createdBy": "User 1",
+          "discoveredOn": undefined,
+          "endTime": 100,
+          "id": {
+            "effectiveAt": 0,
+            "parentQcSegmentId": "qcSegment4TestId",
+          },
+          "rationale": "",
+          "rejected": true,
+          "stageId": undefined,
+          "startTime": 0,
+          "type": undefined,
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`qc segment hooks useCreateQcSegments matches snapshot 1`] = `[Function]`;

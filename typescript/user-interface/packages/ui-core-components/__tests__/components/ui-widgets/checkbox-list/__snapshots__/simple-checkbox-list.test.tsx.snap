@@ -1,0 +1,304 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleCheckboxList is exported and renders with empty checkBoxListEntries 1`] = `
+<div>
+  <div
+    class="checkbox-list__body"
+  />
+</div>
+`;
+
+exports[`SimpleCheckboxList renders with checkBoxListEntries 1`] = `
+<div>
+  <div
+    class="checkbox-list__body"
+  >
+    <h6
+      class="bp5-heading bp5-heading"
+    >
+       
+      Entry Title
+    </h6>
+    <div
+      class="checkbox-list__row"
+    >
+      <div
+        class="checkbox-list__box-and-label"
+      >
+        <label
+          class="bp5-control bp5-checkbox checkbox-list__checkbox"
+        >
+          <input
+            checked=""
+            data-cy="checkbox-item-Station 0"
+            type="checkbox"
+          />
+          <span
+            class="bp5-control-indicator"
+          />
+          <div
+            class="checkbox-list__label"
+          >
+            Station 0
+          </div>
+        </label>
+      </div>
+    </div>
+    <li
+      class="bp5-menu-divider"
+      role="separator"
+    />
+    <h6
+      class="bp5-heading bp5-heading"
+    >
+       
+      Icon Title
+    </h6>
+    <div
+      class="checkbox-list__row"
+    >
+      <div
+        class="checkbox-list__box-and-label"
+      >
+        <label
+          class="bp5-control bp5-checkbox checkbox-list__checkbox"
+        >
+          <input
+            data-cy="checkbox-item-Station 1"
+            type="checkbox"
+          />
+          <span
+            class="bp5-control-indicator"
+          />
+          <div
+            class="checkbox-list__label"
+          >
+            Station 1
+          </div>
+        </label>
+      </div>
+      <span
+        aria-hidden="true"
+        class="bp5-icon bp5-icon-standard bp5-icon-circle"
+        data-icon="circle"
+      />
+    </div>
+    <li
+      class="bp5-menu-divider"
+      role="separator"
+    />
+    <h6
+      class="bp5-heading bp5-heading"
+    >
+       
+      Element Title
+    </h6>
+    <div
+      class="checkbox-list__row"
+    >
+      <div
+        class="checkbox-list__box-and-label"
+      >
+        <label
+          class="bp5-control bp5-checkbox checkbox-list__checkbox"
+        >
+          <input
+            checked=""
+            data-cy="checkbox-item-Station 2"
+            type="checkbox"
+          />
+          <span
+            class="bp5-control-indicator"
+          />
+          <div
+            class="checkbox-list__label"
+          >
+            Station 2
+          </div>
+        </label>
+      </div>
+      <div />
+    </div>
+    <li
+      class="bp5-menu-divider"
+      role="separator"
+    />
+    <h6
+      class="bp5-heading bp5-heading"
+    >
+       
+      Button Title
+    </h6>
+    <div
+      class="checkbox-list__row"
+    >
+      <div
+        class="checkbox-list__box-and-label"
+      >
+        <label
+          class="bp5-control bp5-checkbox checkbox-list__checkbox"
+        >
+          <input
+            checked=""
+            data-cy="checkbox-item-Station 3"
+            type="checkbox"
+          />
+          <span
+            class="bp5-control-indicator"
+          />
+          <div
+            class="checkbox-list__label"
+          >
+            Station 3
+          </div>
+        </label>
+      </div>
+      <span
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="bp5-popover-target"
+      >
+        <button
+          class="bp5-button"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="bp5-icon bp5-icon-standard bp5-icon-cog"
+            data-icon="cog"
+          />
+        </button>
+      </span>
+    </div>
+    <li
+      class="bp5-menu-divider"
+      role="separator"
+    />
+    <h6
+      class="bp5-heading bp5-heading"
+    >
+       
+      Entry Title
+    </h6>
+    <div
+      class="checkbox-list__row"
+    >
+      <div
+        class="checkbox-list__box-and-label"
+      >
+        <label
+          class="bp5-control bp5-checkbox checkbox-list__checkbox"
+        >
+          <input
+            checked=""
+            data-cy="checkbox-item-Station 0"
+            type="checkbox"
+          />
+          <span
+            class="bp5-control-indicator"
+          />
+          <div
+            class="checkbox-list__label"
+          >
+            Station 0
+          </div>
+        </label>
+      </div>
+    </div>
+    <li
+      class="bp5-menu-divider"
+      role="separator"
+    />
+    <div
+      class="checkbox-list__row"
+    >
+      <div
+        class="checkbox-list__box-and-label"
+      >
+        <label
+          class="bp5-control bp5-checkbox checkbox-list__checkbox"
+        >
+          <input
+            data-cy="checkbox-item-Station 1"
+            type="checkbox"
+          />
+          <span
+            class="bp5-control-indicator"
+          />
+          <div
+            class="checkbox-list__label"
+          >
+            Station 1
+          </div>
+        </label>
+      </div>
+      <span
+        aria-hidden="true"
+        class="bp5-icon bp5-icon-standard bp5-icon-circle"
+        data-icon="circle"
+      />
+    </div>
+    <div
+      class="checkbox-list__row"
+    >
+      <div
+        class="checkbox-list__box-and-label"
+      >
+        <label
+          class="bp5-control bp5-checkbox checkbox-list__checkbox"
+        >
+          <input
+            checked=""
+            data-cy="checkbox-item-Station 2"
+            type="checkbox"
+          />
+          <span
+            class="bp5-control-indicator"
+          />
+          <div
+            class="checkbox-list__label"
+          >
+            Station 2
+          </div>
+        </label>
+      </div>
+      <div />
+    </div>
+    <div
+      class="checkbox-list__row"
+    >
+      <div
+        class="checkbox-list__box-and-label"
+      >
+        <label
+          class="bp5-control bp5-checkbox checkbox-list__checkbox"
+        >
+          <input
+            checked=""
+            data-cy="checkbox-item-Station 3"
+            type="checkbox"
+          />
+          <span
+            class="bp5-control-indicator"
+          />
+          <div
+            class="checkbox-list__label"
+          >
+            Station 3
+          </div>
+        </label>
+      </div>
+      <button
+        class="bp5-button"
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          class="bp5-icon bp5-icon-standard bp5-icon-cog"
+          data-icon="cog"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;

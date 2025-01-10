@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ldap-ca-cert
+  annotations:
+    "helm.sh/resource-policy": keep
+data:
+  sec-ldap.crt: |
+{{ .Values.ldap.caCert | indent 4 }}

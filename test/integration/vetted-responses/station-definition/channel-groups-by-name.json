@@ -1,0 +1,72 @@
+[
+    {
+        "channels": [
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "ASAR.AS01.SHZ"
+            }
+        ],
+        "description": "Alice_Springs_Array,_Australia",
+        "location": {
+            "depthKm": 0.0274,
+            "elevationKm": 0.6215,
+            "latitudeDegrees": -23.663224,
+            "longitudeDegrees": 133.951993
+        },
+        "type": "PHYSICAL_SITE",
+        "effectiveAt": "2010-05-21T00:00:00Z",
+        "name": "AS01"
+    },
+    {
+        "channels": [
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "MAW.MAW.BHE"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "MAW.MAW.BHN"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "MAW.MAW.BHZ"
+            }
+        ],
+        "description": "Mawson,_Antarctica",
+        "location": {
+            "depthKm": 0.006,
+            "elevationKm": 0.012,
+            "latitudeDegrees": -67.6039,
+            "longitudeDegrees": 62.8706
+        },
+        "type": "PHYSICAL_SITE",
+        "effectiveAt": "2003-02-19T00:00:00Z",
+        "name": "MAW"
+    },
+    {
+        "channels": [
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "MKAR.MK31.BHE"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "MKAR.MK31.BHN"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "MKAR.MK31.BHZ"
+            }
+        ],
+        "description": "Makanchi_Array,_Kazakhstan,_IMS",
+        "location": {
+            "depthKm": 0.03,
+            "elevationKm": 0.6176,
+            "latitudeDegrees": 46.793683,
+            "longitudeDegrees": 82.290569
+        },
+        "type": "PHYSICAL_SITE",
+        "effectiveAt": "2010-05-21T00:00:00Z",
+        "name": "MK31"
+    }
+]

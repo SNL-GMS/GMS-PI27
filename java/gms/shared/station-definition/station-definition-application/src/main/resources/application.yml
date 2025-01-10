@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: station-definition
+  processing:
+    configuration-names: station-definition
+  codec:
+    max-in-memory-size: 20MB
+
+server:
+  compression:
+    enabled: true
+    mime-types: "text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json,application/msgpack"
+    min-response-size: 1024
+  servlet:
+    context-path: /station-definition-service
+
+gms:
+  persistence:
+    oracle:
+      account: gms_global_ro
+      unit: gms_station_definition
+
+instrumentResponseDefinitionConfig: station-definition.frequency-amplitude-phase-definition
+
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true
+

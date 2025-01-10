@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Waveform state utils StationVisibilityChangesDictionary can find all displayed channel names for stations from dictionary 1`] = `
+[
+  "AAK.AK01.SHZ",
+]
+`;
+
+exports[`Waveform state utils StationVisibilityChangesDictionary can find all displayed channels for station from dictionary 1`] = `
+[
+  {
+    "effectiveAt": 100,
+    "name": "AAK.AK01.SHZ",
+  },
+]
+`;
+
+exports[`Waveform state utils StationVisibilityChangesDictionary can find all displayed channels for stations from dictionary 1`] = `
+[
+  {
+    "effectiveAt": 100,
+    "name": "AAK.AK01.SHZ",
+  },
+]
+`;
+
+exports[`Waveform state utils StationVisibilityChangesDictionary can find changes for visible channels list in dictionary 1`] = `
+{
+  "hiddenChannels": [
+    "AAK.AK01.SHN",
+  ],
+  "isStationExpanded": true,
+  "stationName": "AAK",
+  "visibility": true,
+}
+`;
+
+exports[`Waveform state utils StationVisibilityChangesDictionary can find changes for visible channels list in dictionary 2`] = `
+{
+  "hiddenChannels": [],
+  "isStationExpanded": true,
+  "stationName": "AAK",
+  "visibility": true,
+}
+`;
+
+exports[`Waveform state utils StationVisibilityChangesDictionary can find changes for visible channels list in dictionary 3`] = `
+{
+  "hiddenChannels": [],
+  "isStationExpanded": true,
+  "stationName": "AAK",
+  "visibility": true,
+}
+`;
+
+exports[`Waveform state utils StationVisibilityChangesDictionary can find visible channels from list in dictionary 1`] = `
+[
+  {
+    "effectiveAt": 100,
+    "name": "AAK.AK01.SHZ",
+  },
+]
+`;
+
+exports[`Waveform state utils StationVisibilityChangesDictionary can find visible channels from list in dictionary 2`] = `
+[
+  {},
+]
+`;
+
+exports[`Waveform state utils StationVisibilityChangesDictionary can find visible stations list in dictionary 1`] = `
+[
+  {
+    "allRawChannels": [
+      {
+        "effectiveAt": 100,
+        "name": "AAK.AK01.SHZ",
+      },
+      {
+        "effectiveAt": 100,
+        "name": "AAK.AK01.SHN",
+      },
+    ],
+    "effectiveAt": 100,
+    "name": "AAK",
+  },
+]
+`;
+
+exports[`Waveform state utils getChangesForHiddenChannel it can hide a second channel 1`] = `
+{
+  "hiddenChannels": [
+    "channelName1",
+    "channelName2",
+  ],
+  "isStationExpanded": false,
+  "stationName": "stationName",
+  "visibility": false,
+}
+`;
+
+exports[`Waveform state utils getChangesForHiddenChannel it can take a channel as a string 1`] = `
+{
+  "hiddenChannels": [
+    "channelName",
+  ],
+  "isStationExpanded": false,
+  "stationName": "stationName",
+  "visibility": false,
+}
+`;
+
+exports[`Waveform state utils getChangesForHiddenChannel it can take a channel name as a string 1`] = `
+{
+  "hiddenChannels": [
+    "channelName",
+  ],
+  "isStationExpanded": false,
+  "stationName": "stationName",
+  "visibility": false,
+}
+`;

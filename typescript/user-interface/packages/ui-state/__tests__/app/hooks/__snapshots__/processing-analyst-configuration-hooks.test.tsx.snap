@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`processing analyst configuration hooks can retrieve all UI themes 1`] = `
+[
+  {
+    "colors": {
+      "completeEventSDColor": "#62D96B",
+      "completeEventSDHoverColor": "#BBFFBC",
+      "conflict": "#FF0000",
+      "deletedEventColor": "#ff6347",
+      "deletedSdColor": "#ff6347",
+      "fkDisplayed": "#00FFFF",
+      "fkNeedsReview": "#EBFF00",
+      "gmsActionTarget": "#ffffff",
+      "gmsBackground": "#182026",
+      "gmsMain": "#f5f8fa",
+      "gmsMainInverted": "#10161a",
+      "gmsSelection": "#1589d1",
+      "gmsTableSelection": "#f5f8fa",
+      "mapArraySiteLines": "#182026",
+      "mapStationDefault": "#6F6E74",
+      "mapVisibleStation": "#D9822B",
+      "openEventSDColor": "#C87619",
+      "otherEventSDColor": "#FFFFFF",
+      "popover": {
+        "background": "#30404d",
+        "gridBackground": "#3d4b58",
+        "header": "#30404d",
+        "input": "#2d3b44",
+        "invalidInput": "#1c2127",
+      },
+      "predictionSDColor": "#C58C1B",
+      "qcMaskColors": {
+        "analystDefined": "#EB06C8",
+        "dataAuthentication": "#8A57FF",
+        "longTerm": "#0E9B96",
+        "processingMask": "#F87C2E",
+        "rejected": "#FF0000",
+        "stationSOH": "#B58400",
+        "unprocessed": "#FFFFFF",
+        "waveform": "#00E22B",
+      },
+      "rejectedEventColor": "#ab83f1",
+      "unassociatedSDColor": "#C23030",
+      "waveformDimPercent": 0.75,
+      "waveformFilterLabel": "#f5f8fa",
+      "waveformMaskLabel": "#EB06C8",
+      "waveformRaw": "#4580e6",
+      "waveformSelected": "#A4BAE1",
+      "weavessOutOfBounds": "#10161a",
+    },
+    "display": {
+      "edgeEventOpacity": 0.5,
+      "edgeSDOpacity": 0.2,
+      "predictionSDOpacity": 0.1,
+    },
+    "name": "GMS Dark Theme",
+  },
+]
+`;
+
+exports[`processing analyst configuration hooks can use associated complete signal detection color 1`] = `"#62D96B"`;
+
+exports[`processing analyst configuration hooks can use associated complete signal detection color 2`] = `"#62D96B"`;
+
+exports[`processing analyst configuration hooks can use associated open signal detection color 1`] = `"#C87619"`;
+
+exports[`processing analyst configuration hooks can use associated open signal detection color 2`] = `"#C87619"`;
+
+exports[`processing analyst configuration hooks can use associated other signal detection color 1`] = `"#FFFFFF"`;
+
+exports[`processing analyst configuration hooks can use associated other signal detection color 2`] = `"#FFFFFF"`;
+
+exports[`processing analyst configuration hooks can use default interactive analysis station group 1`] = `"ALL_1"`;
+
+exports[`processing analyst configuration hooks can use default interactive analysis station group 2`] = `"test"`;
+
+exports[`processing analyst configuration hooks can use map default (non-visible) station color 1`] = `"#6F6E74"`;
+
+exports[`processing analyst configuration hooks can use map default (non-visible) station color 2`] = `"#6F6E74"`;
+
+exports[`processing analyst configuration hooks can use ui theme 1`] = `"{"name":"GMS Default (dark)","isDarkMode":true,"display":{"edgeEventOpacity":0.5,"edgeSDOpacity":0.2,"predictionSDOpacity":0.1},"colors":{"gmsMain":"#f5f8fa","gmsMainInverted":"#10161a","gmsBackground":"#182026","gmsSelection":"#1589d1","gmsTableSelection":"#f5f8fa","mapVisibleStation":"#D9822B","mapStationDefault":"#6F6E74","mapArraySiteLines":"#182026","waveformDimPercent":0.75,"waveformRaw":"#3FA6DA","waveformSelected":"#A4BAE1","waveformFilterLabel":"#F6F7F9","waveformMaskLabel":"#EB06C8","unassociatedSDColor":"#C23030","openEventSDColor":"#C87619","completeEventSDColor":"#62D96B","completeEventSDHoverColor":"#BBFFBC","conflict":"#FF0000","otherEventSDColor":"#FFFFFF","predictionSDColor":"#C58C1B","deletedEventColor":"#ff6347","fkNeedsReview":"#EBFF00","fkDisplayed":"#00FFFF","rejectedEventColor":"#ab83f1","deletedSdColor":"#ff6347","qcMaskColors":{"analystDefined":"#EB06C8","dataAuthentication":"#8A57FF","longTerm":"#0E9B96","processingMask":"#F87C2E","rejected":"#FF0000","stationSOH":"#B58400","unprocessed":"#FFFFFF","waveform":"#00E22B"},"weavessOutOfBounds":"#10161a","popover":{"background":"#30404d","header":"#30404d","input":"303d46","invalidInput":"#1c2127","gridBackground":"#3d4b58"},"gmsActionTarget":"#ffffff"}}"`;
+
+exports[`processing analyst configuration hooks can use ui theme 2`] = `"{"name":"GMS Default (dark)","isDarkMode":true,"display":{"edgeEventOpacity":0.5,"edgeSDOpacity":0.2,"predictionSDOpacity":0.1},"colors":{"gmsMain":"#f5f8fa","gmsMainInverted":"#10161a","gmsBackground":"#182026","gmsSelection":"#1589d1","gmsTableSelection":"#f5f8fa","mapVisibleStation":"#D9822B","mapStationDefault":"#6F6E74","mapArraySiteLines":"#182026","waveformDimPercent":0.75,"waveformRaw":"#3FA6DA","waveformSelected":"#A4BAE1","waveformFilterLabel":"#F6F7F9","waveformMaskLabel":"#EB06C8","unassociatedSDColor":"#C23030","openEventSDColor":"#C87619","completeEventSDColor":"#62D96B","completeEventSDHoverColor":"#BBFFBC","conflict":"#FF0000","otherEventSDColor":"#FFFFFF","predictionSDColor":"#C58C1B","deletedEventColor":"#ff6347","fkNeedsReview":"#EBFF00","fkDisplayed":"#00FFFF","rejectedEventColor":"#ab83f1","deletedSdColor":"#ff6347","qcMaskColors":{"analystDefined":"#EB06C8","dataAuthentication":"#8A57FF","longTerm":"#0E9B96","processingMask":"#F87C2E","rejected":"#FF0000","stationSOH":"#B58400","unprocessed":"#FFFFFF","waveform":"#00E22B"},"weavessOutOfBounds":"#10161a","popover":{"background":"#30404d","header":"#30404d","input":"303d46","invalidInput":"#1c2127","gridBackground":"#3d4b58"},"gmsActionTarget":"#ffffff"}}"`;
+
+exports[`processing analyst configuration hooks can use unassociated signal detection color 1`] = `"#C23030"`;
+
+exports[`processing analyst configuration hooks can use unassociated signal detection color 2`] = `"#C23030"`;
+
+exports[`processing analyst configuration hooks can use unassociated signal detection length in meters 1`] = `"11100000"`;
+
+exports[`processing analyst configuration hooks can use unassociated signal detection length in meters 2`] = `"10"`;
+
+exports[`processing analyst configuration hooks can use visible station color 1`] = `"#D9822B"`;
+
+exports[`processing analyst configuration hooks can use visible station color 2`] = `"#D9822B"`;
+
+exports[`processing analyst configuration hooks creates the expected custom css vars for our event association colors 1`] = `"{"--open-associated-text-color":"#10161a","--complete-associated-text-color":"#10161a","--other-associated-text-color":"#10161a","--unassociated-text-color":"#f5f8fa","--deleted-sd-text-color":"#10161a"}"`;
+
+exports[`processing analyst configuration hooks useTranslateAnalystConfigPropsToReduxProps 1`] = `
+{
+  "eventsPanelVisibilityOptions": {
+    "edgeEventsAfterInterval": true,
+    "edgeEventsBeforeInterval": true,
+    "eventsCompleted": false,
+    "eventsConflict": false,
+    "eventsDeleted": true,
+    "eventsRejected": true,
+    "eventsRemaining": false,
+  },
+  "mapPanelVisibilityOptions": {
+    "associatedCompleteDetection": true,
+    "associatedOpenDetection": true,
+    "associatedOtherDetection": true,
+    "confidenceEllipse": true,
+    "coverageEllipse": true,
+    "deletedDetection": true,
+    "edgeDetectionAfter": true,
+    "edgeDetectionBefore": true,
+    "edgeEventsAfterInterval": true,
+    "edgeEventsBeforeInterval": true,
+    "events": true,
+    "eventsDeleted": true,
+    "eventsRejected": true,
+    "nonPreferredLocationSolution": false,
+    "preferredLocationSolution": true,
+    "signalDetections": true,
+    "sites": false,
+    "stations": true,
+    "unassociatedDetection": true,
+  },
+  "sdPanelVisibilityOptions": {
+    "signalDetectionAfterInterval": true,
+    "signalDetectionAssociatedToCompletedEvent": true,
+    "signalDetectionAssociatedToOpenEvent": true,
+    "signalDetectionAssociatedToOtherEvent": true,
+    "signalDetectionBeforeInterval": true,
+    "signalDetectionConflicts": true,
+    "signalDetectionDeleted": true,
+    "signalDetectionUnassociated": true,
+    "syncWaveform": false,
+  },
+  "waveformPanelVisibilityOptions": {
+    "signalDetectionAfterInterval": true,
+    "signalDetectionAssociatedToCompletedEvent": true,
+    "signalDetectionAssociatedToOpenEvent": true,
+    "signalDetectionAssociatedToOtherEvent": true,
+    "signalDetectionBeforeInterval": true,
+    "signalDetectionConflicts": true,
+    "signalDetectionDeleted": true,
+    "signalDetectionUnassociated": true,
+  },
+}
+`;
+
+exports[`processing analyst configuration hooks useUpdateReduxWithConfigDefaults 1`] = `undefined`;

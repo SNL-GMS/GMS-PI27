@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatusBar matches a snapshot 1`] = `
+<div>
+  <div
+    class="status-bar"
+  >
+    <span
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="bp5-popover-target"
+    >
+      <div
+        class="loading-widget"
+        role="button"
+      >
+        <span
+          aria-hidden="true"
+          class="bp5-icon bp5-icon-large bp5-icon-tick"
+          data-icon="tick"
+        />
+        <span
+          class="loading-counter monospace"
+        >
+             
+        </span>
+        <div
+          class="loading-info"
+        >
+          <span
+            class="loading-info__label"
+          >
+            Loading: 
+          </span>
+          Complete
+        </div>
+      </div>
+    </span>
+    <div
+      class="selection-information-container"
+    >
+      <span
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="bp5-popover-target"
+      >
+        <div
+          class="selection-information-widget selection-information-widget--disabled"
+          role="button"
+          title="Selected stations"
+        >
+          <span
+            class="selection-information-widget__text"
+          >
+            Stations: 
+          </span>
+          <span
+            class="selection-information-widget__text--medium"
+          >
+            Sta: 
+          </span>
+          0
+        </div>
+      </span>
+      <span
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="bp5-popover-target"
+      >
+        <div
+          class="selection-information-widget selection-information-widget--disabled"
+          role="button"
+          title="Selected channels"
+        >
+          <span
+            class="selection-information-widget__text"
+          >
+            Channels: 
+          </span>
+          <span
+            class="selection-information-widget__text--medium"
+          >
+            Chan: 
+          </span>
+          0
+        </div>
+      </span>
+      <span
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="bp5-popover-target"
+      >
+        <div
+          class="selection-information-widget selection-information-widget--disabled"
+          role="button"
+          title="Selected waveforms"
+        >
+          <span
+            class="selection-information-widget__text"
+          >
+            Waveforms: 
+          </span>
+          <span
+            class="selection-information-widget__text--medium"
+          >
+            Wave: 
+          </span>
+          0
+        </div>
+      </span>
+      <span
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="bp5-popover-target"
+      >
+        <div
+          class="selection-information-widget selection-information-widget--disabled"
+          role="button"
+          title="Selected events"
+        >
+          <span
+            class="selection-information-widget__text"
+          >
+            Events: 
+          </span>
+          <span
+            class="selection-information-widget__text--medium"
+          >
+            Evn: 
+          </span>
+          0
+        </div>
+      </span>
+      <span
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="bp5-popover-target"
+      >
+        <div
+          class="selection-information-widget selection-information-widget--disabled"
+          role="button"
+          title="Selected signal detections"
+        >
+          <span
+            class="selection-information-widget__text"
+          >
+            Signal Detections: 
+          </span>
+          <span
+            class="selection-information-widget__text--medium"
+          >
+            SDs: 
+          </span>
+          0
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+`;

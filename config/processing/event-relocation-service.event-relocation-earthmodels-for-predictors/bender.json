@@ -1,0 +1,19 @@
+{
+    "name": "bender",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "predictor",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "bender"
+            ]
+        }
+    ],
+    "parameters": {
+        "earthModel": "salsa3dv2.1"
+    }
+}

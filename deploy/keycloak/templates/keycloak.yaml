@@ -1,0 +1,53 @@
+{{/* Main template for keycloak */}}
+
+{{/* Istio not supported for keycloak */}}
+{{- if .Values.global.istio }}
+  {{- "Istio is not supported for keycloak. Use --no-istio arugment when installing." | fail }}
+{{- end }}
+
+{{- include "gms.common.configMap.standard" $ }}
+{{- include "gms.common.sidecar" $ }}
+{{- include "gms.common.secrets.copy" $ }}
+{{- include "gms.common.configMaps.copy" $ }}
+
+{{- if .Values.keycloakx.import.enabled }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: data-import
+  labels:
+    {{- include "gms.common.labels.standard" $ | trim | nindent 4 }}
+data:
+  {{- range $fileName, $fileContent := .Values.keycloakx.import.configuration }}
+  {{- if $fileContent }}
+  {{ $fileName }}: |
+    {{- tpl $fileContent $ | nindent 4 }}
+  {{- else }}
+    {{- ($.Files.Glob $fileName).AsConfig | nindent 2 }}
+  {{- end }}
+  {{- end }}
+{{- end }}
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: "passwords"
+  labels:
+    {{- include "gms.common.labels.standard" $ | trim | nindent 4 }}
+type: "Opaque"
+{{- $existing_secret := (lookup "v1" "Secret" $.Release.Namespace "passwords") }}
+{{- if $existing_secret }}
+data:
+  {{- range $key, $value := $existing_secret.data }}
+  {{ $key }}: {{ $value }}
+  {{- end }}
+{{- else }}
+{{- $dbPassword := uuidv4 }}
+stringData:
+  adminPassword: {{ tpl .Values.keycloakx.adminPassword $ | quote }}
+  password: {{ $dbPassword | quote }}
+  postgresql-password: {{ $dbPassword | quote }}
+  postgresql-postgres-password: {{ uuidv4 | quote }}
+{{- end }}

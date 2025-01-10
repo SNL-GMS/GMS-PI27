@@ -1,0 +1,50 @@
+plugins {
+    id('java-library')
+    id('java-test-fixtures')
+}
+
+dependencies {
+
+    implementation project(':station-definition-coi')
+    implementation project(':workflow-coi')
+    implementation project(':common-coi-types')
+
+    implementation project(':java-utilities')
+    implementation project(':waveform-reader')
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation project(':test-utils')
+    testImplementation(testFixtures(project(':waveform-coi')))
+ 
+    // Third-party dependencies.
+    api libs.org.apache.commons.commons.lang3
+    // Google AutoValue
+    api libs.com.google.guava.guava
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    // Serialization (dependencies are api as we expose our ObjectMapper as a singleton).
+    api libs.com.fasterxml.jackson.core.jackson.databind
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.jdk8
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.jsr310
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.guava
+    api libs.org.apache.kafka.kafka.clients
+
+    // msgpack and YAML serialization; kept as private so clients don't have to know about it
+    implementation libs.org.msgpack.jackson.dataformat.msgpack
+    implementation libs.com.fasterxml.jackson.dataformat.jackson.dataformat.yaml
+
+    testFixturesApi(platform(libs.org.springframework.boot.spring.boot.dependencies))
+    testFixturesApi project(':station-definition-coi')
+    testFixturesApi project(':waveform-coi')
+    testFixturesApi project(':waveform-api')
+    testFixturesApi project(':station-definition-accessor')
+    testFixturesApi project(':common-coi-types')
+    testFixturesImplementation project(':workflow-coi')
+    testFixturesImplementation project(':waveform-reader')
+    testFixturesImplementation project(':station-definition-converter')
+    testFixturesImplementation(testFixtures(project(':station-definition-coi')))
+    
+    // msgpack and YAML serialization; kept as private so clients don't have to know about it
+    testFixturesImplementation libs.org.msgpack.jackson.dataformat.msgpack
+    testFixturesImplementation libs.com.fasterxml.jackson.dataformat.jackson.dataformat.yaml
+}

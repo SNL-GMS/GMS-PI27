@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Activity Interval Context Menu Interval context menu shallow renders 1`] = `
+<div>
+  <ul
+    class="bp5-menu"
+    role="menu"
+  >
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        class="bp5-menu-item bp5-popover-dismiss menu-item-open-interval"
+        data-cy="open-interval-btn"
+        role="menuitem"
+        tabindex="0"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Open interval
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled menu-item-close-interval"
+        data-cy="close-interval-btn"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Close interval
+        </div>
+      </a>
+    </li>
+  </ul>
+   
+</div>
+`;
+
+exports[`Activity Interval Context Menu Interval context menu shallow renders for active analyst 1`] = `
+<div>
+  <ul
+    class="bp5-menu"
+    role="menu"
+  >
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        class="bp5-menu-item bp5-popover-dismiss menu-item-open-interval"
+        data-cy="open-interval-btn"
+        role="menuitem"
+        tabindex="0"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Reopen interval
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        class="bp5-menu-item bp5-popover-dismiss menu-item-close-interval"
+        data-cy="close-interval-btn"
+        role="menuitem"
+        tabindex="0"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Close interval
+        </div>
+      </a>
+    </li>
+  </ul>
+   
+</div>
+`;
+
+exports[`Activity Interval Context Menu Interval context menu shallow renders interactive analysis stage interval for active analyst 1`] = `
+<div>
+  <ul
+    class="bp5-menu"
+    role="menu"
+  >
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        class="bp5-menu-item bp5-popover-dismiss menu-item-open-interval"
+        data-cy="open-interval-btn"
+        role="menuitem"
+        tabindex="0"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Reopen interval
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        class="bp5-menu-item bp5-popover-dismiss menu-item-close-interval"
+        data-cy="close-interval-btn"
+        role="menuitem"
+        tabindex="0"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Close interval
+        </div>
+      </a>
+    </li>
+  </ul>
+   
+</div>
+`;
+
+exports[`Activity Interval Context Menu matches snapshot 1`] = `"<ul role="menu" class="bp5-menu"><li class="" role="none"><a role="menuitem" tabindex="-1" data-cy="open-interval-btn" aria-disabled="true" class="bp5-menu-item bp5-disabled menu-item-open-interval"><div class="bp5-text-overflow-ellipsis bp5-fill">Open interval</div></a></li><li class="" role="none"><a role="menuitem" tabindex="0" data-cy="close-interval-btn" class="bp5-menu-item bp5-popover-dismiss menu-item-close-interval"><div class="bp5-text-overflow-ellipsis bp5-fill">Close interval</div></a></li></ul>"`;

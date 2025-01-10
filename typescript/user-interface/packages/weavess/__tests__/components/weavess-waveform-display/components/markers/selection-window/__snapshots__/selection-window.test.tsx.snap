@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weavess SelectionWindow Marker renders 1`] = `
+<div>
+  <div
+    class="selection-window"
+    data-testid="selection-window"
+  >
+    <div
+      class="selection-window-selection"
+      style="background-color: rgb(255, 0, 0); left: 20%; right: 60%; cursor: move;"
+    />
+    <div
+      class="moveable-marker"
+      data-testid="selection-window-boundary-marker"
+      style="left: 20%;"
+    />
+    <div
+      class="moveable-marker"
+      data-testid="selection-window-boundary-marker"
+      style="left: 40%;"
+    />
+  </div>
+</div>
+`;

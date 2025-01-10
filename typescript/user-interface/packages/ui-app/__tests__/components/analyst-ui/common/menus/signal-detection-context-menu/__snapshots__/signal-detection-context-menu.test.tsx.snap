@@ -1,0 +1,462 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signal Detection Context Menu renders 1`] = `
+<div>
+  <ul
+    class="signal-detection-table__context-menu bp5-menu"
+    role="menu"
+  >
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled"
+        label="(alt + click)"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Open signal detection details
+        </div>
+        <span
+          class="bp5-menu-item-label"
+        >
+          (alt + click)
+        </span>
+      </a>
+    </li>
+    <li
+      class="bp5-submenu"
+      role="none"
+    >
+      <span
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="bp5-popover-target"
+        role="menuitem"
+        tabindex="0"
+      >
+        <a
+          aria-disabled="true"
+          class="bp5-menu-item bp5-disabled"
+          role="none"
+          tabindex="-1"
+        >
+          <div
+            class="bp5-text-overflow-ellipsis bp5-fill"
+          >
+            Event association
+          </div>
+          <span
+            class="bp5-icon bp5-icon-caret-right bp5-submenu-icon"
+          >
+            <svg
+              data-icon="caret-right"
+              height="16"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <title>
+                Open sub menu
+              </title>
+              <path
+                d="M220 160C220 163 218.6 165.6 216.6 167.4L216.6 167.4L136.6 237.4L136.6 237.4C134.8 239 132.6 240 130 240C124.4 240 120 235.6 120 230V90C120 84.4 124.4 80 130 80C132.6 80 134.8 81 136.6 82.6C136.6 82.6 136.6 82.6 136.6 82.6L216.6 152.6L216.6 152.6C218.6 154.4 220 157 220 160z"
+                fill-rule="evenodd"
+                transform="scale(0.05, -0.05) translate(-160, -160)"
+                transform-origin="center"
+              />
+            </svg>
+          </span>
+        </a>
+      </span>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled"
+        label="(ctrl + shift + e)"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Set 0 phases
+        </div>
+        <span
+          class="bp5-menu-item-label"
+        >
+          (ctrl + shift + e)
+        </span>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled"
+        label="(q)"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Set 0 to current phase: 
+        </div>
+        <span
+          class="bp5-menu-item-label"
+        >
+          (q)
+        </span>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled"
+        label="(shift + q)"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Set 0 to default phase: P
+        </div>
+        <span
+          class="bp5-menu-item-label"
+        >
+          (shift + q)
+        </span>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Show 0 FK
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled"
+        data-cy="rotate-sd"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Rotate waveforms using 0 signal detection
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled"
+        data-cy="delete-sd"
+        label="(backspace)"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Delete 0
+        </div>
+        <span
+          class="bp5-menu-item-label"
+        >
+          (backspace)
+        </span>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        class="bp5-menu-item bp5-popover-dismiss"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          class="bp5-menu-item-icon"
+        >
+          <span
+            aria-hidden="true"
+            class="bp5-icon bp5-icon-standard bp5-icon-export"
+            data-icon="export"
+            tabindex="-1"
+          />
+        </span>
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Export
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Signal Detection Context Menu renders with isAzimuthSlownessContextMenu 1`] = `
+<div>
+  <ul
+    class="signal-detection-table__context-menu bp5-menu"
+    role="menu"
+  >
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled"
+        label="(alt + click)"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Open signal detection details
+        </div>
+        <span
+          class="bp5-menu-item-label"
+        >
+          (alt + click)
+        </span>
+      </a>
+    </li>
+    <li
+      class="bp5-submenu"
+      role="none"
+    >
+      <span
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="bp5-popover-target"
+        role="menuitem"
+        tabindex="0"
+      >
+        <a
+          aria-disabled="true"
+          class="bp5-menu-item bp5-disabled"
+          role="none"
+          tabindex="-1"
+        >
+          <div
+            class="bp5-text-overflow-ellipsis bp5-fill"
+          >
+            Event association
+          </div>
+          <span
+            class="bp5-icon bp5-icon-caret-right bp5-submenu-icon"
+          >
+            <svg
+              data-icon="caret-right"
+              height="16"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <title>
+                Open sub menu
+              </title>
+              <path
+                d="M220 160C220 163 218.6 165.6 216.6 167.4L216.6 167.4L136.6 237.4L136.6 237.4C134.8 239 132.6 240 130 240C124.4 240 120 235.6 120 230V90C120 84.4 124.4 80 130 80C132.6 80 134.8 81 136.6 82.6C136.6 82.6 136.6 82.6 136.6 82.6L216.6 152.6L216.6 152.6C218.6 154.4 220 157 220 160z"
+                fill-rule="evenodd"
+                transform="scale(0.05, -0.05) translate(-160, -160)"
+                transform-origin="center"
+              />
+            </svg>
+          </span>
+        </a>
+      </span>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled"
+        label="(ctrl + shift + e)"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Set 0 phases
+        </div>
+        <span
+          class="bp5-menu-item-label"
+        >
+          (ctrl + shift + e)
+        </span>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled"
+        label="(q)"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Set 0 to current phase: 
+        </div>
+        <span
+          class="bp5-menu-item-label"
+        >
+          (q)
+        </span>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled"
+        label="(shift + q)"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Set 0 to default phase: P
+        </div>
+        <span
+          class="bp5-menu-item-label"
+        >
+          (shift + q)
+        </span>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled"
+        data-cy="rotate-sd"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Rotate waveforms using 0 signal detection
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled"
+        data-cy="delete-sd"
+        label="(backspace)"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Delete 0
+        </div>
+        <span
+          class="bp5-menu-item-label"
+        >
+          (backspace)
+        </span>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        class="bp5-menu-item bp5-popover-dismiss"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          class="bp5-menu-item-icon"
+        >
+          <span
+            aria-hidden="true"
+            class="bp5-icon bp5-icon-export"
+            tabindex="-1"
+          >
+            <svg
+              data-icon="export"
+              height="16"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M4 6c.28 0 .53-.11.71-.29L7 3.41V11c0 .55.45 1 1 1s1-.45 1-1V3.41l2.29 2.29c.18.19.43.3.71.3a1.003 1.003 0 00.71-1.71l-4-4C8.53.11 8.28 0 8 0s-.53.11-.71.29l-4 4A1.003 1.003 0 004 6zm11 5c-.55 0-1 .45-1 1v2H2v-2c0-.55-.45-1-1-1s-1 .45-1 1v3c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </span>
+        </span>
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Export
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+`;

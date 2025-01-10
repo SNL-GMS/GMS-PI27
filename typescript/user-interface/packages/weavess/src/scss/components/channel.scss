@@ -1,0 +1,61 @@
+$waveform-split-expand-border-color-fallback: #2c74d8;
+
+.channel {
+  width: 100%;
+  border-bottom: 1px solid;
+  display: flex;
+  contain: strict; // Performance boost. Depends on height being set inline.
+
+  &--maskTarget::after {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border: 1px solid white;
+    z-index: 100;
+    backdrop-filter: brightness(120%);
+    pointer-events: none;
+  }
+
+  .channel-label-container {
+    position: sticky;
+    left: 0;
+    z-index: 4;
+
+    &--manually-scaled .y-axis {
+      --weavess-text: var(--weavess-manually-scaled, #ff00db);
+    }
+  }
+}
+
+.station-split-expanded .split-channel:first-child {
+  border-top: 2px solid
+    var(--gms-waveform-split-expand-border-color, $waveform-split-expand-border-color-fallback);
+}
+
+.split-channel {
+  width: calc(100% - 4px);
+  border-left: 2px solid
+    var(--gms-waveform-split-expand-border-color, $waveform-split-expand-border-color-fallback);
+  border-right: 2px solid
+    var(--gms-waveform-split-expand-border-color, $waveform-split-expand-border-color-fallback);
+}
+
+/*
+  :last-of-type selector - is applied in the un-expanded case (no elements following the last .split-channel)
+  :has(+ :not(.split-channel)) - is applied in the expanded case - this finds the .split-channel element which is not followed by another .split-channel (the last one)
+*/
+.channel.split-channel:last-of-type,
+.channel.split-channel:has(+ :not(.split-channel)) {
+  border-bottom: 2px solid
+    var(--gms-waveform-split-expand-border-color, $waveform-split-expand-border-color-fallback);
+}
+
+/**
+ * Adds subtle highlighting to channels when hovering over their labels
+ **/
+.channel:has(.label:hover) {
+  background: rgba(150, 150, 150, 0.05);
+}

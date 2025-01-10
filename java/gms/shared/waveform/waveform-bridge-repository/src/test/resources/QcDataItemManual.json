@@ -1,0 +1,15 @@
+{
+  "qcMaskId": 9021000000001,
+  "sta": "AS01",
+  "chan": "SHZ",
+  "startTime": "2019-01-05T16:01:12.85Z",
+  "endTime": "2019-01-05T16:01:12.90Z",
+  "sampRate": 1,
+  "nseg": 68,
+  "qcDefId": 6000000000555,
+  "lddate": "2022-09-08T17:34:46Z",
+  "createdBy": "aTestUser",
+  "startSample": 0,
+  "endSample": 0,
+  "maskType": 0
+}

@@ -1,0 +1,323 @@
+{
+    "channels": [
+        {
+            "name": "STA.CH0.BHZ"
+        },
+        {
+            "name": "STA.BEAM1.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2.SHZ"
+        },
+        {
+            "name": "STA.CH3.BHE"
+        },
+        {
+            "name": "STA.CH4.SHE"
+        },
+        {
+            "name": "STA.CH5.BHZ"
+        },
+        {
+            "name": "STA.BEAM6.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH7.SHZ"
+        },
+        {
+            "name": "STA.CH8.BHE"
+        },
+        {
+            "name": "STA.CH9.SHE"
+        },
+        {
+            "name": "STA.CH10.BHZ"
+        },
+        {
+            "name": "STA.BEAM11.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH12.SHZ"
+        },
+        {
+            "name": "STA.CH13.BHE"
+        },
+        {
+            "name": "STA.CH14.SHE"
+        },
+        {
+            "name": "STA.CH15.BHZ"
+        },
+        {
+            "name": "STA.BEAM16.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH17.SHZ"
+        },
+        {
+            "name": "STA.CH18.BHE"
+        },
+        {
+            "name": "STA.CH19.SHE"
+        },
+        {
+            "name": "STA.CH20.BHZ"
+        },
+        {
+            "name": "STA.BEAM21.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH22.SHZ"
+        },
+        {
+            "name": "STA.CH23.BHE"
+        },
+        {
+            "name": "STA.CH24.SHE"
+        },
+        {
+            "name": "STA.CH25.BHZ"
+        },
+        {
+            "name": "STA.BEAM26.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH27.SHZ"
+        },
+        {
+            "name": "STA.CH28.BHE"
+        },
+        {
+            "name": "STA.CH29.SHE"
+        },
+        {
+            "name": "STA.CH30.BHZ"
+        },
+        {
+            "name": "STA.BEAM31.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH32.SHZ"
+        },
+        {
+            "name": "STA.CH33.BHE"
+        },
+        {
+            "name": "STA.CH34.SHE"
+        },
+        {
+            "name": "STA.CH35.BHZ"
+        },
+        {
+            "name": "STA.BEAM36.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH37.SHZ"
+        },
+        {
+            "name": "STA.CH38.BHE"
+        },
+        {
+            "name": "STA.CH39.SHE"
+        },
+        {
+            "name": "STA.CH40.BHZ"
+        },
+        {
+            "name": "STA.BEAM41.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH42.SHZ"
+        },
+        {
+            "name": "STA.CH43.BHE"
+        },
+        {
+            "name": "STA.CH44.SHE"
+        },
+        {
+            "name": "STA.CH45.BHZ"
+        },
+        {
+            "name": "STA.BEAM46.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH47.SHZ"
+        },
+        {
+            "name": "STA.CH48.BHE"
+        },
+        {
+            "name": "STA.CH49.SHE"
+        },
+        {
+            "name": "STA.CH50.BHZ"
+        },
+        {
+            "name": "STA.BEAM51.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH52.SHZ"
+        },
+        {
+            "name": "STA.CH53.BHE"
+        },
+        {
+            "name": "STA.CH54.SHE"
+        },
+        {
+            "name": "STA.CH55.BHZ"
+        },
+        {
+            "name": "STA.BEAM56.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH57.SHZ"
+        },
+        {
+            "name": "STA.CH58.BHE"
+        },
+        {
+            "name": "STA.CH59.SHE"
+        },
+        {
+            "name": "STA.CH60.BHZ"
+        },
+        {
+            "name": "STA.BEAM61.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH62.SHZ"
+        },
+        {
+            "name": "STA.CH63.BHE"
+        },
+        {
+            "name": "STA.CH64.SHE"
+        },
+        {
+            "name": "STA.CH65.BHZ"
+        },
+        {
+            "name": "STA.BEAM66.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH67.SHZ"
+        },
+        {
+            "name": "STA.CH68.BHE"
+        },
+        {
+            "name": "STA.CH69.SHE"
+        },
+        {
+            "name": "STA.CH70.BHZ"
+        },
+        {
+            "name": "STA.BEAM71.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH72.SHZ"
+        },
+        {
+            "name": "STA.CH73.BHE"
+        },
+        {
+            "name": "STA.CH74.SHE"
+        },
+        {
+            "name": "STA.CH75.BHZ"
+        },
+        {
+            "name": "STA.BEAM76.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH77.SHZ"
+        },
+        {
+            "name": "STA.CH78.BHE"
+        },
+        {
+            "name": "STA.CH79.SHE"
+        },
+        {
+            "name": "STA.CH80.BHZ"
+        },
+        {
+            "name": "STA.BEAM81.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH82.SHZ"
+        },
+        {
+            "name": "STA.CH83.BHE"
+        },
+        {
+            "name": "STA.CH84.SHE"
+        },
+        {
+            "name": "STA.CH85.BHZ"
+        },
+        {
+            "name": "STA.BEAM86.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH87.SHZ"
+        },
+        {
+            "name": "STA.CH88.BHE"
+        },
+        {
+            "name": "STA.CH89.SHE"
+        },
+        {
+            "name": "STA.CH90.BHZ"
+        },
+        {
+            "name": "STA.BEAM91.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH92.SHZ"
+        },
+        {
+            "name": "STA.CH93.BHE"
+        },
+        {
+            "name": "STA.CH94.SHE"
+        },
+        {
+            "name": "STA.CH95.BHZ"
+        },
+        {
+            "name": "STA.BEAM96.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH97.SHZ"
+        },
+        {
+            "name": "STA.CH98.BHE"
+        }
+    ],
+    "phases": [
+        "PPS_B",
+        "nP",
+        "PPP",
+        "PPS",
+        "PS",
+        "PP",
+        "pS",
+        "S",
+        "P",
+        "pP",
+        "P3KP",
+        "P7KP",
+        "LR",
+        "LQ",
+        "P4KP",
+        "N",
+        "I",
+        "L",
+        "NP",
+        "PcP"
+    ]
+}

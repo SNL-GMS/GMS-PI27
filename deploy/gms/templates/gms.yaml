@@ -1,0 +1,1 @@
+{{- include "gms.common.configMap.standard" $ }}

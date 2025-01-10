@@ -1,0 +1,28 @@
+# ubi.repo
+#
+# UBI repos
+#
+
+[ubi-9-baseos-rpms]
+name = Red Hat Universal Base Image 9 (RPMs) - BaseOS
+baseurl = #UBI_RPM_URL#/content/public/ubi/dist/ubi9/9/$basearch/baseos/os
+enabled = 1
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+gpgcheck = 1
+priority = 10
+
+[ubi-9-appstream-rpms]
+name = Red Hat Universal Base Image 9 (RPMs) - AppStream
+baseurl = #UBI_RPM_URL#/content/public/ubi/dist/ubi9/9/$basearch/appstream/os
+enabled = 1
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+gpgcheck = 1
+priority = 10
+
+[ubi-9-codeready-builder-rpms]
+name = Red Hat Universal Base Image 9 (RPMs) - CodeReady Builder
+baseurl = #UBI_RPM_URL#/content/public/ubi/dist/ubi9/9/$basearch/codeready-builder/os
+enabled = 1
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+gpgcheck = 1
+priority = 10

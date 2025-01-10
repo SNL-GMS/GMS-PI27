@@ -1,0 +1,49 @@
+# Directories
+docs/
+node_modules/
+build/
+lib/
+dist/
+coverage/
+artifacts/
+.scannerwork/
+.cache/
+.jest-cache/
+
+# File types
+*.map
+*.log
+*.swp
+*.out
+**/.DS_STORE
+
+# Specific files
+.eslintcache
+.eslintcache-test
+eslint-report.json
+.tsbuildinfo
+.tsbuildinfo-test
+settings.json
+packages/mock-data-server/mock-data-server.log
+junit.xml
+
+# Whitelist files from .vscode
+!.vscode/all.code-workspace
+!.vscode/cSpell.json
+!.vscode/gateway.code-workspace
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/ui.code-workspace
+!.vscode/integration.code-workspace
+
+# Allow the .vscode directory but ban all non-whitelisted files
+!.vscode/
+.vscode/*
+
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

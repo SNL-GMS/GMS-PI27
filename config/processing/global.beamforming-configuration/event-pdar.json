@@ -1,0 +1,72 @@
+{
+    "name": "event-pdar",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "beamType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "EVENT"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "PDAR"
+            ],
+            "priority": 90
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "phaseType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "P"
+            ],
+            "priority": 80
+        }
+    ],
+    "parameters": {
+        "leadDuration": "PT5S",
+        "beamDuration": "PT5M",
+        "orientationAngleToleranceDeg": 5.0,
+        "sampleRateToleranceHz": 0.5,
+        "minWaveformsToBeam": 2,
+        "inputChannelGroups": [
+            "PD01",
+            "PD02",
+            "PD03",
+            "PD04",
+            "PD05",
+            "PD06",
+            "PD07",
+            "PD08",
+            "PD09",
+            "PD10",
+            "PD11",
+            "PD12",
+            "PD13"
+        ],
+        "inputChannels": [
+            "SHZ"
+        ],
+        "beamDescriptionParams": {
+            "beamSummation": "COHERENT",
+            "beamType": "EVENT",
+            "samplingType": "NEAREST_SAMPLE",
+            "twoDimensional": true
+        }
+    }
+}

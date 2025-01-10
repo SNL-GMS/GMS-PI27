@@ -1,0 +1,10 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation project(':frameworks-utilities')
+
+    implementation libs.org.apache.commons.commons.lang3
+
+    testAnnotationProcessor libs.com.google.auto.service.auto.service
+    testImplementation libs.com.google.auto.service.auto.service
+}

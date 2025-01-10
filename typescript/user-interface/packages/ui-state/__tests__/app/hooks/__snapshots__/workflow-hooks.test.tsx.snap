@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Workflow Hooks useSetInterval handles setting interval status with a stage interval 1`] = `[Function]`;
+
+exports[`Workflow Hooks useSetInterval handles setting interval status with an activity interval 1`] = `[Function]`;

@@ -1,0 +1,14 @@
+@mixin createFormGrid($leftCol: auto, $rightCol: auto) {
+  display: grid;
+  grid-template-columns: $leftCol $rightCol;
+  gap: 3px 0;
+}
+.form-content {
+  @include createFormGrid(1fr, auto);
+  & + * {
+    margin-top: 0.75rem;
+  }
+  .bp5-control.bp5-switch:not(.bp5-align-right) {
+    padding-left: 0;
+  }
+}

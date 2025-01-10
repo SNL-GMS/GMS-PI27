@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weavess Y Axis renders 1`] = `
+<div>
+  <div
+    class="y-axis"
+    data-cy="y-axis"
+    data-max="100"
+    data-min="0"
+    style="height: calc(100% - 4px); margin: 2px 0px 2px 0px;"
+  >
+    <svg
+      height="100%"
+      width="50"
+    >
+      <g
+        class="y-axis__ordinate"
+        height="100%"
+        transform="translate(49,0)"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Weavess Y Axis try to display a large range without ticks 1`] = `
+<div>
+  <div
+    class="y-axis"
+    data-cy="y-axis"
+    data-max="100"
+    data-min="0"
+    style="height: calc(100% - 4px); margin: 2px 0px 2px 0px;"
+  >
+    <svg
+      height="100%"
+      width="50"
+    >
+      <g
+        class="y-axis__ordinate"
+        height="100%"
+        transform="translate(49,0)"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Weavess Y Axis try to display a negative with no ticks 1`] = `
+<div>
+  <div
+    class="y-axis"
+    data-cy="y-axis"
+    data-max="0"
+    data-min="-0.05"
+    style="height: calc(100% - 4px); margin: 2px 0px 2px 0px;"
+  >
+    <svg
+      height="100%"
+      width="50"
+    >
+      <g
+        class="y-axis__ordinate"
+        height="100%"
+        transform="translate(49,0)"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Weavess Y Axis updates when display is called 1`] = `
+<div>
+  <div
+    class="y-axis"
+    data-cy="y-axis"
+    data-max="100"
+    data-min="0"
+    style="height: calc(100% - 4px); margin: 2px 0px 2px 0px;"
+  >
+    <svg
+      height="100%"
+      width="50"
+    >
+      <g
+        class="y-axis__ordinate"
+        height="100%"
+        transform="translate(49,0)"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Weavess Y Axis updates when display is called 2`] = `
+<div>
+  <div
+    class="y-axis"
+    data-cy="y-axis"
+    data-max="10"
+    data-min="0"
+    style="height: calc(100% - 4px); margin: 2px 0px 2px 0px;"
+  >
+    <svg
+      height="100%"
+      width="50"
+    >
+      <g
+        class="y-axis__ordinate"
+        height="100%"
+        transform="translate(49,0)"
+      />
+    </svg>
+  </div>
+</div>
+`;

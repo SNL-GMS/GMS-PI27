@@ -1,0 +1,17 @@
+{
+    "name": "asar-station-slowness",
+    "constraints": [
+        {
+            "constraintType": "DEFAULT"
+        }
+    ],
+    "parameters": {
+        "definingFeatureByFeatureMeasurementType": {
+            "SOURCE_TO_RECEIVER_AZIMUTH": {
+                "analystOverridable": true,
+                "defining": true,
+                "systemOverridable": true
+            }
+        }
+    }
+}

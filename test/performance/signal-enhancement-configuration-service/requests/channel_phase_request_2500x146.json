@@ -1,0 +1,7653 @@
+{
+    "channels": [
+        {
+            "name": "STA.CH0.BHZ"
+        },
+        {
+            "name": "STA.BEAM1.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2.SHZ"
+        },
+        {
+            "name": "STA.CH3.BHE"
+        },
+        {
+            "name": "STA.CH4.SHE"
+        },
+        {
+            "name": "STA.CH5.BHZ"
+        },
+        {
+            "name": "STA.BEAM6.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH7.SHZ"
+        },
+        {
+            "name": "STA.CH8.BHE"
+        },
+        {
+            "name": "STA.CH9.SHE"
+        },
+        {
+            "name": "STA.CH10.BHZ"
+        },
+        {
+            "name": "STA.BEAM11.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH12.SHZ"
+        },
+        {
+            "name": "STA.CH13.BHE"
+        },
+        {
+            "name": "STA.CH14.SHE"
+        },
+        {
+            "name": "STA.CH15.BHZ"
+        },
+        {
+            "name": "STA.BEAM16.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH17.SHZ"
+        },
+        {
+            "name": "STA.CH18.BHE"
+        },
+        {
+            "name": "STA.CH19.SHE"
+        },
+        {
+            "name": "STA.CH20.BHZ"
+        },
+        {
+            "name": "STA.BEAM21.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH22.SHZ"
+        },
+        {
+            "name": "STA.CH23.BHE"
+        },
+        {
+            "name": "STA.CH24.SHE"
+        },
+        {
+            "name": "STA.CH25.BHZ"
+        },
+        {
+            "name": "STA.BEAM26.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH27.SHZ"
+        },
+        {
+            "name": "STA.CH28.BHE"
+        },
+        {
+            "name": "STA.CH29.SHE"
+        },
+        {
+            "name": "STA.CH30.BHZ"
+        },
+        {
+            "name": "STA.BEAM31.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH32.SHZ"
+        },
+        {
+            "name": "STA.CH33.BHE"
+        },
+        {
+            "name": "STA.CH34.SHE"
+        },
+        {
+            "name": "STA.CH35.BHZ"
+        },
+        {
+            "name": "STA.BEAM36.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH37.SHZ"
+        },
+        {
+            "name": "STA.CH38.BHE"
+        },
+        {
+            "name": "STA.CH39.SHE"
+        },
+        {
+            "name": "STA.CH40.BHZ"
+        },
+        {
+            "name": "STA.BEAM41.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH42.SHZ"
+        },
+        {
+            "name": "STA.CH43.BHE"
+        },
+        {
+            "name": "STA.CH44.SHE"
+        },
+        {
+            "name": "STA.CH45.BHZ"
+        },
+        {
+            "name": "STA.BEAM46.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH47.SHZ"
+        },
+        {
+            "name": "STA.CH48.BHE"
+        },
+        {
+            "name": "STA.CH49.SHE"
+        },
+        {
+            "name": "STA.CH50.BHZ"
+        },
+        {
+            "name": "STA.BEAM51.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH52.SHZ"
+        },
+        {
+            "name": "STA.CH53.BHE"
+        },
+        {
+            "name": "STA.CH54.SHE"
+        },
+        {
+            "name": "STA.CH55.BHZ"
+        },
+        {
+            "name": "STA.BEAM56.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH57.SHZ"
+        },
+        {
+            "name": "STA.CH58.BHE"
+        },
+        {
+            "name": "STA.CH59.SHE"
+        },
+        {
+            "name": "STA.CH60.BHZ"
+        },
+        {
+            "name": "STA.BEAM61.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH62.SHZ"
+        },
+        {
+            "name": "STA.CH63.BHE"
+        },
+        {
+            "name": "STA.CH64.SHE"
+        },
+        {
+            "name": "STA.CH65.BHZ"
+        },
+        {
+            "name": "STA.BEAM66.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH67.SHZ"
+        },
+        {
+            "name": "STA.CH68.BHE"
+        },
+        {
+            "name": "STA.CH69.SHE"
+        },
+        {
+            "name": "STA.CH70.BHZ"
+        },
+        {
+            "name": "STA.BEAM71.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH72.SHZ"
+        },
+        {
+            "name": "STA.CH73.BHE"
+        },
+        {
+            "name": "STA.CH74.SHE"
+        },
+        {
+            "name": "STA.CH75.BHZ"
+        },
+        {
+            "name": "STA.BEAM76.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH77.SHZ"
+        },
+        {
+            "name": "STA.CH78.BHE"
+        },
+        {
+            "name": "STA.CH79.SHE"
+        },
+        {
+            "name": "STA.CH80.BHZ"
+        },
+        {
+            "name": "STA.BEAM81.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH82.SHZ"
+        },
+        {
+            "name": "STA.CH83.BHE"
+        },
+        {
+            "name": "STA.CH84.SHE"
+        },
+        {
+            "name": "STA.CH85.BHZ"
+        },
+        {
+            "name": "STA.BEAM86.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH87.SHZ"
+        },
+        {
+            "name": "STA.CH88.BHE"
+        },
+        {
+            "name": "STA.CH89.SHE"
+        },
+        {
+            "name": "STA.CH90.BHZ"
+        },
+        {
+            "name": "STA.BEAM91.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH92.SHZ"
+        },
+        {
+            "name": "STA.CH93.BHE"
+        },
+        {
+            "name": "STA.CH94.SHE"
+        },
+        {
+            "name": "STA.CH95.BHZ"
+        },
+        {
+            "name": "STA.BEAM96.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH97.SHZ"
+        },
+        {
+            "name": "STA.CH98.BHE"
+        },
+        {
+            "name": "STA.CH99.SHE"
+        },
+        {
+            "name": "STA.CH100.BHZ"
+        },
+        {
+            "name": "STA.BEAM101.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH102.SHZ"
+        },
+        {
+            "name": "STA.CH103.BHE"
+        },
+        {
+            "name": "STA.CH104.SHE"
+        },
+        {
+            "name": "STA.CH105.BHZ"
+        },
+        {
+            "name": "STA.BEAM106.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH107.SHZ"
+        },
+        {
+            "name": "STA.CH108.BHE"
+        },
+        {
+            "name": "STA.CH109.SHE"
+        },
+        {
+            "name": "STA.CH110.BHZ"
+        },
+        {
+            "name": "STA.BEAM111.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH112.SHZ"
+        },
+        {
+            "name": "STA.CH113.BHE"
+        },
+        {
+            "name": "STA.CH114.SHE"
+        },
+        {
+            "name": "STA.CH115.BHZ"
+        },
+        {
+            "name": "STA.BEAM116.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH117.SHZ"
+        },
+        {
+            "name": "STA.CH118.BHE"
+        },
+        {
+            "name": "STA.CH119.SHE"
+        },
+        {
+            "name": "STA.CH120.BHZ"
+        },
+        {
+            "name": "STA.BEAM121.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH122.SHZ"
+        },
+        {
+            "name": "STA.CH123.BHE"
+        },
+        {
+            "name": "STA.CH124.SHE"
+        },
+        {
+            "name": "STA.CH125.BHZ"
+        },
+        {
+            "name": "STA.BEAM126.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH127.SHZ"
+        },
+        {
+            "name": "STA.CH128.BHE"
+        },
+        {
+            "name": "STA.CH129.SHE"
+        },
+        {
+            "name": "STA.CH130.BHZ"
+        },
+        {
+            "name": "STA.BEAM131.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH132.SHZ"
+        },
+        {
+            "name": "STA.CH133.BHE"
+        },
+        {
+            "name": "STA.CH134.SHE"
+        },
+        {
+            "name": "STA.CH135.BHZ"
+        },
+        {
+            "name": "STA.BEAM136.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH137.SHZ"
+        },
+        {
+            "name": "STA.CH138.BHE"
+        },
+        {
+            "name": "STA.CH139.SHE"
+        },
+        {
+            "name": "STA.CH140.BHZ"
+        },
+        {
+            "name": "STA.BEAM141.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH142.SHZ"
+        },
+        {
+            "name": "STA.CH143.BHE"
+        },
+        {
+            "name": "STA.CH144.SHE"
+        },
+        {
+            "name": "STA.CH145.BHZ"
+        },
+        {
+            "name": "STA.BEAM146.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH147.SHZ"
+        },
+        {
+            "name": "STA.CH148.BHE"
+        },
+        {
+            "name": "STA.CH149.SHE"
+        },
+        {
+            "name": "STA.CH150.BHZ"
+        },
+        {
+            "name": "STA.BEAM151.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH152.SHZ"
+        },
+        {
+            "name": "STA.CH153.BHE"
+        },
+        {
+            "name": "STA.CH154.SHE"
+        },
+        {
+            "name": "STA.CH155.BHZ"
+        },
+        {
+            "name": "STA.BEAM156.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH157.SHZ"
+        },
+        {
+            "name": "STA.CH158.BHE"
+        },
+        {
+            "name": "STA.CH159.SHE"
+        },
+        {
+            "name": "STA.CH160.BHZ"
+        },
+        {
+            "name": "STA.BEAM161.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH162.SHZ"
+        },
+        {
+            "name": "STA.CH163.BHE"
+        },
+        {
+            "name": "STA.CH164.SHE"
+        },
+        {
+            "name": "STA.CH165.BHZ"
+        },
+        {
+            "name": "STA.BEAM166.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH167.SHZ"
+        },
+        {
+            "name": "STA.CH168.BHE"
+        },
+        {
+            "name": "STA.CH169.SHE"
+        },
+        {
+            "name": "STA.CH170.BHZ"
+        },
+        {
+            "name": "STA.BEAM171.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH172.SHZ"
+        },
+        {
+            "name": "STA.CH173.BHE"
+        },
+        {
+            "name": "STA.CH174.SHE"
+        },
+        {
+            "name": "STA.CH175.BHZ"
+        },
+        {
+            "name": "STA.BEAM176.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH177.SHZ"
+        },
+        {
+            "name": "STA.CH178.BHE"
+        },
+        {
+            "name": "STA.CH179.SHE"
+        },
+        {
+            "name": "STA.CH180.BHZ"
+        },
+        {
+            "name": "STA.BEAM181.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH182.SHZ"
+        },
+        {
+            "name": "STA.CH183.BHE"
+        },
+        {
+            "name": "STA.CH184.SHE"
+        },
+        {
+            "name": "STA.CH185.BHZ"
+        },
+        {
+            "name": "STA.BEAM186.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH187.SHZ"
+        },
+        {
+            "name": "STA.CH188.BHE"
+        },
+        {
+            "name": "STA.CH189.SHE"
+        },
+        {
+            "name": "STA.CH190.BHZ"
+        },
+        {
+            "name": "STA.BEAM191.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH192.SHZ"
+        },
+        {
+            "name": "STA.CH193.BHE"
+        },
+        {
+            "name": "STA.CH194.SHE"
+        },
+        {
+            "name": "STA.CH195.BHZ"
+        },
+        {
+            "name": "STA.BEAM196.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH197.SHZ"
+        },
+        {
+            "name": "STA.CH198.BHE"
+        },
+        {
+            "name": "STA.CH199.SHE"
+        },
+        {
+            "name": "STA.CH200.BHZ"
+        },
+        {
+            "name": "STA.BEAM201.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH202.SHZ"
+        },
+        {
+            "name": "STA.CH203.BHE"
+        },
+        {
+            "name": "STA.CH204.SHE"
+        },
+        {
+            "name": "STA.CH205.BHZ"
+        },
+        {
+            "name": "STA.BEAM206.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH207.SHZ"
+        },
+        {
+            "name": "STA.CH208.BHE"
+        },
+        {
+            "name": "STA.CH209.SHE"
+        },
+        {
+            "name": "STA.CH210.BHZ"
+        },
+        {
+            "name": "STA.BEAM211.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH212.SHZ"
+        },
+        {
+            "name": "STA.CH213.BHE"
+        },
+        {
+            "name": "STA.CH214.SHE"
+        },
+        {
+            "name": "STA.CH215.BHZ"
+        },
+        {
+            "name": "STA.BEAM216.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH217.SHZ"
+        },
+        {
+            "name": "STA.CH218.BHE"
+        },
+        {
+            "name": "STA.CH219.SHE"
+        },
+        {
+            "name": "STA.CH220.BHZ"
+        },
+        {
+            "name": "STA.BEAM221.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH222.SHZ"
+        },
+        {
+            "name": "STA.CH223.BHE"
+        },
+        {
+            "name": "STA.CH224.SHE"
+        },
+        {
+            "name": "STA.CH225.BHZ"
+        },
+        {
+            "name": "STA.BEAM226.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH227.SHZ"
+        },
+        {
+            "name": "STA.CH228.BHE"
+        },
+        {
+            "name": "STA.CH229.SHE"
+        },
+        {
+            "name": "STA.CH230.BHZ"
+        },
+        {
+            "name": "STA.BEAM231.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH232.SHZ"
+        },
+        {
+            "name": "STA.CH233.BHE"
+        },
+        {
+            "name": "STA.CH234.SHE"
+        },
+        {
+            "name": "STA.CH235.BHZ"
+        },
+        {
+            "name": "STA.BEAM236.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH237.SHZ"
+        },
+        {
+            "name": "STA.CH238.BHE"
+        },
+        {
+            "name": "STA.CH239.SHE"
+        },
+        {
+            "name": "STA.CH240.BHZ"
+        },
+        {
+            "name": "STA.BEAM241.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH242.SHZ"
+        },
+        {
+            "name": "STA.CH243.BHE"
+        },
+        {
+            "name": "STA.CH244.SHE"
+        },
+        {
+            "name": "STA.CH245.BHZ"
+        },
+        {
+            "name": "STA.BEAM246.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH247.SHZ"
+        },
+        {
+            "name": "STA.CH248.BHE"
+        },
+        {
+            "name": "STA.CH249.SHE"
+        },
+        {
+            "name": "STA.CH250.BHZ"
+        },
+        {
+            "name": "STA.BEAM251.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH252.SHZ"
+        },
+        {
+            "name": "STA.CH253.BHE"
+        },
+        {
+            "name": "STA.CH254.SHE"
+        },
+        {
+            "name": "STA.CH255.BHZ"
+        },
+        {
+            "name": "STA.BEAM256.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH257.SHZ"
+        },
+        {
+            "name": "STA.CH258.BHE"
+        },
+        {
+            "name": "STA.CH259.SHE"
+        },
+        {
+            "name": "STA.CH260.BHZ"
+        },
+        {
+            "name": "STA.BEAM261.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH262.SHZ"
+        },
+        {
+            "name": "STA.CH263.BHE"
+        },
+        {
+            "name": "STA.CH264.SHE"
+        },
+        {
+            "name": "STA.CH265.BHZ"
+        },
+        {
+            "name": "STA.BEAM266.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH267.SHZ"
+        },
+        {
+            "name": "STA.CH268.BHE"
+        },
+        {
+            "name": "STA.CH269.SHE"
+        },
+        {
+            "name": "STA.CH270.BHZ"
+        },
+        {
+            "name": "STA.BEAM271.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH272.SHZ"
+        },
+        {
+            "name": "STA.CH273.BHE"
+        },
+        {
+            "name": "STA.CH274.SHE"
+        },
+        {
+            "name": "STA.CH275.BHZ"
+        },
+        {
+            "name": "STA.BEAM276.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH277.SHZ"
+        },
+        {
+            "name": "STA.CH278.BHE"
+        },
+        {
+            "name": "STA.CH279.SHE"
+        },
+        {
+            "name": "STA.CH280.BHZ"
+        },
+        {
+            "name": "STA.BEAM281.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH282.SHZ"
+        },
+        {
+            "name": "STA.CH283.BHE"
+        },
+        {
+            "name": "STA.CH284.SHE"
+        },
+        {
+            "name": "STA.CH285.BHZ"
+        },
+        {
+            "name": "STA.BEAM286.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH287.SHZ"
+        },
+        {
+            "name": "STA.CH288.BHE"
+        },
+        {
+            "name": "STA.CH289.SHE"
+        },
+        {
+            "name": "STA.CH290.BHZ"
+        },
+        {
+            "name": "STA.BEAM291.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH292.SHZ"
+        },
+        {
+            "name": "STA.CH293.BHE"
+        },
+        {
+            "name": "STA.CH294.SHE"
+        },
+        {
+            "name": "STA.CH295.BHZ"
+        },
+        {
+            "name": "STA.BEAM296.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH297.SHZ"
+        },
+        {
+            "name": "STA.CH298.BHE"
+        },
+        {
+            "name": "STA.CH299.SHE"
+        },
+        {
+            "name": "STA.CH300.BHZ"
+        },
+        {
+            "name": "STA.BEAM301.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH302.SHZ"
+        },
+        {
+            "name": "STA.CH303.BHE"
+        },
+        {
+            "name": "STA.CH304.SHE"
+        },
+        {
+            "name": "STA.CH305.BHZ"
+        },
+        {
+            "name": "STA.BEAM306.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH307.SHZ"
+        },
+        {
+            "name": "STA.CH308.BHE"
+        },
+        {
+            "name": "STA.CH309.SHE"
+        },
+        {
+            "name": "STA.CH310.BHZ"
+        },
+        {
+            "name": "STA.BEAM311.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH312.SHZ"
+        },
+        {
+            "name": "STA.CH313.BHE"
+        },
+        {
+            "name": "STA.CH314.SHE"
+        },
+        {
+            "name": "STA.CH315.BHZ"
+        },
+        {
+            "name": "STA.BEAM316.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH317.SHZ"
+        },
+        {
+            "name": "STA.CH318.BHE"
+        },
+        {
+            "name": "STA.CH319.SHE"
+        },
+        {
+            "name": "STA.CH320.BHZ"
+        },
+        {
+            "name": "STA.BEAM321.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH322.SHZ"
+        },
+        {
+            "name": "STA.CH323.BHE"
+        },
+        {
+            "name": "STA.CH324.SHE"
+        },
+        {
+            "name": "STA.CH325.BHZ"
+        },
+        {
+            "name": "STA.BEAM326.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH327.SHZ"
+        },
+        {
+            "name": "STA.CH328.BHE"
+        },
+        {
+            "name": "STA.CH329.SHE"
+        },
+        {
+            "name": "STA.CH330.BHZ"
+        },
+        {
+            "name": "STA.BEAM331.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH332.SHZ"
+        },
+        {
+            "name": "STA.CH333.BHE"
+        },
+        {
+            "name": "STA.CH334.SHE"
+        },
+        {
+            "name": "STA.CH335.BHZ"
+        },
+        {
+            "name": "STA.BEAM336.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH337.SHZ"
+        },
+        {
+            "name": "STA.CH338.BHE"
+        },
+        {
+            "name": "STA.CH339.SHE"
+        },
+        {
+            "name": "STA.CH340.BHZ"
+        },
+        {
+            "name": "STA.BEAM341.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH342.SHZ"
+        },
+        {
+            "name": "STA.CH343.BHE"
+        },
+        {
+            "name": "STA.CH344.SHE"
+        },
+        {
+            "name": "STA.CH345.BHZ"
+        },
+        {
+            "name": "STA.BEAM346.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH347.SHZ"
+        },
+        {
+            "name": "STA.CH348.BHE"
+        },
+        {
+            "name": "STA.CH349.SHE"
+        },
+        {
+            "name": "STA.CH350.BHZ"
+        },
+        {
+            "name": "STA.BEAM351.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH352.SHZ"
+        },
+        {
+            "name": "STA.CH353.BHE"
+        },
+        {
+            "name": "STA.CH354.SHE"
+        },
+        {
+            "name": "STA.CH355.BHZ"
+        },
+        {
+            "name": "STA.BEAM356.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH357.SHZ"
+        },
+        {
+            "name": "STA.CH358.BHE"
+        },
+        {
+            "name": "STA.CH359.SHE"
+        },
+        {
+            "name": "STA.CH360.BHZ"
+        },
+        {
+            "name": "STA.BEAM361.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH362.SHZ"
+        },
+        {
+            "name": "STA.CH363.BHE"
+        },
+        {
+            "name": "STA.CH364.SHE"
+        },
+        {
+            "name": "STA.CH365.BHZ"
+        },
+        {
+            "name": "STA.BEAM366.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH367.SHZ"
+        },
+        {
+            "name": "STA.CH368.BHE"
+        },
+        {
+            "name": "STA.CH369.SHE"
+        },
+        {
+            "name": "STA.CH370.BHZ"
+        },
+        {
+            "name": "STA.BEAM371.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH372.SHZ"
+        },
+        {
+            "name": "STA.CH373.BHE"
+        },
+        {
+            "name": "STA.CH374.SHE"
+        },
+        {
+            "name": "STA.CH375.BHZ"
+        },
+        {
+            "name": "STA.BEAM376.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH377.SHZ"
+        },
+        {
+            "name": "STA.CH378.BHE"
+        },
+        {
+            "name": "STA.CH379.SHE"
+        },
+        {
+            "name": "STA.CH380.BHZ"
+        },
+        {
+            "name": "STA.BEAM381.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH382.SHZ"
+        },
+        {
+            "name": "STA.CH383.BHE"
+        },
+        {
+            "name": "STA.CH384.SHE"
+        },
+        {
+            "name": "STA.CH385.BHZ"
+        },
+        {
+            "name": "STA.BEAM386.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH387.SHZ"
+        },
+        {
+            "name": "STA.CH388.BHE"
+        },
+        {
+            "name": "STA.CH389.SHE"
+        },
+        {
+            "name": "STA.CH390.BHZ"
+        },
+        {
+            "name": "STA.BEAM391.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH392.SHZ"
+        },
+        {
+            "name": "STA.CH393.BHE"
+        },
+        {
+            "name": "STA.CH394.SHE"
+        },
+        {
+            "name": "STA.CH395.BHZ"
+        },
+        {
+            "name": "STA.BEAM396.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH397.SHZ"
+        },
+        {
+            "name": "STA.CH398.BHE"
+        },
+        {
+            "name": "STA.CH399.SHE"
+        },
+        {
+            "name": "STA.CH400.BHZ"
+        },
+        {
+            "name": "STA.BEAM401.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH402.SHZ"
+        },
+        {
+            "name": "STA.CH403.BHE"
+        },
+        {
+            "name": "STA.CH404.SHE"
+        },
+        {
+            "name": "STA.CH405.BHZ"
+        },
+        {
+            "name": "STA.BEAM406.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH407.SHZ"
+        },
+        {
+            "name": "STA.CH408.BHE"
+        },
+        {
+            "name": "STA.CH409.SHE"
+        },
+        {
+            "name": "STA.CH410.BHZ"
+        },
+        {
+            "name": "STA.BEAM411.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH412.SHZ"
+        },
+        {
+            "name": "STA.CH413.BHE"
+        },
+        {
+            "name": "STA.CH414.SHE"
+        },
+        {
+            "name": "STA.CH415.BHZ"
+        },
+        {
+            "name": "STA.BEAM416.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH417.SHZ"
+        },
+        {
+            "name": "STA.CH418.BHE"
+        },
+        {
+            "name": "STA.CH419.SHE"
+        },
+        {
+            "name": "STA.CH420.BHZ"
+        },
+        {
+            "name": "STA.BEAM421.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH422.SHZ"
+        },
+        {
+            "name": "STA.CH423.BHE"
+        },
+        {
+            "name": "STA.CH424.SHE"
+        },
+        {
+            "name": "STA.CH425.BHZ"
+        },
+        {
+            "name": "STA.BEAM426.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH427.SHZ"
+        },
+        {
+            "name": "STA.CH428.BHE"
+        },
+        {
+            "name": "STA.CH429.SHE"
+        },
+        {
+            "name": "STA.CH430.BHZ"
+        },
+        {
+            "name": "STA.BEAM431.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH432.SHZ"
+        },
+        {
+            "name": "STA.CH433.BHE"
+        },
+        {
+            "name": "STA.CH434.SHE"
+        },
+        {
+            "name": "STA.CH435.BHZ"
+        },
+        {
+            "name": "STA.BEAM436.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH437.SHZ"
+        },
+        {
+            "name": "STA.CH438.BHE"
+        },
+        {
+            "name": "STA.CH439.SHE"
+        },
+        {
+            "name": "STA.CH440.BHZ"
+        },
+        {
+            "name": "STA.BEAM441.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH442.SHZ"
+        },
+        {
+            "name": "STA.CH443.BHE"
+        },
+        {
+            "name": "STA.CH444.SHE"
+        },
+        {
+            "name": "STA.CH445.BHZ"
+        },
+        {
+            "name": "STA.BEAM446.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH447.SHZ"
+        },
+        {
+            "name": "STA.CH448.BHE"
+        },
+        {
+            "name": "STA.CH449.SHE"
+        },
+        {
+            "name": "STA.CH450.BHZ"
+        },
+        {
+            "name": "STA.BEAM451.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH452.SHZ"
+        },
+        {
+            "name": "STA.CH453.BHE"
+        },
+        {
+            "name": "STA.CH454.SHE"
+        },
+        {
+            "name": "STA.CH455.BHZ"
+        },
+        {
+            "name": "STA.BEAM456.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH457.SHZ"
+        },
+        {
+            "name": "STA.CH458.BHE"
+        },
+        {
+            "name": "STA.CH459.SHE"
+        },
+        {
+            "name": "STA.CH460.BHZ"
+        },
+        {
+            "name": "STA.BEAM461.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH462.SHZ"
+        },
+        {
+            "name": "STA.CH463.BHE"
+        },
+        {
+            "name": "STA.CH464.SHE"
+        },
+        {
+            "name": "STA.CH465.BHZ"
+        },
+        {
+            "name": "STA.BEAM466.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH467.SHZ"
+        },
+        {
+            "name": "STA.CH468.BHE"
+        },
+        {
+            "name": "STA.CH469.SHE"
+        },
+        {
+            "name": "STA.CH470.BHZ"
+        },
+        {
+            "name": "STA.BEAM471.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH472.SHZ"
+        },
+        {
+            "name": "STA.CH473.BHE"
+        },
+        {
+            "name": "STA.CH474.SHE"
+        },
+        {
+            "name": "STA.CH475.BHZ"
+        },
+        {
+            "name": "STA.BEAM476.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH477.SHZ"
+        },
+        {
+            "name": "STA.CH478.BHE"
+        },
+        {
+            "name": "STA.CH479.SHE"
+        },
+        {
+            "name": "STA.CH480.BHZ"
+        },
+        {
+            "name": "STA.BEAM481.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH482.SHZ"
+        },
+        {
+            "name": "STA.CH483.BHE"
+        },
+        {
+            "name": "STA.CH484.SHE"
+        },
+        {
+            "name": "STA.CH485.BHZ"
+        },
+        {
+            "name": "STA.BEAM486.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH487.SHZ"
+        },
+        {
+            "name": "STA.CH488.BHE"
+        },
+        {
+            "name": "STA.CH489.SHE"
+        },
+        {
+            "name": "STA.CH490.BHZ"
+        },
+        {
+            "name": "STA.BEAM491.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH492.SHZ"
+        },
+        {
+            "name": "STA.CH493.BHE"
+        },
+        {
+            "name": "STA.CH494.SHE"
+        },
+        {
+            "name": "STA.CH495.BHZ"
+        },
+        {
+            "name": "STA.BEAM496.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH497.SHZ"
+        },
+        {
+            "name": "STA.CH498.BHE"
+        },
+        {
+            "name": "STA.CH499.SHE"
+        },
+        {
+            "name": "STA.CH500.BHZ"
+        },
+        {
+            "name": "STA.BEAM501.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH502.SHZ"
+        },
+        {
+            "name": "STA.CH503.BHE"
+        },
+        {
+            "name": "STA.CH504.SHE"
+        },
+        {
+            "name": "STA.CH505.BHZ"
+        },
+        {
+            "name": "STA.BEAM506.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH507.SHZ"
+        },
+        {
+            "name": "STA.CH508.BHE"
+        },
+        {
+            "name": "STA.CH509.SHE"
+        },
+        {
+            "name": "STA.CH510.BHZ"
+        },
+        {
+            "name": "STA.BEAM511.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH512.SHZ"
+        },
+        {
+            "name": "STA.CH513.BHE"
+        },
+        {
+            "name": "STA.CH514.SHE"
+        },
+        {
+            "name": "STA.CH515.BHZ"
+        },
+        {
+            "name": "STA.BEAM516.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH517.SHZ"
+        },
+        {
+            "name": "STA.CH518.BHE"
+        },
+        {
+            "name": "STA.CH519.SHE"
+        },
+        {
+            "name": "STA.CH520.BHZ"
+        },
+        {
+            "name": "STA.BEAM521.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH522.SHZ"
+        },
+        {
+            "name": "STA.CH523.BHE"
+        },
+        {
+            "name": "STA.CH524.SHE"
+        },
+        {
+            "name": "STA.CH525.BHZ"
+        },
+        {
+            "name": "STA.BEAM526.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH527.SHZ"
+        },
+        {
+            "name": "STA.CH528.BHE"
+        },
+        {
+            "name": "STA.CH529.SHE"
+        },
+        {
+            "name": "STA.CH530.BHZ"
+        },
+        {
+            "name": "STA.BEAM531.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH532.SHZ"
+        },
+        {
+            "name": "STA.CH533.BHE"
+        },
+        {
+            "name": "STA.CH534.SHE"
+        },
+        {
+            "name": "STA.CH535.BHZ"
+        },
+        {
+            "name": "STA.BEAM536.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH537.SHZ"
+        },
+        {
+            "name": "STA.CH538.BHE"
+        },
+        {
+            "name": "STA.CH539.SHE"
+        },
+        {
+            "name": "STA.CH540.BHZ"
+        },
+        {
+            "name": "STA.BEAM541.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH542.SHZ"
+        },
+        {
+            "name": "STA.CH543.BHE"
+        },
+        {
+            "name": "STA.CH544.SHE"
+        },
+        {
+            "name": "STA.CH545.BHZ"
+        },
+        {
+            "name": "STA.BEAM546.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH547.SHZ"
+        },
+        {
+            "name": "STA.CH548.BHE"
+        },
+        {
+            "name": "STA.CH549.SHE"
+        },
+        {
+            "name": "STA.CH550.BHZ"
+        },
+        {
+            "name": "STA.BEAM551.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH552.SHZ"
+        },
+        {
+            "name": "STA.CH553.BHE"
+        },
+        {
+            "name": "STA.CH554.SHE"
+        },
+        {
+            "name": "STA.CH555.BHZ"
+        },
+        {
+            "name": "STA.BEAM556.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH557.SHZ"
+        },
+        {
+            "name": "STA.CH558.BHE"
+        },
+        {
+            "name": "STA.CH559.SHE"
+        },
+        {
+            "name": "STA.CH560.BHZ"
+        },
+        {
+            "name": "STA.BEAM561.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH562.SHZ"
+        },
+        {
+            "name": "STA.CH563.BHE"
+        },
+        {
+            "name": "STA.CH564.SHE"
+        },
+        {
+            "name": "STA.CH565.BHZ"
+        },
+        {
+            "name": "STA.BEAM566.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH567.SHZ"
+        },
+        {
+            "name": "STA.CH568.BHE"
+        },
+        {
+            "name": "STA.CH569.SHE"
+        },
+        {
+            "name": "STA.CH570.BHZ"
+        },
+        {
+            "name": "STA.BEAM571.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH572.SHZ"
+        },
+        {
+            "name": "STA.CH573.BHE"
+        },
+        {
+            "name": "STA.CH574.SHE"
+        },
+        {
+            "name": "STA.CH575.BHZ"
+        },
+        {
+            "name": "STA.BEAM576.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH577.SHZ"
+        },
+        {
+            "name": "STA.CH578.BHE"
+        },
+        {
+            "name": "STA.CH579.SHE"
+        },
+        {
+            "name": "STA.CH580.BHZ"
+        },
+        {
+            "name": "STA.BEAM581.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH582.SHZ"
+        },
+        {
+            "name": "STA.CH583.BHE"
+        },
+        {
+            "name": "STA.CH584.SHE"
+        },
+        {
+            "name": "STA.CH585.BHZ"
+        },
+        {
+            "name": "STA.BEAM586.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH587.SHZ"
+        },
+        {
+            "name": "STA.CH588.BHE"
+        },
+        {
+            "name": "STA.CH589.SHE"
+        },
+        {
+            "name": "STA.CH590.BHZ"
+        },
+        {
+            "name": "STA.BEAM591.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH592.SHZ"
+        },
+        {
+            "name": "STA.CH593.BHE"
+        },
+        {
+            "name": "STA.CH594.SHE"
+        },
+        {
+            "name": "STA.CH595.BHZ"
+        },
+        {
+            "name": "STA.BEAM596.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH597.SHZ"
+        },
+        {
+            "name": "STA.CH598.BHE"
+        },
+        {
+            "name": "STA.CH599.SHE"
+        },
+        {
+            "name": "STA.CH600.BHZ"
+        },
+        {
+            "name": "STA.BEAM601.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH602.SHZ"
+        },
+        {
+            "name": "STA.CH603.BHE"
+        },
+        {
+            "name": "STA.CH604.SHE"
+        },
+        {
+            "name": "STA.CH605.BHZ"
+        },
+        {
+            "name": "STA.BEAM606.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH607.SHZ"
+        },
+        {
+            "name": "STA.CH608.BHE"
+        },
+        {
+            "name": "STA.CH609.SHE"
+        },
+        {
+            "name": "STA.CH610.BHZ"
+        },
+        {
+            "name": "STA.BEAM611.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH612.SHZ"
+        },
+        {
+            "name": "STA.CH613.BHE"
+        },
+        {
+            "name": "STA.CH614.SHE"
+        },
+        {
+            "name": "STA.CH615.BHZ"
+        },
+        {
+            "name": "STA.BEAM616.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH617.SHZ"
+        },
+        {
+            "name": "STA.CH618.BHE"
+        },
+        {
+            "name": "STA.CH619.SHE"
+        },
+        {
+            "name": "STA.CH620.BHZ"
+        },
+        {
+            "name": "STA.BEAM621.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH622.SHZ"
+        },
+        {
+            "name": "STA.CH623.BHE"
+        },
+        {
+            "name": "STA.CH624.SHE"
+        },
+        {
+            "name": "STA.CH625.BHZ"
+        },
+        {
+            "name": "STA.BEAM626.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH627.SHZ"
+        },
+        {
+            "name": "STA.CH628.BHE"
+        },
+        {
+            "name": "STA.CH629.SHE"
+        },
+        {
+            "name": "STA.CH630.BHZ"
+        },
+        {
+            "name": "STA.BEAM631.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH632.SHZ"
+        },
+        {
+            "name": "STA.CH633.BHE"
+        },
+        {
+            "name": "STA.CH634.SHE"
+        },
+        {
+            "name": "STA.CH635.BHZ"
+        },
+        {
+            "name": "STA.BEAM636.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH637.SHZ"
+        },
+        {
+            "name": "STA.CH638.BHE"
+        },
+        {
+            "name": "STA.CH639.SHE"
+        },
+        {
+            "name": "STA.CH640.BHZ"
+        },
+        {
+            "name": "STA.BEAM641.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH642.SHZ"
+        },
+        {
+            "name": "STA.CH643.BHE"
+        },
+        {
+            "name": "STA.CH644.SHE"
+        },
+        {
+            "name": "STA.CH645.BHZ"
+        },
+        {
+            "name": "STA.BEAM646.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH647.SHZ"
+        },
+        {
+            "name": "STA.CH648.BHE"
+        },
+        {
+            "name": "STA.CH649.SHE"
+        },
+        {
+            "name": "STA.CH650.BHZ"
+        },
+        {
+            "name": "STA.BEAM651.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH652.SHZ"
+        },
+        {
+            "name": "STA.CH653.BHE"
+        },
+        {
+            "name": "STA.CH654.SHE"
+        },
+        {
+            "name": "STA.CH655.BHZ"
+        },
+        {
+            "name": "STA.BEAM656.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH657.SHZ"
+        },
+        {
+            "name": "STA.CH658.BHE"
+        },
+        {
+            "name": "STA.CH659.SHE"
+        },
+        {
+            "name": "STA.CH660.BHZ"
+        },
+        {
+            "name": "STA.BEAM661.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH662.SHZ"
+        },
+        {
+            "name": "STA.CH663.BHE"
+        },
+        {
+            "name": "STA.CH664.SHE"
+        },
+        {
+            "name": "STA.CH665.BHZ"
+        },
+        {
+            "name": "STA.BEAM666.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH667.SHZ"
+        },
+        {
+            "name": "STA.CH668.BHE"
+        },
+        {
+            "name": "STA.CH669.SHE"
+        },
+        {
+            "name": "STA.CH670.BHZ"
+        },
+        {
+            "name": "STA.BEAM671.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH672.SHZ"
+        },
+        {
+            "name": "STA.CH673.BHE"
+        },
+        {
+            "name": "STA.CH674.SHE"
+        },
+        {
+            "name": "STA.CH675.BHZ"
+        },
+        {
+            "name": "STA.BEAM676.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH677.SHZ"
+        },
+        {
+            "name": "STA.CH678.BHE"
+        },
+        {
+            "name": "STA.CH679.SHE"
+        },
+        {
+            "name": "STA.CH680.BHZ"
+        },
+        {
+            "name": "STA.BEAM681.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH682.SHZ"
+        },
+        {
+            "name": "STA.CH683.BHE"
+        },
+        {
+            "name": "STA.CH684.SHE"
+        },
+        {
+            "name": "STA.CH685.BHZ"
+        },
+        {
+            "name": "STA.BEAM686.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH687.SHZ"
+        },
+        {
+            "name": "STA.CH688.BHE"
+        },
+        {
+            "name": "STA.CH689.SHE"
+        },
+        {
+            "name": "STA.CH690.BHZ"
+        },
+        {
+            "name": "STA.BEAM691.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH692.SHZ"
+        },
+        {
+            "name": "STA.CH693.BHE"
+        },
+        {
+            "name": "STA.CH694.SHE"
+        },
+        {
+            "name": "STA.CH695.BHZ"
+        },
+        {
+            "name": "STA.BEAM696.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH697.SHZ"
+        },
+        {
+            "name": "STA.CH698.BHE"
+        },
+        {
+            "name": "STA.CH699.SHE"
+        },
+        {
+            "name": "STA.CH700.BHZ"
+        },
+        {
+            "name": "STA.BEAM701.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH702.SHZ"
+        },
+        {
+            "name": "STA.CH703.BHE"
+        },
+        {
+            "name": "STA.CH704.SHE"
+        },
+        {
+            "name": "STA.CH705.BHZ"
+        },
+        {
+            "name": "STA.BEAM706.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH707.SHZ"
+        },
+        {
+            "name": "STA.CH708.BHE"
+        },
+        {
+            "name": "STA.CH709.SHE"
+        },
+        {
+            "name": "STA.CH710.BHZ"
+        },
+        {
+            "name": "STA.BEAM711.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH712.SHZ"
+        },
+        {
+            "name": "STA.CH713.BHE"
+        },
+        {
+            "name": "STA.CH714.SHE"
+        },
+        {
+            "name": "STA.CH715.BHZ"
+        },
+        {
+            "name": "STA.BEAM716.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH717.SHZ"
+        },
+        {
+            "name": "STA.CH718.BHE"
+        },
+        {
+            "name": "STA.CH719.SHE"
+        },
+        {
+            "name": "STA.CH720.BHZ"
+        },
+        {
+            "name": "STA.BEAM721.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH722.SHZ"
+        },
+        {
+            "name": "STA.CH723.BHE"
+        },
+        {
+            "name": "STA.CH724.SHE"
+        },
+        {
+            "name": "STA.CH725.BHZ"
+        },
+        {
+            "name": "STA.BEAM726.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH727.SHZ"
+        },
+        {
+            "name": "STA.CH728.BHE"
+        },
+        {
+            "name": "STA.CH729.SHE"
+        },
+        {
+            "name": "STA.CH730.BHZ"
+        },
+        {
+            "name": "STA.BEAM731.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH732.SHZ"
+        },
+        {
+            "name": "STA.CH733.BHE"
+        },
+        {
+            "name": "STA.CH734.SHE"
+        },
+        {
+            "name": "STA.CH735.BHZ"
+        },
+        {
+            "name": "STA.BEAM736.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH737.SHZ"
+        },
+        {
+            "name": "STA.CH738.BHE"
+        },
+        {
+            "name": "STA.CH739.SHE"
+        },
+        {
+            "name": "STA.CH740.BHZ"
+        },
+        {
+            "name": "STA.BEAM741.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH742.SHZ"
+        },
+        {
+            "name": "STA.CH743.BHE"
+        },
+        {
+            "name": "STA.CH744.SHE"
+        },
+        {
+            "name": "STA.CH745.BHZ"
+        },
+        {
+            "name": "STA.BEAM746.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH747.SHZ"
+        },
+        {
+            "name": "STA.CH748.BHE"
+        },
+        {
+            "name": "STA.CH749.SHE"
+        },
+        {
+            "name": "STA.CH750.BHZ"
+        },
+        {
+            "name": "STA.BEAM751.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH752.SHZ"
+        },
+        {
+            "name": "STA.CH753.BHE"
+        },
+        {
+            "name": "STA.CH754.SHE"
+        },
+        {
+            "name": "STA.CH755.BHZ"
+        },
+        {
+            "name": "STA.BEAM756.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH757.SHZ"
+        },
+        {
+            "name": "STA.CH758.BHE"
+        },
+        {
+            "name": "STA.CH759.SHE"
+        },
+        {
+            "name": "STA.CH760.BHZ"
+        },
+        {
+            "name": "STA.BEAM761.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH762.SHZ"
+        },
+        {
+            "name": "STA.CH763.BHE"
+        },
+        {
+            "name": "STA.CH764.SHE"
+        },
+        {
+            "name": "STA.CH765.BHZ"
+        },
+        {
+            "name": "STA.BEAM766.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH767.SHZ"
+        },
+        {
+            "name": "STA.CH768.BHE"
+        },
+        {
+            "name": "STA.CH769.SHE"
+        },
+        {
+            "name": "STA.CH770.BHZ"
+        },
+        {
+            "name": "STA.BEAM771.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH772.SHZ"
+        },
+        {
+            "name": "STA.CH773.BHE"
+        },
+        {
+            "name": "STA.CH774.SHE"
+        },
+        {
+            "name": "STA.CH775.BHZ"
+        },
+        {
+            "name": "STA.BEAM776.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH777.SHZ"
+        },
+        {
+            "name": "STA.CH778.BHE"
+        },
+        {
+            "name": "STA.CH779.SHE"
+        },
+        {
+            "name": "STA.CH780.BHZ"
+        },
+        {
+            "name": "STA.BEAM781.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH782.SHZ"
+        },
+        {
+            "name": "STA.CH783.BHE"
+        },
+        {
+            "name": "STA.CH784.SHE"
+        },
+        {
+            "name": "STA.CH785.BHZ"
+        },
+        {
+            "name": "STA.BEAM786.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH787.SHZ"
+        },
+        {
+            "name": "STA.CH788.BHE"
+        },
+        {
+            "name": "STA.CH789.SHE"
+        },
+        {
+            "name": "STA.CH790.BHZ"
+        },
+        {
+            "name": "STA.BEAM791.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH792.SHZ"
+        },
+        {
+            "name": "STA.CH793.BHE"
+        },
+        {
+            "name": "STA.CH794.SHE"
+        },
+        {
+            "name": "STA.CH795.BHZ"
+        },
+        {
+            "name": "STA.BEAM796.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH797.SHZ"
+        },
+        {
+            "name": "STA.CH798.BHE"
+        },
+        {
+            "name": "STA.CH799.SHE"
+        },
+        {
+            "name": "STA.CH800.BHZ"
+        },
+        {
+            "name": "STA.BEAM801.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH802.SHZ"
+        },
+        {
+            "name": "STA.CH803.BHE"
+        },
+        {
+            "name": "STA.CH804.SHE"
+        },
+        {
+            "name": "STA.CH805.BHZ"
+        },
+        {
+            "name": "STA.BEAM806.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH807.SHZ"
+        },
+        {
+            "name": "STA.CH808.BHE"
+        },
+        {
+            "name": "STA.CH809.SHE"
+        },
+        {
+            "name": "STA.CH810.BHZ"
+        },
+        {
+            "name": "STA.BEAM811.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH812.SHZ"
+        },
+        {
+            "name": "STA.CH813.BHE"
+        },
+        {
+            "name": "STA.CH814.SHE"
+        },
+        {
+            "name": "STA.CH815.BHZ"
+        },
+        {
+            "name": "STA.BEAM816.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH817.SHZ"
+        },
+        {
+            "name": "STA.CH818.BHE"
+        },
+        {
+            "name": "STA.CH819.SHE"
+        },
+        {
+            "name": "STA.CH820.BHZ"
+        },
+        {
+            "name": "STA.BEAM821.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH822.SHZ"
+        },
+        {
+            "name": "STA.CH823.BHE"
+        },
+        {
+            "name": "STA.CH824.SHE"
+        },
+        {
+            "name": "STA.CH825.BHZ"
+        },
+        {
+            "name": "STA.BEAM826.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH827.SHZ"
+        },
+        {
+            "name": "STA.CH828.BHE"
+        },
+        {
+            "name": "STA.CH829.SHE"
+        },
+        {
+            "name": "STA.CH830.BHZ"
+        },
+        {
+            "name": "STA.BEAM831.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH832.SHZ"
+        },
+        {
+            "name": "STA.CH833.BHE"
+        },
+        {
+            "name": "STA.CH834.SHE"
+        },
+        {
+            "name": "STA.CH835.BHZ"
+        },
+        {
+            "name": "STA.BEAM836.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH837.SHZ"
+        },
+        {
+            "name": "STA.CH838.BHE"
+        },
+        {
+            "name": "STA.CH839.SHE"
+        },
+        {
+            "name": "STA.CH840.BHZ"
+        },
+        {
+            "name": "STA.BEAM841.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH842.SHZ"
+        },
+        {
+            "name": "STA.CH843.BHE"
+        },
+        {
+            "name": "STA.CH844.SHE"
+        },
+        {
+            "name": "STA.CH845.BHZ"
+        },
+        {
+            "name": "STA.BEAM846.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH847.SHZ"
+        },
+        {
+            "name": "STA.CH848.BHE"
+        },
+        {
+            "name": "STA.CH849.SHE"
+        },
+        {
+            "name": "STA.CH850.BHZ"
+        },
+        {
+            "name": "STA.BEAM851.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH852.SHZ"
+        },
+        {
+            "name": "STA.CH853.BHE"
+        },
+        {
+            "name": "STA.CH854.SHE"
+        },
+        {
+            "name": "STA.CH855.BHZ"
+        },
+        {
+            "name": "STA.BEAM856.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH857.SHZ"
+        },
+        {
+            "name": "STA.CH858.BHE"
+        },
+        {
+            "name": "STA.CH859.SHE"
+        },
+        {
+            "name": "STA.CH860.BHZ"
+        },
+        {
+            "name": "STA.BEAM861.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH862.SHZ"
+        },
+        {
+            "name": "STA.CH863.BHE"
+        },
+        {
+            "name": "STA.CH864.SHE"
+        },
+        {
+            "name": "STA.CH865.BHZ"
+        },
+        {
+            "name": "STA.BEAM866.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH867.SHZ"
+        },
+        {
+            "name": "STA.CH868.BHE"
+        },
+        {
+            "name": "STA.CH869.SHE"
+        },
+        {
+            "name": "STA.CH870.BHZ"
+        },
+        {
+            "name": "STA.BEAM871.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH872.SHZ"
+        },
+        {
+            "name": "STA.CH873.BHE"
+        },
+        {
+            "name": "STA.CH874.SHE"
+        },
+        {
+            "name": "STA.CH875.BHZ"
+        },
+        {
+            "name": "STA.BEAM876.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH877.SHZ"
+        },
+        {
+            "name": "STA.CH878.BHE"
+        },
+        {
+            "name": "STA.CH879.SHE"
+        },
+        {
+            "name": "STA.CH880.BHZ"
+        },
+        {
+            "name": "STA.BEAM881.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH882.SHZ"
+        },
+        {
+            "name": "STA.CH883.BHE"
+        },
+        {
+            "name": "STA.CH884.SHE"
+        },
+        {
+            "name": "STA.CH885.BHZ"
+        },
+        {
+            "name": "STA.BEAM886.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH887.SHZ"
+        },
+        {
+            "name": "STA.CH888.BHE"
+        },
+        {
+            "name": "STA.CH889.SHE"
+        },
+        {
+            "name": "STA.CH890.BHZ"
+        },
+        {
+            "name": "STA.BEAM891.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH892.SHZ"
+        },
+        {
+            "name": "STA.CH893.BHE"
+        },
+        {
+            "name": "STA.CH894.SHE"
+        },
+        {
+            "name": "STA.CH895.BHZ"
+        },
+        {
+            "name": "STA.BEAM896.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH897.SHZ"
+        },
+        {
+            "name": "STA.CH898.BHE"
+        },
+        {
+            "name": "STA.CH899.SHE"
+        },
+        {
+            "name": "STA.CH900.BHZ"
+        },
+        {
+            "name": "STA.BEAM901.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH902.SHZ"
+        },
+        {
+            "name": "STA.CH903.BHE"
+        },
+        {
+            "name": "STA.CH904.SHE"
+        },
+        {
+            "name": "STA.CH905.BHZ"
+        },
+        {
+            "name": "STA.BEAM906.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH907.SHZ"
+        },
+        {
+            "name": "STA.CH908.BHE"
+        },
+        {
+            "name": "STA.CH909.SHE"
+        },
+        {
+            "name": "STA.CH910.BHZ"
+        },
+        {
+            "name": "STA.BEAM911.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH912.SHZ"
+        },
+        {
+            "name": "STA.CH913.BHE"
+        },
+        {
+            "name": "STA.CH914.SHE"
+        },
+        {
+            "name": "STA.CH915.BHZ"
+        },
+        {
+            "name": "STA.BEAM916.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH917.SHZ"
+        },
+        {
+            "name": "STA.CH918.BHE"
+        },
+        {
+            "name": "STA.CH919.SHE"
+        },
+        {
+            "name": "STA.CH920.BHZ"
+        },
+        {
+            "name": "STA.BEAM921.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH922.SHZ"
+        },
+        {
+            "name": "STA.CH923.BHE"
+        },
+        {
+            "name": "STA.CH924.SHE"
+        },
+        {
+            "name": "STA.CH925.BHZ"
+        },
+        {
+            "name": "STA.BEAM926.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH927.SHZ"
+        },
+        {
+            "name": "STA.CH928.BHE"
+        },
+        {
+            "name": "STA.CH929.SHE"
+        },
+        {
+            "name": "STA.CH930.BHZ"
+        },
+        {
+            "name": "STA.BEAM931.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH932.SHZ"
+        },
+        {
+            "name": "STA.CH933.BHE"
+        },
+        {
+            "name": "STA.CH934.SHE"
+        },
+        {
+            "name": "STA.CH935.BHZ"
+        },
+        {
+            "name": "STA.BEAM936.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH937.SHZ"
+        },
+        {
+            "name": "STA.CH938.BHE"
+        },
+        {
+            "name": "STA.CH939.SHE"
+        },
+        {
+            "name": "STA.CH940.BHZ"
+        },
+        {
+            "name": "STA.BEAM941.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH942.SHZ"
+        },
+        {
+            "name": "STA.CH943.BHE"
+        },
+        {
+            "name": "STA.CH944.SHE"
+        },
+        {
+            "name": "STA.CH945.BHZ"
+        },
+        {
+            "name": "STA.BEAM946.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH947.SHZ"
+        },
+        {
+            "name": "STA.CH948.BHE"
+        },
+        {
+            "name": "STA.CH949.SHE"
+        },
+        {
+            "name": "STA.CH950.BHZ"
+        },
+        {
+            "name": "STA.BEAM951.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH952.SHZ"
+        },
+        {
+            "name": "STA.CH953.BHE"
+        },
+        {
+            "name": "STA.CH954.SHE"
+        },
+        {
+            "name": "STA.CH955.BHZ"
+        },
+        {
+            "name": "STA.BEAM956.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH957.SHZ"
+        },
+        {
+            "name": "STA.CH958.BHE"
+        },
+        {
+            "name": "STA.CH959.SHE"
+        },
+        {
+            "name": "STA.CH960.BHZ"
+        },
+        {
+            "name": "STA.BEAM961.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH962.SHZ"
+        },
+        {
+            "name": "STA.CH963.BHE"
+        },
+        {
+            "name": "STA.CH964.SHE"
+        },
+        {
+            "name": "STA.CH965.BHZ"
+        },
+        {
+            "name": "STA.BEAM966.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH967.SHZ"
+        },
+        {
+            "name": "STA.CH968.BHE"
+        },
+        {
+            "name": "STA.CH969.SHE"
+        },
+        {
+            "name": "STA.CH970.BHZ"
+        },
+        {
+            "name": "STA.BEAM971.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH972.SHZ"
+        },
+        {
+            "name": "STA.CH973.BHE"
+        },
+        {
+            "name": "STA.CH974.SHE"
+        },
+        {
+            "name": "STA.CH975.BHZ"
+        },
+        {
+            "name": "STA.BEAM976.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH977.SHZ"
+        },
+        {
+            "name": "STA.CH978.BHE"
+        },
+        {
+            "name": "STA.CH979.SHE"
+        },
+        {
+            "name": "STA.CH980.BHZ"
+        },
+        {
+            "name": "STA.BEAM981.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH982.SHZ"
+        },
+        {
+            "name": "STA.CH983.BHE"
+        },
+        {
+            "name": "STA.CH984.SHE"
+        },
+        {
+            "name": "STA.CH985.BHZ"
+        },
+        {
+            "name": "STA.BEAM986.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH987.SHZ"
+        },
+        {
+            "name": "STA.CH988.BHE"
+        },
+        {
+            "name": "STA.CH989.SHE"
+        },
+        {
+            "name": "STA.CH990.BHZ"
+        },
+        {
+            "name": "STA.BEAM991.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH992.SHZ"
+        },
+        {
+            "name": "STA.CH993.BHE"
+        },
+        {
+            "name": "STA.CH994.SHE"
+        },
+        {
+            "name": "STA.CH995.BHZ"
+        },
+        {
+            "name": "STA.BEAM996.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH997.SHZ"
+        },
+        {
+            "name": "STA.CH998.BHE"
+        },
+        {
+            "name": "STA.CH999.SHE"
+        },
+        {
+            "name": "STA.CH1000.BHZ"
+        },
+        {
+            "name": "STA.BEAM1001.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1002.SHZ"
+        },
+        {
+            "name": "STA.CH1003.BHE"
+        },
+        {
+            "name": "STA.CH1004.SHE"
+        },
+        {
+            "name": "STA.CH1005.BHZ"
+        },
+        {
+            "name": "STA.BEAM1006.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1007.SHZ"
+        },
+        {
+            "name": "STA.CH1008.BHE"
+        },
+        {
+            "name": "STA.CH1009.SHE"
+        },
+        {
+            "name": "STA.CH1010.BHZ"
+        },
+        {
+            "name": "STA.BEAM1011.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1012.SHZ"
+        },
+        {
+            "name": "STA.CH1013.BHE"
+        },
+        {
+            "name": "STA.CH1014.SHE"
+        },
+        {
+            "name": "STA.CH1015.BHZ"
+        },
+        {
+            "name": "STA.BEAM1016.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1017.SHZ"
+        },
+        {
+            "name": "STA.CH1018.BHE"
+        },
+        {
+            "name": "STA.CH1019.SHE"
+        },
+        {
+            "name": "STA.CH1020.BHZ"
+        },
+        {
+            "name": "STA.BEAM1021.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1022.SHZ"
+        },
+        {
+            "name": "STA.CH1023.BHE"
+        },
+        {
+            "name": "STA.CH1024.SHE"
+        },
+        {
+            "name": "STA.CH1025.BHZ"
+        },
+        {
+            "name": "STA.BEAM1026.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1027.SHZ"
+        },
+        {
+            "name": "STA.CH1028.BHE"
+        },
+        {
+            "name": "STA.CH1029.SHE"
+        },
+        {
+            "name": "STA.CH1030.BHZ"
+        },
+        {
+            "name": "STA.BEAM1031.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1032.SHZ"
+        },
+        {
+            "name": "STA.CH1033.BHE"
+        },
+        {
+            "name": "STA.CH1034.SHE"
+        },
+        {
+            "name": "STA.CH1035.BHZ"
+        },
+        {
+            "name": "STA.BEAM1036.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1037.SHZ"
+        },
+        {
+            "name": "STA.CH1038.BHE"
+        },
+        {
+            "name": "STA.CH1039.SHE"
+        },
+        {
+            "name": "STA.CH1040.BHZ"
+        },
+        {
+            "name": "STA.BEAM1041.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1042.SHZ"
+        },
+        {
+            "name": "STA.CH1043.BHE"
+        },
+        {
+            "name": "STA.CH1044.SHE"
+        },
+        {
+            "name": "STA.CH1045.BHZ"
+        },
+        {
+            "name": "STA.BEAM1046.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1047.SHZ"
+        },
+        {
+            "name": "STA.CH1048.BHE"
+        },
+        {
+            "name": "STA.CH1049.SHE"
+        },
+        {
+            "name": "STA.CH1050.BHZ"
+        },
+        {
+            "name": "STA.BEAM1051.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1052.SHZ"
+        },
+        {
+            "name": "STA.CH1053.BHE"
+        },
+        {
+            "name": "STA.CH1054.SHE"
+        },
+        {
+            "name": "STA.CH1055.BHZ"
+        },
+        {
+            "name": "STA.BEAM1056.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1057.SHZ"
+        },
+        {
+            "name": "STA.CH1058.BHE"
+        },
+        {
+            "name": "STA.CH1059.SHE"
+        },
+        {
+            "name": "STA.CH1060.BHZ"
+        },
+        {
+            "name": "STA.BEAM1061.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1062.SHZ"
+        },
+        {
+            "name": "STA.CH1063.BHE"
+        },
+        {
+            "name": "STA.CH1064.SHE"
+        },
+        {
+            "name": "STA.CH1065.BHZ"
+        },
+        {
+            "name": "STA.BEAM1066.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1067.SHZ"
+        },
+        {
+            "name": "STA.CH1068.BHE"
+        },
+        {
+            "name": "STA.CH1069.SHE"
+        },
+        {
+            "name": "STA.CH1070.BHZ"
+        },
+        {
+            "name": "STA.BEAM1071.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1072.SHZ"
+        },
+        {
+            "name": "STA.CH1073.BHE"
+        },
+        {
+            "name": "STA.CH1074.SHE"
+        },
+        {
+            "name": "STA.CH1075.BHZ"
+        },
+        {
+            "name": "STA.BEAM1076.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1077.SHZ"
+        },
+        {
+            "name": "STA.CH1078.BHE"
+        },
+        {
+            "name": "STA.CH1079.SHE"
+        },
+        {
+            "name": "STA.CH1080.BHZ"
+        },
+        {
+            "name": "STA.BEAM1081.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1082.SHZ"
+        },
+        {
+            "name": "STA.CH1083.BHE"
+        },
+        {
+            "name": "STA.CH1084.SHE"
+        },
+        {
+            "name": "STA.CH1085.BHZ"
+        },
+        {
+            "name": "STA.BEAM1086.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1087.SHZ"
+        },
+        {
+            "name": "STA.CH1088.BHE"
+        },
+        {
+            "name": "STA.CH1089.SHE"
+        },
+        {
+            "name": "STA.CH1090.BHZ"
+        },
+        {
+            "name": "STA.BEAM1091.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1092.SHZ"
+        },
+        {
+            "name": "STA.CH1093.BHE"
+        },
+        {
+            "name": "STA.CH1094.SHE"
+        },
+        {
+            "name": "STA.CH1095.BHZ"
+        },
+        {
+            "name": "STA.BEAM1096.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1097.SHZ"
+        },
+        {
+            "name": "STA.CH1098.BHE"
+        },
+        {
+            "name": "STA.CH1099.SHE"
+        },
+        {
+            "name": "STA.CH1100.BHZ"
+        },
+        {
+            "name": "STA.BEAM1101.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1102.SHZ"
+        },
+        {
+            "name": "STA.CH1103.BHE"
+        },
+        {
+            "name": "STA.CH1104.SHE"
+        },
+        {
+            "name": "STA.CH1105.BHZ"
+        },
+        {
+            "name": "STA.BEAM1106.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1107.SHZ"
+        },
+        {
+            "name": "STA.CH1108.BHE"
+        },
+        {
+            "name": "STA.CH1109.SHE"
+        },
+        {
+            "name": "STA.CH1110.BHZ"
+        },
+        {
+            "name": "STA.BEAM1111.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1112.SHZ"
+        },
+        {
+            "name": "STA.CH1113.BHE"
+        },
+        {
+            "name": "STA.CH1114.SHE"
+        },
+        {
+            "name": "STA.CH1115.BHZ"
+        },
+        {
+            "name": "STA.BEAM1116.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1117.SHZ"
+        },
+        {
+            "name": "STA.CH1118.BHE"
+        },
+        {
+            "name": "STA.CH1119.SHE"
+        },
+        {
+            "name": "STA.CH1120.BHZ"
+        },
+        {
+            "name": "STA.BEAM1121.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1122.SHZ"
+        },
+        {
+            "name": "STA.CH1123.BHE"
+        },
+        {
+            "name": "STA.CH1124.SHE"
+        },
+        {
+            "name": "STA.CH1125.BHZ"
+        },
+        {
+            "name": "STA.BEAM1126.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1127.SHZ"
+        },
+        {
+            "name": "STA.CH1128.BHE"
+        },
+        {
+            "name": "STA.CH1129.SHE"
+        },
+        {
+            "name": "STA.CH1130.BHZ"
+        },
+        {
+            "name": "STA.BEAM1131.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1132.SHZ"
+        },
+        {
+            "name": "STA.CH1133.BHE"
+        },
+        {
+            "name": "STA.CH1134.SHE"
+        },
+        {
+            "name": "STA.CH1135.BHZ"
+        },
+        {
+            "name": "STA.BEAM1136.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1137.SHZ"
+        },
+        {
+            "name": "STA.CH1138.BHE"
+        },
+        {
+            "name": "STA.CH1139.SHE"
+        },
+        {
+            "name": "STA.CH1140.BHZ"
+        },
+        {
+            "name": "STA.BEAM1141.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1142.SHZ"
+        },
+        {
+            "name": "STA.CH1143.BHE"
+        },
+        {
+            "name": "STA.CH1144.SHE"
+        },
+        {
+            "name": "STA.CH1145.BHZ"
+        },
+        {
+            "name": "STA.BEAM1146.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1147.SHZ"
+        },
+        {
+            "name": "STA.CH1148.BHE"
+        },
+        {
+            "name": "STA.CH1149.SHE"
+        },
+        {
+            "name": "STA.CH1150.BHZ"
+        },
+        {
+            "name": "STA.BEAM1151.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1152.SHZ"
+        },
+        {
+            "name": "STA.CH1153.BHE"
+        },
+        {
+            "name": "STA.CH1154.SHE"
+        },
+        {
+            "name": "STA.CH1155.BHZ"
+        },
+        {
+            "name": "STA.BEAM1156.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1157.SHZ"
+        },
+        {
+            "name": "STA.CH1158.BHE"
+        },
+        {
+            "name": "STA.CH1159.SHE"
+        },
+        {
+            "name": "STA.CH1160.BHZ"
+        },
+        {
+            "name": "STA.BEAM1161.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1162.SHZ"
+        },
+        {
+            "name": "STA.CH1163.BHE"
+        },
+        {
+            "name": "STA.CH1164.SHE"
+        },
+        {
+            "name": "STA.CH1165.BHZ"
+        },
+        {
+            "name": "STA.BEAM1166.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1167.SHZ"
+        },
+        {
+            "name": "STA.CH1168.BHE"
+        },
+        {
+            "name": "STA.CH1169.SHE"
+        },
+        {
+            "name": "STA.CH1170.BHZ"
+        },
+        {
+            "name": "STA.BEAM1171.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1172.SHZ"
+        },
+        {
+            "name": "STA.CH1173.BHE"
+        },
+        {
+            "name": "STA.CH1174.SHE"
+        },
+        {
+            "name": "STA.CH1175.BHZ"
+        },
+        {
+            "name": "STA.BEAM1176.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1177.SHZ"
+        },
+        {
+            "name": "STA.CH1178.BHE"
+        },
+        {
+            "name": "STA.CH1179.SHE"
+        },
+        {
+            "name": "STA.CH1180.BHZ"
+        },
+        {
+            "name": "STA.BEAM1181.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1182.SHZ"
+        },
+        {
+            "name": "STA.CH1183.BHE"
+        },
+        {
+            "name": "STA.CH1184.SHE"
+        },
+        {
+            "name": "STA.CH1185.BHZ"
+        },
+        {
+            "name": "STA.BEAM1186.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1187.SHZ"
+        },
+        {
+            "name": "STA.CH1188.BHE"
+        },
+        {
+            "name": "STA.CH1189.SHE"
+        },
+        {
+            "name": "STA.CH1190.BHZ"
+        },
+        {
+            "name": "STA.BEAM1191.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1192.SHZ"
+        },
+        {
+            "name": "STA.CH1193.BHE"
+        },
+        {
+            "name": "STA.CH1194.SHE"
+        },
+        {
+            "name": "STA.CH1195.BHZ"
+        },
+        {
+            "name": "STA.BEAM1196.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1197.SHZ"
+        },
+        {
+            "name": "STA.CH1198.BHE"
+        },
+        {
+            "name": "STA.CH1199.SHE"
+        },
+        {
+            "name": "STA.CH1200.BHZ"
+        },
+        {
+            "name": "STA.BEAM1201.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1202.SHZ"
+        },
+        {
+            "name": "STA.CH1203.BHE"
+        },
+        {
+            "name": "STA.CH1204.SHE"
+        },
+        {
+            "name": "STA.CH1205.BHZ"
+        },
+        {
+            "name": "STA.BEAM1206.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1207.SHZ"
+        },
+        {
+            "name": "STA.CH1208.BHE"
+        },
+        {
+            "name": "STA.CH1209.SHE"
+        },
+        {
+            "name": "STA.CH1210.BHZ"
+        },
+        {
+            "name": "STA.BEAM1211.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1212.SHZ"
+        },
+        {
+            "name": "STA.CH1213.BHE"
+        },
+        {
+            "name": "STA.CH1214.SHE"
+        },
+        {
+            "name": "STA.CH1215.BHZ"
+        },
+        {
+            "name": "STA.BEAM1216.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1217.SHZ"
+        },
+        {
+            "name": "STA.CH1218.BHE"
+        },
+        {
+            "name": "STA.CH1219.SHE"
+        },
+        {
+            "name": "STA.CH1220.BHZ"
+        },
+        {
+            "name": "STA.BEAM1221.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1222.SHZ"
+        },
+        {
+            "name": "STA.CH1223.BHE"
+        },
+        {
+            "name": "STA.CH1224.SHE"
+        },
+        {
+            "name": "STA.CH1225.BHZ"
+        },
+        {
+            "name": "STA.BEAM1226.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1227.SHZ"
+        },
+        {
+            "name": "STA.CH1228.BHE"
+        },
+        {
+            "name": "STA.CH1229.SHE"
+        },
+        {
+            "name": "STA.CH1230.BHZ"
+        },
+        {
+            "name": "STA.BEAM1231.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1232.SHZ"
+        },
+        {
+            "name": "STA.CH1233.BHE"
+        },
+        {
+            "name": "STA.CH1234.SHE"
+        },
+        {
+            "name": "STA.CH1235.BHZ"
+        },
+        {
+            "name": "STA.BEAM1236.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1237.SHZ"
+        },
+        {
+            "name": "STA.CH1238.BHE"
+        },
+        {
+            "name": "STA.CH1239.SHE"
+        },
+        {
+            "name": "STA.CH1240.BHZ"
+        },
+        {
+            "name": "STA.BEAM1241.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1242.SHZ"
+        },
+        {
+            "name": "STA.CH1243.BHE"
+        },
+        {
+            "name": "STA.CH1244.SHE"
+        },
+        {
+            "name": "STA.CH1245.BHZ"
+        },
+        {
+            "name": "STA.BEAM1246.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1247.SHZ"
+        },
+        {
+            "name": "STA.CH1248.BHE"
+        },
+        {
+            "name": "STA.CH1249.SHE"
+        },
+        {
+            "name": "STA.CH1250.BHZ"
+        },
+        {
+            "name": "STA.BEAM1251.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1252.SHZ"
+        },
+        {
+            "name": "STA.CH1253.BHE"
+        },
+        {
+            "name": "STA.CH1254.SHE"
+        },
+        {
+            "name": "STA.CH1255.BHZ"
+        },
+        {
+            "name": "STA.BEAM1256.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1257.SHZ"
+        },
+        {
+            "name": "STA.CH1258.BHE"
+        },
+        {
+            "name": "STA.CH1259.SHE"
+        },
+        {
+            "name": "STA.CH1260.BHZ"
+        },
+        {
+            "name": "STA.BEAM1261.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1262.SHZ"
+        },
+        {
+            "name": "STA.CH1263.BHE"
+        },
+        {
+            "name": "STA.CH1264.SHE"
+        },
+        {
+            "name": "STA.CH1265.BHZ"
+        },
+        {
+            "name": "STA.BEAM1266.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1267.SHZ"
+        },
+        {
+            "name": "STA.CH1268.BHE"
+        },
+        {
+            "name": "STA.CH1269.SHE"
+        },
+        {
+            "name": "STA.CH1270.BHZ"
+        },
+        {
+            "name": "STA.BEAM1271.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1272.SHZ"
+        },
+        {
+            "name": "STA.CH1273.BHE"
+        },
+        {
+            "name": "STA.CH1274.SHE"
+        },
+        {
+            "name": "STA.CH1275.BHZ"
+        },
+        {
+            "name": "STA.BEAM1276.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1277.SHZ"
+        },
+        {
+            "name": "STA.CH1278.BHE"
+        },
+        {
+            "name": "STA.CH1279.SHE"
+        },
+        {
+            "name": "STA.CH1280.BHZ"
+        },
+        {
+            "name": "STA.BEAM1281.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1282.SHZ"
+        },
+        {
+            "name": "STA.CH1283.BHE"
+        },
+        {
+            "name": "STA.CH1284.SHE"
+        },
+        {
+            "name": "STA.CH1285.BHZ"
+        },
+        {
+            "name": "STA.BEAM1286.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1287.SHZ"
+        },
+        {
+            "name": "STA.CH1288.BHE"
+        },
+        {
+            "name": "STA.CH1289.SHE"
+        },
+        {
+            "name": "STA.CH1290.BHZ"
+        },
+        {
+            "name": "STA.BEAM1291.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1292.SHZ"
+        },
+        {
+            "name": "STA.CH1293.BHE"
+        },
+        {
+            "name": "STA.CH1294.SHE"
+        },
+        {
+            "name": "STA.CH1295.BHZ"
+        },
+        {
+            "name": "STA.BEAM1296.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1297.SHZ"
+        },
+        {
+            "name": "STA.CH1298.BHE"
+        },
+        {
+            "name": "STA.CH1299.SHE"
+        },
+        {
+            "name": "STA.CH1300.BHZ"
+        },
+        {
+            "name": "STA.BEAM1301.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1302.SHZ"
+        },
+        {
+            "name": "STA.CH1303.BHE"
+        },
+        {
+            "name": "STA.CH1304.SHE"
+        },
+        {
+            "name": "STA.CH1305.BHZ"
+        },
+        {
+            "name": "STA.BEAM1306.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1307.SHZ"
+        },
+        {
+            "name": "STA.CH1308.BHE"
+        },
+        {
+            "name": "STA.CH1309.SHE"
+        },
+        {
+            "name": "STA.CH1310.BHZ"
+        },
+        {
+            "name": "STA.BEAM1311.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1312.SHZ"
+        },
+        {
+            "name": "STA.CH1313.BHE"
+        },
+        {
+            "name": "STA.CH1314.SHE"
+        },
+        {
+            "name": "STA.CH1315.BHZ"
+        },
+        {
+            "name": "STA.BEAM1316.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1317.SHZ"
+        },
+        {
+            "name": "STA.CH1318.BHE"
+        },
+        {
+            "name": "STA.CH1319.SHE"
+        },
+        {
+            "name": "STA.CH1320.BHZ"
+        },
+        {
+            "name": "STA.BEAM1321.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1322.SHZ"
+        },
+        {
+            "name": "STA.CH1323.BHE"
+        },
+        {
+            "name": "STA.CH1324.SHE"
+        },
+        {
+            "name": "STA.CH1325.BHZ"
+        },
+        {
+            "name": "STA.BEAM1326.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1327.SHZ"
+        },
+        {
+            "name": "STA.CH1328.BHE"
+        },
+        {
+            "name": "STA.CH1329.SHE"
+        },
+        {
+            "name": "STA.CH1330.BHZ"
+        },
+        {
+            "name": "STA.BEAM1331.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1332.SHZ"
+        },
+        {
+            "name": "STA.CH1333.BHE"
+        },
+        {
+            "name": "STA.CH1334.SHE"
+        },
+        {
+            "name": "STA.CH1335.BHZ"
+        },
+        {
+            "name": "STA.BEAM1336.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1337.SHZ"
+        },
+        {
+            "name": "STA.CH1338.BHE"
+        },
+        {
+            "name": "STA.CH1339.SHE"
+        },
+        {
+            "name": "STA.CH1340.BHZ"
+        },
+        {
+            "name": "STA.BEAM1341.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1342.SHZ"
+        },
+        {
+            "name": "STA.CH1343.BHE"
+        },
+        {
+            "name": "STA.CH1344.SHE"
+        },
+        {
+            "name": "STA.CH1345.BHZ"
+        },
+        {
+            "name": "STA.BEAM1346.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1347.SHZ"
+        },
+        {
+            "name": "STA.CH1348.BHE"
+        },
+        {
+            "name": "STA.CH1349.SHE"
+        },
+        {
+            "name": "STA.CH1350.BHZ"
+        },
+        {
+            "name": "STA.BEAM1351.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1352.SHZ"
+        },
+        {
+            "name": "STA.CH1353.BHE"
+        },
+        {
+            "name": "STA.CH1354.SHE"
+        },
+        {
+            "name": "STA.CH1355.BHZ"
+        },
+        {
+            "name": "STA.BEAM1356.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1357.SHZ"
+        },
+        {
+            "name": "STA.CH1358.BHE"
+        },
+        {
+            "name": "STA.CH1359.SHE"
+        },
+        {
+            "name": "STA.CH1360.BHZ"
+        },
+        {
+            "name": "STA.BEAM1361.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1362.SHZ"
+        },
+        {
+            "name": "STA.CH1363.BHE"
+        },
+        {
+            "name": "STA.CH1364.SHE"
+        },
+        {
+            "name": "STA.CH1365.BHZ"
+        },
+        {
+            "name": "STA.BEAM1366.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1367.SHZ"
+        },
+        {
+            "name": "STA.CH1368.BHE"
+        },
+        {
+            "name": "STA.CH1369.SHE"
+        },
+        {
+            "name": "STA.CH1370.BHZ"
+        },
+        {
+            "name": "STA.BEAM1371.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1372.SHZ"
+        },
+        {
+            "name": "STA.CH1373.BHE"
+        },
+        {
+            "name": "STA.CH1374.SHE"
+        },
+        {
+            "name": "STA.CH1375.BHZ"
+        },
+        {
+            "name": "STA.BEAM1376.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1377.SHZ"
+        },
+        {
+            "name": "STA.CH1378.BHE"
+        },
+        {
+            "name": "STA.CH1379.SHE"
+        },
+        {
+            "name": "STA.CH1380.BHZ"
+        },
+        {
+            "name": "STA.BEAM1381.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1382.SHZ"
+        },
+        {
+            "name": "STA.CH1383.BHE"
+        },
+        {
+            "name": "STA.CH1384.SHE"
+        },
+        {
+            "name": "STA.CH1385.BHZ"
+        },
+        {
+            "name": "STA.BEAM1386.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1387.SHZ"
+        },
+        {
+            "name": "STA.CH1388.BHE"
+        },
+        {
+            "name": "STA.CH1389.SHE"
+        },
+        {
+            "name": "STA.CH1390.BHZ"
+        },
+        {
+            "name": "STA.BEAM1391.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1392.SHZ"
+        },
+        {
+            "name": "STA.CH1393.BHE"
+        },
+        {
+            "name": "STA.CH1394.SHE"
+        },
+        {
+            "name": "STA.CH1395.BHZ"
+        },
+        {
+            "name": "STA.BEAM1396.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1397.SHZ"
+        },
+        {
+            "name": "STA.CH1398.BHE"
+        },
+        {
+            "name": "STA.CH1399.SHE"
+        },
+        {
+            "name": "STA.CH1400.BHZ"
+        },
+        {
+            "name": "STA.BEAM1401.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1402.SHZ"
+        },
+        {
+            "name": "STA.CH1403.BHE"
+        },
+        {
+            "name": "STA.CH1404.SHE"
+        },
+        {
+            "name": "STA.CH1405.BHZ"
+        },
+        {
+            "name": "STA.BEAM1406.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1407.SHZ"
+        },
+        {
+            "name": "STA.CH1408.BHE"
+        },
+        {
+            "name": "STA.CH1409.SHE"
+        },
+        {
+            "name": "STA.CH1410.BHZ"
+        },
+        {
+            "name": "STA.BEAM1411.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1412.SHZ"
+        },
+        {
+            "name": "STA.CH1413.BHE"
+        },
+        {
+            "name": "STA.CH1414.SHE"
+        },
+        {
+            "name": "STA.CH1415.BHZ"
+        },
+        {
+            "name": "STA.BEAM1416.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1417.SHZ"
+        },
+        {
+            "name": "STA.CH1418.BHE"
+        },
+        {
+            "name": "STA.CH1419.SHE"
+        },
+        {
+            "name": "STA.CH1420.BHZ"
+        },
+        {
+            "name": "STA.BEAM1421.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1422.SHZ"
+        },
+        {
+            "name": "STA.CH1423.BHE"
+        },
+        {
+            "name": "STA.CH1424.SHE"
+        },
+        {
+            "name": "STA.CH1425.BHZ"
+        },
+        {
+            "name": "STA.BEAM1426.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1427.SHZ"
+        },
+        {
+            "name": "STA.CH1428.BHE"
+        },
+        {
+            "name": "STA.CH1429.SHE"
+        },
+        {
+            "name": "STA.CH1430.BHZ"
+        },
+        {
+            "name": "STA.BEAM1431.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1432.SHZ"
+        },
+        {
+            "name": "STA.CH1433.BHE"
+        },
+        {
+            "name": "STA.CH1434.SHE"
+        },
+        {
+            "name": "STA.CH1435.BHZ"
+        },
+        {
+            "name": "STA.BEAM1436.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1437.SHZ"
+        },
+        {
+            "name": "STA.CH1438.BHE"
+        },
+        {
+            "name": "STA.CH1439.SHE"
+        },
+        {
+            "name": "STA.CH1440.BHZ"
+        },
+        {
+            "name": "STA.BEAM1441.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1442.SHZ"
+        },
+        {
+            "name": "STA.CH1443.BHE"
+        },
+        {
+            "name": "STA.CH1444.SHE"
+        },
+        {
+            "name": "STA.CH1445.BHZ"
+        },
+        {
+            "name": "STA.BEAM1446.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1447.SHZ"
+        },
+        {
+            "name": "STA.CH1448.BHE"
+        },
+        {
+            "name": "STA.CH1449.SHE"
+        },
+        {
+            "name": "STA.CH1450.BHZ"
+        },
+        {
+            "name": "STA.BEAM1451.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1452.SHZ"
+        },
+        {
+            "name": "STA.CH1453.BHE"
+        },
+        {
+            "name": "STA.CH1454.SHE"
+        },
+        {
+            "name": "STA.CH1455.BHZ"
+        },
+        {
+            "name": "STA.BEAM1456.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1457.SHZ"
+        },
+        {
+            "name": "STA.CH1458.BHE"
+        },
+        {
+            "name": "STA.CH1459.SHE"
+        },
+        {
+            "name": "STA.CH1460.BHZ"
+        },
+        {
+            "name": "STA.BEAM1461.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1462.SHZ"
+        },
+        {
+            "name": "STA.CH1463.BHE"
+        },
+        {
+            "name": "STA.CH1464.SHE"
+        },
+        {
+            "name": "STA.CH1465.BHZ"
+        },
+        {
+            "name": "STA.BEAM1466.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1467.SHZ"
+        },
+        {
+            "name": "STA.CH1468.BHE"
+        },
+        {
+            "name": "STA.CH1469.SHE"
+        },
+        {
+            "name": "STA.CH1470.BHZ"
+        },
+        {
+            "name": "STA.BEAM1471.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1472.SHZ"
+        },
+        {
+            "name": "STA.CH1473.BHE"
+        },
+        {
+            "name": "STA.CH1474.SHE"
+        },
+        {
+            "name": "STA.CH1475.BHZ"
+        },
+        {
+            "name": "STA.BEAM1476.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1477.SHZ"
+        },
+        {
+            "name": "STA.CH1478.BHE"
+        },
+        {
+            "name": "STA.CH1479.SHE"
+        },
+        {
+            "name": "STA.CH1480.BHZ"
+        },
+        {
+            "name": "STA.BEAM1481.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1482.SHZ"
+        },
+        {
+            "name": "STA.CH1483.BHE"
+        },
+        {
+            "name": "STA.CH1484.SHE"
+        },
+        {
+            "name": "STA.CH1485.BHZ"
+        },
+        {
+            "name": "STA.BEAM1486.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1487.SHZ"
+        },
+        {
+            "name": "STA.CH1488.BHE"
+        },
+        {
+            "name": "STA.CH1489.SHE"
+        },
+        {
+            "name": "STA.CH1490.BHZ"
+        },
+        {
+            "name": "STA.BEAM1491.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1492.SHZ"
+        },
+        {
+            "name": "STA.CH1493.BHE"
+        },
+        {
+            "name": "STA.CH1494.SHE"
+        },
+        {
+            "name": "STA.CH1495.BHZ"
+        },
+        {
+            "name": "STA.BEAM1496.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1497.SHZ"
+        },
+        {
+            "name": "STA.CH1498.BHE"
+        },
+        {
+            "name": "STA.CH1499.SHE"
+        },
+        {
+            "name": "STA.CH1500.BHZ"
+        },
+        {
+            "name": "STA.BEAM1501.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1502.SHZ"
+        },
+        {
+            "name": "STA.CH1503.BHE"
+        },
+        {
+            "name": "STA.CH1504.SHE"
+        },
+        {
+            "name": "STA.CH1505.BHZ"
+        },
+        {
+            "name": "STA.BEAM1506.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1507.SHZ"
+        },
+        {
+            "name": "STA.CH1508.BHE"
+        },
+        {
+            "name": "STA.CH1509.SHE"
+        },
+        {
+            "name": "STA.CH1510.BHZ"
+        },
+        {
+            "name": "STA.BEAM1511.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1512.SHZ"
+        },
+        {
+            "name": "STA.CH1513.BHE"
+        },
+        {
+            "name": "STA.CH1514.SHE"
+        },
+        {
+            "name": "STA.CH1515.BHZ"
+        },
+        {
+            "name": "STA.BEAM1516.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1517.SHZ"
+        },
+        {
+            "name": "STA.CH1518.BHE"
+        },
+        {
+            "name": "STA.CH1519.SHE"
+        },
+        {
+            "name": "STA.CH1520.BHZ"
+        },
+        {
+            "name": "STA.BEAM1521.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1522.SHZ"
+        },
+        {
+            "name": "STA.CH1523.BHE"
+        },
+        {
+            "name": "STA.CH1524.SHE"
+        },
+        {
+            "name": "STA.CH1525.BHZ"
+        },
+        {
+            "name": "STA.BEAM1526.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1527.SHZ"
+        },
+        {
+            "name": "STA.CH1528.BHE"
+        },
+        {
+            "name": "STA.CH1529.SHE"
+        },
+        {
+            "name": "STA.CH1530.BHZ"
+        },
+        {
+            "name": "STA.BEAM1531.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1532.SHZ"
+        },
+        {
+            "name": "STA.CH1533.BHE"
+        },
+        {
+            "name": "STA.CH1534.SHE"
+        },
+        {
+            "name": "STA.CH1535.BHZ"
+        },
+        {
+            "name": "STA.BEAM1536.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1537.SHZ"
+        },
+        {
+            "name": "STA.CH1538.BHE"
+        },
+        {
+            "name": "STA.CH1539.SHE"
+        },
+        {
+            "name": "STA.CH1540.BHZ"
+        },
+        {
+            "name": "STA.BEAM1541.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1542.SHZ"
+        },
+        {
+            "name": "STA.CH1543.BHE"
+        },
+        {
+            "name": "STA.CH1544.SHE"
+        },
+        {
+            "name": "STA.CH1545.BHZ"
+        },
+        {
+            "name": "STA.BEAM1546.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1547.SHZ"
+        },
+        {
+            "name": "STA.CH1548.BHE"
+        },
+        {
+            "name": "STA.CH1549.SHE"
+        },
+        {
+            "name": "STA.CH1550.BHZ"
+        },
+        {
+            "name": "STA.BEAM1551.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1552.SHZ"
+        },
+        {
+            "name": "STA.CH1553.BHE"
+        },
+        {
+            "name": "STA.CH1554.SHE"
+        },
+        {
+            "name": "STA.CH1555.BHZ"
+        },
+        {
+            "name": "STA.BEAM1556.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1557.SHZ"
+        },
+        {
+            "name": "STA.CH1558.BHE"
+        },
+        {
+            "name": "STA.CH1559.SHE"
+        },
+        {
+            "name": "STA.CH1560.BHZ"
+        },
+        {
+            "name": "STA.BEAM1561.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1562.SHZ"
+        },
+        {
+            "name": "STA.CH1563.BHE"
+        },
+        {
+            "name": "STA.CH1564.SHE"
+        },
+        {
+            "name": "STA.CH1565.BHZ"
+        },
+        {
+            "name": "STA.BEAM1566.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1567.SHZ"
+        },
+        {
+            "name": "STA.CH1568.BHE"
+        },
+        {
+            "name": "STA.CH1569.SHE"
+        },
+        {
+            "name": "STA.CH1570.BHZ"
+        },
+        {
+            "name": "STA.BEAM1571.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1572.SHZ"
+        },
+        {
+            "name": "STA.CH1573.BHE"
+        },
+        {
+            "name": "STA.CH1574.SHE"
+        },
+        {
+            "name": "STA.CH1575.BHZ"
+        },
+        {
+            "name": "STA.BEAM1576.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1577.SHZ"
+        },
+        {
+            "name": "STA.CH1578.BHE"
+        },
+        {
+            "name": "STA.CH1579.SHE"
+        },
+        {
+            "name": "STA.CH1580.BHZ"
+        },
+        {
+            "name": "STA.BEAM1581.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1582.SHZ"
+        },
+        {
+            "name": "STA.CH1583.BHE"
+        },
+        {
+            "name": "STA.CH1584.SHE"
+        },
+        {
+            "name": "STA.CH1585.BHZ"
+        },
+        {
+            "name": "STA.BEAM1586.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1587.SHZ"
+        },
+        {
+            "name": "STA.CH1588.BHE"
+        },
+        {
+            "name": "STA.CH1589.SHE"
+        },
+        {
+            "name": "STA.CH1590.BHZ"
+        },
+        {
+            "name": "STA.BEAM1591.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1592.SHZ"
+        },
+        {
+            "name": "STA.CH1593.BHE"
+        },
+        {
+            "name": "STA.CH1594.SHE"
+        },
+        {
+            "name": "STA.CH1595.BHZ"
+        },
+        {
+            "name": "STA.BEAM1596.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1597.SHZ"
+        },
+        {
+            "name": "STA.CH1598.BHE"
+        },
+        {
+            "name": "STA.CH1599.SHE"
+        },
+        {
+            "name": "STA.CH1600.BHZ"
+        },
+        {
+            "name": "STA.BEAM1601.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1602.SHZ"
+        },
+        {
+            "name": "STA.CH1603.BHE"
+        },
+        {
+            "name": "STA.CH1604.SHE"
+        },
+        {
+            "name": "STA.CH1605.BHZ"
+        },
+        {
+            "name": "STA.BEAM1606.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1607.SHZ"
+        },
+        {
+            "name": "STA.CH1608.BHE"
+        },
+        {
+            "name": "STA.CH1609.SHE"
+        },
+        {
+            "name": "STA.CH1610.BHZ"
+        },
+        {
+            "name": "STA.BEAM1611.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1612.SHZ"
+        },
+        {
+            "name": "STA.CH1613.BHE"
+        },
+        {
+            "name": "STA.CH1614.SHE"
+        },
+        {
+            "name": "STA.CH1615.BHZ"
+        },
+        {
+            "name": "STA.BEAM1616.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1617.SHZ"
+        },
+        {
+            "name": "STA.CH1618.BHE"
+        },
+        {
+            "name": "STA.CH1619.SHE"
+        },
+        {
+            "name": "STA.CH1620.BHZ"
+        },
+        {
+            "name": "STA.BEAM1621.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1622.SHZ"
+        },
+        {
+            "name": "STA.CH1623.BHE"
+        },
+        {
+            "name": "STA.CH1624.SHE"
+        },
+        {
+            "name": "STA.CH1625.BHZ"
+        },
+        {
+            "name": "STA.BEAM1626.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1627.SHZ"
+        },
+        {
+            "name": "STA.CH1628.BHE"
+        },
+        {
+            "name": "STA.CH1629.SHE"
+        },
+        {
+            "name": "STA.CH1630.BHZ"
+        },
+        {
+            "name": "STA.BEAM1631.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1632.SHZ"
+        },
+        {
+            "name": "STA.CH1633.BHE"
+        },
+        {
+            "name": "STA.CH1634.SHE"
+        },
+        {
+            "name": "STA.CH1635.BHZ"
+        },
+        {
+            "name": "STA.BEAM1636.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1637.SHZ"
+        },
+        {
+            "name": "STA.CH1638.BHE"
+        },
+        {
+            "name": "STA.CH1639.SHE"
+        },
+        {
+            "name": "STA.CH1640.BHZ"
+        },
+        {
+            "name": "STA.BEAM1641.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1642.SHZ"
+        },
+        {
+            "name": "STA.CH1643.BHE"
+        },
+        {
+            "name": "STA.CH1644.SHE"
+        },
+        {
+            "name": "STA.CH1645.BHZ"
+        },
+        {
+            "name": "STA.BEAM1646.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1647.SHZ"
+        },
+        {
+            "name": "STA.CH1648.BHE"
+        },
+        {
+            "name": "STA.CH1649.SHE"
+        },
+        {
+            "name": "STA.CH1650.BHZ"
+        },
+        {
+            "name": "STA.BEAM1651.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1652.SHZ"
+        },
+        {
+            "name": "STA.CH1653.BHE"
+        },
+        {
+            "name": "STA.CH1654.SHE"
+        },
+        {
+            "name": "STA.CH1655.BHZ"
+        },
+        {
+            "name": "STA.BEAM1656.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1657.SHZ"
+        },
+        {
+            "name": "STA.CH1658.BHE"
+        },
+        {
+            "name": "STA.CH1659.SHE"
+        },
+        {
+            "name": "STA.CH1660.BHZ"
+        },
+        {
+            "name": "STA.BEAM1661.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1662.SHZ"
+        },
+        {
+            "name": "STA.CH1663.BHE"
+        },
+        {
+            "name": "STA.CH1664.SHE"
+        },
+        {
+            "name": "STA.CH1665.BHZ"
+        },
+        {
+            "name": "STA.BEAM1666.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1667.SHZ"
+        },
+        {
+            "name": "STA.CH1668.BHE"
+        },
+        {
+            "name": "STA.CH1669.SHE"
+        },
+        {
+            "name": "STA.CH1670.BHZ"
+        },
+        {
+            "name": "STA.BEAM1671.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1672.SHZ"
+        },
+        {
+            "name": "STA.CH1673.BHE"
+        },
+        {
+            "name": "STA.CH1674.SHE"
+        },
+        {
+            "name": "STA.CH1675.BHZ"
+        },
+        {
+            "name": "STA.BEAM1676.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1677.SHZ"
+        },
+        {
+            "name": "STA.CH1678.BHE"
+        },
+        {
+            "name": "STA.CH1679.SHE"
+        },
+        {
+            "name": "STA.CH1680.BHZ"
+        },
+        {
+            "name": "STA.BEAM1681.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1682.SHZ"
+        },
+        {
+            "name": "STA.CH1683.BHE"
+        },
+        {
+            "name": "STA.CH1684.SHE"
+        },
+        {
+            "name": "STA.CH1685.BHZ"
+        },
+        {
+            "name": "STA.BEAM1686.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1687.SHZ"
+        },
+        {
+            "name": "STA.CH1688.BHE"
+        },
+        {
+            "name": "STA.CH1689.SHE"
+        },
+        {
+            "name": "STA.CH1690.BHZ"
+        },
+        {
+            "name": "STA.BEAM1691.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1692.SHZ"
+        },
+        {
+            "name": "STA.CH1693.BHE"
+        },
+        {
+            "name": "STA.CH1694.SHE"
+        },
+        {
+            "name": "STA.CH1695.BHZ"
+        },
+        {
+            "name": "STA.BEAM1696.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1697.SHZ"
+        },
+        {
+            "name": "STA.CH1698.BHE"
+        },
+        {
+            "name": "STA.CH1699.SHE"
+        },
+        {
+            "name": "STA.CH1700.BHZ"
+        },
+        {
+            "name": "STA.BEAM1701.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1702.SHZ"
+        },
+        {
+            "name": "STA.CH1703.BHE"
+        },
+        {
+            "name": "STA.CH1704.SHE"
+        },
+        {
+            "name": "STA.CH1705.BHZ"
+        },
+        {
+            "name": "STA.BEAM1706.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1707.SHZ"
+        },
+        {
+            "name": "STA.CH1708.BHE"
+        },
+        {
+            "name": "STA.CH1709.SHE"
+        },
+        {
+            "name": "STA.CH1710.BHZ"
+        },
+        {
+            "name": "STA.BEAM1711.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1712.SHZ"
+        },
+        {
+            "name": "STA.CH1713.BHE"
+        },
+        {
+            "name": "STA.CH1714.SHE"
+        },
+        {
+            "name": "STA.CH1715.BHZ"
+        },
+        {
+            "name": "STA.BEAM1716.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1717.SHZ"
+        },
+        {
+            "name": "STA.CH1718.BHE"
+        },
+        {
+            "name": "STA.CH1719.SHE"
+        },
+        {
+            "name": "STA.CH1720.BHZ"
+        },
+        {
+            "name": "STA.BEAM1721.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1722.SHZ"
+        },
+        {
+            "name": "STA.CH1723.BHE"
+        },
+        {
+            "name": "STA.CH1724.SHE"
+        },
+        {
+            "name": "STA.CH1725.BHZ"
+        },
+        {
+            "name": "STA.BEAM1726.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1727.SHZ"
+        },
+        {
+            "name": "STA.CH1728.BHE"
+        },
+        {
+            "name": "STA.CH1729.SHE"
+        },
+        {
+            "name": "STA.CH1730.BHZ"
+        },
+        {
+            "name": "STA.BEAM1731.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1732.SHZ"
+        },
+        {
+            "name": "STA.CH1733.BHE"
+        },
+        {
+            "name": "STA.CH1734.SHE"
+        },
+        {
+            "name": "STA.CH1735.BHZ"
+        },
+        {
+            "name": "STA.BEAM1736.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1737.SHZ"
+        },
+        {
+            "name": "STA.CH1738.BHE"
+        },
+        {
+            "name": "STA.CH1739.SHE"
+        },
+        {
+            "name": "STA.CH1740.BHZ"
+        },
+        {
+            "name": "STA.BEAM1741.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1742.SHZ"
+        },
+        {
+            "name": "STA.CH1743.BHE"
+        },
+        {
+            "name": "STA.CH1744.SHE"
+        },
+        {
+            "name": "STA.CH1745.BHZ"
+        },
+        {
+            "name": "STA.BEAM1746.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1747.SHZ"
+        },
+        {
+            "name": "STA.CH1748.BHE"
+        },
+        {
+            "name": "STA.CH1749.SHE"
+        },
+        {
+            "name": "STA.CH1750.BHZ"
+        },
+        {
+            "name": "STA.BEAM1751.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1752.SHZ"
+        },
+        {
+            "name": "STA.CH1753.BHE"
+        },
+        {
+            "name": "STA.CH1754.SHE"
+        },
+        {
+            "name": "STA.CH1755.BHZ"
+        },
+        {
+            "name": "STA.BEAM1756.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1757.SHZ"
+        },
+        {
+            "name": "STA.CH1758.BHE"
+        },
+        {
+            "name": "STA.CH1759.SHE"
+        },
+        {
+            "name": "STA.CH1760.BHZ"
+        },
+        {
+            "name": "STA.BEAM1761.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1762.SHZ"
+        },
+        {
+            "name": "STA.CH1763.BHE"
+        },
+        {
+            "name": "STA.CH1764.SHE"
+        },
+        {
+            "name": "STA.CH1765.BHZ"
+        },
+        {
+            "name": "STA.BEAM1766.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1767.SHZ"
+        },
+        {
+            "name": "STA.CH1768.BHE"
+        },
+        {
+            "name": "STA.CH1769.SHE"
+        },
+        {
+            "name": "STA.CH1770.BHZ"
+        },
+        {
+            "name": "STA.BEAM1771.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1772.SHZ"
+        },
+        {
+            "name": "STA.CH1773.BHE"
+        },
+        {
+            "name": "STA.CH1774.SHE"
+        },
+        {
+            "name": "STA.CH1775.BHZ"
+        },
+        {
+            "name": "STA.BEAM1776.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1777.SHZ"
+        },
+        {
+            "name": "STA.CH1778.BHE"
+        },
+        {
+            "name": "STA.CH1779.SHE"
+        },
+        {
+            "name": "STA.CH1780.BHZ"
+        },
+        {
+            "name": "STA.BEAM1781.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1782.SHZ"
+        },
+        {
+            "name": "STA.CH1783.BHE"
+        },
+        {
+            "name": "STA.CH1784.SHE"
+        },
+        {
+            "name": "STA.CH1785.BHZ"
+        },
+        {
+            "name": "STA.BEAM1786.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1787.SHZ"
+        },
+        {
+            "name": "STA.CH1788.BHE"
+        },
+        {
+            "name": "STA.CH1789.SHE"
+        },
+        {
+            "name": "STA.CH1790.BHZ"
+        },
+        {
+            "name": "STA.BEAM1791.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1792.SHZ"
+        },
+        {
+            "name": "STA.CH1793.BHE"
+        },
+        {
+            "name": "STA.CH1794.SHE"
+        },
+        {
+            "name": "STA.CH1795.BHZ"
+        },
+        {
+            "name": "STA.BEAM1796.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1797.SHZ"
+        },
+        {
+            "name": "STA.CH1798.BHE"
+        },
+        {
+            "name": "STA.CH1799.SHE"
+        },
+        {
+            "name": "STA.CH1800.BHZ"
+        },
+        {
+            "name": "STA.BEAM1801.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1802.SHZ"
+        },
+        {
+            "name": "STA.CH1803.BHE"
+        },
+        {
+            "name": "STA.CH1804.SHE"
+        },
+        {
+            "name": "STA.CH1805.BHZ"
+        },
+        {
+            "name": "STA.BEAM1806.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1807.SHZ"
+        },
+        {
+            "name": "STA.CH1808.BHE"
+        },
+        {
+            "name": "STA.CH1809.SHE"
+        },
+        {
+            "name": "STA.CH1810.BHZ"
+        },
+        {
+            "name": "STA.BEAM1811.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1812.SHZ"
+        },
+        {
+            "name": "STA.CH1813.BHE"
+        },
+        {
+            "name": "STA.CH1814.SHE"
+        },
+        {
+            "name": "STA.CH1815.BHZ"
+        },
+        {
+            "name": "STA.BEAM1816.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1817.SHZ"
+        },
+        {
+            "name": "STA.CH1818.BHE"
+        },
+        {
+            "name": "STA.CH1819.SHE"
+        },
+        {
+            "name": "STA.CH1820.BHZ"
+        },
+        {
+            "name": "STA.BEAM1821.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1822.SHZ"
+        },
+        {
+            "name": "STA.CH1823.BHE"
+        },
+        {
+            "name": "STA.CH1824.SHE"
+        },
+        {
+            "name": "STA.CH1825.BHZ"
+        },
+        {
+            "name": "STA.BEAM1826.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1827.SHZ"
+        },
+        {
+            "name": "STA.CH1828.BHE"
+        },
+        {
+            "name": "STA.CH1829.SHE"
+        },
+        {
+            "name": "STA.CH1830.BHZ"
+        },
+        {
+            "name": "STA.BEAM1831.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1832.SHZ"
+        },
+        {
+            "name": "STA.CH1833.BHE"
+        },
+        {
+            "name": "STA.CH1834.SHE"
+        },
+        {
+            "name": "STA.CH1835.BHZ"
+        },
+        {
+            "name": "STA.BEAM1836.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1837.SHZ"
+        },
+        {
+            "name": "STA.CH1838.BHE"
+        },
+        {
+            "name": "STA.CH1839.SHE"
+        },
+        {
+            "name": "STA.CH1840.BHZ"
+        },
+        {
+            "name": "STA.BEAM1841.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1842.SHZ"
+        },
+        {
+            "name": "STA.CH1843.BHE"
+        },
+        {
+            "name": "STA.CH1844.SHE"
+        },
+        {
+            "name": "STA.CH1845.BHZ"
+        },
+        {
+            "name": "STA.BEAM1846.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1847.SHZ"
+        },
+        {
+            "name": "STA.CH1848.BHE"
+        },
+        {
+            "name": "STA.CH1849.SHE"
+        },
+        {
+            "name": "STA.CH1850.BHZ"
+        },
+        {
+            "name": "STA.BEAM1851.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1852.SHZ"
+        },
+        {
+            "name": "STA.CH1853.BHE"
+        },
+        {
+            "name": "STA.CH1854.SHE"
+        },
+        {
+            "name": "STA.CH1855.BHZ"
+        },
+        {
+            "name": "STA.BEAM1856.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1857.SHZ"
+        },
+        {
+            "name": "STA.CH1858.BHE"
+        },
+        {
+            "name": "STA.CH1859.SHE"
+        },
+        {
+            "name": "STA.CH1860.BHZ"
+        },
+        {
+            "name": "STA.BEAM1861.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1862.SHZ"
+        },
+        {
+            "name": "STA.CH1863.BHE"
+        },
+        {
+            "name": "STA.CH1864.SHE"
+        },
+        {
+            "name": "STA.CH1865.BHZ"
+        },
+        {
+            "name": "STA.BEAM1866.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1867.SHZ"
+        },
+        {
+            "name": "STA.CH1868.BHE"
+        },
+        {
+            "name": "STA.CH1869.SHE"
+        },
+        {
+            "name": "STA.CH1870.BHZ"
+        },
+        {
+            "name": "STA.BEAM1871.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1872.SHZ"
+        },
+        {
+            "name": "STA.CH1873.BHE"
+        },
+        {
+            "name": "STA.CH1874.SHE"
+        },
+        {
+            "name": "STA.CH1875.BHZ"
+        },
+        {
+            "name": "STA.BEAM1876.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1877.SHZ"
+        },
+        {
+            "name": "STA.CH1878.BHE"
+        },
+        {
+            "name": "STA.CH1879.SHE"
+        },
+        {
+            "name": "STA.CH1880.BHZ"
+        },
+        {
+            "name": "STA.BEAM1881.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1882.SHZ"
+        },
+        {
+            "name": "STA.CH1883.BHE"
+        },
+        {
+            "name": "STA.CH1884.SHE"
+        },
+        {
+            "name": "STA.CH1885.BHZ"
+        },
+        {
+            "name": "STA.BEAM1886.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1887.SHZ"
+        },
+        {
+            "name": "STA.CH1888.BHE"
+        },
+        {
+            "name": "STA.CH1889.SHE"
+        },
+        {
+            "name": "STA.CH1890.BHZ"
+        },
+        {
+            "name": "STA.BEAM1891.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1892.SHZ"
+        },
+        {
+            "name": "STA.CH1893.BHE"
+        },
+        {
+            "name": "STA.CH1894.SHE"
+        },
+        {
+            "name": "STA.CH1895.BHZ"
+        },
+        {
+            "name": "STA.BEAM1896.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1897.SHZ"
+        },
+        {
+            "name": "STA.CH1898.BHE"
+        },
+        {
+            "name": "STA.CH1899.SHE"
+        },
+        {
+            "name": "STA.CH1900.BHZ"
+        },
+        {
+            "name": "STA.BEAM1901.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1902.SHZ"
+        },
+        {
+            "name": "STA.CH1903.BHE"
+        },
+        {
+            "name": "STA.CH1904.SHE"
+        },
+        {
+            "name": "STA.CH1905.BHZ"
+        },
+        {
+            "name": "STA.BEAM1906.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1907.SHZ"
+        },
+        {
+            "name": "STA.CH1908.BHE"
+        },
+        {
+            "name": "STA.CH1909.SHE"
+        },
+        {
+            "name": "STA.CH1910.BHZ"
+        },
+        {
+            "name": "STA.BEAM1911.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1912.SHZ"
+        },
+        {
+            "name": "STA.CH1913.BHE"
+        },
+        {
+            "name": "STA.CH1914.SHE"
+        },
+        {
+            "name": "STA.CH1915.BHZ"
+        },
+        {
+            "name": "STA.BEAM1916.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1917.SHZ"
+        },
+        {
+            "name": "STA.CH1918.BHE"
+        },
+        {
+            "name": "STA.CH1919.SHE"
+        },
+        {
+            "name": "STA.CH1920.BHZ"
+        },
+        {
+            "name": "STA.BEAM1921.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1922.SHZ"
+        },
+        {
+            "name": "STA.CH1923.BHE"
+        },
+        {
+            "name": "STA.CH1924.SHE"
+        },
+        {
+            "name": "STA.CH1925.BHZ"
+        },
+        {
+            "name": "STA.BEAM1926.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1927.SHZ"
+        },
+        {
+            "name": "STA.CH1928.BHE"
+        },
+        {
+            "name": "STA.CH1929.SHE"
+        },
+        {
+            "name": "STA.CH1930.BHZ"
+        },
+        {
+            "name": "STA.BEAM1931.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1932.SHZ"
+        },
+        {
+            "name": "STA.CH1933.BHE"
+        },
+        {
+            "name": "STA.CH1934.SHE"
+        },
+        {
+            "name": "STA.CH1935.BHZ"
+        },
+        {
+            "name": "STA.BEAM1936.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1937.SHZ"
+        },
+        {
+            "name": "STA.CH1938.BHE"
+        },
+        {
+            "name": "STA.CH1939.SHE"
+        },
+        {
+            "name": "STA.CH1940.BHZ"
+        },
+        {
+            "name": "STA.BEAM1941.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1942.SHZ"
+        },
+        {
+            "name": "STA.CH1943.BHE"
+        },
+        {
+            "name": "STA.CH1944.SHE"
+        },
+        {
+            "name": "STA.CH1945.BHZ"
+        },
+        {
+            "name": "STA.BEAM1946.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1947.SHZ"
+        },
+        {
+            "name": "STA.CH1948.BHE"
+        },
+        {
+            "name": "STA.CH1949.SHE"
+        },
+        {
+            "name": "STA.CH1950.BHZ"
+        },
+        {
+            "name": "STA.BEAM1951.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1952.SHZ"
+        },
+        {
+            "name": "STA.CH1953.BHE"
+        },
+        {
+            "name": "STA.CH1954.SHE"
+        },
+        {
+            "name": "STA.CH1955.BHZ"
+        },
+        {
+            "name": "STA.BEAM1956.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1957.SHZ"
+        },
+        {
+            "name": "STA.CH1958.BHE"
+        },
+        {
+            "name": "STA.CH1959.SHE"
+        },
+        {
+            "name": "STA.CH1960.BHZ"
+        },
+        {
+            "name": "STA.BEAM1961.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1962.SHZ"
+        },
+        {
+            "name": "STA.CH1963.BHE"
+        },
+        {
+            "name": "STA.CH1964.SHE"
+        },
+        {
+            "name": "STA.CH1965.BHZ"
+        },
+        {
+            "name": "STA.BEAM1966.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1967.SHZ"
+        },
+        {
+            "name": "STA.CH1968.BHE"
+        },
+        {
+            "name": "STA.CH1969.SHE"
+        },
+        {
+            "name": "STA.CH1970.BHZ"
+        },
+        {
+            "name": "STA.BEAM1971.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1972.SHZ"
+        },
+        {
+            "name": "STA.CH1973.BHE"
+        },
+        {
+            "name": "STA.CH1974.SHE"
+        },
+        {
+            "name": "STA.CH1975.BHZ"
+        },
+        {
+            "name": "STA.BEAM1976.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1977.SHZ"
+        },
+        {
+            "name": "STA.CH1978.BHE"
+        },
+        {
+            "name": "STA.CH1979.SHE"
+        },
+        {
+            "name": "STA.CH1980.BHZ"
+        },
+        {
+            "name": "STA.BEAM1981.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1982.SHZ"
+        },
+        {
+            "name": "STA.CH1983.BHE"
+        },
+        {
+            "name": "STA.CH1984.SHE"
+        },
+        {
+            "name": "STA.CH1985.BHZ"
+        },
+        {
+            "name": "STA.BEAM1986.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1987.SHZ"
+        },
+        {
+            "name": "STA.CH1988.BHE"
+        },
+        {
+            "name": "STA.CH1989.SHE"
+        },
+        {
+            "name": "STA.CH1990.BHZ"
+        },
+        {
+            "name": "STA.BEAM1991.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1992.SHZ"
+        },
+        {
+            "name": "STA.CH1993.BHE"
+        },
+        {
+            "name": "STA.CH1994.SHE"
+        },
+        {
+            "name": "STA.CH1995.BHZ"
+        },
+        {
+            "name": "STA.BEAM1996.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH1997.SHZ"
+        },
+        {
+            "name": "STA.CH1998.BHE"
+        },
+        {
+            "name": "STA.CH1999.SHE"
+        },
+        {
+            "name": "STA.CH2000.BHZ"
+        },
+        {
+            "name": "STA.BEAM2001.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2002.SHZ"
+        },
+        {
+            "name": "STA.CH2003.BHE"
+        },
+        {
+            "name": "STA.CH2004.SHE"
+        },
+        {
+            "name": "STA.CH2005.BHZ"
+        },
+        {
+            "name": "STA.BEAM2006.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2007.SHZ"
+        },
+        {
+            "name": "STA.CH2008.BHE"
+        },
+        {
+            "name": "STA.CH2009.SHE"
+        },
+        {
+            "name": "STA.CH2010.BHZ"
+        },
+        {
+            "name": "STA.BEAM2011.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2012.SHZ"
+        },
+        {
+            "name": "STA.CH2013.BHE"
+        },
+        {
+            "name": "STA.CH2014.SHE"
+        },
+        {
+            "name": "STA.CH2015.BHZ"
+        },
+        {
+            "name": "STA.BEAM2016.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2017.SHZ"
+        },
+        {
+            "name": "STA.CH2018.BHE"
+        },
+        {
+            "name": "STA.CH2019.SHE"
+        },
+        {
+            "name": "STA.CH2020.BHZ"
+        },
+        {
+            "name": "STA.BEAM2021.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2022.SHZ"
+        },
+        {
+            "name": "STA.CH2023.BHE"
+        },
+        {
+            "name": "STA.CH2024.SHE"
+        },
+        {
+            "name": "STA.CH2025.BHZ"
+        },
+        {
+            "name": "STA.BEAM2026.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2027.SHZ"
+        },
+        {
+            "name": "STA.CH2028.BHE"
+        },
+        {
+            "name": "STA.CH2029.SHE"
+        },
+        {
+            "name": "STA.CH2030.BHZ"
+        },
+        {
+            "name": "STA.BEAM2031.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2032.SHZ"
+        },
+        {
+            "name": "STA.CH2033.BHE"
+        },
+        {
+            "name": "STA.CH2034.SHE"
+        },
+        {
+            "name": "STA.CH2035.BHZ"
+        },
+        {
+            "name": "STA.BEAM2036.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2037.SHZ"
+        },
+        {
+            "name": "STA.CH2038.BHE"
+        },
+        {
+            "name": "STA.CH2039.SHE"
+        },
+        {
+            "name": "STA.CH2040.BHZ"
+        },
+        {
+            "name": "STA.BEAM2041.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2042.SHZ"
+        },
+        {
+            "name": "STA.CH2043.BHE"
+        },
+        {
+            "name": "STA.CH2044.SHE"
+        },
+        {
+            "name": "STA.CH2045.BHZ"
+        },
+        {
+            "name": "STA.BEAM2046.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2047.SHZ"
+        },
+        {
+            "name": "STA.CH2048.BHE"
+        },
+        {
+            "name": "STA.CH2049.SHE"
+        },
+        {
+            "name": "STA.CH2050.BHZ"
+        },
+        {
+            "name": "STA.BEAM2051.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2052.SHZ"
+        },
+        {
+            "name": "STA.CH2053.BHE"
+        },
+        {
+            "name": "STA.CH2054.SHE"
+        },
+        {
+            "name": "STA.CH2055.BHZ"
+        },
+        {
+            "name": "STA.BEAM2056.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2057.SHZ"
+        },
+        {
+            "name": "STA.CH2058.BHE"
+        },
+        {
+            "name": "STA.CH2059.SHE"
+        },
+        {
+            "name": "STA.CH2060.BHZ"
+        },
+        {
+            "name": "STA.BEAM2061.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2062.SHZ"
+        },
+        {
+            "name": "STA.CH2063.BHE"
+        },
+        {
+            "name": "STA.CH2064.SHE"
+        },
+        {
+            "name": "STA.CH2065.BHZ"
+        },
+        {
+            "name": "STA.BEAM2066.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2067.SHZ"
+        },
+        {
+            "name": "STA.CH2068.BHE"
+        },
+        {
+            "name": "STA.CH2069.SHE"
+        },
+        {
+            "name": "STA.CH2070.BHZ"
+        },
+        {
+            "name": "STA.BEAM2071.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2072.SHZ"
+        },
+        {
+            "name": "STA.CH2073.BHE"
+        },
+        {
+            "name": "STA.CH2074.SHE"
+        },
+        {
+            "name": "STA.CH2075.BHZ"
+        },
+        {
+            "name": "STA.BEAM2076.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2077.SHZ"
+        },
+        {
+            "name": "STA.CH2078.BHE"
+        },
+        {
+            "name": "STA.CH2079.SHE"
+        },
+        {
+            "name": "STA.CH2080.BHZ"
+        },
+        {
+            "name": "STA.BEAM2081.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2082.SHZ"
+        },
+        {
+            "name": "STA.CH2083.BHE"
+        },
+        {
+            "name": "STA.CH2084.SHE"
+        },
+        {
+            "name": "STA.CH2085.BHZ"
+        },
+        {
+            "name": "STA.BEAM2086.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2087.SHZ"
+        },
+        {
+            "name": "STA.CH2088.BHE"
+        },
+        {
+            "name": "STA.CH2089.SHE"
+        },
+        {
+            "name": "STA.CH2090.BHZ"
+        },
+        {
+            "name": "STA.BEAM2091.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2092.SHZ"
+        },
+        {
+            "name": "STA.CH2093.BHE"
+        },
+        {
+            "name": "STA.CH2094.SHE"
+        },
+        {
+            "name": "STA.CH2095.BHZ"
+        },
+        {
+            "name": "STA.BEAM2096.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2097.SHZ"
+        },
+        {
+            "name": "STA.CH2098.BHE"
+        },
+        {
+            "name": "STA.CH2099.SHE"
+        },
+        {
+            "name": "STA.CH2100.BHZ"
+        },
+        {
+            "name": "STA.BEAM2101.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2102.SHZ"
+        },
+        {
+            "name": "STA.CH2103.BHE"
+        },
+        {
+            "name": "STA.CH2104.SHE"
+        },
+        {
+            "name": "STA.CH2105.BHZ"
+        },
+        {
+            "name": "STA.BEAM2106.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2107.SHZ"
+        },
+        {
+            "name": "STA.CH2108.BHE"
+        },
+        {
+            "name": "STA.CH2109.SHE"
+        },
+        {
+            "name": "STA.CH2110.BHZ"
+        },
+        {
+            "name": "STA.BEAM2111.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2112.SHZ"
+        },
+        {
+            "name": "STA.CH2113.BHE"
+        },
+        {
+            "name": "STA.CH2114.SHE"
+        },
+        {
+            "name": "STA.CH2115.BHZ"
+        },
+        {
+            "name": "STA.BEAM2116.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2117.SHZ"
+        },
+        {
+            "name": "STA.CH2118.BHE"
+        },
+        {
+            "name": "STA.CH2119.SHE"
+        },
+        {
+            "name": "STA.CH2120.BHZ"
+        },
+        {
+            "name": "STA.BEAM2121.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2122.SHZ"
+        },
+        {
+            "name": "STA.CH2123.BHE"
+        },
+        {
+            "name": "STA.CH2124.SHE"
+        },
+        {
+            "name": "STA.CH2125.BHZ"
+        },
+        {
+            "name": "STA.BEAM2126.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2127.SHZ"
+        },
+        {
+            "name": "STA.CH2128.BHE"
+        },
+        {
+            "name": "STA.CH2129.SHE"
+        },
+        {
+            "name": "STA.CH2130.BHZ"
+        },
+        {
+            "name": "STA.BEAM2131.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2132.SHZ"
+        },
+        {
+            "name": "STA.CH2133.BHE"
+        },
+        {
+            "name": "STA.CH2134.SHE"
+        },
+        {
+            "name": "STA.CH2135.BHZ"
+        },
+        {
+            "name": "STA.BEAM2136.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2137.SHZ"
+        },
+        {
+            "name": "STA.CH2138.BHE"
+        },
+        {
+            "name": "STA.CH2139.SHE"
+        },
+        {
+            "name": "STA.CH2140.BHZ"
+        },
+        {
+            "name": "STA.BEAM2141.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2142.SHZ"
+        },
+        {
+            "name": "STA.CH2143.BHE"
+        },
+        {
+            "name": "STA.CH2144.SHE"
+        },
+        {
+            "name": "STA.CH2145.BHZ"
+        },
+        {
+            "name": "STA.BEAM2146.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2147.SHZ"
+        },
+        {
+            "name": "STA.CH2148.BHE"
+        },
+        {
+            "name": "STA.CH2149.SHE"
+        },
+        {
+            "name": "STA.CH2150.BHZ"
+        },
+        {
+            "name": "STA.BEAM2151.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2152.SHZ"
+        },
+        {
+            "name": "STA.CH2153.BHE"
+        },
+        {
+            "name": "STA.CH2154.SHE"
+        },
+        {
+            "name": "STA.CH2155.BHZ"
+        },
+        {
+            "name": "STA.BEAM2156.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2157.SHZ"
+        },
+        {
+            "name": "STA.CH2158.BHE"
+        },
+        {
+            "name": "STA.CH2159.SHE"
+        },
+        {
+            "name": "STA.CH2160.BHZ"
+        },
+        {
+            "name": "STA.BEAM2161.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2162.SHZ"
+        },
+        {
+            "name": "STA.CH2163.BHE"
+        },
+        {
+            "name": "STA.CH2164.SHE"
+        },
+        {
+            "name": "STA.CH2165.BHZ"
+        },
+        {
+            "name": "STA.BEAM2166.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2167.SHZ"
+        },
+        {
+            "name": "STA.CH2168.BHE"
+        },
+        {
+            "name": "STA.CH2169.SHE"
+        },
+        {
+            "name": "STA.CH2170.BHZ"
+        },
+        {
+            "name": "STA.BEAM2171.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2172.SHZ"
+        },
+        {
+            "name": "STA.CH2173.BHE"
+        },
+        {
+            "name": "STA.CH2174.SHE"
+        },
+        {
+            "name": "STA.CH2175.BHZ"
+        },
+        {
+            "name": "STA.BEAM2176.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2177.SHZ"
+        },
+        {
+            "name": "STA.CH2178.BHE"
+        },
+        {
+            "name": "STA.CH2179.SHE"
+        },
+        {
+            "name": "STA.CH2180.BHZ"
+        },
+        {
+            "name": "STA.BEAM2181.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2182.SHZ"
+        },
+        {
+            "name": "STA.CH2183.BHE"
+        },
+        {
+            "name": "STA.CH2184.SHE"
+        },
+        {
+            "name": "STA.CH2185.BHZ"
+        },
+        {
+            "name": "STA.BEAM2186.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2187.SHZ"
+        },
+        {
+            "name": "STA.CH2188.BHE"
+        },
+        {
+            "name": "STA.CH2189.SHE"
+        },
+        {
+            "name": "STA.CH2190.BHZ"
+        },
+        {
+            "name": "STA.BEAM2191.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2192.SHZ"
+        },
+        {
+            "name": "STA.CH2193.BHE"
+        },
+        {
+            "name": "STA.CH2194.SHE"
+        },
+        {
+            "name": "STA.CH2195.BHZ"
+        },
+        {
+            "name": "STA.BEAM2196.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2197.SHZ"
+        },
+        {
+            "name": "STA.CH2198.BHE"
+        },
+        {
+            "name": "STA.CH2199.SHE"
+        },
+        {
+            "name": "STA.CH2200.BHZ"
+        },
+        {
+            "name": "STA.BEAM2201.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2202.SHZ"
+        },
+        {
+            "name": "STA.CH2203.BHE"
+        },
+        {
+            "name": "STA.CH2204.SHE"
+        },
+        {
+            "name": "STA.CH2205.BHZ"
+        },
+        {
+            "name": "STA.BEAM2206.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2207.SHZ"
+        },
+        {
+            "name": "STA.CH2208.BHE"
+        },
+        {
+            "name": "STA.CH2209.SHE"
+        },
+        {
+            "name": "STA.CH2210.BHZ"
+        },
+        {
+            "name": "STA.BEAM2211.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2212.SHZ"
+        },
+        {
+            "name": "STA.CH2213.BHE"
+        },
+        {
+            "name": "STA.CH2214.SHE"
+        },
+        {
+            "name": "STA.CH2215.BHZ"
+        },
+        {
+            "name": "STA.BEAM2216.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2217.SHZ"
+        },
+        {
+            "name": "STA.CH2218.BHE"
+        },
+        {
+            "name": "STA.CH2219.SHE"
+        },
+        {
+            "name": "STA.CH2220.BHZ"
+        },
+        {
+            "name": "STA.BEAM2221.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2222.SHZ"
+        },
+        {
+            "name": "STA.CH2223.BHE"
+        },
+        {
+            "name": "STA.CH2224.SHE"
+        },
+        {
+            "name": "STA.CH2225.BHZ"
+        },
+        {
+            "name": "STA.BEAM2226.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2227.SHZ"
+        },
+        {
+            "name": "STA.CH2228.BHE"
+        },
+        {
+            "name": "STA.CH2229.SHE"
+        },
+        {
+            "name": "STA.CH2230.BHZ"
+        },
+        {
+            "name": "STA.BEAM2231.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2232.SHZ"
+        },
+        {
+            "name": "STA.CH2233.BHE"
+        },
+        {
+            "name": "STA.CH2234.SHE"
+        },
+        {
+            "name": "STA.CH2235.BHZ"
+        },
+        {
+            "name": "STA.BEAM2236.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2237.SHZ"
+        },
+        {
+            "name": "STA.CH2238.BHE"
+        },
+        {
+            "name": "STA.CH2239.SHE"
+        },
+        {
+            "name": "STA.CH2240.BHZ"
+        },
+        {
+            "name": "STA.BEAM2241.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2242.SHZ"
+        },
+        {
+            "name": "STA.CH2243.BHE"
+        },
+        {
+            "name": "STA.CH2244.SHE"
+        },
+        {
+            "name": "STA.CH2245.BHZ"
+        },
+        {
+            "name": "STA.BEAM2246.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2247.SHZ"
+        },
+        {
+            "name": "STA.CH2248.BHE"
+        },
+        {
+            "name": "STA.CH2249.SHE"
+        },
+        {
+            "name": "STA.CH2250.BHZ"
+        },
+        {
+            "name": "STA.BEAM2251.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2252.SHZ"
+        },
+        {
+            "name": "STA.CH2253.BHE"
+        },
+        {
+            "name": "STA.CH2254.SHE"
+        },
+        {
+            "name": "STA.CH2255.BHZ"
+        },
+        {
+            "name": "STA.BEAM2256.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2257.SHZ"
+        },
+        {
+            "name": "STA.CH2258.BHE"
+        },
+        {
+            "name": "STA.CH2259.SHE"
+        },
+        {
+            "name": "STA.CH2260.BHZ"
+        },
+        {
+            "name": "STA.BEAM2261.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2262.SHZ"
+        },
+        {
+            "name": "STA.CH2263.BHE"
+        },
+        {
+            "name": "STA.CH2264.SHE"
+        },
+        {
+            "name": "STA.CH2265.BHZ"
+        },
+        {
+            "name": "STA.BEAM2266.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2267.SHZ"
+        },
+        {
+            "name": "STA.CH2268.BHE"
+        },
+        {
+            "name": "STA.CH2269.SHE"
+        },
+        {
+            "name": "STA.CH2270.BHZ"
+        },
+        {
+            "name": "STA.BEAM2271.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2272.SHZ"
+        },
+        {
+            "name": "STA.CH2273.BHE"
+        },
+        {
+            "name": "STA.CH2274.SHE"
+        },
+        {
+            "name": "STA.CH2275.BHZ"
+        },
+        {
+            "name": "STA.BEAM2276.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2277.SHZ"
+        },
+        {
+            "name": "STA.CH2278.BHE"
+        },
+        {
+            "name": "STA.CH2279.SHE"
+        },
+        {
+            "name": "STA.CH2280.BHZ"
+        },
+        {
+            "name": "STA.BEAM2281.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2282.SHZ"
+        },
+        {
+            "name": "STA.CH2283.BHE"
+        },
+        {
+            "name": "STA.CH2284.SHE"
+        },
+        {
+            "name": "STA.CH2285.BHZ"
+        },
+        {
+            "name": "STA.BEAM2286.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2287.SHZ"
+        },
+        {
+            "name": "STA.CH2288.BHE"
+        },
+        {
+            "name": "STA.CH2289.SHE"
+        },
+        {
+            "name": "STA.CH2290.BHZ"
+        },
+        {
+            "name": "STA.BEAM2291.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2292.SHZ"
+        },
+        {
+            "name": "STA.CH2293.BHE"
+        },
+        {
+            "name": "STA.CH2294.SHE"
+        },
+        {
+            "name": "STA.CH2295.BHZ"
+        },
+        {
+            "name": "STA.BEAM2296.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2297.SHZ"
+        },
+        {
+            "name": "STA.CH2298.BHE"
+        },
+        {
+            "name": "STA.CH2299.SHE"
+        },
+        {
+            "name": "STA.CH2300.BHZ"
+        },
+        {
+            "name": "STA.BEAM2301.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2302.SHZ"
+        },
+        {
+            "name": "STA.CH2303.BHE"
+        },
+        {
+            "name": "STA.CH2304.SHE"
+        },
+        {
+            "name": "STA.CH2305.BHZ"
+        },
+        {
+            "name": "STA.BEAM2306.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2307.SHZ"
+        },
+        {
+            "name": "STA.CH2308.BHE"
+        },
+        {
+            "name": "STA.CH2309.SHE"
+        },
+        {
+            "name": "STA.CH2310.BHZ"
+        },
+        {
+            "name": "STA.BEAM2311.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2312.SHZ"
+        },
+        {
+            "name": "STA.CH2313.BHE"
+        },
+        {
+            "name": "STA.CH2314.SHE"
+        },
+        {
+            "name": "STA.CH2315.BHZ"
+        },
+        {
+            "name": "STA.BEAM2316.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2317.SHZ"
+        },
+        {
+            "name": "STA.CH2318.BHE"
+        },
+        {
+            "name": "STA.CH2319.SHE"
+        },
+        {
+            "name": "STA.CH2320.BHZ"
+        },
+        {
+            "name": "STA.BEAM2321.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2322.SHZ"
+        },
+        {
+            "name": "STA.CH2323.BHE"
+        },
+        {
+            "name": "STA.CH2324.SHE"
+        },
+        {
+            "name": "STA.CH2325.BHZ"
+        },
+        {
+            "name": "STA.BEAM2326.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2327.SHZ"
+        },
+        {
+            "name": "STA.CH2328.BHE"
+        },
+        {
+            "name": "STA.CH2329.SHE"
+        },
+        {
+            "name": "STA.CH2330.BHZ"
+        },
+        {
+            "name": "STA.BEAM2331.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2332.SHZ"
+        },
+        {
+            "name": "STA.CH2333.BHE"
+        },
+        {
+            "name": "STA.CH2334.SHE"
+        },
+        {
+            "name": "STA.CH2335.BHZ"
+        },
+        {
+            "name": "STA.BEAM2336.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2337.SHZ"
+        },
+        {
+            "name": "STA.CH2338.BHE"
+        },
+        {
+            "name": "STA.CH2339.SHE"
+        },
+        {
+            "name": "STA.CH2340.BHZ"
+        },
+        {
+            "name": "STA.BEAM2341.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2342.SHZ"
+        },
+        {
+            "name": "STA.CH2343.BHE"
+        },
+        {
+            "name": "STA.CH2344.SHE"
+        },
+        {
+            "name": "STA.CH2345.BHZ"
+        },
+        {
+            "name": "STA.BEAM2346.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2347.SHZ"
+        },
+        {
+            "name": "STA.CH2348.BHE"
+        },
+        {
+            "name": "STA.CH2349.SHE"
+        },
+        {
+            "name": "STA.CH2350.BHZ"
+        },
+        {
+            "name": "STA.BEAM2351.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2352.SHZ"
+        },
+        {
+            "name": "STA.CH2353.BHE"
+        },
+        {
+            "name": "STA.CH2354.SHE"
+        },
+        {
+            "name": "STA.CH2355.BHZ"
+        },
+        {
+            "name": "STA.BEAM2356.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2357.SHZ"
+        },
+        {
+            "name": "STA.CH2358.BHE"
+        },
+        {
+            "name": "STA.CH2359.SHE"
+        },
+        {
+            "name": "STA.CH2360.BHZ"
+        },
+        {
+            "name": "STA.BEAM2361.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2362.SHZ"
+        },
+        {
+            "name": "STA.CH2363.BHE"
+        },
+        {
+            "name": "STA.CH2364.SHE"
+        },
+        {
+            "name": "STA.CH2365.BHZ"
+        },
+        {
+            "name": "STA.BEAM2366.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2367.SHZ"
+        },
+        {
+            "name": "STA.CH2368.BHE"
+        },
+        {
+            "name": "STA.CH2369.SHE"
+        },
+        {
+            "name": "STA.CH2370.BHZ"
+        },
+        {
+            "name": "STA.BEAM2371.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2372.SHZ"
+        },
+        {
+            "name": "STA.CH2373.BHE"
+        },
+        {
+            "name": "STA.CH2374.SHE"
+        },
+        {
+            "name": "STA.CH2375.BHZ"
+        },
+        {
+            "name": "STA.BEAM2376.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2377.SHZ"
+        },
+        {
+            "name": "STA.CH2378.BHE"
+        },
+        {
+            "name": "STA.CH2379.SHE"
+        },
+        {
+            "name": "STA.CH2380.BHZ"
+        },
+        {
+            "name": "STA.BEAM2381.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2382.SHZ"
+        },
+        {
+            "name": "STA.CH2383.BHE"
+        },
+        {
+            "name": "STA.CH2384.SHE"
+        },
+        {
+            "name": "STA.CH2385.BHZ"
+        },
+        {
+            "name": "STA.BEAM2386.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2387.SHZ"
+        },
+        {
+            "name": "STA.CH2388.BHE"
+        },
+        {
+            "name": "STA.CH2389.SHE"
+        },
+        {
+            "name": "STA.CH2390.BHZ"
+        },
+        {
+            "name": "STA.BEAM2391.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2392.SHZ"
+        },
+        {
+            "name": "STA.CH2393.BHE"
+        },
+        {
+            "name": "STA.CH2394.SHE"
+        },
+        {
+            "name": "STA.CH2395.BHZ"
+        },
+        {
+            "name": "STA.BEAM2396.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2397.SHZ"
+        },
+        {
+            "name": "STA.CH2398.BHE"
+        },
+        {
+            "name": "STA.CH2399.SHE"
+        },
+        {
+            "name": "STA.CH2400.BHZ"
+        },
+        {
+            "name": "STA.BEAM2401.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2402.SHZ"
+        },
+        {
+            "name": "STA.CH2403.BHE"
+        },
+        {
+            "name": "STA.CH2404.SHE"
+        },
+        {
+            "name": "STA.CH2405.BHZ"
+        },
+        {
+            "name": "STA.BEAM2406.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2407.SHZ"
+        },
+        {
+            "name": "STA.CH2408.BHE"
+        },
+        {
+            "name": "STA.CH2409.SHE"
+        },
+        {
+            "name": "STA.CH2410.BHZ"
+        },
+        {
+            "name": "STA.BEAM2411.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2412.SHZ"
+        },
+        {
+            "name": "STA.CH2413.BHE"
+        },
+        {
+            "name": "STA.CH2414.SHE"
+        },
+        {
+            "name": "STA.CH2415.BHZ"
+        },
+        {
+            "name": "STA.BEAM2416.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2417.SHZ"
+        },
+        {
+            "name": "STA.CH2418.BHE"
+        },
+        {
+            "name": "STA.CH2419.SHE"
+        },
+        {
+            "name": "STA.CH2420.BHZ"
+        },
+        {
+            "name": "STA.BEAM2421.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2422.SHZ"
+        },
+        {
+            "name": "STA.CH2423.BHE"
+        },
+        {
+            "name": "STA.CH2424.SHE"
+        },
+        {
+            "name": "STA.CH2425.BHZ"
+        },
+        {
+            "name": "STA.BEAM2426.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2427.SHZ"
+        },
+        {
+            "name": "STA.CH2428.BHE"
+        },
+        {
+            "name": "STA.CH2429.SHE"
+        },
+        {
+            "name": "STA.CH2430.BHZ"
+        },
+        {
+            "name": "STA.BEAM2431.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2432.SHZ"
+        },
+        {
+            "name": "STA.CH2433.BHE"
+        },
+        {
+            "name": "STA.CH2434.SHE"
+        },
+        {
+            "name": "STA.CH2435.BHZ"
+        },
+        {
+            "name": "STA.BEAM2436.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2437.SHZ"
+        },
+        {
+            "name": "STA.CH2438.BHE"
+        },
+        {
+            "name": "STA.CH2439.SHE"
+        },
+        {
+            "name": "STA.CH2440.BHZ"
+        },
+        {
+            "name": "STA.BEAM2441.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2442.SHZ"
+        },
+        {
+            "name": "STA.CH2443.BHE"
+        },
+        {
+            "name": "STA.CH2444.SHE"
+        },
+        {
+            "name": "STA.CH2445.BHZ"
+        },
+        {
+            "name": "STA.BEAM2446.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2447.SHZ"
+        },
+        {
+            "name": "STA.CH2448.BHE"
+        },
+        {
+            "name": "STA.CH2449.SHE"
+        },
+        {
+            "name": "STA.CH2450.BHZ"
+        },
+        {
+            "name": "STA.BEAM2451.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2452.SHZ"
+        },
+        {
+            "name": "STA.CH2453.BHE"
+        },
+        {
+            "name": "STA.CH2454.SHE"
+        },
+        {
+            "name": "STA.CH2455.BHZ"
+        },
+        {
+            "name": "STA.BEAM2456.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2457.SHZ"
+        },
+        {
+            "name": "STA.CH2458.BHE"
+        },
+        {
+            "name": "STA.CH2459.SHE"
+        },
+        {
+            "name": "STA.CH2460.BHZ"
+        },
+        {
+            "name": "STA.BEAM2461.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2462.SHZ"
+        },
+        {
+            "name": "STA.CH2463.BHE"
+        },
+        {
+            "name": "STA.CH2464.SHE"
+        },
+        {
+            "name": "STA.CH2465.BHZ"
+        },
+        {
+            "name": "STA.BEAM2466.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2467.SHZ"
+        },
+        {
+            "name": "STA.CH2468.BHE"
+        },
+        {
+            "name": "STA.CH2469.SHE"
+        },
+        {
+            "name": "STA.CH2470.BHZ"
+        },
+        {
+            "name": "STA.BEAM2471.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2472.SHZ"
+        },
+        {
+            "name": "STA.CH2473.BHE"
+        },
+        {
+            "name": "STA.CH2474.SHE"
+        },
+        {
+            "name": "STA.CH2475.BHZ"
+        },
+        {
+            "name": "STA.BEAM2476.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2477.SHZ"
+        },
+        {
+            "name": "STA.CH2478.BHE"
+        },
+        {
+            "name": "STA.CH2479.SHE"
+        },
+        {
+            "name": "STA.CH2480.BHZ"
+        },
+        {
+            "name": "STA.BEAM2481.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2482.SHZ"
+        },
+        {
+            "name": "STA.CH2483.BHE"
+        },
+        {
+            "name": "STA.CH2484.SHE"
+        },
+        {
+            "name": "STA.CH2485.BHZ"
+        },
+        {
+            "name": "STA.BEAM2486.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2487.SHZ"
+        },
+        {
+            "name": "STA.CH2488.BHE"
+        },
+        {
+            "name": "STA.CH2489.SHE"
+        },
+        {
+            "name": "STA.CH2490.BHZ"
+        },
+        {
+            "name": "STA.BEAM2491.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2492.SHZ"
+        },
+        {
+            "name": "STA.CH2493.BHE"
+        },
+        {
+            "name": "STA.CH2494.SHE"
+        },
+        {
+            "name": "STA.CH2495.BHZ"
+        },
+        {
+            "name": "STA.BEAM2496.BHZ/some-stuff"
+        },
+        {
+            "name": "STA.CH2497.SHZ"
+        },
+        {
+            "name": "STA.CH2498.BHE"
+        },
+        {
+            "name": "STA.CH2499.SHE"
+        }
+    ],
+    "phases": [
+        "P3KPbc",
+        "PnPn",
+        "PKKPbc",
+        "PKP3bc",
+        "Sdiff",
+        "PKPdf",
+        "PKSbc",
+        "SKKSac",
+        "sSdiff",
+        "PKP2ab",
+        "pPdiff",
+        "sSKSdf",
+        "Pg",
+        "PKKSab",
+        "P5KPbc_B",
+        "sPKPab",
+        "P5KPdf_C",
+        "Pb",
+        "P5KPdf_B",
+        "P4KPdf",
+        "P7KPbc",
+        "PKSab",
+        "Pn",
+        "SKKPdf",
+        "pSKS",
+        "pSKSac",
+        "sSKS",
+        "Sg",
+        "P3KPdf",
+        "Sb",
+        "P7KPbc_B",
+        "P7KPdf_C",
+        "PKPbc",
+        "P7KPbc_C",
+        "P7KPdf_B",
+        "P5KPbc",
+        "Sn",
+        "P7KPdf_D",
+        "SKKPab",
+        "Rg",
+        "PKKPab",
+        "PKP3ab",
+        "sPdiff",
+        "PKiKP",
+        "PcP",
+        "SKSdf",
+        "PKPab",
+        "PcS",
+        "sPKP",
+        "SKKPbc",
+        "SKS2df",
+        "PKP2df",
+        "pPKP",
+        "sSKSac",
+        "PKKSdf",
+        "sPKPdf",
+        "pPKPdf",
+        "P4KPbc",
+        "SKSac",
+        "pSdiff",
+        "P5KPdf",
+        "SnSn",
+        "pSKSdf",
+        "ScP",
+        "ScS",
+        "Lg",
+        "SKPdf",
+        "Pdiff",
+        "PKP2bc",
+        "P4KPdf_B",
+        "PKKPdf",
+        "PKP3df",
+        "sPKiKP",
+        "pPKiKP",
+        "PKKSbc",
+        "pPKPbc",
+        "sPKPbc",
+        "PKSdf",
+        "SKKSac_B",
+        "SKPab",
+        "SKS2ac",
+        "pPKPab",
+        "P7KPdf",
+        "SKiKP",
+        "SKKSdf",
+        "P3KPbc_B",
+        "SKPbc",
+        "PKP3df_B",
+        "P3KPdf_B",
+        "PmP",
+        "SKKP",
+        "PKPPKP",
+        "SKKS",
+        "PP_B",
+        "PPP_B",
+        "sP",
+        "sS",
+        "SKSSKS",
+        "PKKP",
+        "PKKS",
+        "SSS_B",
+        "SKS2",
+        "PKP",
+        "PKS",
+        "nNL",
+        "SP",
+        "SS",
+        "SKP",
+        "SKS",
+        "PKP2",
+        "PKP3",
+        "SSS",
+        "SS_B",
+        "PPS_B",
+        "nP",
+        "PPP",
+        "PPS",
+        "PS",
+        "PP",
+        "pS",
+        "S",
+        "P",
+        "pP",
+        "P3KP",
+        "P7KP",
+        "LR",
+        "LQ",
+        "P4KP",
+        "N",
+        "I",
+        "L",
+        "NP",
+        "NP_1",
+        "PP_1",
+        "PS_1",
+        "SP_1",
+        "T",
+        "P5KP",
+        "tx",
+        "Tx",
+        "Sx",
+        "Px",
+        "IPx",
+        "It",
+        "Is",
+        "Iw",
+        "Ix"
+    ]
+}

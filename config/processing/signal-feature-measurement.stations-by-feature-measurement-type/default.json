@@ -1,0 +1,56 @@
+{
+    "name": "stations-to-measure-by-amplitude-type-default",
+    "constraints": [
+        {
+            "constraintType": "DEFAULT"
+        }
+    ],
+    "parameters": {
+        "stations": [
+            "AKASG",
+            "ARCES",
+            "ASAR",
+            "BDFB",
+            "BJT",
+            "BOSA",
+            "BRTR",
+            "CMAR",
+            "CPUP",
+            "DBIC",
+            "ESDC",
+            "FINES",
+            "GERES",
+            "GEYT",
+            "HILR",
+            "ILAR",
+            "KBZ",
+            "KEST",
+            "KMBO",
+            "KSRS",
+            "LPAZ",
+            "LZDM",
+            "MAW",
+            "MJAR",
+            "MKAR",
+            "NOA",
+            "NRIK",
+            "NVAR",
+            "PDAR",
+            "PETK",
+            "PLCA",
+            "PPT",
+            "ROSC",
+            "SCHQ",
+            "SONM",
+            "STKA",
+            "TORD",
+            "TXAR",
+            "ULM",
+            "USRK",
+            "VNDA",
+            "WRA",
+            "YKA",
+            "ZALV"
+        ]
+    }
+}

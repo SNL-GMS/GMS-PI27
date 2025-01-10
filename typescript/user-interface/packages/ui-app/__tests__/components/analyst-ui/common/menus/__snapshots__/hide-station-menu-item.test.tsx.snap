@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hide-station-menu-item should create menu item to hide AAK Channel 1`] = `
+<div>
+  <li
+    class=""
+    role="none"
+  >
+    <a
+      class="bp5-menu-item bp5-popover-dismiss hide-station-menu-item"
+      data-cy="hide-AAK"
+      role="menuitem"
+      tabindex="0"
+      title=""
+    >
+      <div
+        class="bp5-text-overflow-ellipsis bp5-fill"
+      >
+        Hide AAK
+      </div>
+    </a>
+  </li>
+</div>
+`;
+
+exports[`hide-station-menu-item should create menu item to show AAK Channel 1`] = `
+<div>
+  <li
+    class=""
+    role="none"
+  >
+    <a
+      class="bp5-menu-item bp5-popover-dismiss hide-station-menu-item"
+      data-cy="hide-AAK"
+      role="menuitem"
+      tabindex="0"
+      title=""
+    >
+      <div
+        class="bp5-text-overflow-ellipsis bp5-fill"
+      >
+        Show AAK
+      </div>
+    </a>
+  </li>
+</div>
+`;

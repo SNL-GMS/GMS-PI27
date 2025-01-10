@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`modal prompt tests renders 1`] = `<div />`;
+
+exports[`modal prompt tests renders children 1`] = `<div />`;

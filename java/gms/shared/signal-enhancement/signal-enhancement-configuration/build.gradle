@@ -1,0 +1,60 @@
+plugins {
+    id('java')
+    id('java-test-fixtures')
+    // alias(libs.plugins.org.springframework.boot)
+}
+
+dependencies {
+
+    
+    // Frameworks configuration and services
+    implementation project(':derived-channel-coi')
+    implementation project(':event-coi')
+    implementation project(':frameworks-configuration-commonobjects')
+    implementation project(':frameworks-configuration-repository')
+    implementation project(':signal-enhancement-api')
+    implementation project(':signal-enhancement-coi')
+    implementation project(':station-definition-api')
+    implementation project(':station-definition-repository')
+    implementation project(':station-definition-converter')
+
+    implementation project(':feature-prediction-utilities')
+    implementation project(':workflow-coi')
+    implementation project(':common-coi-types')
+
+    // Spring and hibernate dependencies
+    implementation libs.org.springframework.boot.spring.boot.starter.web
+    implementation libs.org.springdoc.springdoc.openapi.starter.webmvc.ui
+    implementation libs.org.apache.commons.commons.lang3
+
+    // Spring web and spring doc dependencies
+    implementation libs.org.msgpack.jackson.dataformat.msgpack
+    implementation libs.com.fasterxml.jackson.dataformat.jackson.dataformat.yaml
+
+    //logging
+    runtimeOnly libs.net.logstash.logback.logstash.logback.encoder
+
+    // unit testing dependencies
+    testImplementation 'org.mockito:mockito-core'
+    testImplementation 'org.mockito:mockito-junit-jupiter'
+    testImplementation libs.org.springframework.boot.spring.boot.starter.test
+    testImplementation project(':spring-framework-utilities')
+    testImplementation project(':test-utils')
+    
+    
+    testImplementation(testFixtures(project(':derived-channel-coi')))
+    testImplementation(testFixtures(project(':event-coi')))
+    testImplementation(testFixtures(project(':signal-detection-coi')))
+    testImplementation(testFixtures(project(':signal-enhancement-coi')))
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':waveform-coi')))
+
+    testFixturesImplementation project(':common-coi-types')
+    testFixturesImplementation(testFixtures(project(':event-coi')))
+    testFixturesImplementation project(':frameworks-configuration-commonobjects')
+    testFixturesImplementation project(':frameworks-configuration-repository')
+    testFixturesImplementation(testFixtures(project(':signal-detection-coi')))
+    testFixturesImplementation(testFixtures(project(':signal-enhancement-coi')))
+    testFixturesImplementation(testFixtures(project(':station-definition-coi')))
+    testFixturesImplementation(testFixtures(project(':waveform-coi')))
+}

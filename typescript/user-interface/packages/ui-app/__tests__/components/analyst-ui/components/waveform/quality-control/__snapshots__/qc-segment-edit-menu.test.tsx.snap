@@ -1,0 +1,341 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QC Segment Edit Context Menu renders QcSegmentEditContextMenuContent 1`] = `<div />`;
+
+exports[`QC Segment Edit Context Menu renders QcSegmentEditContextMenuContent 2`] = `
+<div>
+  <div
+    class="form qc-segment-form"
+  >
+    <div
+      class="form__header"
+    >
+      <div>
+        Create QC Segment
+      </div>
+      <div
+        class="form__header-decoration"
+      >
+        <div>
+          <div
+            class="qc-segment-swatch"
+            style="background-color: rgb(235, 6, 200);"
+          />
+          <span
+            class="qc-segment-swatch-label"
+          >
+            Analyst Defined
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="form"
+    >
+      <div
+        class="form-content"
+      >
+        <div
+          class="dialog-item__label "
+        >
+          Category
+        </div>
+        <div
+          class="dialog-item__value "
+        >
+          Analyst Defined
+        </div>
+        <div
+          class="dialog-item__label "
+        >
+          Type
+        </div>
+        <div
+          class="dialog-item__value "
+        >
+          <div
+            class="dropdown-container"
+          >
+            <span
+              class="dropdown-selector"
+              data-cy="-dropdown"
+            >
+              <div
+                class="bp5-html-select full-width"
+              >
+                <select
+                  title="Aggregate"
+                >
+                  <option>
+                    Select a QC segment type
+                  </option>
+                  <option
+                    value="AGGREGATE"
+                  >
+                    Aggregate
+                  </option>
+                  <option
+                    value="CALIBRATION"
+                  >
+                    Calibration
+                  </option>
+                  <option
+                    value="FLAT"
+                  >
+                    Flat
+                  </option>
+                  <option
+                    value="GAP"
+                  >
+                    Gap
+                  </option>
+                  <option
+                    value="NOISY"
+                  >
+                    Noisy
+                  </option>
+                  <option
+                    value="SENSOR_PROBLEM"
+                  >
+                    Sensor Problem
+                  </option>
+                  <option
+                    value="SPIKE"
+                  >
+                    Spike
+                  </option>
+                  <option
+                    value="STATION_PROBLEM"
+                  >
+                    Station Problem
+                  </option>
+                  <option
+                    value="STATION_SECURITY"
+                  >
+                    Station Security
+                  </option>
+                  <option
+                    value="TIMING"
+                  >
+                    Timing
+                  </option>
+                </select>
+                <span
+                  class="bp5-icon bp5-icon-double-caret-vertical"
+                >
+                  <svg
+                    data-icon="double-caret-vertical"
+                    height="16"
+                    role="img"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <title>
+                      Open dropdown
+                    </title>
+                    <path
+                      d="M100 180H220C231 180 240 189 240 200C240 205.6 237.8 210.6 234.2 214.2L174.2 274.2C170.6 277.8 165.6 280 160 280S149.4 277.8 145.8 274.2L85.8 214.2C82.2 210.6 80 205.6 80 200C80 189 89 180 100 180zM220 140H100C89 140 80 131 80 120C80 114.4 82.2 109.4 85.8 105.8L145.8 45.8C149.4 42.2 154.4 40 160 40S170.6 42.2 174.2 45.8L234.2 105.8C237.8 109.4 240 114.4 240 120C240 131 231 140 220 140z"
+                      fill-rule="evenodd"
+                      transform="scale(0.05, -0.05) translate(-160, -160)"
+                      transform-origin="center"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div
+          class="dialog-item__label "
+        >
+          Channel name
+        </div>
+        <div
+          class="dialog-item__value "
+        >
+          <div
+            class="form__text--wrap"
+            title=""
+          />
+        </div>
+        <div
+          class="dialog-item__label dialog-item__label--required"
+        >
+          Start time
+        </div>
+        <div
+          class="dialog-item__value monospace"
+        >
+          <div
+            class="time-picker"
+          >
+            <div
+              class="bp5-input-group time-picker__input-group--fill"
+            >
+              <input
+                aria-disabled="false"
+                class="bp5-input time-picker__input"
+                inputmode="text"
+                type="text"
+                value="2021-11-10T00:16:44.000"
+              />
+            </div>
+            <button
+              class="bp5-button time-picker__date-picker-button"
+              title="Choose a date and time"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+                class="bp5-icon bp5-icon-standard bp5-icon-calendar"
+                data-icon="calendar"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="dialog-item__label dialog-item__label--required"
+        >
+          End time
+        </div>
+        <div
+          class="dialog-item__value monospace"
+        >
+          <div
+            class="time-picker"
+          >
+            <div
+              class="bp5-input-group time-picker__input-group--fill"
+            >
+              <input
+                aria-disabled="false"
+                class="bp5-input time-picker__input"
+                inputmode="text"
+                type="text"
+                value="2021-11-10T00:21:44.000"
+              />
+            </div>
+            <button
+              class="bp5-button time-picker__date-picker-button"
+              title="Choose a date and time"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+                class="bp5-icon bp5-icon-standard bp5-icon-calendar"
+                data-icon="calendar"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="dialog-item__label "
+        >
+          Author
+        </div>
+        <div
+          class="dialog-item__value "
+        />
+        <div
+          class="dialog-item__label "
+        >
+          Rejected
+        </div>
+        <div
+          class="dialog-item__value "
+        >
+          False
+        </div>
+        <div
+          class="dialog-item__label "
+        >
+          Rationale
+        </div>
+        <div
+          class="dialog-item__value "
+        >
+          <div>
+            <textarea
+              class="form__text-input"
+              data-cy="textarea"
+              maxlength="160"
+              rows="4"
+              style="width: 100%;"
+              title="Rationale"
+            />
+            <p
+              class="form__character-count"
+            >
+              Characters remaining: 
+              160
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="qc-segment-form__message"
+      >
+        <div
+          class="form-message form-message--danger"
+        >
+          <span
+            class="form-message__summary"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-error bp5-intent-danger"
+              data-icon="error"
+            />
+            No data in selected channels
+          </span>
+          <span
+            class="form-message__recommendation"
+          >
+            There is no data to mask in the selected time range for channels: PDAR.PD01.SHZ.
+          </span>
+        </div>
+      </div>
+      <div
+        class="form__buttons"
+      >
+        <div
+          class="form__buttons--right"
+        >
+          <button
+            class="bp5-button bp5-disabled bp5-intent-danger bp5-button form__button"
+            disabled=""
+            tabindex="-1"
+            title="No data in selected channels"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-floppy-disk"
+              data-icon="floppy-disk"
+            />
+            <span
+              class="bp5-button-text"
+            >
+              Save
+            </span>
+          </button>
+          <button
+            class="bp5-button bp5-button form__button"
+            type="submit"
+          >
+            <span
+              class="bp5-button-text"
+            >
+              <span
+                class="bp5-button-text"
+              >
+                Cancel
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,32 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+
+    // Project dependencies
+    implementation project(':derived-channel-coi')
+    implementation project(':event-coi')
+    implementation project(':frameworks-system-config')
+    implementation project(':java-utilities')
+    implementation project(':signal-detection-coi')
+    implementation project(':signal-enhancement-coi')
+
+    // Google AutoValue
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+    
+    // Web Client
+    api libs.org.springframework.spring.context
+    implementation libs.org.springframework.spring.webflux
+
+    // Unit testing dependencies
+    testImplementation libs.io.projectreactor.reactor.test
+    testImplementation project(':test-utils')
+    testImplementation(testFixtures(project(':event-coi')))
+    testImplementation(testFixtures(project(':derived-channel-coi')))
+    testImplementation(testFixtures(project(':signal-detection-coi')))
+    testImplementation(testFixtures(project(':signal-enhancement-coi')))
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':waveform-coi')))
+}

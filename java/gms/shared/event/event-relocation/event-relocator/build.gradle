@@ -1,0 +1,42 @@
+plugins {
+    id('java')
+    id('java-test-fixtures')
+    alias(libs.plugins.org.springframework.boot)
+    id('com.google.cloud.tools.jib')
+}
+
+dependencies {
+    implementation project(':event-management-api')
+    implementation project(':station-definition-converter')
+    implementation project(':event-relocation-config')
+    implementation project(':event-relocation-api')
+    implementation project(':event-locoo3d')
+
+    //Spring
+    implementation libs.org.springframework.boot.spring.boot.starter.web
+    implementation libs.org.springdoc.springdoc.openapi.starter.webmvc.ui
+    implementation libs.org.springframework.boot.spring.boot.starter.actuator
+    implementation project(':spring-framework-utilities')
+    implementation project(':frameworks-shared-objects')
+
+    testImplementation libs.org.springframework.boot.spring.boot.starter.test
+    testImplementation project(':spring-framework-utilities').sourceSets.test.output
+    testImplementation project(':java-utilities')
+
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':event-coi')))
+    testImplementation(testFixtures(project(':signal-detection-coi')))
+
+    testFixturesImplementation(testFixtures(project(':event-coi')))
+    testFixturesImplementation(testFixtures(project(':signal-detection-coi')))
+    testFixturesImplementation(testFixtures(project(':station-definition-coi')))
+
+    testImplementation project(':test-utils')
+    testImplementation(group: 'gnem', name: 'salsa3d-software', version: '1.2024.2', classifier: 'jar-with-dependencies')
+
+
+    //exclude duplicate jaxb (is there a more surgical way to do this?)
+    bootJar {
+        duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+    }
+}

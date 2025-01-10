@@ -1,0 +1,15 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+    api project(':frameworks-shared-objects')
+    api project(':validation')
+
+    implementation project(':frameworks-utilities')
+
+    api libs.io.etcd.jetcd.core
+    implementation libs.org.apache.commons.commons.text
+    implementation libs.org.apache.commons.commons.lang3
+    implementation libs.net.jodah.failsafe
+}

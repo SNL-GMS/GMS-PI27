@@ -1,0 +1,23 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+  
+  // GMS
+  api project(':common-coi-types')
+  api libs.org.springframework.spring.context
+  api libs.jakarta.annotation.api
+
+  implementation project(':event-coi')
+  implementation project(':feature-prediction-plugins-api')
+  implementation project(':file-store-utility')
+  implementation project(':frameworks-configuration-api')
+  implementation project(':frameworks-configuration-commonobjects')
+  implementation project(':frameworks-configuration-repository')
+  
+  // Google AutoValue
+  api libs.com.google.guava.guava
+  implementation libs.com.google.auto.value.auto.value.annotations
+  annotationProcessor libs.com.google.auto.value.auto.value.base
+}

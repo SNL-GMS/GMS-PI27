@@ -1,0 +1,22 @@
+.bp5-tooltip p {
+  max-width: 44ch;
+}
+.bp5-tooltip p:last-child {
+  margin-bottom: 0;
+}
+
+.hotkey-tooltip {
+  display: flex;
+  padding: 0;
+  font-family: monospace;
+  flex-direction: row;
+
+  &__info {
+    padding: 0;
+  }
+
+  &__hotkey {
+    margin-left: 1em;
+    padding: 0;
+  }
+}

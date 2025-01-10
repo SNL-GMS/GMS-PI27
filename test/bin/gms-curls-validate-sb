@@ -1,0 +1,1095 @@
+#!/usr/bin/env python3
+
+# -----------------------------------------------------------------------------
+# gms-curls-validate-sb test script
+#
+# gms-curls-validate-sb executes curl commands for SB.
+# The deployment name must be provided.
+# The cluster name can be determined by running kubeconfig.
+# Curl commands can be run at various sites.
+# -----------------------------------------------------------------------------
+
+# Import Python modules
+import argparse
+import json
+import os
+import re
+import requests
+import shutil
+import subprocess
+import sys
+import yaml
+from argparse import ArgumentParser, RawDescriptionHelpFormatter
+from rich.console import Console
+
+console_kwargs = {"log_path": False}
+if os.getenv("CI"):
+    console_kwargs["force_terminal"] = True
+if os.getenv("RICH_LOG_PATH"):
+    console_kwargs["log_path"] = True
+console = Console(**console_kwargs)
+
+
+##################### MAIN #######################
+def main():
+
+    # -- verify kubectl is available
+    if shutil.which('kubectl') is None:
+        print(
+            "ERROR: 'kubectl' executable not found in PATH."
+            "Please install kubectl."
+        )
+        sys.exit(1)
+
+    # -- verify helm is available
+    if shutil.which('gmskube') is None:
+        print(
+            "ERROR: 'gmskube' executable not found in PATH."
+            "Please install gmskube."
+        )
+        sys.exit(1)
+
+    # -- verify KUBECONFIG is set
+    if "KUBECONFIG" not in os.environ:
+        print(
+            "ERROR: Variable 'KUBECONFIG' must be set to "
+            "the kubernetes configuration."
+        )
+        sys.exit(1)
+
+    if ":" in os.environ["KUBECONFIG"]:
+        msg = (
+            "It looks like your `KUBECONFIG` environment variable points "
+            "to multiple configuration files.  Ensure you run `kubeconfig "
+            "<cluster_name>` to activate a particular cluster, and then "
+            "re-run this script."
+        )
+        raise SystemExit(msg)
+
+    try:
+        with open(os.environ["KUBECONFIG"]) as file:
+            kubeconfig = yaml.load(file, Loader=yaml.FullLoader)
+            if 'clusters' not in kubeconfig:
+                print(
+                    "ERROR: No clusters defined in file "
+                    f"'{os.environ['KUBECONFIG']}"
+                )
+                sys.exit(1)
+
+    except FileNotFoundError as e:
+        print(
+            "ERROR: Failed to open KUBECONFIG file "
+            f"'{os.environ['KUBECONFIG']}': {e}"
+        )
+        sys.exit(1)
+    except AttributeError as e:
+        print(f"ERROR: {e.__class__.__name__}: {e}")
+        print(
+            "Did you forget to activate the 'gms' conda environment "
+            "with 'conda activate gms'?"
+        )
+        sys.exit(1)
+    except Exception as e:
+        print(f"ERROR: {e.__class__.__name__}: {e}")
+        sys.exit(1)
+
+    args = get_args()
+
+    instance = get_instance_info(args.name)
+
+    if not instance:
+        print(f"{ args.name } instance not found.")
+        sys.exit(1)
+
+    # Declare base URL for service requests
+    # This includes instance name, cluster, domain, and port
+    # https://<instance-name>.<cluster>.<???>:<port-number>
+    try:
+        base_url = get_ingress_domain_url(args.name)
+    except RuntimeError:
+        raise RuntimeError("Unable to get domain name.")
+
+    # Declare headers for service requests
+    headers = {'Accept': 'application/json',
+           'Content-Type': 'application/json'}
+
+    # Declare start/end times, stageName, and channelName for requests
+    startTime = "2019-01-05T19:25:00.000Z"
+    endTime = "2019-01-05T19:29:00.000Z"
+    stage1 = "AL1"
+    stage2 = "AL2"
+
+    testpass = 0
+    testfail = 0
+
+
+    ###############################################################################
+    # Workflow Manager Endpoint Validation
+    ###############################################################################
+    print("\n\nWORKFLOW MANAGER TESTS")
+    # ENDPOINT: Get Workflow Definition
+    #   TEST: Returns 4 Stages
+    print("  TEST: \"Get Workflow Definition\" returns 4 stages")
+    
+    # Hit endpoint
+    service_url = base_url + "/workflow-manager-service/workflow-manager/workflow-definition"
+    request_body1 = {}
+    Ints = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(Ints["stages"]) == 4:
+        print("    PASS: Returned 4 stages")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################  
+    # ENDPOINT: Find Intervals by ID and Time
+    #   TEST: Returns X intervals
+    print("\n\n  TEST: \"Find Stage Intervals by Stage ID and Time\" returns 4 intervals")
+    
+    # Hit endpoint
+    service_url = base_url + "/workflow-manager-service/workflow-manager/interval/stage/query/ids-timerange"
+    request_body1 = {
+        "stageIds": [{"name":"Auto Network"},{"name":"AL1"},{"name":"Auto Post-AL1"},{"name":"AL2"}],
+        "startTime": startTime,
+        "endTime": endTime
+    }
+    Ints = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(Ints["AL1"]) + len(Ints["AL2"]) + len(Ints["Auto Post-AL1"]) + len(Ints["Auto Network"]) == 4:
+        print("    PASS: Returned 4 intervals")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # Signal Detection Manager Endpoint Validation
+    ###############################################################################
+    print("\nSIGNAL DETECTION MANAGER TESTS")
+    # ENDPOINT: Find Signal Detections by Station and Time Range
+    #   TEST: Returns X Signal Detections
+    print("  TEST: \"Find Detections by Station and Time Range\" returns 2 AL1 and 2 AL2 signal detections")
+    
+    # Hit endpoint
+    service_url = base_url + "/signal-detection-manager-service/signal-detection/signal-detections-with-channel-segments/query/stations-timerange"
+    request_body1 = {
+        "stations": [{"name": "ROSC"}],
+        "startTime": startTime,
+        "endTime": endTime,
+        "stageId": {"name": stage1},
+        "excludedSignalDetections": []
+    }
+    request_body2 = {
+        "stations": [{"name": "ROSC"}],
+        "startTime": startTime,
+        "endTime": endTime,
+        "stageId": {"name": stage2},
+        "excludedSignalDetections": []
+    }
+    sds1 = requests.post(service_url, json=request_body1, headers=headers).json()
+    sds2 = requests.post(service_url, json=request_body2, headers=headers).json()
+    
+    # Test AL1
+    if len(sds1["signalDetections"]) == 2:
+        print("    PASS: AL1 Returned 2 signal detections")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    # Test AL2
+    if len(sds2["signalDetections"]) == 2:
+        print("    PASS: AL2 Returned 2 signal detections")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Signal Detections by ID
+    #   TEST: Returns X Signal Detection Hypotheses
+    print("\n\n  TEST: \"Find Signal Detections by ID\" returns 3 AL1 and 2 AL2 signal detection hypotheses")
+    
+    # Hit endpoint
+    service_url = base_url + "/signal-detection-manager-service/signal-detection/signal-detections-with-channel-segments/query/ids"
+    request_body1 = {
+        "detectionIds": ["9c45803d-6102-3016-9097-bc7be96ce679"],
+        "stageId": {"name": stage1}
+    }
+    request_body2 = {
+        "detectionIds": ["9c45803d-6102-3016-9097-bc7be96ce679"],
+        "stageId": {"name": stage2}
+    }
+    sds1 = requests.post(service_url, json=request_body1, headers=headers).json()
+    sds2 = requests.post(service_url, json=request_body2, headers=headers).json()
+    
+    # Test AL1
+    if len(sds1["signalDetections"][0]["signalDetectionHypotheses"]) == 3:
+        print("    PASS: AL1 Returned 3 signal detection hypotheses")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    # Test AL2
+    if len(sds2["signalDetections"][0]["signalDetectionHypotheses"]) == 2:
+        print("    PASS: AL2 Returned 2 signal detection hypotheses")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Filter Definitions for Signal Detections
+    #   TEST: Returns 5 Signal Detection Hypotheses with Named Filters
+    print("\n\n  TEST: \"Find Filters for Signal Detections\" returns 3 AL1 and 2 AL2 signal detection hypotheses with named filters")
+    
+    # Hit endpoint
+    service_url = base_url + "/signal-detection-manager-service/signal-detection/filter-definitions-by-usage/query/signal-detections"
+    request_body1 = { "stageId": {"name": stage1},
+        "signalDetections": [{"id": "9c45803d-6102-3016-9097-bc7be96ce679"}]
+    }
+    request_body2 = { "stageId": {"name": stage2},
+        "signalDetections": [{"id": "9c45803d-6102-3016-9097-bc7be96ce679"}]
+    }
+    fds1 = requests.post(service_url, json=request_body1, headers=headers).json()
+    fds2 = requests.post(service_url, json=request_body2, headers=headers).json()
+    
+    # Test AL1
+    if len(fds1["filterDefinitionByUsageBySignalDetectionHypothesis"]) == 3:
+        print("    PASS: AL1 Returned 3 signal detection hypotheses with named filters")
+        testpass += 1
+    else:
+        print("    FAIL")    
+        testfail += 1
+    
+    # Test AL2
+    if len(fds2["filterDefinitionByUsageBySignalDetectionHypothesis"]) == 2:
+        print("    PASS: AL2 Returned 2 signal detection hypotheses with named filters")
+        testpass += 1
+    else:
+        print("    FAIL")    
+        testfail += 1
+    
+    ###############################################################################
+    # Event Manager Endpoint Validation
+    ###############################################################################
+    print("\n\nEVENT MANAGER TESTS")
+    # ENDPOINT: Find Events by Time
+    #   TEST: AL1 returns X events
+    #   TEST: AL2 return Y events
+    print("  TEST: \"Events by Time\" returns 4 AL1 and 1 AL2 Events")
+    
+    # Hit endpoint
+    service_url = base_url + "/event-manager-service/event/time"
+    request_body1 = {
+        "stageId": {"name": stage1},
+        "startTime": startTime,
+        "endTime": endTime
+    }
+    request_body2 = {
+        "stageId": {"name": stage2},
+        "startTime": startTime,
+        "endTime": endTime
+    }
+    eventsByTime1 = requests.post(service_url, json=request_body1, headers=headers).json()
+    eventsByTime2 = requests.post(service_url, json=request_body2, headers=headers).json()
+    
+    # Test AL1
+    if len(eventsByTime1) == 4:
+        print("    PASS: AL1 returned 4 expected events")
+        testpass += 1
+    else:
+        print("    FAIL: AL1 returned {} events, expected 4".format(len(eventsByTime1)))
+        testfail += 1
+    
+    # Test AL2
+    if len(eventsByTime2) == 1:
+        print("    PASS: AL2 returned 1 expected events")
+        testpass += 1
+    else:
+        print("    FAIL: AL2 returned {} events, expected 1".format(len(eventsByTime2)))
+        testfail += 1
+    
+    # ##############################################################################
+    # # ENDPOINT: Find Events with Detections and Segments by Time
+    # #   TEST: AL1 returns X Signal Detections
+    # #   TEST: AL2 return Y Signal Detections
+    print("\n\n  TEST: \"Events with Detections and Segments by Time\" returns 488 AL1 and 240 AL2 Signal Detections")
+    
+    # # Hit endpoint
+    service_url = base_url + "/event-manager-service/event/detections-and-segments/time"
+    request_body1 = {
+        "stageId": {"name": stage1},
+        "startTime": startTime,
+        "endTime": endTime
+    }
+    request_body2 = {
+        "stageId": {"name": stage2},
+        "startTime": startTime,
+        "endTime": endTime
+    }
+    eventsDetsByTime1 = requests.post(service_url, json=request_body1, headers=headers).json()
+    eventsDetsByTime2 = requests.post(service_url, json=request_body2, headers=headers).json()
+    
+    # # Test AL1
+    if len(eventsDetsByTime1) !=0 and len(eventsDetsByTime1["signalDetections"]) == 488:
+        print("    PASS: AL1 returned 488 expected signal detections")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    # # Test AL2
+    if len(eventsDetsByTime1) !=0 and len(eventsDetsByTime2["signalDetections"]) == 240:
+        print("    PASS: AL2 returned 240 expected signal detections")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Events by Associated Signal Detection Hypotheses
+    #   TEST: AL1 returns X events
+    #   TEST: AL2 returns Y events
+    print("\n\n  TEST: \"Find Events by Associated Signal Detection Hypotheses\" returns 2 AL1 and 2 AL2 Events")
+    
+    # Hit endpoint
+    service_url = base_url + "/event-manager-service/event/associated-signal-detection-hypotheses"
+    request_body1 = {
+        "stageId": {
+            "name": stage1
+        },
+        "signalDetectionHypotheses": [
+            {
+                "id": {
+                    "signalDetectionId": "9c45803d-6102-3016-9097-bc7be96ce679",
+                    "id": "dcf4f9d6-7afc-3cdd-98e3-3cc24106e060"
+                }
+            }
+        ]
+    }
+    request_body2 = {
+        "stageId": {
+            "name": stage2
+        },
+        "signalDetectionHypotheses": [
+            {
+                "id": {
+                    "signalDetectionId": "9c45803d-6102-3016-9097-bc7be96ce679",
+                    "id": "dcf4f9d6-7afc-3cdd-98e3-3cc24106e060"
+                }
+            }
+        ]
+    }
+    eventsByHyp1 = requests.post(service_url, json=request_body1, headers=headers).json()
+    eventsByHyp2 = requests.post(service_url, json=request_body2, headers=headers).json()
+    
+    # Test AL1
+    if len(eventsByHyp1[0]["eventHypotheses"]) == 2:
+        print("    PASS: AL1 returned 2 expected event hypotheses")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    # Test AL2
+    if len(eventsByHyp2[0]["eventHypotheses"]) == 2:
+        print("    PASS: AL2 returned 2 expected event hypotheses")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Event Status Information by Stage ID and Event ID
+    #   TEST: Returns a status
+    print("\n\n  TEST: \"Find Event Status by Stage ID and Event ID\" returns a status")
+    
+    # Hit endpoint
+    service_url = base_url + "/event-manager-service/event/status"
+    request_body1 = {
+        "stageId": {"name": "AL1"},
+        "eventIds": [
+            "c03a191a-605b-303d-9cf4-a14b17b3a28e"
+        ]
+    }
+    evs = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(evs) == 2:
+        print("    PASS: Returned an event status")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Predict Features for Event Location
+    #   TEST: Returns a feature prediction
+    print("\n\n  TEST: \"Predict Features for Event Locations\" returns a feature prediction")
+    
+    # Hit endpoint
+    service_url = base_url + "/event-manager-service/event/predict-for-event-location"
+    request_body1 = '''
+    {
+        "sourceLocation": {
+            "latitudeDegrees": 0.0,
+            "longitudeDegrees": 0.0,
+            "depthKm": 0.0,
+            "time": "1970-01-01T00:00:00Z"
+        },
+        "phases": [
+            "P"
+        ],
+        "receivers": [
+            {
+                "receiverDataType": null,
+                "receiverBandType": null,
+                "receiverLocationsByName": {
+                    "ChannelA": {
+                        "depthKm": 0.0,
+                        "elevationKm": 0.0,
+                        "latitudeDegrees": 45.0,
+                        "longitudeDegrees": 0.0
+                    }
+                }
+            }
+        ]
+    }
+    '''
+    request_body1 = json.loads(request_body1)
+    evs = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(evs["receiverLocationsByName"]["ChannelA"]["featurePredictions"]) > 0:
+        print("    PASS: Returned a feature prediction")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Event by ID
+    #   TEST: Returns an event
+    print("\n\n  TEST: \"Find Event by ID\" returns an event")
+    
+    # Hit endpoint
+    service_url1 = base_url + "/event-manager-service/event/AL1/c03a191a-605b-303d-9cf4-a14b17b3a28e"
+    service_url2 = base_url + "/event-manager-service/event/AL2/c03a191a-605b-303d-9cf4-a14b17b3a28e"
+    request_body1 = {}
+    evs1 = requests.get(service_url1, json=request_body1, headers=headers).json()
+    evs2 = requests.get(service_url2, json=request_body1, headers=headers).json()
+    
+    # Test AL1
+    if len(evs1) == 1:
+        print("    PASS: AL1 Returned an event")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    # Test AL2
+    if len(evs2) == 1:
+        print("    PASS: AL2 Returned an event")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # Waveform Manager Endpoint Validation
+    ###############################################################################
+    print("\n\nWAVEFORM MANAGER TESTS")
+    # ENDPOINT: Find Waveforms by Channel and Time Range
+    #   TEST: Returns X waveform samples
+    print("  TEST: \"Waveforms by Channel and Time Range\" returns 4801 waveform samples")
+    
+    # Hit endpoint
+    service_url = base_url + "/waveform-manager-service/waveform/channel-segment/query/channel-timerange"
+    request_body1 = {
+        "channels": [
+            {
+                "name": "ASAR.AS01.SHZ"
+            }
+        ],
+        "startTime": startTime,
+        "endTime": endTime
+    }
+    CsByChanTime = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(CsByChanTime) != 0 and len(CsByChanTime[0]["timeseries"][0]["samples"]) == 4801:
+        print("    PASS: Returned 4801 expected waveform samples")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Waveforms by Channel Segment Descriptors
+    #   TEST: Returns X waveform samples
+    print("\n\n  TEST: \"Waveforms by Channel Segment Descriptors\" returns 12000 waveform samples")
+    
+    # Hit endpoint
+    service_url = base_url + "/waveform-manager-service/waveform/channel-segment/query/channel-segment-descriptors"
+    request_body1 = {
+        "channelSegmentDescriptors": [
+            {
+                "channel": {
+                    "effectiveAt": "2019-01-05T00:00:00Z",
+                    "name": 
+                    f"ROSC.ROSC.BHZ/filter,1.000000-2.000000 3 BP non-causal/"
+                    f"89d9230bc85611cc7efe60716eef7424239f663feaa6c1d4a30fc224be96a139"
+
+                },
+                "startTime": "2019-01-05T19:27:30.350Z",
+                "endTime": "2019-01-05T19:32:30.325Z",
+                "creationTime": "2019-01-05T19:27:30.350Z"
+            }
+        ]
+    }
+    CsByChanTime = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test
+    if len(CsByChanTime) != 0 and len(CsByChanTime[0]["timeseries"][0]["samples"]) == 12000:
+        print("    PASS: Returned 12000 expected waveform samples")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find QC Segments by Channel and Time Range
+    #   TEST: Returns X QC Segments
+    print("\n\n  TEST: \"QC Segments by Channel and Time Range\" returns 8 qc segments")
+    
+    # Hit endpoint
+    service_url = base_url + "/waveform-manager-service/waveform/qc-segment/query/channel-timerange"
+    request_body1 = {
+        "channels": [
+            {
+                "name": "ARCES.ARA0.BHZ",
+                "effectiveAt": startTime
+            }
+        ],
+        "startTime": startTime,
+        "endTime": endTime
+    }
+    qcsegs = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test
+    if len(qcsegs) == 8:
+        print("    PASS: Returned 8 expected qc segments")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # Signal Enhancment Configuration Endpoint Validation
+    ###############################################################################
+    print("\n\nSIGNAL ENHANCEMENT CONFIGURATION TESTS")
+    # ENDPOINT: Find filter Definitions for Channel Segments
+    #   TEST: Returns X named filters
+    print("  TEST: \"Find Filter Definitions for Channel Segments\" returns 4 named filters")
+    
+    # Hit endpoint
+    service_url = base_url + "/signal-enhancement-configuration-service/signal-enhancement-configuration/default-filter-definitions-for-channel-segments"
+    request_body1 = {
+        "channelSegments": [
+            {
+                "id": {
+                    "channel": {
+                        "effectiveAt": "2019-01-05T00:00:00Z",
+                        "name": "ROSC.ROSC.BHZ"
+                    },
+                    "startTime": startTime,
+                    "endTime": endTime,
+                    "creationTime": startTime
+                }
+            }
+        ]
+    }
+    FiltDef4CS = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(FiltDef4CS['filterDefinitionByUsageByChannelSegment'][0]['filterDefinitionByFilterDefinitionUsage']) == 4:
+        print("    PASS: Returned 4 named filters")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find filter Definitions for Signal Detection Hypotheses
+    #   TEST: Returns X named filters
+    print("\n\n  TEST: \"Find Filter Definitions for Signal Detection Hypotheses\" returns 4 named filters")
+    
+    # Hit endpoint
+    service_url = base_url + "/signal-enhancement-configuration-service/signal-enhancement-configuration/default-filter-definitions-for-signal-detection-hypotheses"
+    request_body1 = {
+        "signalDetectionsHypotheses": [
+            {
+                "id": {
+                    "signalDetectionId": "9c45803d-6102-3016-9097-bc7be96ce679",
+                    "id": "dcf4f9d6-7afc-3cdd-98e3-3cc24106e060"
+                }
+            }
+        ]
+    }
+    FiltDef4SDH = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(FiltDef4SDH['filterDefinitionByUsageBySignalDetectionHypothesis'][0]['filterDefinitionByFilterDefinitionUsage']) == 4:
+        print("    PASS: Returned 4 named filters")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Get Filter List Definition
+    #   TEST: Returns X filter lists
+    print("\n\n  TEST: \"Get Filter List Definition\" returns 3 filter lists")
+    
+    # Hit endpoint
+    service_url = base_url + "/signal-enhancement-configuration-service/signal-enhancement-configuration/filter-lists-definition"
+    request_body1 = {}
+    filtlist = requests.get(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(filtlist["filterLists"]) == 3:
+        print("    PASS: Returned 3 filter lists")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # STATION DEFINITION MANAGER ENDPOINT VALIDATION
+    ###############################################################################
+    print("\n\nSTATION DEFINITION MANAGER TESTS")
+    # ENDPOINT: Find Stations Groups by Name
+    #   TEST: Returns X stations
+    print("  TEST: \"Find Station Groups by Name\" returns 27 stations")
+    
+    # Hit endpoint
+    service_url = base_url + "/station-definition-service/station-definition/station-groups/query/names"
+    request_body1 = {
+        "stationGroupNames": ["Primary"],
+        "effectiveTime": startTime
+    }
+    
+    stas = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(stas[0]["stations"]) == 27:
+        print("    PASS: Returned 27 stations")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Stations Groups by Name and Time Range
+    #   TEST: Returns X stations
+    print("\n\n  TEST: \"Find Station Groups by Name and Time Range\" returns 27 stations")
+    
+    # Hit endpoint
+    service_url = base_url + "/station-definition-service/station-definition/station-groups/query/names-timerange"
+    request_body1 = {
+        "stationGroupNames": ["Primary"],
+        "startTime": startTime,
+        "endTime": endTime
+    }
+    
+    stas = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(stas[0]["stations"]) == 27:
+        print("    PASS: Returned 27 stations")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Stations by Name
+    #   TEST: Returns X channels
+    print("\n\n  TEST: \"Find Stations by Name\" returns 22 channels")
+    
+    # Hit endpoint
+    service_url = base_url + "/station-definition-service/station-definition/stations/query/names"
+    request_body1 = {
+        "stationNames": [
+            "ASAR"
+        ],
+        "effectiveTime": startTime
+    }
+    
+    stas = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(stas[0]["allRawChannels"]) == 22:
+        print("    PASS: Returned 22 expected channels")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Stations by Name and Time Range
+    #   TEST: Returns X channels
+    print("\n\n  TEST: \"Find Stations by Name and Time Range\" returns 2 channels")
+    
+    # Hit endpoint
+    service_url = base_url + "/station-definition-service/station-definition/stations/query/names-timerange"
+    request_body1 = {
+        "stationNames": [
+            "ASAR"
+        ],
+        "startTime": startTime,
+        "endTime": endTime
+    }
+    
+    stas = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(stas[0]["allRawChannels"]) == 22:
+        print("    PASS: Returned 22 expected channels")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Channels Groups by Name
+    #   TEST: Returns X channel name
+    print("\n\n  TEST: \"Channel Groups by Name\" returns ASAR.AS01.SHZ channel name")
+    
+    # Hit endpoint
+    service_url = base_url + "/station-definition-service/station-definition/channel-groups/query/names"
+    request_body1 = {
+        "channelGroupNames": ["AS01"],
+        "effectiveTime": startTime
+    }
+    
+    chans = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(chans) !=0 and chans[0]['channels'][0]['name'] == "ASAR.AS01.SHZ":
+        print("    PASS: Returned ASAR.AS01.SHZ channel name")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Channels Groups by Name and Time Range
+    #   TEST: Returns X channel name
+    print("\n\n  TEST: \"Channel Groups by Name and Time Range\" returns ASAR.AS01.SHZ channel name")
+    
+    # Hit endpoint
+    service_url = base_url + "/station-definition-service/station-definition/channel-groups/query/names-timerange"
+    request_body1 = {
+        "channelGroupNames": ["AS01"],
+        "startTime": startTime,
+        "endTime": endTime
+    }
+    
+    chans = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(chans) !=0 and chans[0]['channels'][0]['name'] == "ASAR.AS01.SHZ":
+        print("    PASS: Returned ASAR.AS01.SHZ channel name")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Channels by Name
+    #   TEST: Returns X channels
+    print("\n\n  TEST: \"Channels by Name\" returns 1 channel")
+    
+    # Hit endpoint
+    service_url = base_url + "/station-definition-service/station-definition/channels/query/names"
+    request_body1 = {
+        "channelNames": [ "ASAR.AS01.SHZ"],
+        "effectiveTime": startTime
+    }
+    chans = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(chans) == 1:
+        print("    PASS: Returned 1 channel")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Channels by Name and Time Range
+    #   TEST: Returns X channels
+    print("\n\n  TEST: \"Channels by Name and Time Range\" returns 1 channel")
+    
+    # Hit endpoint
+    service_url = base_url + "/station-definition-service/station-definition/channels/query/names-timerange"
+    request_body1 = {
+        "channelNames": ["ASAR.AS01.SHZ"],
+        "startTime": startTime,
+        "endTime": endTime
+    }
+    chans = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(chans) == 1:
+        print("    PASS: Returned 1 channel")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Station Change Times
+    #   TEST: Returns X change times
+    print("\n\n  TEST: \"Find Station Change Times\" returns 7 change times")
+    
+    # Hit endpoint
+    service_url = base_url + "/station-definition-service/station-definition/stations/query/change-times"
+    request_body1 = {
+      "station" : {"name":"ARCES"},
+      "startTime": startTime,
+      "endTime": endTime
+    }
+    cts = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(cts) == 7:
+        print("    PASS: Returned 7 change times")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Response by ID
+    #   TEST: Returns X responses
+    print("\n\n  TEST: \"Find Responses by ID\" returns 1 response")
+    
+    # Hit endpoint
+    service_url = base_url + "/station-definition-service/station-definition/response/query/ids"
+    request_body1 = '''
+    {
+        "effectiveTime": "2019-01-05T19:25:00Z",
+        "responseIds": [
+            "09c32c1e-aca1-3559-bf33-175d468f39f4"
+        ]
+    }
+    '''
+    request_body1 = json.loads(request_body1)
+    resps = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(resps) == 1:
+        print("    PASS: Returned 1 expected response")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # ENDPOINT: Find Response by ID and Time Range
+    #   TEST: Returns X responses
+    print("\n\n  TEST: \"Find Responses by Response ID and Time Range\" returns 1 response")
+    
+    # Hit endpoint
+    service_url = base_url + "/station-definition-service/station-definition/response/query/ids-timerange"
+    request_body1 = '''
+    {
+        "effectiveTime": "2019-01-05T19:25:00Z",
+        "responseIds": [
+            "09c32c1e-aca1-3559-bf33-175d468f39f4"
+        ],
+        "startTime": "2019-01-05T19:25:00Z",
+        "endTime": "2019-01-05T19:29:00Z"
+    }
+    '''
+    request_body1 = json.loads(request_body1)
+    resps = requests.post(service_url, json=request_body1, headers=headers).json()
+    
+    # Test 
+    if len(resps) == 1:
+        print("    PASS: Returned 1 expected response")
+        testpass += 1
+    else:
+        print("    FAIL")
+        testfail += 1
+    
+    ###############################################################################
+    # Results
+    ###############################################################################
+    print("\n\n###########################################")
+    print("RESULTS:")
+    print("  PASS = {}/{}".format(testpass, testpass+testfail))
+    
+    print("  FAIL = {}/{}".format(testfail, testpass+testfail))
+
+
+#------------------------------------------------------------------------
+def run(command: str, print_output: bool = False) -> tuple[int, str, str]:
+    """
+    Execute the specified command and return when the execution is complete.
+
+    Args:
+        command (str): A shell command to run.
+        print_output (bool, optional): Enable printing of stdout and stderr
+            immediately. Defaults to False.
+
+    Returns:
+        tuple: Return code, stdout, and stderr of the command
+
+    """
+    cmd = subprocess.Popen(
+        command,
+        shell=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        stdin=subprocess.PIPE
+    )
+    out, err = cmd.communicate(input=None)
+    out = out.decode()
+    err = err.decode()
+
+    if print_output:
+        print(out)
+        if len(err) > 0:
+            print(err)
+
+    return cmd.returncode, out, err
+
+
+def run_json_command(command):
+    """
+    Run a command that produces JSON output
+    and return the result as a dictionary.
+    """
+    result = None
+    try:
+        cmd = subprocess.Popen(
+            command.split(),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            stdin=subprocess.PIPE
+        )
+        out, err = cmd.communicate()
+        out = out.decode()
+        err = err.decode()
+
+        if cmd.returncode != 0:
+            print(
+                f"ERROR: '{ command.split()[0] }' returned { cmd.returncode }."
+            )
+            print(out)
+            console.out(f'[yellow]{err}')
+            return None
+
+        result = json.loads(out)
+    except Exception as ex:
+        print(ex)
+        sys.exit(1)
+
+    return result
+
+
+def get_args() -> argparse.Namespace:
+    """
+    Get command-line arguments.
+
+    Returns:
+        argparse.Namespace: A namespace of command line arguments
+
+    """
+
+    description = """
+description:
+  gms-curls-validate-sb executes curl commands for installed SB instances.
+  The deployment name must be provided.
+  The cluster name can be determined by running kubeconfig.
+  Curl commands can be run at various sites.
+    """
+
+    parser = ArgumentParser(
+        description=description,
+        formatter_class=RawDescriptionHelpFormatter
+    )
+
+    parser.add_argument(
+        '-n',
+        '--name',
+        help="Name of the deployment."
+    )
+
+    args = parser.parse_args()
+
+    return args
+
+
+def get_instance_info(name):
+    """
+    Gather a dictionary of information about a named instance.
+    """
+    summary = run_json_command(f"helm list --all -n { name } --output json")
+
+    if not summary:
+        return None
+
+    instance = {}
+    instance['name'] = summary[0]['name']
+    instance['status'] = summary[0]['status']
+    instance['updated'] = summary[0]['updated']
+
+    return instance
+
+
+def get_ingress_domain_url(instance_name: str) -> str:
+    """
+    Use ``gmskube ingress`` to get the ingress URL for the
+    ``user-manager-service``, which is common to various instance types.
+
+    Args:
+        instance_name:  The name of the instance.
+
+    Raises:
+        RuntimeError:  If something goes wrong with ``gmskube ingress``.
+
+    Returns:
+        Returns the URL through the port (which is appended to domain
+        via ":<port_number>"), stripping off anything following
+    """
+
+    ingress_url = ""
+    _, out, _ = run(f"gmskube ingress {instance_name}")
+
+    for line in out.splitlines():
+        if "user-manager-service" in line:
+            ingress_url = line.split()[1]
+
+    if ingress_url == "":
+        raise RuntimeError(
+            "Unable to get the ingress URL for the "
+            "`user-manager-service`."
+        )
+
+    return re.search(r"^(https://.*:.*)/.*$", ingress_url).group(1)
+
+
+##################### MAIN #######################
+if __name__ == "__main__":
+    main()
+ 

@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui waveform masking util useCreateProcessingMasksFromChannelSegment creates processing masks 1`] = `
+{
+  "channel": {
+    "canonicalName": "PDAR.PD01.SHZ/masked/0501421b22b559405b02a551b38508334a9c51af6ea3c20b524f93a7501eb9f4",
+    "channelBandType": "SHORT_PERIOD",
+    "channelDataType": "SEISMIC",
+    "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+    "channelOrientationCode": "Z",
+    "channelOrientationType": "VERTICAL",
+    "configuredInputs": [
+      {
+        "effectiveAt": 1636503404,
+        "name": "PDAR.PD01.SHZ",
+      },
+    ],
+    "description": "Raw Channel created from ReferenceChannel 2fabc2d3-858b-3e85-9f47-e2ee72060f0b with version d767395c-850e-36f8-a6f2-a1c7398440e4 Masked samples removed.",
+    "effectiveAt": 1636503404,
+    "effectiveForRequestTime": 1636503405,
+    "effectiveUntil": 1660701599.984,
+    "location": {
+      "depthKm": 0.0381,
+      "elevationKm": 2.192,
+      "latitudeDegrees": 42.7765,
+      "longitudeDegrees": -109.58314,
+    },
+    "name": "PDAR.PD01.SHZ/masked/0501421b22b559405b02a551b38508334a9c51af6ea3c20b524f93a7501eb9f4",
+    "nominalSampleRateHz": 20,
+    "orientationAngles": {
+      "horizontalAngleDeg": -1,
+      "verticalAngleDeg": 0,
+    },
+    "processingDefinition": {
+      "appliedQcSegmentCategoryAndTypes": [
+        {
+          "category": "ANALYST_DEFINED",
+          "type": "AGGREGATE",
+        },
+      ],
+      "maskedSegmentMergeThreshold": 50,
+      "processingOperation": "EVENT_BEAM",
+      "taperDefinition": {
+        "taperFunction": "COSINE",
+        "taperLengthSamples": 100,
+      },
+    },
+    "processingMetadata": {
+      "CHANNEL_GROUP": "PD01",
+    },
+    "response": undefined,
+    "station": {
+      "effectiveAt": undefined,
+      "name": "PDAR",
+    },
+    "units": "NANOMETERS_PER_COUNT",
+  },
+  "processingMasks": [
+    {
+      "appliedToRawChannel": {
+        "name": "PDAR.PD01.SHZ",
+      },
+      "effectiveAt": 1606818240,
+      "endTime": 1636503704,
+      "id": 123456789,
+      "maskedQcSegmentVersions": [
+        {
+          "category": "ANALYST_DEFINED",
+          "channels": [
+            {
+              "effectiveAt": 1636503404,
+              "name": "PDAR.PD01.SHZ",
+            },
+          ],
+          "createdBy": "User 1",
+          "discoveredOn": undefined,
+          "endTime": 1636503704,
+          "id": {
+            "effectiveAt": 0,
+            "parentQcSegmentId": "qcSegmentTestId",
+          },
+          "rationale": "",
+          "rejected": false,
+          "stageId": undefined,
+          "startTime": 1636503404,
+          "type": "AGGREGATE",
+        },
+      ],
+      "processingOperation": "EVENT_BEAM",
+      "startTime": 1636503404,
+    },
+  ],
+}
+`;

@@ -1,0 +1,17 @@
+# gmskube specific environment
+# Any dependencies added here should also be added to the combined environment file in python/gms-test-environment.yml
+#
+# After making any changes to this file, a clean gmskube environment needs to be created, and the lock file regenerated:
+# Run the script:
+# ./create-python-lock.sh
+#
+
+name: gmskube
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.13
+  - python-kubernetes=29.0.0
+  - pyyaml=6.0.1
+  - requests=2.31.0
+  - rich=13.7.0

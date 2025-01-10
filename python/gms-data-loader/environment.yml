@@ -1,0 +1,16 @@
+# gms-data-loader specific environment
+# Any dependencies added here should also be added to the combined environment file in python/gms-test-environment.yml
+#
+# After making any changes to this file, a clean gms-data-loader environment needs to be created, and the lock file regenerated.
+# Run the script:
+# ./create-python-lock.sh
+#
+
+name: gms-data-loader
+channels:
+  - conda-forge
+dependencies:
+  - minio=7.2.3
+  - python=3.10.13
+  - pyyaml=6.0.1
+  - requests=2.31.0

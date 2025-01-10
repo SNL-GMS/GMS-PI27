@@ -1,0 +1,85 @@
+{
+    "name": "lpaz-default-b-h-z-p-filter",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "LPAZ"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelBand",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "B"
+            ],
+            "priority": 80
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelInstrument",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "H"
+            ],
+            "priority": 70
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelOrientation",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "Z"
+            ],
+            "priority": 60
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "phase",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "P"
+            ],
+            "priority": 50
+        }
+    ],
+    "parameters": {
+        "filterDefinitionsForDistanceRangesByUsage": {
+            "DETECTION": [
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 0,
+                        "maxDistanceDeg": 10
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.5 1.5 3 BP non-causal"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

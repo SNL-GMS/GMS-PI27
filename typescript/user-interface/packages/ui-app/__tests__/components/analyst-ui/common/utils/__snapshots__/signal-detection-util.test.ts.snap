@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`can get use signal detection utils and get expected results getChannelSegmentStringForCurrentHypothesis 1`] = `"ASAR.beam.SHZ/beam,fk,coherent/steer,az_90.142deg,slow_7.122s_per_deg/06c0cb24-ab8f-3853-941d-bdf5e73a51b4.1636503404.1636503404.1636503404.1636503704"`;
+
+exports[`can get use signal detection utils and get expected results getSignalDetectionAnalysisWaveformChannelName 1`] = `"ASAR.beam.SHZ/beam,fk,coherent/steer,az_90.142deg,slow_7.122s_per_deg/06c0cb24-ab8f-3853-941d-bdf5e73a51b4"`;
+
+exports[`can get use signal detection utils and get expected results getSignalDetectionChannelName 1`] = `"ASAR.beam.SHZ/beam,fk,coherent/steer,az_90.142deg,slow_7.122s_per_deg/06c0cb24-ab8f-3853-941d-bdf5e73a51b4"`;

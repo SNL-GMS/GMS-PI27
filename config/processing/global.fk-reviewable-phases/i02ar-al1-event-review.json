@@ -1,0 +1,36 @@
+{
+    "name": "i02ar-al1-event-review",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "I02AR"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "activity",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "AL1 Event Review"
+            ],
+            "priority": 80
+        }
+    ],
+    "parameters": {
+        "phases": [
+            "Iw",
+            "It",
+            "Is"
+        ]
+    }
+}

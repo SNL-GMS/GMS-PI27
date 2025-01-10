@@ -1,0 +1,77 @@
+plugins {
+    id('java')
+    alias(libs.plugins.org.springframework.boot)
+    id('com.google.cloud.tools.jib')
+}
+
+dependencies {
+
+
+    // Frameworks configuration and services
+    implementation project(':derived-channel-coi')
+    implementation project(':frameworks-service-generator')
+    implementation project(':event-coi')
+    implementation project(':frameworks-configuration-repository')
+    implementation project(':frameworks-control')
+    implementation project(':java-utilities')
+    implementation project(':frameworks-osd-commonobjects')
+    implementation project(':signal-detection-coi')
+    implementation project(':signal-detection-api')
+    implementation project(':signal-enhancement-api')
+    implementation project(':signal-enhancement-configuration')
+    implementation project(':signal-detection-accessor')
+    implementation project(':signal-detection-database-connector')
+    implementation project(':signal-enhancement-coi')
+    implementation project(':station-definition-api')
+    implementation project(':station-definition-repository')
+    implementation project(':station-definition-accessor')
+    implementation project(':station-definition-converter')
+    implementation project(':caching-utils')
+    implementation project(':waveform-bridge-repository')
+    implementation project(':waveform-accessor')
+    implementation project(':waveform-api')
+
+    implementation project(':feature-prediction-utilities')
+    implementation (project(':workflow-manager'))
+    implementation project(':workflow-coi')
+    implementation project(':spring-framework-utilities')
+    implementation project(':common-coi-types')
+
+    // Spring and hibernate dependencies
+    implementation libs.org.springframework.boot.spring.boot.starter.actuator
+    implementation libs.org.springframework.boot.spring.boot.starter.web
+    implementation libs.org.springdoc.springdoc.openapi.starter.webmvc.ui
+    implementation libs.org.apache.commons.commons.lang3
+
+    // Spring web and spring doc dependencies
+    implementation libs.org.msgpack.jackson.dataformat.msgpack
+    implementation libs.com.fasterxml.jackson.dataformat.jackson.dataformat.yaml
+
+    implementation libs.org.apache.ignite.ignite.core
+    implementation libs.org.apache.ignite.ignite.slf4j
+
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    //db and oracle
+    implementation project(':spring-persistence-oracle')
+
+    //logging
+    runtimeOnly libs.net.logstash.logback.logstash.logback.encoder
+
+    // unit testing dependencies
+    testImplementation 'org.mockito:mockito-core'
+    testImplementation 'org.mockito:mockito-junit-jupiter'
+    testImplementation libs.org.springframework.boot.spring.boot.starter.test
+    testImplementation project(':spring-framework-utilities')
+    testImplementation project(':test-utils')
+
+
+    testImplementation(testFixtures(project(':derived-channel-coi')))
+    testImplementation(testFixtures(project(':event-coi')))
+    testImplementation(testFixtures(project(':signal-detection-coi')))
+    testImplementation(testFixtures(project(':signal-enhancement-coi')))
+    testImplementation(testFixtures(project(':signal-enhancement-configuration')))
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':waveform-coi')))
+}

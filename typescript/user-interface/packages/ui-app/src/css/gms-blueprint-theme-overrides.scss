@@ -1,0 +1,213 @@
+$bp5-intent-primary: var(--gms-input-highlight, $gms-input-highlight);
+$bp5-intent-success: $gms-good;
+$bp5-intent-warning: $gms-warning;
+$bp5-intent-danger: $gms-strong-warning;
+
+$pt-app-background-color: var(--gms-background, $gms-background);
+$pt-dark-app-background-color: var(--gms-background, $gms-background);
+$pt-text-color: var(--gms-main, $gms-main);
+$pt-dark-text-color: var(--gms-main, $gms-main);
+
+$pt-text-color-muted: var(--gms-prominent, $gms-prominent);
+$pt-dark-text-color-muted: var(--gms-prominent, $gms-prominent);
+
+$pt-text-color-disabled: var(--gms-soft, $gms-soft);
+$pt-dark-text-color-disabled: var(--gms-soft, $gms-soft);
+
+$pt-heading-color: var(--gms-main, $gms-main);
+$pt-dark-heading-color: var(--gms-main, $gms-main);
+
+$pt-icon-color: var(--gms-prominent, $gms-prominent);
+$pt-dark-icon-color: var(--gms-prominent, $gms-prominent);
+
+$pt-icon-color-hover: var(--gms-main, $gms-main);
+$pt-dark-icon-color-hover: var(--gms-main, $gms-main);
+
+$pt-icon-color-disabled: var(--gms-soft, $gms-soft);
+$pt-dark-icon-color-disabled: var(--gms-soft, $gms-soft);
+
+$pt-icon-color-selected: var(--gms-main, $gms-main);
+$pt-dark-icon-color-selected: var(--gms-main, $gms-main);
+
+$pt-divider-black: var(--gms-prominent, $gms-prominent);
+$pt-dark-divider-black: var(--gms-prominent, $gms-prominent);
+$pt-dark-divider-white: var(--gms-prominent, $gms-prominent);
+
+$pt-code-text-color: var(--gms-main, $gms-main);
+$pt-dark-code-text-color: var(--gms-main, $gms-main);
+
+$pt-code-background-color: var(--gms-prominent-background, $gms-prominent-background);
+
+@import '@blueprintjs/core/lib/css/blueprint.css';
+@import '@blueprintjs/datetime/lib/css/blueprint-datetime.css';
+@import '@blueprintjs/datetime2/lib/css/blueprint-datetime2.css';
+
+.bp5-dark .bp5-menu,
+.bp5-dark .bp5-dialog-header,
+.bp5-drawer.bp5-dark,
+.bp5-dark .bp5-drawer {
+  background: var(--gms-popover-background, $gms-popover-background);
+  color: var(--gms-main, $gms-main);
+}
+
+.bp5-dark .bp5-datepicker {
+  background-color: rgba(17, 20, 24, 0.3);
+}
+
+.bp5-dark .bp5-html-select select,
+.bp5-dark .bp5-select select {
+  background-color: var(--gms-button, $gms-button);
+  &:hover {
+    background-color: var(--gms-button-hover, $gms-button-hover);
+  }
+}
+
+.bp5-dark .bp5-button:not([class*='bp5-intent-']) {
+  color: var(--gms-main, $gms-main);
+  box-shadow: none;
+}
+
+.bp5-control input:checked ~ .bp5-control-indicator {
+  color: var(--gms-main, $gms-main);
+}
+
+.bp5-dark .bp5-control {
+  color: var(--gms-main, $gms-main);
+}
+
+.bp5-tooltip .bp5-popover-content,
+.bp5-tooltip .bp5-heading {
+  color: var(--gms-main, $gms-main);
+}
+
+.bp5-tooltip .bp5-popover-content {
+  background: var(--gms-popover-background, $gms-popover-background);
+}
+
+.bp5-non-ideal-state {
+  & > * {
+    margin-bottom: 0.5em;
+    user-select: text;
+  }
+}
+
+.bp5-non-ideal-state-visual .bp5-icon svg path {
+  stroke: currentColor;
+}
+
+.gms-light-mode .bp5-non-ideal-state-visual .bp5-icon svg {
+  fill-opacity: 35%;
+}
+
+.gms-light-mode .bp5-non-ideal-state-visual .bp5-icon svg path {
+  stroke-opacity: 70%;
+}
+
+.bp5-popover.bp5-dark .bp5-popover-content,
+.bp5-popover.bp5-dark .bp5-heading,
+.bp5-dark .bp5-popover .bp5-popover-content,
+.bp5-dark .bp5-popover .bp5-heading {
+  color: var(--gms-main, $gms-main);
+}
+
+.bp5-dark .bp5-popover .bp5-popover-content,
+.bp5-popover.bp5-dark .bp5-popover-content {
+  background: var(--gms-popover-background, $gms-popover-background);
+  color: var(--gms-main, #f6f7f9);
+}
+
+.bp5-card.bp5-dark,
+.bp5-dark .bp5-card {
+  background: var(--gms-prominent-background, $gms-prominent-background);
+  color: var(--gms-main, #f6f7f9);
+}
+
+.gms-light-mode {
+  .bp5-dark .bp5-menu-divider,
+  .bp5-dark .bp5-menu-header {
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+}
+
+.bp5-tooltip.bp5-dark .bp5-popover-content,
+.bp5-dark .bp5-tooltip .bp5-popover-content,
+.bp5-dark .bp5-tooltip .bp5-heading,
+.bp5-tooltip.bp5-dark .bp5-heading {
+  background: var(--gms-tooltip-background, #e5e8eb);
+  color: var(--gms-tooltip-foreground, var(--gms-main-inverted, $gms-main-inverted));
+  .bp5-control {
+    background: var(--gms-tooltip-background, #e5e8eb);
+    color: var(--gms-tooltip-foreground, var(--gms-main-inverted, $gms-main-inverted));
+  }
+}
+
+.bp5-tooltip p {
+  max-width: 44ch;
+}
+
+.bp5-dialog-footer {
+  display: block;
+}
+
+// Expects minimal footer design
+.bp5-dialog-body + .bp5-dialog-footer {
+  margin-top: 0; // too much space otherwise
+  border-top: 1px solid var(--gms-popover-background, gray);
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  box-shadow:
+    0 -3px 6px rgba(0, 0, 0, 0.1),
+    0 -1px 2px rgba(0, 0, 0, 0.2);
+  .bp5-button-group {
+    justify-content: flex-end;
+  }
+  .bp5-button-group:not(.bp5-minimal) > .button-group__button--left.bp5-button:not(:last-child) {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+/// These rules are a compromise between display when a user has a mouse
+/// and when the system is using overlay scrollbars
+.bp5-dialog-body-scroll-container {
+  padding: 0.8rem 0.5rem;
+  scrollbar-gutter: stable both-sides;
+  overflow-x: hidden;
+}
+
+.bp5-dialog-footer-actions .bp5-button-group {
+  display: flex;
+  align-items: flex-end;
+}
+
+.bp5-timepicker .bp5-timepicker-input {
+  font-family: $gms-mono;
+  font-size: 0.875rem;
+}
+
+.bp5-timepicker.bp5-disabled {
+  opacity: 0.666;
+}
+.bp5-tooltip p:last-child {
+  margin-bottom: 0;
+}
+.bp5-form-group:last-child {
+  margin-bottom: 0;
+}
+
+.bp5-input::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 1px;
+}
+
+// Sticky X button for inputs with scroll
+.bp5-multi-select button.bp5-button {
+  position: sticky;
+  top: 3px;
+}
+
+// Overrides the alert icon to be centered with text
+.bp5-alert-body .bp5-icon {
+  padding-top: 3px;
+}

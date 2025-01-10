@@ -1,0 +1,27 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation project(':frameworks-system-config')
+    implementation project(':java-utilities')
+    implementation project(':station-definition-dao')
+    implementation project(':station-definition-repository')
+    implementation project(':station-definition-accessor')
+    implementation project(':waveform-bridge-repository')
+    implementation project(':qc-mask-accessor')
+    implementation project(':caching-utils')
+    implementation project(':event-coi')
+
+    api project(':waveform-coi')
+    api project(':waveform-api')
+
+    api libs.org.springframework.spring.context
+
+    testImplementation project(':test-utils')
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':waveform-coi')))
+    testImplementation(testFixtures(project(':event-coi')))
+
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+    implementation libs.org.apache.commons.commons.lang3
+}

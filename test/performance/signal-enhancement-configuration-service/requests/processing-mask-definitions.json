@@ -1,0 +1,429 @@
+{
+    "processingOperations": [
+        "EVENT_BEAM"
+    ],
+    "channels": [
+        {
+            "name": "SONM.SONA1.SHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "SONM.SONA2.SHZ",
+            "effectiveAt": "2024-03-17T16:00:00.000Z"
+        },
+        {
+            "name": "SONM.SONA3.SHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "SONM.SONA4.SHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "SONM.SONB1.SHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "SONM.SONB2.SHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "SONM.SONB3.SHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "SONM.SONB4.SHZ",
+            "effectiveAt": "2024-03-17T16:00:00.000Z"
+        },
+        {
+            "name": "SONM.SONB5.SHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "STKA.STKA.BHE",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "STKA.STKA.BHN",
+            "effectiveAt": "2024-03-17T16:00:00.000Z"
+        },
+        {
+            "name": "STKA.STKA.BHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "TGY.TGY.BHE",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "TGY.TGY.BHN",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "TGY.TGY.BHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "TORD.TOA0.BH1",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "TORD.TOA0.BH2",
+            "effectiveAt": "2024-03-17T16:00:00.000Z"
+        },
+        {
+            "name": "TORD.TOA0.BHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "TORD.TOA1.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "TORD.TOA2.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "TORD.TOA3.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "TORD.TOB1.BHZ",
+            "effectiveAt": "2024-03-17T23:17:40.000Z"
+        },
+        {
+            "name": "TORD.TOB2.BHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "TORD.TOB3.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "TORD.TOB4.BHZ",
+            "effectiveAt": "2024-03-17T23:40:00.000Z"
+        },
+        {
+            "name": "TORD.TOB5.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "TORD.TOC1.BHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "TORD.TOC2.BH1",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "TORD.TOC2.BH2",
+            "effectiveAt": "2024-03-17T16:00:00.000Z"
+        },
+        {
+            "name": "TORD.TOC2.BHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "TORD.TOC3.BHZ",
+            "effectiveAt": "2024-03-17T18:34:30.000Z"
+        },
+        {
+            "name": "TORD.TOC4.BH1",
+            "effectiveAt": "2024-03-17T19:29:00.000Z"
+        },
+        {
+            "name": "TORD.TOC4.BH2",
+            "effectiveAt": "2024-03-17T19:30:10.000Z"
+        },
+        {
+            "name": "TORD.TOC4.BHZ",
+            "effectiveAt": "2024-03-17T19:33:20.000Z"
+        },
+        {
+            "name": "TORD.TOC5.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "TORD.TOC6.BH1",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "TORD.TOC6.BH2",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "TORD.TOC6.BHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "TORD.TOC7.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "ULM.ULM.BHE",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "ULM.ULM.BHN",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "ULM.ULM.BHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "USRK.USA0.SHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "USRK.USA0B.BH1",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "USRK.USA0B.BH2",
+            "effectiveAt": "2024-03-17T16:00:00.000Z"
+        },
+        {
+            "name": "USRK.USA0B.BHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "USRK.USA1.SHZ",
+            "effectiveAt": "2024-03-17T16:36:00.000Z"
+        },
+        {
+            "name": "USRK.USA2.SHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "USRK.USA3.SHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "USRK.USB1.SHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "USRK.USB2.SHZ",
+            "effectiveAt": "2024-03-17T16:00:00.000Z"
+        },
+        {
+            "name": "USRK.USB3.SHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "USRK.USB4.SHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "USRK.USB5.SHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "VRAC.VRAC.BHE",
+            "effectiveAt": "2024-03-17T20:15:00.000Z"
+        },
+        {
+            "name": "VRAC.VRAC.BHN",
+            "effectiveAt": "2024-03-17T20:00:00.025Z"
+        },
+        {
+            "name": "VRAC.VRAC.BHZ",
+            "effectiveAt": "2024-03-17T20:15:00.000Z"
+        },
+        {
+            "name": "WRA.WB1.BHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "WRA.WB10.BHE",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "WRA.WB10.BHN",
+            "effectiveAt": "2024-03-17T16:00:00.000Z"
+        },
+        {
+            "name": "WRA.WB10.BHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "WRA.WB2.BHE",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "WRA.WB2.BHN",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "WRA.WB2.BHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "WRA.WB3.BHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "WRA.WB4.BHZ",
+            "effectiveAt": "2024-03-17T16:00:00.000Z"
+        },
+        {
+            "name": "WRA.WB5.BHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "WRA.WB6.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "WRA.WB7.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "WRA.WB8.BHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "WRA.WB9.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "WRA.WC1.BHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "WRA.WC2.BHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "WRA.WC3.BHZ",
+            "effectiveAt": "2024-03-17T16:00:00.000Z"
+        },
+        {
+            "name": "WRA.WC4.BHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "WRA.WR1.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "WRA.WR10.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "WRA.WR2.BHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "WRA.WR3.BHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "WRA.WR4.BHZ",
+            "effectiveAt": "2024-03-17T16:00:00.000Z"
+        },
+        {
+            "name": "WRA.WR5.BHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "WRA.WR6.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "WRA.WR7.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "WRA.WR8.BHE",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "WRA.WR8.BHN",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "WRA.WR8.BHZ",
+            "effectiveAt": "2024-03-17T16:00:00.000Z"
+        },
+        {
+            "name": "WRA.WR9.BHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "WSAR.WSAR.BH1",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "WSAR.WSAR.BH2",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "WSAR.WSAR.BHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "YAK.YAK.BHE",
+            "effectiveAt": "2024-03-17T20:00:00.025Z"
+        },
+        {
+            "name": "YAK.YAK.BHN",
+            "effectiveAt": "2024-03-17T20:15:00.000Z"
+        },
+        {
+            "name": "YAK.YAK.BHZ",
+            "effectiveAt": "2024-03-17T20:00:00.025Z"
+        },
+        {
+            "name": "YKA.YKAB0.SHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "YKA.YKAB1.SHZ",
+            "effectiveAt": "2024-03-17T16:00:00.000Z"
+        },
+        {
+            "name": "YKA.YKAB2.SHZ",
+            "effectiveAt": "2024-03-17T10:00:00.000Z"
+        },
+        {
+            "name": "YKA.YKAB3.SHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "YKA.YKAB4.SHZ",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "YKA.YKAB6.SHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        },
+        {
+            "name": "YKA.YKAB7.SHZ",
+            "effectiveAt": "2024-03-17T22:00:00.000Z"
+        }
+    ],
+    "phaseTypes": [
+        "Iw",
+        "Lg",
+        "P",
+        "PKP",
+        "PKPab",
+        "PKPbc",
+        "PKPdf",
+        "PcP",
+        "Pg",
+        "Pn",
+        "Rg",
+        "S",
+        "ScP",
+        "Sn",
+        "pP",
+        "sP",
+        "N",
+        "I",
+        "L",
+        "NP"
+    ]
+}

@@ -1,0 +1,34 @@
+/// Blueprint Table
+.core-table__container {
+  .bp5-table-header .bp5-table-column-name {
+    height: 100%;
+  }
+  .bp5-table-header .bp5-table-header-content {
+    position: absolute;
+    margin-left: 24px;
+    top: 0;
+    display: inline-flex;
+  }
+  .core-table__column-header {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 25px);
+    & .bp5-icon.bp5-intent-primary {
+      color: var(--core-main, var(--gms-main, $core-main));
+    }
+    .force-right {
+      margin-left: auto;
+      margin-right: 0.5em;
+    }
+  }
+
+  /// Tooltips
+  .bp5-table-cell .bp5-popover-target {
+    width: 100%;
+  }
+}
+.core-table__column-header--default {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}

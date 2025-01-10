@@ -1,0 +1,43 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api project(':bridge-utilities')
+    api project(':signal-detection-api')
+    api project(':spring-persistence-oracle')
+    api project(':structured-logging')
+
+
+    //This dependency is transitive to enforce the autowired implementation, and can be removed in the future with
+    //better autowiring configuration
+    api project(':station-definition-accessor')
+
+    implementation project(':signal-detection-coi')
+    implementation project(':signal-detection-dao')
+    implementation project(':signal-detection-database-connector')
+    implementation project(':signal-enhancement-api')
+    implementation project(':signal-enhancement-coi')
+    implementation project(':station-definition-api')
+    implementation project(':station-definition-converter')
+
+    implementation project(':caching-utils')
+    implementation project(':waveform-api')
+    implementation project(':spring-framework-utilities')
+
+    // WebClient
+    implementation project(':frameworks-configuration-commonobjects')
+    implementation project(':frameworks-control')
+    implementation project(':workflow-coi')
+
+    // Google AutoValue
+    api libs.com.google.guava.guava
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+
+    testImplementation libs.io.projectreactor.reactor.test
+    testImplementation project(':test-utils')
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':signal-detection-coi')))
+    testImplementation(testFixtures(project(':waveform-coi')))
+
+}

@@ -1,0 +1,96 @@
+{
+    "name": "event-INFRA-default",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "beamType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "EVENT"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "IN",
+                "negated": false
+            },
+            "value": [
+                "I02AR",
+                "I02AU",
+                "I03AU",
+                "I04AU",
+                "I05AU",
+                "I06AU",
+                "I07AU",
+                "I08BO",
+                "I09BR",
+                "I10CA",
+                "I11CV",
+                "I13CL",
+                "I17CI",
+                "I18DK",
+                "I19DJ",
+                "I20EC",
+                "I21FR",
+                "I22FR",
+                "I23FR",
+                "I24FR",
+                "I27DE",
+                "I30JP",
+                "I31KZ",
+                "I32KE",
+                "I33MG",
+                "I34MN",
+                "I35NA",
+                "I36NZ",
+                "I37NO",
+                "I39PW",
+                "I40PG",
+                "I41PY",
+                "I42PT",
+                "I43RU",
+                "I44RU",
+                "I45RU",
+                "I46RU",
+                "I47ZA",
+                "I48TN",
+                "I49GB",
+                "I50GB",
+                "I51GB",
+                "I53US",
+                "I55US",
+                "I56US",
+                "I57US",
+                "I58US",
+                "I59US",
+                "I60US"
+            ],
+            "priority": 90
+        }
+    ],
+    "parameters": {
+        "leadDuration": "PT1M",
+        "beamDuration": "PT5M",
+        "orientationAngleToleranceDeg": 5.0,
+        "sampleRateToleranceHz": 0.5,
+        "minWaveformsToBeam": 2,
+        "inputChannelGroups": [
+            "*"
+        ],
+        "inputChannels": [
+            "BDF"
+        ],
+        "beamDescriptionParams": {
+            "beamSummation": "COHERENT",
+            "beamType": "FK",
+            "samplingType": "NEAREST_SAMPLE",
+            "twoDimensional": true
+        }
+    }
+}

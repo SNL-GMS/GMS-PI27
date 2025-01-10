@@ -1,0 +1,114 @@
+{
+    "name": "default-filter",
+    "constraints": [
+        {
+            "constraintType": "DEFAULT"
+        }
+    ],
+    "parameters": {
+        "filterDefinitionsForDistanceRangesByUsage": {
+            "ONSET": [
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 0,
+                        "maxDistanceDeg": 3
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "2.0 5.0 3 BP causal"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 3,
+                        "maxDistanceDeg": 180
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.4 3.5 3 BP causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "DETECTION": [
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 0,
+                        "maxDistanceDeg": 3
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "2.0 5.0 3 BP causal"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 3,
+                        "maxDistanceDeg": 180
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.5 4.0 3 BP causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "FK": [
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 0,
+                        "maxDistanceDeg": 3
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "AR N2 0.0 10.0 5 causal"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 3,
+                        "maxDistanceDeg": 180
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "AR N 0.0 10.0 5 causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "AMPLITUDE": [
+                {
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "PM 0.0167 0.0667 100 LQ"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

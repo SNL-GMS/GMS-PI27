@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`map hooks call useMapNonPreferredEventData 1`] = `[]`;
+
+exports[`map hooks call useMapPreferredEventData 1`] = `
+[
+  {
+    "activeAnalysts": [],
+    "confidenceSemiMajorAxis": undefined,
+    "confidenceSemiMajorTrend": undefined,
+    "confidenceSemiMinorAxis": undefined,
+    "conflict": false,
+    "coverageSemiMajorAxis": undefined,
+    "coverageSemiMajorTrend": undefined,
+    "coverageSemiMinorAxis": undefined,
+    "deleted": false,
+    "depthKm": {
+      "uncertainty": null,
+      "value": 3.3,
+    },
+    "eventFilterOptions": [
+      "After",
+    ],
+    "geoOverlappingEvents": 2,
+    "id": "eventID",
+    "isActionTarget": false,
+    "isOpen": false,
+    "isUnqualifiedActionTarget": false,
+    "latitudeDegrees": 1.1,
+    "longitudeDegrees": 2.2,
+    "magnitudeMb": 1.2,
+    "magnitudeMl": undefined,
+    "magnitudeMs": undefined,
+    "numberAssociated": 1,
+    "numberDefining": 0,
+    "observationsStandardDeviation": undefined,
+    "preferred": true,
+    "region": "TBD",
+    "rejected": false,
+    "status": null,
+    "time": {
+      "uncertainty": null,
+      "value": 3600,
+    },
+    "unsavedChanges": false,
+  },
+  {
+    "activeAnalysts": [],
+    "confidenceSemiMajorAxis": undefined,
+    "confidenceSemiMajorTrend": undefined,
+    "confidenceSemiMinorAxis": undefined,
+    "conflict": false,
+    "coverageSemiMajorAxis": undefined,
+    "coverageSemiMajorTrend": undefined,
+    "coverageSemiMinorAxis": undefined,
+    "deleted": false,
+    "depthKm": {
+      "uncertainty": null,
+      "value": 3.3,
+    },
+    "eventFilterOptions": [
+      "After",
+    ],
+    "geoOverlappingEvents": 2,
+    "id": "eventID",
+    "isActionTarget": false,
+    "isOpen": false,
+    "isUnqualifiedActionTarget": false,
+    "latitudeDegrees": 1.1,
+    "longitudeDegrees": 2.2,
+    "magnitudeMb": 1.2,
+    "magnitudeMl": undefined,
+    "magnitudeMs": undefined,
+    "numberAssociated": 1,
+    "numberDefining": 0,
+    "observationsStandardDeviation": undefined,
+    "preferred": true,
+    "region": "TBD",
+    "rejected": false,
+    "status": null,
+    "time": {
+      "uncertainty": null,
+      "value": 3600,
+    },
+    "unsavedChanges": false,
+  },
+]
+`;

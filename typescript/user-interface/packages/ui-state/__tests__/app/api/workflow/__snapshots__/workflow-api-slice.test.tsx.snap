@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`workflow api slice able to update stage intervals 1`] = `
+[
+  {
+    "name": "AL1",
+    "value": [
+      {
+        "activityIntervals": [
+          {
+            "activeAnalysts": [
+              "larry",
+              "moe",
+              "curly",
+            ],
+            "comment": "interval example",
+            "endTime": 1622057187,
+            "intervalId": {
+              "definitionId": {
+                "name": "Event Review",
+              },
+              "startTime": 1622053587,
+            },
+            "modificationTime": 1622057667,
+            "percentAvailable": 100,
+            "processingEndTime": 1622057547,
+            "processingStartTime": 1622057487,
+            "stageName": "AL1",
+            "status": "IN_PROGRESS",
+            "storageTime": 1622057607,
+          },
+        ],
+        "comment": "interval example",
+        "endTime": 1622057187,
+        "intervalId": {
+          "definitionId": {
+            "name": "AL1",
+          },
+          "startTime": 1622053587,
+        },
+        "modificationTime": 1622057667,
+        "percentAvailable": 100,
+        "processingEndTime": 1622057547,
+        "processingStartTime": 1622057487,
+        "stageMetrics": {
+          "associatedSignalDetectionCount": 34,
+          "eventCount": 21,
+          "maxMagnitude": 8,
+          "unassociatedSignalDetectionCount": 55,
+        },
+        "stageMode": "INTERACTIVE",
+        "status": "IN_PROGRESS",
+        "storageTime": 1622057607,
+      },
+      {
+        "activityIntervals": [
+          {
+            "activeAnalysts": [
+              "larry",
+              "moe",
+              "curly",
+            ],
+            "comment": "interval example",
+            "endTime": 1622057187,
+            "intervalId": {
+              "definitionId": {
+                "name": "Event Review",
+              },
+              "startTime": 1622053587,
+            },
+            "modificationTime": 1622057667,
+            "percentAvailable": 100,
+            "processingEndTime": 1622057547,
+            "processingStartTime": 1622057487,
+            "stageName": "AL1",
+            "status": "IN_PROGRESS",
+            "storageTime": 1622057607,
+          },
+        ],
+        "comment": "interval example",
+        "endTime": 1622057192,
+        "intervalId": {
+          "definitionId": {
+            "name": "AL1",
+          },
+          "startTime": 1622053592,
+        },
+        "modificationTime": 1622057667,
+        "percentAvailable": 100,
+        "processingEndTime": 1622057547,
+        "processingStartTime": 1622057487,
+        "stageMetrics": {
+          "associatedSignalDetectionCount": 34,
+          "eventCount": 21,
+          "maxMagnitude": 8,
+          "unassociatedSignalDetectionCount": 55,
+        },
+        "stageMode": "INTERACTIVE",
+        "status": "IN_PROGRESS",
+        "storageTime": 1622057607,
+      },
+    ],
+  },
+]
+`;
+
+exports[`workflow api slice able to use cleanup stage intervals 1`] = `null`;
+
+exports[`workflow api slice get stage interval params 1`] = `
+{
+  "all": [
+    {
+      "endTime": 10,
+      "stageIds": [
+        {
+          "name": "test1",
+        },
+        {
+          "name": "test2",
+        },
+      ],
+      "startTime": 5,
+    },
+  ],
+  "current": {
+    "endTime": 10,
+    "stageIds": [
+      {
+        "name": "test1",
+      },
+      {
+        "name": "test2",
+      },
+    ],
+    "startTime": 5,
+  },
+  "error": undefined,
+}
+`;

@@ -1,0 +1,46 @@
+{
+    "name": "mmai-S",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "MMAI"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "phase",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "S"
+            ],
+            "priority": 90
+        }
+    ],
+    "parameters": {
+        "inputChannels": [
+            {
+                "name": "MMAI.MMA0B.BH1"
+            },
+            {
+                "name": "MMAI.MMA0B.BH2"
+            }
+        ],
+        "leadDuration": "PT60S",
+        "duration": "PT5M",
+        "sampleRateToleranceHz": 0.1,
+        "locationToleranceKm": 0.1,
+        "orientationAngleToleranceDeg": 0.1,
+        "twoDimensional": true,
+        "samplingType": "NEAREST_SAMPLE"
+    }
+}

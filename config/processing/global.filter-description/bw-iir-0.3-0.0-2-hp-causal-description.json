@@ -1,0 +1,26 @@
+{
+    "name": "bw-iir-0.3-0.0-2-hp-causal-description",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "0.3 0.0 2 HP causal Description"
+            ]
+        }
+    ],
+    "parameters": {
+        "comments": "0.3 0.0 2 HP causal ",
+        "causal": true,
+        "filterType": "LINEAR",
+        "lowFrequencyHz": 0.3,
+        "order": 2,
+        "zeroPhase": false,
+        "passBandType": "HIGH_PASS",
+        "linearFilterType": "IIR_BUTTERWORTH"
+    }
+}

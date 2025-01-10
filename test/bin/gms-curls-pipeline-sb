@@ -1,0 +1,706 @@
+#!/usr/bin/env python3
+
+#  gms-curls-pipeline-sb
+
+#  gms-curls-pipeline-sb executes curl commands for installed SB instances.
+#  The instance name must be provided. 
+#  The cluster name can be determined by running kubeconfig. 
+#  Curl commands can be run at various sites.
+
+# Import Python modules
+import argparse
+import json
+import os
+import re
+import requests
+import shutil
+import subprocess
+import sys
+import time
+import yaml
+from argparse import ArgumentParser, RawDescriptionHelpFormatter
+from collections import defaultdict
+from datetime import datetime, timedelta
+from pathlib import Path
+from rich.console import Console
+
+console_kwargs = {"log_path": False}
+if os.getenv("CI"):
+    console_kwargs["force_terminal"] = True
+if os.getenv("RICH_LOG_PATH"):
+    console_kwargs["log_path"] = True
+console = Console(**console_kwargs)
+
+
+##################### MAIN #######################
+def main():
+
+    # -- verify kubectl is available
+    if shutil.which('kubectl') is None:
+        print(
+            "ERROR: 'kubectl' executable not found in PATH."
+            "Please install kubectl."
+        )
+        sys.exit(1)
+    
+    # -- verify helm is available
+    if shutil.which('gmskube') is None:
+        print(
+            "ERROR: 'gmskube' executable not found in PATH."
+            "Please install gmskube."
+        )
+        sys.exit(1)
+    
+    # -- verify KUBECONFIG is set
+    if "KUBECONFIG" not in os.environ:
+        print(
+            "ERROR: Variable 'KUBECONFIG' must be set to "
+            "the kubernetes configuration."
+        )
+        sys.exit(1)
+    
+    if ":" in os.environ["KUBECONFIG"]:
+        msg = (
+            "It looks like your `KUBECONFIG` environment variable points "
+            "to multiple configuration files.  Ensure you run `kubeconfig "
+            "<cluster_name>` to activate a particular cluster, and then "
+            "re-run this script."
+        )
+        raise SystemExit(msg)
+    
+    try:
+        with open(os.environ["KUBECONFIG"]) as file:
+            kubeconfig = yaml.load(file, Loader=yaml.FullLoader)
+            if 'clusters' not in kubeconfig:
+                print(
+                    "ERROR: No clusters defined in file "
+                    f"'{os.environ['KUBECONFIG']}"
+                )
+                sys.exit(1)
+    
+    except FileNotFoundError as e:
+        print(
+            "ERROR: Failed to open KUBECONFIG file "
+            f"'{os.environ['KUBECONFIG']}': {e}"
+        )
+        sys.exit(1)
+    except AttributeError as e:
+        print(f"ERROR: {e.__class__.__name__}: {e}")
+        print(
+            "Did you forget to activate the 'gms' conda environment "
+            "with 'conda activate gms'?"
+        )
+        sys.exit(1)
+    except Exception as e:
+        print(f"ERROR: {e.__class__.__name__}: {e}")
+        sys.exit(1)
+    
+    args = get_args()
+    
+    instance = get_instance_info(args.name)
+    
+    if not instance:
+        print(f"{ args.name } instance not found.")
+        sys.exit(1)
+    
+    # Declare base URL for service requests
+    # This includes instance name, cluster, domain, and port
+    # https://<instance-name>.<cluster>.<???>:<port-number>
+    try:
+        base_url = get_ingress_domain_url(args.name)
+    except RuntimeError:
+        raise RuntimeError("Unable to get domain name.")
+
+    # Declare headers for service requests 
+    headers = {'Accept': 'application/json',
+           'Content-Type': 'application/json'}
+    
+    # Declare standard curl command for service requests
+    # TODO - original command commented out below.  
+    # TODO - get curl_command working in write_file - it isn't interpreted
+    #curl_command = "curl --location '{}' \\\n--header 'Accept: application/json' \\\n--header 'Content-Type: application/json' \\\n--data '{}'" + ".format(service_url, json.dumps(request_body,indent=2))"
+    curl_string = "curl --location '{}' \\\n--header 'Accept: application/json' \\\n--header 'Content-Type: application/json' \\\n--data '{}'"
+    curl_format = ".format(service_url, json.dumps(request_body,indent=2))"
+    curl_command = ("\"" + curl_string + "\"" + curl_format)
+    #print(">>>> curl_command  = >>>> ", curl_command)
+
+    # Declare start/end times, stageName, and channelName for requests
+    # 2 sec range
+    #startTime = "2019-01-05T16:01:48.000Z"
+    #endTime = "2019-01-05T16:01:50.000Z"
+    # 2 min range
+    #startTime = "2019-01-05T16:00:00.000Z"
+    #endTime = "2019-01-05T16:02:00.000Z"
+    # 4 min range - time range updated by PO on 5/3/23
+    startTime = "2019-01-05T19:25:00.000Z"
+    endTime = "2019-01-05T19:29:00.000Z"
+    stageName = "AL1"
+    channelName = "ASAR.AS01.SHZ"
+    
+
+    ###############################################################################
+    # INITIAL QUERY FOR EVENTS WITH DETECTIONS AND SEGMENTS BY TIME
+    #   NEEDED TO GET EVENT HYPOTHESES AND SIGNAL DETECTION HYPOTHESES FOR
+    #   GET FILTER DEFINITIONS BY USAGE FOR SIGNAL DETECTION HYPOTHESES ENDPOINT
+    ###############################################################################
+    
+    # Declare service URL
+    service_url = base_url + "/event-manager-service/event/detections-and-segments/time"
+    
+    # Declare request body
+    request_body = {
+        "stageId": {"name": stageName},
+        "startTime": startTime,
+        "endTime": endTime
+    }
+    
+    # Make a request to the service url
+    eventsWithDetsSegs = requests.post(service_url, json=request_body, headers=headers)
+    eventsWithDetsSegs_response=eventsWithDetsSegs.json()
+    
+    print("###############################################################################")
+    print(" INITIAL QUERY - Find Events With Detections And Segments By Time")
+    print("###############################################################################")
+    print("  Service URL: {}".format(service_url))
+    print()
+    print("  Response: {} - {}".format(eventsWithDetsSegs.status_code,eventsWithDetsSegs.reason))
+    print()
+
+    if (eventsWithDetsSegs.status_code != 200):
+        sys.exit("  ERROR: Endpoint failure")
+    if (len(eventsWithDetsSegs_response['events']) == 0):
+        sys.exit("  ERROR: No events found for {} - {}".format(startTime,endTime))
+
+    
+    ###############################################################################
+    # INITIAL QUERY FOR CHANNEL SEGMENTS
+    #   NEEDED TO GET CHANNEL SEGMENTS FOR
+    #   GET FILTER DEFINITIONS BY USAGE FOR CHANNEL SEGMENTS ENDPOINT
+    ###############################################################################
+    
+    # Declare service URL
+    service_url = base_url + "/waveform-manager-service/waveform/channel-segment/query/channel-timerange"
+    
+    # Declare request body
+    request_body = {
+        "startTime": startTime,
+        "endTime": endTime,
+        "channels": [{"name": channelName}]
+    }
+    
+    # Make a request to the service url
+    chanSegs = requests.post(service_url, json=request_body, headers=headers)
+    chanSegs_response=chanSegs.json()
+
+    print("\n###############################################################################")
+    print(" INITIAL QUERY - Find Channels Segments By Channel And Time Range")
+    print("###############################################################################")
+    print("  Service URL: {}".format(service_url))
+    print()
+    print("  Response: {} - {}".format(chanSegs.status_code,chanSegs.reason))
+    print()
+
+    if (chanSegs.status_code != 200):
+        sys.exit("  ERROR: Endpoint failure")
+    if (len(chanSegs_response) == 0):
+        sys.exit("  ERROR: No channel segments found for {} - {}".format(startTime,endTime))
+
+    
+    ###############################################################################
+    # INITIAL QUERY FOR CHANNELS
+    #   NEEDED FOR PREDICT FEATURES FOR LOCATION SOLUTION ENDPOINT
+    ###############################################################################
+    
+    # Declare service URL
+    service_url = base_url + "/station-definition-service/station-definition/channels/query/names-timerange"
+    
+    # Declare request body
+    request_body = {
+        "startTime": startTime,
+        "endTime": endTime,
+        "channelNames": [channelName]
+    }
+    
+    # Make a request to the service url
+    chans = requests.post(service_url, json=request_body, headers=headers)
+    chans_response=chans.json()
+
+    # Print out info
+    print("\n###############################################################################")
+    print(" INITIAL QUERY - Find Channels by Name and Time Range")
+    print("###############################################################################")
+    print("  Service URL: {}".format(service_url))
+    print()
+    print("  Response: {} - {}".format(chans.status_code,chans.reason))
+    print()
+    
+    if (chans.status_code != 200):
+        sys.exit("  ERROR: Endpoint failure")
+    if (len(chans_response) == 0):
+        sys.exit("  ERROR: No channels found for {} - {}, channel {}".format(startTime,endTime,channelName))
+    
+
+    ###############################################################################
+    # PIPELINE QUERY FOR FILTER DEFINITIONS BY USAGE FOR SIGNAL DETECTION 
+    #   HYPOTHESES
+    ###############################################################################
+
+    print("\n###############################################################################")
+    print("**** Find Filter Definitions By Usage For Signal Detection Hypotheses")
+    print("###############################################################################")
+    
+    # Pull relevant data from findEventsWithDetectionsAndSegmentsByTime response body
+
+    # Event Hypothesis
+    EH = eventsWithDetsSegs_response['events'][0]['eventHypotheses'][0]
+    # Signal Detection Hypothesis Full
+    SDH = eventsWithDetsSegs_response['signalDetections'][0]['signalDetectionHypotheses'][0]
+    # Signal Detection Hypothesis ID
+    SDH_ID = eventsWithDetsSegs_response['signalDetections'][0]['signalDetectionHypotheses'][0]['id']
+    
+    #---------------------------------------------------
+    # Declare service URL
+    # Note this curl does not reach out to the database but instead retrieves
+    # information from files contained within gms-common/config
+
+    service_url = base_url + "/signal-enhancement-configuration-service/signal-enhancement-configuration/default-filter-definitions-for-signal-detection-hypotheses"
+    print("  Service URL: {}".format(service_url) + " (configuration only)")
+    print()
+    
+    #---------------------------------------------------
+    # Declare request body for fully populated EH and fully populated SDH; make request
+    request_body = {"eventHypothesis": EH, "signalDetectionsHypotheses": [SDH]}
+    filtDefs = requests.post(service_url, json=request_body, headers=headers)
+
+    print("  Response Fully-populated Event + SDH: {} - {}".format(filtDefs.status_code,filtDefs.reason))
+    print()
+
+    if (args.response) or (args.files):
+
+        if args.response:
+            # Print data to stdout 
+            print_curl_data(request_body, "Curl Request Body")
+            print_curl_data(filtDefs.text, "Curl Response")
+
+        if args.files:
+            # Write request_body json file to destination directory
+            request_body_filename = args.files + "/SEC-FiltDefForSDHs-FullSdh+Event_request.txt"
+            write_file("curl --location '{}' \\\n--header 'Accept: application/json' \\\n--header 'Content-Type: application/json' \\\n--data '{}'".format(service_url, json.dumps(request_body,indent=2)), request_body_filename)
+
+            # Write response json file to destination directory
+            response_filename = args.files + "/SEC-FiltDefForSDHs-FullSdh+Event_response.txt"
+            write_file(filtDefs.text, response_filename)
+
+
+    #---------------------------------------------------
+    # Declare request body for fully populated EH and ID-only SDH; make request
+    request_body = {"eventHypothesis": EH, "signalDetectionsHypotheses": [{"id": SDH_ID}]}
+    filtDefs = requests.post(service_url, json=request_body, headers=headers)
+
+    print("  Response Fully-populated Event + ID-only SDH: {} - {}".format(filtDefs.status_code,filtDefs.reason))
+    print()
+
+    if (args.response) or (args.files):
+
+        if args.response:
+            # Print data to stdout 
+            print_curl_data(request_body, "Curl Request Body")
+            print_curl_data(filtDefs.text, "Curl Response")
+
+        if args.files:
+            # Write request_body json file to destination directory
+            request_body_filename = args.files + "/SEC-FiltDefForSDHs-SdhId+Event_request.txt"
+            write_file("curl --location '{}' \\\n--header 'Accept: application/json' \\\n--header 'Content-Type: application/json' \\\n--data '{}'".format(service_url, json.dumps(request_body,indent=2)), request_body_filename)
+
+            # Write response json file to destination directory
+            response_filename = args.files + "/SEC-FiltDefForSDHs-SdhId+Event_response.txt"
+            write_file(filtDefs.text, response_filename)
+
+
+    #---------------------------------------------------
+    # Declare request body for ID-only SDH; make request
+    request_body = {"signalDetectionsHypotheses": [{"id": SDH_ID}]}
+    filtDefs = requests.post(service_url, json=request_body, headers=headers)
+
+    print("  Response ID-only SDH: {} - {}".format(filtDefs.status_code,filtDefs.reason))
+    print()
+
+    if (args.response) or (args.files):
+
+        if args.response:
+            # Print data to stdout 
+            print_curl_data(request_body, "Curl Request Body")
+            print_curl_data(filtDefs.text, "Curl Response")
+
+        if args.files:
+            # Write request_body json file to destination directory
+            request_body_filename = args.files + "/SEC-FiltDefForSDHs-SdhId_request.txt"
+            write_file("curl --location '{}' \\\n--header 'Accept: application/json' \\\n--header 'Content-Type: application/json' \\\n--data '{}'".format(service_url, json.dumps(request_body,indent=2)), request_body_filename)
+
+            # Write response json file to destination directory
+            response_filename = args.files + "/SEC-FiltDefForSDHs-SdhId_response.txt"
+            write_file(filtDefs.text, response_filename)
+
+
+    ###############################################################################
+    # QUERY FOR FILTER DEFINITIONS BY USAGE FOR CHANNEL SEGMENTS
+    ###############################################################################
+
+    print("\n###############################################################################")
+    print("**** Find Filter Definitions By Usage For Channel Segments")
+    print("###############################################################################")
+
+    # Pull relevant data from the findEventsWithDetectionsAndSegmentsByTime and 
+    #   findChannelsSegmentsByChannelAndTimeRange response bodies
+
+    # Event Hypothesis
+    EH = eventsWithDetsSegs_response['events'][0]['eventHypotheses'][0]
+    # Channel Segment Full
+    CS = chanSegs_response[0]
+    # Channel Segment ID
+    CS_ID = chanSegs_response[0]['id']
+    
+    #---------------------------------------------------
+    # Declare service URL
+    # Note this curl does not reach out to the database but instead retrieves
+    # information from files contained within gms-common/config
+
+    service_url = base_url + "/signal-enhancement-configuration-service/signal-enhancement-configuration/default-filter-definitions-for-channel-segments"
+    print("  Service URL: {}".format(service_url) + " (configuration only)")
+    print()
+    
+
+    #---------------------------------------------------
+    # Declare request body for fully populated EH and fully populated ChanSeg; make request
+    request_body = {"eventHypothesis": EH, "channelSegments": [CS]}
+    filtDefs = requests.post(service_url, json=request_body, headers=headers)
+
+    print("  Response Fully-populated Event + ChanSeg: {} - {}".format(filtDefs.status_code,filtDefs.reason))
+    print()
+
+    if (args.response) or (args.files):
+
+        if args.response:
+            # Print data to stdout 
+            print_curl_data(request_body, "Curl Request Body")
+            print_curl_data(filtDefs.text, "Curl Response")
+
+        if args.files:
+            # Write request_body json file to destination directory
+            request_body_filename = args.files + "/SEC-FiltDefForChanSeg-FullChanSeg+Event_request.txt"
+            write_file("curl --location '{}' \\\n--header 'Accept: application/json' \\\n--header 'Content-Type: application/json' \\\n--data '{}'".format(service_url, json.dumps(request_body,indent=2)), request_body_filename)
+
+            # Write response json file to destination directory
+            response_filename = args.files + "/SEC-FiltDefForChanSeg-FullChanSeg+Event_response.txt"
+            write_file(filtDefs.text, response_filename)
+
+    
+    #---------------------------------------------------
+    # Declare request body for fully populated EH and ID-only ChanSeg; make request
+    request_body = {"eventHypothesis": EH, "channelSegments": [{"id": CS_ID}]}
+    filtDefs = requests.post(service_url, json=request_body, headers=headers)
+
+    print("  Response Fully-populated Event + ID-only ChanSeg: {} - {}".format(filtDefs.status_code,filtDefs.reason))
+    print()
+
+    if (args.response) or (args.files):
+
+        if args.response:
+            # Print data to stdout 
+            print_curl_data(request_body, "Curl Request Body")
+            print_curl_data(filtDefs.text, "Curl Response")
+
+        if args.files:
+            # Write request_body json file to destination directory
+            request_body_filename = args.files + "/SEC-FiltDefForChanSeg-ChanSegId+Event_request.txt"
+            write_file("curl --location '{}' \\\n--header 'Accept: application/json' \\\n--header 'Content-Type: application/json' \\\n--data '{}'".format(service_url, json.dumps(request_body,indent=2)), request_body_filename)
+
+            # Write response json file to destination directory
+            response_filename = args.files + "/SEC-FiltDefForChanSeg-ChanSegId+Event_response.txt"
+            write_file(filtDefs.text, response_filename)
+
+    
+    #---------------------------------------------------
+    # Declare request body for ID-only SDH; make request
+    request_body = {"channelSegments": [{"id": CS_ID}]}
+    filtDefs = requests.post(service_url, json=request_body, headers=headers)
+
+    print("  Response ID-only ChanSeg: {} - {}".format(filtDefs.status_code,filtDefs.reason))
+    print()
+
+    if (args.response) or (args.files):
+
+        if args.response:
+            # Print data to stdout 
+            print_curl_data(request_body, "Curl Request Body")
+            print_curl_data(filtDefs.text, "Curl Response")
+
+        if args.files:
+            # Write request_body json file to destination directory
+            request_body_filename = args.files + "/SEC-FiltDefForChanSeg-ChanSegId_request.txt"
+            write_file("curl --location '{}' \\\n--header 'Accept: application/json' \\\n--header 'Content-Type: application/json' \\\n--data '{}'".format(service_url, json.dumps(request_body,indent=2)), request_body_filename)
+
+            # Write response json file to destination directory
+            response_filename = args.files + "/SEC-FiltDefForChanSeg-ChanSegId_response.txt"
+            write_file(filtDefs.text, response_filename)
+
+
+    ###############################################################################
+    # QUERY FOR PREDICT FEATURES FOR LOCATION SOLUTION
+    ###############################################################################
+    print("\n###############################################################################")
+    print("**** Predict Features For Location Solution")
+    print("###############################################################################")
+    
+    # Pull relevant data from findEventsWithDetectionsAndSegmentsByTime and 
+    #   findChannelsByNameAndTimeRange response bodies
+
+    # Location Solution
+    LS = eventsWithDetsSegs_response['events'][0]['eventHypotheses'][0]["locationSolutions"][0]
+    # Channel
+    CHAN = chans_response[0]
+    
+    # Declare service URL
+    service_url = base_url + "/event-manager-service/event/predict"
+    print("  Service URL: {}".format(service_url))
+    print()
+    
+    # Declare request body; make request
+    request_body = {"locationSolution": LS, "channels": [CHAN], "phases": ["P"]}
+    featPreds = requests.post(service_url, json=request_body, headers=headers)
+
+    print("  Response Predict Features: {} - {}".format(featPreds.status_code,featPreds.reason))
+    print()
+
+    if (args.response) or (args.files):
+
+        if args.response:
+            # Print data to stdout 
+            print_curl_data(request_body, "Curl Request Body")
+            print_curl_data(featPreds.text, "Curl Response")
+
+        if args.files:
+            # Write request_body json file to destination directory
+            request_body_filename = args.files + "/predFeats4LocSol_request.txt"
+            write_file("curl --location '{}' \\\n--header 'Accept: application/json' \\\n--header 'Content-Type: application/json' \\\n--data '{}'".format(service_url, json.dumps(request_body,indent=2)), request_body_filename)
+
+            # Write response json file to destination directory
+            response_filename = args.files + "/predFeats4LocSol_response.txt"
+            write_file(featPreds.text, response_filename)
+
+
+#------------------------------------------------------------------------
+def run(command: str, print_output: bool = False) -> tuple[int, str, str]:
+    """
+    Execute the specified command and return when the execution is complete.
+
+    Args:
+        command (str): A shell command to run.
+        print_output (bool, optional): Enable printing of stdout and stderr
+            immediately. Defaults to False.
+
+    Returns:
+        tuple: Return code, stdout, and stderr of the command
+
+    """
+    cmd = subprocess.Popen(
+        command,
+        shell=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        stdin=subprocess.PIPE
+    )
+    out, err = cmd.communicate(input=None)
+    out = out.decode()
+    err = err.decode()
+
+    if print_output:
+        print(out)
+        if len(err) > 0:
+            print(err)
+
+    return cmd.returncode, out, err
+
+
+def run_json_command(command):
+    """
+    Run a command that produces JSON output
+    and return the result as a dictionary.
+    """
+    result = None
+    try:
+        cmd = subprocess.Popen(
+            command.split(),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            stdin=subprocess.PIPE
+        )
+        out, err = cmd.communicate()
+        out = out.decode()
+        err = err.decode()
+
+        if cmd.returncode != 0:
+            print(
+                f"ERROR: '{ command.split()[0] }' returned { cmd.returncode }."
+            )
+            print(out)
+            console.out(f'[yellow]{err}')
+            return None
+
+        result = json.loads(out)
+    except Exception as ex:
+        print(ex)
+        sys.exit(1)
+
+    return result
+
+
+def get_args() -> argparse.Namespace:
+    """
+    Get command-line arguments.
+
+    Returns:
+        argparse.Namespace: A namespace of command line arguments
+
+    """
+
+    description = """
+description:
+  gms-curls-pipeline-sb executes curl commands for installed SB instances.
+  The instance name must be provided. The cluster name can be determined by
+  running kubeconfig. Curl commands can be run at various sites.
+    """
+
+    parser = ArgumentParser(
+        description=description,
+        formatter_class=RawDescriptionHelpFormatter
+    )
+
+    parser.add_argument(
+        '-n',
+        '--name',
+        help="Name of the deployment."
+    )
+
+    parser.add_argument(
+        '-v',
+        '--verbose',
+        action='store_true',
+        help="Print info about executing curl commands."
+    )
+
+    parser.add_argument(
+        '-r',
+        '--response',
+        action='store_true',
+        help="Print request/response data returned by curl commands."
+    )
+
+    parser.add_argument(
+        '-f',
+        '--files',
+        type=str,
+        default="./",
+        help="Destination directory for output files." 
+    )  
+
+    parser.add_argument(
+        '-t',
+        '--timeout',
+        type=int,
+        default=120,
+        help="Sets the timeout (in seconds) for requests. Default = 120."
+    )
+
+    args = parser.parse_args()
+
+    # create the output files destination directory if necessary
+    if args.files:
+        if not os.path.exists(args.files):
+            try:
+                os.mkdir(args.files)
+            except Exception:
+                print(
+                    f"Failed to create output files directory '{args.files}'.  "
+                    "Defaulting to './'"
+                )
+                args.files = './'
+
+
+    return args
+
+
+def get_instance_info(name):
+    """
+    Gather a dictionary of information about a named instance.
+    """
+    summary = run_json_command(f"helm list --all -n { name } --output json")
+
+    if not summary:
+        return None
+
+    instance = {}
+    instance['name'] = summary[0]['name']
+    instance['status'] = summary[0]['status']
+    instance['updated'] = summary[0]['updated']
+
+    return instance
+
+
+def get_ingress_domain_url(instance_name: str) -> str:
+    """
+    Use ``gmskube ingress`` to get the ingress URL for the
+    ``user-manager-service``, which is common to various instance types.
+
+    Args:
+        instance_name:  The name of the instance.
+
+    Raises:
+        RuntimeError:  If something goes wrong with ``gmskube ingress``.
+
+    Returns:
+        Returns the URL through the port (which is appended to domain
+        via ":<port_number>"), stripping off anything following
+    """
+
+    ingress_url = ""
+    _, out, _ = run(f"gmskube ingress {instance_name}")
+
+    for line in out.splitlines():
+        if "user-manager-service" in line:
+            ingress_url = line.split()[1]
+
+    if ingress_url == "":
+        raise RuntimeError(
+            "Unable to get the ingress URL for the "
+            "`user-manager-service`."
+        )
+
+    return re.search(r"^(https://.*:.*)/.*$", ingress_url).group(1)
+
+
+def print_curl_data(json_data, query_title):
+    """
+    Output curl request body or response 
+    """
+    print("    ***************************************************")
+    print("       ***********", query_title, "*************")
+    print("    ***************************************************")
+    print(json_data)
+    print("    ***************************************************")
+    print()
+
+
+def write_file(json_data, file_name):
+    """
+    Create new files containing curl request or response json 
+    """
+    f = open(file_name,"w")
+    f.write(json_data)
+    f.close()
+
+
+##################### MAIN #######################
+if __name__ == "__main__":
+    main()
+ 

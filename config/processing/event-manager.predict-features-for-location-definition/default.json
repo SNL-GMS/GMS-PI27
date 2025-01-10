@@ -1,0 +1,31 @@
+{
+  "name": "predict-features-for-location-definition",
+  "constraints": [
+    {
+      "constraintType": "DEFAULT"
+    }
+  ],
+  "parameters": {
+    "featurePredictionsDefinitions": [
+      {
+        "earthModel": "Ak135",
+        "predictionTypes": [
+          "ARRIVAL_TIME",
+          "SLOWNESS", 
+          "RECEIVER_TO_SOURCE_AZIMUTH", 
+          "SOURCE_TO_RECEIVER_AZIMUTH"
+        ],
+        "correctionDefinitions": [
+          {
+            "mediumVelocityEarthModel": "Ak135",
+            "correctionType": "ELEVATION_CORRECTION"
+          },
+          {
+            "ellipticityCorrectionType": "DZIEWONSKI_GILBERT",
+            "correctionType": "ELLIPTICITY_CORRECTION"
+          }
+        ]
+      }
+    ]
+  }
+}

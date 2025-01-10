@@ -1,0 +1,28 @@
+{
+  "name": "DEFAULT",
+  "constraints": [
+    {
+      "constraintType": "DEFAULT"
+    }
+  ],
+  "parameters": {
+    "pluginName": "caponFkSpectraPlugin",
+    "sampleRateHz": 40.0,
+    "windowLead": "PT0S",
+    "windowLength": "PT4S",
+    "lowFrequencyHz": 1.0,
+    "highFrequencyHz": 2.0,
+    "useChannelVerticalOffsets": false,
+    "normalizeWaveforms": false,
+    "phaseType": "P",
+    "slowStartXSecPerKm": -0.4,
+    "slowDeltaXSecPerKm": 0.01,
+    "slowCountX": 81,
+    "slowStartYSecPerKm": -0.4,
+    "slowDeltaYSecPerKm": 0.01,
+    "slowCountY": 81,
+    "waveformSampleRateHz": 40.0,
+    "waveformSampleRateToleranceHz": 0.0001,
+    "minimumWaveformsForSpectra": 2
+  }
+}

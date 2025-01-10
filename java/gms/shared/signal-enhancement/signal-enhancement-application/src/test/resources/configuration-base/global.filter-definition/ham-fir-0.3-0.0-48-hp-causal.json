@@ -1,0 +1,26 @@
+{
+    "name": "ham-fir-0.3-0.0-48-hp-causal",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "HAM FIR 0.3 0.0 48 HP causal"
+            ]
+        }
+    ],
+    "parameters": {
+        "name": "HAM FIR 0.3 0.0 48 HP causal",
+        "comments": "Hamming FIR high-pass, 0.3-0.0 Hz, order 48, causal",
+        "filterDescription": {
+            "$ref=global.filter-description":[{
+                "criterion": "name",
+                "value": "HAM FIR 0.3 0.0 48 HP causal Description"
+            }]
+        }
+    }
+}

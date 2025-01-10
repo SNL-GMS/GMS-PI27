@@ -1,0 +1,45 @@
+.rotation-dialog {
+  --input-column-width: 450px;
+
+  &__current-phase input {
+    cursor: pointer;
+  }
+  .bp5-multi-select {
+    overflow-y: auto;
+    max-height: 2.5rem;
+  }
+  .bp5-tag-input .bp5-tag-input-values {
+    align-items: flex-start;
+  }
+  .lead-duration-input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+.bp5-dialog:has(.rotation-settings) {
+  min-width: 800px;
+  max-height: 876px;
+  height: 70vh; // This is to ensure that the dialog doesn't jump around due to resizing because its contents are changing
+  .form-value {
+    width: var(--input-column-width);
+  }
+  .gms-form-group__content--accordion .form-value {
+    align-items: flex-start;
+    display: flex;
+    gap: 4px;
+    width: calc(var(--input-column-width) - 16px);
+  }
+}
+
+.rotation-settings .gms-group__label + .gms-form-group__content:has(.gms-group__label),
+.rotation-settings .gms-form-group__content--accordion .bp5-collapse-body {
+  grid-template-columns: 1fr calc(var(--input-column-width) - 8px);
+}
+
+.bp5-dialog:has(.rotation-settings)
+  .gms-form-group__content--accordion
+  .form-value
+  > *:first-child {
+  width: 100%;
+}

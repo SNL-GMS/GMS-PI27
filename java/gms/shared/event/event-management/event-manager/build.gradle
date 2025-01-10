@@ -1,0 +1,54 @@
+plugins {
+    id('java')
+    alias(libs.plugins.org.springframework.boot)
+    id('com.google.cloud.tools.jib')
+}
+
+dependencies {
+    implementation project(':event-accessor')
+    implementation project(':event-management-api')
+    implementation project(':event-coi')
+    implementation project(':event-dao')
+    implementation project(':event-repository')
+    implementation project(':event-utility')
+    implementation project(':feature-prediction-api')
+    implementation project(':spring-framework-utilities')
+    implementation project(':spring-persistence-oracle')    
+    implementation project(':system-events')
+    implementation project(':frameworks-control')
+
+    // computing distance for /event/predict
+    implementation project(':feature-prediction-utilities')
+
+    // Required by SignalDetection/StationDefinition/Waveform Accessors
+    implementation project(':signal-detection-api')
+    implementation project(':station-definition-accessor')
+    implementation project(':signal-detection-accessor')
+    implementation project(':waveform-api')
+    implementation project(':waveform-accessor')
+    implementation project(':station-definition-repository')
+    implementation project(':spring-framework-utilities')
+    implementation project(':frameworks-control')
+    implementation project(':waveform-bridge-repository')
+    implementation project(':caching-utils')
+
+    implementation libs.org.springframework.boot.spring.boot.starter.actuator
+    implementation libs.org.springframework.boot.spring.boot.starter.web
+    implementation libs.org.springframework.spring.webflux
+    implementation libs.org.springdoc.springdoc.openapi.starter.webmvc.ui
+
+    // Google AutoValue
+    implementation libs.com.google.guava.guava
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    // Logging
+    runtimeOnly libs.net.logstash.logback.logstash.logback.encoder
+
+    testImplementation project(':frameworks-system-config')
+    testImplementation project(':spring-framework-utilities').sourceSets.test.output
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':event-coi')))
+    testImplementation libs.io.projectreactor.reactor.test
+    testImplementation libs.org.springframework.boot.spring.boot.starter.test
+}

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signal detection hooks signalDetectionClickHandler matches snapshot 1`] = `
+{
+  "onSignalDetectionContextMenuHandler": [Function],
+  "onSignalDetectionDragEndHandler": [Function],
+  "signalDetectionClickHandler": [Function],
+  "signalDetectionDoubleClickHandler": [Function],
+}
+`;
+
+exports[`Signal detection hooks useSignalDetectionEventHandlers matches snapshot 1`] = `[Function]`;

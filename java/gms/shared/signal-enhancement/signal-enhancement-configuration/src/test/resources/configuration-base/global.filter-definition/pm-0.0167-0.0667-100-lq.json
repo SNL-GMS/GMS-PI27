@@ -1,0 +1,26 @@
+{
+    "name": "pm-0.0167-0.0667-100-lq",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "PM 0.0167 0.0667 100 LQ"
+            ]
+        }
+    ],
+    "parameters": {
+        "name": "PM 0.0167 0.0667 100 LQ",
+        "comments": "Phase match, 0.0167-0.0667 Hz, numfreq 100, phase LQ",
+        "filterDescription": {
+            "$ref=global.filter-description":[{
+                "criterion": "name",
+                "value": "PM 0.0167 0.0667 100 LQ Description"
+            }]
+        }
+    }
+}

@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Station Definition Util Tests Sort station definition 3C channels for multiple groups 1`] = `
+[
+  {
+    "name": "station.site1.xyZ",
+  },
+  {
+    "name": "station.site1.xyN",
+  },
+  {
+    "name": "station.site1.xyE",
+  },
+  {
+    "name": "station.site2.xyZ",
+  },
+  {
+    "name": "station.site2.xyN",
+  },
+  {
+    "name": "station.site2.xyE",
+  },
+  {
+    "name": "station.site3.xyZ",
+  },
+  {
+    "name": "station.site3.xyN",
+  },
+  {
+    "name": "station.site3.xyE",
+  },
+]
+`;
+
+exports[`Station Definition Util Tests Sort station definition 3C channels for multiple stations and groups 1`] = `
+[
+  {
+    "name": "station1.site.xyZ",
+  },
+  {
+    "name": "station1.site.xyN",
+  },
+  {
+    "name": "station1.site.xyE",
+  },
+  {
+    "name": "station1.site1.xyZ",
+  },
+  {
+    "name": "station1.site1.xyN",
+  },
+  {
+    "name": "station1.site1.xyE",
+  },
+  {
+    "name": "station1.site2.xyZ",
+  },
+  {
+    "name": "station1.site2.xyN",
+  },
+  {
+    "name": "station1.site2.xyE",
+  },
+  {
+    "name": "station2.site.xyZ",
+  },
+  {
+    "name": "station2.site.xyN",
+  },
+  {
+    "name": "station2.site.xyE",
+  },
+  {
+    "name": "station3.site.xyZ",
+  },
+  {
+    "name": "station3.site.xyN",
+  },
+  {
+    "name": "station3.site.xyE",
+  },
+  {
+    "name": "station3.site1.xyZ",
+  },
+  {
+    "name": "station3.site1.xyN",
+  },
+  {
+    "name": "station3.site1.xyE",
+  },
+]
+`;

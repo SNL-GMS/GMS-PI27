@@ -1,0 +1,79 @@
+$HEIGHT_OF_BLUEPRINT_DATE_PICKER: -228px;
+
+.time-picker__input-group {
+  width: 240px;
+  margin-right: 2px;
+  input {
+    border: 1px solid var(--core-middle-ground, var(--gms-middle-ground, $core-middle-ground));
+  }
+  &--short-format {
+    width: 152px;
+    margin-right: 2px;
+    input {
+      border: 1px solid var(--core-middle-ground, var(--gms-middle-ground, $core-middle-ground));
+    }
+  }
+  &--fill {
+    width: 100%;
+    margin-right: 2px;
+    input {
+      border: 1px solid var(--core-middle-ground, var(--gms-middle-ground, $core-middle-ground));
+    }
+  }
+}
+
+.time-picker__input {
+  font-size: 14px;
+  background-color: var(--popover-input, $core-popover-input);
+  line-height: 14px;
+  border-color: var(--core-soft, $core-soft);
+  padding: 0.5em 0 0.5em 0.5em;
+  font-family: monospace;
+  resize: none;
+  overflow: hidden;
+  color: var(--core-main, $core-main);
+}
+.time-picker__input:focus {
+  border-color: #3781e1;
+}
+.time-picker__input--invalid {
+  font-size: 14px;
+  background-color: var(--popover-input-invalid, $core-popover-invalid-input);
+  line-height: 14px;
+  border-color: red;
+  padding: 0.5em 0 0.5em 0.5em;
+  font-family: monospace;
+  resize: none;
+}
+.time-picker {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 0px;
+}
+
+.bp5-dark .time-picker .time-picker__date-picker {
+  position: absolute;
+  border-radius: 4px;
+  border: 1px solid #3781e1;
+  right: 0px;
+  z-index: 100;
+  background-color: var(--popover-background, $core-popover-background);
+}
+.time-picker__date-picker--bottom {
+  top: 32px;
+}
+.time-picker__date-picker-button--active {
+  border: 1px solid #3781e1 !important;
+}
+.time-picker__date-picker-button {
+  position: relative;
+  left: 0px;
+  z-index: 5;
+  width: 30px;
+}
+
+// Time Picker blueprint overrides
+.bp5-datepicker .DayPicker-Day.DayPicker-Day--disabled {
+  pointer-events: none;
+}

@@ -1,0 +1,24 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api project(':bridge-utilities')
+    api project(':signal-detection-dao')
+    api project(':workflow-coi')
+
+    api libs.org.hibernate.orm.hibernate.core
+    api libs.org.springframework.spring.context
+
+    implementation project(':metrics')
+
+    //Google autovalue
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    implementation libs.com.google.guava.guava
+
+    // Testing.
+    testImplementation(testFixtures(project(':signal-detection-coi')))
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation project(':test-utils')
+    testImplementation libs.com.h2database.h2
+}

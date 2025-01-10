@@ -1,0 +1,1841 @@
+#!/usr/bin/env python3
+
+# -----------------------------------------------------------------------------
+# gms-curl-requests test script
+#
+# gms-curl-requests executes curl commands for IAN.
+# The deployment name must be provided.
+# The cluster name can be determined by running kubeconfig.
+# Curl commands can be run at various sites.
+# -----------------------------------------------------------------------------
+
+import argparse
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+import time
+from argparse import ArgumentParser, RawDescriptionHelpFormatter
+from collections import defaultdict
+from datetime import datetime, timedelta
+from pathlib import Path
+
+try:
+    import requests
+    import yaml
+    from rich.console import Console
+except ImportError:
+    load_script = (
+        Path(__file__).resolve().parents[3] / "python/load-gms-conda-env.sh"
+    )
+    raise SystemExit(
+        "It looks like you're not using the approved environment.  Please "
+        f"run:  source {load_script}"
+    )
+
+console_kwargs = {"log_path": False}
+if os.getenv("CI"):
+    console_kwargs["force_terminal"] = True
+if os.getenv("RICH_LOG_PATH"):
+    console_kwargs["log_path"] = True
+console = Console(**console_kwargs)
+
+
+##################### MAIN #######################
+def main():
+
+    # -- verify kubectl is available
+    if shutil.which('kubectl') is None:
+        print(
+            "ERROR: 'kubectl' executable not found in PATH."
+            "Please install kubectl."
+        )
+        sys.exit(1)
+
+    # -- verify helm is available
+    if shutil.which('gmskube') is None:
+        print(
+            "ERROR: 'gmskube' executable not found in PATH."
+            "Please install gmskube."
+        )
+        sys.exit(1)
+
+    # -- verify KUBECONFIG is set
+    if "KUBECONFIG" not in os.environ:
+        print(
+            "ERROR: Variable 'KUBECONFIG' must be set to "
+            "the kubernetes configuration."
+        )
+        sys.exit(1)
+
+    if ":" in os.environ["KUBECONFIG"]:
+        msg = (
+            "It looks like your `KUBECONFIG` environment variable points "
+            "to multiple configuration files.  Ensure you run `kubeconfig "
+            "<cluster_name>` to activate a particular cluster, and then "
+            "re-run this script."
+        )
+        raise SystemExit(msg)
+
+    try:
+        with open(os.environ["KUBECONFIG"]) as file:
+            kubeconfig = yaml.load(file, Loader=yaml.FullLoader)
+            if 'clusters' not in kubeconfig:
+                print(
+                    "ERROR: No clusters defined in file "
+                    f"'{os.environ['KUBECONFIG']}"
+                )
+                sys.exit(1)
+
+    except FileNotFoundError as e:
+        print(
+            "ERROR: Failed to open KUBECONFIG file "
+            f"'{os.environ['KUBECONFIG']}': {e}"
+        )
+        sys.exit(1)
+    except AttributeError as e:
+        print(f"ERROR: {e.__class__.__name__}: {e}")
+        print(
+            "Did you forget to activate the 'gms' conda environment "
+            "with 'conda activate gms'?"
+        )
+        sys.exit(1)
+    except Exception as e:
+        print(f"ERROR: {e.__class__.__name__}: {e}")
+        sys.exit(1)
+
+    args = get_args()
+
+    instance = get_instance_info(args.name)
+
+    if not instance:
+        print(f"{ args.name } instance not found.")
+        sys.exit(1)
+
+    pods = get_pod_info(instance)
+
+    simulator_installed = is_simulator_installed(pods)
+
+    data_times = {}
+
+    if simulator_installed:
+        data_times = set_simulated_times()
+    else:
+        data_times = set_fixed_times()
+
+    # Declare base URL for service requests
+    # This includes instance name, cluster, domain, and port
+    # https://<instance-name>.<cluster>.<???>:<port-number>
+    try:
+        base_url = get_ingress_domain_url(args.name)
+    except RuntimeError:
+        raise RuntimeError("Unable to get domain name.")
+
+    default_headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    }
+
+    bad_curl_resps = dict()
+
+    # iniital prerequisite queries for subsequent service curls
+    csd = get_channel_segment_descriptor(base_url, data_times, default_headers, args.response)
+    asdh = get_associated_signal_detection_hypotheses(base_url, data_times, default_headers, args.response)
+    evtid = get_event_id(base_url, data_times, default_headers, args.response)
+
+    ###########################################################################
+    #                         POST CURL COMMANDS                          #
+
+    post_curl_commands = {
+
+        # ##################### Intervals/Workflow Manager ####################
+
+        # Verifies the Workflow Manager Service - 
+        # Find Stage Intervals By Stage ID And Time
+        "Workflow Manager Service - "
+        "Find Stage Intervals By Stage ID And Time ":
+        {
+            "url":
+            f"{base_url}/workflow-manager-service/workflow-manager/"
+            f"interval/stage/query/ids-timerange",
+            "data": {
+                "stageIds": [
+                    {"name": "Auto Network"},
+                    {"name": "AL1"},
+                    {"name": "Auto Post-AL1"},
+                    {"name": "AL2"}
+                ],
+                "startTime": data_times['start_time'],
+                "endTime": data_times['end_time']
+            } 
+        },
+
+        # ##################### Signal Detection Manager ######################
+
+        # Verifies the Signal Detection Manager Service -
+        # Find Detections With Segments By Stations And Time Range
+        "Signal Detection Manager Service - "
+        "Find Detections With Segments By Stations And Time Range ":
+        {
+            "url":
+            f"{base_url}/signal-detection-manager-service/signal-detection/"
+            f"signal-detections-with-channel-segments/query/"
+            f"stations-timerange",
+            "data": {
+                "stations": [{
+                    "name": "ROSC"
+                }],
+                "startTime": data_times['start_time'],
+                "endTime": data_times['end_time'],
+                "stageId": {
+                    "name": "AL1"
+                },
+                "excludedSignalDetections": []
+            }
+        },
+
+        # Note - PO says "In order for this query to work, you must
+        #  first run Signal Detection Manager's "Find Detections with
+        #  Segments by Stations and Time Range" query to populate the 
+        #  cache with Signal Detection and Signal Detection Hypothesis
+        #  IDs from which this query will retrieve information."
+
+        # Verifies the Signal Detection Manager Service -
+        # Find Signal Detections By ID
+        "Signal Detection Manager Service - "
+        "Find Signal Detections By ID ": {
+            "url":
+            f"{base_url}/signal-detection-manager-service/signal-detection/"
+            f"signal-detections-with-channel-segments/query/ids",
+            "data": {
+                "detectionIds": ["9c45803d-6102-3016-9097-bc7be96ce679"],
+                "stageId": {
+                    "name": "AL1"
+                }
+            }
+        },
+
+        # Verifies the Signal Detection Manager Service -
+        # Filter Bridge - Find Filter Definitions For
+        # Signal Detections - ID-only SD Request
+        "Signal Detection Manager Service - "
+        "Filter Bridge - Find Filter Definitions For "
+        "Signal Detections - ID only - SD Request ":
+        {
+            "url":
+            f"{base_url}/signal-detection-manager-service/signal-detection/"
+            f"filter-definitions-by-usage/query/signal-detections",
+            "data": {
+                "stageId": {
+                    "name": "AL1"
+                },
+                "signalDetections": [
+                    {
+                        "id": "9c45803d-6102-3016-9097-bc7be96ce679"
+                    }
+                ]
+            }
+        },
+
+        # #################### Waveform Manager #####################
+
+        # Verifies the Waveform Manager Service -
+        # Find Waveforms By Channels And Time Range
+        "Waveform Manager Service - "
+        "Find Waveforms By Channels And Time Range ":
+        {
+            "url":
+            f"{base_url}/waveform-manager-service/waveform/channel-segment/"
+            f"query/channel-timerange",
+            "data": {
+                "channels": [{
+                    "name": "ASAR.AS01.SHZ"
+                }],
+                "startTime": data_times['start_time'],
+                "endTime": data_times['end_time']
+            }
+        },
+
+        # Verifies the Waveform Manager Service -
+        # Find Waveforms By Channels And Time Range -
+        # With Faceting Definition
+        "Waveform Manager Service - "
+        "Find Waveforms By Channels And Time Range - "
+        "With Faceting Definition ":
+        {
+            "url":
+            f"{base_url}/waveform-manager-service/waveform/channel-segment/"
+            f"query/channel-timerange",
+            "data": {
+                "channels": [{
+                    "name": "ASAR.AS01.SHZ"
+                }],
+                "startTime": data_times['start_time'],
+                "endTime": data_times['end_time'],
+                "facetingDefinition": {
+                    "classType":"ChannelSegment",
+                    "populated": True,
+                    "facetingDefinitions": {
+                        "id.Channel": {
+                            "classType": "Channel",
+                            "populated": True
+                        }
+                    }
+                }
+            }
+        },
+
+        # Note: the following query needs a prerequisite curl query
+        # to be run which fetches a channel segment descriptor (csd)
+        # from the deployment for the purpose of passing it
+        # in to this subsequent curl query
+
+        # Verifies the Waveform Manager Service -
+        # Find Waveforms By Channel Segment Descriptors
+        "Waveform Manager Service - "
+        "Find Waveforms By Channel Segment Descriptors ":
+        {
+            "url":
+            f"{base_url}/waveform-manager-service/waveform/channel-segment/"
+            f"query/channel-segment-descriptors",
+            "data": {
+                "channelSegmentDescriptors": [csd]
+            }
+        },
+
+        # Verifies the Waveform Manager Service -
+        # Find Waveforms By Channel Segment Descriptors -
+        # With Faceting Definition
+        "Waveform Manager Service - "
+        "Find Waveforms By Channel Segment Descriptors - "
+        "With Faceting Definition":
+        {
+            "url":
+            f"{base_url}/waveform-manager-service/waveform/channel-segment/"
+            f"query/channel-segment-descriptors",
+            "data": {
+                "channelSegmentDescriptors": [csd],
+                "facetingDefinition": {
+                    "classType":"ChannelSegment",
+                    "populated":True,
+                    "facetingDefinitions": {
+                        "id.Channel": {
+                            "classType": "Channel",
+                            "populated": True
+                        }
+                    }
+                }
+            }
+        },
+
+        # Verifies the Waveform Manager Service -
+        # Find QC Segments By Channels And Time Range
+        "Waveform Manager Service - "
+        "Find QC Segments By Channels And Time Range ":
+        {
+            "url":
+            f"{base_url}/waveform-manager-service/waveform/qc-segment/"
+            f"query/channel-timerange",
+            "data": {
+                "channels": [{
+                    "name": "ARCES.ARA0.BHZ",
+                    }],
+                "startTime":
+                data_times['start_time'],
+                "endTime":
+                data_times['end_time']
+            }
+        },
+
+        # Verifies the Waveform Manager Service -
+        # Find Event Beams By Event Hypotheses And Stations
+        "Waveform Manager Service - "
+        "Find Event Beams By Event Hypotheses And Stations ":
+        {
+            "url":
+            f"{base_url}/waveform-manager-service/waveform/event-beams/"
+            f"query/event-beams-by-event-hypotheses-and-stations",
+            "data": {
+                "eventHypotheses": [{
+                    "id": {
+                        "eventId": "ed312c21-f737-3201-adf1-aa978b201229",
+                        "hypothesisId": "0301b6ba-9647-3be7-8cf6-5b2b6a77899d",
+                    }
+                }],
+                "stations": [{
+                    "name": "ASAR"
+                }]
+            }
+        },
+
+        # ########################### Event Manager ###########################
+
+        # Verifies the Event Manager Service - 
+        # Find Events By Time
+        "Event Manager Service - Find Events By Time ": {
+            "url": f"{base_url}/event-manager-service/event/time",
+            "data": {
+                "stageId": {
+                    "name": "AL1",
+                },
+                "startTime": data_times['start_time'],
+                "endTime": data_times['end_time']
+            }
+        },
+
+        # Verifies the Event Manager Service - 
+        # Find Events by Time - With Faceting Definition
+        "Event Manager Service - "
+        "Find Events By Time - "
+        "With Faceting Definition ":
+        {
+            "url": f"{base_url}/event-manager-service/event/time",
+            "data": {
+                "startTime": data_times['start_time'],
+                "endTime": data_times['end_time'],
+                "stageId": {"name": "AL1"},
+                "facetingDefinition": {
+                    "classType": "Event",
+                    "populated": True,
+                    "facetingDefinitions": {
+                        "eventHypothesis": {
+                            "populated": True,
+                            "classType": "EventHypothesis",
+                            "facetingDefinitions": {
+                                "associatedSignalDetectionHypothesis": {
+                                    "populated": False,
+                                    "classType": "SignalDetectionHypothesis"
+                                },
+                                "preferredLocationSolution": {
+                                    "populated": False,
+                                    "classType": "locationSolution"
+                                },
+                                "locationSolution": {
+                                    "populated": True,
+                                    "classType": "LocationSolution",
+                                    "facetingDefinitions": {
+                                        "networkMagnitudeSolutionsChannel": {
+                                            "populated": True,
+                                            "classType": "NetworkMagnitudeSolution",
+                                            "facetingDefinitions": {
+                                                "channel": {
+                                                    "populated": True,
+                                                    "classType": "Channel"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "parentEventHypothesis": {
+                                    "populated": False,
+                                    "classType": "EventHypothesis"
+                                }
+                            }
+                        },
+                        "overallPreferred": {
+                            "populated": False,
+                            "classType": "EventHypothesis"
+                        }
+                    }
+                }
+            } 
+        }, 
+
+
+        # Verifies the Event Manager Service -
+        # Find Events With Detections And Segments By Time
+        "Event Manager Service - "
+        "Find Events With Detections And Segments By Time ":
+        {
+            "url":
+            f"{base_url}/event-manager-service/event/"
+            f"detections-and-segments/time",
+            "data": {
+                "startTime": data_times['start_time'],
+                "endTime": data_times['end_time'],
+                "stageId": {
+                    "name": "AL1"
+                }
+            }
+        },
+
+        # Note: the following query needs a prerequisite curl query
+        # to be run which fetches an associated signal detection 
+        # hypotheses (asdh) from the deployment for the purpose of
+        # passing it in to this subsequent curl query
+
+        # Verifies the Event Manager Service -
+        # Find Events By Associated Signal Detection Hypotheses
+        "Event Manager Service - "
+        "Find Events By Associated Signal Detection Hypotheses ":
+        {
+            "url":
+            f"{base_url}/event-manager-service/event/"
+            f"associated-signal-detection-hypotheses",
+            "data": {
+                "stageId": {
+                    "name": "Auto Network"
+                },
+                "signalDetectionHypotheses": [asdh]
+            }
+        },
+
+        # Verifies the Event Manager Service -
+        # Predict Features For Event Location
+        "Event Manager Service - "
+        "Predict Features For Event Location ":
+        {
+            "url":
+            f"{base_url}/event-manager-service/event/"
+            f"predict-for-event-location",
+            "data": {
+                "sourceLocation": {
+                    "latitudeDegrees": 0.0,
+                    "longitudeDegrees": 0.0,
+                    "depthKm": 0.0,
+                    "time": "1970-01-01T00:00:00Z"
+                },
+                "phases": ["P"],
+                "receivers": [{
+                    "receiverDataType": None,
+                    "receiverBandType": None,
+                    "receiverLocationsByName": {
+                        "ChannelA": {
+                            "depthKm": 0.0,
+                            "elevationKm": 0.0,
+                            "latitudeDegrees": 45.0,
+                            "longitudeDegrees": 0.0
+                        }
+                    }
+                }]
+            }
+        },
+
+        # #################### Station Definition Manager #####################
+
+        # #### Station Groups ####
+
+        # Verifies the Station Definition Manager Service -
+        # Find Station Groups By Name
+        "Station Definition Manager Service - Find Station Groups By Name ": {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"station-groups/query/names",
+            "data": {
+                "stationGroupNames": ["Primary"],
+                "effectiveTime": data_times['effective_time']
+            }
+        },
+
+        # Verifies the Station Definition Manager Service -
+        # Find Station Groups By Name - With Faceting Definition
+        "Station Definition Manager Service - "
+        "Find Station Groups By Name - "
+        "With Faceting Definition ": {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"station-groups/query/names",
+            "data": {
+                "stationGroupNames": ["Primary"],
+                "effectiveTime": data_times['effective_time'],
+                "facetingDefinition": {
+                    "classType": "StationGroup",
+                    "populated": True,
+                    "facetingDefinitions": {
+                        "stations": {
+                            "classType": "Station",
+                            "populated": True,
+                            "facetingDefinitions": {
+                                "channelGroups": {
+                                    "classType": "ChannelGroup",
+                                    "populated": True,
+                                    "facetingDefinitions": {
+                                        "channels": {
+                                            "classType": "Channel",
+                                            "populated": True,
+                                            "facetingDefinitions": {
+                                                "responses": {
+                                                    "classType": "Response",
+                                                    "populated": True
+                                                 }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        # Verifies the Station Definition Manager Service -
+        # Find Station Groups By Name And Time
+        "Station Definition Manager Service - "
+        "Find Station Groups By Name And Time ":
+        {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"station-groups/query/names-timerange",
+            "data": {
+                "stationGroupNames": ["Primary"],
+                "startTime": data_times['start_time'],
+                "endTime": data_times['end_time']
+            }
+        },
+
+        # #### Stations ####
+
+        # Verifies the Station Definition Manager Service -
+        # Find Stations By Name
+        "Station Definition Manager Service - "
+        "Find Stations By Name ": {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"stations/query/names",
+            "data": {
+                "stationNames": ["ROSC"],
+                "effectiveTime": data_times['effective_time']
+            }
+        },
+
+        # Verifies the Station Definition Manager Service -
+        # Find Stations By Name - With Faceting Definition
+        "Station Definition Manager Service - "
+        "Find Stations By Name - "
+        "With Faceting Definition": {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"stations/query/names",
+            "data": {
+                "stationNames": ["ROSC"],
+                "effectiveTime": data_times['effective_time'],
+                "facetingDefinition": {
+                    "classType": "Station",
+                    "populated": True,
+                    "facetingDefinitions": {
+                        "channelGroups": {
+                            "classType": "ChannelGroup",
+                            "populated": True,
+                            "facetingDefinitions": {
+                                "channels": {
+                                    "classType": "Channel",
+                                    "populated": True,
+                                    "facetingDefinitions": {
+                                        "responses": {
+                                            "classType": "Response",
+                                            "populated": True,
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        # Verifies the Station Definition Manager Service -
+        # Find Stations By Name And Time
+        "Station Definition Manager Service - "
+        "Find Stations By Name And Time ":
+        {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"stations/query/names-timerange",
+            "data": {
+                "stationNames": ["ROSC"],
+                "startTime": data_times['start_time'],
+                "endTime": data_times['end_time']
+            }
+        },
+
+        # #### Channel Groups ####
+
+        # Verifies the Station Definition Manager Service -
+        # Find Channel Groups By Name
+        "Station Definition Manager Service - "
+        "Find Channel Groups By Name ": {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"channel-groups/query/names",
+            "data": {
+                "channelGroupNames": ["AS01"],
+                "effectiveTime": data_times['effective_time']
+            }
+        },
+
+        # Verifies the Station Definition Manager Service -
+        # Find Channel Groups By Name - With Faceting Definition
+        "Station Definition Manager Service - "
+        "Find Channel Groups By Name - "
+        "With Faceting Definition": {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"channel-groups/query/names",
+            "data": {
+                "channelGroupNames": ["AS01"],
+                "effectiveTime": data_times['effective_time'],
+                "facetingDefinition": {
+                    "classType": "ChannelGroup",
+                    "populated": True,
+                    "facetingDefinitions": {
+                        "channels": {
+                            "classType": "Channel",
+                            "populated": True,
+                            "facetingDefinitions": {
+                                "responses": {
+                                    "classType": "Response",
+                                    "populated": True,
+                                    "facetingDefinitions": {
+                                        "fapResponse": {
+                                            "classType": "FrequencyAmplitudePhase",
+                                            "populated": False
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        # Verifies the Station Definition Manager Service -
+        # Find Channel Groups By Name And Time Range
+        "Station Definition Manager Service - "
+        "Find Channel Groups By Name And Time Range ":
+        {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"channel-groups/query/names-timerange",
+            "data": {
+                "channelGroupNames": ["AS01"],
+                "startTime": data_times['start_time'],
+                "endTime": data_times['end_time']
+            }
+        },
+
+        # #### Channels #####
+
+        # Verifies the Station Definition Manager Service -
+        # Find Channels By Name
+        "Station Definition Manager Service - Find Channels By Name ": {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"channels/query/names",
+            "data": {
+                "channelNames": ["ROSC.ROSC.BHZ"],
+                "effectiveAt": data_times['effective_time']
+            }
+        },
+
+        # Verifies the Station Definition Manager Service -
+        # Find Channels By Name - With Faceting Definition
+        "Station Definition Manager Service - "
+        "Find Channels By Name - "
+        "With Faceting Definition":
+        {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"channels/query/names",
+            "data": {
+                "channelNames": ["ROSC.ROSC.BHZ"],
+                "effectiveTime": data_times['effective_time'], 
+                "facetingDefinition": {
+                    "classType": "Channel",
+                    "populated": True,
+                    "facetingDefinitions": {
+                        "responses": {
+                            "classType": "Response",
+                            "populated": True
+                        }
+                    }
+                }
+            }
+        },
+
+        # Verifies the Station Definition Manager Service -
+        # Find Channels By Name And Time Range
+        "Station Definition Manager Service - "
+        "Find Channels By Name And Time Range ":
+        {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"channels/query/names-timerange",
+            "data": {
+                "channelNames": ["ROSC.ROSC.BHZ"],
+                "startTime": data_times['start_time'],
+                "endTime": data_times['end_time']
+            }
+        },
+
+        # #### Station Change Times ####
+
+        # Verifies the Station Definition Manager Service -
+        # Determine Station Change Times
+        "Station Definition Manager Service - "
+        "Determine Station Change Times ": {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"stations/query/change-times",
+            "data": {
+                "station": {
+                    "name": "ARCES"
+                },
+                "startTime": data_times['start_time'],
+                "endTime": data_times['end_time']
+            }
+        },
+
+        # #### Responses ####
+
+        # Verifies the Station Definition Manager Service -
+        # Find Responses By ID
+        "Station Definition Manager Service - "
+        "Find Responses By ID": {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"response/query/ids",
+            "data": {
+                "effectiveTime": data_times['effective_time'],
+                "responseIds": ["28ed54ee-9f50-39d4-b0fa-0a9becee3b96"]
+            }
+        },
+
+        # Verifies the Station Definition Manager Service -
+        # Find Responses By ID - With Faceting Definition
+        "Station Definition Manager Service - "
+        "Find Responses By ID - "
+        "With Faceting Definition":
+        {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"response/query/ids",
+            "data": {
+                "effectiveTime": data_times['effective_time'], 
+                "responseIds": [
+                    "28ed54ee-9f50-39d4-b0fa-0a9becee3b96"
+                ],
+                "facetingDefinition": {
+                    "classType": "Response",
+                    "populated": True
+                }
+            }
+        },
+
+        # Verifies the Station Definition Manager Service -
+        # Find Responses By ID And Time Range
+        "Station Definition Manager Service - "
+        "Find Responses By ID And Time Range": {
+            "url":
+            f"{base_url}/station-definition-service/station-definition/"
+            f"response/query/ids-timerange",
+            "data": {
+                "responseIds": ["28ed54ee-9f50-39d4-b0fa-0a9becee3b96"],
+
+                "startTime": data_times['start_time'],
+                "endTime": data_times['end_time']
+            }
+        },
+
+
+        # ##################### Feature Prediction Service ####################
+
+        # Verifies the Feature Prediction Service - Predict For Location
+        "Feature Prediction Service - "
+        "Predict For Location ": {
+            "url":
+            f"{base_url}/feature-prediction-service/feature/"
+            "predict-for-location",
+            "data": {
+                "predictionTypes": [ "ARRIVAL_TIME" ],
+                "sourceLocation": {
+                    "latitudeDegrees": -3.7316673,
+                    "longitudeDegrees": 126.89858,
+                    "depthKm": 0.0,
+                    "time": "2019-01-05T16:01:49.835Z"
+                },
+                "receiverLocations": [
+                    {
+                        "depthKm": 0,
+                        "elevationKm": 1,
+                        "latitudeDegrees": 0,
+                        "longitudeDegrees": 0
+                    }
+                ],
+                "phases": ["P"],
+                "earthModel": "Ak135",
+                "correctionDefinitions": [
+                    {
+                        "correctionType": "ELEVATION_CORRECTION",
+                        "mediumVelocityEarthModel": "Ak135"
+                    },
+                    {
+                        "correctionType": "ELLIPTICITY_CORRECTION",
+                        "ellipticityCorrectionType": "DZIEWONSKI_GILBERT"
+                    }
+                ]
+             }
+        },
+
+        # ###################### Event Relocator Service #####################
+
+        # Verifies the Event Relocator Service
+        # - Relocate
+        "Event Relocator Service - "
+        "Relocate ": {
+            "url":
+            f"{base_url}/event-relocation-service/relocation/relocate",
+            "data": { 
+                "eventRelocationProcessingDefinition": {
+                  "residualDefinition": {
+                    "maxFraction": 0.2,
+                    "bigResidualThreshold": 3,
+                    "allowBigResidual": True
+                  },
+                  "locationRestraints": [
+                    {
+                      "depthRestraintType": "UNRESTRAINED",
+                      "positionRestraintType": "UNRESTRAINED",
+                      "timeRestraintType": "UNRESTRAINED"
+                    }
+                  ],
+                  "defaultPredictorDefinition": {
+                    "earthModel": "ak135",
+                    "predictor": "lookup2d"
+                  },
+                  "eventRelocator": "locOo3dEventRelocator",
+                  "locationUncertaintyDefinitions": [
+                    {
+                      "confidenceLevel": 0.95,
+                      "kWeight": "Infinity",
+                      "scalingFactorType": "COVERAGE",
+                      "aprioriStandardError": 1,
+                      "ellipsoid": True
+                    }
+                  ],
+                  "eventRelocationPredictorDefinitions": [
+                    {
+                      "earthModel": "ak135",
+                      "predictor": "lookup2d"
+                    }
+                  ]
+                },
+                "eventRelocationPredictorDefinitionByPhaseType": {
+                  "P": [
+                    {
+                      "earthModel": "ak135",
+                      "predictor": "lookup2d"
+                    }
+                  ],
+                  "pP": [
+                    {
+                      "earthModel": "ak135",
+                      "predictor": "lookup2d"
+                    }
+                  ]
+                },
+                "eventRelocationDefinitionByEventHypothesis": [
+                  {
+                    "eventHypothesis": {
+                      "preferredLocationSolution": {
+                        "id": "d52c204f-14d8-4dde-a9ee-2b93acb7f6fa"
+                      },
+                      "deleted": False,
+                      "rejected": False,
+                      "parentEventHypotheses": [],
+                      "associatedSignalDetectionHypotheses": [
+                        {
+                          "id": {
+                            "id": "62a6fdc2-d202-4448-85a3-9985a86bc53e",
+                            "signalDetectionId": "3c6d19a7-ba25-4bce-9cf9-26087c9a04a3"
+                          }
+                        },
+                        {
+                          "id": {
+                            "id": "60e2e254-6ca9-4ae1-8c9f-ef67e409f63d",
+                            "signalDetectionId": "32b5b663-2f4e-437b-983f-000b59f5d50a"
+                          }
+                        }
+                      ],
+                      "id": {
+                        "eventId": "cc14dada-3794-4b44-afd5-3c747fc82ee6",
+                        "hypothesisId": "a9321b27-3afc-4264-990e-7b705f25811a"
+                      },
+                      "locationSolutions": [
+                        {
+                          "locationRestraint": {
+                            "depthRestraintType": "FIXED",
+                            "depthRestraintReason": "OTHER",
+                            "positionRestraintType": "UNRESTRAINED",
+                            "depthRestrainer": "UNKNOWN",
+                            "depthRestraintKm": 0,
+                            "timeRestraintType": "UNRESTRAINED"
+                          },
+                          "location": {
+                            "latitudeDegrees": 0,
+                            "longitudeDegrees": 0,
+                            "time": "1970-01-01T00:00:00.000Z",
+                            "depthKm": 0
+                          },
+                          "id": "d52c204f-14d8-4dde-a9ee-2b93acb7f6fa",
+                          "featurePredictions": {
+                            "featurePredictions": []
+                          }
+                        }
+                      ]
+                    },
+                    "eventRelocationDefinition": {
+                      "definingFeatureDefinitionMap": [
+                        {
+                          "definingFeatureByFeatureMeasurementType": {
+                            "definingFeatureByFeatureMeasurementType": {
+                              "SLOWNESS": {
+                                "defining": True,
+                                "systemOverridable": True,
+                                "analystOverridable": False
+                              },
+                              "ARRIVAL_TIME": {
+                                "defining": True,
+                                "systemOverridable": True,
+                                "analystOverridable": False
+                              },
+                              "RECEIVER_TO_SOURCE_AZIMUTH": {
+                                "defining": True,
+                                "systemOverridable": True,
+                                "analystOverridable": False
+                              }
+                            }
+                          },
+                          "signalDetectionHypothesis": {
+                            "monitoringOrganization": "GMS",
+                            "deleted": False,
+                            "station": {
+                              "effectiveUntil": "2050-01-01T00:00:00Z",
+                              "allRawChannels": [
+                                {
+                                  "name": "XYZ",
+                                  "effectiveAt": "1900-01-01T00:00:00Z"
+                                }
+                              ],
+                              "name": "XYZ",
+                              "channelGroups": [
+                                {
+                                  "name": "XYZ",
+                                  "effectiveAt": "1900-01-01T00:00:00Z"
+                                }
+                              ],
+                              "effectiveAt": "1900-01-01T00:00:00Z",
+                              "description": "-",
+                              "location": {
+                                "latitudeDegrees": 40.00000000000001,
+                                "elevationKm": 0,
+                                "longitudeDegrees": 0,
+                                "depthKm": 0
+                              },
+                              "type": "SEISMIC_1_COMPONENT",
+                              "relativePositionChannelPairs": [
+                                {
+                                  "channel": {
+                                    "name": "XYZ",
+                                    "effectiveAt": "1900-01-01T00:00:00Z"
+                                  },
+                                  "relativePosition": {
+                                    "eastDisplacementKm": 0,
+                                    "verticalDisplacementKm": 0,
+                                    "northDisplacementKm": 0
+                                  }
+                                }
+                              ]
+                            },
+                            "featureMeasurements": [
+                              {
+                                "measurementValue": {
+                                  "measuredValue": {
+                                    "units": "SECONDS_PER_DEGREE",
+                                    "value": 8.312299796649283,
+                                    "standardDeviation": 0.10000000000000002
+                                  }
+                                },
+                                "featureMeasurementType": "SLOWNESS",
+                                "channel": {
+                                  "name": "XYZ",
+                                  "effectiveAt": "1900-01-01T00:00:00Z"
+                                }
+                              },
+                              {
+                                "measurementValue": {
+                                  "arrivalTime": {
+                                    "value": "1970-01-01T00:07:30.442Z",
+                                    "standardDeviation": "PT0.100000S"
+                                  }
+                                },
+                                "featureMeasurementType": "ARRIVAL_TIME",
+                                "channel": {
+                                  "name": "XYZ",
+                                  "effectiveAt": "1900-01-01T00:00:00Z"
+                                }
+                              },
+                              {
+                                "measurementValue": {
+                                  "measuredValue": {
+                                    "units": "DEGREES",
+                                    "value": 180,
+                                    "standardDeviation": 1
+                                  }
+                                },
+                                "featureMeasurementType": "RECEIVER_TO_SOURCE_AZIMUTH",
+                                "channel": {
+                                  "name": "XYZ",
+                                  "effectiveAt": "1900-01-01T00:00:00Z"
+                                }
+                              },
+                              {
+                                "measurementValue": {
+                                  "confidence": 1,
+                                  "value": "P"
+                                },
+                                "featureMeasurementType": "PHASE",
+                                "channel": {
+                                  "name": "XYZ",
+                                  "effectiveAt": "1900-01-01T00:00:00Z"
+                                }
+                              }
+                            ],
+                            "id": {
+                              "id": "62a6fdc2-d202-4448-85a3-9985a86bc53e",
+                              "signalDetectionId": "88bde19c-56c3-4b21-bb10-9cc61033ba46"
+                            }
+                          }
+                        },
+                        {
+                          "definingFeatureByFeatureMeasurementType": {
+                            "definingFeatureByFeatureMeasurementType": {
+                              "SLOWNESS": {
+                                "defining": False,
+                                "systemOverridable": True,
+                                "analystOverridable": False
+                              },
+                              "ARRIVAL_TIME": {
+                                "defining": True,
+                                "systemOverridable": True,
+                                "analystOverridable": False
+                              },
+                              "RECEIVER_TO_SOURCE_AZIMUTH": {
+                                "defining": False,
+                                "systemOverridable": True,
+                                "analystOverridable": False
+                              }
+                            }
+                          },
+                          "signalDetectionHypothesis": {
+                            "monitoringOrganization": "GMS",
+                            "deleted": False,
+                            "station": {
+                              "effectiveUntil": "2050-01-01T00:00:00Z",
+                              "allRawChannels": [
+                                {
+                                  "name": "XYZ",
+                                  "effectiveAt": "1900-01-01T00:00:00Z"
+                                }
+                              ],
+                              "name": "XYZ",
+                              "channelGroups": [
+                                {
+                                  "name": "XYZ",
+                                  "effectiveAt": "1900-01-01T00:00:00Z"
+                                }
+                              ],
+                              "effectiveAt": "1900-01-01T00:00:00Z",
+                              "description": "-",
+                              "location": {
+                                "latitudeDegrees": 40.00000000000001,
+                                "elevationKm": 0,
+                                "longitudeDegrees": 0,
+                                "depthKm": 0
+                              },
+                              "type": "SEISMIC_1_COMPONENT",
+                              "relativePositionChannelPairs": [
+                                {
+                                  "channel": {
+                                    "name": "XYZ",
+                                    "effectiveAt": "1900-01-01T00:00:00Z"
+                                  },
+                                  "relativePosition": {
+                                    "eastDisplacementKm": 0,
+                                    "verticalDisplacementKm": 0,
+                                    "northDisplacementKm": 0
+                                  }
+                                }
+                              ]
+                            },
+                            "featureMeasurements": [
+                              {
+                                "measurementValue": {
+                                  "measuredValue": {
+                                    "units": "SECONDS_PER_DEGREE",
+                                    "value": 8.330603613285422,
+                                    "standardDeviation": 0.10000000000000002
+                                  }
+                                },
+                                "featureMeasurementType": "SLOWNESS",
+                                "channel": {
+                                  "name": "XYZ",
+                                  "effectiveAt": "1900-01-01T00:00:00Z"
+                                }
+                              },
+                              {
+                                "measurementValue": {
+                                  "arrivalTime": {
+                                    "value": "1970-01-01T00:07:39.405Z",
+                                    "standardDeviation": "PT0.100000S"
+                                  }
+                                },
+                                "featureMeasurementType": "ARRIVAL_TIME",
+                                "channel": {
+                                  "name": "XYZ",
+                                  "effectiveAt": "1900-01-01T00:00:00Z"
+                                }
+                              },
+                              {
+                                "measurementValue": {
+                                  "measuredValue": {
+                                    "units": "DEGREES",
+                                    "value": 180,
+                                    "standardDeviation": 1
+                                  }
+                                },
+                                "featureMeasurementType": "RECEIVER_TO_SOURCE_AZIMUTH",
+                                "channel": {
+                                  "name": "XYZ",
+                                  "effectiveAt": "1900-01-01T00:00:00Z"
+                                }
+                              },
+                              {
+                                "measurementValue": {
+                                  "confidence": 1,
+                                  "value": "pP"
+                                },
+                                "featureMeasurementType": "PHASE",
+                                "channel": {
+                                  "name": "XYZ",
+                                  "effectiveAt": "1900-01-01T00:00:00Z"
+                                }
+                              }
+                            ],
+                            "id": {
+                              "id": "60e2e254-6ca9-4ae1-8c9f-ef67e409f63d",
+                              "signalDetectionId": "be01a667-7995-49e7-9549-ff9e640ca489"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+            }
+        },
+
+
+    }
+
+    #                         END POST CURL COMMANDS                          #
+    ###########################################################################
+
+    ###########################################################################
+    #                         GET CURL COMMANDS                               #
+
+    get_curl_commands = {
+
+        # ########################### Event Manager ###########################
+
+        # Note: the following query needs a prerequisite curl query
+        # to be run which fetches an event id (evtid)
+        # from the deployment for the purpose of passing it
+        # in to this subsequent curl query
+
+
+        # Verifies the Event Manager Service -
+        # Find Events By ID
+        "Event Manager Service - "
+        "Find Events By ID ": {
+            "url":
+            f"{base_url}/event-manager-service/event/"
+            f"AL1/{evtid}"
+        },
+
+    }
+
+    #                        END GET CURL COMMANDS                            #
+    ###########################################################################
+
+
+    console.log(
+        f" Executing curl commands at this url: "
+        f"{base_url}"
+    )
+
+    # Make POST curl requests to service endpoints
+    execute_curl_request("post", post_curl_commands.items(), args, default_headers, base_url, bad_curl_resps)
+
+    # Make GET curl requests to service endpoints
+    execute_curl_request("get", get_curl_commands.items(), args, default_headers, base_url, bad_curl_resps)
+
+    # Print a list of error messages for commands that didn't
+    # return a successful response code
+    if bad_curl_resps:
+        console.log(
+            "[bold red]The following curl commands did not execute "
+            "as anticipated: \n"
+        )
+
+        for description, err in bad_curl_resps.items():
+            console.log(f"[magenta]{description}: [red]{err}")
+
+    else:
+        console.log(
+            "[green]All curl commands successfully executed "
+            "and returned a valid response."
+        )
+
+    sys.exit(0)
+
+
+def run(command: str, print_output: bool = False) -> tuple[int, str, str]:
+    """
+    Execute the specified command and return when the execution is complete.
+
+    Args:
+        command (str): A shell command to run.
+        print_output (bool, optional): Enable printing of stdout and stderr
+            immediately. Defaults to False.
+
+    Returns:
+        tuple: Return code, stdout, and stderr of the command
+
+    """
+    cmd = subprocess.Popen(
+        command,
+        shell=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        stdin=subprocess.PIPE
+    )
+    out, err = cmd.communicate(input=None)
+    out = out.decode()
+    err = err.decode()
+
+    if print_output:
+        print(out)
+        if len(err) > 0:
+            print(err)
+
+    return cmd.returncode, out, err
+
+
+def get_args() -> argparse.Namespace:
+    """
+    Get command-line arguments.
+
+    Returns:
+        argparse.Namespace: A namespace of command line arguments
+
+    """
+
+    description = """
+description:
+  gms-curl-requests executes curl commands for installed IAN instances.
+  The instance name must be provided. The cluster name can be determined by
+  running kubeconfig. Curl commands can be run at various sites.
+    """
+
+    parser = ArgumentParser(
+        description=description,
+        formatter_class=RawDescriptionHelpFormatter
+    )
+
+    parser.add_argument(
+        '-n',
+        '--name',
+        help="Name of the deployment."
+    )
+
+    parser.add_argument(
+        '-v',
+        '--verbose',
+        action='store_true',
+        help="Print info about executing curl commands."
+    )
+
+    parser.add_argument(
+        '-r',
+        '--response',
+        action='store_true',
+        help="Print response data returned by curl commands."
+    )
+
+    parser.add_argument(
+        '-f',
+        '--files',
+        type=str,
+        help="Destination directory for output files."
+    )
+
+    parser.add_argument(
+        '-t',
+        '--timeout',
+        type=int,
+        default=120,
+        help="Sets the timeout (in seconds) for requests. Default = 120."
+    )
+
+    args = parser.parse_args()
+
+    # Create the destination directory (for output files), if necessary
+    if args.files:
+        if not os.path.exists(args.files):
+            try:
+                os.mkdir(args.files)
+            except Exception:
+                print(
+                    f"Failed to create output files directory '{args.files}'.  "
+                    "Defaulting to './'"
+                )
+                args.files = './'
+
+    return args
+
+
+def get_ingress_domain_url(instance_name: str) -> str:
+    """
+    Use ``gmskube ingress`` to get the ingress URL for the
+    ``user-manager-service``, which is common to various instance types.
+
+    Args:
+        instance_name:  The name of the instance.
+
+    Raises:
+        RuntimeError:  If something goes wrong with ``gmskube ingress``.
+
+    Returns:
+        Returns the URL through the port (which is appended to domain
+        via ":<port_number>"), stripping off anything following
+    """
+
+    ingress_url = ""
+    _, out, _ = run(f"gmskube ingress {instance_name}")
+
+    for line in out.splitlines():
+        if "user-manager-service" in line:
+            ingress_url = line.split()[1]
+
+    if ingress_url == "":
+        raise RuntimeError(
+            "Unable to get the ingress URL for the "
+            "`user-manager-service`."
+        )
+
+    return re.search(r"^(https://.*:.*)/.*$", ingress_url).group(1)
+
+
+def get_instance_info(name):
+    """
+    Gather a dictionary of information about a named instance.
+    """
+    summary = run_json_command(f"helm list --all -n { name } --output json")
+
+    if not summary:
+        return None
+
+    instance = {}
+    instance['name'] = summary[0]['name']
+    instance['status'] = summary[0]['status']
+    instance['updated'] = summary[0]['updated']
+
+    return instance
+
+
+def run_json_command(command):
+    """
+    Run a command that produces JSON output
+    and return the result as a dictionary.
+    """
+    result = None
+    try:
+        cmd = subprocess.Popen(
+            command.split(),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            stdin=subprocess.PIPE
+        )
+        out, err = cmd.communicate()
+        out = out.decode()
+        err = err.decode()
+
+        if cmd.returncode != 0:
+            print(
+                f"ERROR: '{ command.split()[0] }' returned { cmd.returncode }."
+            )
+            print(out)
+            console.out(f'[yellow]{err}')
+            return None
+
+        result = json.loads(out)
+    except Exception as ex:
+        print(ex)
+        sys.exit(1)
+
+    return result
+
+
+def get_pod_info(instance):
+    """
+    Gather a dictionary of running pods for the given instance name.
+    """
+
+    rc, out, err = run(f"kubectl get pods -n {instance['name']} --no-headers")
+
+    if rc != 0:
+        print("   ----------ERROR getting pods ----------")
+    else:
+        pods = defaultdict(list)
+        for line in out.splitlines():
+            columns = line.split()
+            deployment_name = columns[0].rsplit('-', 2)[0]
+            pod = {}
+            pod['deployment_name'] = deployment_name
+            pod['name'] = columns[0]
+            pod['ready'] = columns[1]
+            pod['status'] = columns[2]
+            pod['restarts'] = columns[3]
+            pod['age'] = columns[4]
+            pods[deployment_name].append(pod)
+
+    return pods
+
+
+def is_simulator_installed(pods) -> 'bool':
+    """
+    Check if simulator is installed in instance
+    """
+
+    if 'bridged-data-source-simulator' in pods and 'oracle' in pods:
+        return True
+    else:
+        return False
+
+
+def set_simulated_times():
+    """
+    Set start/end/creation/effective times to work with
+    simulator time range requirements
+    """
+
+    simulated_times = {}
+
+    # Note: When a simulator is initialized,
+    #   the start time defaults to 8 hours in
+    #       the past from the last even hour in UTC.
+    #       Set the start time below to 8 hrs in the past.
+    new_start_time = (datetime.utcnow() - timedelta(hours=8))
+    start_time = new_start_time.strftime('%Y-%m-%dT%H:00:00Z')
+
+    # Set the end time below to 6 hrs in the past so that the interval between
+    # start and end time is 2 hrs.
+    new_end_time = datetime.utcnow() - timedelta(hours=6)
+    end_time = new_end_time.strftime('%Y-%m-%dT%H:00:00Z')
+
+    creation_time = start_time
+    effective_time = start_time
+    effective_until = end_time
+
+    simulated_times['start_time'] = start_time
+    simulated_times['end_time'] = end_time
+    simulated_times['creation_time'] = creation_time
+    simulated_times['effective_time'] = effective_time
+    simulated_times['effective_until'] = effective_until
+
+    return simulated_times
+
+
+def set_fixed_times():
+    """
+    Set start/end/creation/effective times to fixed
+    values to work when simulator is not installed
+    """
+
+    # Note 1:  SME says "If you’re not running a simulator,
+    #     you could use any time on 2019-01-05.
+    #   For start and end times, it’s really dependent on the curl.
+    #   For curls that return a ton of data (e.g., events)
+    #     you’d want to use a very short time period.
+    #   For curls that return only a little data (e.g., intervals)
+    #     you can use the entire day."
+    # Note 2:  SME now says "Seed data we use exists
+    #     2019-01-05T16:00 – 2019-01-05T22:00 "
+    # Note 3:  SME also now says "The seed data for SB deployments
+    #     is mostly in 6 hours in 2019, 2019-01-05 16:00-22:00.
+    #     You need to adjust the start and end times in your
+    #     query to be in this time frame. Try 16:00-17:00"
+    # Note 4:  SME now saying "I’ve picked a seed data time that
+    #     will work for both AL1 and AL2 stages. If you use these
+    #     times for any ian/sb query that requires a time range, it
+    #     should work."
+    #       "startTime": "2019-01-05T19:25:00Z"
+    #       "endTime": "2019-01-05T19:29:00Z"
+
+    fixed_times = {}
+
+    start_time = "2019-01-05T19:25:00Z"
+
+    # set end_time to 4 hrs after start_time
+    end_time = "2019-01-05T19:29:00Z"
+
+    # set short_end_time to 1 min after start_time
+    # short_end_time = "2019-01-05T19:26:00Z"
+
+    creation_time = start_time
+    effective_time = start_time
+
+    fixed_times['start_time'] = start_time
+    fixed_times['end_time'] = end_time
+    fixed_times['creation_time'] = creation_time
+    fixed_times['effective_time'] = effective_time
+
+    return fixed_times
+
+
+def print_curl_response(response_text, service_description):
+    """
+    Print curl response json to stdout
+    """
+
+    print("\nExecuting curl commands at this service endpoint: " )
+    print(service_description)
+    print("\n")
+    print(response_text)
+    print("\n")
+
+
+def write_response_to_file(file_name, response_text):
+    """
+    Append curl response json to output file
+    """
+
+    f = open(file_name,"a")
+    f.write("\n")
+    f.write(response_text)
+    f.write("\n")
+    f.close()
+
+
+def write_text_to_file(file_name, text_string1, text_string2):
+    """
+    Append text to output file
+    """
+
+    f = open(file_name,"a")
+    f.write("\n")
+    f.write(text_string1)
+    f.write(text_string2)
+    f.write("\n")
+    f.close()
+
+
+def get_channel_segment_descriptor(base_url, data_times, default_headers, args_response):
+
+    # Note: the following prerequisite curl query,
+    # which fetches a channel segment descriptor (csd)
+    # from the deployment, is needed for the subsequent query
+    # "Waveform Manager Service -
+    #  Find Channel Segment Descriptors By Channel Name
+    #  And Time Range"
+
+    # Declare service URL
+    service_url = base_url + "/event-manager-service/event/detections-and-segments/time"
+
+    # Declare request body for channel segment descriptor (csd)
+    request_body = {
+        "stageId": {"name": "AL1"},
+        "startTime": data_times['start_time'],
+        "endTime": data_times['end_time']
+    }
+
+    # Make a request to the service url
+    events = requests.post(service_url, json=request_body, headers=default_headers)
+    events_response = events.json()
+
+    if (events.status_code != 200):
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Channel Segment Descriptor - Endpoint failure")
+
+    # Channel Segment Descriptor
+    if events_response["channelSegments"]:
+        chan_seg_descriptor = events_response["channelSegments"][0]['id']
+    else:
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Channel Segment Descriptor - No events found for {} - {}".format(data_times['start_time'], data_times['end_time']))
+
+    return chan_seg_descriptor
+
+
+def get_associated_signal_detection_hypotheses(base_url, data_times, default_headers, args_response):
+
+    # Note: the following prerequisite curl query,
+    # which fetches an associated signal detection hypotheses (asdh)
+    # from the deployment, is needed for the subsequent query
+    # "Event Manager Service - "
+    # "Find Events By Associated Signal Detection Hypotheses ":
+
+    # Declare service URL
+    service_url = base_url + "/event-manager-service/event/detections-and-segments/time"
+
+    # Declare request body for associated signal detection hypotheses (asdh)
+    request_body = {
+        "stageId": {"name": "Auto Network"},
+        "startTime": data_times['start_time'],
+        "endTime": data_times['end_time']
+    }
+
+    # Make a request to the service url
+    events = requests.post(service_url, json=request_body, headers=default_headers)
+    events_response = events.json()
+
+    if (events.status_code != 200):
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Associated Signal Detection Hypotheses - Endpoint failure")
+
+    # Associated Signal Detection Hypotheses
+    try:
+        assoc_sig_det_hypoth = events_response["events"][0]["eventHypotheses"][0]["associatedSignalDetectionHypotheses"][0]
+    except KeyError:
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Associated Signal Detection Hypotheses - No events found for {} - {}".format(data_times['start_time'], data_times['end_time']))
+
+    return assoc_sig_det_hypoth
+
+
+def get_event_id(base_url, data_times, default_headers, args_response):
+
+    # Note: the following prerequisite curl query,
+    # which fetches an event id (evtid) from the deployment,
+    # is needed for the subsequent query
+    # "Event Manager Service -
+    #  Find Events By ID"
+
+    # Declare service URL
+    service_url = base_url + "/event-manager-service/event/detections-and-segments/time"
+
+    # Declare request body for channel segment descriptor (csd)
+    request_body = {
+        "stageId": {"name": "AL1"},
+        "startTime": data_times['start_time'],
+        "endTime": data_times['end_time']
+    }
+
+    # Make a request to the service url
+    events = requests.post(service_url, json=request_body, headers=default_headers)
+    events_response = events.json()
+
+    if (events.status_code != 200):
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Event ID - Endpoint failure")
+
+    # Event ID
+    if events_response["events"]:
+        event_id = events_response["events"][0]['id']
+    else:
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Event ID - No events found for {} - {}".format(data_times['start_time'], data_times['end_time']))
+
+    return event_id
+
+
+def execute_curl_request(curl_request_type, curl_commands_list, args, default_headers, base_url, bad_curl_resps):
+    """
+    Look through list of post/get curl requests to service endpoints 
+    """
+
+    for description, query in curl_commands_list:
+        if args.verbose:
+            console.log(
+                f"[cyan]\n Executing", curl_request_type.upper(), "curl command at this service endpoint: \n "
+                f"[magenta]{description} \n"
+            )
+            start = time.time()
+
+        # Create output data file in destination directory
+        if args.files:
+            description_name = description.replace(" ", "") + ".txt"
+            output_filename = args.files + "/" + str(description_name)
+            f = open(output_filename, "w")
+            f.write("Executing curl command at this url: ")
+            f.write(base_url)
+            f.write("\n")
+            f.close()
+
+            console.log(
+                f"*Output file {output_filename} created. \n"
+            )
+
+            write_text_to_file(output_filename,
+                    " Executing curl command at this service endpoint: \n ",
+                    description)
+        try:
+            # Use appropriate POST or GET method for requests
+            if curl_request_type == "post":
+                resp = requests.post(
+                    query["url"],
+                    headers=default_headers,
+                    data=json.dumps(query["data"]),
+                    timeout=args.timeout
+                )
+            elif curl_request_type == "get":
+                resp = requests.get(
+                    query["url"],
+                    headers=default_headers,
+                    timeout=args.timeout
+                )
+            else:
+                raise Exception('ERROR: must use POST or GET method with curl request')
+
+            if args.verbose:
+                elapsed_time = time.time() - start
+                console.log(f"- {elapsed_time:.3f} s")
+
+            # Print data to stdout
+            if args.response:
+                print_curl_response(resp.text, description)
+
+            # Write response data to output file
+            if args.files:
+                write_response_to_file(output_filename, resp.text)
+
+            if resp.text == "{}" or resp.text == "[]":
+                print("           *Empty List Returned From: ", description)
+                print("                 *At This URL: ", query["url"])
+                print(" ")
+                resp.raise_for_status()
+
+                # Write empty list info to output file
+                if args.files:
+                    write_text_to_file(output_filename,
+                            "         *Empty List Returned From: ", description)
+                    write_text_to_file(output_filename,
+                            "               *At This URL: ", query["url"])
+
+            resp.raise_for_status()
+
+        # Handles bad urls, unsuccessful response codes, timeouts,
+        # and connection errors
+        except requests.exceptions.RequestException as err:
+            bad_curl_resps[description] = err
+
+            if args.verbose:
+                print()
+
+            # Write error data to output file
+            if args.files:
+                write_text_to_file(output_filename, description, str(err))
+
+
+##################### MAIN #######################
+if __name__ == "__main__":
+    main()

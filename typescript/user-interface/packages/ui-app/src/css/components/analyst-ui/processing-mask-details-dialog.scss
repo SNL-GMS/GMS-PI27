@@ -1,0 +1,80 @@
+@import '@blueprintjs/core/lib/scss/variables.scss';
+
+.processing-mask-form {
+  --form-text-width: 34ch;
+  min-width: 500px;
+  min-height: 400px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.processing-mask-form .form__header {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.processing-mask-form .time-picker textarea {
+  // The time picker should not have a hardcoded width in this component. That may require some refactoring.
+  // For the sake of creating a visually correct design, and with much shame, I am using !important.
+  width: auto !important; // Don't do this in production!
+}
+
+.bp5-dialog-header {
+  padding-left: 1rem;
+  padding-right: 0.25rem;
+}
+
+.bp5-popover-transition-container {
+  inset: auto;
+}
+
+.processing-mask-form .processing-mask-swatch {
+  font-weight: 400;
+  color: var(--gms-prominent);
+  margin-left: 0.5rem;
+}
+
+.processing-mask-swatch {
+  display: inline-block;
+  height: 10px;
+  width: 20px;
+}
+.processing-mask-form .multi-column-label {
+  grid-column: 1 / span 2;
+}
+
+.processing-mask-form .form__text--wrap {
+  width: var(--form-text-width);
+}
+.processing-mask-form .form__text-input {
+  width: var(--form-text-width);
+}
+
+.processing-mask-form .form-label--required {
+  &::after {
+    content: '*';
+    padding-left: 0.25em;
+  }
+}
+
+.processing-mask-form .form-value--uneditable {
+  pointer-events: none;
+}
+
+.processing-mask-form-input-table {
+  grid-column: 1 / span 2;
+  width: 100%;
+  padding: 0.5rem 0rem 0rem 0rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  position: relative;
+  .ag-cell-value {
+    padding-left: 10px;
+  }
+}

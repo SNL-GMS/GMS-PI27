@@ -1,0 +1,31 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+    implementation project(':frameworks-system-config')
+    api project(':event-management-api')
+    api project(':event-coi')
+    api project(':signal-detection-api')
+    api project(':station-definition-api')
+    api project(':waveform-api')
+    implementation project(':signal-detection-accessor')
+    implementation project(':signal-detection-database-connector')
+    implementation project(':event-repository')
+    api project(':structured-logging')
+
+    testImplementation(testFixtures(project(':event-coi')))
+    testImplementation(testFixtures(project(':signal-detection-coi')))
+    testImplementation(testFixtures(project(':station-definition-coi')))
+
+    // Required by SignalDetection/StationDefinition/Waveform Accessors
+    implementation project(':signal-detection-api')
+    implementation project(':station-definition-accessor')
+    implementation project(':waveform-api')
+    implementation project(':waveform-accessor')
+    implementation project(':station-definition-repository')
+    implementation project(':spring-framework-utilities')
+    implementation project(':frameworks-control')
+    implementation project(':waveform-bridge-repository')
+    implementation project(':caching-utils')
+}

@@ -1,0 +1,112 @@
+{
+  "stations": [
+    {
+      "name": "AKASG"
+    },
+    {
+      "name": "AKTO"
+    },
+    {
+      "name": "ASAR"
+    },
+    {
+      "name": "BDFB"
+    },
+    {
+      "name": "BRTR"
+    },
+    {
+      "name": "BVAR"
+    },
+    {
+      "name": "CMAR"
+    },
+    {
+      "name": "CMIG"
+    },
+    {
+      "name": "DAVOX"
+    },
+    {
+      "name": "EKA"
+    },
+    {
+      "name": "ESDC"
+    },
+    {
+      "name": "FINES"
+    },
+    {
+      "name": "GERES"
+    },
+    {
+      "name": "HFS"
+    },
+    {
+      "name": "ILAR"
+    },
+    {
+      "name": "JAY"
+    },
+    {
+      "name": "KBZ"
+    },
+    {
+      "name": "KMBO"
+    },
+    {
+      "name": "KSRS"
+    },
+    {
+      "name": "MKAR"
+    },
+    {
+      "name": "MMAI"
+    },
+    {
+      "name": "PCRV"
+    },
+    {
+      "name": "ROSC"
+    },
+    {
+      "name": "SCHQ"
+    },
+    {
+      "name": "SEY"
+    },
+    {
+      "name": "SONM"
+    },
+    {
+      "name": "TKL"
+    },
+    {
+      "name": "TORD"
+    },
+    {
+      "name": "TXAR"
+    },
+    {
+      "name": "ULM"
+    },
+    {
+      "name": "USRK"
+    },
+    {
+      "name": "VRAC"
+    },
+    {
+      "name": "WRA"
+    },
+    {
+      "name": "ZALV"
+    }
+  ],
+  "startTime": "2019-01-05T17:00:00.01Z",
+  "endTime": "2019-01-05T18:00:00.00Z",
+  "stageId": {
+    "name": "Auto Network"
+  },
+  "excludedSignalDetections": []
+}

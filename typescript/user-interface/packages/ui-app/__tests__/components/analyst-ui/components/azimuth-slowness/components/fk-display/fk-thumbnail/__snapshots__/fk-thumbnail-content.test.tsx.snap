@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FkThumbnailContent Returns a canvas element 1`] = `
+<div>
+  <canvas
+    class="fk-thumbnail__content"
+    data-testid="fk-thumbnail"
+    height="110"
+    width="110"
+  />
+</div>
+`;
+
+exports[`FkThumbnailContent Returns a loading spinner 1`] = `
+<div>
+  <div
+    class="fk-thumbnail__content"
+    role="button"
+    style="height: 150px; width: 150px;"
+    tabindex="0"
+  >
+    <div
+      class="bp5-non-ideal-state bp5-non-ideal-state-vertical bp5-skeleton"
+    >
+      <div
+        class="bp5-non-ideal-state-text"
+      >
+        <div>
+          Loading
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FkThumbnailContent Returns a network error/no template state 1`] = `
+<div>
+  <div
+    class="fk-thumbnail__content"
+    role="button"
+    style="height: 150px; width: 150px;"
+    tabindex="0"
+  >
+    <div
+      class="bp5-non-ideal-state bp5-non-ideal-state-vertical fk-thumbnail__content--failed"
+    >
+      <div
+        class="bp5-non-ideal-state-visual"
+        style="font-size: 48px; line-height: 48px;"
+      >
+        <span
+          aria-hidden="true"
+          class="bp5-icon bp5-icon-issue"
+          data-icon="issue"
+          tabindex="-1"
+        />
+      </div>
+      <div
+        class="bp5-non-ideal-state-text"
+      >
+        <div>
+          Failed to compute
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FkThumbnailContent Returns an invalid phase/stationType state 1`] = `
+<div>
+  <div
+    class="fk-thumbnail__content"
+    role="button"
+    style="height: 150px; width: 150px;"
+    tabindex="0"
+  >
+    <div
+      class="bp5-non-ideal-state bp5-non-ideal-state-vertical"
+    >
+      <div
+        class="bp5-non-ideal-state-visual"
+        style="font-size: 48px; line-height: 48px;"
+      >
+        <span
+          aria-hidden="true"
+          class="bp5-icon bp5-icon-disable"
+          data-icon="disable"
+          tabindex="-1"
+        />
+      </div>
+      <div
+        class="bp5-non-ideal-state-text"
+      >
+        <div>
+          Could not compute due to invalid phase or station type
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

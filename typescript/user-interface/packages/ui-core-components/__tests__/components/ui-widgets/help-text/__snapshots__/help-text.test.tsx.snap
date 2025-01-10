@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelpText HelpTextTarget reveals the icon on hover 1`] = `
+<div>
+  <div
+    class="help-text__hover-container"
+  >
+    <div
+      aria-expanded="false"
+      class="help-text bp5-popover-target"
+    >
+      <span
+        aria-hidden="true"
+        class="bp5-icon bp5-icon-info-sign"
+        tabindex="0"
+      >
+        <svg
+          data-icon="info-sign"
+          height="14"
+          role="img"
+          viewBox="0 0 16 16"
+          width="14"
+        >
+          <path
+            d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zM7 3h2v2H7V3zm3 10H6v-1h1V7H6V6h3v6h1v1z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </span>
+    </div>
+    <span
+      data-test-id="hover-target"
+    >
+      Hover target
+    </span>
+  </div>
+</div>
+`;
+
+exports[`HelpText matches a snapshot 1`] = `
+<div>
+  <div
+    class="help-text__hover-container"
+  >
+    <div
+      aria-expanded="false"
+      class="help-text bp5-popover-target"
+    >
+      <span
+        aria-hidden="true"
+        class="bp5-icon bp5-icon-info-sign"
+        data-icon="info-sign"
+        tabindex="0"
+      />
+    </div>
+    Hover over this to show icon
+  </div>
+</div>
+`;

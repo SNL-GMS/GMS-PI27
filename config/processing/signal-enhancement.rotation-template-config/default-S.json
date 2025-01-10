@@ -1,0 +1,26 @@
+{
+    "name": "default-S",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "phase",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "S"
+            ],
+            "priority": 90
+        }
+    ],
+    "parameters": {
+        "leadDuration": "PT60S",
+        "duration": "PT5M",
+        "sampleRateToleranceHz": 0.12,
+        "locationToleranceKm": 0.12,
+        "orientationAngleToleranceDeg": 0.12,
+        "twoDimensional": true,
+        "samplingType": "NEAREST_SAMPLE"
+    }
+}

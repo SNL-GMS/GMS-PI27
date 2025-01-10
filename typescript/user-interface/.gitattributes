@@ -1,0 +1,5 @@
+# https://git-scm.com/docs/gitattributes#_marking_files_as_binary
+.yarn/plugins/**/*.cjs -diff binary
+.yarn/releases/**/*.cjs -diff binary
+.yarn/cache/** -diff binary
+.yarn/sdks/** -diff binary

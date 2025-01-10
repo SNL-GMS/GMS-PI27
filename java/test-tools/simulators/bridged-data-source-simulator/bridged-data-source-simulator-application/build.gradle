@@ -1,0 +1,38 @@
+plugins {
+    id('application')
+    id('com.google.cloud.tools.jib')
+}
+
+mainClassName = "gms.testtools.simulators.bridgeddatasourcesimulator.application.BridgedDataSourceSimulatorApplication"
+
+dependencies {
+
+    implementation project(':bridged-data-source-simulator-api')
+    implementation project(':bridged-data-source-simulator-jpa')
+
+    implementation project(':bridged-data-source-analysis-simulator')
+    implementation project(':bridged-data-source-station-simulator')
+    implementation project(':bridged-data-source-interval-simulator')
+
+    //GMS Shared Libraries
+    implementation 'gms:spring-framework-utilities:LATEST'
+    implementation 'gms:spring-persistence-oracle:LATEST'
+
+    //3rd Party Libraries
+    implementation libs.org.springframework.boot.spring.boot.starter.actuator
+    implementation libs.org.springframework.boot.spring.boot.starter.web
+    implementation libs.io.projectreactor.reactor.core
+    implementation libs.org.springdoc.springdoc.openapi.starter.webmvc.ui
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+    implementation libs.org.hibernate.orm.hibernate.core
+
+    //Logging
+    runtimeOnly libs.net.logstash.logback.logstash.logback.encoder
+
+    //Test Libraries
+    testImplementation(testFixtures('gms:station-definition-coi:LATEST'))
+    testImplementation 'gms:test-utils:LATEST'
+    testImplementation libs.org.springframework.boot.spring.boot.starter.test
+    testImplementation libs.io.projectreactor.reactor.test
+}

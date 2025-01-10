@@ -1,0 +1,35 @@
+apply plugin: 'java-library'
+
+dependencies {
+    
+    implementation project(':processing-mask-utility')
+    implementation project(':station-definition-dao')
+    implementation project(':station-definition-repository')
+    implementation project(':station-definition-accessor')
+    implementation project(':workflow-coi')
+    implementation project(':event-utility')
+
+    implementation project(':event-management-api')
+    api project(':structured-logging')
+    implementation project(':spring-framework-utilities')
+    implementation libs.com.google.auto.value.auto.value.annotations
+    implementation libs.org.apache.commons.commons.lang3
+    implementation project(':caching-utils')
+
+    api project(':waveform-coi')
+    api project(':waveform-api')
+    api project(':waveform-converter')
+    
+    implementation libs.org.apache.ignite.ignite.core
+    implementation libs.org.apache.ignite.ignite.slf4j
+
+    implementation libs.org.springframework.boot.spring.boot.starter.web
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    testImplementation project(':test-utils')
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':waveform-coi')))
+    testImplementation(testFixtures(project(':event-coi')))
+    testImplementation libs.org.springframework.boot.spring.boot.starter.test
+    testImplementation project(':spring-framework-utilities').sourceSets.test.output
+}

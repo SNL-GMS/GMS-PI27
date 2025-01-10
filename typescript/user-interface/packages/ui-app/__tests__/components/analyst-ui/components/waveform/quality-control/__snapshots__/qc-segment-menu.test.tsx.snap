@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QC Segment Context Menu renders QcSegmentContextMenuContent 1`] = `<div />`;
+
+exports[`QC Segment Context Menu renders QcSegmentContextMenuContent 2`] = `
+<div>
+  <ul
+    class="bp5-menu"
+    role="menu"
+  >
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        class="bp5-menu-item bp5-popover-dismiss"
+        role="menuitem"
+        tabindex="0"
+        title="Open QC segment details"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Open QC segment details
+        </div>
+        <span
+          class="bp5-menu-item-label"
+        >
+          (alt)
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`QC Segment Context Menu renders QcSegmentContextMenuContent 3`] = `
+<div>
+  <ul
+    class="bp5-menu"
+    role="menu"
+  >
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        class="bp5-menu-item bp5-popover-dismiss"
+        role="menuitem"
+        tabindex="0"
+        title="Select QC segment"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Select QC segment
+        </div>
+        <span
+          class="bp5-menu-item-label"
+        >
+          (alt)
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
+`;

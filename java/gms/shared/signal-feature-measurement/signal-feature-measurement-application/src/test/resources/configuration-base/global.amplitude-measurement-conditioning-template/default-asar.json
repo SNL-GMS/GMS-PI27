@@ -1,0 +1,64 @@
+{
+    "name": "default-asar",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "ASAR"
+            ],
+            "priority": 100
+        }
+    ],
+    "parameters": {
+        "beamformingTemplate": {
+            "station": "ASAR",
+            "leadDuration": "PT5S",
+            "beamDuration": "PT5M",
+            "sampleRateToleranceHz": 0.5,
+            "orientationAngleToleranceDeg": 5,
+            "minWaveformsToBeam": 2, 
+            "inputChannelGroups": [
+                "AS01",
+                "AS02",
+                "AS03",
+                "AS04",
+                "AS05",
+                "AS06",
+                "AS07",
+                "AS08",
+                "AS09"
+            ],
+            "inputChannels": [
+                "SHZ"
+            ],
+            "beamDescriptionParams": {
+                "twoDimensional": true,
+                "beamType": "AMPLITUDE", 
+                "phaseType": "P", 
+                "beamSummation": "COHERENT",
+                "samplingType": "NEAREST_NEIGHBOR",
+                "preFilterDefinition": {
+                    "$ref=global.filter-definition": [
+                        {
+                            "criterion": "name",
+                            "value": "0.8 4.5 3 BP causal"
+                        }
+                    ] 
+                }
+            }
+        },
+        "filterDefinition": {
+            "$ref=global.filter-definition": [
+                {
+                    "criterion": "name",
+                    "value": "0.8 4.5 3 BP causal"
+                }
+            ] 
+        }
+    }
+}

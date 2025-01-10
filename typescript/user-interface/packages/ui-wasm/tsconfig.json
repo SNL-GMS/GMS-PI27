@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./lib",
+    "types": ["node", "jest", "emscripten"],
+    "strictNullChecks": true
+  },
+  "include": ["src/**/*", "src/ts/**/*.mjs", "__tests__/**/*", "__mocks__/**/*"]
+}

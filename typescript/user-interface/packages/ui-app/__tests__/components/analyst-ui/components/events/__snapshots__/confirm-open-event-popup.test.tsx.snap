@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Confirm Open Event Popup matches a snapshot of the popup that is currently open 1`] = `
+<body
+  class="bp5-overlay-open"
+>
+  <div
+    class="bp5-portal"
+  >
+    <div
+      aria-live="polite"
+      class="bp5-overlay bp5-overlay-open bp5-overlay-scroll-container"
+    >
+      <div
+        class="bp5-overlay-start-focus-trap bp5-overlay-appear bp5-overlay-appear-active"
+        tabindex="0"
+      />
+      <div
+        class="bp5-overlay-backdrop bp5-overlay-appear bp5-overlay-appear-active"
+      />
+      <div
+        class="bp5-dialog-container bp5-overlay-content bp5-overlay-appear bp5-overlay-appear-active"
+        tabindex="0"
+      >
+        <div
+          aria-labelledby="title-bp-dialog-1"
+          class="bp5-dialog dialog_parent dialog_parent--wide"
+          role="dialog"
+        >
+          <div
+            class="bp5-dialog-header"
+          >
+            <h6
+              class="bp5-heading"
+              id="title-bp-dialog-1"
+            >
+              Open Event Confirmation
+            </h6>
+            <button
+              aria-label="Close"
+              class="bp5-button bp5-minimal bp5-dialog-close-button"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+                class="bp5-icon bp5-icon-small-cross"
+              >
+                <svg
+                  data-icon="small-cross"
+                  height="16"
+                  role="img"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M188.2 160L234 205.8C237.8 209.4 240 214.4 240 220C240 231 231 240 220 240C214.4 240 209.4 237.8 205.8 234.2L160 188.2L114.2 234.2C110.6 237.8 105.6 240 100 240C89 240 80 231 80 220C80 214.4 82.2 209.4 85.8 205.8L131.8 160L86 114.2C82.2 110.6 80 105.6 80 100C80 89 89 80 100 80C105.6 80 110.6 82.2 114.2 85.8L160 131.8L205.8 86C209.4 82.2 214.4 80 220 80C231 80 240 89 240 100C240 105.6 237.8 110.6 234.2 114.2L188.2 160z"
+                    fill-rule="evenodd"
+                    transform="scale(0.05, -0.05) translate(-160, -160)"
+                    transform-origin="center"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div
+            class="dialog dialog__container bp5-popover-content-dialog-container-left-right-padding"
+          >
+            <div
+              class="interval-confirmation-contents"
+            >
+              <div
+                class="interval-confirmation-text"
+              >
+                <b>
+                  John
+                </b>
+                 is 
+                already working this event.
+                <br />
+                Are you sure you want to open it?
+              </div>
+              <span
+                aria-hidden="true"
+                class="bp5-icon bp5-icon-error bp5-popover-content-icon-margin-left"
+                data-icon="error"
+              />
+            </div>
+            <div
+              class="dialog__controls"
+            >
+              <div
+                class="dialog-actions"
+              >
+                <button
+                  class="bp5-button"
+                  type="button"
+                >
+                  <span
+                    class="bp5-button-text"
+                  >
+                    Open Anyway
+                  </span>
+                </button>
+              </div>
+              <button
+                class="bp5-button bp5-intent-primary"
+                type="button"
+              >
+                <span
+                  class="bp5-button-text"
+                >
+                  Cancel
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bp5-overlay-end-focus-trap bp5-overlay-appear bp5-overlay-appear-active"
+        tabindex="0"
+      />
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Confirm Open Event Popup matches a snapshot of the popup that is not currently open 1`] = `<div />`;

@@ -1,0 +1,11 @@
+plugins {
+    id('java-library')
+    id('java-test-fixtures')
+}
+
+dependencies {
+    testFixturesApi platform(libs.org.springframework.boot.spring.boot.dependencies)
+    testFixturesApi project(':frameworks-osd-commonobjects')
+}
+
+

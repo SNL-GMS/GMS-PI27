@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Core Table Renders 1`] = `
+<div>
+  <div />
+</div>
+`;
+
+exports[`Core Table can handle rerenders with new props 1`] = `
+<div>
+  <div />
+</div>
+`;

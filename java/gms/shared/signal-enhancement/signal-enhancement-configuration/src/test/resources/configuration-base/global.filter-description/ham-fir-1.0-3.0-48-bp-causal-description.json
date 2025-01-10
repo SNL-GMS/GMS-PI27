@@ -1,0 +1,27 @@
+{
+    "name": "ham-fir-1.0-3.0-48-bp-causal-description",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "HAM FIR 1.0 3.0 48 BP causal Description"
+            ]
+        }
+    ],
+    "parameters": {
+        "comments": "Hamming FIR band-pass, 1.0-3.0 Hz, order 48, causal",
+        "causal": true,
+        "filterType": "LINEAR",
+        "lowFrequencyHz": 1.0,
+        "highFrequencyHz": 3.0,
+        "order": 48,
+        "zeroPhase": false,
+        "passBandType": "BAND_PASS",
+        "linearFilterType": "FIR_HAMMING"
+    }
+}

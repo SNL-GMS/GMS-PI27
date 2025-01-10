@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Position Buffer Utils convertAndStoreTimeseries 1`] = `
+[
+  {
+    "_uiClaimCheckId": "{"domain":{"startTimeSecs":1638297900,"endTimeSecs":1638298200},"id":{"channel":{"effectiveAt":1638297900,"name":"PDAR.PD01.SHZ"},"startTime":1638297900,"endTime":1638298200,"creationTime":1638297900},"type":"WAVEFORM","filter":"Unfiltered","waveform":{"type":"WAVEFORM","startTime":1638297900,"endTime":1638298200,"sampleCount":12000,"sampleRateHz":40}}",
+    "endTime": 1638298200,
+    "sampleCount": 12000,
+    "sampleRateHz": 40,
+    "startTime": 1638297900,
+    "type": "WAVEFORM",
+  },
+]
+`;

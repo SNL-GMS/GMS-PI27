@@ -1,0 +1,26 @@
+{
+    "name": "bw-iir-0.0-4.2-1-lp-noncausal-description",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "0.0 4.2 1 LP non-causal Description"
+            ]
+        }
+    ],
+    "parameters": {
+        "comments": "0.0 4.2 1 LP non-causal",
+        "causal": false,
+        "filterType": "LINEAR",
+        "highFrequencyHz": 4.2,
+        "order": 1,
+        "zeroPhase": true,
+        "passBandType": "LOW_PASS",
+        "linearFilterType": "IIR_BUTTERWORTH"
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "name": "amplitude-a5-over-2-cmar",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "CMAR"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "amplitudeMeasurementType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "AMPLITUDE_A5_OVER_2"
+            ],
+            "priority": 90 
+
+        }
+    ],
+    "parameters": {
+        "measuredChannel": "CMAR.beam.SHZ",
+        "filterDefinition": {
+            "$ref=global.filter-definition": [
+                {
+                    "criterion": "name",
+                    "value": "0.8 4.5 3 BP causal"
+                }
+            ] 
+        }
+    }
+}

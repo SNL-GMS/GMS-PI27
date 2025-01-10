@@ -1,0 +1,146 @@
+[
+    {
+        "canonicalName": "ASAR.AS01.SHZ",
+        "channelBandType": "SHORT_PERIOD",
+        "channelDataType": "SEISMIC",
+        "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+        "channelOrientationCode": "Z",
+        "channelOrientationType": "VERTICAL",
+        "configuredInputs": [],
+        "description": "short-period_vertical",
+        "location": {
+            "depthKm": 0.0274,
+            "elevationKm": 0.6215,
+            "latitudeDegrees": -23.663224,
+            "longitudeDegrees": 133.951993
+        },
+        "nominalSampleRateHz": 20.0,
+        "orientationAngles": {
+            "horizontalAngleDeg": -1.0,
+            "verticalAngleDeg": 0.0
+        },
+        "processingDefinition": {},
+        "processingMetadata": {
+            "CHANNEL_GROUP": "AS01"
+        },
+        "response": {
+            "calibration": {
+                "calibrationFactor": {
+                    "value": 0.00904,
+                    "standardDeviation": 0.0,
+                    "units": "NANOMETERS_PER_COUNT"
+                },
+                "calibrationPeriodSec": 1.0,
+                "calibrationTimeShift": "PT0S"
+            },
+            "fapResponse": {
+                "id": "1bfbc0a2-4f0a-3816-9842-c48fe9ac67a8"
+            },
+            "effectiveAt": "2019-01-05T00:00:00Z",
+            "id": "28ed54ee-9f50-39d4-b0fa-0a9becee3b96"
+        },
+        "station": {
+            "effectiveAt": "2010-05-21T00:00:00Z",
+            "name": "ASAR"
+        },
+        "units": "NANOMETERS",
+        "effectiveAt": "2019-01-05T00:00:00Z",
+        "name": "ASAR.AS01.SHZ"
+    },
+    {
+        "canonicalName": "MAW.MAW.BHZ",
+        "channelBandType": "BROADBAND",
+        "channelDataType": "SEISMIC",
+        "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+        "channelOrientationCode": "Z",
+        "channelOrientationType": "VERTICAL",
+        "configuredInputs": [],
+        "description": "broad-band_vertical",
+        "location": {
+            "depthKm": 0.006,
+            "elevationKm": 0.012,
+            "latitudeDegrees": -67.6039,
+            "longitudeDegrees": 62.8706
+        },
+        "nominalSampleRateHz": 40.0,
+        "orientationAngles": {
+            "horizontalAngleDeg": -1.0,
+            "verticalAngleDeg": 0.0
+        },
+        "processingDefinition": {},
+        "processingMetadata": {
+            "CHANNEL_GROUP": "MAW"
+        },
+        "response": {
+            "calibration": {
+                "calibrationFactor": {
+                    "value": 0.036318,
+                    "standardDeviation": 0.0,
+                    "units": "NANOMETERS_PER_COUNT"
+                },
+                "calibrationPeriodSec": 1.0,
+                "calibrationTimeShift": "PT0S"
+            },
+            "fapResponse": {
+                "id": "3965f7cc-5dc9-3c05-9dca-f8e64e453d58"
+            },
+            "effectiveAt": "2019-01-05T00:00:00Z",
+            "id": "c483e9d0-a059-3477-bd6e-395d42feee15"
+        },
+        "station": {
+            "effectiveAt": "2003-02-19T00:00:00Z",
+            "name": "MAW"
+        },
+        "units": "NANOMETERS",
+        "effectiveAt": "2019-01-05T00:00:00Z",
+        "name": "MAW.MAW.BHZ"
+    },
+    {
+        "canonicalName": "MKAR.MK31.BHE",
+        "channelBandType": "BROADBAND",
+        "channelDataType": "SEISMIC",
+        "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+        "channelOrientationCode": "E",
+        "channelOrientationType": "EAST_WEST",
+        "configuredInputs": [],
+        "description": "broad-band_east",
+        "location": {
+            "depthKm": 0.03,
+            "elevationKm": 0.6176,
+            "latitudeDegrees": 46.793683,
+            "longitudeDegrees": 82.290569
+        },
+        "nominalSampleRateHz": 40.0,
+        "orientationAngles": {
+            "horizontalAngleDeg": 90.0,
+            "verticalAngleDeg": 90.0
+        },
+        "processingDefinition": {},
+        "processingMetadata": {
+            "CHANNEL_GROUP": "MK31"
+        },
+        "response": {
+            "calibration": {
+                "calibrationFactor": {
+                    "value": 0.00995,
+                    "standardDeviation": 0.0,
+                    "units": "NANOMETERS_PER_COUNT"
+                },
+                "calibrationPeriodSec": 1.0,
+                "calibrationTimeShift": "PT0S"
+            },
+            "fapResponse": {
+                "id": "e6490e53-4fe0-3444-981f-cdd7c7d5057c"
+            },
+            "effectiveAt": "2019-01-05T00:00:00Z",
+            "id": "2373f86e-90aa-3a8d-b5cf-ad77797b1b64"
+        },
+        "station": {
+            "effectiveAt": "2010-05-21T00:00:00Z",
+            "name": "MKAR"
+        },
+        "units": "NANOMETERS",
+        "effectiveAt": "2019-01-05T00:00:00Z",
+        "name": "MKAR.MK31.BHE"
+    }
+]

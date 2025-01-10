@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Get Channel Segments for Channels build a builder using addGetChannelSegmentsByChannelMatchReducers 1`] = `
+[
+  [Function],
+  [Function],
+  [Function],
+]
+`;
+
+exports[`Get Channel Segments for Channels build a builder using addGetChannelSegmentsByChannelMatchReducers 2`] = `
+{
+  "queries": {
+    "getChannelSegmentsByChannel": {
+      "startTime:123456489-endTime:123456789/channels:channelName": {
+        "startTime:123456489-endTime:123456789/channels:channelName": {
+          "arg": {
+            "channels": [
+              {
+                "name": "channelName",
+              },
+            ],
+          },
+          "attempts": undefined,
+          "error": {},
+          "status": "pending",
+          "time": undefined,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Get Channel Segments for Channels build a builder using addGetChannelSegmentsByChannelMatchReducers 3`] = `
+{
+  "queries": {
+    "getChannelSegmentsByChannel": {
+      "startTime:123456489-endTime:123456789/channels:channelName": {
+        "startTime:123456489-endTime:123456789/channels:channelName": {
+          "arg": {
+            "channels": [
+              {
+                "name": "channelName",
+              },
+            ],
+          },
+          "attempts": 1,
+          "error": {},
+          "status": "fulfilled",
+          "time": 0.25,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Get Channel Segments for Channels build a builder using addGetChannelSegmentsByChannelMatchReducers 4`] = `
+{
+  "queries": {
+    "getChannelSegmentsByChannel": {
+      "startTime:123456489-endTime:123456789/channels:channelName": {
+        "startTime:123456489-endTime:123456789/channels:channelName": {
+          "arg": {
+            "channels": [
+              {
+                "name": "channelName",
+              },
+            ],
+          },
+          "attempts": 2,
+          "error": {},
+          "status": "rejected",
+          "time": 0.25,
+        },
+      },
+    },
+  },
+}
+`;

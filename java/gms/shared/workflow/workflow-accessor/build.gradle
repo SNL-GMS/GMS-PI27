@@ -1,0 +1,17 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+
+    api project(':workflow-api')
+    api project(':workflow-coi')
+    api project(':workflow-repository')
+    api project(':caching-utils')
+    implementation project(':frameworks-control')
+    implementation project(':frameworks-configuration-repository')
+    implementation project(':spring-framework-utilities')
+
+    implementation libs.net.jodah.failsafe
+    implementation libs.org.springframework.boot.spring.boot.starter.web
+    }

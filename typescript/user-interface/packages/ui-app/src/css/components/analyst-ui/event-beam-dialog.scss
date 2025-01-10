@@ -1,0 +1,15 @@
+.event-beam-dialog {
+  &__current-phase input {
+    cursor: pointer;
+  }
+  .bp5-multi-select {
+    overflow-y: auto;
+    max-height: 5rem;
+  }
+}
+.bp5-dialog:has(.create-event-beam-settings) {
+  min-width: 550px;
+  .form-value {
+    min-width: 300px;
+  }
+}

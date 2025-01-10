@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rotation dialog error handling channel validation definitions does not return a message if no channels are selected 1`] = `
+[
+  {
+    "invalidMessage": [Function],
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": {
+      "details": "Cannot have multiple stations and channels selected at the same time. Valid selections include: no selection; only stations; a single station plus two orthogonal raw channels.",
+      "errorType": "channelInvalidMessage",
+      "intent": "danger",
+      "summary": "Invalid selection",
+    },
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": {
+      "details": "Incompatible station and channel selection. Valid selections include: no selection; only stations; a single station plus two orthogonal raw channels.",
+      "errorType": "channelInvalidMessage",
+      "intent": "danger",
+      "summary": "Invalid selection",
+    },
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": {
+      "details": "Select exactly two channels from a single station, or no channels in order to use the default configured channels.",
+      "errorType": "channelInvalidMessage",
+      "intent": "danger",
+      "summary": "Too many channels selected",
+    },
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": [Function],
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": [Function],
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": [Function],
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": [Function],
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": [Function],
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": [Function],
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": [Function],
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": [Function],
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": [Function],
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": [Function],
+    "valueIsInvalid": [Function],
+  },
+  {
+    "invalidMessage": {
+      "details": "Select exactly two channels from a single station, or no channels in order to use the default configured channels.",
+      "errorType": "channelInvalidMessage",
+      "intent": "danger",
+      "summary": "Not enough channels selected",
+    },
+    "valueIsInvalid": [Function],
+  },
+]
+`;

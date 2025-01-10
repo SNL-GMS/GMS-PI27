@@ -1,0 +1,86 @@
+{
+    "name": "event-relocation-processing-definition",
+    "constraints": [
+        {
+            "constraintType": "DEFAULT"
+        }
+    ],
+    "parameters": {
+        "residualDefinition": {
+            "allowBigResidual": true,
+            "maxFraction": 0.1,
+            "bigResidualThreshold": 3.0
+        },
+        "locationUncertaintyDefinitions": [
+            {
+                "aprioriStandardError": 1.0,
+                "ellipsoid": false,
+                "kWeight": "Infinity",
+                "confidenceLevel": 0.95,
+                "scalingFactorType": "COVERAGE"
+            },
+            {
+                "ellipsoid": false,
+                "kWeight": 0.0,
+                "confidenceLevel": 0.95,
+                "scalingFactorType": "CONFIDENCE"
+            },
+            {
+                "aprioriStandardError": 1.0,
+                "ellipsoid": false,
+                "kWeight": 8.0,
+                "confidenceLevel": 0.95,
+                "scalingFactorType": "K_WEIGHTED"
+            },
+            {
+                "aprioriStandardError": 1.0,
+                "ellipsoid": true,
+                "kWeight": "Infinity",
+                "confidenceLevel": 0.95,
+                "scalingFactorType": "COVERAGE"
+            },
+            {
+                "ellipsoid": true,
+                "kWeight": 0.0,
+                "confidenceLevel": 0.95,
+                "scalingFactorType": "CONFIDENCE"
+            },
+            {
+                "aprioriStandardError": 1.0,
+                "ellipsoid": true,
+                "kWeight": 8.0,
+                "confidenceLevel": 0.95,
+                "scalingFactorType": "K_WEIGHTED"
+            }
+        ],
+        "locationRestraints": [
+            {
+                "depthRestraintType": "FIXED",
+                "depthRestraintReason": "FIXED_AT_SURFACE",
+                "depthRestraintKm": 0.0,
+                "positionRestraintType": "UNRESTRAINED",
+                "timeRestraintType": "UNRESTRAINED"
+            },
+            {
+                "depthRestraintType": "UNRESTRAINED",
+                "positionRestraintType": "UNRESTRAINED",
+                "timeRestraintType": "UNRESTRAINED"
+            }
+        ],
+        "eventRelocator": "locOo3dEventRelocator",
+        "defaultPredictorDefinition": {
+            "predictor": "lookup2d",
+            "earthModel": "ak135"
+        },
+        "eventRelocationPredictorDefinitions": [
+            {
+                "predictor": "rstt",
+                "earthModel": "pdu202009Du.geotess"
+            },
+            {
+                "predictor": "bender",
+                "earthModel": "salsa3dv2.1"
+            }
+        ]
+    }
+}

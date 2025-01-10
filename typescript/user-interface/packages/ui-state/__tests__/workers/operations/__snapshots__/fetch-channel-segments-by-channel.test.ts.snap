@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Waveform Query fetchWaveForms returns the expected result with valid args 1`] = `
+[
+  {
+    "channelSegment": {
+      "_uiFilterId": "Unfiltered",
+      "id": {
+        "channel": {
+          "effectiveAt": 1614706257.376,
+          "name": "AAK.AAK.BH1",
+        },
+        "creationTime": 1614706257.376,
+        "endTime": 1614706257.376,
+        "startTime": 1614706257.376,
+      },
+      "maskedBy": [],
+      "missingInputChannels": [],
+      "timeseries": [
+        {
+          "_uiClaimCheckId": "{"domain":{"startTimeSecs":1614706257.376,"endTimeSecs":1614727857.376},"id":{"channel":{"name":"AAK.AAK.BH1","effectiveAt":1614706257.376},"startTime":1614706257.376,"endTime":1614706257.376,"creationTime":1614706257.376},"type":"WAVEFORM","filter":"Unfiltered","waveform":{"type":"WAVEFORM","startTime":1614706257.376,"endTime":1614727857.376,"sampleCount":16,"sampleRateHz":40}}",
+          "endTime": 1614727857.376,
+          "sampleCount": 16,
+          "sampleRateHz": 40,
+          "startTime": 1614706257.376,
+          "type": "WAVEFORM",
+        },
+      ],
+      "timeseriesType": "WAVEFORM",
+      "units": "NANOMETERS",
+    },
+    "channelSegmentDescriptor": {
+      "channel": {
+        "effectiveAt": 1614706257.376,
+        "name": "AAK.AAK.BH1",
+      },
+      "creationTime": 1614706257.376,
+      "endTime": 1614706257.376,
+      "startTime": 1614706257.376,
+    },
+    "domainTimeRange": {
+      "endTimeSecs": 1614727857.376,
+      "startTimeSecs": 1614706257.376,
+    },
+  },
+]
+`;

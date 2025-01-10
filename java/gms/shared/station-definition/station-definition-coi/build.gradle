@@ -1,0 +1,49 @@
+plugins {
+    id('java-library')
+    id('java-test-fixtures')
+}
+
+dependencies {
+
+    // GMS
+    implementation project(':java-utilities')
+    implementation project(':station-definition-dao')
+    implementation project(':fk-coi') 
+    implementation project(':common-coi-types')
+
+    // Third-party dependencies.
+
+    // Utility (dependency is api as apache commons classes are publicly exposed).
+    api libs.org.apache.commons.commons.lang3
+    // Google AutoValue
+    api libs.com.google.guava.guava
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    // Serialization (dependencies are api as we expose our ObjectMapper as a singleton).
+    api libs.com.fasterxml.jackson.core.jackson.databind
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.jdk8
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.jsr310
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.guava
+
+    // msgpack and YAML serialization; kept as private so clients don't have to know about it
+    implementation libs.org.msgpack.jackson.dataformat.msgpack
+    implementation libs.com.fasterxml.jackson.dataformat.jackson.dataformat.yaml
+
+    // Testing.
+    testImplementation project(':signal-enhancement-coi')
+    testImplementation(testFixtures(project(':waveform-coi')))
+    testImplementation project(':test-utils')
+    testImplementation(testFixtures(project(':fk-coi')))
+    testImplementation(testFixtures(project(':station-definition-coi')))
+
+    testFixturesApi(platform(libs.org.springframework.boot.spring.boot.dependencies))
+    testFixturesApi project(':station-definition-dao')
+    testFixturesApi(testFixtures(project(':workflow-coi')))
+    testFixturesImplementation(project(':workflow-dao'))
+    testFixturesApi project(':station-definition-api')
+    testFixturesImplementation project(':java-utilities')
+    testFixturesImplementation project(':signal-detection-dao')
+    testFixturesImplementation project(':station-definition-configuration')
+    testFixturesImplementation project(':common-coi-types')
+}

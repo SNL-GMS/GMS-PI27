@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingWidget StatusBar widget has the loading counter 1`] = `
+<span
+  class="loading-counter monospace"
+>
+  3/6
+</span>
+`;
+
+exports[`LoadingWidget StatusBar widget matches a snapshot 1`] = `
+<div>
+  <span
+    aria-expanded="false"
+    aria-haspopup="true"
+    class="bp5-popover-target"
+  >
+    <div
+      class="loading-widget"
+      role="button"
+    >
+      <div
+        aria-label="loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        class="bp5-spinner loading-widget__spinner"
+        role="progressbar"
+        size="20"
+      >
+        <div
+          class="bp5-spinner-animation"
+        >
+          <svg
+            height="20"
+            stroke-width="16.00"
+            viewBox="-3.00 -3.00 106.00 106.00"
+            width="20"
+          >
+            <path
+              class="bp5-spinner-track"
+              d="M 50,50 m 0,-45 a 45,45 0 1 1 0,90 a 45,45 0 1 1 0,-90"
+            />
+            <path
+              class="bp5-spinner-head"
+              d="M 50,50 m 0,-45 a 45,45 0 1 1 0,90 a 45,45 0 1 1 0,-90"
+              pathLength="280"
+              stroke-dasharray="280 280"
+              stroke-dashoffset="210"
+            />
+          </svg>
+        </div>
+      </div>
+      <span
+        class="loading-counter monospace"
+      >
+        3/6
+      </span>
+      <div
+        class="loading-info"
+      >
+        <span
+          class="loading-info__label"
+        >
+          Loading: 
+        </span>
+        /baz
+      </div>
+    </div>
+  </span>
+</div>
+`;

@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./lib",
+    "strictNullChecks": true
+  },
+  "ts-node": {
+    // tell ts-node CLI to install the --loader automatically (used for webpack)
+    "esm": true,
+    "compilerOptions": {
+      "module": "CommonJS",
+      "moduleResolution": "NodeNext"
+    }
+  },
+  "include": ["src/**/*", "__tests__/**/*", "__mocks__/**/*"]
+}

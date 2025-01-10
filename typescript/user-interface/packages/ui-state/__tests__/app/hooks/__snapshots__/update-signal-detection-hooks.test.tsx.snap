@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useUpdateSignalDetectionAcceptFk, useUpdateSignalDetectionUnacceptFk, useUpdateSignalDetectionRestoreFkAccepted useRevertSignalDetectionAcceptFk matches snapshot 1`] = `[Function]`;
+
+exports[`useUpdateSignalDetectionAcceptFk, useUpdateSignalDetectionUnacceptFk, useUpdateSignalDetectionRestoreFkAccepted useUpdateSignalDetectionAcceptFk matches snapshot 1`] = `[Function]`;

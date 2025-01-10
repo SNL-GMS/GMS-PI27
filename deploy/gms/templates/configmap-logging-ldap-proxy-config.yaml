@@ -1,0 +1,11 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: logging-ldap-proxy-config
+  namespace: gms
+  annotations:
+    "helm.sh/resource-policy": keep
+data:
+  default-site.conf: |
+{{ .Values.logging.ldapProxyConfig | indent 4 }}

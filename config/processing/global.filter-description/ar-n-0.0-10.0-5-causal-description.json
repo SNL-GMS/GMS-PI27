@@ -1,0 +1,29 @@
+{
+    "name": "ar-n-0.0-10.0-5-causal-description",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "AR N 0.0 10.0 5 causal Description"
+            ]
+        }
+    ],
+    "parameters": {
+    "comments": "AutoRegressive N, order 5, causal",
+    "adaptive": false,
+    "autoregressiveFilterType": "NON_ADAPTIVE",
+    "autoregressiveType": "N",
+    "causal": true,
+    "filterType": "AUTOREGRESSIVE",
+    "noiseWindowDuration": "PT10.0S",
+    "noiseWindowOffset": "PT0.0S",
+    "order": 5,
+    "signalWindowDuration": "PT1.0S",
+    "signalWindowOffset": "PT0.0S"
+    }
+}

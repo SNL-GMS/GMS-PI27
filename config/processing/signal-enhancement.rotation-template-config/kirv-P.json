@@ -1,0 +1,46 @@
+{
+    "name": "kirv-P",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "KIRV"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "phase",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "P"
+            ],
+            "priority": 90
+        }
+    ],
+    "parameters": {
+        "inputChannels": [
+            {
+                "name": "KIRV.KIRV.BH1"
+            },
+            {
+                "name": "KIRV.KIRV.BH2"
+            }
+        ],
+        "leadDuration": "PT70S",
+        "duration": "PT7M",
+        "sampleRateToleranceHz": 0.3,
+        "locationToleranceKm": 0.3,
+        "orientationAngleToleranceDeg": 0.3,
+        "twoDimensional": true,
+        "samplingType": "INTERPOLATED"
+    }
+}

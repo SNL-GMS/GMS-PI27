@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Location invalid state tests Renders invalid state for no event opened 1`] = `
+<Blueprint5.NonIdealState
+  action={null}
+  description="No Message to Display"
+  iconSize={48}
+  layout="vertical"
+  title="No event selected"
+/>
+`;
+
+exports[`Location invalid state tests Renders invalid state for no events loaded 1`] = `
+<Blueprint5.NonIdealState
+  action={
+    <Blueprint5.Spinner
+      intent="primary"
+    />
+  }
+  description="Events..."
+  iconSize={48}
+  layout="vertical"
+  title="Loading:"
+/>
+`;
+
+exports[`Location invalid state tests Renders invalid state for no open interval 1`] = `
+<Blueprint5.NonIdealState
+  action={null}
+  description="Open interval to load events"
+  iconSize={48}
+  layout="vertical"
+  title="No events loaded"
+/>
+`;
+
+exports[`Location invalid state tests Renders invalid state for no sds 1`] = `
+<Blueprint5.NonIdealState
+  action={
+    <Blueprint5.Spinner
+      intent="primary"
+    />
+  }
+  description="Signal Detections..."
+  iconSize={48}
+  layout="vertical"
+  title="Loading:"
+/>
+`;

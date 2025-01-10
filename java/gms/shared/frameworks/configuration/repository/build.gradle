@@ -1,0 +1,31 @@
+// Apply Gradle plugins here, if you need extra ones for your builds
+apply plugin: "java-library"
+
+dependencies {
+    api project(':common-coi-types')
+    api project(':frameworks-system-config')
+    api project(':frameworks-service-generator')
+    api project(':frameworks-configuration-commonobjects')
+    
+    api libs.com.mchange.c3p0
+    api libs.io.hypersistence.hypersistence.utils.hibernate62
+    api libs.org.hibernate.orm.hibernate.c3p0
+    api libs.org.hibernate.orm.hibernate.core
+    api libs.org.postgresql.postgresql
+    
+    implementation project(':frameworks-osd-commonobjects')
+    implementation project(':frameworks-configuration-api')
+    implementation project(':frameworks-utilities')
+    implementation project(':frameworks-utilities-jpa')
+    implementation project(':java-utilities')
+
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+    implementation libs.com.google.auto.value.auto.value.annotations
+    implementation libs.net.jodah.failsafe
+
+    // Testing.
+    testImplementation project(':frameworks-osd-testfixtures')
+    testImplementation(testFixtures(project(':db-test-utils')))
+    testImplementation libs.com.h2database.h2
+    testRuntimeOnly libs.ch.qos.logback.logback.classic
+}

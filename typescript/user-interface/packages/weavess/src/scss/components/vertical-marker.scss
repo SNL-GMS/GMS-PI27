@@ -1,0 +1,11 @@
+.vertical-marker {
+  position: absolute;
+  height: 100%;
+  transform: translateX(-50%);
+  .high-zoom & {
+    // ! Hack to prevent the 1px wide element from disappearing at very high zoom levels
+    // ! This may cause a performance hit, so only enabled on high zoom where sig fig
+    // ! rounding occurs
+    will-change: opacity;
+  }
+}

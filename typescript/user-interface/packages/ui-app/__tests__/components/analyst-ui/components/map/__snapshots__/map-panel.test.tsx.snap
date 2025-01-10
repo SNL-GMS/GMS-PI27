@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui map can mount map 1`] = `
+<div>
+  <div
+    class="ian-map-wrapper"
+  >
+    <div>
+      <button
+        class="bp5-button map__layer-button cesium-button cesium-toolbar-button"
+        id="layer-panel-button"
+        title="Select map layers"
+        type="button"
+      >
+        <span
+          class="bp5-button-text"
+        >
+          <span
+            aria-hidden="true"
+            class="bp5-icon bp5-icon-standard bp5-icon-layers"
+            data-icon="layers"
+          />
+        </span>
+      </button>
+      <div
+        class="map__selection-information-button bp5-button"
+      >
+        <span
+          aria-expanded="false"
+          aria-haspopup="true"
+          class="bp5-popover-target"
+        >
+          <button
+            class="bp5-button bp5-disabled bp5-align-left"
+            data-cy="selection-information"
+            disabled=""
+            tabindex="-1"
+            title="Selected items within display (double click: deselect all items within display, alt+click: global deselect)"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-multi-select"
+              data-icon="multi-select"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+    <h1
+      class="bp5-heading"
+    >
+      Map
+    </h1>
+  </div>
+</div>
+`;

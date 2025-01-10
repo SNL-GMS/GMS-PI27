@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Event beam utils eventBeamParamValidation channel checks returns a data error warning if beam template loading flag is false and data is missing 1`] = `
+{
+  "details": "An error occurred loading beamforming templates for PDAR.  Event beams will not be calculated for these stations.",
+  "intent": "warning",
+  "summary": "Beamforming Templates Error",
+}
+`;
+
+exports[`Event beam utils eventBeamParamValidation channel checks returns a data error warning if feature prediction loading flag is false and data is missing 1`] = `
+{
+  "details": "An error occurred loading feature predictions for PDAR.  Event beams will not be calculated for these stations.",
+  "intent": "warning",
+  "summary": "Feature Predictions Error",
+}
+`;
+
+exports[`Event beam utils eventBeamParamValidation channel checks returns a loading warning if beam template loading flag is true and data is missing 1`] = `
+{
+  "details": "The beamforming templates necessary for event beamforming are still loading, please wait.",
+  "intent": "warning",
+  "isLoading": true,
+  "summary": "Beamforming Templates Loading",
+}
+`;
+
+exports[`Event beam utils eventBeamParamValidation channel checks returns a loading warning if feature prediction loading flag is true and data is missing 1`] = `
+{
+  "details": "The feature predictions necessary for event beamforming are still loading, please wait.",
+  "intent": "warning",
+  "isLoading": true,
+  "summary": "Feature predictions loading",
+}
+`;
+
+exports[`Event beam utils eventBeamParamValidation station checks returns a data error warning if beam template loading flag is false and data is missing 1`] = `
+{
+  "details": "An error occurred loading beamforming templates for PDAR.  Event beams will not be calculated for these stations.",
+  "intent": "warning",
+  "summary": "Beamforming Templates Error",
+}
+`;
+
+exports[`Event beam utils eventBeamParamValidation station checks returns a data error warning if feature prediction loading flag is false and data is missing 1`] = `
+{
+  "details": "An error occurred loading feature predictions for PDAR.  Event beams will not be calculated for these stations.",
+  "intent": "warning",
+  "summary": "Feature Predictions Error",
+}
+`;
+
+exports[`Event beam utils eventBeamParamValidation station checks returns a loading warning if beam template loading flag is true and data is missing 1`] = `
+{
+  "details": "The beamforming templates necessary for event beamforming are still loading, please wait.",
+  "intent": "warning",
+  "isLoading": true,
+  "summary": "Beamforming Templates Loading",
+}
+`;
+
+exports[`Event beam utils eventBeamParamValidation station checks returns a loading warning if feature prediction loading flag is true and data is missing 1`] = `
+{
+  "details": "The feature predictions necessary for event beamforming are still loading, please wait.",
+  "intent": "warning",
+  "isLoading": true,
+  "summary": "Feature predictions loading",
+}
+`;
+
+exports[`Event beam utils validateEventBeamChannelSelection returns an error if channel are selected when multiple stations are selected 1`] = `
+{
+  "details": "Multiple stations selected with channel selection. Valid selections include: no selection; only stations; a single station plus compatible raw channels.",
+  "intent": "danger",
+  "summary": "Invalid selection",
+}
+`;
+
+exports[`Event beam utils validateEventBeamChannelSelection returns an error if channels and a station are selected that do not match 1`] = `
+{
+  "details": "Selected station does not match selected channels. Valid selections include: no selection; only stations; a single station plus compatible raw channels.",
+  "intent": "danger",
+  "summary": "Invalid selection",
+}
+`;
+
+exports[`Event beam utils validateEventBeamChannelSelection returns an error if channels that do not share a station are selected 1`] = `
+{
+  "details": "Selected channels are from multiple stations. Valid selections include: no selection; only stations; a single station plus compatible raw channels.",
+  "intent": "danger",
+  "summary": "Invalid selection",
+}
+`;
+
+exports[`Event beam utils validateEventBeamGroundMotion returns an error if band type is different 1`] = `
+{
+  "details": "Select channels with consistent types of ground motion: PDAR.PD01.SHZ (band type: SHORT_PERIOD ), PDAR.PD01.SHZ (band type: SHORT_PERIOD ), PDAR.PD01.SHZ (band type: HIGH_BROADBAND )",
+  "intent": "danger",
+  "summary": "Incompatible selected channels",
+}
+`;
+
+exports[`Event beam utils validateEventBeamGroundMotion returns an error if horizontal angle is out of tolerance 1`] = `
+{
+  "details": "Select channels with consistent types of ground motion: PDAR.PD01.SHZ (horizontal angle: -1 ), PDAR.PD01.SHZ (horizontal angle: -1 ), PDAR.PD01.SHZ (horizontal angle: 90 )",
+  "intent": "danger",
+  "summary": "Incompatible selected channels",
+}
+`;
+
+exports[`Event beam utils validateEventBeamGroundMotion returns an error if instrument type is different 1`] = `
+{
+  "details": "Select channels with consistent types of ground motion: PDAR.PD01.SHZ (instrument type: HIGH_GAIN_SEISMOMETER ), PDAR.PD01.SHZ (instrument type: HIGH_GAIN_SEISMOMETER ), PDAR.PD01.SHZ (instrument type: BOLOMETER )",
+  "intent": "danger",
+  "summary": "Incompatible selected channels",
+}
+`;
+
+exports[`Event beam utils validateEventBeamGroundMotion returns an error if orientation code is different 1`] = `
+{
+  "details": "Select channels with consistent types of ground motion: PDAR.PD01.SHZ (orientation code: Z ), PDAR.PD01.SHZ (orientation code: Z ), PDAR.PD01.SHZ (orientation code: 1 )",
+  "intent": "danger",
+  "summary": "Incompatible selected channels",
+}
+`;
+
+exports[`Event beam utils validateEventBeamGroundMotion returns an error if units is different 1`] = `
+{
+  "details": "Select channels with consistent types of ground motion: PDAR.PD01.SHZ (units: NANOMETERS_PER_COUNT ), PDAR.PD01.SHZ (units: NANOMETERS_PER_COUNT ), PDAR.PD01.SHZ (units: COUNTS_PER_PASCAL )",
+  "intent": "danger",
+  "summary": "Incompatible selected channels",
+}
+`;
+
+exports[`Event beam utils validateEventBeamGroundMotion returns an error if vertical angle is out of tolerance 1`] = `
+{
+  "details": "Select channels with consistent types of ground motion: PDAR.PD01.SHZ (vertical angle: 0 ), PDAR.PD01.SHZ (vertical angle: 0 ), PDAR.PD01.SHZ (vertical angle: 90 )",
+  "intent": "danger",
+  "summary": "Incompatible selected channels",
+}
+`;
+
+exports[`Event beam utils validateSingleStationEventBeamParam returns an error if sample rates are out of tolerance 1`] = `
+{
+  "details": "Sample rates outside of tolerance (26.667+/-0.5 hz): PDAR.PD01.SHZ (20), PDAR.PD01.SHZ (20), PDAR.PD01.SHZ (40). Select channels with compatible sample rates",
+  "intent": "danger",
+  "summary": "Incompatible selected channels",
+}
+`;
+
+exports[`Event beam utils validateSingleStationEventBeamParam returns an error if too few channels are given 1`] = `
+{
+  "details": "Select at least 2 compatible channels on: PDAR",
+  "intent": "danger",
+  "summary": "Too few channels",
+}
+`;

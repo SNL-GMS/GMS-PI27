@@ -1,0 +1,41 @@
+{
+    "name": "default-station-filter",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "ASAR"
+            ],
+			"priority": 100
+        },
+		{
+            "constraintType": "STRING",
+            "criterion": "filter",
+            "operator": {
+                "type": "IN",
+                "negated": false
+            },
+            "value": [
+				"Detect",
+				"Onset",
+				"FK"
+            ],
+			"priority": 30
+        }
+    ],
+    "parameters": {
+        "filterDefinition": {
+			"$ref=global.filter-definition": [
+				{
+					"criterion": "name",
+					"value": "0.5 4.0 3 BP non-causal"
+				}
+			]
+		}
+    }
+}

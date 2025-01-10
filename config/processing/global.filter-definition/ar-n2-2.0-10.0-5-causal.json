@@ -1,0 +1,26 @@
+{
+    "name": "ar-n2-2.0-10.0-5-causal",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "AR N2 2.0 10.0 5 causal"
+            ]
+        }
+    ],
+    "parameters": {
+        "name": "AR N2 2.0 10.0 5 causal",
+        "comments": "AutoRegressive N2, order 5, causal",
+        "filterDescription": {
+            "$ref=global.filter-description":[{
+                "criterion": "name",
+                "value": "AR N2 2.0 10.0 5 causal Description"
+            }]
+        }
+    }
+}

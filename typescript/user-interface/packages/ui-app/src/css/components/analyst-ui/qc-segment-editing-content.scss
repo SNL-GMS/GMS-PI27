@@ -1,0 +1,79 @@
+@import '@blueprintjs/core/lib/scss/variables.scss';
+
+.qc-segment-form {
+  --form-text-width: 34ch;
+  min-width: 515px;
+  min-height: 400px;
+  max-width: 650px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.qc-segment-form .form__header {
+  margin: 0;
+  padding-left: 0.75em;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.qc-segment-form__message {
+  margin-top: 1ch;
+}
+
+.bp5-dialog-header {
+  padding-left: 1rem;
+  padding-right: 0.25rem;
+}
+
+.bp5-popover-transition-container {
+  inset: auto;
+}
+
+.qc-segment-form .qc-segment-swatch-label {
+  font-weight: 400;
+  color: var(--gms-prominent);
+  margin-left: 0.5rem;
+}
+
+.qc-segment-swatch {
+  display: inline-block;
+  height: 10px;
+  width: 20px;
+}
+
+.qc-segment-form .form__text--wrap {
+  width: var(--form-text-width);
+}
+.qc-segment-form .form__text-input {
+  resize: none;
+  width: var(--form-text-width);
+}
+
+.qc-segment-form .form-value .form__text--wrap {
+  user-select: text;
+}
+
+.qc-segment-form .form-value--uneditable {
+  pointer-events: none;
+}
+
+.qc-segment-form-details-versions-table {
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem 0rem 0rem 0rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  position: relative;
+  min-height: 300px;
+  .ag-cell-value {
+    padding-left: 10px;
+  }
+}
+
+.qc-segment-versions-table__row--first-in-table {
+  background-color: var(--gms-input-highlight, $gms-input-highlight) !important;
+}

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Toolbar renders a component 1`] = `
+<div>
+  <nav
+    class="bp5-navbar workspace-navbar"
+  >
+    <div
+      class="workspace-navbar__image-label"
+    >
+      <img
+        alt="GMS Logo"
+        class="workspace-logo"
+        data-cy="workspace-logo"
+        height="33"
+        src="test_logo"
+        width="35"
+      />
+      <span
+        class="workspace-logo__label keypress-signifier"
+      >
+        GMS
+      </span>
+    </div>
+    <span
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="bp5-popover-target"
+    >
+      <button
+        class="bp5-button bp5-minimal app-menu-button"
+        data-cy="username"
+        type="button"
+      >
+        <span
+          class="bp5-button-text"
+        >
+          test_name
+        </span>
+        <span
+          aria-hidden="true"
+          class="bp5-icon bp5-icon-standard bp5-icon-user"
+          data-icon="user"
+        />
+      </button>
+    </span>
+  </nav>
+</div>
+`;

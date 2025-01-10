@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: feature-prediction
+  processing:
+    configuration-names: feature-prediction
+  main:
+    allow-circular-references: true
+  codec:
+    max-in-memory-size: 20MB
+    
+server:
+  servlet:
+    context-path: /feature-prediction-service
+
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true

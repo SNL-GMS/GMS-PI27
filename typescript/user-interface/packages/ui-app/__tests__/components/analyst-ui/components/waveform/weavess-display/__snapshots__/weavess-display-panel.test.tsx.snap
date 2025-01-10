@@ -1,0 +1,417 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`weavess display renders a display given default stations and weavess stations 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body
+    data-key-combo=""
+    data-key-mode="default"
+  >
+    <div>
+      <div
+        class="weavess-container"
+        tabindex="0"
+      >
+        <div
+          class="weavess-container__wrapper"
+        >
+          <div
+            class="weavess"
+            data-cy="weavess-container"
+            data-end-time="1274399999"
+            data-start-time="1274392800"
+            style="--weavess-background-color: #182026;"
+          >
+            <div
+              class="horizontal-divider__bottom weavess-waveform-display"
+              data-cy="weavess-waveform-display"
+              style="height: 100%;"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="weavess-container"
+      tabindex="0"
+    >
+      <div
+        class="weavess-container__wrapper"
+      >
+        <div
+          class="weavess"
+          data-cy="weavess-container"
+          data-end-time="1274399999"
+          data-start-time="1274392800"
+          style="--weavess-background-color: #182026;"
+        >
+          <div
+            class="horizontal-divider__bottom weavess-waveform-display"
+            data-cy="weavess-waveform-display"
+            style="height: 100%;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`weavess display renders a display non ideal state with \`No Waveform Data\` when station data is applied to props but no waveform data 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body
+    data-key-combo=""
+    data-key-mode="default"
+  >
+    <div>
+      <div
+        class="weavess-container"
+        tabindex="0"
+      >
+        <div
+          class="weavess-container__wrapper"
+        >
+          <div
+            class="bp5-non-ideal-state bp5-non-ideal-state-vertical"
+          >
+            <div
+              class="bp5-non-ideal-state-visual"
+              style="font-size: 48px; line-height: 48px;"
+            >
+              <span
+                aria-hidden="true"
+                class="bp5-icon bp5-icon-timeline-line-chart"
+                tabindex="-1"
+              >
+                <svg
+                  data-icon="timeline-line-chart"
+                  height="48"
+                  role="img"
+                  viewBox="0 0 20 20"
+                  width="48"
+                >
+                  <path
+                    d="M19 16H2v-1.59l5-5 3.29 3.29c.18.19.43.3.71.3s.53-.11.71-.29l7-7a1.003 1.003 0 00-1.42-1.42L11 10.59l-3.29-3.3C7.53 7.11 7.28 7 7 7s-.53.11-.71.29L2 11.59V3c0-.55-.45-1-1-1s-1 .45-1 1v14a.998.998 0 001 1h18c.55 0 1-.45 1-1s-.45-1-1-1z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="bp5-non-ideal-state-text"
+            >
+              <h4
+                class="bp5-heading"
+              >
+                No Waveform Data
+              </h4>
+              <div>
+                There is no waveform data available for this interval
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="weavess-container"
+      tabindex="0"
+    >
+      <div
+        class="weavess-container__wrapper"
+      >
+        <div
+          class="bp5-non-ideal-state bp5-non-ideal-state-vertical"
+        >
+          <div
+            class="bp5-non-ideal-state-visual"
+            style="font-size: 48px; line-height: 48px;"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-timeline-line-chart"
+              tabindex="-1"
+            >
+              <svg
+                data-icon="timeline-line-chart"
+                height="48"
+                role="img"
+                viewBox="0 0 20 20"
+                width="48"
+              >
+                <path
+                  d="M19 16H2v-1.59l5-5 3.29 3.29c.18.19.43.3.71.3s.53-.11.71-.29l7-7a1.003 1.003 0 00-1.42-1.42L11 10.59l-3.29-3.3C7.53 7.11 7.28 7 7 7s-.53.11-.71.29L2 11.59V3c0-.55-.45-1-1-1s-1 .45-1 1v14a.998.998 0 001 1h18c.55 0 1-.45 1-1s-.45-1-1-1z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            class="bp5-non-ideal-state-text"
+          >
+            <h4
+              class="bp5-heading"
+            >
+              No Waveform Data
+            </h4>
+            <div>
+              There is no waveform data available for this interval
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`weavess display shows a none ideal state when rendered without station data 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body
+    data-key-combo=""
+    data-key-mode="default"
+  >
+    <div>
+      <div
+        class="bp5-non-ideal-state bp5-non-ideal-state-vertical"
+      >
+        <div
+          class="bp5-non-ideal-state-visual"
+          style="font-size: 48px; line-height: 48px;"
+        >
+          <span
+            aria-hidden="true"
+            class="bp5-icon bp5-icon-exclude-row"
+            tabindex="-1"
+          >
+            <svg
+              data-icon="exclude-row"
+              height="48"
+              role="img"
+              viewBox="0 0 20 20"
+              width="48"
+            >
+              <path
+                d="M1 3h18c.55 0 1-.45 1-1s-.45-1-1-1H1c-.55 0-1 .45-1 1s.45 1 1 1zM0 13a1.003 1.003 0 001.71.71L4 11.41l2.29 2.29c.18.19.43.3.71.3a1.003 1.003 0 00.71-1.71L5.41 10 7.7 7.71c.19-.18.3-.43.3-.71a1.003 1.003 0 00-1.71-.71L4 8.59l-2.29-2.3A1.003 1.003 0 00.29 7.71L2.59 10 .3 12.29c-.19.18-.3.43-.3.71zm18-5h-7c-1.1 0-2 .9-2 2s.9 2 2 2h7c1.1 0 2-.9 2-2s-.9-2-2-2zm1 9H1c-.55 0-1 .45-1 1s.45 1 1 1h18c.55 0 1-.45 1-1s-.45-1-1-1z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          class="bp5-non-ideal-state-text"
+        >
+          <h4
+            class="bp5-heading"
+          >
+            No Station Data
+          </h4>
+          <div>
+            There is no station data available for this interval
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="bp5-non-ideal-state bp5-non-ideal-state-vertical"
+    >
+      <div
+        class="bp5-non-ideal-state-visual"
+        style="font-size: 48px; line-height: 48px;"
+      >
+        <span
+          aria-hidden="true"
+          class="bp5-icon bp5-icon-exclude-row"
+          tabindex="-1"
+        >
+          <svg
+            data-icon="exclude-row"
+            height="48"
+            role="img"
+            viewBox="0 0 20 20"
+            width="48"
+          >
+            <path
+              d="M1 3h18c.55 0 1-.45 1-1s-.45-1-1-1H1c-.55 0-1 .45-1 1s.45 1 1 1zM0 13a1.003 1.003 0 001.71.71L4 11.41l2.29 2.29c.18.19.43.3.71.3a1.003 1.003 0 00.71-1.71L5.41 10 7.7 7.71c.19-.18.3-.43.3-.71a1.003 1.003 0 00-1.71-.71L4 8.59l-2.29-2.3A1.003 1.003 0 00.29 7.71L2.59 10 .3 12.29c-.19.18-.3.43-.3.71zm18-5h-7c-1.1 0-2 .9-2 2s.9 2 2 2h7c1.1 0 2-.9 2-2s-.9-2-2-2zm1 9H1c-.55 0-1 .45-1 1s.45 1 1 1h18c.55 0 1-.45 1-1s-.45-1-1-1z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        class="bp5-non-ideal-state-text"
+      >
+        <h4
+          class="bp5-heading"
+        >
+          No Station Data
+        </h4>
+        <div>
+          There is no station data available for this interval
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

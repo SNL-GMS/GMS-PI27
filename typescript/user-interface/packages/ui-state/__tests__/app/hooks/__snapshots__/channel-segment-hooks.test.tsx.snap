@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`channel segment hooks hook query for channel segments 1`] = `
+[
+  "{}",
+  "{}",
+]
+`;
+
+exports[`channel segment hooks hook query for channel segments 2`] = `
+[
+  "{}",
+  "{}",
+]
+`;
+
+exports[`channel segment hooks useGetChannelSegmentsByChannels filters out channel segments outside the requested range 1`] = `
+{
+  "data": {},
+  "error": undefined,
+  "fulfilled": 0,
+  "isError": false,
+  "isLoading": false,
+  "pending": 0,
+  "rejected": 0,
+}
+`;
+
+exports[`channel segment hooks useGetChannelSegmentsByChannels returns an object with loading values 1`] = `
+{
+  "data": {
+    "PDAR.BHZ": {
+      "unfiltered": [],
+    },
+  },
+  "error": undefined,
+  "fulfilled": 0,
+  "isError": false,
+  "isLoading": false,
+  "pending": 0,
+  "rejected": 0,
+}
+`;

@@ -1,0 +1,63 @@
+.form-message {
+  gap: 0.5em;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-shrink: 999999;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+
+  --message-border-color: var(--core-soft, lightgray);
+  --message-background-color: rgba(255, 255, 255, 0.1);
+
+  background-color: var(--message-background-color);
+  border: 1px solid var(--message-border-color);
+
+  &--danger {
+    --message-border-color: var(--core-strong-warning, red);
+    --message-background-color: rgba(255, 0, 0, 0.15);
+  }
+
+  &--warning {
+    --message-border-color: var(--core-warning, yellow);
+    --message-background-color: rgba(255, 255, 0, 0.1);
+  }
+
+  // TODO: does this somehow need to be in this way for precedence or something? Resolve before merging
+  // & {
+  //   background-color: var(--message-background-color);
+  //   border: 1px solid var(--message-border-color);
+  // }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: -0.33rem; // account for size of copy button
+    width: 100%;
+    user-select: text;
+  }
+
+  &__recommendation {
+    color: var(--core-prominent);
+    font-weight: 100;
+    user-select: text;
+  }
+
+  &__copy-button {
+    margin-left: auto;
+    aspect-ratio: 1/1;
+    opacity: 0.75;
+    .copy-contents {
+      padding: 0.25rem 0.5rem 0.5rem 0.5rem;
+      margin: 0;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .bp5-dialog-footer-main-section & {
+    margin-bottom: 0.5rem;
+  }
+}

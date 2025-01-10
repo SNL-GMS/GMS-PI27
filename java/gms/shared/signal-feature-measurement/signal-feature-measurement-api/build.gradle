@@ -1,0 +1,25 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+
+    implementation project(':signal-detection-coi')
+    implementation project(':station-definition-coi')
+    implementation project(':signal-feature-measurement-coi')
+
+    // Utility (dependency is api as apache commons classes are publicly exposed).
+    implementation libs.org.apache.commons.commons.lang3
+
+    // Google AutoValue
+    api libs.com.google.guava.guava
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    // Web Client
+    api libs.org.springframework.spring.context
+    implementation libs.org.springframework.spring.webflux
+
+    testImplementation project(':test-utils')
+    testImplementation(testFixtures(project(':station-definition-coi')))
+}

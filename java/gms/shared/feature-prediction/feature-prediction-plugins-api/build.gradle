@@ -1,0 +1,17 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+
+  api project(':common-coi-types')
+  api libs.com.google.guava.guava
+  api libs.org.springframework.spring.context
+
+  implementation project(':event-coi')
+  implementation project(':feature-prediction-utilities')
+
+  // Google AutoValue
+  implementation libs.com.google.auto.value.auto.value.annotations
+  annotationProcessor libs.com.google.auto.value.auto.value.base
+}

@@ -1,0 +1,10 @@
+// Apply Gradle plugins here, if you need extra ones for your builds
+apply plugin: "java-library"
+
+dependencies {
+    api project(':frameworks-system-config')
+
+    api libs.org.hibernate.orm.hibernate.core
+    
+    implementation libs.org.apache.commons.commons.lang3
+}

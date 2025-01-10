@@ -1,0 +1,12 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api project(':station-definition-dao')
+    
+    api libs.org.apache.commons.commons.lang3
+    api libs.org.hibernate.orm.hibernate.core
+    
+    
+    implementation libs.com.google.guava.guava
+
+}

@@ -1,0 +1,27 @@
+{
+    "name": "bw-iir-1.7-3.2-3-bp-noncausal-description",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "1.7 3.2 3 BP non-causal Description"
+            ]
+        }
+    ],
+    "parameters": {
+        "comments": "1.7 3.2 3 BP non-causal",
+        "causal": false,
+        "filterType": "LINEAR",
+        "lowFrequencyHz": 1.7,
+        "highFrequencyHz": 3.2,
+        "order": 3,
+        "zeroPhase": true,
+        "passBandType": "BAND_PASS",
+        "linearFilterType": "IIR_BUTTERWORTH"
+    }
+}

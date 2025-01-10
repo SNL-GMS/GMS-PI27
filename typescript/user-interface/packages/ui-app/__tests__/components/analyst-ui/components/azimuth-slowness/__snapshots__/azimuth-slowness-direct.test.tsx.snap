@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AzimuthSlowness Direct AzimuthSlowness snapshot 1`] = `
+<div>
+  <div
+    class="base-display "
+    tabindex="-1"
+  />
+  <div>
+    Mock AzimuthSlownessPanel
+  </div>
+</div>
+`;

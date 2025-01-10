@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Data segment util tests getTimeRangeFromWeavessChannelSegment then gets time range 1`] = `
+{
+  "channelName": "PDAR.PD01.SHZ",
+  "channelSegmentBoundaries": undefined,
+  "configuredInputName": "{"channel":{"effectiveAt":1638297900,"name":"PDAR.PD01.SHZ"},"startTime":1638297900,"endTime":1638298200,"creationTime":1638297900}",
+  "dataSegments": [
+    {
+      "color": "red",
+      "data": {
+        "domainTimeRange": {
+          "endTimeSecs": 1638298200,
+          "startTimeSecs": 1638297900,
+        },
+        "endTimeSecs": 1638298200,
+        "id": "{"domain":{"startTimeSecs":1638297900,"endTimeSecs":1638298200},"id":{"channel":{"effectiveAt":1638297900,"name":"PDAR.PD01.SHZ"},"startTime":1638297900,"endTime":1638298200,"creationTime":1638297900},"type":"WAVEFORM","filter":"Unfiltered","waveform":{"type":"WAVEFORM","startTime":0,"endTime":100,"sampleCount":10,"sampleRateHz":100}}",
+        "sampleRate": 40,
+        "startTimeSecs": 1638297900,
+        "values": undefined,
+      },
+      "displayType": [
+        "LINE",
+      ],
+      "pointSize": 1,
+    },
+  ],
+  "description": "Unfiltered",
+  "descriptionLabelColor": "green",
+  "isSelected": false,
+  "timeseriesType": "WAVEFORM",
+  "units": "NANOMETERS",
+  "wfFilterId": "Unfiltered",
+}
+`;

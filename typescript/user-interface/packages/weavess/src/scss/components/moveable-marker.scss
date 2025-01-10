@@ -1,0 +1,61 @@
+$gms-prominent-fallback: #bfccd6;
+$gms-selection-fallback: #1589d1;
+
+// !styles are also applied to the selection-window-boundary-markers
+
+.moveable-marker {
+  position: absolute;
+  height: 100%;
+  pointer-events: auto;
+}
+
+.moveable-marker:hover {
+  cursor: col-resize;
+}
+
+.azimuth-slowness-container .weavess-container .selection-window .moveable-marker {
+  border-left-width: 1px;
+  border-left-style: dashed;
+  border-left-color: var(--gms-prominent, $gms-prominent-fallback);
+
+  // increases the hoverable area
+  &::before,
+  &::after {
+    content: '';
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: RGB(from var(--gms-selection, $gms-selection-fallback) r g b / 0%);
+    transition: background-color 0.2s ease;
+  }
+  // lead (start) marker
+  &:nth-child(2) {
+    &::before {
+      margin-left: -9px;
+    }
+    &::after {
+      margin-left: -4px;
+    }
+  }
+  // lag (end) marker
+  &:nth-child(3) {
+    &::before {
+      margin-left: -2px;
+    }
+    &::after {
+      margin-left: 3px;
+    }
+  }
+
+  &:hover {
+    border-left-width: 2px;
+    &::before,
+    &::after {
+      // adds an alpha channel to our hex color variable
+      // uppercase RGB function is ignored by SASS and uses the CSS version of the function
+      background-color: RGB(from var(--gms-selection, $gms-selection-fallback) r g b / 45%);
+      transition: background-color 0.2s ease;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api project(':bridged-data-source-simulator-api')
+    implementation project(':bridged-data-source-simulator-jpa')
+
+    api 'gms:station-definition-repository:LATEST'
+
+    implementation libs.org.springframework.spring.context
+    implementation libs.com.google.guava.guava
+    
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    testImplementation 'gms:test-utils:LATEST'
+    testImplementation(testFixtures('gms:station-definition-coi:LATEST'))
+}

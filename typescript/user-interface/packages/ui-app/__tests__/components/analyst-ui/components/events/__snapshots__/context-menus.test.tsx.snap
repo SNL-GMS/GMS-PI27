@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventMenu Cannot close if not already open and opens with only 1 actionTarget 1`] = `
+<div>
+  <ul
+    class="bp5-menu"
+    role="menu"
+  >
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        class="bp5-menu-item bp5-popover-dismiss menu-item-open-event"
+        data-cy="menu-item-open-event"
+        role="menuitem"
+        tabindex="0"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Open event
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled menu-item-close-event"
+        data-cy="menu-item-close-event"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Close event
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled menu-item-duplicate-event"
+        data-testid="menu-item-duplicate-event"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Duplicate 0 selected events
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled menu-item-delete-event"
+        data-cy="menu-item-delete-event"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Delete 0 selected events
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled menu-item-reject-event"
+        data-cy="menu-item-reject-event"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Reject 0 selected events
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`EventMenu isOpen=true enables "Close Event" and disables "Open Event 1`] = `
+<div>
+  <ul
+    class="bp5-menu"
+    role="menu"
+  >
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled menu-item-open-event"
+        data-cy="menu-item-open-event"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Open event
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        class="bp5-menu-item bp5-popover-dismiss menu-item-close-event"
+        data-cy="menu-item-close-event"
+        role="menuitem"
+        tabindex="0"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Close event
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled menu-item-duplicate-event"
+        data-testid="menu-item-duplicate-event"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Duplicate 0 selected events
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled menu-item-delete-event"
+        data-cy="menu-item-delete-event"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Delete 0 selected events
+        </div>
+      </a>
+    </li>
+    <li
+      class=""
+      role="none"
+    >
+      <a
+        aria-disabled="true"
+        class="bp5-menu-item bp5-disabled menu-item-reject-event"
+        data-cy="menu-item-reject-event"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="bp5-text-overflow-ellipsis bp5-fill"
+        >
+          Reject 0 selected events
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+`;

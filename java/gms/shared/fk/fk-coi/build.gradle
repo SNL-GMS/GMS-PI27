@@ -1,0 +1,33 @@
+plugins {
+    id('java-library')
+    id('java-test-fixtures')
+}
+
+dependencies {
+
+    // GMS Dependencies
+    implementation project(':common-coi-types')
+
+    implementation project(':java-utilities')
+
+    // Google AutoValue
+    api libs.com.google.guava.guava
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    // JSON Serialization
+    api libs.com.fasterxml.jackson.core.jackson.databind
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.jdk8
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.jsr310
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.guava
+
+    // Testing
+    testImplementation project(':test-utils')
+
+    //TestFixtures
+    testFixturesApi(platform(libs.org.springframework.boot.spring.boot.dependencies))
+    testFixturesApi project(':fk-control-api')
+    testFixturesApi project(':waveform-coi')
+    testFixturesImplementation(testFixtures(project(':waveform-coi')))
+    testFixturesImplementation(testFixtures(project(':station-definition-coi')))
+}

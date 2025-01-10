@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+    alias(libs.plugins.io.swagger.core.v3.swagger.gradle)
+}
+
+dependencies {
+    implementation project(':frameworks-service-interface-base')
+    implementation project(':fk-coi')
+    implementation project(':waveform-coi')
+    implementation project(':station-definition-coi')
+    implementation project(':common-coi-types')
+    
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+    api libs.com.google.auto.value.auto.value.annotations
+
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation project(':test-utils')
+}

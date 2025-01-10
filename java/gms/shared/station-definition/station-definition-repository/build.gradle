@@ -1,0 +1,20 @@
+apply plugin: 'java-library'
+
+dependencies {
+
+    api project(':bridge-utilities')    
+    api project(':station-definition-dao')
+    implementation project(':common-coi-types')
+
+    // JPA dependencies
+    implementation project(':metrics')
+    implementation libs.org.springframework.spring.context
+
+    // Google AutoValue
+    api libs.com.google.guava.guava
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    // Testing.
+    testImplementation libs.com.h2database.h2
+}

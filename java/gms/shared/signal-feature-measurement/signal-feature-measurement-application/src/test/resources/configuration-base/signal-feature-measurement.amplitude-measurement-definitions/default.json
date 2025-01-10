@@ -1,0 +1,24 @@
+{
+  "name": "amplitude-measurement-definition-default",
+  "constraints": [
+    {
+      "constraintType": "DEFAULT"
+    }
+  ],
+  "parameters": {
+    "maxPeriod": 1.25,
+    "measurementMethod": "MAX_PEAK_TO_TROUGH",
+    "minPeriod": 0.2,
+    "phases": [
+      "P", "PKKPab", "PKKPbc", "PKKPdf", "PKP2ab", "PKP2bc", "PKP2df", "PKPab", "PKPbc", "PKPdf",
+      "PKiKP", "PP", "PcP", "Pg", "Pn", "Px", "S", "SKKPbc", "SKKPdf", "SKPdf", "ScP", "ScS",
+      "Sn", "Sx", "tx", "pP", "sP", "pS", "sS", "SS"
+    ],
+    "removeFilterResponse": true,
+    "removeInstrumentResponse": true,
+    "smoothnessThreshold": 0.8,
+    "windowArrivalTimeLead": 0.5,
+    "windowDuration": 5.5
+  }
+}
+

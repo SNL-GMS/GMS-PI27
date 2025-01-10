@@ -1,0 +1,26 @@
+{
+    "name": "ham-fir-0.0-4.2-48-lp-noncausal-description",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "HAM FIR 0.0 4.2 48 LP non-causal Description"
+            ]
+        }
+    ],
+    "parameters": {
+        "comments": "Hamming FIR low-pass, 0.0-4.2 Hz, order 48, non-causal",
+        "causal": false,
+        "filterType": "LINEAR",
+        "highFrequencyHz": 4.2,
+        "order": 48,
+        "zeroPhase": true,
+        "passBandType": "LOW_PASS",
+        "linearFilterType": "FIR_HAMMING"
+    }
+}

@@ -1,0 +1,106 @@
+{
+    "name": "asar-as31-b-h-n,e-default-filter",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "ASAR"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelGroup",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "AS31"
+            ],
+            "priority": 90
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelBand",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "B"
+            ],
+            "priority": 80
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelInstrument",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "H"
+            ],
+            "priority": 70
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelOrientation",
+            "operator": {
+                "type": "IN",
+                "negated": false
+            },
+            "value": [
+                "N",
+                "E"
+            ],
+            "priority": 60
+        }
+    ],
+    "parameters": {
+        "filterDefinitionsForDistanceRangesByUsage": {
+            "ONSET": [
+                {
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.5 1.5 3 BP non-causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "DETECTION": [
+                {
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.5 1.5 3 BP non-causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "FK": [
+                {
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.5 1.5 3 BP non-causal"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

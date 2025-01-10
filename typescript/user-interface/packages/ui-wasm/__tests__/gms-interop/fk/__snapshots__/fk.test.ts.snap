@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComputeFk interop computeFkWasm 1`] = `
+[
+  {
+    "channel": {
+      "name": "PDAR.PD01.SHZ",
+    },
+    "timeRanges": [
+      {
+        "endTime": 310,
+        "startTime": 100,
+      },
+    ],
+  },
+]
+`;
+
+exports[`ComputeFk interop computeFkWasm 2`] = `
+{
+  "endTime": 310,
+  "fkSpectraMetadata": {
+    "fkSpectrumWindow": {
+      "duration": 5.1,
+      "lead": 1.1,
+    },
+    "phase": "P",
+    "slownessGrid": {
+      "maxSlowness": 40,
+      "numPoints": 81,
+    },
+  },
+  "sampleCount": 1,
+  "sampleRateHz": 20,
+  "samples": [],
+  "startTime": 100,
+  "type": "FK_SPECTRA",
+}
+`;
+
+exports[`GetPeakAttributes interop getPeakFkAttributesWasm 1`] = `
+{
+  "peakFStat": 5,
+  "receiverToSourceAzimuth": {
+    "standardDeviation": 1,
+    "units": "DECIBELS",
+    "value": 2,
+  },
+  "slowness": {
+    "standardDeviation": 1,
+    "units": "DECIBELS",
+    "value": 2,
+  },
+}
+`;

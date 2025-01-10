@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`state user session slice should return the initial state 1`] = `
+{
+  "actionTargets": {
+    "actionType": null,
+    "eventIds": [],
+    "signalDetectionIds": [],
+  },
+  "alignWaveformsOn": "Time",
+  "channelFilters": {},
+  "currentPhase": "",
+  "defaultSignalDetectionPhase": "P",
+  "effectiveNowTime": 0.25,
+  "eventListOpenEventTriggered": false,
+  "fileId": {
+    "fileHandle": null,
+    "workflowUniqueId": "",
+  },
+  "hotkeyCycleOverrides": {},
+  "location": {
+    "selectedLocationSolutionId": "",
+    "selectedLocationSolutionSetId": "",
+    "selectedPreferredLocationSolutionId": "",
+    "selectedPreferredLocationSolutionSetId": "",
+  },
+  "mapOpenEventTriggered": false,
+  "measurementMode": {
+    "entries": {},
+    "mode": "Default",
+  },
+  "openEventId": "",
+  "phaseSelectorFavorites": {},
+  "phaseSelectorPhaseList": "",
+  "phaseToAlignOn": "P",
+  "requestTracker": {
+    "completedRequests": 0,
+    "initiatedRequests": 0,
+    "lastRequestId": "",
+    "requests": {},
+  },
+  "selectedEventIds": [],
+  "selectedFilterIndex": -1,
+  "selectedFilterList": "",
+  "selectedSdIds": [],
+  "selectedSortType": "Station: A-Z",
+  "selectedWaveforms": [],
+}
+`;
+
+exports[`state user session slice should return the initial state 2`] = `
+{
+  "actionTargets": {
+    "actionType": null,
+    "eventIds": [],
+    "signalDetectionIds": [],
+  },
+  "alignWaveformsOn": "Time",
+  "channelFilters": {},
+  "currentPhase": "",
+  "defaultSignalDetectionPhase": "P",
+  "effectiveNowTime": 0.25,
+  "eventListOpenEventTriggered": false,
+  "fileId": {
+    "fileHandle": null,
+    "workflowUniqueId": "",
+  },
+  "hotkeyCycleOverrides": {},
+  "location": {
+    "selectedLocationSolutionId": "",
+    "selectedLocationSolutionSetId": "",
+    "selectedPreferredLocationSolutionId": "",
+    "selectedPreferredLocationSolutionSetId": "",
+  },
+  "mapOpenEventTriggered": false,
+  "measurementMode": {
+    "entries": {},
+    "mode": "Default",
+  },
+  "openEventId": "",
+  "phaseSelectorFavorites": {},
+  "phaseSelectorPhaseList": "",
+  "phaseToAlignOn": "P",
+  "requestTracker": {
+    "completedRequests": 0,
+    "initiatedRequests": 0,
+    "lastRequestId": "",
+    "requests": {},
+  },
+  "selectedEventIds": [],
+  "selectedFilterIndex": -1,
+  "selectedFilterList": "",
+  "selectedSdIds": [],
+  "selectedSortType": "Station: A-Z",
+  "selectedWaveforms": [],
+}
+`;
+
+exports[`state user session slice should return the initial state 3`] = `
+{
+  "actionTargets": {
+    "actionType": null,
+    "eventIds": [],
+    "signalDetectionIds": [],
+  },
+  "alignWaveformsOn": "Time",
+  "channelFilters": {},
+  "currentPhase": "",
+  "defaultSignalDetectionPhase": "P",
+  "effectiveNowTime": 0.25,
+  "eventListOpenEventTriggered": false,
+  "fileId": {
+    "fileHandle": null,
+    "workflowUniqueId": "",
+  },
+  "hotkeyCycleOverrides": {},
+  "location": {
+    "selectedLocationSolutionId": "",
+    "selectedLocationSolutionSetId": "",
+    "selectedPreferredLocationSolutionId": "",
+    "selectedPreferredLocationSolutionSetId": "",
+  },
+  "mapOpenEventTriggered": false,
+  "measurementMode": {
+    "entries": {},
+    "mode": "Default",
+  },
+  "openEventId": "",
+  "phaseSelectorFavorites": {},
+  "phaseSelectorPhaseList": "",
+  "phaseToAlignOn": "P",
+  "requestTracker": {
+    "completedRequests": 0,
+    "initiatedRequests": 0,
+    "lastRequestId": "",
+    "requests": {},
+  },
+  "selectedEventIds": [],
+  "selectedFilterIndex": -1,
+  "selectedFilterList": "",
+  "selectedSdIds": [],
+  "selectedSortType": "Station: A-Z",
+  "selectedWaveforms": [],
+}
+`;
+
+exports[`state user session slice should return the initial state 4`] = `
+{
+  "actionTargets": {
+    "actionType": null,
+    "eventIds": [],
+    "signalDetectionIds": [],
+  },
+  "alignWaveformsOn": "Time",
+  "channelFilters": {},
+  "currentPhase": "",
+  "defaultSignalDetectionPhase": "P",
+  "effectiveNowTime": 0.25,
+  "eventListOpenEventTriggered": false,
+  "fileId": {
+    "fileHandle": null,
+    "workflowUniqueId": "",
+  },
+  "hotkeyCycleOverrides": {},
+  "location": {
+    "selectedLocationSolutionId": "",
+    "selectedLocationSolutionSetId": "",
+    "selectedPreferredLocationSolutionId": "",
+    "selectedPreferredLocationSolutionSetId": "",
+  },
+  "mapOpenEventTriggered": false,
+  "measurementMode": {
+    "entries": {},
+    "mode": "Default",
+  },
+  "openEventId": "",
+  "phaseSelectorFavorites": {},
+  "phaseSelectorPhaseList": "",
+  "phaseToAlignOn": "P",
+  "requestTracker": {
+    "completedRequests": 0,
+    "initiatedRequests": 0,
+    "lastRequestId": "",
+    "requests": {},
+  },
+  "selectedEventIds": [],
+  "selectedFilterIndex": -1,
+  "selectedFilterList": "",
+  "selectedSdIds": [],
+  "selectedSortType": "Station: A-Z",
+  "selectedWaveforms": [],
+}
+`;

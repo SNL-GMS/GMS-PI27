@@ -1,0 +1,26 @@
+{
+    "name": "ham-fir-0.5-2.5-48-bp-causal",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "HAM FIR 0.5 2.5 48 BP causal"
+            ]
+        }
+    ],
+    "parameters": {
+        "name": "HAM FIR 0.5 2.5 48 BP causal",
+        "comments": "Hamming FIR band-pass, 0.5-2.5 Hz, order 48, causal",
+        "filterDescription": {
+            "$ref=global.filter-description":[{
+                "criterion": "name",
+                "value": "HAM FIR 0.5 2.5 48 BP causal Description"
+            }]
+        }
+    }
+}

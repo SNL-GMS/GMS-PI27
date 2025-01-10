@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+
+  implementation project(':station-definition-coi')
+  implementation project(':fk-coi')
+  implementation project(':waveform-coi')
+  implementation project(':plugin-registry')
+
+  // Google AutoValue
+  api libs.com.google.guava.guava
+  implementation libs.com.google.auto.value.auto.value.annotations
+  annotationProcessor libs.com.google.auto.value.auto.value.base
+
+}

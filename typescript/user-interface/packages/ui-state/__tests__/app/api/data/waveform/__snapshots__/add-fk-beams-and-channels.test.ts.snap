@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addFkBeamsAndChannels updates state based on the given inputs 1`] = `
+{
+  "Sample Filter Definition Name": [
+    {
+      "channelSegment": {
+        "_uiFilterId": "Unfiltered",
+        "id": {
+          "channel": {
+            "effectiveAt": 1638297900,
+            "name": "PDAR.PD01.SHZ",
+          },
+          "creationTime": 1638297900,
+          "endTime": 1638298200,
+          "startTime": 1638297900,
+        },
+        "maskedBy": [],
+        "missingInputChannels": [],
+        "timeseries": [
+          {
+            "_uiClaimCheckId": "{"domain":{"startTimeSecs":1638297900,"endTimeSecs":1638298200},"id":{"channel":{"effectiveAt":1638297900,"name":"PDAR.PD01.SHZ"},"startTime":1638297900,"endTime":1638298200,"creationTime":1638297900},"type":"WAVEFORM","filter":"Unfiltered","waveform":{"type":"WAVEFORM","startTime":0,"endTime":100,"sampleCount":10,"sampleRateHz":100}}",
+            "endTime": 1638298200,
+            "sampleCount": 12000,
+            "sampleRateHz": 40,
+            "startTime": 1638297900,
+            "type": "WAVEFORM",
+          },
+        ],
+        "timeseriesType": "WAVEFORM",
+        "units": "NANOMETERS",
+      },
+      "channelSegmentDescriptor": {
+        "channel": {
+          "effectiveAt": 1636503404,
+          "name": "PDAR.PD01.SHZ",
+        },
+        "creationTime": 1636503404,
+        "endTime": 1636503704,
+        "startTime": 1636503404,
+      },
+      "domainTimeRange": {
+        "endTimeSecs": 1638298200,
+        "startTimeSecs": 1638297900,
+      },
+    },
+  ],
+}
+`;

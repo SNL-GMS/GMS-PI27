@@ -1,0 +1,46 @@
+{
+    "name": "pcrv-S",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "PCRV"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "phase",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "S"
+            ],
+            "priority": 90
+        }
+    ],
+    "parameters": {
+        "inputChannels": [
+            {
+                "name": "PCRV.PCRV.BH1"
+            },
+            {
+                "name": "PCRV.PCRV.BH2"
+            }
+        ],
+        "leadDuration": "PT60S",
+        "duration": "PT5M",
+        "sampleRateToleranceHz": 0.1,
+        "locationToleranceKm": 0.1,
+        "orientationAngleToleranceDeg": 0.1,
+        "twoDimensional": true,
+        "samplingType": "NEAREST_SAMPLE"
+    }
+}

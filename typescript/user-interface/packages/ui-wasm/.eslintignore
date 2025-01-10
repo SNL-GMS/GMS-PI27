@@ -1,0 +1,14 @@
+docs
+node_modules
+build
+dist
+coverage
+.scannerwork
+.cache
+.jest-cache
+emcmake-build
+
+# generated code
+src/ts/wasm/gms-interop-module.d.ts
+src/ts/wasm/gms-interop-module.js
+src/ts/wasm/ui-wasm-provider.js

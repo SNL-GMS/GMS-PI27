@@ -1,0 +1,76 @@
+.open-anything__dialog {
+  width: auto;
+  max-width: 90%;
+  .bp5-dialog-header {
+    button.bp5-dialog-close-button {
+      --active-text-color: color-mix(
+        in srgb,
+        var(--gms-selection, $core-selection),
+        var(--gms-main, $core-main)
+      );
+      &:focus {
+        color: var(--active-text-color, $gms-main);
+        outline: 2px solid rgba(45, 114, 210, 0.6);
+        outline-offset: 2px;
+      }
+    }
+  }
+  .date-input-apply-cancel {
+    button.bp5-button {
+      --active-text-color: color-mix(
+        in srgb,
+        var(--gms-selection, $core-selection),
+        var(--gms-main, $core-main)
+      );
+      &:focus {
+        color: var(--active-text-color, $gms-main);
+        outline: 2px solid rgba(45, 114, 210, 0.6);
+        outline-offset: 2px;
+      }
+    }
+  }
+}
+
+.open-anything-contents .dropdown-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 7px;
+}
+
+.open-anything-contents .dropdown-label {
+  padding: 0 0.5em 0 0;
+  line-height: 1;
+  color: var(--core-prominent, var(--gms-prominent, $core-prominent));
+  font-weight: 600;
+  width: 35%;
+}
+
+.open-anything-contents .dropdown-selector {
+  width: 65%;
+}
+
+.open-anything-contents .dropdown-container .dropdown-selector {
+  div select {
+    &:focus {
+      --active-text-color: color-mix(
+        in srgb,
+        var(--gms-selection, $core-selection),
+        var(--gms-main, $core-main)
+      );
+      color: var(--active-text-color, $gms-main);
+      outline: 2px solid rgba(45, 114, 210, 0.6);
+      outline-offset: 2px;
+    }
+  }
+}
+
+.open-anything-error {
+  color: $gms-strong-warning;
+  display: flex;
+  min-height: 20px;
+}
+.open-anything-error-text {
+  margin-left: 5px;
+  width: calc(100% - 20px);
+}

@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UIThemeWrapper addDerivedColorsToTheme adds darkened and lightened colors to a theme 1`] = `
+{
+  "completeEventSDColor": "#62D96B",
+  "completeEventSDHoverColor": "#BBFFBC",
+  "conflict": "#FF0000",
+  "deletedEventColor": "#ff6347",
+  "deletedSdColor": "#ff6347",
+  "fkDisplayed": "#00FFFF",
+  "fkNeedsReview": "#EBFF00",
+  "gmsActionTarget": "#ffffff",
+  "gmsBackground": "#182026",
+  "gmsMain": "#f5f8fa",
+  "gmsMainInverted": "#10161a",
+  "gmsSelection": "#1589d1",
+  "gmsSelectionDark": "#137bbc",
+  "gmsSelectionLight": "#2c95d6",
+  "gmsTableSelection": "#f5f8fa",
+  "mapArraySiteLines": "#182026",
+  "mapStationDefault": "#6F6E74",
+  "mapVisibleStation": "#D9822B",
+  "openEventSDColor": "#C87619",
+  "openEventSDColorLight": "#ce8430",
+  "otherEventSDColor": "#FFFFFF",
+  "popover": {
+    "background": "#30404d",
+    "gridBackground": "#3d4b58",
+    "header": "#30404d",
+    "input": "#2d3b44",
+    "invalidInput": "#1c2127",
+  },
+  "predictionSDColor": "#C58C1B",
+  "qcMaskColors": {
+    "analystDefined": "#EB06C8",
+    "dataAuthentication": "#8A57FF",
+    "longTerm": "#0E9B96",
+    "processingMask": "#F87C2E",
+    "rejected": "#FF0000",
+    "stationSOH": "#B58400",
+    "unprocessed": "#FFFFFF",
+    "waveform": "#00E22B",
+  },
+  "rejectedEventColor": "#ab83f1",
+  "unassociatedSDColor": "#C23030",
+  "waveformDimPercent": 0.75,
+  "waveformFilterLabel": "#f5f8fa",
+  "waveformMaskLabel": "#EB06C8",
+  "waveformRaw": "#4580e6",
+  "waveformRawDark": "#3766b8",
+  "waveformSelected": "#A4BAE1",
+  "weavessOutOfBounds": "#10161a",
+}
+`;
+
+exports[`UIThemeWrapper convert color theme to css 1`] = `
+{
+  "--complete-event-s-d-color": "#62D96B",
+  "--complete-event-s-d-hover-color": "#BBFFBC",
+  "--conflict": "#FF0000",
+  "--deleted-event-color": "#ff6347",
+  "--deleted-event-color-dark": "#e65940",
+  "--deleted-sd-color": "#ff6347",
+  "--deleted-sd-color-dark": "#e65940",
+  "--fk-displayed": "#00FFFF",
+  "--fk-needs-review": "#EBFF00",
+  "--gms-action-target": "#ffffff",
+  "--gms-background": "#182026",
+  "--gms-main": "#f5f8fa",
+  "--gms-main-inverted": "#10161a",
+  "--gms-selection": "#1589d1",
+  "--gms-table-selection": "#f5f8fa",
+  "--map-array-site-lines": "#182026",
+  "--map-station-default": "#6F6E74",
+  "--map-visible-station": "#D9822B",
+  "--open-event-s-d-color": "#C87619",
+  "--other-event-s-d-color": "#FFFFFF",
+  "--popover-background": "#30404d",
+  "--popover-grid-background": "#3d4b58",
+  "--popover-header": "#30404d",
+  "--popover-input": "#2d3b44",
+  "--popover-invalid-input": "#1c2127",
+  "--prediction-s-d-color": "#C58C1B",
+  "--qc-mask-colors-analyst-defined": "#EB06C8",
+  "--qc-mask-colors-data-authentication": "#8A57FF",
+  "--qc-mask-colors-long-term": "#0E9B96",
+  "--qc-mask-colors-processing-mask": "#F87C2E",
+  "--qc-mask-colors-rejected": "#FF0000",
+  "--qc-mask-colors-station-s-o-h": "#B58400",
+  "--qc-mask-colors-unprocessed": "#FFFFFF",
+  "--qc-mask-colors-waveform": "#00E22B",
+  "--rejected-event-color": "#ab83f1",
+  "--unassociated-s-d-color": "#C23030",
+  "--waveform-dim-percent": "0.75",
+  "--waveform-filter-label": "#f5f8fa",
+  "--waveform-mask-label": "#EB06C8",
+  "--waveform-raw": "#4580e6",
+  "--waveform-selected": "#A4BAE1",
+  "--weavess-out-of-bounds": "#10161a",
+}
+`;
+
+exports[`UIThemeWrapper matches snapshot 1`] = `
+<div>
+  <div
+    class="gms-theme-provider bp5-dark"
+    style="--open-associated-text-color: #10161a; --complete-associated-text-color: #10161a; --other-associated-text-color: #10161a; --unassociated-text-color: #f5f8fa; --deleted-sd-text-color: #10161a; --table-selection-text-color: #000000;"
+  >
+    arbitrary children for wrapper
+  </div>
+</div>
+`;

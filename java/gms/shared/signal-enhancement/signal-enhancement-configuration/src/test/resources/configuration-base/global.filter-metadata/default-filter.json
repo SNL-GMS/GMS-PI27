@@ -1,0 +1,28 @@
+{
+    "name": "default-filter",
+    "constraints": [
+       {
+            "constraintType": "STRING",
+            "criterion": "filter",
+            "operator": {
+                "type": "IN",
+                "negated": false
+            },
+            "value": [
+				"Onset",
+				"FK"
+            ],
+			"priority": 30
+        }
+    ],
+    "parameters": {
+        "filterDefinition": {
+			"$ref=global.filter-definition": [
+				{
+					"criterion": "name",
+					"value": "0.4 3.5 3 BP causal"
+				}
+			]
+		}
+    }
+}

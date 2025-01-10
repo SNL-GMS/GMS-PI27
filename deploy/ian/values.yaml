@@ -1,0 +1,1228 @@
+global:
+  # baseDomain specifies the domain name suffix applied to all Ingress hostnames. Set by gmskube.
+  baseDomain: "cluster.example.com"
+
+  # basePort specifies the ingress port to access from outside the cluster. Set by gmskube.
+  basePort: 443
+
+  # env specifies environment variables that will be added to all applications
+  # unless `useGlobalEnv: false` for that application
+  env:
+    ETCD_GMS_PASSWORD:
+      key: "password"
+      name: "etcd-gms-user"
+      type: "fromSecret"
+    ETCD_GMS_USER:
+      key: "username"
+      name: "etcd-gms-user"
+      type: "fromSecret"
+    GMS_CONFIG_SQL_PASSWORD:
+      key: "password"
+      name: "postgres-soh-application"
+      type: "fromSecret"
+    GMS_CONFIG_SQL_USERNAME:
+      key: "username"
+      name: "postgres-soh-application"
+      type: "fromSecret"
+    GMS_CONFIG_SQL_ELEV_PASSWORD:
+      key: "password"
+      name: "postgres-soh-application-elevated"
+      type: "fromSecret"
+    GMS_CONFIG_SQL_ELEV_USERNAME:
+      key: "username"
+      name: "postgres-soh-application-elevated"
+      type: "fromSecret"
+
+  # imagePullPolicy is the policy used for all images ('Always', 'IfNotPresent', 'Never').
+  imagePullPolicy: "Always"
+
+  # imageRegistry is the Docker image registry URL where all images will be retrieved. Set by gmskube.
+  imageRegistry: "docker-registry.example.com"
+
+  # imageTag is the Docker image tag used when retrieving all CI-built images. Set by gmskube.
+  imageTag: "develop"
+
+  # Whether or not to use istio. Set by gmskube.
+  istio: false
+
+  # Default PersistentVolumeClaim storage class.
+  # Note that kafka's storageClass is configured independently, but it uses the default storage class
+  # Empty uses the cluster's default storage class
+  storageClassName:
+
+  # Username of the user installing or upgrading the instance. Set by gmskube.
+  user: "UNKNOWN"
+
+# namespace LimitRange, can be a valid LimitRangeSpec yaml
+limitRange:
+  enabled: true
+  limits:
+  - defaultRequest:
+      cpu: "10m"
+      memory: "128Mi"
+    default:
+      memory: "500Mi"
+    type: "Container"
+
+# List of GMS standard apps. These are apps that use the common gms app templates.
+# Note: an app definition must also be added in the section below for each standard app.
+standardApps:
+  - "config-loader"
+  - "etcd"
+  - "event-manager-service"
+  # - "event-relocation-service"
+  - "feature-prediction-service"
+  - "fk-control-service"
+  - "frameworks-configuration-service"
+  - "ignite-standalone"
+  - "interactive-analysis-api-gateway"
+  - "interactive-analysis-ui"
+  - "minio"
+  - "postgresql-gms"
+  - "signal-detection-manager-service"
+  - "signal-enhancement-configuration-service"
+  - "signal-feature-measurement-configuration-service"
+  - "station-definition-service"
+  - "ui-processing-configuration-service"
+  - "user-manager-service"
+  - "waveform-manager-service"
+  - "workflow-manager-service"
+
+# Secrets to copy from other namespaces
+copySecrets:
+  ingress-cert:
+    sourceName: "ingress-default-cert"
+    namespace: "gms"
+    destName: "ingress-cert"
+
+# Configmaps to copy from other namespaces
+copyConfigMaps:
+  keycloak-config:
+    namespace: "gms"
+
+#
+# App definitions
+#
+config-loader:
+  deploymentStrategy: Recreate
+  env:
+    MINIO_ROOT_USER:
+      key: "access_key"
+      name: "minio-keys"
+      type: "fromSecret"
+    MINIO_ROOT_PASSWORD:
+      key: "secret_key"
+      name: "minio-keys"
+      type: "fromSecret"
+  imageName: "gms-common/config-loader"
+  livenessProbe:
+    httpGet:
+      path: "/alive"
+      port: 8080
+    initialDelaySeconds: 30
+  network:
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+      annotations:
+        nginx.ingress.kubernetes.io/proxy-body-size: "1024m"
+      stripPath: true
+    service:
+      8080:
+        name: "http-web"
+  podSecurityContext:
+    fsGroup: 1001
+  readinessProbe:
+    httpGet:
+      path: "/alive"
+      port: 8080
+    initialDelaySeconds: 5
+  resources:
+    requests:
+      cpu: "1m"
+      memory: "100Mi"
+    limits:
+      memory: "250Mi"
+  useGlobalEnv: false
+  volume:
+    state:
+      mountPath: "/opt/gms/config-loader/app/state"
+      size: "10Mi"
+      type: "persistentVolumeClaim"
+
+etcd:
+  env:
+    GMS_ETCD_ADMIN_PASSWORD:
+      key: "password"
+      name: "etcd-admin-user"
+      type: "fromSecret"
+    GMS_ETCD_ADMIN_USER:
+      key:  "username"
+      name: "etcd-admin-user"
+      type: "fromSecret"
+    GMS_ETCD_PASSWORD:
+      key: "password"
+      name: "etcd-gms-user"
+      type: "fromSecret"
+    GMS_ETCD_ROOT_PASSWORD:
+      key: "password"
+      name: "etcd-root-user"
+      type: "fromSecret"
+    GMS_ETCD_ROOT_USER:
+      key:  "username"
+      name: "etcd-root-user"
+      type: "fromSecret"
+    GMS_ETCD_USER:
+      key: "username"
+      name: "etcd-gms-user"
+      type: "fromSecret"
+  imageName: "gms-common/etcd"
+  livenessProbe:
+    httpGet:
+      path: "/health"
+      port: 2379
+    initialDelaySeconds: 60
+    periodSeconds: 30
+    timeoutSeconds: 5
+    failureThreshold: 5
+  network:
+    service:
+      2379:
+        name: "tcp-etcd"
+  readinessProbe:
+    httpGet:
+      path: "/health"
+      port: 2379
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 5
+  resources:
+    requests:
+      cpu: "6m"
+      memory: "40Mi"
+    limits:
+      memory: "100Mi"
+  secret:
+    etcd-gms-user:
+      stringData:
+        username: "gms"
+        password: "{{ uuidv4 }}"
+    etcd-admin-user:
+      stringData:
+        username: "gmsadmin"
+        password: "{{ uuidv4 }}"
+    etcd-root-user:
+      stringData:
+        username: "root"
+        password: "{{ uuidv4 }}"
+  useGlobalEnv: false
+
+event-manager-service:
+  env:
+    JDK_JAVA_OPTIONS: "-Xms11g -Xmx11g -Doracle.net.wallet_location=/opt/gms/oracle-wallet -Doracle.net.tns_admin=/opt/gms/oracle-wallet"
+    GMS_CONFIG_SQL_PASSWORD: {}
+    GMS_CONFIG_SQL_USERNAME: {}
+  imageName: "gms-common/event-manager"
+  livenessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/liveness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  readinessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/readiness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  network:
+    ignite: true
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  podAnnotations:
+    traffic.sidecar.istio.io/excludeOutboundPorts: "1521"
+  resources:
+    requests:
+      cpu: "11m"
+      memory: "17Gi"
+    limits:
+      memory: "34Gi"
+  restartAfterReconfig: true
+  volume:
+    bridge-waveforms:
+      hostPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-waveforms"
+      mountPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-waveforms-mount"
+      readOnly: true
+      type: "hostPath"
+    oracle-wallet:
+      mountPath: "/opt/gms/oracle-wallet"
+      readOnly: true
+      secretName: "oracle-wallet"
+      type: "secret"
+    ignite-work-dir:
+      type: "emptyDir"
+      mountPath: "/opt/ignite/work"
+      medium: "Memory"
+      size: "10Mi"
+
+# event-relocation-service:
+#   env:
+#     JDK_JAVA_OPTIONS: "-Xms6g -Xmx6g"
+#   imageName: "gms-common/event-relocator"
+#   livenessProbe:
+#     httpGet:
+#       path: "/{{.appName}}/actuator/health/liveness"
+#       port: 8080
+#     initialDelaySeconds: 30
+#     failureThreshold: 30
+#   readinessProbe:
+#     httpGet:
+#       path: "/{{.appName}}/actuator/health/readiness"
+#       port: 8080
+#     initialDelaySeconds: 30
+#     failureThreshold: 30
+#   network:
+#     ingress:
+#       8080:
+#         path: "/{{ .appName }}"
+#     service:
+#       8080:
+#         name: "http-web"
+#   resources:
+#     requests:
+#       cpu: "1m"
+#       memory: "8Gi"
+#     limits:
+#       memory: "16Gi"
+#   volume:
+#     event-relocator:
+#       hostPath:
+#         type: "fromConfigMap"
+#         namespace: "gms"
+#         name: "event-relocator-path-config"
+#         key: "event-relocator"
+#       mountPath: "/data/eventRelocator"
+#       readOnly: true
+#       type: "hostPath"
+
+feature-prediction-service:
+  env:
+    JDK_JAVA_OPTIONS: "-Xms6g -Xmx6g"
+    MINIO_ROOT_USER:
+      key: "access_key"
+      name: "minio-keys"
+      type: "fromSecret"
+    MINIO_ROOT_PASSWORD:
+      key: "secret_key"
+      name: "minio-keys"
+      type: "fromSecret"
+  imageName: "gms-common/feature-prediction-service"
+  livenessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/liveness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  readinessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/readiness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  network:
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  resources:
+    requests:
+      cpu: "1m"
+      memory: "8Gi"
+    limits:
+      memory: "16Gi"
+  restartAfterReconfig: true
+
+fk-control-service:
+  env:
+    GMS_CONFIG_LOG_LEVEL: "INFO"
+  imageName: "gms-common/fk-control-service"
+  network:
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  resources:
+    requests:
+      cpu: "275m"
+      memory: "3Gi"
+    limits:
+      memory: "10Gi"
+  restartAfterReconfig: "true"
+
+frameworks-configuration-service:
+  env:
+    GMS_CONFIG_PROCESSING_CFG__SQL_USERNAME:
+      key: "username"
+      name: "postgres-config-application"
+      type: "fromSecret"
+    GMS_CONFIG_PROCESSING_CFG__SQL_PASSWORD:
+      key: "password"
+      name: "postgres-config-application"
+      type: "fromSecret"
+  imageName: "gms-common/frameworks-configuration-service"
+  resources:
+    requests:
+      cpu: "1m"
+      memory: "890Mi"
+    limits:
+      memory: "2400Mi"
+  network:
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+
+ignite-standalone:
+  env:
+    OPTION_LIBS: ignite-kubernetes,ignite-rest-http
+    CONFIG_URI: /opt/ignite/apache-ignite/config/node-configuration.xml
+  imageName: "gms-common/ignite"
+  network:
+    ignite: true
+    service:
+      8080:
+        name: "http-web"
+      10800:
+        name: "tcp-thinclients"
+  resources:
+    limits:
+      memory: "4Gi"
+  replicas: 2
+  configMap:
+    ignite-config:
+      data:
+        node-configuration.xml: |-
+          <?xml version="1.0" encoding="UTF-8"?>
+          <beans xmlns="http://www.springframework.org/schema/beans"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="
+                  http://www.springframework.org/schema/beans
+                  http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+              <bean class="org.apache.ignite.configuration.IgniteConfiguration">
+                  <property name="dataStorageConfiguration">
+                      <bean class="org.apache.ignite.configuration.DataStorageConfiguration">
+                          <!--
+                          Default memory region that grows endlessly. Any cache will be bound to this memory region
+                          unless another region is set in the cache's configuration.
+                          Current memory config is 25% JVM + 65% Data Region + 10% System
+                          -->
+                          <property name="defaultDataRegionConfiguration">
+                              <bean class="org.apache.ignite.configuration.DataRegionConfiguration">
+                                  <property name="name" value="Default_Region"/>
+                                  <!-- 65% of total memory. -->
+                                  <property name="initialSize" value="#{1L * 1024 * 1024 * 1024}"/>
+                                  <property name="maxSize" value="#{4L * 1024 * 1024 * 1024 * 0.65}"/>
+                                  <property name="pageEvictionMode" value="RANDOM_2_LRU"/>
+                              </bean>
+                          </property>
+                      </bean>
+                  </property>
+                  <property name="discoverySpi">
+                      <bean class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">
+                          <property name="ipFinder">
+                              <bean class="org.apache.ignite.spi.discovery.tcp.ipfinder.kubernetes.TcpDiscoveryKubernetesIpFinder">
+                                  <constructor-arg>
+                                      <bean class="org.apache.ignite.kubernetes.configuration.KubernetesConnectionConfiguration">
+                                          <property name="namespace" value="{{ .Release.Name }}" />
+                                          <property name="serviceName" value="ignite" />
+                                      </bean>
+                                  </constructor-arg>
+                              </bean>
+                          </property>
+                      </bean>
+                  </property>
+              </bean>
+          </beans>
+  volume:
+    config-volume:
+      configMapName: "ignite-config"
+      mountPath: "/opt/ignite/apache-ignite/config/node-configuration.xml"
+      subPath: "node-configuration.xml"
+      type: "configMap"
+
+interactive-analysis-api-gateway:
+  env:
+    GMS_UI_MODE: "ian"
+    NODE_CONFIG_ENV: "deployed"
+    NODE_ENV: "production"
+  imageName: "gms-common/interactive-analysis-api-gateway"
+  livenessProbe:
+    httpGet:
+      path: "/{{.appName}}/liveness"
+      port: 3000
+    initialDelaySeconds: 30
+  network:
+    ingress:
+      3000:
+        path: "/{{ .appName }}"
+        weight: 200
+      4001:
+        path: "/{{ .appName }}/subscriptions"
+        weight: 100
+      annotations:
+        nginx.ingress.kubernetes.io/proxy-connect-timeout: "86400"
+        nginx.ingress.kubernetes.io/proxy-read-timeout: "86400"
+        nginx.ingress.kubernetes.io/proxy-write-timeout: "86400"
+    service:
+      3000:
+        name: "http-web"
+      4001:
+        name: "http-subscriptions"
+  readinessProbe:
+    httpGet:
+      path: "/{{.appName}}/readiness"
+      port: 3000
+    initialDelaySeconds: 2
+  resources:
+    requests:
+      cpu: "30m"
+      memory: "180Mi"
+    limits:
+      memory: "500Mi"
+
+interactive-analysis-ui:
+  env:
+    GMS_DISABLE_KEYCLOAK_AUTH: false
+    GMS_KEYCLOAK_CLIENT_ID:
+      key: "client_id"
+      name: "keycloak-config"
+      type: "fromConfigMap"
+    GMS_KEYCLOAK_REALM:
+      key: "realm"
+      name: "keycloak-config"
+      type: "fromConfigMap"
+    GMS_KEYCLOAK_URL:
+      key: "url"
+      name: "keycloak-config"
+      type: "fromConfigMap"
+    GMS_UI_MODE: "ian"
+    NGINX_WORKER_PROCESSES: 4
+    NODE_ENV: "production"
+    URL_PATH: "{{ .appName }}"
+  imageName: "gms-common/interactive-analysis-ui"
+  livenessProbe:
+    tcpSocket:
+      port: 8080
+    initialDelaySeconds: 30
+  network:
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+      annotations:
+        nginx.ingress.kubernetes.io/proxy-connect-timeout: "86400"
+        nginx.ingress.kubernetes.io/proxy-read-timeout: "86400"
+        nginx.ingress.kubernetes.io/proxy-write-timeout: "86400"
+    service:
+      8080:
+        name: "http-web"
+  readinessProbe:
+    tcpSocket:
+      port: 8080
+    initialDelaySeconds: 1
+  resources:
+    requests:
+      cpu: "3m"
+      memory: "60Mi"
+    limits:
+      memory: "100Mi"
+  restartAfterReconfig: true
+
+# kafka is a subchart
+kafka:
+  autoCreateTopicsEnable: true # TODO revisit this and turn off eventually by adding topics explicitly
+  controller:
+    replicaCount: 1
+    resources:
+      requests:
+        cpu: "30m"
+        memory: "1100Mi"
+      limits:
+        memory: "2200Mi"
+  extraConfig: |
+    offsets.topic.replication.factor=1
+    log.retention.hours=6
+  fullnameOverride: kafka
+  image:
+    pullPolicy: Always
+    repository: gms-common/bitnami-kafka
+  listeners:
+    client:
+      protocol: "PLAINTEXT"
+  provisioning:
+    enabled: true
+    numPartitions: 1
+    replicationFactor: 1 # Only one kafka broker for IAN deployments currently
+    podAnnotations:
+      sidecar.istio.io/inject: "false"
+    resources:
+      requests:
+        cpu: "300m"
+        memory: "128Mi"
+      limits:
+        memory: "500Mi"
+    serviceAccount:
+      create: false
+      name: "gms"
+    topics:
+      - name: channel-created
+  serviceAccount:
+    create: false
+    name: "gms"
+
+minio:
+  command:
+    - "minio"
+    - "server"
+    - "/data"
+    - "--console-address"
+    - ":9001"
+  deploymentStrategy: Recreate
+  env:
+    MINIO_PROMETHEUS_AUTH_TYPE: "public"
+    MINIO_ROOT_USER:
+      key: "access_key"
+      name: "minio-keys"
+      type: "fromSecret"
+    MINIO_ROOT_PASSWORD:
+      key: "secret_key"
+      name: "minio-keys"
+      type: "fromSecret"
+  imageName: "gms-common/minio"
+  livenessProbe:
+    httpGet:
+      path: "/minio/health/live"
+      port: 9000
+    initialDelaySeconds: 5
+    timeoutSeconds: 5
+    failureThreshold: 5
+  network:
+    ingress:
+      9000:
+        path: "/"
+      host: "{{ .appName }}-{{ .Release.Name }}.{{ .Values.global.baseDomain }}"
+    service:
+      9000:
+        name: "http-api"
+      9001:
+        name: "http-web"
+  podSecurityContext:
+    runAsUser: 1001
+    fsGroup: 1001
+  readinessProbe:
+    tcpSocket:
+      port: 9000
+    initialDelaySeconds: 5
+    periodSeconds: 5
+    failureThreshold: 5
+  resources:
+    requests:
+      cpu: "2m"
+      memory: "190Mi"
+    limits:
+      memory: "750Mi"
+  secret:
+    minio-keys:
+      stringData:
+        access_key: "{{ uuidv4 }}"
+        secret_key: "{{ uuidv4 }}"
+  useGlobalEnv: false
+  volume:
+    data:
+      mountPath: "/data"
+      size: "60Mi"
+      type: "persistentVolumeClaim"
+
+postgresql-gms:
+  env:
+    GMS_POSTGRES_ADMIN_PASSWORD:
+      key: "password"
+      name: "postgres-admin"
+      type: "fromSecret"
+    GMS_POSTGRES_CONFIG_APPLICATION_PASSWORD:
+      key: "password"
+      name: "postgres-config-application"
+      type: "fromSecret"
+    GMS_POSTGRES_READ_ONLY_PASSWORD:
+      key: "password"
+      name: "postgres-read-only"
+      type: "fromSecret"
+    GMS_POSTGRES_SESSION_APPLICATION_PASSWORD:
+      key: "password"
+      name: "postgres-session-application"
+      type: "fromSecret"
+    GMS_POSTGRES_SOH_APPLICATION_PASSWORD:
+      key: "password"
+      name: "postgres-soh-application"
+      type: "fromSecret"
+    GMS_POSTGRES_SOH_APPLICATION_ELEVATED_PASSWORD:
+      key: "password"
+      name: "postgres-soh-application-elevated"
+      type: "fromSecret"
+    GMS_POSTGRES_SOH_TEST_APPLICATION_PASSWORD:
+      key: "password"
+      name: "postgres-soh-test-application"
+      type: "fromSecret"
+    GMS_POSTGRES_SOH_TTL_APPLICATION_PASSWORD:
+      key: "password"
+      name: "postgres-soh-ttl-application"
+      type: "fromSecret"
+    POSTGRES_DB: "gms"
+    POSTGRES_PASSWORD:
+      key: "password"
+      name: "postgres-super-user"
+      type: "fromSecret"
+    POSTGRES_USER:
+      key: "username"
+      name: "postgres-super-user"
+      type: "fromSecret"
+  deploymentStrategy: Recreate
+  imageName: "gms-common/postgres"
+  startupProbe:
+    exec:
+      command: [ "/bin/sh", "-c", "exec pg_isready -U gms_super_user -d gms -h 127.0.0.1 -p 5432" ]
+    initialDelaySeconds: 30
+    timeoutSeconds: 5
+    failureThreshold: 6
+  readinessProbe:
+    exec:
+      command: [ "/bin/sh", "-c", "exec pg_isready -U gms_super_user -d gms -h 127.0.0.1 -p 5432" ]
+    timeoutSeconds: 5
+    failureThreshold: 2
+    successThreshold: 2
+  network:
+    service:
+      5432:
+        name: "tcp-postgresql"
+  node: "node1"
+  nodeAffinity:
+    type: "soft"
+    key: "kubernetes.io/hostname"
+    operator: "In"
+    values:
+      - "{{ .appValues.node }}"
+  podSecurityContext:
+    fsGroup: 26
+  resources:
+    requests:
+      cpu: "4m"
+      memory: "260Mi"
+    limits:
+      memory: "500Mi"
+  secret:
+    postgres-super-user:
+      stringData:
+        username: "gms_super_user"
+        password: "{{ uuidv4 }}"
+    postgres-admin:
+      stringData:
+        username: "gms_admin"
+        password: "{{ uuidv4 }}"
+    postgres-config-application:
+      stringData:
+        username: "gms_config_application"
+        password: "{{ uuidv4 }}"
+    postgres-read-only:
+      stringData:
+        username: "gms_read_only"
+        password: "{{ uuidv4 }}"
+    postgres-session-application:
+      stringData:
+        username: "gms_session_appication"
+        password: "{{ uuidv4 }}"
+    postgres-soh-application:
+      stringData:
+        username: "gms_soh_application"
+        password: "{{ uuidv4 }}"
+    postgres-soh-application-elevated:
+      stringData:
+        username: "gms_soh_application_elevated"
+        password: "{{ uuidv4 }}"
+    postgres-soh-test-application:
+      stringData:
+        username: "gms_soh_test_application"
+        password: "{{ uuidv4 }}"
+    postgres-soh-ttl-application:
+      stringData:
+        username: "gms_soh_ttl_application"
+        password: "{{ uuidv4 }}"
+  useGlobalEnv: false
+  volume:
+    data:
+      mountPath: "/var/lib/postgresql/data"
+      size: "400Mi"
+      type: "persistentVolumeClaim"
+    shm:
+      medium: "Memory"
+      mountPath: "/dev/shm"
+      type: "emptyDir"
+
+signal-detection-manager-service:
+  env:
+    JDK_JAVA_OPTIONS: "-Xms8g -Xmx8g -Doracle.net.wallet_location=/opt/gms/oracle-wallet -Doracle.net.tns_admin=/opt/gms/oracle-wallet"
+    GMS_CONFIG_SQL_PASSWORD: {}
+    GMS_CONFIG_SQL_USERNAME: {}
+    WALLET_APP_NAME: signal-detection-application
+  imageName: "gms-common/signal-detection-application"
+  livenessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/liveness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  readinessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/readiness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  network:
+    ignite: true
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  podAnnotations:
+    traffic.sidecar.istio.io/excludeOutboundPorts: "1521"
+  resources:
+    requests:
+      cpu: "11m"
+      memory: "12Gi"
+    limits:
+      memory: "24Gi"
+  restartAfterReconfig: true
+  volume:
+    bridge-responses:
+      hostPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-responses"
+      mountPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-responses-mount"
+      readOnly: true
+      type: "hostPath"
+    bridge-waveforms:
+      hostPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-waveforms"
+      mountPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-waveforms-mount"
+      readOnly: true
+      type: "hostPath"
+    oracle-wallet:
+      mountPath: "/opt/gms/oracle-wallet"
+      readOnly: true
+      secretName: "oracle-wallet"
+      type: "secret"
+    ignite-work-dir:
+      type: "emptyDir"
+      mountPath: "/opt/ignite/work"
+      medium: "Memory"
+      size: "10Mi"
+
+signal-enhancement-configuration-service:
+  env:
+    JDK_JAVA_OPTIONS: "-Xms12g -Xmx12g -Doracle.net.wallet_location=/opt/gms/oracle-wallet -Doracle.net.tns_admin=/opt/gms/oracle-wallet"
+    GMS_CONFIG_SQL_PASSWORD: {}
+    GMS_CONFIG_SQL_USERNAME: {}
+  imageName: "gms-common/signal-enhancement-application"
+  livenessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/liveness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  readinessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/readiness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  network:
+    ignite: true
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  podAnnotations:
+    traffic.sidecar.istio.io/excludeOutboundPorts: "1521"
+  resources:
+    requests:
+      cpu: "1m"
+      memory: "15Gi"
+    limits:
+      memory: "30Gi"
+  restartAfterReconfig: true
+  volume:
+    bridge-responses:
+      hostPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-responses"
+      mountPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-responses-mount"
+      readOnly: true
+      type: "hostPath"
+    bridge-waveforms:
+      hostPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-waveforms"
+      mountPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-waveforms-mount"
+      readOnly: true
+      type: "hostPath"
+    oracle-wallet:
+      mountPath: "/opt/gms/oracle-wallet"
+      readOnly: true
+      secretName: "oracle-wallet"
+      type: "secret"
+    ignite-work-dir:
+      type: "emptyDir"
+      mountPath: "/opt/ignite/work"
+      medium: "Memory"
+      size: "10Mi"
+
+signal-feature-measurement-configuration-service:
+  env:
+    JDK_JAVA_OPTIONS: "-Doracle.net.wallet_location=/opt/gms/oracle-wallet -Doracle.net.tns_admin=/opt/gms/oracle-wallet"
+    GMS_CONFIG_SQL_PASSWORD: {}
+    GMS_CONFIG_SQL_USERNAME: {}
+  imageName: "gms-common/signal-feature-measurement-application"
+  livenessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/liveness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  readinessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/readiness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  network:
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  podAnnotations:
+    traffic.sidecar.istio.io/excludeOutboundPorts: "1521"
+  resources:
+    requests:
+      cpu: "1m"
+      memory: "0.2Gi"
+    limits:
+      memory: "2Gi"
+  restartAfterReconfig: true
+  volume:
+    oracle-wallet:
+      mountPath: "/opt/gms/oracle-wallet"
+      readOnly: true
+      secretName: "oracle-wallet"
+      type: "secret"
+
+station-definition-service:
+  env:
+    JDK_JAVA_OPTIONS: "-Xms1500m -Xmx1500m -Doracle.net.wallet_location=/opt/gms/oracle-wallet -Doracle.net.tns_admin=/opt/gms/oracle-wallet"
+    WALLET_APP_NAME: station-definition-application
+  imageName: "gms-common/station-definition-application"
+  livenessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/liveness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  readinessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/readiness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  network:
+    ignite: true
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  podAnnotations:
+    traffic.sidecar.istio.io/excludeOutboundPorts: "1521"
+  resources:
+    requests:
+      cpu: "10m"
+      memory: "3.5Gi"
+    limits:
+      memory: "7Gi"
+  restartAfterReconfig: true
+  volume:
+    bridge-responses:
+      hostPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-responses"
+      mountPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-responses-mount"
+      readOnly: true
+      type: "hostPath"
+    bridge-waveforms:
+      hostPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-waveforms"
+      mountPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-waveforms-mount"
+      readOnly: true
+      type: "hostPath"
+    oracle-wallet:
+      mountPath: "/opt/gms/oracle-wallet"
+      readOnly: true
+      secretName: "oracle-wallet"
+      type: "secret"
+    ignite-work-dir:
+      type: "emptyDir"
+      mountPath: "/opt/ignite/work"
+      medium: "Memory"
+      size: "10Mi"
+
+ui-processing-configuration-service:
+  imageName: "gms-common/ui-processing-configuration-service"
+  livenessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/liveness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  readinessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/readiness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  network:
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  resources:
+    requests:
+      cpu: "1m"
+      memory: "780Mi"
+    limits:
+      memory: "2400Mi"
+  restartAfterReconfig: true
+
+user-manager-service:
+  imageName: "gms-common/user-manager-application"
+  livenessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/liveness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  readinessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/readiness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  network:
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  resources:
+    requests:
+      cpu: "1m"
+      memory: "850Mi"
+    limits:
+      memory: "2400Mi"
+  restartAfterReconfig: true
+
+waveform-manager-service:
+  env:
+    JDK_JAVA_OPTIONS: "-Xms12g -Xmx12g -Doracle.net.wallet_location=/opt/gms/oracle-wallet -Doracle.net.tns_admin=/opt/gms/oracle-wallet"
+    GMS_CONFIG_SQL_PASSWORD: {}
+    GMS_CONFIG_SQL_USERNAME: {}
+    WALLET_APP_NAME: waveform-manager-application
+  imageName: "gms-common/waveform-manager-application"
+  livenessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/liveness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  readinessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/readiness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  network:
+    ignite: true
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+      8383:
+        name: "http-metrics"
+  podAnnotations:
+    traffic.sidecar.istio.io/excludeOutboundPorts: "1521"
+  resources:
+    requests:
+      cpu: "10m"
+      memory: "14.5Gi"
+    limits:
+      memory: "29Gi"
+  restartAfterReconfig: true
+  volume:
+    bridge-responses:
+      hostPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-responses"
+      mountPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-responses-mount"
+      readOnly: true
+      type: "hostPath"
+    bridge-waveforms:
+      hostPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-waveforms"
+      mountPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-waveforms-mount"
+      readOnly: true
+      type: "hostPath"
+    oracle-wallet:
+      mountPath: "/opt/gms/oracle-wallet"
+      readOnly: true
+      secretName: "oracle-wallet"
+      type: "secret"
+    ignite-work-dir:
+      type: "emptyDir"
+      mountPath: "/opt/ignite/work"
+      medium: "Memory"
+      size: "10Mi"
+
+workflow-manager-service:
+  env:
+    JDK_JAVA_OPTIONS: "-Doracle.net.wallet_location=/opt/gms/oracle-wallet -Doracle.net.tns_admin=/opt/gms/oracle-wallet"
+    GMS_CONFIG_SQL_PASSWORD: {}
+    GMS_CONFIG_SQL_USERNAME: {}
+  imageName: "gms-common/workflow-manager"
+  livenessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/liveness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  readinessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/readiness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  network:
+    ignite: true
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  podAnnotations:
+    traffic.sidecar.istio.io/excludeOutboundPorts: "1521"
+  resources:
+    requests:
+      cpu: "13m"
+      memory: "1160Mi"
+    limits:
+      memory: "3Gi"
+  restartAfterReconfig: true
+  volume:
+    oracle-wallet:
+      mountPath: "/opt/gms/oracle-wallet"
+      readOnly: true
+      secretName: "oracle-wallet"
+      type: "secret"
+    ignite-work-dir:
+      type: "emptyDir"
+      mountPath: "/opt/ignite/work"
+      medium: "Memory"
+      size: "10Mi"

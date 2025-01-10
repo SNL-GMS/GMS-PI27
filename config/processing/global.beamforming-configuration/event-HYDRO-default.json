@@ -1,0 +1,69 @@
+{
+    "name": "event-HYDRO-default",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "beamType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "EVENT"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "IN",
+                "negated": false
+            },
+            "value": [
+                "H01W",
+                "H02N",
+                "H02S",
+                "H03N",
+                "H03S",
+                "H04N",
+                "H04S",
+                "H05N",
+                "H05S",
+                "H06E",
+                "H06N",
+                "H06S",
+                "H07N",
+                "H07S",
+                "H08N",
+                "H08S",
+                "H09N",
+                "H09W",
+                "H10N",
+                "H10S",
+                "H11N",
+                "H11S"
+            ],
+            "priority": 90
+        }
+    ],
+    "parameters": {
+        "leadDuration": "PT1M",
+        "beamDuration": "PT5M",
+        "orientationAngleToleranceDeg": 5.0,
+        "sampleRateToleranceHz": 0.5,
+        "minWaveformsToBeam": 2,
+        "inputChannelGroups": [
+            "*"
+        ],
+        "inputChannels": [
+            "EDH"
+        ],
+        "beamDescriptionParams": {
+            "beamSummation": "COHERENT",
+            "beamType": "EVENT",
+            "samplingType": "NEAREST_SAMPLE",
+            "twoDimensional": true
+        }
+    }
+}

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Station utilities build weavess markers 1`] = `
+{
+  "moveableMarkers": [
+    {
+      "color": "RED",
+      "id": "marker",
+      "lineStyle": "dashed",
+      "timeSecs": 350,
+    },
+  ],
+  "selectionWindows": [
+    {
+      "color": "rgba(200,0,0,0.2)",
+      "endMarker": {
+        "color": "purple",
+        "id": "marker",
+        "lineStyle": "dashed",
+        "maxTimeSecsConstraint": undefined,
+        "minTimeSecsConstraint": undefined,
+        "timeSecs": 700,
+      },
+      "id": "selection",
+      "isMoveable": true,
+      "startMarker": {
+        "color": "purple",
+        "id": "marker",
+        "lineStyle": "dashed",
+        "maxTimeSecsConstraint": undefined,
+        "minTimeSecsConstraint": undefined,
+        "timeSecs": 500,
+      },
+    },
+  ],
+  "verticalMarkers": [
+    {
+      "color": "lime",
+      "id": "marker",
+      "lineStyle": "dashed",
+      "timeSecs": 305,
+    },
+  ],
+}
+`;
+
+exports[`Station utilities build weavess markers with undefined markers 1`] = `
+{
+  "moveableMarkers": undefined,
+  "selectionWindows": undefined,
+  "verticalMarkers": undefined,
+}
+`;

@@ -1,0 +1,15 @@
+{
+    "amplitudeMeasurementTypes": [ 
+        "AMPLITUDE_A5_OVER_2",
+        "AMPLITUDE_A5_OVER_2_OR",
+        "AMPLITUDE_ALR_OVER_2",
+        "AMPLITUDE_ANL_OVER_2",
+        "AMPLITUDE_ANP_OVER_2",
+        "AMPLITUDE_FKSNR",
+        "AMPLITUDE_AMPTLIUDE_LRM0",
+        "AMPLITUDE_noiLRM0",
+        "AMPLITUDE_RMSAMP",
+        "AMPLITUDE_SBSNR",
+        "ROOT_MEAN_SQUARE"
+    ]
+}

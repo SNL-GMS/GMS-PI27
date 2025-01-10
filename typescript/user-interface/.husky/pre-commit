@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Format Staged Java code
+. "$(dirname -- "$0")/java-format-staged.sh"
+
+cd typescript/user-interface
+npx lint-staged

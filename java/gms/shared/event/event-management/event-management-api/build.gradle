@@ -1,0 +1,20 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+    implementation project(':frameworks-service-interface-base')
+
+    api project(':event-coi')
+    api project(':signal-detection-api')
+    api project(':common-coi-types')
+
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    testImplementation project(':test-utils')
+    testImplementation project(':java-utilities')
+    testImplementation(testFixtures(project(':signal-detection-coi')))
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':event-coi')))
+}

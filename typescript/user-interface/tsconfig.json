@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "module": "ES2022",
+    "target": "ES2022",
+    "jsx": "react",
+    "declaration": true,
+    "declarationMap": true,
+    "allowJs": false,
+    "removeComments": false,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "pretty": true,
+    "moduleResolution": "Node",
+    "lib": ["ES2022", "DOM", "DOM.Iterable", "ScriptHost", "WebWorker", "WebWorker.ImportScripts"],
+    "plugins": [
+      {
+        "name": "typescript-eslint-language-service"
+      }
+    ],
+    "types": ["node", "jest"],
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "preserveSymlinks": true
+  },
+  "exclude": [
+    ".vscode",
+    "build",
+    "config",
+    "coverage",
+    "dist",
+    "docs",
+    "nginx",
+    "node_modules",
+    "resources",
+    "lib",
+    "dist"
+  ]
+}

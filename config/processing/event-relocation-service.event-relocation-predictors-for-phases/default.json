@@ -1,0 +1,11 @@
+{
+    "name": "Pn-Sn-Lg-Pg",
+    "constraints": [
+        {
+            "constraintType": "DEFAULT"
+        }
+    ],
+    "parameters": {
+        "predictor": "lookup2d"
+    }
+}

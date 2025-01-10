@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toolbar utils renderMenuItem renders items 1`] = `
+[
+  <ButtonOverflowMenuToolbarItem
+    item={
+      {
+        "hasIssue": false,
+        "onButtonClick": [MockFunction],
+        "tooltip": "Button Hello",
+      }
+    }
+    menuKey="button"
+  />,
+  <ButtonGroupOverflowMenuToolbarItem
+    item={
+      {
+        "buttons": [
+          {
+            "buttonKey": "button-item-1",
+            "disabled": false,
+            "icon": "arrow-left",
+            "label": "Pan Left",
+            "onButtonClick": [Function],
+            "onlyShowIcon": true,
+            "tooltip": "Pan waveforms to the left",
+          },
+        ],
+        "hasIssue": false,
+        "tooltip": "Button675 Group Hello",
+        "widthPx": 50,
+      }
+    }
+    menuKey="buttongroup"
+  />,
+  null,
+  <DateRangePickerOverflowMenuToolbarItem
+    item={
+      {
+        "endTimeMs": 1000,
+        "format": "YYYY-MM-DD HH:mm",
+        "hasIssue": false,
+        "onApplyButton": [MockFunction],
+        "onChange": [MockFunction],
+        "startTimeMs": 100,
+        "tooltip": "Hello Date Range",
+        "widthPx": 50,
+      }
+    }
+    menuKey="datepicker"
+  />,
+  <DropdownOverflowMenuToolbarItem
+    item={
+      {
+        "dropDownItems": [],
+        "hasIssue": false,
+        "onChange": [MockFunction],
+        "tooltip": "Hello Dropdown",
+        "value": "Hello Dropdown",
+        "widthPx": 50,
+      }
+    }
+    menuKey="dropdown"
+  />,
+  <LabelValueOverflowMenuToolbarItem
+    item={
+      {
+        "label": "label",
+        "labelValue": "",
+        "menuLabel": "menu label",
+        "tooltip": "Hello label",
+        "widthPx": 50,
+      }
+    }
+    menuKey="labelvalue"
+  />,
+  <LoadingSpinnerOverflowMenuToolbarItem
+    item={
+      {
+        "hasIssue": false,
+        "itemsToLoad": 1,
+        "tooltip": "Hello LoadingSpinner",
+        "widthPx": 50,
+      }
+    }
+    menuKey="loadingspinner"
+  />,
+  <NumericOverflowMenuToolbarItem
+    item={
+      {
+        "hasIssue": false,
+        "minMax": {
+          "max": 43,
+          "min": 41,
+        },
+        "numericValue": 42,
+        "onChange": [MockFunction],
+        "tooltip": "Hello Numeric",
+        "widthPx": 50,
+      }
+    }
+    menuKey="numericinput"
+  />,
+  <PopoverButtonOverflowMenuToolbarItem
+    item={
+      {
+        "hasIssue": false,
+        "onPopoverDismissed": [MockFunction],
+        "popoverContent": <ForwardRef>
+          Test
+        </ForwardRef>,
+        "tooltip": "Hello Popover",
+        "widthPx": 50,
+      }
+    }
+    menuKey="popover"
+  />,
+  <SwitchOverflowMenuToolbarItem
+    item={
+      {
+        "onChange": [MockFunction],
+        "switchValue": true,
+        "widthPx": 50,
+      }
+    }
+    menuKey="switch-test"
+  />,
+]
+`;

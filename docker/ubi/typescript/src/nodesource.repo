@@ -1,0 +1,17 @@
+# gpgcheck disabled until https://github.com/nodesource/distributions/issues/1653 is fixed
+
+[nodesource-nsolid]
+name=Nsolid Packages for Linux RPM based distros - $basearch
+baseurl=#NODE_YUM_URL#/pub_#NODE_MAJOR_VERSION#.x/nodistro/nsolid/$basearch
+priority=8
+enabled=1
+gpgcheck=0
+gpgkey=#NODE_YUM_URL#/gpgkey/nodesource.gpg.key
+
+[nodesource-nodejs]
+name=Node.js Packages for Linux RPM based distros - $basearch
+baseurl=#NODE_YUM_URL#/pub_#NODE_MAJOR_VERSION#.x/nodistro/nodejs/$basearch
+priority=9
+enabled=1
+gpgcheck=0
+gpgkey=#NODE_YUM_URL#/gpgkey/nodesource.gpg.key

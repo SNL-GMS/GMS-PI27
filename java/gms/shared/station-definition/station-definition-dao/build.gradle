@@ -1,0 +1,26 @@
+plugins {
+    id('java-library')
+    id('java-test-fixtures')
+}
+
+dependencies {
+    api project(':bridge-utilities')
+    api project(':frameworks-system-config')
+    api libs.com.google.guava.guava
+    api libs.org.apache.commons.commons.lang3
+
+    api libs.org.hibernate.orm.hibernate.core
+
+    implementation project(':java-utilities')
+
+    // Auto Value
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    // Testing
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation project(':test-utils')
+
+    // Test fixtures
+    testFixturesApi(platform(libs.org.springframework.boot.spring.boot.dependencies))
+}

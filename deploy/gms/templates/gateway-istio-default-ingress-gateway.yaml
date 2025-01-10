@@ -1,0 +1,32 @@
+---
+{{/* install directly into istio-system namespace if it exists */}}
+{{- if (lookup "v1" "Namespace" "" "istio-system") }}
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: ingress-default-gateway
+  namespace: istio-system
+  annotations:
+    "helm.sh/resource-policy": keep
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - hosts:
+    - {{ printf "*.%s" .Values.ingress.baseDomain | quote }}
+    port:
+      name: http
+      number: 8080
+      protocol: HTTP
+    tls:
+      httpsRedirect: true
+  - hosts:
+    - {{ printf "*.%s" .Values.ingress.baseDomain | quote }}
+    port:
+      name: https
+      number: 8443
+      protocol: HTTPS
+    tls:
+      credentialName: ingress-default-cert
+      mode: SIMPLE
+{{- end }}

@@ -1,0 +1,22 @@
+{
+    "name": "default-S",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "phase",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "S"
+            ],
+            "priority": 90
+        }
+    ],
+    "parameters": {
+        "leadDuration": "PT70S",
+        "duration": "PT10M",
+        "samplingType": "INTERPOLATED"
+    }
+}

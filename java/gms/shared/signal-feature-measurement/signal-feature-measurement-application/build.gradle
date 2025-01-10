@@ -1,0 +1,36 @@
+plugins {
+    id('java')
+    alias(libs.plugins.org.springframework.boot)
+    id('com.google.cloud.tools.jib')
+}
+
+dependencies {
+    implementation project(':derived-channel-coi')
+    implementation project(':signal-detection-coi')
+    implementation project(':signal-feature-measurement-api')
+    implementation project(':signal-feature-measurement-coi')
+    implementation project(':signal-enhancement-coi')
+    implementation project(':spring-framework-utilities')
+
+     // Spring and hibernate dependencies
+    implementation libs.org.springframework.boot.spring.boot.starter.web
+    implementation libs.org.springdoc.springdoc.openapi.starter.webmvc.ui
+    implementation libs.org.apache.commons.commons.lang3
+    implementation libs.org.springframework.boot.spring.boot.starter.actuator
+
+    // Spring web and spring doc dependencies
+    implementation libs.org.msgpack.jackson.dataformat.msgpack
+    implementation libs.com.fasterxml.jackson.dataformat.jackson.dataformat.yaml
+
+    //logging
+    runtimeOnly libs.net.logstash.logback.logstash.logback.encoder
+
+    testImplementation libs.org.springframework.boot.spring.boot.starter.test
+    testImplementation project(':spring-framework-utilities').sourceSets.test.output
+
+    testImplementation project(':java-utilities')
+    testImplementation(project(':signal-detection-coi'))
+    testImplementation(testFixtures(project(':derived-channel-coi')))
+    testImplementation(testFixtures(project(':signal-enhancement-coi')))
+    testImplementation(testFixtures(project(':station-definition-coi')))
+}

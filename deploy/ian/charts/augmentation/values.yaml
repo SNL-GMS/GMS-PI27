@@ -1,0 +1,378 @@
+# Global values are set by the parent chart
+
+
+# List of GMS standard augmentation apps. These are apps that use the common gms augmentation app templates.
+# Note: an augmentation app definition must also be added in the section below for each standard augmentation app.
+standardAugmentationApps:
+  - "bastion"
+  - "bridged-data-source-simulator"
+  - "javadoc"
+  - "minio-test-reports"
+  - "mock-data-server"
+  - "mock-waveform-service"
+  - "oracle"
+  - "swagger"
+  - "jest"
+
+
+#
+# Augmentation app definitions
+# Note: the `metadata` section is required for an app to be considered an augmentation
+#
+bastion:
+  command:
+    - "/bin/bash"
+    - "-c"
+    - 'mc alias set minio http://minio:9000 ${MINIO_ACCESS_KEY} ${MINIO_SECRET_KEY} && /bin/sleep infinity'
+  env:
+    MINIO_ACCESS_KEY:
+      key: "access_key"
+      name: "minio-keys"
+      type: "fromSecret"
+    MINIO_SECRET_KEY:
+      key: "secret_key"
+      name: "minio-keys"
+      type: "fromSecret"
+    TNS_ADMIN: "/opt/gms/oracle-wallet"
+    WALLET_APP_NAME: "bastion"
+  imageName: "gms-common/bastion"
+  metadata:
+    description: "A bastion container that can be exec'd into for debugging IAN"
+    labels:
+      - "ian"
+    type: "harness"
+  podAnnotations:
+    traffic.sidecar.istio.io/excludeOutboundPorts: "1521"
+  resources:
+    requests:
+      cpu: "1m"
+      memory: "1Mi"
+    limits:
+      memory: "100Mi"
+  useGlobalEnv: false
+  volume:
+    oracle-wallet:
+      mountPath: "/opt/gms/oracle-wallet"
+      readOnly: true
+      secretName: "oracle-wallet"
+      type: "secret"
+
+bridged-data-source-simulator:
+  env:
+    JDK_JAVA_OPTIONS: "-Doracle.net.wallet_location=/opt/gms/oracle-wallet -Doracle.net.tns_admin=/opt/gms/oracle-wallet"
+  imageName: "gms-common/bridged-data-source-simulator-application"
+  metadata:
+    description: "Bridged data source simulator for testing IAN"
+    labels:
+      - "ian"
+      - "sim"
+    type: "harness"
+  livenessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/liveness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  readinessProbe:
+    httpGet:
+      path: "/{{.appName}}/actuator/health/readiness"
+      port: 8080
+    initialDelaySeconds: 30
+    failureThreshold: 30
+  network:
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  podAnnotations:
+    traffic.sidecar.istio.io/excludeOutboundPorts: "1521"
+  resources:
+    requests:
+      cpu: "32m"
+      memory: "1070Mi"
+    limits:
+      memory: "1500Mi"
+  volume:
+    bridge-responses:
+      hostPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-responses"
+      mountPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-responses-mount"
+      readOnly: true
+      type: "hostPath"
+    bridge-waveforms:
+      hostPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-waveforms"
+      mountPath:
+        type: "fromConfigMap"
+        namespace: "gms"
+        name: "bridge-path-config"
+        key: "bridge-waveforms-mount"
+      readOnly: true
+      type: "hostPath"
+    oracle-wallet:
+      mountPath: "/opt/gms/oracle-wallet"
+      readOnly: true
+      secretName: "oracle-wallet"
+      type: "secret"
+
+javadoc:
+  imageName: "gms-common/javadoc_server"
+  metadata:
+    description: "Provides a container that serves up javadoc documentation"
+    labels:
+      - "ian"
+    type: "harness"
+  network:
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  resources:
+    requests:
+      cpu: "1m"
+      memory: "2Mi"
+    limits:
+      memory: "20Mi"
+  useGlobalEnv: false
+
+minio-test-reports:
+  command:
+    - "/bin/bash"
+    - "-c"
+    - 'mkdir -p /data/{{ .appValues.minioReportBucket | default "results"  }} && minio server /data'
+  configMap:
+    minio-test-reports:
+      data:
+        minio_report_bucket: "{{ .appValues.minioReportBucket | default \"reports\" }}"
+  env:
+    MINIO_ROOT_USER:
+      key: "minio_access_key"
+      name: "minio-test-reports-keys"
+      type: "fromSecret"
+    MINIO_ROOT_PASSWORD:
+      key: "minio_secret_key"
+      name: "minio-test-reports-keys"
+      type: "fromSecret"
+  imageName: "gms-common/minio"
+  metadata:
+    description: "MINIO service for gathering test reports"
+    labels:
+      - "ian"
+    type: "harness"
+  network:
+    ingress:
+      9000:
+        path: "/"
+      host: "{{ .appName }}-{{ .Release.Name }}.{{ .Values.global.baseDomain }}"
+    service:
+      9000:
+        name: "http-web"
+  podDisruptionBudget:
+    maxUnavailable: 0
+  podSecurityContext:
+    runAsUser: 1001
+    fsGroup: 1001
+  readinessProbe:
+    tcpSocket:
+      port: 9000
+    initialDelaySeconds: 5
+    periodSeconds: 5
+    failureThreshold: 5
+  resources:
+    requests:
+      cpu: "1m"
+      memory: "200Mi"
+    limits:
+      memory: "1Gi"
+  secret:
+    minio-test-reports-keys:
+      stringData:
+        minio_access_key: "{{ .appValues.minioAccessKey | default \"minio\" }}"
+        minio_secret_key: "{{ .appValues.minioSecretKey | default \"minio123\" }}"
+  useGlobalEnv: false
+  volume:
+    memdisk:
+      mountPath: "/data"
+      type: "emptyDir"
+
+mock-data-server:
+  imageName: "gms-common/mock-data-server"
+  metadata:
+    description: "Provides a mock data server for IAN"
+    labels:
+      - "ian"
+    type: "harness"
+  network:
+    ingress:
+      3000:
+        path: "/{{ .appName }}"
+    service:
+      3000:
+        name: "http-web"
+  resources:
+    requests:
+      cpu: "1m"
+      memory: "50Mi"
+    limits:
+      memory: "100Mi"
+
+mock-waveform-service:
+  imageName: "gms-common/mock-waveform-application"
+  metadata:
+    description: "Provides a mock waveform service for IAN"
+    labels:
+      - "ian"
+    type: "harness"
+  network:
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  resources:
+    requests:
+      cpu: "1m"
+      memory: "415Mi"
+    limits:
+      memory: "1Gi"
+
+oracle:
+  deploymentStrategy: Recreate
+  env:
+    ORACLE_CHARACTERSET: "AL32UTF8"
+    ORACLE_PWD:
+      key: "sysuserpass"
+      name: "oracle-sys-user"
+      type: "fromSecret"
+  imageName: "gms-common/oracle"
+  metadata:
+    description: "Development oracle container for IAN"
+    labels:
+      - "ian"
+      - "database"
+    type: "harness"
+  network:
+    service:
+      1521:
+        name: "tcp-oracle"
+  nodeAffinity:
+    type: "hard"
+    key: "gms/no-oracle"
+    operator: "DoesNotExist"
+    values: []
+  podAnnotations:
+    sidecar.istio.io/inject: "false"
+  podSecurityContext:
+    fsGroup: 54321
+  startupProbe:
+    exec:
+      command: [ "/bin/sh", "-c", "if [ -f $ORACLE_BASE/gms-init-complete ]; then echo 'init complete'; exit 0; else echo 'init not complete'; exit 1; fi;" ]
+    periodSeconds: 10
+    failureThreshold: 24
+  readinessProbe:
+    exec:
+      command: [ "/bin/sh", "-c", "if [ -f $ORACLE_BASE/checkDBLockStatus.sh ]; then $ORACLE_BASE/checkDBLockStatus.sh; else $ORACLE_BASE/checkDBStatus.sh; fi" ]
+    periodSeconds: 30
+    timeoutSeconds: 20
+  resources:
+    requests:
+      cpu: "120m"
+      memory: "5160Mi"
+    limits:
+      memory: "11Gi"
+  secret:
+    oracle-sys-user:
+      data:
+        sysuserpass: REDACTED
+  useGlobalEnv: false
+  volume:
+    data:
+      mountPath: "/opt/oracle/oradata"
+      size: "6.5Gi"
+      type: "persistentVolumeClaim"
+    oracle-wallet:
+      mountPath: "/opt/gms/oracle-wallet"
+      readOnly: true
+      secretName: "oracle-wallet"
+      type: "secret"
+
+swagger:
+  env:
+    BASE_URL: "/swagger"
+  imageName: "gms-common/swagger-gms"
+  metadata:
+    description: "Provides a container to serve swagger API documentation"
+    labels:
+      - "ian"
+    type: "harness"
+  network:
+    ingress:
+      8080:
+        path: "/{{ .appName }}"
+    service:
+      8080:
+        name: "http-web"
+  resources:
+    requests:
+      cpu: "1m"
+      memory: "100Mi"
+    limits:
+      cpu: "500m"
+      memory: "200Mi"
+  useGlobalEnv: false
+
+jest:
+  backoffLimit: 0
+  env:
+    DEPLOYMENT_NAME: "{{ .Release.Name }}"
+    MINIO_ACCESS_KEY:
+      name: "minio-test-reports-keys"
+      key: "minio_access_key"
+      type: "fromSecret"
+    MINIO_REPORT_BUCKET:
+      name: "minio-test-reports"
+      key: "minio_report_bucket"
+      type: "fromConfigMap"
+    MINIO_SECRET_KEY:
+      name: "minio-test-reports-keys"
+      key: "minio_secret_key"
+      type: "fromSecret"
+    MINIO_URL: "http://minio-test-reports:9000"
+    SERVICE_URL: "{{ .Values.global.baseDomain }}:{{ .Values.global.basePort }}"
+  imageName: "gms-common/jest-tests"
+  kind: "job"
+  metadata:
+    description: "Runs Jest-UI tests"
+    type: "test"
+  numIdenticalPods: 1
+  podDisruptionBudget:
+    maxUnavailable: 0
+  resources:
+    requests:
+      cpu: 2
+      memory: "8Gi"
+    limits:
+      memory: "16Gi"
+  restartPolicy: "Never"
+  useGlobalEnv: false
+  volume:
+    shm:
+      medium: "Memory"
+      mountPath: "/dev/shm"
+      size: "2Gi"
+      type: "emptyDir"

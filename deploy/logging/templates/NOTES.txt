@@ -1,0 +1,6 @@
+{{- include "gms.common.notes.standard" $ }}
+Elasticsearch image tag:    {{ .Values.elasticsearch.image.tag }}
+Elasticsearch sysctlImage tag: {{ .Values.elasticsearch.sysctlImage.tag }}
+Kibana image tag: {{ .Values.elasticsearch.kibana.image.tag }}
+Fluentd image repository: {{ .Values.fluentd.image.repository }}
+Fluentd image tag: {{ .Values.fluentd.image.tag }}

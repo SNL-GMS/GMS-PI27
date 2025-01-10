@@ -1,0 +1,13 @@
+{
+    "stationGroupNames": [
+      {
+        "name": "ALL_1"
+      }
+    ],
+    "startTime": "2019-01-05T18:00:00Z",
+    "endTime": "2019-01-05T20:00:00Z",
+    "facetingDefinition": {
+        "classType": "StationGroup",
+        "populated": true
+    }
+}

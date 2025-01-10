@@ -1,0 +1,128 @@
+apply plugin: "java"
+apply plugin: "jacoco"
+
+// Define Global Variables
+ext {
+
+    //Jib Docker Variables
+    jibBaseImagePrefix = System.getenv('JIB_BASE_IMAGE_PREFIX') ?: 'registry://'
+    dockerRegistry = System.getenv('CI_DOCKER_REGISTRY') ?: 'local'
+    dockerPath = System.getenv('CI_PROJECT_NAME') ?: 'gms-common'
+    dockerImageTag = System.getenv('DOCKER_IMAGE_TAG') ?: 'local'
+    dockerBaseImage = System.getenv('DOCKER_BASE_IMAGE') ?: "${jibBaseImagePrefix}${dockerRegistry}/${dockerPath}/java:${dockerImageTag}"
+
+    //CI Variables
+    ciCommitSha = System.getenv('CI_COMMIT_SHA') ?: 'NA'
+    ciCommitRefSlug = System.getenv('CI_COMMIT_REF_SLUG') ?: 'local'
+
+    //Default JVM Options
+    jvmOptions =['-XX:+UseZGC', '-XX:+UseDynamicNumberOfGCThreads', '-XX:+AlwaysPreTouch', '-XX:InitialRAMPercentage=40.0', '-XX:MaxRAMPercentage=60.0']
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    maven {
+        url "${repository_url}"
+    }
+}
+
+// Project-wide dependencies
+apply from: file("${rootDir}/gradle/scripts/dependencies.gradle")
+// Project-wide dependency constraints.
+apply from: file("${rootDir}/gradle/scripts/constraints.gradle")
+
+configurations {
+    compileClasspath {
+        resolutionStrategy.activateDependencyLocking()
+    }
+    runtimeClasspath {
+        resolutionStrategy.activateDependencyLocking()
+        runtimeClasspath.shouldResolveConsistentlyWith(compileClasspath)
+    }
+    annotationProcessor {
+        resolutionStrategy.activateDependencyLocking()
+    }
+}
+
+test {
+    useJUnitPlatform() {
+        excludeTags 'component'
+    }
+}
+
+task componentTest(type: Test) {
+    group = 'verification'
+    description = 'Runs all component tests that leverage processing or resources not typical for a unit test.' +
+            'Tag your test/test class/test superclass with @Tag("component") to include here/exclude from unit tests'
+
+    useJUnitPlatform() {
+        includeTags 'component'
+    }
+}
+
+jacoco {
+    toolVersion = libs.versions.jacocoVersion.get()
+}
+
+jacocoTestReport {
+    executionData.setFrom(fileTree(buildDir).include("/jacoco/*.exec"))
+    reports {
+        xml.required = true
+    }
+}
+
+sonarqube {
+    properties {
+        property 'sonar.coverage.jacoco.xmlReportPaths', 'build/reports/jacoco/test/jacocoTestReport.xml'
+    }
+}
+
+// Add compiler args during java compilation.
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    //disabling generation of jni headers directories
+    options.headerOutputDirectory.convention(null)
+}
+
+task allDependencies(type: DependencyReportTask, group: 'help') {}
+
+pluginManager.withPlugin('application') {
+    tasks.distZip.enabled = false
+    tasks.distTar.enabled = false
+}
+
+pluginManager.withPlugin('com.google.cloud.tools.jib') {
+    jib {
+        from.image = "${dockerBaseImage}"
+        to.image = "${dockerRegistry}/${dockerPath}/${project.name}:${dockerImageTag}"
+        to.tags = [ciCommitSha, ciCommitRefSlug]
+
+        container{
+            user = '1001'
+            appRoot = "/opt/gms/${project.name}"
+            workingDirectory = "/opt/gms/${project.name}"
+            ports = ['8080']
+            jvmFlags = jvmOptions
+        }
+    }
+}
+
+pluginManager.withPlugin('io.swagger.core.v3.swagger-gradle-plugin') {
+    tasks.resolve {
+        outputFileName = project.name
+        classpath = sourceSets.main.runtimeClasspath
+        outputDir = file("build/swagger")
+        modelConverterClasses = ["gms.shared.frameworks.swagger.JavaInstantSwaggerConverter"]
+    }
+}
+
+// Activating reproducible archives
+tasks.withType(AbstractArchiveTask) {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`state analyst-workspace operations operations open event should set the open event (undefined) starting with initial state 1`] = `
+[
+  {
+    "payload": "",
+    "type": "analyst/setOpenEventId",
+  },
+  {
+    "payload": [],
+    "type": "analyst/setSelectedEventIds",
+  },
+  {
+    "payload": "Station: A-Z",
+    "type": "analyst/setSelectedSortType",
+  },
+  {
+    "payload": {},
+    "type": "analyst/setMeasurementModeEntries",
+  },
+  {
+    "payload": [],
+    "type": "analyst/setSelectedSdIds",
+  },
+  {
+    "payload": [],
+    "type": "fks/setSdIdsToShowFk",
+  },
+  {
+    "payload": "",
+    "type": "fks/setDisplayedSignalDetectionId",
+  },
+  {
+    "payload": "Default",
+    "type": "analyst/setMode",
+  },
+]
+`;

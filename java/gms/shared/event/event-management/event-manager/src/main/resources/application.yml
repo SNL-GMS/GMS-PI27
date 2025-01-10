@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: event-manager
+  processing:
+    configuration-names: event-manager
+  codec:
+    max-in-memory-size: 20MB
+
+server:
+  compression:
+    enabled: true
+    mime-types: "text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json,application/msgpack"
+    min-response-size: 1024
+  servlet:
+    context-path: /event-manager-service
+
+gms:
+  persistence:
+    oracle:
+      account: gms_global_ro
+      unit: gms_station_definition
+
+qcMaskPersistenceUnitName: gms_qc_mask
+qcMaskDurationTimeConfig: qc-mask.qc-duration-time-parameters
+qcMaskJdbcUrlConfig: qc-mask.jdbc_url
+
+signalDetectionPersistenceUnitName: gms_signal_detection
+stationDefinitionPersistenceUnitName: gms_station_definition
+
+monitoringOrgConfig: global.monitoring-org
+accountsByStageConfig: global.stage-accounts
+orderedStagesConfig: workflow-manager.workflow-definition
+waveformLeadLagConfig: signal-detection.waveform-lead-lag
+
+instrumentResponseDefinitionConfig: station-definition.frequency-amplitude-phase-definition
+
+featurePredictorService:
+  hostname: feature-prediction-service
+  contextPath: /feature-prediction-service
+  port: 8080
+  urlPaths:
+    predictForLocation: /feature/predict-for-location
+    predictForLocationSolutionAndChannel: /feature/predict-for-location-solution-and-channel
+
+signalEnhancementConfiguration:
+  hostname: signal-enhancement-configuration-service
+  contextPath: /signal-enhancement-configuration
+  port: 8080
+  urlPaths:
+    filterDefsByUsageForSDHs: /default-filter-definitions-for-signal-detection-hypotheses
+
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true

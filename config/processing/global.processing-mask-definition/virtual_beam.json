@@ -1,0 +1,113 @@
+{
+  "name": "virtual_beam",
+  "constraints": [
+    {
+      "constraintType": "STRING",
+      "criterion": "processingOperation",
+      "operator": {
+        "type": "EQ",
+        "negated": false
+      },
+      "value": [
+        "VIRTUAL_BEAM"
+      ],
+      "priority": 100
+    }
+  ],
+  "parameters": {
+    "appliedQcSegmentCategoryAndTypes": [
+      {
+        "category": "WAVEFORM",
+        "type": "AGGREGATE"
+      },
+      {
+        "category": "WAVEFORM",
+        "type": "FLAT"
+      },
+      {
+        "category": "WAVEFORM",
+        "type": "GAP"
+      },
+      {
+        "category": "WAVEFORM",
+        "type": "NOISY"
+      },
+      {
+        "category": "WAVEFORM",
+        "type": "SPIKE"
+      },
+      {
+        "category": "LONG_TERM"
+      },
+      {
+        "category": "ANALYST_DEFINED"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "AGGREGATE"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "CALIBRATION"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "FLAT"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "GAP"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "NOISY"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "SENSOR_PROBLEM"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "SPIKE"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "STATION_PROBLEM"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "STATION_SECURITY"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "TIMING"
+      },
+      {
+        "category": "STATION_SOH",
+        "type": "CALIBRATION"
+      },
+      {
+        "category": "STATION_SOH",
+        "type": "NOISY"
+      },
+      {
+        "category": "STATION_SOH",
+        "type": "SENSOR_PROBLEM"
+      },
+      {
+        "category": "STATION_SOH",
+        "type": "STATION_PROBLEM"
+      },
+      {
+        "category": "STATION_SOH",
+        "type": "STATION_SECURITY"
+      },
+      {
+        "category": "UNPROCESSED"
+      },
+      {
+        "category": "DATA_AUTHENTICATION"
+      }
+    ]
+  }
+}

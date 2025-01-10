@@ -1,0 +1,74 @@
+@import '../../gms-colors.scss';
+@import '../../gms-fonts.scss';
+
+.phase-list-entry {
+  @include listRow;
+  display: flex;
+  margin: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  &__icon {
+    @include listEntry(false);
+    background-color: transparent;
+    padding: 0;
+  }
+
+  &__button {
+    @include listEntry(false);
+    align-items: center;
+    // Compatible with target browsers
+    aspect-ratio: 1 / 1;
+    display: flex;
+    background-color: transparent;
+    &--hidden {
+      opacity: 0;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__title {
+    @include listEntry;
+    background-color: var(--gms-popover-background, $gms-popover-background);
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 0.25em;
+    position: relative;
+    white-space: nowrap;
+    font-family: $gms-mono;
+    &:focus {
+      color: var(--gms-selection, $gms-selection);
+      background-color: rgba(35, 100, 190, 0.2);
+    }
+    &--selected:focus {
+      color: var(--gms-prominent, $gms-prominent);
+      background-color: var(--gms-selection, $gms-selection);
+      filter: brightness(1.4);
+    }
+  }
+
+  &__name {
+    flex: none;
+    width: 100px;
+  }
+
+  &__hotkey {
+    font-size: 0.875em;
+    margin-left: 0.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: $gms-mono;
+    color: var(--selection-subtext, var(--gms-prominent, $gms-prominent));
+  }
+
+  &__tooltip {
+    position: relative;
+    font-size: 1em;
+    display: flex;
+  }
+}

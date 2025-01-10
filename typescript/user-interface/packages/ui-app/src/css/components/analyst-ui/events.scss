@@ -1,0 +1,127 @@
+.events-status-bar {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.events-status-bar__visibility-menu-button {
+  padding-left: 0px; // Override for default to make flush left
+}
+
+.events-status-bar__event-counters {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  & > * {
+    padding-right: 0.5rem; // All direct children have right padding to enforce spacing
+  }
+}
+
+.events-status-bar__mark-button {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: flex-end;
+}
+
+.events__mark-complete-button {
+  height: 20px;
+  min-height: 23px !important;
+  min-width: 0px !important;
+  position: relative;
+  top: -1px;
+}
+
+.events__conflict-marker {
+  height: 36px;
+  flex: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.events-panel,
+.events-table-panel {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.event-table {
+  height: 100%;
+  width: 100%;
+}
+
+.events-display-window {
+  @include flexColumn;
+  width: 100%;
+  height: 100%;
+  .toolbar {
+    margin-bottom: 0.5em;
+  }
+}
+
+.table-cell .table-cell__value--complete {
+  color: $analyst-complete;
+}
+
+.ag-theme-dark .ag-row-even.edge-event-row .table-cell {
+  background-color: var(--gms-background, $gms-background);
+  filter: brightness(0.5);
+}
+
+.ag-theme-dark .ag-row-odd.edge-event-row .table-cell {
+  background-color: var(--gms-background, $gms-background);
+  filter: brightness(0.5);
+}
+
+.ag-theme-dark .ag-row-even.open-event-row .table-cell {
+  background-color: var(--analyst-open-event, $analyst-open-event);
+  .table-cell__value {
+    color: var(--open-associated-text-color, $gms-main);
+  }
+}
+
+.ag-theme-dark .ag-row-odd.open-event-row .table-cell {
+  background-color: var(--analyst-open-event, $analyst-open-event);
+  .table-cell__value,
+  svg {
+    color: var(--open-associated-text-color, $gms-main);
+  }
+}
+
+.bp5-popover-content-icon-margin-left {
+  margin-left: 15px;
+}
+
+.bp5-popover-content-dialog-container-left-right-padding {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+@container (max-width: 900px) {
+  .events-table-panel {
+    .counter__count--prefix {
+      display: none;
+    }
+    .counter__entry + .counter__entry {
+      margin-left: 1rem;
+    }
+    .counter__count {
+      margin-left: 0.25rem;
+    }
+  }
+}
+
+@container (max-width: 650px) {
+  .events-table-panel {
+    .counter__entry + .counter__entry {
+      margin-left: 0.5rem;
+    }
+    .counter__label {
+      display: none;
+    }
+  }
+}

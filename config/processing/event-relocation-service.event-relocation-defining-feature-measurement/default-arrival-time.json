@@ -1,0 +1,26 @@
+{
+    "name": "default-arrival-time",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "phaseType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "P"
+            ],
+            "priority": 80
+        }
+    ],
+    "parameters": {
+        "definingFeatureByFeatureMeasurementType": {
+            "ARRIVAL_TIME": {
+                "analystOverridable": true,
+                "defining": true,
+                "systemOverridable": true
+            }
+        }
+    }
+}

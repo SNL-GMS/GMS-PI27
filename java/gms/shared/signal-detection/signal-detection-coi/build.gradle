@@ -1,0 +1,45 @@
+plugins {
+    id('java-library')
+    id('java-test-fixtures')
+}
+
+dependencies {
+    api project(':station-definition-coi')
+    api project(':waveform-coi')
+    api project(':common-coi-types')
+    implementation project(':java-utilities')
+    implementation project(':workflow-coi')
+    implementation project(':signal-enhancement-coi')
+
+    // Utility (dependency is api as apache commons classes are publicly exposed).
+    implementation libs.org.apache.commons.commons.lang3
+    
+    // Google AutoValue
+    api libs.com.google.guava.guava
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    // Serialization (dependencies are api as we expose our ObjectMapper as a singleton).
+    api libs.com.fasterxml.jackson.core.jackson.databind
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.jdk8
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.jsr310
+    api libs.com.fasterxml.jackson.datatype.jackson.datatype.guava
+
+    // msgpack and YAML serialization; kept as private so clients don't have to know about it
+    implementation libs.org.msgpack.jackson.dataformat.msgpack
+    implementation libs.com.fasterxml.jackson.dataformat.jackson.dataformat.yaml
+
+    // Testing.
+    testImplementation project(':test-utils')
+    testImplementation(testFixtures(project(':waveform-coi')))
+    testImplementation(testFixtures(project(':station-definition-coi')))
+
+    
+    //testFixtures
+    testFixturesApi platform(libs.org.springframework.boot.spring.boot.dependencies)
+    testFixturesApi project(':signal-detection-dao')
+    testFixturesImplementation(testFixtures(project(':station-definition-coi')))
+    testFixturesImplementation(testFixtures(project(':waveform-coi')))
+    testFixturesApi project(':signal-detection-api')
+    testFixturesApi project(':common-coi-types')
+}

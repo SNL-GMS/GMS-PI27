@@ -1,0 +1,13 @@
+#ifndef QC_SEGMENT_CATEGORY_H
+#define QC_SEGMENT_CATEGORY_H
+
+enum class QcSegmentCategory {
+    ANALYST_DEFINED = 0,
+    DATA_AUTHENTICATION = 1,
+    LONG_TERM = 2,
+    STATION_SOH = 3,
+    UNPROCESSED = 4,
+    WAVEFORM = 5
+};
+
+#endif //QC_SEGMENT_CATEGORY_H

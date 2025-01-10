@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonGroupToolbarItem ButtonGroupToolbarItem renders directly 1`] = `
+<div>
+  <div
+    class="toolbar-button-group"
+  >
+    <div>
+      <button
+        class="bp5-button toolbar-button--icon-only"
+        style="width: 30px;"
+        title="Pan waveforms to the left"
+        type="button"
+      >
+        <span
+          class="bp5-button-text"
+        >
+          <span
+            aria-hidden="true"
+            class="bp5-icon bp5-icon-standard bp5-icon-arrow-left"
+            data-icon="arrow-left"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,685 @@
+#!/usr/bin/env python3
+
+# -----------------------------------------------------------------------------
+# gms-curls-query-creator test script
+#
+# gms-curls-query-creator creates complete
+# curl commands after constructing a prerequisite
+# curl query that is used in the subsequent
+# pipeline-style curl query.
+# The deployment name and query type must be provided.
+# The cluster name can be determined by running kubeconfig.
+# -----------------------------------------------------------------------------
+
+import argparse
+import json
+import os
+import re
+import requests
+import shutil
+import subprocess
+import sys
+import time
+import yaml
+from argparse import ArgumentParser, RawDescriptionHelpFormatter
+from collections import defaultdict
+from datetime import datetime, timedelta
+from pathlib import Path
+from rich.console import Console
+
+console_kwargs = {"log_path": False}
+if os.getenv("CI"):
+    console_kwargs["force_terminal"] = True
+if os.getenv("RICH_LOG_PATH"):
+    console_kwargs["log_path"] = True
+console = Console(**console_kwargs)
+
+
+# ==================== MAIN =======================
+
+def main():
+
+    # -- verify kubectl is available
+    if shutil.which('kubectl') is None:
+        print(
+            "ERROR: 'kubectl' executable not found in PATH."
+            "Please install kubectl."
+        )
+        sys.exit(1)
+
+    # -- verify helm is available
+    if shutil.which('gmskube') is None:
+        print(
+            "ERROR: 'gmskube' executable not found in PATH."
+            "Please install gmskube."
+        )
+        sys.exit(1)
+
+    # -- verify KUBECONFIG is set
+    if "KUBECONFIG" not in os.environ:
+        print(
+            "ERROR: Variable 'KUBECONFIG' must be set to "
+            "the kubernetes configuration."
+        )
+        sys.exit(1)
+
+    if ":" in os.environ["KUBECONFIG"]:
+        msg = (
+            "It looks like your `KUBECONFIG` environment variable points "
+            "to multiple configuration files.  Ensure you run `kubeconfig "
+            "<cluster_name>` to activate a particular cluster, and then "
+            "re-run this script."
+        )
+        raise SystemExit(msg)
+
+    try:
+        with open(os.environ["KUBECONFIG"]) as file:
+            kubeconfig = yaml.load(file, Loader=yaml.FullLoader)
+            if 'clusters' not in kubeconfig:
+                print(
+                    "ERROR: No clusters defined in file "
+                    f"'{os.environ['KUBECONFIG']}"
+                )
+                sys.exit(1)
+
+    except FileNotFoundError as e:
+        print(
+            "ERROR: Failed to open KUBECONFIG file "
+            f"'{os.environ['KUBECONFIG']}': {e}"
+        )
+        sys.exit(1)
+    except AttributeError as e:
+        print(f"ERROR: {e.__class__.__name__}: {e}")
+        print(
+            "Did you forget to activate the 'gms' conda environment "
+            "with 'conda activate gms'?"
+        )
+        sys.exit(1)
+    except Exception as e:
+        print(f"ERROR: {e.__class__.__name__}: {e}")
+        sys.exit(1)
+
+    args = get_args()
+
+    instance = get_instance_info(args.name)
+
+    if not instance:
+        print(f"{ args.name } instance not found.")
+        sys.exit(1)
+
+    pods = get_pod_info(instance)
+
+    simulator_installed = is_simulator_installed(pods)
+
+    data_times = {}
+
+    if simulator_installed:
+        data_times = set_simulated_times()
+    else:
+        data_times = set_fixed_times()
+
+    # Declare base URL for service requests
+    # This includes instance name, cluster, domain, and port
+    # https://<instance-name>.<cluster>.<???>:<port-number>
+    try:
+        base_url = get_ingress_domain_url(args.name)
+    except RuntimeError:
+        raise RuntimeError("Unable to get domain name.")
+
+    curl_post_header = " curl --location --request POST "
+    curl_get_header = " curl --location --request GET "
+    #default the header to the most common request method - POST
+    curl_header = curl_post_header
+    content_headers = " --header 'Content-Type: application/json' --header 'Accept: application/json' "
+    data_header = " --data "
+    tick = "'"
+    default_headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    }
+
+    # Run prerequisite curl queries and then pass the results into subsequent service curls
+    try:
+        if str(args.prereq) == "sdh-id":
+            description = "Event Manager Service - Find Events By Associated Signal Detection Hypotheses "
+            url = base_url + "/event-manager-service/event/associated-signal-detection-hypotheses"
+            # get prerequisite data
+            sdh_id = get_sig_det_hypoth_id(base_url, data_times, curl_header, content_headers, data_header, tick, default_headers)
+            # use prerequisite data in subsequent curl query
+            query_data = { 'stageId': { 'name': 'AL1' }, 'signalDetectionHypotheses': [{ 'id': sdh_id }] }
+            json_data = json.dumps(query_data)
+
+            response = requests.post(url, headers=default_headers, data=json_data, timeout=args.timeout)
+            print_pipeline_curl_command(description, sdh_id, args.prereq, url, base_url, data_times, curl_header, content_headers, data_header, tick, default_headers)
+
+        elif str(args.prereq) == "csd":
+            description = "Waveform Manager Service - Find Channel Segment Descriptors By Channel Name And Time Range "
+            url = base_url + "/waveform-manager-service/waveform/channel-segment/query/channel-segment-descriptors"
+            # get prerequisite data
+            csd = get_channel_segment_descriptor(base_url, data_times, curl_header, content_headers, data_header, tick, default_headers)
+            # use prerequisite data in subsequent curl query
+            query_data = { 'channelSegmentDescriptors': [csd] }
+            json_data = json.dumps(query_data)
+
+            response = requests.post(url, headers=default_headers, data=json_data, timeout=args.timeout)
+            print_pipeline_curl_command(description, csd, args.prereq, url, base_url, data_times, curl_header, content_headers, data_header, tick, default_headers)
+
+        elif str(args.prereq) == "asdh":
+            description = "Event Manager Service - Find Events By Associated Signal Detection Hypotheses "
+            url = base_url + "/event-manager-service/event/associated-signal-detection-hypotheses"
+            # get prerequisite data
+            asdh = get_assoc_sig_det_hypoth(base_url, data_times, curl_header, content_headers, data_header, tick, default_headers)
+            # use prerequisite data in subsequent curl query
+            query_data = { 'stageId': { 'name': 'Auto Network' }, 'signalDetectionHypotheses': [asdh] }
+            json_data = json.dumps(query_data)
+
+            response = requests.post(url, headers=default_headers, data=json_data, timeout=args.timeout)
+            print_pipeline_curl_command(description, asdh, args.prereq, url, base_url, data_times, curl_header, content_headers, data_header, tick, default_headers)
+
+        elif str(args.prereq) == "evtid":
+            description = "Event Manager Service - Find Events By ID "
+            url = base_url + "/event-manager-service/event/AL1/"
+            # get prerequisite data
+            evtid = get_event_id(base_url, data_times, curl_header, content_headers, data_header, tick, default_headers)
+            # use prerequisite data in subsequent curl query
+            query_data = evtid
+            json_data = json.dumps(query_data)
+
+            response = requests.post(url, headers=default_headers, data=json_data, timeout=args.timeout)
+            print_pipeline_curl_command(description, evtid, args.prereq, url, base_url, data_times, curl_header, content_headers, data_header, tick, default_headers)
+
+        else:
+            sys.exit("Invalid command line argument for -p prerequisite.  Choices are sdh-id, csd, asdh, evtid")
+                
+    # Handles bad urls, unsuccessful response codes, timeouts,
+    # and connection errors
+    except requests.exceptions.RequestException as err:
+        raise SystemExit
+
+
+def run(command: str, print_output: bool = False) -> tuple[int, str, str]:
+    """
+    Execute the specified command and return when the execution is complete.
+
+    Args:
+        command (str): A shell command to run.
+        print_output (bool, optional): Enable printing of stdout and stderr
+            immediately. Defaults to False.
+
+    Returns:
+        tuple: Return code, stdout, and stderr of the command
+
+    """
+    cmd = subprocess.Popen(
+        command,
+        shell=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        stdin=subprocess.PIPE
+    )
+    out, err = cmd.communicate(input=None)
+    out = out.decode()
+    err = err.decode()
+
+    if print_output:
+        print(out)
+        if len(err) > 0:
+            print(err)
+
+    return cmd.returncode, out, err
+
+
+def get_args() -> argparse.Namespace:
+    """
+    Get command-line arguments.
+
+    Returns:
+        argparse.Namespace: A namespace of command line arguments
+
+    """
+
+    description = """
+description:
+   gms-curls-query-creator creates complete
+   curl commands after constructing a prerequisite
+   curl query that is used in the subsequent
+   pipeline-style curl query.
+   The deployment name and query type must be provided.
+   The cluster name can be determined by running kubeconfig.
+    """
+
+    parser = ArgumentParser(
+        description=description,
+        formatter_class=RawDescriptionHelpFormatter
+    )
+
+    parser.add_argument(
+        '-n',
+        '--name',
+        required=True,
+        help="Name of the deployment."
+    )
+
+    parser.add_argument(
+        '-p',
+        '--prereq',
+        type=str,
+        required=True,
+        help="Curl prerequisite value needed. For example: csd, sdh-id, etc."
+    )
+
+    parser.add_argument(
+        '-t',
+        '--timeout',
+        type=int,
+        default=120,
+        help="Sets the timeout (in seconds) for requests. Default = 120."
+    )
+
+    args = parser.parse_args()
+
+    return args
+
+
+def get_ingress_domain_url(instance_name: str) -> str:
+    """
+    Use ``gmskube ingress`` to get the ingress URL for the
+    ``user-manager-service``, which is common to various instance types.
+
+    Args:
+        instance_name:  The name of the instance.
+
+    Raises:
+        RuntimeError:  If something goes wrong with ``gmskube ingress``.
+
+    Returns:
+        Returns the URL through the port (which is appended to domain
+        via ":<port_number>"), stripping off anything following
+    """
+
+    ingress_url = ""
+    _, out, _ = run(f"gmskube ingress {instance_name}")
+
+    for line in out.splitlines():
+        if "user-manager-service" in line:
+            ingress_url = line.split()[1]
+
+    if ingress_url == "":
+        raise RuntimeError(
+            "Unable to get the ingress URL for the "
+            "`user-manager-service`."
+        )
+
+    return re.search(r"^(https://.*:.*)/.*$", ingress_url).group(1)
+
+
+def get_instance_info(name):
+    """
+    Gather a dictionary of information about a named instance.
+    """
+    summary = run_json_command(f"helm list --all -n { name } --output json")
+
+    if not summary:
+        return None
+
+    instance = {}
+    instance['name'] = summary[0]['name']
+    instance['status'] = summary[0]['status']
+    instance['updated'] = summary[0]['updated']
+
+    return instance
+
+
+def run_json_command(command):
+    """
+    Run a command that produces JSON output
+    and return the result as a dictionary.
+    """
+    result = None
+    try:
+        cmd = subprocess.Popen(
+            command.split(),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            stdin=subprocess.PIPE
+        )
+        out, err = cmd.communicate()
+        out = out.decode()
+        err = err.decode()
+
+        if cmd.returncode != 0:
+            print(
+                f"ERROR: '{ command.split()[0] }' returned { cmd.returncode }."
+            )
+            print(out)
+            console.out(f'[yellow]{err}')
+            return None
+
+        result = json.loads(out)
+    except Exception as ex:
+        print(ex)
+        sys.exit(1)
+
+    return result
+
+
+def get_pod_info(instance):
+    """
+    Gather a dictionary of running pods for the given instance name.
+    """
+
+    rc, out, err = run(f"kubectl get pods -n {instance['name']} --no-headers")
+
+    if rc != 0:
+        print("   ----------ERROR getting pods ----------")
+    else:
+        pods = defaultdict(list)
+        for line in out.splitlines():
+            columns = line.split()
+            deployment_name = columns[0].rsplit('-', 2)[0]
+            pod = {}
+            pod['deployment_name'] = deployment_name
+            pod['name'] = columns[0]
+            pod['ready'] = columns[1]
+            pod['status'] = columns[2]
+            pod['restarts'] = columns[3]
+            pod['age'] = columns[4]
+            pods[deployment_name].append(pod)
+
+    return pods
+
+
+def is_simulator_installed(pods) -> 'bool':
+    """
+    Check if simulator is installed in instance
+    """
+
+    if 'bridged-data-source-simulator' in pods and 'oracle' in pods:
+        return True
+    else:
+        return False
+
+
+def set_simulated_times():
+    """
+    Set start/end/creation/effective times to work with
+    simulator time range requirements
+    """
+
+    simulated_times = {}
+
+    # Note: When a simulator is initialized,
+    #   the start time defaults to 8 hours in
+    #       the past from the last even hour in UTC.
+    #       Set the start time below to 8 hrs in the past.
+    new_start_time = (datetime.utcnow() - timedelta(hours=8))
+    start_time = new_start_time.strftime('%Y-%m-%dT%H:00:00Z')
+
+    # Set the end time below to 6 hrs in the past so that the interval between
+    # start and end time is 2 hrs.
+    new_end_time = datetime.utcnow() - timedelta(hours=6)
+    end_time = new_end_time.strftime('%Y-%m-%dT%H:00:00Z')
+
+    creation_time = start_time
+    effective_time = start_time
+
+    simulated_times['start_time'] = start_time
+    simulated_times['end_time'] = end_time
+    simulated_times['creation_time'] = creation_time
+    simulated_times['effective_time'] = effective_time
+
+    return simulated_times
+
+
+def set_fixed_times():
+    """
+    Set start/end/creation/effective times to fixed
+    values to work when simulator is not installed
+    """
+
+    # Note 1:  SME says "If you’re not running a simulator,
+    #     you could use any time on 2019-01-05.
+    #   For start and end times, it’s really dependent on the curl.
+    #   For curls that return a ton of data (e.g., events)
+    #     you’d want to use a very short time period.
+    #   For curls that return only a little data (e.g., intervals)
+    #     you can use the entire day."
+    # Note 2:  SME now says "Seed data we use exists
+    #     2019-01-05T16:00 – 2019-01-05T22:00 "
+    # Note 3:  SME also now says "The seed data for SB deployments
+    #     is mostly in 6 hours in 2019, 2019-01-05 16:00-22:00.
+    #     You need to adjust the start and end times in your
+    #     query to be in this time frame. Try 16:00-17:00"
+    # Note 4:  SME now saying "I’ve picked a seed data time that
+    #     will work for both AL1 and AL2 stages. If you use these
+    #     times for any sb query that requires a time range, it
+    #     should work."
+    #       "startTime": "2019-01-05T19:25:00Z"
+    #       "endTime": "2019-01-05T19:29:00Z"
+
+    fixed_times = {}
+
+    start_time = "2019-01-05T19:25:00Z"
+
+    # set end_time to 4 hrs after start_time
+    end_time = "2019-01-05T19:29:00Z"
+
+    # set short_end_time to 1 min after start_time
+    # short_end_time = "2019-01-05T19:26:00Z"
+
+    creation_time = start_time
+    effective_time = start_time
+
+    fixed_times['start_time'] = start_time
+    fixed_times['end_time'] = end_time
+    fixed_times['creation_time'] = creation_time
+    fixed_times['effective_time'] = effective_time
+
+    return fixed_times
+
+
+def print_pipeline_curl_command(description, prereq_data, query_type, service_url_string, base_url, data_times, curl_header, content_headers, data_header, tick, default_headers):
+    """
+    Print complete pipeline curl request command to stdout
+    """
+
+    if query_type == "sdh-id":
+        sdh_id_string = str(prereq_data).replace("\'", "\"")
+        pipeline_curl_command = (curl_header + tick + service_url_string + tick + content_headers + data_header + tick + "{" + "\"stageId\": {\"name\": \"AL1\"}," + " \"signalDetectionHypotheses\": " + " [{ " + "\"id\": " + sdh_id_string + " }] " + "}" + tick)
+
+        # print complete curl command, including prerequisite pipeline data
+        print()
+        print("*** Curl command for:  ", description)
+        print()
+        print(pipeline_curl_command)
+        print()
+
+    elif query_type == "csd":
+        csd_string = str(prereq_data).replace("\'", "\"")
+        pipeline_curl_command = (curl_header + tick + service_url_string + tick + content_headers + data_header + tick + "{" + "\"channelSegmentDescriptors\": " + " [ " + csd_string + " ] " + "}" + tick)
+        # print complete curl command, including prerequisite pipeline data
+        print()
+        print("*** Curl command for:  ", description)
+        print()
+        print(pipeline_curl_command)
+        print()
+
+    elif query_type == "asdh":
+        asdh_string = str(prereq_data).replace("\'", "\"")
+        pipeline_curl_command = (curl_header + tick + service_url_string + tick + content_headers + data_header + tick + "{" + "\"stageId\": {\"name\": \"Auto Network\"}," + " \"signalDetectionHypotheses\": " + " [ " + asdh_string + " ] " + "}" + tick)
+
+        # print complete curl command, including prerequisite pipeline data
+        print()
+        print("*** Curl command for:  ", description)
+        print()
+        print(pipeline_curl_command)
+        print()
+
+    elif query_type == "evtid":
+        evtid_string = str(prereq_data).replace("\'", "\"")
+        # this is a GET request method so adjust the curl_header to use that request method
+        curl_header = " curl --location --request GET "
+        pipeline_curl_command = (curl_header + tick + service_url_string + evtid_string + tick + content_headers) 
+
+        # print complete curl command, including prerequisite pipeline data
+        print()
+        print("*** Curl command for:  ", description)
+        print()
+        print(pipeline_curl_command)
+        print()
+
+
+def get_sig_det_hypoth_id(base_url, data_times, curl_header, content_headers, data_header, tick, default_headers):
+
+    # Note: the following prerequisite curl query,
+    # which fetches a Signal Detection Hypotheses ID (sdh_id)
+    # from the deployment, is needed for the subsequent query
+    # "Event Manager Service - "
+    # "Find Events By Associated Signal Detection Hypotheses ":
+
+    # Declare service URL
+    service_url = base_url + "/event-manager-service/event/detections-and-segments/time"
+
+    # Declare request body for signal detection hypotheses id (sdh_id)
+    request_body = {
+        "startTime": data_times['start_time'],
+        "endTime": data_times['end_time'],
+        "stageId": {"name": "AL1"}
+    }
+
+    # Make a request to the service url
+    eventsWithDetsSegs = requests.post(service_url, json=request_body, headers=default_headers)
+    eventsWithDetsSegs_response = eventsWithDetsSegs.json()
+
+    if (eventsWithDetsSegs.status_code != 200):
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Signal Detection Hypotheses ID - Endpoint failure")
+    if (len(eventsWithDetsSegs_response['events']) == 0):
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Signal Detection Hypotheses ID - No events found for {} - {}".format(data_times['start_time'], data_times['end_time']))
+
+    # Signal Detection Hypothesis ID
+    if eventsWithDetsSegs_response["channelSegments"]:
+        sig_det_hypoth_id = eventsWithDetsSegs_response['signalDetections'][0]['signalDetectionHypotheses'][0]['id']
+    else:
+        sys.exit("*** Prerequisiste Signal Detection Hypotheses ID - No events found in the time range.")
+
+    service_url_string = str(service_url)
+    request_body_string = str(request_body).replace("\'", "\"")
+    command_line = curl_header + tick + service_url_string + tick + content_headers + data_header + tick + request_body_string + tick
+
+    return sig_det_hypoth_id
+
+
+def get_channel_segment_descriptor(base_url, data_times, curl_header, content_headers, data_header, tick, default_headers):
+
+    # Note: the following prerequisite curl query,
+    # which fetches a Channel Segment Descriptor (csd)
+    # from the deployment, is needed for the subsequent query
+    # "Waveform Manager Service -
+    #  Find Channel Segment Descriptors By Channel Name
+    #  And Time Range"
+
+    # Declare service URL
+    service_url = base_url + "/event-manager-service/event/detections-and-segments/time"
+
+    # Declare request body for channel segment descriptor (csd)
+    request_body = {
+        "stageId": {"name": "AL1"},
+        "startTime": data_times['start_time'],
+        "endTime": data_times['end_time']
+    }
+
+    # Make a request to the service url
+    events = requests.post(service_url, json=request_body, headers=default_headers)
+    events_response = events.json()
+
+    if (events.status_code != 200):
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Channel Segment Descriptor - Endpoint failure")
+
+    # Channel Segment Descriptor
+    if events_response["channelSegments"]:
+        chan_seg_descriptor = events_response["channelSegments"][0]['id']
+    else:
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Channel Segment Descriptor - No events found for {} - {}".format(data_times['start_time'], data_times['end_time']))
+
+    service_url_string = str(service_url)
+    request_body_string = str(request_body).replace("\'", "\"")
+    command_line = curl_header + tick + service_url_string + tick + content_headers + data_header + tick + request_body_string + tick
+
+    return chan_seg_descriptor
+
+
+def get_assoc_sig_det_hypoth(base_url, data_times, curl_header, content_headers, data_header, tick, default_headers):
+
+    # Note: the following prerequisite curl query,
+    # which fetches a Signal Detection Hypotheses ID (sdh_id)
+    # from the deployment, is needed for the subsequent query
+    # "Event Manager Service - "
+    # "Find Events By Associated Signal Detection Hypotheses ":
+
+    # Declare service URL
+    service_url = base_url + "/event-manager-service/event/detections-and-segments/time"
+
+    # Declare request body for associated signal detection hypotheses (asdh)
+    request_body = {
+        "stageId": {"name": "Auto Network"},
+        "startTime": data_times['start_time'],
+        "endTime": data_times['end_time']
+    }
+
+    # Make a request to the service url
+    events = requests.post(service_url, json=request_body, headers=default_headers)
+    events_response = events.json()
+
+    if (events.status_code != 200):
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Associated Signal Detection Hypotheses - Endpoint failure")
+
+    # Associated Signal Detection Hypotheses
+    try:
+        assoc_sig_det_hypoth = events_response["events"][0]["eventHypotheses"][0]["associatedSignalDetectionHypotheses"][0]
+    except KeyError:
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Associated Signal Detection Hypotheses - No events found for {} - {}".format(data_times['start_time'], data_times['end_time']))
+
+    service_url_string = str(service_url)
+    request_body_string = str(request_body).replace("\'", "\"")
+    command_line = curl_header + tick + service_url_string + tick + content_headers + data_header + tick + request_body_string + tick
+
+    return assoc_sig_det_hypoth
+
+def get_event_id(base_url, data_times, curl_header, content_headers, data_header, tick, default_headers):
+
+    # Note: the following prerequisite curl query,
+    # which fetches an event id (evtid) from the deployment,
+    # is needed for the subsequent query
+    # "Event Manager Service -
+    #  Find Events By ID"
+
+    # Declare service URL
+    service_url = base_url + "/event-manager-service/event/detections-and-segments/time"
+
+    # Declare request body for channel segment descriptor (csd)
+    request_body = {
+        "stageId": {"name": "AL1"},
+        "startTime": data_times['start_time'],
+        "endTime": data_times['end_time']
+    }
+
+    # Make a request to the service url
+    events = requests.post(service_url, json=request_body, headers=default_headers)
+    events_response = events.json()
+
+    if (events.status_code != 200):
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Event ID - Endpoint failure")
+
+    # Event ID
+    if events_response["events"]:
+        event_id = events_response["events"][0]['id']
+    else:
+        sys.exit("  ERROR: Prerequisite Event Manager Service curl for Event ID - No events found for {} - {}".format(data_times['start_time'], data_times['end_time']))
+
+    return event_id
+
+
+# ==================== MAIN =======================
+
+if __name__ == "__main__":
+    main()

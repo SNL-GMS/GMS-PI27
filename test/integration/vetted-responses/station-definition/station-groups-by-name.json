@@ -1,0 +1,901 @@
+[
+    {
+        "description": "All IMS SHI stations",
+        "stations": [
+            {
+                "effectiveAt": "2014-09-12T00:00:00Z",
+                "name": "AAK"
+            },
+            {
+                "effectiveAt": "2013-08-23T00:00:00Z",
+                "name": "AFI"
+            },
+            {
+                "effectiveAt": "2010-05-21T02:48:10Z",
+                "name": "AKASG"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:59:54.825Z",
+                "name": "AKTO"
+            },
+            {
+                "effectiveAt": "2014-10-09T05:18:29Z",
+                "name": "ANMO"
+            },
+            {
+                "effectiveAt": "2008-03-11T08:31:31Z",
+                "name": "APG"
+            },
+            {
+                "effectiveAt": "2014-09-22T07:57:40Z",
+                "name": "ARCES"
+            },
+            {
+                "effectiveAt": "2018-09-13T00:00:00Z",
+                "name": "ARTI"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "ASAR"
+            },
+            {
+                "effectiveAt": "2015-08-17T00:00:00Z",
+                "name": "ASF"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:05:08Z",
+                "name": "ATAH"
+            },
+            {
+                "effectiveAt": "2005-03-17T13:26:30Z",
+                "name": "ATD"
+            },
+            {
+                "effectiveAt": "2011-10-06T00:00:00Z",
+                "name": "BATI"
+            },
+            {
+                "effectiveAt": "1994-01-31T00:00:00Z",
+                "name": "BBB"
+            },
+            {
+                "effectiveAt": "2019-07-15T00:00:00Z",
+                "name": "BBTS"
+            },
+            {
+                "effectiveAt": "2009-01-14T00:00:00Z",
+                "name": "BDFB"
+            },
+            {
+                "effectiveAt": "2014-08-11T07:31:28Z",
+                "name": "BELG"
+            },
+            {
+                "effectiveAt": "2013-04-18T00:00:00Z",
+                "name": "BJT"
+            },
+            {
+                "effectiveAt": "2012-04-18T00:00:00Z",
+                "name": "BORG"
+            },
+            {
+                "effectiveAt": "2018-05-30T17:15:00Z",
+                "name": "BOSA"
+            },
+            {
+                "effectiveAt": "2013-09-23T00:00:00Z",
+                "name": "BRTR"
+            },
+            {
+                "effectiveAt": "2014-06-24T00:00:00Z",
+                "name": "BVAR"
+            },
+            {
+                "effectiveAt": "2012-12-05T00:00:00Z",
+                "name": "CFA"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "CMAR"
+            },
+            {
+                "effectiveAt": "2005-11-24T10:20:30Z",
+                "name": "CMIG"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "CPUP"
+            },
+            {
+                "effectiveAt": "2018-12-11T00:00:00Z",
+                "name": "CTA"
+            },
+            {
+                "effectiveAt": "2011-07-27T00:00:00Z",
+                "name": "DAV"
+            },
+            {
+                "effectiveAt": "2002-07-25T00:00:00Z",
+                "name": "DAVOX"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "DBIC"
+            },
+            {
+                "effectiveAt": "2019-08-09T00:00:00Z",
+                "name": "DLBC"
+            },
+            {
+                "effectiveAt": "2002-12-01T00:00:00Z",
+                "name": "DZM"
+            },
+            {
+                "effectiveAt": "2005-11-08T00:00:00Z",
+                "name": "EIL"
+            },
+            {
+                "effectiveAt": "2017-04-21T00:00:00Z",
+                "name": "EKA"
+            },
+            {
+                "effectiveAt": "2012-10-15T00:00:00Z",
+                "name": "ELK"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00.013Z",
+                "name": "ESDC"
+            },
+            {
+                "effectiveAt": "2010-11-02T00:00:00Z",
+                "name": "FINES"
+            },
+            {
+                "effectiveAt": "2018-09-05T00:00:00Z",
+                "name": "FITZ"
+            },
+            {
+                "effectiveAt": "1992-01-01T00:00:00Z",
+                "name": "FRB"
+            },
+            {
+                "effectiveAt": "2018-07-04T00:00:00Z",
+                "name": "FURI"
+            },
+            {
+                "effectiveAt": "2017-06-01T00:00:00Z",
+                "name": "GERES"
+            },
+            {
+                "effectiveAt": "2016-11-02T00:00:00Z",
+                "name": "GEYT"
+            },
+            {
+                "effectiveAt": "2010-12-02T00:00:00Z",
+                "name": "GNI"
+            },
+            {
+                "effectiveAt": "2010-04-28T00:00:00Z",
+                "name": "GUMO"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "H01W"
+            },
+            {
+                "effectiveAt": "2006-11-20T14:45:06Z",
+                "name": "H02N"
+            },
+            {
+                "effectiveAt": "2006-11-20T14:43:07Z",
+                "name": "H02S"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "H03N"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "H03S"
+            },
+            {
+                "effectiveAt": "2017-02-21T00:00:00Z",
+                "name": "H04N"
+            },
+            {
+                "effectiveAt": "2017-02-21T00:00:00Z",
+                "name": "H04S"
+            },
+            {
+                "effectiveAt": "1999-11-15T00:00:00Z",
+                "name": "H05N"
+            },
+            {
+                "effectiveAt": "2000-09-18T00:00:00Z",
+                "name": "H05S"
+            },
+            {
+                "effectiveAt": "2005-11-29T17:14:46Z",
+                "name": "H06E"
+            },
+            {
+                "effectiveAt": "2005-11-29T17:21:01Z",
+                "name": "H06N"
+            },
+            {
+                "effectiveAt": "2005-11-29T17:14:46Z",
+                "name": "H06S"
+            },
+            {
+                "effectiveAt": "2004-11-30T00:00:00Z",
+                "name": "H07N"
+            },
+            {
+                "effectiveAt": "2004-11-30T00:00:00Z",
+                "name": "H07S"
+            },
+            {
+                "effectiveAt": "2002-01-17T13:00:00Z",
+                "name": "H08N"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "H08S"
+            },
+            {
+                "effectiveAt": "2004-03-17T00:00:00Z",
+                "name": "H09N"
+            },
+            {
+                "effectiveAt": "2004-03-17T00:00:00Z",
+                "name": "H09W"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "H10N"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "H10S"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "H11N"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "H11S"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:59:57.782Z",
+                "name": "HFS"
+            },
+            {
+                "effectiveAt": "2017-10-10T00:00:00Z",
+                "name": "HILR"
+            },
+            {
+                "effectiveAt": "2018-10-11T00:00:00Z",
+                "name": "HNR"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I02AR"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I03AU"
+            },
+            {
+                "effectiveAt": "2006-02-01T11:27:10Z",
+                "name": "I04AU"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I05AU"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I06AU"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I07AU"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I08BO"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I09BR"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I10CA"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I11CV"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I13CL"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I17CI"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I18DK"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I19DJ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I20EC"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I21FR"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I22FR"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I23FR"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I24FR"
+            },
+            {
+                "effectiveAt": "2019-10-31T00:00:00Z",
+                "name": "I26DE"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I27DE"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "I30JP"
+            },
+            {
+                "effectiveAt": "2017-09-30T00:00:00Z",
+                "name": "I31KZ"
+            },
+            {
+                "effectiveAt": "2003-06-17T00:00:00Z",
+                "name": "I32KE"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I33MG"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I34MN"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I35NA"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I36NZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I37NO"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I39PW"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I40PG"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I41PY"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I42PT"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I43RU"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I44RU"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "I45RU"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I46RU"
+            },
+            {
+                "effectiveAt": "2019-12-10T00:00:00Z",
+                "name": "I47ZA"
+            },
+            {
+                "effectiveAt": "2019-11-06T00:00:00Z",
+                "name": "I48TN"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I49GB"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I50GB"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I51GB"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I52GB"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I53US"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I55US"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I56US"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I57US"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I58US"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I59US"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "I60US"
+            },
+            {
+                "effectiveAt": "2018-02-26T00:00:00Z",
+                "name": "IDI"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "ILAR"
+            },
+            {
+                "effectiveAt": "1993-01-01T00:00:00Z",
+                "name": "INK"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:27:37.125Z",
+                "name": "JAY"
+            },
+            {
+                "effectiveAt": "2016-12-19T00:00:00Z",
+                "name": "JCJ"
+            },
+            {
+                "effectiveAt": "2016-08-11T00:00:00Z",
+                "name": "JHJ"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "JKA"
+            },
+            {
+                "effectiveAt": "2014-05-09T00:00:00Z",
+                "name": "JMIC"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:43:14.224Z",
+                "name": "JNU"
+            },
+            {
+                "effectiveAt": "2016-08-11T00:00:00Z",
+                "name": "JOW"
+            },
+            {
+                "effectiveAt": "2016-12-22T00:00:00Z",
+                "name": "JTS"
+            },
+            {
+                "effectiveAt": "2015-10-13T05:19:53Z",
+                "name": "KAPI"
+            },
+            {
+                "effectiveAt": "2008-10-08T10:24:33Z",
+                "name": "KBZ"
+            },
+            {
+                "effectiveAt": "2019-01-05T00:00:00Z",
+                "name": "KDAK"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "KEST"
+            },
+            {
+                "effectiveAt": "2012-07-10T12:47:28Z",
+                "name": "KIRV"
+            },
+            {
+                "effectiveAt": "2010-11-17T09:46:49Z",
+                "name": "KLR"
+            },
+            {
+                "effectiveAt": "2002-03-06T00:00:00Z",
+                "name": "KMBO"
+            },
+            {
+                "effectiveAt": "2011-09-14T13:18:16Z",
+                "name": "KOWA"
+            },
+            {
+                "effectiveAt": "2013-03-17T00:00:00Z",
+                "name": "KRVT"
+            },
+            {
+                "effectiveAt": "2020-08-31T00:00:00Z",
+                "name": "KSRS"
+            },
+            {
+                "effectiveAt": "2017-03-22T00:00:00Z",
+                "name": "KURK"
+            },
+            {
+                "effectiveAt": "2008-11-25T00:00:00Z",
+                "name": "KVAR"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "LBTB"
+            },
+            {
+                "effectiveAt": "2007-06-21T11:26:38Z",
+                "name": "LEM"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "LPAZ"
+            },
+            {
+                "effectiveAt": "2006-03-22T00:00:00Z",
+                "name": "LPIG"
+            },
+            {
+                "effectiveAt": "2008-09-11T00:00:00Z",
+                "name": "LSZ"
+            },
+            {
+                "effectiveAt": "1999-12-20T00:00:00Z",
+                "name": "LVC"
+            },
+            {
+                "effectiveAt": "2017-10-17T00:00:00Z",
+                "name": "LZDM"
+            },
+            {
+                "effectiveAt": "2010-07-20T00:00:00Z",
+                "name": "MA2"
+            },
+            {
+                "effectiveAt": "2004-12-08T12:07:52Z",
+                "name": "MATP"
+            },
+            {
+                "effectiveAt": "2003-02-19T00:00:00Z",
+                "name": "MAW"
+            },
+            {
+                "effectiveAt": "2007-06-26T14:55:14Z",
+                "name": "MBAR"
+            },
+            {
+                "effectiveAt": "2012-03-22T00:00:00Z",
+                "name": "MDP"
+            },
+            {
+                "effectiveAt": "2005-06-30T13:09:08Z",
+                "name": "MDT"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "MJAR"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "MKAR"
+            },
+            {
+                "effectiveAt": "2008-09-01T00:00:00Z",
+                "name": "MLR"
+            },
+            {
+                "effectiveAt": "2004-01-24T00:00:00Z",
+                "name": "MMAI"
+            },
+            {
+                "effectiveAt": "2007-04-26T13:04:43Z",
+                "name": "MSKU"
+            },
+            {
+                "effectiveAt": "2014-12-10T00:00:00Z",
+                "name": "MSVF"
+            },
+            {
+                "effectiveAt": "2011-05-03T00:00:30Z",
+                "name": "NEW"
+            },
+            {
+                "effectiveAt": "2006-07-13T12:16:26Z",
+                "name": "NNA"
+            },
+            {
+                "effectiveAt": "2015-11-16T00:00:00Z",
+                "name": "NOA"
+            },
+            {
+                "effectiveAt": "2010-11-17T13:26:06Z",
+                "name": "NRIK"
+            },
+            {
+                "effectiveAt": "2014-10-29T15:39:20Z",
+                "name": "NVAR"
+            },
+            {
+                "effectiveAt": "2017-02-15T00:00:00Z",
+                "name": "NWAO"
+            },
+            {
+                "effectiveAt": "2009-01-21T00:00:00Z",
+                "name": "OBN"
+            },
+            {
+                "effectiveAt": "2001-09-04T00:00:00Z",
+                "name": "OPO"
+            },
+            {
+                "effectiveAt": "2008-01-10T14:44:38Z",
+                "name": "PALK"
+            },
+            {
+                "effectiveAt": "2013-01-30T20:10:00Z",
+                "name": "PCRV"
+            },
+            {
+                "effectiveAt": "2018-09-20T00:00:00Z",
+                "name": "PDAR"
+            },
+            {
+                "effectiveAt": "2006-10-18T00:00:00Z",
+                "name": "PETK"
+            },
+            {
+                "effectiveAt": "2017-12-22T00:00:00Z",
+                "name": "PFO"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "PLCA"
+            },
+            {
+                "effectiveAt": "2003-06-11T00:00:00Z",
+                "name": "PMG"
+            },
+            {
+                "effectiveAt": "2006-06-22T16:56:38Z",
+                "name": "PMSA"
+            },
+            {
+                "effectiveAt": "2009-02-23T12:00:00Z",
+                "name": "PPT"
+            },
+            {
+                "effectiveAt": "2005-11-16T11:43:18Z",
+                "name": "PSI"
+            },
+            {
+                "effectiveAt": "2009-11-09T16:37:00Z",
+                "name": "PTGA"
+            },
+            {
+                "effectiveAt": "2009-11-19T00:00:00Z",
+                "name": "QSPA"
+            },
+            {
+                "effectiveAt": "2005-03-16T13:33:32Z",
+                "name": "RAO"
+            },
+            {
+                "effectiveAt": "2010-05-11T16:04:13Z",
+                "name": "RAR"
+            },
+            {
+                "effectiveAt": "2009-09-03T00:00:00Z",
+                "name": "RCBR"
+            },
+            {
+                "effectiveAt": "2007-09-06T21:35:00Z",
+                "name": "RES"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00.013Z",
+                "name": "ROSC"
+            },
+            {
+                "effectiveAt": "2004-11-30T17:22:03Z",
+                "name": "RPN"
+            },
+            {
+                "effectiveAt": "2009-02-04T00:00:00Z",
+                "name": "RPZ"
+            },
+            {
+                "effectiveAt": "1994-07-20T00:00:00Z",
+                "name": "SADO"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "SCHQ"
+            },
+            {
+                "effectiveAt": "2004-03-11T00:00:00Z",
+                "name": "SDV"
+            },
+            {
+                "effectiveAt": "2007-03-20T00:00:00Z",
+                "name": "SEY"
+            },
+            {
+                "effectiveAt": "2005-10-19T13:30:09Z",
+                "name": "SFJD"
+            },
+            {
+                "effectiveAt": "2019-07-01T00:00:00Z",
+                "name": "SHEM"
+            },
+            {
+                "effectiveAt": "2010-03-29T17:26:07Z",
+                "name": "SIJI"
+            },
+            {
+                "effectiveAt": "2008-10-09T00:00:00Z",
+                "name": "SIV"
+            },
+            {
+                "effectiveAt": "2011-05-03T15:00:00.001Z",
+                "name": "SJG"
+            },
+            {
+                "effectiveAt": "2004-05-11T00:00:00Z",
+                "name": "SNAA"
+            },
+            {
+                "effectiveAt": "2002-06-04T00:00:00Z",
+                "name": "SONM"
+            },
+            {
+                "effectiveAt": "2015-05-06T00:00:00Z",
+                "name": "SPITS"
+            },
+            {
+                "effectiveAt": "2015-02-04T00:00:00Z",
+                "name": "STKA"
+            },
+            {
+                "effectiveAt": "2012-06-26T00:00:00Z",
+                "name": "SUR"
+            },
+            {
+                "effectiveAt": "2018-05-07T00:00:00Z",
+                "name": "TEIG"
+            },
+            {
+                "effectiveAt": "2005-09-29T00:00:00Z",
+                "name": "TGY"
+            },
+            {
+                "effectiveAt": "2017-11-30T00:00:00.001Z",
+                "name": "TIXI"
+            },
+            {
+                "effectiveAt": "2006-08-09T14:09:35Z",
+                "name": "TKL"
+            },
+            {
+                "effectiveAt": "2009-10-28T00:00:00Z",
+                "name": "TLY"
+            },
+            {
+                "effectiveAt": "2015-11-16T00:00:00Z",
+                "name": "TORD"
+            },
+            {
+                "effectiveAt": "1999-06-14T00:00:00Z",
+                "name": "TSUM"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "TXAR"
+            },
+            {
+                "effectiveAt": "2007-03-19T00:00:00Z",
+                "name": "ULM"
+            },
+            {
+                "effectiveAt": "2009-03-12T00:00:00Z",
+                "name": "URZ"
+            },
+            {
+                "effectiveAt": "2003-08-28T00:00:00Z",
+                "name": "USHA"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "USRK"
+            },
+            {
+                "effectiveAt": "2018-03-15T00:00:00Z",
+                "name": "VAE"
+            },
+            {
+                "effectiveAt": "2010-05-21T00:00:00Z",
+                "name": "VNDA"
+            },
+            {
+                "effectiveAt": "2002-12-06T00:00:00Z",
+                "name": "VRAC"
+            },
+            {
+                "effectiveAt": "2017-10-10T00:00:00Z",
+                "name": "WRA"
+            },
+            {
+                "effectiveAt": "2006-09-06T00:00:00Z",
+                "name": "WSAR"
+            },
+            {
+                "effectiveAt": "2017-11-30T00:00:00.001Z",
+                "name": "YAK"
+            },
+            {
+                "effectiveAt": "2002-11-27T00:00:00Z",
+                "name": "YBH"
+            },
+            {
+                "effectiveAt": "2017-03-06T00:00:00Z",
+                "name": "YKA"
+            },
+            {
+                "effectiveAt": "2009-01-22T00:00:00Z",
+                "name": "ZALV"
+            }
+        ],
+        "effectiveAt": "2000-01-01T00:00:00Z",
+        "name": "ALL_IMS"
+    }
+]

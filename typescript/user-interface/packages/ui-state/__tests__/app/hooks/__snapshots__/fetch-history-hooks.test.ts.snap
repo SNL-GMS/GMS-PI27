@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fetch history hooks can use fetch history status 1`] = `
+{
+  "error": undefined,
+  "fulfilled": 4,
+  "isError": false,
+  "isLoading": true,
+  "pending": 2,
+  "rejected": 0,
+}
+`;

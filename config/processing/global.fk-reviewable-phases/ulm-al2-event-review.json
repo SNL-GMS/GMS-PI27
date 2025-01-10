@@ -1,0 +1,34 @@
+{
+    "name": "ulm-al2-event-review",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "ULM"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "activity",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "AL2 Event Review"
+            ],
+            "priority": 80
+        }
+    ],
+    "parameters": {
+        "phases": [
+            "P3KPbc"
+        ]
+    }
+}

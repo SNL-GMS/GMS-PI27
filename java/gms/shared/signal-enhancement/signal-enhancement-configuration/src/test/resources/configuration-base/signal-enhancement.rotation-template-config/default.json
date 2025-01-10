@@ -1,0 +1,17 @@
+{
+    "name": "default",
+    "constraints": [
+        {
+            "constraintType": "DEFAULT"
+        }
+    ],
+    "parameters": {
+        "leadDuration": "PT60S",
+        "duration": "PT5M",
+        "sampleRateToleranceHz": 0.1,
+        "locationToleranceKm": 0.1,
+        "orientationAngleToleranceDeg": 0.1,
+        "twoDimensional": true,
+        "samplingType": "NEAREST_SAMPLE"
+    }
+}

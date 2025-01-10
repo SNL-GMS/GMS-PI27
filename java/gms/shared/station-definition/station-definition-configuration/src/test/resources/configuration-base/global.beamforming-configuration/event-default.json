@@ -1,0 +1,52 @@
+{
+    "name": "event-default",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "beamType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "EVENT"
+            ],
+			"priority": 100
+        },  
+        {
+            "constraintType": "STRING",
+            "criterion": "phaseType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "P"
+            ],
+			"priority": 80
+        }
+    ],
+  "parameters": {
+        "leadDuration": "PT5S",
+        "beamDuration": "PT5M",
+        "orientationAngleToleranceDeg": 5.0,
+        "sampleRateToleranceHz": 0.5,
+        "minWaveformsToBeam": 2,
+        "inputChannelGroups":  [
+            "*"
+        ],
+        "inputChannels":  [
+             "SHZ", 
+	     "BHZ", 
+	     "HHZ", 
+	     "EHZ",
+	     "MHZ"
+        ],
+        "beamDescriptionParams":  {
+            "beamSummation": "COHERENT",
+            "beamType": "EVENT",
+            "samplingType": "NEAREST_SAMPLE",
+            "twoDimensional": true       
+        }
+    }
+}

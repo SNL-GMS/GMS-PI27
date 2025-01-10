@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FkColorScale renders & matches snapshot 1`] = `
+<div>
+  <div
+    style="border: 1px solid #111; resize: both; overflow: auto; height: 700px; width: 1000px;"
+  >
+    <div
+      class="fk-color-scale"
+    >
+      <canvas
+        class="fk-color-scale__canvas"
+      />
+      <div
+        class="fk-color-scale__xaxis"
+      />
+      <div
+        class="fk-color-scale__units"
+      >
+        Fstat
+      </div>
+    </div>
+  </div>
+</div>
+`;

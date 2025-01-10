@@ -1,0 +1,32 @@
+plugins {
+    id('java-library')
+    id('java-test-fixtures')
+}
+
+dependencies {
+
+    implementation project(':station-definition-coi')
+    implementation project(':signal-detection-coi')
+    implementation project(':derived-channel-coi')
+    implementation project(':signal-enhancement-coi')
+
+    // Utility (dependency is api as apache commons classes are publicly exposed).
+    implementation libs.org.apache.commons.commons.lang3
+
+    // Google AutoValue
+    api libs.com.google.guava.guava
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    // Spring web and spring doc dependencies
+    implementation libs.org.msgpack.jackson.dataformat.msgpack
+    implementation libs.com.fasterxml.jackson.dataformat.jackson.dataformat.yaml
+
+    //logging
+    runtimeOnly libs.net.logstash.logback.logstash.logback.encoder
+    
+    testImplementation project(':test-utils')
+    testImplementation(testFixtures(project(':signal-enhancement-coi')))
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':derived-channel-coi'))) 
+}

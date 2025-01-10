@@ -1,0 +1,43 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    api project(':bridge-utilities')
+    api project(':qc-mask-dao')
+    api project(':waveform-api')
+    api project(':waveform-coi')
+    api project(':waveform-converter') 
+    api project(':qc-mask-converter')
+
+    // ignite
+    api libs.org.apache.ignite.ignite.core
+    api libs.org.apache.ignite.ignite.slf4j
+
+    //Google autovalue
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    //Spring dependencies
+        implementation libs.org.springframework.boot.spring.boot.starter.web
+
+    api libs.org.apache.commons.commons.lang3
+
+    implementation libs.com.google.guava.guava
+
+    implementation project(':metrics')
+    implementation project(':frameworks-utilities-jpa')
+    implementation project(':caching-utils')
+    implementation project(':java-utilities')
+    implementation project(':frameworks-configuration-repository')
+    implementation project(':frameworks-configuration-commonobjects')
+    implementation project(':spring-framework-utilities')
+
+    // Testing.
+    testImplementation project(':qc-mask-converter')
+    testImplementation(testFixtures(project(':signal-detection-coi')))
+    testImplementation(testFixtures(project(':waveform-coi')))
+    testImplementation project(':test-utils')
+    testImplementation libs.org.springframework.boot.spring.boot.starter.test
+        testImplementation libs.com.h2database.h2
+        }

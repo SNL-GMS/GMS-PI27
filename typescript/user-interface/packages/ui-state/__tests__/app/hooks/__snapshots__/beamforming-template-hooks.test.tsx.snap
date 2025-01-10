@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test hooks gets an EVENT template 1`] = `
+{
+  "PDAR": {
+    "P": {
+      "beamDescription": {
+        "beamSummation": "COHERENT",
+        "beamType": "EVENT",
+        "phase": "P",
+        "preFilterDefinition": undefined,
+        "samplingType": "NEAREST_SAMPLE",
+        "twoDimensional": true,
+      },
+      "beamDuration": 300,
+      "inputChannels": [
+        {
+          "effectiveAt": 1636503404,
+          "name": "PDAR.PD01.SHZ",
+        },
+        {
+          "effectiveAt": 1636503404,
+          "name": "PDAR.PD02.SHZ",
+        },
+        {
+          "effectiveAt": 1636503404,
+          "name": "PDAR.PD03.SHZ",
+        },
+      ],
+      "leadDuration": 5,
+      "minWaveformsToBeam": 2,
+      "orientationAngleToleranceDeg": 5,
+      "sampleRateToleranceHz": 0.5,
+      "station": {
+        "effectiveAt": 1689026400,
+        "name": "PDAR",
+      },
+    },
+  },
+}
+`;
+
+exports[`test hooks gets an FK template 1`] = `
+{
+  "PDAR": {
+    "P": {
+      "beamDescription": {
+        "beamSummation": "COHERENT",
+        "beamType": "FK",
+        "phase": "P",
+        "preFilterDefinition": undefined,
+        "samplingType": "NEAREST_SAMPLE",
+        "twoDimensional": true,
+      },
+      "beamDuration": 300,
+      "inputChannels": [
+        {
+          "effectiveAt": 1636503404,
+          "name": "ASAR.AS01.SHZ",
+        },
+        {
+          "effectiveAt": 1636503404,
+          "name": "ASAR.AS02.SHZ",
+        },
+        {
+          "effectiveAt": 1636503404,
+          "name": "ASAR.AS03.SHZ",
+        },
+      ],
+      "leadDuration": 5,
+      "minWaveformsToBeam": 2,
+      "orientationAngleToleranceDeg": 5,
+      "sampleRateToleranceHz": 0.5,
+      "station": {
+        "effectiveAt": 1689026400,
+        "name": "ASAR",
+      },
+    },
+  },
+}
+`;

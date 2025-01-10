@@ -1,0 +1,11 @@
+plugins {
+  id 'java-library'
+}
+
+dependencies {
+  api libs.org.hibernate.orm.hibernate.core
+  api libs.org.springframework.spring.context
+  api libs.org.springframework.spring.jdbc
+  api libs.org.springframework.spring.orm
+  
+}

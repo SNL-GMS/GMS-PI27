@@ -1,0 +1,19 @@
+{
+  "name": "default",
+  "constraints": [
+    {
+      "constraintType": "DEFAULT"
+    }
+  ],
+  "parameters": {
+      "phaseTypesByBeamDescriptions": {
+      "szb" : "P",
+      "Pgb" : "Pg",
+      "Pnb" : "Pn",
+      "MTB" : "LQ",
+      "MZB" : "LR",
+      "lzb" : "LR",
+      "ltb" : "LQ"
+      }    
+    }
+  }

@@ -1,0 +1,22 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+    api project(':bridge-utilities')
+    api project(':workflow-api')
+    api project(':workflow-coi')
+    api project(':workflow-dao')
+
+    api libs.org.hibernate.orm.hibernate.core
+    api libs.org.springframework.spring.context
+
+    implementation project(':java-utilities')
+    implementation project(':spring-framework-utilities')
+    
+    // Testing.
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':workflow-coi')))
+
+    testImplementation libs.com.h2database.h2
+}

@@ -1,0 +1,9 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+    api libs.org.hibernate.orm.hibernate.core
+    implementation libs.net.jodah.failsafe
+    implementation libs.com.google.guava.guava
+}

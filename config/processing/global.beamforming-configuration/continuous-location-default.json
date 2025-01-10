@@ -1,0 +1,44 @@
+{
+    "name": "continuous-location-default",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "beamType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "CONTINUOUS_LOCATION"
+            ],
+            "priority": 100
+        }
+    ],
+    "parameters": {
+        "leadDuration": "PT10S",
+        "beamDuration": "PT5M",
+        "orientationAngleToleranceDeg": 5.0,
+        "sampleRateToleranceHz": 0.5,
+        "minWaveformsToBeam": 2,
+        "inputChannelGroups": [
+            "*"
+        ],
+        "inputChannels": [
+            "SHZ"
+        ],
+        "beamDescriptionParams": {
+            "beamSummation": "COHERENT",
+            "beamType": "CONTINUOUS_LOCATION",
+            "preFilterDefinition": {
+                "$ref=global.filter-definition": [
+                    {
+                        "criterion": "name",
+                        "value": "2.0 4.0 4 BP causal"
+                    }
+                ]
+            },
+            "samplingType": "NEAREST_SAMPLEs",
+            "twoDimensional": true
+        }
+    }
+}

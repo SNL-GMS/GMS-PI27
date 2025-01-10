@@ -1,0 +1,69 @@
+{
+    "name": "asar-default-filter",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "ASAR"
+            ],
+            "priority": 100
+        }
+    ],
+    "parameters": {
+        "filterDefinitionsForDistanceRangesByUsage": {
+            "ONSET": [
+                {
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.5 4.0 3 BP non-causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "DETECTION": [
+                {
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.5 4.0 3 BP non-causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "FK": [
+                {
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.5 4.0 3 BP non-causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "AMPLITUDE": [
+                {
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.5 4.0 3 BP non-causal"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

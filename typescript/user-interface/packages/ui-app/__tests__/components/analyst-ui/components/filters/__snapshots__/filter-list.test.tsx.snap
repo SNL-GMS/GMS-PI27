@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterList matches a non ideal state snapshot when given no filter list 1`] = `
+<div
+  className="bp5-non-ideal-state bp5-non-ideal-state-vertical"
+>
+  <div
+    className="bp5-non-ideal-state-visual"
+    style={
+      {
+        "fontSize": "48px",
+        "lineHeight": "48px",
+      }
+    }
+  >
+    <span
+      aria-hidden={true}
+      className="bp5-icon bp5-icon-exclude-row"
+      tabIndex={-1}
+    >
+      <svg
+        data-icon="exclude-row"
+        height={48}
+        role="img"
+        viewBox="0 0 20 20"
+        width={48}
+      >
+        <path
+          d="M1 3h18c.55 0 1-.45 1-1s-.45-1-1-1H1c-.55 0-1 .45-1 1s.45 1 1 1zM0 13a1.003 1.003 0 001.71.71L4 11.41l2.29 2.29c.18.19.43.3.71.3a1.003 1.003 0 00.71-1.71L5.41 10 7.7 7.71c.19-.18.3-.43.3-.71a1.003 1.003 0 00-1.71-.71L4 8.59l-2.29-2.3A1.003 1.003 0 00.29 7.71L2.59 10 .3 12.29c-.19.18-.3.43-.3.71zm18-5h-7c-1.1 0-2 .9-2 2s.9 2 2 2h7c1.1 0 2-.9 2-2s-.9-2-2-2zm1 9H1c-.55 0-1 .45-1 1s.45 1 1 1h18c.55 0 1-.45 1-1s-.45-1-1-1z"
+          fillRule="evenodd"
+        />
+      </svg>
+    </span>
+  </div>
+  <div
+    className="bp5-non-ideal-state-text"
+  >
+    <h4
+      className="bp5-heading"
+    >
+      No Filter List Data
+    </h4>
+    <div>
+      There is no filter list data available for this interval
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FilterList matches a snapshot 1`] = `
+<div
+  className="non-ideal-loading-wrapper"
+>
+  <section
+    className="filter-list__container filter-list__container--scrollable"
+    onBlur={[Function]}
+    onFocusCapture={[Function]}
+    onKeyDown={[Function]}
+    role="menu"
+    style={
+      {
+        "--active-text-color": "#668668",
+      }
+    }
+    tabIndex={-1}
+  >
+    <h6
+      className="bp5-heading filter-list__header"
+    >
+      Filters
+    </h6>
+    <ol
+      className="filter-list"
+    >
+      <li
+        className="filter-list-entry filter-list-entry--selected"
+        onClick={[Function]}
+        role="button"
+        tabIndex={-1}
+      >
+        <span
+          aria-hidden={true}
+          className="bp5-icon bp5-icon-star filter-list-entry__icon filter-list-entry__button"
+          onClick={[Function]}
+        >
+          <svg
+            data-icon="star"
+            height={16}
+            role="img"
+            viewBox="0 0 16 16"
+            width={16}
+          >
+            <path
+              d="M8 0l2.5 5.3 5.5.8-4 4.1.9 5.8L8 13.3 3.1 16l.9-5.8-4-4.1 5.5-.8z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </span>
+        <span
+          aria-expanded={false}
+          className="filter-list-entry__tooltip-wrapper bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="filter-list-entry__title"
+            tabIndex={0}
+          >
+            filter def name 1
+            <span
+              aria-expanded={false}
+              className="filter-list-entry__info filter-list-entry__icon bp5-popover-target"
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <span
+                aria-hidden={true}
+                className="bp5-icon bp5-icon-info-sign"
+                tabIndex={0}
+              >
+                <svg
+                  data-icon="info-sign"
+                  height={16}
+                  role="img"
+                  viewBox="0 0 16 16"
+                  width={16}
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zM7 3h2v2H7V3zm3 10H6v-1h1V7H6V6h3v6h1v1z"
+                    fillRule="evenodd"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </span>
+      </li>
+      <li
+        className="filter-list-entry"
+        onClick={[Function]}
+        role="button"
+        tabIndex={-1}
+      >
+        <span
+          aria-hidden={true}
+          className="bp5-icon bp5-icon-star-empty filter-list-entry__icon filter-list-entry__button filter-list-entry__button--hidden"
+          onClick={[Function]}
+        >
+          <svg
+            data-icon="star-empty"
+            height={16}
+            role="img"
+            viewBox="0 0 16 16"
+            width={16}
+          >
+            <path
+              d="M16 6.11l-5.53-.84L8 0 5.53 5.27 0 6.11l4 4.1L3.06 16 8 13.27 12.94 16 12 10.21l4-4.1zM4.91 13.2l.59-3.62L3 7.02l3.45-.53L8 3.2l1.55 3.29 3.45.53-2.5 2.56.59 3.62L8 11.49 4.91 13.2z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </span>
+        <span
+          aria-expanded={false}
+          className="filter-list-entry__tooltip-wrapper bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="filter-list-entry__title"
+            tabIndex={0}
+          >
+            filter def name 2
+            <span
+              aria-expanded={false}
+              className="filter-list-entry__info filter-list-entry__icon bp5-popover-target"
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <span
+                aria-hidden={true}
+                className="bp5-icon bp5-icon-info-sign"
+                tabIndex={0}
+              >
+                <svg
+                  data-icon="info-sign"
+                  height={16}
+                  role="img"
+                  viewBox="0 0 16 16"
+                  width={16}
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zM7 3h2v2H7V3zm3 10H6v-1h1V7H6V6h3v6h1v1z"
+                    fillRule="evenodd"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </span>
+      </li>
+      <li
+        className="filter-list-entry"
+        onClick={[Function]}
+        role="button"
+        tabIndex={-1}
+      >
+        <span
+          aria-hidden={true}
+          className="bp5-icon bp5-icon-star filter-list-entry__icon filter-list-entry__button"
+          onClick={[Function]}
+        >
+          <svg
+            data-icon="star"
+            height={16}
+            role="img"
+            viewBox="0 0 16 16"
+            width={16}
+          >
+            <path
+              d="M8 0l2.5 5.3 5.5.8-4 4.1.9 5.8L8 13.3 3.1 16l.9-5.8-4-4.1 5.5-.8z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </span>
+        <span
+          aria-expanded={false}
+          className="filter-list-entry__tooltip-wrapper bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="filter-list-entry__title"
+            tabIndex={0}
+          >
+            Unfiltered
+            <span
+              aria-expanded={false}
+              className="filter-list-entry__info filter-list-entry__icon bp5-popover-target"
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <span
+                aria-hidden={true}
+                className="bp5-icon bp5-icon-info-sign"
+                tabIndex={0}
+              >
+                <svg
+                  data-icon="info-sign"
+                  height={16}
+                  role="img"
+                  viewBox="0 0 16 16"
+                  width={16}
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zM7 3h2v2H7V3zm3 10H6v-1h1V7H6V6h3v6h1v1z"
+                    fillRule="evenodd"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </span>
+      </li>
+    </ol>
+  </section>
+</div>
+`;

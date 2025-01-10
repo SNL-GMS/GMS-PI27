@@ -1,0 +1,93 @@
+{
+    "name": "asar-default-b-h-z-default-filter",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "ASAR"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelBand",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "B"
+            ],
+            "priority": 80
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelInstrument",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "H"
+            ],
+            "priority": 70
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelOrientation",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "Z"
+            ],
+            "priority": 60
+        }
+    ],
+    "parameters": {
+        "filterDefinitionsForDistanceRangesByUsage": {
+            "ONSET": [
+                {
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.0 4.2 1 LP non-causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "DETECTION": [
+                {
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.0 4.2 1 LP non-causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "FK": [
+                {
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "0.0 4.2 1 LP non-causal"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

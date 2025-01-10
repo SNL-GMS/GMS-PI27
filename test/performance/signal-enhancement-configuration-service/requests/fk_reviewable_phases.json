@@ -1,0 +1,154 @@
+{
+    "activity": {
+        "name": "AL1 Event Review"
+    },
+    "stations": [
+        {
+            "name": "AKASG"
+        },
+        {
+            "name": "AKTO"
+        },
+        {
+            "name": "ASF"
+        },
+        {
+            "name": "BDFB"
+        },
+        {
+            "name": "BELG"
+        },
+        {
+            "name": "BRDH"
+        },
+        {
+            "name": "BVAR"
+        },
+        {
+            "name": "CMIG"
+        },
+        {
+            "name": "DAVOX"
+        },
+        {
+            "name": "EKA"
+        },
+        {
+            "name": "ESDC"
+        },
+        {
+            "name": "GERES"
+        },
+        {
+            "name": "HFS"
+        },
+        {
+            "name": "JAY"
+        },
+        {
+            "name": "JKA"
+        },
+        {
+            "name": "JNU"
+        },
+        {
+            "name": "KBZ"
+        },
+        {
+            "name": "KDAK"
+        },
+        {
+            "name": "KIRV"
+        },
+        {
+            "name": "KMBO"
+        },
+        {
+            "name": "KURK"
+        },
+        {
+            "name": "KVAR"
+        },
+        {
+            "name": "LPIG"
+        },
+        {
+            "name": "MA2"
+        },
+        {
+            "name": "MAW"
+        },
+        {
+            "name": "MJAR"
+        },
+        {
+            "name": "MKAR"
+        },
+        {
+            "name": "MMAI"
+        },
+        {
+            "name": "NRIK"
+        },
+        {
+            "name": "NVAR"
+        },
+        {
+            "name": "OBN"
+        },
+        {
+            "name": "PCRV"
+        },
+        {
+            "name": "PETK"
+        },
+        {
+            "name": "PPT"
+        },
+        {
+            "name": "ROSC"
+        },
+        {
+            "name": "SCHQ"
+        },
+        {
+            "name": "SEY"
+        },
+        {
+            "name": "SONM"
+        },
+        {
+            "name": "STKA"
+        },
+        {
+            "name": "TGY"
+        },
+        {
+            "name": "TORD"
+        },
+        {
+            "name": "ULM"
+        },
+        {
+            "name": "USRK"
+        },
+        {
+            "name": "VRAC"
+        },
+        {
+            "name": "WRA"
+        },
+        {
+            "name": "WSAR"
+        },
+        {
+            "name": "YAK"
+        },
+        {
+            "name": "YKA"
+        },
+        {
+            "name": "ZALV"
+        }
+    ]
+}

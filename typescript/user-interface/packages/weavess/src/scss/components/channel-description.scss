@@ -1,0 +1,32 @@
+.channel-description {
+  pointer-events: all;
+  padding: 2px 0.25em 0 0.25em;
+  margin-left: auto;
+  margin-top: auto;
+  border-radius: 2px;
+  &__container {
+    display: flex;
+    text-align: right;
+    height: 100%;
+    width: 100%;
+    bottom: 0px;
+    margin-left: auto;
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+  &__message-container {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  &__message {
+    line-height: 14px;
+  }
+  &--error {
+    color: var(--weavess-error-text, white);
+    background-color: var(--weavess-error-background, darkred);
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+}

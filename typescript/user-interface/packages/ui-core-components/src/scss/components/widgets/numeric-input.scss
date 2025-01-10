@@ -1,0 +1,16 @@
+.numeric-input {
+  input {
+    border: 1px solid var(--core-middle-ground, var(--gms-middle-ground, $core-middle-ground));
+  }
+}
+
+/* blueprint's default padding hides the input number, setting width and overriding padding fixes it */
+.numeric-overflow-menu-toolbar-item {
+  .numeric-input {
+    input {
+      width: 35px;
+      padding: 0;
+      text-align: center;
+    }
+  }
+}

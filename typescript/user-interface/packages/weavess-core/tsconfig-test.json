@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./.cache/.tsbuildinfo-test",
+    "paths": {}
+  },
+  "references": []
+}

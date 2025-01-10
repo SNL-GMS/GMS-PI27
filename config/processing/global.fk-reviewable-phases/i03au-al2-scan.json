@@ -1,0 +1,34 @@
+{
+    "name": "i03au-al2-scan",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "I03AU"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "activity",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "AL2 Scan"
+            ],
+            "priority": 80
+        }
+    ],
+    "parameters": {
+        "phases": [
+            "Is"
+        ]
+    }
+}

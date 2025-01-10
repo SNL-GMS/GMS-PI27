@@ -1,0 +1,53 @@
+/* Offset used to space top or bottom label and vertical marker */
+$labelAndVerticalOffset: 5%;
+
+.follow-pick-marker {
+  z-index: 2;
+  width: 1px;
+  min-width: 1px;
+  opacity: var(--sd-opacity);
+
+  & &__vertical {
+    position: absolute;
+    height: 90%;
+    top: $labelAndVerticalOffset;
+  }
+
+  &__label {
+    color: var(--follow-pick-marker-color, white);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 400;
+    border-radius: 3px;
+    line-height: 1;
+    padding: 2px;
+    z-index: 1;
+    --label-background-color: rgba(25, 32, 37, 0.75);
+    text-shadow: var(--text-shadow-color) 0px 0px 2px, var(--text-shadow-color) 1px 1px 3px,
+      var(--text-shadow-color) 1px 1px 10px;
+
+    &--top {
+      top: $labelAndVerticalOffset;
+      bottom: initial;
+    }
+    &--bottom {
+      top: initial;
+      bottom: $labelAndVerticalOffset;
+    }
+  }
+}
+
+.follow-pick-marker__vertical::after {
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-width: 1px;
+  height: 100%;
+  position: absolute;
+  background-color: var(--follow-pick-marker-color, white);
+  z-index: 3;
+}

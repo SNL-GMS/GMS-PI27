@@ -1,0 +1,22 @@
+{
+  "name": "predictions-for-location-solution-definition",
+  "constraints": [
+    {
+      "constraintType": "DEFAULT"
+    }
+  ],
+  "parameters": {
+    "featurePredictionsDefinitions": [
+      {
+        "earthModel": "Iaspei",
+        "predictionTypes": [
+          "ARRIVAL_TIME",
+          "SLOWNESS", 
+          "RECEIVER_TO_SOURCE_AZIMUTH", 
+          "SOURCE_TO_RECEIVER_AZIMUTH"
+        ],
+        "correctionDefinitions": []
+      }
+    ]
+  }
+}

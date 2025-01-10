@@ -1,0 +1,146 @@
+{
+    "name": "long-period",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "Long Period"
+            ]
+        }
+    ],
+    "parameters": {
+        "name": "Long Period",
+	    "defaultFilterIndex": 1,
+	    "filters": [
+            {
+                "withinHotKeyCycle": true,
+                "unfiltered": true
+            },
+            {
+                "withinHotKeyCycle": true,
+                "namedFilter": "DETECTION"
+            },
+			{
+                "withinHotKeyCycle": true,
+                "namedFilter": "FK"
+            },
+			{
+                "withinHotKeyCycle": true,
+                "namedFilter": "ONSET"
+            },
+			{
+                "withinHotKeyCycle": false,
+                "filterDefinition": {
+				    "$ref=global.filter-definition": [
+                        {
+                            "criterion": "name",
+                            "value": "0.0 4.2 1 LP non-causal"
+                        }
+				    ]
+				}
+            },
+			{
+                "withinHotKeyCycle": true,
+                "filterDefinition": {
+				    "$ref=global.filter-definition": [
+                        {
+                            "criterion": "name",
+                            "value": "0.3 0.0 2 HP causal"
+                        }
+				    ]
+				}
+            },
+			{
+                "withinHotKeyCycle": true,
+                "filterDefinition": {
+				    "$ref=global.filter-definition": [
+                        {
+                            "criterion": "name",
+                            "value": "1.0 5.0 3 BP causal"
+                        }
+				    ]
+				}
+            },
+            {
+                "withinHotKeyCycle": true,
+                "filterDefinition": {
+                    "$ref=global.filter-definition": [
+                        {
+                            "criterion": "name",
+                            "value": "2.0 4.5 3 BR causal"
+                        }
+                    ]
+                }
+            },
+			{
+                "withinHotKeyCycle": true,
+                "filterDefinition": {
+                    "name": "Cascade Filter 1",
+                    "comments": "Cascade Filter 1 comments",
+                    "filterDescription": {
+                        "$ref=global.filter-cascade": [
+                            {
+                                "criterion": "name",
+                                "value": "Cascade Filter 1"
+                            }]
+                    }
+                }
+            },
+            {
+                "withinHotKeyCycle": false,
+                "filterDefinition": {
+                    "name": "Cascade Filter 2",
+                    "comments": "Cascade Filter 2 comments",
+                    "filterDescription": {
+                        "$ref=global.filter-cascade": [
+                            {
+                                "criterion": "name",
+                                "value": "Cascade Filter 2"
+                            }]
+                    }
+                }
+            },
+			{
+                "withinHotKeyCycle": true,
+                "filterDefinition": {
+                    "name": "Cascade Filter 3",
+                    "comments": "Cascade Filter 3 comments",
+                    "filterDescription": {
+                        "$ref=global.filter-cascade": [
+                            {
+                              "criterion": "name",
+                              "value": "Cascade Filter 3"
+                            }]
+                    }
+				}
+            },
+            {
+                "withinHotKeyCycle": false,
+                "filterDefinition": {
+                    "$ref=global.filter-definition": [
+                        {
+                            "criterion": "name",
+                            "value": "PM 0.0167 0.0667 100 LR"
+                        }
+                    ]
+                }
+            },
+            {
+                "withinHotKeyCycle": false,
+                "filterDefinition": {
+                    "$ref=global.filter-definition": [
+                        {
+                            "criterion": "name",
+                            "value": "AR N 2.0 10.0 5 causal"
+                        }
+                    ]
+                }
+            }
+		]
+    }
+}

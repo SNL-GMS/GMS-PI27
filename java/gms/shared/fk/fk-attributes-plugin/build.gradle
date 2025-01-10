@@ -1,0 +1,17 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation project(':fk-coi')
+
+    implementation project(':fk-measurements-algorithm')
+    implementation project(':waveform-coi')
+
+    // Google AutoService
+    annotationProcessor libs.com.google.auto.service.auto.service
+    implementation libs.com.google.auto.service.auto.service
+
+    // GMS dependencies
+    implementation project(':fk-plugin')
+    implementation project(':plugin-registry')
+}
+

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Can retrieve FkData createComputeFkInput 1`] = `
+{
+  "configuration": {
+    "fkSpectraParameters": {
+      "fftTaperFunction": "BLACKMAN",
+      "fftTaperPercent": 75,
+      "fkFrequencyRange": {
+        "highFrequencyHz": 2,
+        "lowFrequencyHz": 0.5,
+      },
+      "fkSpectrumWindow": {
+        "duration": 5.1,
+        "lead": 1.1,
+      },
+      "fkUncertaintyOption": "EMPIRICAL",
+      "minimumWaveformsForSpectra": 1,
+      "normalizeWaveforms": false,
+      "orientationAngleToleranceDeg": 0,
+      "phase": "P",
+      "preFilter": undefined,
+      "slownessGrid": {
+        "maxSlowness": 40,
+        "numPoints": 81,
+      },
+      "spectrumStepDuration": 10,
+      "twoDimensional": true,
+      "waveformSampleRate": {
+        "waveformSampleRateHz": 20,
+        "waveformSampleRateToleranceHz": 1,
+      },
+    },
+    "fkSpectraWindow": {
+      "duration": 300,
+      "lead": 60,
+    },
+    "inputChannels": [
+      {
+        "name": "ASAR",
+      },
+    ],
+    "phaseType": "P",
+    "station": {
+      "name": "ASAR",
+    },
+  },
+  "fkComputeInput": {
+    "channels": [
+      {
+        "name": "ASAR",
+      },
+    ],
+    "highFrequency": 2,
+    "lowFrequency": 0.5,
+    "normalizeWaveforms": false,
+    "phaseType": "P",
+    "sampleCount": 30,
+    "sampleRate": 0.09933774834437085,
+    "slowCountX": 81,
+    "slowCountY": 81,
+    "slowDeltaX": 0.008882188700431906,
+    "slowDeltaY": 0.008882188700431906,
+    "slowStartX": -0.3597286423674922,
+    "slowStartY": -0.3597286423674922,
+    "startTime": 1636503344,
+    "useChannelVerticalOffset": false,
+    "windowLead": "PT1.1S",
+    "windowLength": "PT5.1S",
+  },
+  "isThumbnailRequest": false,
+  "signalDetectionId": "012de1b9-8ae3-3fd4-800d-58665c3152dd",
+}
+`;

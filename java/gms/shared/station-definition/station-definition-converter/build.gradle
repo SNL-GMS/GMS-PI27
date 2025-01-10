@@ -1,0 +1,23 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api project(':station-definition-api')
+    api project(':station-definition-dao')
+    implementation project(':station-definition-repository')
+    implementation project(':structured-logging')
+    implementation project(':caching-utils')  
+
+    implementation libs.org.springframework.boot.spring.boot.starter.web
+    
+    implementation libs.com.google.guava.guava
+    implementation libs.com.github.ffpojo.ffpojo
+    implementation libs.org.apache.commons.commons.lang3
+
+    // Google AutoValue
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    // Testing.
+    testImplementation(testFixtures(project(':station-definition-coi'))) // TODO: Migrate these fixtures into relevant gradle testFixtures
+    testImplementation testFixtures(project(':station-definition-dao'))
+}

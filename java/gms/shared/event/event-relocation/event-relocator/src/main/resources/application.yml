@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: event-relocation-service
+  processing:
+    configuration-names: event-relocation-service
+  main:
+    allow-circular-references: true
+  codec:
+    max-in-memory-size: 20MB
+    
+server:
+  servlet:
+    context-path: /event-relocation-service
+
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true
+
+eventRelocationProcessingDefinitionConfig: event-relocation-service.event-relocation-processing-definition
+eventRelocationDefiningFeatureMeasurementConfig: event-relocation-service.event-relocation-defining-feature-measurement
+eventRelocationPredictorForPhaseConfig: event-relocation-service.event-relocation-predictors-for-phases
+eventRelocationEarthModelForPredictorConfig: event-relocation-service.event-relocation-earthmodels-for-predictors
+locOo3dSettingsForLocOo3dConfig: event-relocation-service.locoo_3d_settings_for_loco_3d

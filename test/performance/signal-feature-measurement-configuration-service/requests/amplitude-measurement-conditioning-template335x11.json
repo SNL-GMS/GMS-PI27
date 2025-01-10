@@ -1,0 +1,689 @@
+{
+    "stations": [
+        {
+          "name": "AAK"
+        },
+        {
+          "name": "AFI"
+        },
+        {
+          "name": "AKASG"
+        },
+        {
+          "name": "AKTO"
+        },
+        {
+          "name": "ANMO"
+        },
+        {
+          "name": "APG"
+        },
+        {
+          "name": "ARCES"
+        },
+        {
+          "name": "ARTI"
+        },
+        {
+          "name": "ASAR"
+        },
+        {
+          "name": "ASF"
+        },
+        {
+          "name": "ATAH"
+        },
+        {
+          "name": "ATD"
+        },
+        {
+          "name": "BATI"
+        },
+        {
+          "name": "BBB"
+        },
+        {
+          "name": "BBTS"
+        },
+        {
+          "name": "BDFB"
+        },
+        {
+          "name": "BELG"
+        },
+        {
+          "name": "BJT"
+        },
+        {
+          "name": "BORG"
+        },
+        {
+          "name": "BOSA"
+        },
+        {
+          "name": "BRMAR"
+        },
+        {
+          "name": "BRTR"
+        },
+        {
+          "name": "BVAR"
+        },
+        {
+          "name": "CFA"
+        },
+        {
+          "name": "CMAR"
+        },
+        {
+          "name": "CMIG"
+        },
+        {
+          "name": "CPUP"
+        },
+        {
+          "name": "CTA"
+        },
+        {
+          "name": "DAV"
+        },
+        {
+          "name": "DAVOX"
+        },
+        {
+          "name": "DBIC"
+        },
+        {
+          "name": "DLBC"
+        },
+        {
+          "name": "DZM"
+        },
+        {
+          "name": "EIL"
+        },
+        {
+          "name": "EKA"
+        },
+        {
+          "name": "ELK"
+        },
+        {
+          "name": "ESDC"
+        },
+        {
+          "name": "FINES"
+        },
+        {
+          "name": "FITZ"
+        },
+        {
+          "name": "FRB"
+        },
+        {
+          "name": "FURI"
+        },
+        {
+          "name": "GERES"
+        },
+        {
+          "name": "GEYT"
+        },
+        {
+          "name": "GNI"
+        },
+        {
+          "name": "GUMO"
+        },
+        {
+          "name": "H01W"
+        },
+        {
+          "name": "H02N"
+        },
+        {
+          "name": "H02S"
+        },
+        {
+          "name": "H03N"
+        },
+        {
+          "name": "H03S"
+        },
+        {
+          "name": "H04N"
+        },
+        {
+          "name": "H04S"
+        },
+        {
+          "name": "H05N"
+        },
+        {
+          "name": "H05S"
+        },
+        {
+          "name": "H06E"
+        },
+        {
+          "name": "H06N"
+        },
+        {
+          "name": "H06S"
+        },
+        {
+          "name": "H07N"
+        },
+        {
+          "name": "H07S"
+        },
+        {
+          "name": "H08N"
+        },
+        {
+          "name": "H08S"
+        },
+        {
+          "name": "H09N"
+        },
+        {
+          "name": "H09W"
+        },
+        {
+          "name": "H10N"
+        },
+        {
+          "name": "H10S"
+        },
+        {
+          "name": "H11N"
+        },
+        {
+          "name": "H11S"
+        },
+        {
+          "name": "HFS"
+        },
+        {
+          "name": "HILR"
+        },
+        {
+          "name": "HNR"
+        },
+        {
+          "name": "I02AR"
+        },
+        {
+          "name": "I03AU"
+        },
+        {
+          "name": "I04AU"
+        },
+        {
+          "name": "I05AU"
+        },
+        {
+          "name": "I06AU"
+        },
+        {
+          "name": "I07AU"
+        },
+        {
+          "name": "I08BO"
+        },
+        {
+          "name": "I09BR"
+        },
+        {
+          "name": "I10CA"
+        },
+        {
+          "name": "I11CV"
+        },
+        {
+          "name": "I13CL"
+        },
+        {
+          "name": "I17CI"
+        },
+        {
+          "name": "I18DK"
+        },
+        {
+          "name": "I19DJ"
+        },
+        {
+          "name": "I20EC"
+        },
+        {
+          "name": "I21FR"
+        },
+        {
+          "name": "I22FR"
+        },
+        {
+          "name": "I23FR"
+        },
+        {
+          "name": "I24FR"
+        },
+        {
+          "name": "I26DE"
+        },
+        {
+          "name": "I27DE"
+        },
+        {
+          "name": "I30JP"
+        },
+        {
+          "name": "I31KZ"
+        },
+        {
+          "name": "I32KE"
+        },
+        {
+          "name": "I33MG"
+        },
+        {
+          "name": "I34MN"
+        },
+        {
+          "name": "I35NA"
+        },
+        {
+          "name": "I36NZ"
+        },
+        {
+          "name": "I37NO"
+        },
+        {
+          "name": "I39PW"
+        },
+        {
+          "name": "I40PG"
+        },
+        {
+          "name": "I41PY"
+        },
+        {
+          "name": "I42PT"
+        },
+        {
+          "name": "I43RU"
+        },
+        {
+          "name": "I44RU"
+        },
+        {
+          "name": "I45RU"
+        },
+        {
+          "name": "I46RU"
+        },
+        {
+          "name": "I47ZA"
+        },
+        {
+          "name": "I48TN"
+        },
+        {
+          "name": "I49GB"
+        },
+        {
+          "name": "I50GB"
+        },
+        {
+          "name": "I51GB"
+        },
+        {
+          "name": "I52GB"
+        },
+        {
+          "name": "I53US"
+        },
+        {
+          "name": "I55US"
+        },
+        {
+          "name": "I56US"
+        },
+        {
+          "name": "I57US"
+        },
+        {
+          "name": "I58US"
+        },
+        {
+          "name": "I59US"
+        },
+        {
+          "name": "I60US"
+        },
+        {
+          "name": "IDI"
+        },
+        {
+          "name": "ILAR"
+        },
+        {
+          "name": "INK"
+        },
+        {
+          "name": "JAY"
+        },
+        {
+          "name": "JCJ"
+        },
+        {
+          "name": "JHJ"
+        },
+        {
+          "name": "JKA"
+        },
+        {
+          "name": "JMIC"
+        },
+        {
+          "name": "JNU"
+        },
+        {
+          "name": "JOW"
+        },
+        {
+          "name": "JTS"
+        },
+        {
+          "name": "KAPI"
+        },
+        {
+          "name": "KBZ"
+        },
+        {
+          "name": "KDAK"
+        },
+        {
+          "name": "KEST"
+        },
+        {
+          "name": "KIRV"
+        },
+        {
+          "name": "KLR"
+        },
+        {
+          "name": "KMBO"
+        },
+        {
+          "name": "KOWA"
+        },
+        {
+          "name": "KRVT"
+        },
+        {
+          "name": "KSRS"
+        },
+        {
+          "name": "KURK"
+        },
+        {
+          "name": "KVAR"
+        },
+        {
+          "name": "LBTB"
+        },
+        {
+          "name": "LEM"
+        },
+        {
+          "name": "LPAZ"
+        },
+        {
+          "name": "LPIG"
+        },
+        {
+          "name": "LSZ"
+        },
+        {
+          "name": "LVC"
+        },
+        {
+          "name": "LZDM"
+        },
+        {
+          "name": "MA2"
+        },
+        {
+          "name": "MATP"
+        },
+        {
+          "name": "MAW"
+        },
+        {
+          "name": "MBAR"
+        },
+        {
+          "name": "MDP"
+        },
+        {
+          "name": "MDT"
+        },
+        {
+          "name": "MJAR"
+        },
+        {
+          "name": "MKAR"
+        },
+        {
+          "name": "MLR"
+        },
+        {
+          "name": "MMAI"
+        },
+        {
+          "name": "MSKU"
+        },
+        {
+          "name": "MSVF"
+        },
+        {
+          "name": "NEW"
+        },
+        {
+          "name": "NNA"
+        },
+        {
+          "name": "NOA"
+        },
+        {
+          "name": "NRIK"
+        },
+        {
+          "name": "NVAR"
+        },
+        {
+          "name": "NWAO"
+        },
+        {
+          "name": "OBN"
+        },
+        {
+          "name": "OPO"
+        },
+        {
+          "name": "PALK"
+        },
+        {
+          "name": "PCRV"
+        },
+        {
+          "name": "PDAR"
+        },
+        {
+          "name": "PETK"
+        },
+        {
+          "name": "PFO"
+        },
+        {
+          "name": "PLCA"
+        },
+        {
+          "name": "PMG"
+        },
+        {
+          "name": "PMSA"
+        },
+        {
+          "name": "PPT"
+        },
+        {
+          "name": "PSI"
+        },
+        {
+          "name": "PTGA"
+        },
+        {
+          "name": "QSPA"
+        },
+        {
+          "name": "RAO"
+        },
+        {
+          "name": "RAR"
+        },
+        {
+          "name": "RCBR"
+        },
+        {
+          "name": "RES"
+        },
+        {
+          "name": "ROSC"
+        },
+        {
+          "name": "RPN"
+        },
+        {
+          "name": "RPZ"
+        },
+        {
+          "name": "SADO"
+        },
+        {
+          "name": "SCHQ"
+        },
+        {
+          "name": "SDV"
+        },
+        {
+          "name": "SEY"
+        },
+        {
+          "name": "SFJD"
+        },
+        {
+          "name": "SHEM"
+        },
+        {
+          "name": "SIJI"
+        },
+        {
+          "name": "SIV"
+        },
+        {
+          "name": "SJG"
+        },
+        {
+          "name": "SNAA"
+        },
+        {
+          "name": "SONM"
+        },
+        {
+          "name": "SPITS"
+        },
+        {
+          "name": "STKA"
+        },
+        {
+          "name": "SUR"
+        },
+        {
+          "name": "TEIG"
+        },
+        {
+          "name": "TGY"
+        },
+        {
+          "name": "TIXI"
+        },
+        {
+          "name": "TKL"
+        },
+        {
+          "name": "TLY"
+        },
+        {
+          "name": "TORD"
+        },
+        {
+          "name": "TSUM"
+        },
+        {
+          "name": "TXAR"
+        },
+        {
+          "name": "ULM"
+        },
+        {
+          "name": "URZ"
+        },
+        {
+          "name": "USHA"
+        },
+        {
+          "name": "USRK"
+        },
+        {
+          "name": "VAE"
+        },
+        {
+          "name": "VNDA"
+        },
+        {
+          "name": "VRAC"
+        },
+        {
+          "name": "WRA"
+        },
+        {
+          "name": "WSAR"
+        },
+        {
+          "name": "YAK"
+        },
+        {
+          "name": "YBH"
+        },
+        {
+          "name": "YKA"
+        },
+        {
+          "name": "ZALV"
+        }
+      ],
+    "amplitudeMeasurementTypes" : [ 
+        "AMPLITUDE_A5_OVER_2",
+        "AMPLITUDE_A5_OVER_2_OR",
+        "AMPLITUDE_ALR_OVER_2",
+        "AMPLITUDE_ANL_OVER_2",
+        "AMPLITUDE_ANP_OVER_2",
+        "AMPLITUDE_FKSNR",
+        "AMPLITUDE_AMPTLIUDE_LRM0",
+        "AMPLITUDE_noiLRM0",
+        "AMPLITUDE_RMSAMP",
+        "AMPLITUDE_SBSNR",
+        "ROOT_MEAN_SQUARE"
+  ]
+  }

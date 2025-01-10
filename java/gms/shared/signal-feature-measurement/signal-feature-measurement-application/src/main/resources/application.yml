@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: signal-feature-measurement-configuration
+  processing:
+    configuration-names: signal-feature-measurement, signal-feature-measurement-configuration
+  codec:
+    max-in-memory-size: 20MB
+
+server:
+  compression:
+    enabled: true
+    mime-types: "text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json,application/msgpack"
+    min-response-size: 1024
+  servlet:
+    context-path: /signal-feature-measurement-configuration-service
+
+gms:
+  persistence:
+    oracle:
+      account: gms_global_ro
+      unit: gms_station_definition
+
+stationsByFeatureMeasurementTypeConfig: signal-feature-measurement.stations-by-feature-measurement-type
+amplitudeMeasurementConditioningTemplateConfig: global.amplitude-measurement-conditioning-template
+amplitudeMeasurementDefinitionsConfig: signal-feature-measurement.amplitude-measurement-definitions
+
+signalFeatureMeasurementConfiguration:
+  hostname: signal-feature-measurement-configuration-service
+  contextPath: /signal-feature-measurement-configuration
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true
+
+logging:
+  level:
+    _org.springframework.web.servlet.HandlerMapping.Mappings: DEBUG

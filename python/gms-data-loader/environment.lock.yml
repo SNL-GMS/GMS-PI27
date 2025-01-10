@@ -1,0 +1,47 @@
+name: gms-data-loader
+channels:
+  - conda-forge
+dependencies:
+  - _libgcc_mutex=0.1
+  - _openmp_mutex=4.5
+  - argon2-cffi=23.1.0
+  - argon2-cffi-bindings=21.2.0
+  - brotli-python=1.1.0
+  - bzip2=1.0.8
+  - ca-certificates=2023.11.17
+  - certifi=2023.11.17
+  - cffi=1.16.0
+  - charset-normalizer=3.3.2
+  - gmp=6.3.0
+  - idna=3.6
+  - ld_impl_linux-64=2.40
+  - libffi=3.4.2
+  - libgcc-ng=13.2.0
+  - libgomp=13.2.0
+  - libnsl=2.0.1
+  - libsqlite=3.44.2
+  - libstdcxx-ng=13.2.0
+  - libuuid=2.38.1
+  - libxcrypt=4.4.36
+  - libzlib=1.2.13
+  - minio=7.2.3
+  - ncurses=6.4
+  - openssl=3.2.0
+  - pip=23.3.2
+  - pycparser=2.21
+  - pycryptodome=3.20.0
+  - pysocks=1.7.1
+  - python=3.10.13
+  - python_abi=3.10
+  - pyyaml=6.0.1
+  - readline=8.2
+  - requests=2.31.0
+  - setuptools=69.0.3
+  - tk=8.6.13
+  - typing-extensions=4.9.0
+  - typing_extensions=4.9.0
+  - tzdata=2023d
+  - urllib3=2.1.0
+  - wheel=0.42.0
+  - xz=5.2.6
+  - yaml=0.2.5

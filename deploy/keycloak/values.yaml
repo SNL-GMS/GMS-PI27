@@ -1,0 +1,148 @@
+global:
+  # baseDomain specifies the domain name suffix applied to all Ingress hostnames. Set by gmskube.
+  baseDomain: "cluster.example.com"
+
+  # basePort specifies the ingress port to access from outside the cluster. Set by gmskube.
+  basePort: 443
+
+  # imagePullPolicy is the policy used for all images ('Always', 'IfNotPresent', 'Never').
+  imagePullPolicy: "Always"
+
+  # imageRegistry is the Docker image registry URL where all images will be retrieved. Set by gmskube.
+  imageRegistry: "docker-registry.example.com"
+
+  # imageTag is the Docker image tag used when retrieving all CI-built images. Set by gmskube.
+  imageTag: "develop"
+
+  # Whether or not to use istio. Set by gmskube.
+  istio: false
+
+  # Username of the user installing or upgrading the instance. Set by gmskube.
+  user: "UNKNOWN"
+
+
+# namespace LimitRange, can be a valid LimitRangeSpec yaml
+limitRange:
+  enabled: false
+
+# Secrets to copy from other namespaces
+copySecrets:
+  ingress-cert:
+    sourceName: "ingress-default-cert"
+    namespace: "gms"
+    destName: "ingress-cert"
+
+# Configmaps to copy from other namespaces
+copyConfigMaps:
+  ldap-ca-cert:
+    namespace: "gms"
+
+
+keycloakx:
+  # admin password should be overridden with `--set keycloakx.adminPassword=<your password>` else it will be random
+  adminPassword: "{{ uuidv4 }}"
+  cache:
+    stack: "custom"
+  command:
+    # override the command to add the ldap CA certs to the java keystore. This splits each cert into a separate file and
+    # imports each one
+    - "/bin/bash"
+    - "-c"
+    - |
+      cp /usr/lib/jvm/jre/lib/security/cacerts /tmp/cacerts;
+      chmod +w /tmp/cacerts;
+      cat /opt/ldap-ca-cert/sec-ldap.crt | awk 'split_after==1{n++;split_after=0} /-----END CERTIFICATE-----/ {split_after=1} {print > ("/tmp/cert" n ".pem")}';
+      for crt in /tmp/*.pem; do keytool -import -trustcacerts -file $crt -alias "${crt##*/}" -keystore /tmp/cacerts -storepass changeit -noprompt; done;
+      /opt/keycloak/bin/kc.sh start-dev --import-realm;
+  database:
+    vendor: "postgres"
+    hostname: "keycloak-postgresql"
+    port: 5432
+    database: "keycloak"
+    username: "keycloak"
+    existingSecret: "passwords"
+  http:
+    relativePath: "/"
+  image:
+    # repository: quay.io/keycloak/keycloak - set by gmskube
+    # tag: "20.0.0" - set by gmskube
+    pullPolicy: Always
+  import:
+    enabled: false
+  extraEnv: |
+    - name: KEYCLOAK_ADMIN
+      value: "admin"
+    - name: KEYCLOAK_ADMIN_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: passwords
+          key: adminPassword
+    - name: JAVA_OPTS
+      value: >-
+        -XX:+UseContainerSupport
+        -XX:MaxRAMPercentage=50.0
+        -Djava.net.preferIPv4Stack=true
+        -Djava.awt.headless=true
+        -Djavax.net.ssl.trustStore=/tmp/cacerts
+  extraVolumeMounts: |
+    - name: ldap-ca-cert
+      mountPath: /opt/ldap-ca-cert
+    - name: data-import
+      mountPath: /opt/keycloak/data/import
+  extraVolumes: |
+    - name: ldap-ca-cert
+      configMap:
+        name: ldap-ca-cert
+    - name: data-import
+      configMap:
+        name: data-import
+  ingress:
+    enabled: true
+    annotations:
+      nginx.ingress.kubernetes.io/proxy-buffer-size: 128k
+    rules:
+      - host: "{{ .Release.Name }}.{{ .Values.global.baseDomain }}"
+        paths:
+          - path: '{{ tpl .Values.http.relativePath $ | trimSuffix "/" }}/'
+            pathType: Prefix
+    tls:
+      - hosts:
+          - "{{ .Release.Name }}.{{ .Values.global.baseDomain }}"
+        secretName: "ingress-cert"
+  metrics:
+    enabled: false
+  rbac:
+    # note this is automatically disabled for Kubernetes >=1.25
+    create: true
+    rules:
+      - apiGroups:
+        - extensions
+        resourceNames:
+        - default-psp
+        resources:
+        - podsecuritypolicies
+        verbs:
+          - use
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "1024Mi"
+    limits:
+      # cpu: "500m"
+      memory: "1024Mi"
+
+postgresql:
+  image:
+    repository: "gms-common/keycloak-postgresql"
+    # tag: "11.16.0" - set by gmskube
+    pullPolicy: Always
+  serviceAccount:
+    enabled: true
+  psp:
+    # note this is automatically disabled for Kubernetes >=1.25
+    create: true
+  rbac:
+    create: true
+  existingSecret: "passwords"
+  postgresqlUsername: "keycloak"
+  postgresqlDatabase: "keycloak"

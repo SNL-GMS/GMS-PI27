@@ -1,0 +1,65 @@
+# gms-test-environment.yml
+#
+# This environment should include only direct requirements for running any python script in GMS
+# Additions or updated requirements in this file may require a TPS, please check with IA.
+#
+# Please keep these lists in alphabetical order
+# Only install from pip if package is not available in conda-forge channel
+#
+# Note the main channel is NOT available due to anaconda licensing! All packages must
+# come from conda-forge or pip
+#
+# After making any changes to this file, a clean gms environment needs to be created, and the lock file regenerated.
+# Run the script:
+# ./create-python-lock.sh
+#
+
+name: gms
+channels:
+  - conda-forge
+dependencies:
+  - aiohttp=3.9.1
+  - basemap=1.4.0
+  - basemap-data-hires=1.3.2
+  - coverage=7.4.0
+  - cx_oracle=8.3.0
+  - deepdiff=6.7.1
+  - flake8=7.0.0
+  - flask-executor=1.0.0
+  - flask-sqlalchemy=3.0.3
+  - flask=3.0.1
+  - gcovr=5.2.0
+  - gunicorn=21.2.0
+  - ipykernel=6.29.0
+  - ipython=8.20.0
+  - jproperties=2.1.1
+  - jupyter-book=0.15.1
+  - markdown=3.5.2
+  - matplotlib=3.8.2
+  - minio=7.2.3
+  - nb_conda_kernels=2.3.1
+  - notebook=7.0.7
+  - numpy=1.26.3
+  - obspy=1.4.0
+  - openpyxl=3.1.2
+  - pip=23.3.2
+  - proj=9.3.1
+  - pylint=3.0.3
+  - pytest=7.4.4
+  - pytest-mock=3.12.0
+  - python=3.10.13
+  - python-kubernetes=29.0.0
+  - pyyaml=6.0.1
+  - requests=2.31.0
+  - reverse-argparse=1.0.6
+  - rich=13.7.0
+  - sqlalchemy=2.0.25
+  - tenacity=8.2.3
+  - twine=4.0.2
+  - yapf=0.40.1
+  - pip:
+    - etcd3==0.12.0
+    - e1==0.1.2
+    - grpcio==1.44.0  # https://github.com/grpc/grpc/issues/29643
+    - pisces==0.4.2
+    - testcontainers==3.7.1

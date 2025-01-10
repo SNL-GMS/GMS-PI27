@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateRangePicker matches the snapshot 1`] = `
+<div>
+  <div
+    class="date-range-picker"
+    id="date-range-picker-id-1"
+  >
+    <label
+      class="bp5-label bp5-label bp5-inline date-range-picker__label"
+    >
+      Time Range: 2021-01-01 12:59 to 2021-01-01 13:00
+    </label>
+    <div>
+      <button
+        class="bp5-button date-range-picker__apply-button"
+        data-cy="date-range-picker-edit"
+        type="button"
+      >
+        <span
+          class="bp5-button-text"
+        >
+          Edit
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DateRangePicker matches the snapshot with fractional second precision format 1`] = `
+<div>
+  <div
+    class="date-range-picker"
+    id="date-range-picker-id-2"
+  >
+    <label
+      class="bp5-label bp5-label bp5-inline date-range-picker__label"
+    >
+      Time Range: 2021-01-01 12:59:58.000 to 2021-01-01 13:00:00.000
+    </label>
+    <div>
+      <button
+        class="bp5-button date-range-picker__apply-button"
+        data-cy="date-range-picker-edit"
+        type="button"
+      >
+        <span
+          class="bp5-button-text"
+        >
+          Edit
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DateRangePicker matches the snapshot with second precision format 1`] = `
+<div>
+  <div
+    class="date-range-picker"
+    id="date-range-picker-id-3"
+  >
+    <label
+      class="bp5-label bp5-label bp5-inline date-range-picker__label"
+    >
+      Time Range: 2021-01-01 12:59:58 to 2021-01-01 13:00:00
+    </label>
+    <div>
+      <button
+        class="bp5-button date-range-picker__apply-button"
+        data-cy="date-range-picker-edit"
+        type="button"
+      >
+        <span
+          class="bp5-button-text"
+        >
+          Edit
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

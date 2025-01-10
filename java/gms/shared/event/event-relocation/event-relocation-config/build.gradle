@@ -1,0 +1,20 @@
+plugins {
+    id('java-library')
+    id('java-test-fixtures')
+
+}
+
+dependencies {
+    implementation libs.org.apache.commons.commons.math3
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    api project(':event-coi')
+    api project(':event-management-api')
+
+    testImplementation project(':test-utils')
+    //testFixturesApi(platform(libs.org.springframework.boot.spring.boot.dependencies))
+    testImplementation(testFixtures(project(':event-coi')))
+    testFixturesImplementation(testFixtures(project(':event-coi')))
+
+}

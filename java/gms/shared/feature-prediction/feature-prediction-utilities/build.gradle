@@ -1,0 +1,24 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+
+    implementation project(':file-store-utility')
+    implementation project(':station-definition-coi')
+    implementation project(':signal-detection-coi')
+    api project(':common-coi-types')
+    implementation project(":event-coi")
+    api 'com.fasterxml.jackson.core:jackson-databind'
+    implementation project(':java-utilities')
+    implementation libs.org.apache.commons.commons.math3
+
+    // MinIO
+    implementation libs.io.minio.minio
+
+    // Google AutoValue
+    api libs.com.google.guava.guava
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+}

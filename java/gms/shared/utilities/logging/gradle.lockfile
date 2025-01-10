@@ -1,0 +1,27 @@
+# This is a Gradle generated file for dependency locking.
+# Manual edits can break the build and are not advised.
+# This file is expected to be part of source control.
+ch.qos.logback:logback-classic:1.4.11=compileClasspath,runtimeClasspath
+ch.qos.logback:logback-core:1.4.11=compileClasspath,runtimeClasspath
+com.fasterxml.jackson.core:jackson-annotations:2.15.3=compileClasspath,runtimeClasspath
+com.fasterxml.jackson.core:jackson-core:2.15.3=compileClasspath,runtimeClasspath
+com.fasterxml.jackson.core:jackson-databind:2.15.3=compileClasspath,runtimeClasspath
+com.fasterxml.jackson:jackson-bom:2.15.3=compileClasspath,runtimeClasspath
+com.google.auto.value:auto-value-annotations:1.10.1=runtimeClasspath
+com.google.code.findbugs:jsr305:3.0.2=compileClasspath,runtimeClasspath
+com.google.errorprone:error_prone_annotations:2.18.0=compileClasspath,runtimeClasspath
+com.google.guava:failureaccess:1.0.1=compileClasspath,runtimeClasspath
+com.google.guava:guava-parent:32.1.1-jre=compileClasspath,runtimeClasspath
+com.google.guava:guava:32.1.1-jre=compileClasspath,runtimeClasspath
+com.google.j2objc:j2objc-annotations:2.8=compileClasspath
+io.projectreactor:reactor-core:3.6.0=runtimeClasspath
+jakarta.ws.rs:jakarta.ws.rs-api:3.1.0=compileClasspath,runtimeClasspath
+net.logstash.logback:logstash-logback-encoder:7.1.1=compileClasspath,runtimeClasspath
+org.apache.commons:commons-lang3:3.13.0=compileClasspath,runtimeClasspath
+org.apache.commons:commons-math3:3.6.1=runtimeClasspath
+org.checkerframework:checker-qual:3.33.0=compileClasspath,runtimeClasspath
+org.owasp.encoder:encoder:1.2.3=runtimeClasspath
+org.reactivestreams:reactive-streams:1.0.4=runtimeClasspath
+org.slf4j:slf4j-api:2.0.9=compileClasspath,runtimeClasspath
+org.springframework.boot:spring-boot-dependencies:3.2.0=compileClasspath,runtimeClasspath
+empty=annotationProcessor

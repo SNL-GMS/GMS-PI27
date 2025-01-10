@@ -1,0 +1,40 @@
+{
+    "name": "fk-default",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "beamType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "FK"
+            ],
+            "priority": 100
+        }
+    ],
+    "parameters": {
+        "leadDuration": "PT1M",
+        "beamDuration": "PT5M",
+        "orientationAngleToleranceDeg": 5.0,
+        "sampleRateToleranceHz": 0.5,
+        "minWaveformsToBeam": 2,
+        "inputChannelGroups": [
+            "*"
+        ],
+        "inputChannels": [
+            "SHZ",
+            "BHZ",
+            "HHZ",
+            "EHZ",
+            "MHZ"
+        ],
+        "beamDescriptionParams": {
+            "beamSummation": "COHERENT",
+            "beamType": "FK",
+            "samplingType": "NEAREST_SAMPLE",
+            "twoDimensional": true
+        }
+    }
+}

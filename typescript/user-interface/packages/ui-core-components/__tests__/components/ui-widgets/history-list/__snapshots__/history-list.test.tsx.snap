@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`History List History List renders 1`] = `
+<div>
+  <div>
+    <ul
+      class="bp5-menu"
+      role="menu"
+    >
+      <li
+        class=""
+        role="none"
+      >
+        <a
+          class="bp5-menu-item bp5-popover-dismiss"
+          role="menuitem"
+          tabindex="0"
+        >
+          <div
+            class="bp5-text-overflow-ellipsis bp5-fill"
+          >
+            item A
+          </div>
+        </a>
+      </li>
+      <li
+        class="bp5-menu-divider"
+        role="separator"
+      />
+      <li
+        class=""
+        role="none"
+      >
+        <a
+          class="bp5-menu-item bp5-popover-dismiss"
+          role="menuitem"
+          tabindex="0"
+        >
+          <div
+            class="bp5-text-overflow-ellipsis bp5-fill"
+          >
+            item A
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

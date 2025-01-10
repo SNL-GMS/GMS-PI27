@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`signal-detection-waveform-rotation-menu SignalDetectionWaveformRotationMenuItem matches snapshot 1`] = `
+<div>
+  <li
+    class=""
+    role="none"
+  >
+    <a
+      class="bp5-menu-item bp5-popover-dismiss"
+      data-cy="rotate-sd"
+      role="menuitem"
+      tabindex="0"
+    >
+      <div
+        class="bp5-text-overflow-ellipsis bp5-fill"
+      >
+        Rotate waveforms using 1 signal detection
+      </div>
+    </a>
+  </li>
+</div>
+`;

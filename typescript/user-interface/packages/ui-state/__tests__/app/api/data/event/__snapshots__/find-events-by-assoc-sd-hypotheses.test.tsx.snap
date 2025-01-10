@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Find events by associated SD hypotheses addFindEventsByAssociatedSignalDetectionHypothesesMatchReducers builds 1`] = `
+[
+  [Function],
+  [Function],
+  [Function],
+]
+`;
+
+exports[`Find events by associated SD hypotheses addFindEventsByAssociatedSignalDetectionHypothesesMatchReducers builds 2`] = `
+{
+  "queries": {
+    "findEventsByAssociatedSignalDetectionHypotheses": {
+      "stage:AL1-sdIds:20cc9505-efe3-3068-b7d5-59196f37992c": {
+        "stage:AL1-sdIds:20cc9505-efe3-3068-b7d5-59196f37992c": {
+          "arg": undefined,
+          "attempts": undefined,
+          "error": {},
+          "status": "pending",
+          "time": undefined,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Find events by associated SD hypotheses addFindEventsByAssociatedSignalDetectionHypothesesMatchReducers builds 3`] = `
+{
+  "queries": {
+    "findEventsByAssociatedSignalDetectionHypotheses": {
+      "stage:AL1-sdIds:20cc9505-efe3-3068-b7d5-59196f37992c": {
+        "stage:AL1-sdIds:20cc9505-efe3-3068-b7d5-59196f37992c": {
+          "arg": undefined,
+          "attempts": 1,
+          "error": {},
+          "status": "fulfilled",
+          "time": 0.25,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Find events by associated SD hypotheses addFindEventsByAssociatedSignalDetectionHypothesesMatchReducers builds 4`] = `
+{
+  "queries": {
+    "findEventsByAssociatedSignalDetectionHypotheses": {
+      "stage:AL1-sdIds:20cc9505-efe3-3068-b7d5-59196f37992c": {
+        "stage:AL1-sdIds:20cc9505-efe3-3068-b7d5-59196f37992c": {
+          "arg": undefined,
+          "attempts": 2,
+          "error": {},
+          "status": "rejected",
+          "time": 0.25,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Find events by associated SD hypotheses findEventsByAssociatedSignalDetectionHypotheses returns events 1`] = `[Function]`;

@@ -1,0 +1,44 @@
+{
+"channels": [
+    {
+        "name": "STA.CH0.BHZ"
+    },
+    {
+        "name": "STA.BEAM1.BHZ/some-stuff"
+    },
+    {
+        "name": "STA.CH2.SHZ"
+    },
+    {
+        "name": "STA.CH3.BHE"
+    },
+    {
+        "name": "STA.CH4.SHE"
+    },
+    {
+        "name": "STA.CH5.BHZ"
+    },
+    {
+        "name": "STA.BEAM6.BHZ/some-stuff"
+    },
+    {
+        "name": "STA.CH7.SHZ"
+    },
+    {
+        "name": "STA.CH8.BHE"
+    },
+    {
+        "name": "STA.CH9.SHE"
+    },
+    {
+        "name": "STA.CH10.BHZ"
+    }
+ ],
+ "phases": [
+    "P3KPbc",
+    "PnPn",
+    "PKKPbc",
+    "PKP3bc",
+    "Sdiff"
+ ]
+}

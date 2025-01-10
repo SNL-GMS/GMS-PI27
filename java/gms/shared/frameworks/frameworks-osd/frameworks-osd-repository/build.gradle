@@ -1,0 +1,25 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api project(':frameworks-osd-commonobjects')
+    api libs.org.hibernate.orm.hibernate.core
+    
+    implementation project(':metrics')
+    implementation project(':frameworks-utilities-jpa')
+    implementation project(':frameworks-osd-daos')
+    implementation project(':frameworks-osd-api')
+
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    implementation libs.net.jodah.failsafe
+    implementation libs.com.google.guava.guava
+
+    // Testing.
+    testImplementation(testFixtures(project(':db-test-utils')))
+    testImplementation project(':frameworks-osd-testfixtures')
+    testImplementation project(':frameworks-osd-daos')
+
+    testRuntimeOnly libs.ch.qos.logback.logback.classic
+    testRuntimeOnly libs.net.logstash.logback.logstash.logback.encoder
+}

@@ -1,0 +1,77 @@
+{
+    "name": "asar-bhz-filter",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "ASAR"
+            ],
+			"priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelBand",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "B"
+            ],
+			"priority": 80
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelInstrument",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "H"
+            ],
+			"priority": 70
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelOrientation",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "Z"
+            ],
+			"priority": 60
+        },
+		{
+            "constraintType": "STRING",
+            "criterion": "filter",
+            "operator": {
+                "type": "IN",
+                "negated": false
+            },
+            "value": [
+				"Detect",
+				"Onset",
+				"FK"
+            ],
+			"priority": 30
+        }
+    ],
+    "parameters": {
+         "filterDefinition": {
+			"$ref=global.filter-definition": [
+				{
+					"criterion": "name",
+					"value": "0.0 4.2 1 LP non-causal"
+				}
+			]
+		}
+    }
+}

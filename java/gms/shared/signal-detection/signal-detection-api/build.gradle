@@ -1,0 +1,29 @@
+plugins {
+    id 'java-library'
+    alias(libs.plugins.io.swagger.core.v3.swagger.gradle)
+}
+
+dependencies {
+    implementation project(':java-utilities')
+    implementation project(':frameworks-service-interface-base')
+    implementation project(':waveform-api')
+    implementation project(':station-definition-api')
+    implementation project(':signal-enhancement-api')
+
+    api project(':signal-detection-coi')
+    api project(':workflow-coi')
+    api project(':station-definition-coi')
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+    implementation libs.org.apache.commons.commons.lang3
+    api libs.com.fasterxml.jackson.core.jackson.databind
+
+    // Web Client
+    api libs.org.springframework.spring.webflux
+
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':signal-detection-coi')))
+    testImplementation(testFixtures(project(':waveform-coi')))
+    testImplementation project(':signal-enhancement-coi')
+    testImplementation project(':test-utils')
+}

@@ -1,0 +1,27 @@
+.user-preferences__group-title {
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+.user-preferences-dialog {
+  .form-content {
+    @include createFormGrid(60%, 40%);
+  }
+  .gms-group__label + .gms-form-group__content:has(.gms-group__label),
+  .gms-form-group__content--accordion .bp5-collapse-body {
+    @include createFormGrid(60%, 40%);
+  }
+  & .bp5-multi-select {
+    overflow-y: auto;
+    max-height: 5rem;
+  }
+}
+
+.bp5-dialog:has(.user-preferences-dialog__content) {
+  min-width: 550px;
+  .form-value {
+    &:has(.form-value) {
+      max-width: none;
+    }
+  }
+}

@@ -1,0 +1,316 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signal Detection Toolbar should match snapshot 1`] = `
+<div>
+  <div
+    class="toolbar"
+    style="width: 84px;"
+  >
+    <div
+      class="toolbar__left-group"
+    >
+      <div
+        class="toolbar-item toolbar-item__left"
+      >
+        <div
+          class="counter"
+        >
+          <span
+            class="counter__entry"
+            style="--entry-color: tomato;"
+            title="test"
+          >
+            <span
+              class="counter__label"
+            >
+              Total
+            </span>
+            <span
+              class="counter__count "
+            >
+              <span
+                class="counter__count--prefix"
+              >
+                0
+                0
+              </span>
+              <span
+                class="counter__count--main"
+              >
+                0
+              </span>
+            </span>
+          </span>
+          <span
+            class="counter__entry"
+            style="--entry-color: tomato;"
+            title="test"
+          >
+            <span
+              class="counter__label"
+            >
+              Completed
+            </span>
+            <span
+              class="counter__count "
+            >
+              <span
+                class="counter__count--prefix"
+              >
+                0
+                0
+              </span>
+              <span
+                class="counter__count--main"
+              >
+                0
+              </span>
+            </span>
+          </span>
+          <span
+            class="counter__entry"
+            style="--entry-color: tomato;"
+            title="test"
+          >
+            <span
+              class="counter__label"
+            >
+              Deleted
+            </span>
+            <span
+              class="counter__count "
+            >
+              <span
+                class="counter__count--prefix"
+              >
+                0
+                0
+              </span>
+              <span
+                class="counter__count--main"
+              >
+                0
+              </span>
+            </span>
+          </span>
+          <span
+            class="counter__entry"
+            style="--entry-color: tomato;"
+            title="test"
+          >
+            <span
+              class="counter__label"
+            >
+              Open
+            </span>
+            <span
+              class="counter__count "
+            >
+              <span
+                class="counter__count--prefix"
+              >
+                0
+                0
+              </span>
+              <span
+                class="counter__count--main"
+              >
+                0
+              </span>
+            </span>
+          </span>
+          <span
+            class="counter__entry"
+            style="--entry-color: tomato;"
+            title="test"
+          >
+            <span
+              class="counter__label"
+            >
+              Other
+            </span>
+            <span
+              class="counter__count "
+            >
+              <span
+                class="counter__count--prefix"
+              >
+                0
+                0
+              </span>
+              <span
+                class="counter__count--main"
+              >
+                0
+              </span>
+            </span>
+          </span>
+          <span
+            class="counter__entry"
+            style="--entry-color: tomato;"
+            title="test"
+          >
+            <span
+              class="counter__label"
+            >
+              Conflicts
+            </span>
+            <span
+              class="counter__count "
+            >
+              <span
+                class="counter__count--prefix"
+              >
+                0
+                0
+              </span>
+              <span
+                class="counter__count--main"
+              >
+                0
+              </span>
+            </span>
+          </span>
+          <span
+            class="counter__entry"
+            style="--entry-color: tomato;"
+            title="test"
+          >
+            <span
+              class="counter__label"
+            >
+              Unassociated
+            </span>
+            <span
+              class="counter__count "
+            >
+              <span
+                class="counter__count--prefix"
+              >
+                0
+                0
+              </span>
+              <span
+                class="counter__count--main"
+              >
+                0
+              </span>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="toolbar-item toolbar-item__left"
+      >
+        <span
+          aria-expanded="false"
+          aria-haspopup="true"
+          class="bp5-popover-target"
+        >
+          <button
+            class="bp5-button bp5-disabled bp5-align-left"
+            data-cy="selection-information"
+            disabled=""
+            tabindex="-1"
+            title="Selected items within display (double click: deselect all items within display, alt+click: global deselect)"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-multi-select"
+              data-icon="multi-select"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+    <div
+      class="toolbar__center-group"
+    >
+      <div
+        class="toolbar__whitespace"
+        style="width: 84px;"
+      />
+    </div>
+    <div
+      class="toolbar__right-group"
+    >
+      <div
+        class="toolbar-item
+                  "
+      >
+        <div>
+          <div>
+            <button
+              class="bp5-button bp5-align-left toolbar-button"
+              title="Set which detections are visible"
+              type="button"
+            >
+              <span
+                class="bp5-button-text"
+              >
+                <span>
+                  Show Detections
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="bp5-icon bp5-icon-standard bp5-icon-caret-down"
+                  data-icon="caret-down"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="toolbar-item
+                  "
+      >
+        <div>
+          <div>
+            <button
+              class="bp5-button bp5-align-left toolbar-button"
+              title="Set which columns are visible"
+              type="button"
+            >
+              <span
+                class="bp5-button-text"
+              >
+                <span>
+                  Show Columns
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="bp5-icon bp5-icon-standard bp5-icon-caret-down"
+                  data-icon="caret-down"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="toolbar-item
+                  "
+      >
+        <div>
+          <button
+            class="bp5-button bp5-align-left toolbar-button"
+            data-cy="btn-create-event"
+            title="Create new event from selected signal detections or virtual event when no signal detections selected (hotkey: c)"
+            type="button"
+          >
+            <span
+              class="bp5-button-text"
+            >
+              <span>
+                Create Event
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

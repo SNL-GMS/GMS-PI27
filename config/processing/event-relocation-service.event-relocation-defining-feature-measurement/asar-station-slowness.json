@@ -1,0 +1,54 @@
+{
+    "name": "asar-station-slowness",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "ASAR"
+            ],
+            "priority": 100 
+
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channel",
+            "operator": {
+                "type": "IN",
+                "negated": false
+            },
+            "value": [
+                "SHZ",
+                "BHZ"
+            ],
+            "priority": 90 
+
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "phaseType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "P"
+            ],
+            "priority": 80 
+
+        }
+    ],
+    "parameters": {
+        "definingFeatureByFeatureMeasurementType": {
+            "SLOWNESS": {
+                "analystOverridable": true,
+                "defining": true,
+                "systemOverridable": true
+            }
+        }
+    }
+}

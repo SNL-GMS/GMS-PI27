@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Get events by time build a builder using addGetEventsWithDetectionsAndSegmentsByTimeMatchReducers 1`] = `
+[
+  [Function],
+  [Function],
+  [Function],
+]
+`;
+
+exports[`Get events by time build a builder using addGetEventsWithDetectionsAndSegmentsByTimeMatchReducers 2`] = `
+{
+  "channelSegments": [
+    {
+      "channelName": "stationName1",
+    },
+  ],
+  "events": [
+    {
+      "id": "eventID1",
+    },
+  ],
+  "queries": {
+    "getEventsWithDetectionsAndSegmentsByTime": {
+      "startTime:123456489-endTime:123456789;stage:mockStageId": {
+        "startTime:123456489-endTime:123456789;stage:mockStageId": {
+          "arg": {},
+          "attempts": undefined,
+          "error": {},
+          "status": "pending",
+          "time": undefined,
+        },
+      },
+    },
+  },
+  "signalDetections": [
+    {
+      "id": "sdID1",
+      "station": {
+        "name": "stationName1",
+      },
+    },
+  ],
+}
+`;
+
+exports[`Get events by time build a builder using addGetEventsWithDetectionsAndSegmentsByTimeMatchReducers 3`] = `
+{
+  "channelSegments": [
+    {
+      "channelName": "stationName1",
+    },
+  ],
+  "events": [
+    {
+      "id": "eventID1",
+    },
+  ],
+  "queries": {
+    "getEventsWithDetectionsAndSegmentsByTime": {
+      "startTime:123456489-endTime:123456789;stage:mockStageId": {
+        "startTime:123456489-endTime:123456789;stage:mockStageId": {
+          "arg": {},
+          "attempts": 1,
+          "error": {},
+          "status": "fulfilled",
+          "time": 0.25,
+        },
+      },
+    },
+  },
+  "signalDetections": [
+    {
+      "id": "sdID1",
+      "station": {
+        "name": "stationName1",
+      },
+    },
+  ],
+}
+`;
+
+exports[`Get events by time build a builder using addGetEventsWithDetectionsAndSegmentsByTimeMatchReducers 4`] = `
+{
+  "channelSegments": [
+    {
+      "channelName": "stationName1",
+    },
+  ],
+  "events": [
+    {
+      "id": "eventID1",
+    },
+  ],
+  "queries": {
+    "getEventsWithDetectionsAndSegmentsByTime": {
+      "startTime:123456489-endTime:123456789;stage:mockStageId": {
+        "startTime:123456489-endTime:123456789;stage:mockStageId": {
+          "arg": {},
+          "attempts": 2,
+          "error": {},
+          "status": "rejected",
+          "time": 0.25,
+        },
+      },
+    },
+  },
+  "signalDetections": [
+    {
+      "id": "sdID1",
+      "station": {
+        "name": "stationName1",
+      },
+    },
+  ],
+}
+`;

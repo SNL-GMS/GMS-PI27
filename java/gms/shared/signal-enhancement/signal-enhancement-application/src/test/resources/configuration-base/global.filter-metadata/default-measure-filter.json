@@ -1,0 +1,28 @@
+{
+    "name": "default-amplitude-filter",
+    "constraints": [
+       {
+            "constraintType": "STRING",
+            "criterion": "filter",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "Amplitude"
+            ],
+			"priority": 30
+        }
+    ],
+    "parameters": {
+        "filterDefinition": {
+			"$ref=global.filter-definition": [
+				{
+					"criterion": "name",
+					"value": "2.0 5.0 3 BP causal"
+				}
+			]
+		}
+    }
+}
+

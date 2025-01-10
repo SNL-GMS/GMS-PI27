@@ -1,0 +1,89 @@
+#! /bin/bash
+
+# Create some variables
+INSTANCE="$1"
+# Get the Kubernetes Cluster that the user is currently configured for...
+KUBERNETES_CLUSTER=$(kubectl config view -o jsonpath='{.current-context}')
+
+
+# Functions:
+# Print output if something goes wrong or if help is requested
+print_usage() {
+    printf "
+Usage:     kafkaq (required)     <instance>
+                  (optional) one or more kafka queues
+\n"
+}
+
+# Print output if we can't find the instance
+instance_not_found() {
+    printf "
+That Instance: \e[1m$INSTANCE\e[0m,was not found on this cluster.
+
+You are currently working on \e[1m${KUBERNETES_CLUSTER}\e[0m.  Do you need to run kubeconfig and align to a different cluster?
+
+Available instances on this cluster are:"
+#    docker stack ls | grep Swarm |  awk '{print $1;}'
+     gmskube ls | tail -n +5 | awk '{print $1;}'
+}
+
+# If the user is not currently configured for any kubernetes cluster...
+cluster_not_configured() {
+    printf "
+Cluster not identified.   Did you run kubeconfig in this terminal yet?
+
+Please run kubeconfig again and then rerun get-stations.
+
+Example:  kubeconfig fin \n\n"
+}
+
+
+
+# Actual work of the function
+dokafkaq () {
+    clusterName=$1
+    kafkaGroup=" --all-groups"
+    shift
+    if [ "$#" != "0" ]; then
+        kafkaGroup=""
+        while (( "$#" )); do
+	        kafkaGroup="$kafkaGroup --group $1"
+            shift
+        done
+    fi
+    kubectl -n $clusterName exec kafka-0 -c kafka -- kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe $kafkaGroup
+}
+
+
+# Main body of the script...
+
+# If we have no argments then print Usage and exit
+if [[ -z $1 ]]; then
+    print_usage
+    exit 0
+fi
+
+
+# If the KUBERNETES_CLUSTER is empty, then the user has not yet run kubeconfig.
+if [ "$KUBERNETES_CLUSTER" = "" ]; then
+    cluster_not_configured
+    exit 1
+fi
+
+# Is INSTANCE set?
+if [ -z "$INSTANCE" ]; then
+    echo ""
+    echo "Instance must be specified: "
+    echo "The instance name is required to be the first argument."
+    exit 1
+fi
+
+# This test is too slow.   Comment this out.   In tests, this doubles the time to execute the script.
+## If there is no ID, then inform no instance found and print available instances
+#if ! gmskube ls $INSTANCE; then
+#    instance_not_found
+#    exit 1
+#fi
+
+# Query the fafka queues
+dokafkaq $@

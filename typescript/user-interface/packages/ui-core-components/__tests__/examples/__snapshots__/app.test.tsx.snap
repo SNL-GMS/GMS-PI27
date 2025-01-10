@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a component 1`] = `
+<div>
+  <div
+    id="app-content"
+  >
+    <div
+      class="bp5-dark"
+      style="height: 100%; width: 100%; padding: 0.5rem; color: rgb(171, 179, 191);"
+    >
+      <div
+        class="bp5-button-group bp5-minimal"
+      >
+        <button
+          class="bp5-button"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="bp5-icon bp5-icon-standard bp5-icon-home"
+            data-icon="home"
+          />
+          <span
+            class="bp5-button-text"
+          >
+            <a
+              href="#/"
+            >
+              Home
+            </a>
+          </span>
+        </button>
+      </div>
+      <hr />
+      <div>
+        <div>
+          <h3
+            class="bp5-heading"
+          >
+            Examples
+          </h3>
+          <p>
+            If this project is cloned or downloaded, these examples can be loaded as files in the browser. Otherwise, peruse the source code for ideas on how to use the components in UI Core Components.
+          </p>
+          <h3
+            class="bp5-heading"
+          >
+            Documentation
+          </h3>
+          <p>
+            Currently, the only documentation is on an internal wiki.
+          </p>
+        </div>
+        <br />
+        <div>
+          <h4
+            class="bp5-heading"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-properties"
+              data-icon="properties"
+            />
+            <a
+              href="#/DropDownExample"
+            >
+               Drop Down Example
+            </a>
+          </h4>
+          <p>
+            Select items from a dropdown populated by an enum.
+          </p>
+          <h4
+            class="bp5-heading"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-time"
+              data-icon="time"
+            />
+            <a
+              href="#/FilterableOptionListExample"
+            >
+               FilterableOptionList Example
+            </a>
+          </h4>
+          <p>
+            You literally select things from a filterable list
+          </p>
+          <h4
+            class="bp5-heading"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-application"
+              data-icon="application"
+            />
+            <a
+              href="#/FormNoInput"
+            >
+               Form No Input Example
+            </a>
+          </h4>
+          <p>
+            A form that does not accept input, but uses form features such as showing extra content and having multiple panels.
+          </p>
+          <h4
+            class="bp5-heading"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-application"
+              data-icon="application"
+            />
+            <a
+              href="#/FormSubmittable"
+            >
+               Form Example
+            </a>
+          </h4>
+          <p>
+            A form that accepts input.
+          </p>
+          <h4
+            class="bp5-heading"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-panel-table"
+              data-icon="panel-table"
+            />
+            <a
+              href="#/Table"
+            >
+               Table Example
+            </a>
+          </h4>
+          <p>
+            Basic introduction to using the Table component.
+          </p>
+          <h4
+            class="bp5-heading"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-time"
+              data-icon="time"
+            />
+            <a
+              href="#/TimePickerExample"
+            >
+               Time Picker Example
+            </a>
+          </h4>
+          <p>
+            Inputs date. Requires a valid date string
+          </p>
+          <h4
+            class="bp5-heading"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-menu"
+              data-icon="menu"
+            />
+            <a
+              href="#/ToolbarExample"
+            >
+               Toolbar Example
+            </a>
+          </h4>
+          <p>
+            Resizeable toolbar that inteeligently handles overflow
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

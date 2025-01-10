@@ -1,0 +1,26 @@
+.create-event {
+  &__dialog-body {
+    padding: 8px 12px 8px 12px;
+    overflow: inherit;
+  }
+  &__dialog .form-value {
+    min-width: 270px;
+  }
+  &__error {
+    color: #ffffff;
+    justify-content: right;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100%;
+    & > [icon*='error'] {
+      color: #fd0200;
+    }
+
+    &-text {
+      width: 100%;
+    }
+  }
+}

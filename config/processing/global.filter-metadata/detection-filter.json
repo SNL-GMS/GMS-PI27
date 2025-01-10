@@ -1,0 +1,27 @@
+{
+    "name": "detection-filter",
+    "constraints": [
+       {
+            "constraintType": "STRING",
+            "criterion": "filter",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "Detect"
+            ],
+			"priority": 30
+        }
+    ],
+    "parameters": {
+        "filterDefinition": {
+			"$ref=global.filter-definition": [
+				{
+					"criterion": "name",
+					"value": "0.5 4.0 3 BP causal"
+				}
+			]
+		}
+    }
+}

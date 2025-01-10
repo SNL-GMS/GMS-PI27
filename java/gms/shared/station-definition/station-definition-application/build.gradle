@@ -1,0 +1,45 @@
+plugins {
+    id('java')
+    alias(libs.plugins.org.springframework.boot)
+    id('com.google.cloud.tools.jib')
+}
+
+dependencies {
+
+    implementation project(':common-coi-types')
+    implementation project(':frameworks-service-generator')
+    implementation project(':frameworks-configuration-repository')
+    implementation project(':frameworks-configuration-commonobjects')
+    implementation project(':frameworks-control')
+    implementation project(':station-definition-api')
+    implementation project(':station-definition-dao')
+    implementation project(':station-definition-converter')
+    implementation project(':station-definition-repository')
+    implementation project(':station-definition-accessor')
+    implementation project(':caching-utils')
+
+    // Google AutoValue
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    //spring
+    implementation project(':spring-framework-utilities')
+    implementation project(':spring-persistence-oracle')
+    implementation libs.org.springframework.boot.spring.boot.starter.actuator
+    implementation libs.org.springframework.boot.spring.boot.starter.web
+    implementation libs.org.springdoc.springdoc.openapi.starter.webmvc.ui
+
+    //Retry
+    implementation libs.net.jodah.failsafe
+
+    // Ignite cache libs
+    implementation libs.org.apache.ignite.ignite.core
+    implementation libs.org.apache.ignite.ignite.slf4j
+
+    //logging
+    runtimeOnly libs.net.logstash.logback.logstash.logback.encoder
+
+    // unit testing dependencies
+    testImplementation libs.org.springframework.boot.spring.boot.starter.test
+    testImplementation project(':spring-framework-utilities').sourceSets.test.output
+}

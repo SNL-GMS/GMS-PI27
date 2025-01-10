@@ -1,0 +1,29 @@
+{
+    "name": "default-mkar",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "MKAR"
+            ],
+            "priority": 100
+        }
+    ],
+    "parameters": {
+        "measuredChannel": "MKAR.beam.SHZ",
+        "filterDefinition": {
+            "$ref=global.filter-definition": [
+                {
+                    "criterion": "name",
+                    "value": "0.8 4.5 3 BP causal"
+                }
+            ] 
+        }
+    }
+}
+

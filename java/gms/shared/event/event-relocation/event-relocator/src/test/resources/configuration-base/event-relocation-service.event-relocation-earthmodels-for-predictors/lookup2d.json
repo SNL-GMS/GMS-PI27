@@ -1,0 +1,19 @@
+{
+    "name": "lookup2d",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "predictor",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "lookup2d"
+            ]
+        }
+    ],
+    "parameters": {
+        "earthModel": "ak135"
+    }
+}

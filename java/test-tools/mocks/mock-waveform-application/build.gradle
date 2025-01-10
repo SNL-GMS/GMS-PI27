@@ -1,0 +1,30 @@
+plugins {
+    id('application')
+    id('com.google.cloud.tools.jib')
+    alias(libs.plugins.io.swagger.core.v3.swagger.gradle)
+}
+
+mainClassName = "gms.testtools.mockwaveform.application.MockWaveformApplication"
+
+dependencies {
+    implementation 'gms:waveform-api:LATEST'
+    implementation 'gms:waveform-coi:LATEST'
+    implementation 'gms:java-utilities:LATEST'
+    implementation 'gms:station-definition-accessor:LATEST'
+    implementation 'gms:station-definition-converter:LATEST'
+    implementation 'gms:frameworks-service-interface-base:LATEST'
+    implementation 'gms:frameworks-http-service-library:LATEST'
+    implementation 'gms:frameworks-service-generator:LATEST'
+
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    implementation libs.org.apache.commons.commons.lang3
+    implementation libs.com.fasterxml.jackson.core.jackson.databind
+    implementation libs.com.google.guava.guava
+
+    // Testing.
+    testImplementation(testFixtures('gms:station-definition-coi:LATEST'))
+    testImplementation(testFixtures('gms:waveform-coi:LATEST'))
+    testImplementation 'gms:frameworks-osd-testfixtures:LATEST'
+}

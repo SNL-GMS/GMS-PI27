@@ -1,0 +1,347 @@
+{
+  "id": "37cf9175-5d5e-3a87-ba75-081634e75ca4",
+  "monitoringOrganization": "GMS",
+  "signalDetectionHypotheses": [
+    {
+      "id": {
+        "signalDetectionId": "37cf9175-5d5e-3a87-ba75-081634e75ca4",
+        "id": "8c32ee7e-1e81-357b-9f1d-5af3942515c9"
+      },
+      "parentSignalDetectionHypothesis": null,
+      "deleted": false,
+      "monitoringOrganization": "GMS",
+      "featureMeasurements": [
+        {
+          "channel": {
+            "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+            "effectiveAt": "2019-01-05T17:20:37.300Z"
+          },
+          "measuredChannelSegment": {
+            "id": {
+              "channel": {
+                "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+                "effectiveAt": "2019-01-05T17:20:37.300Z"
+              },
+              "startTime": "2019-01-05T17:20:37.300Z",
+              "endTime": "2019-01-05T17:25:37.250Z",
+              "creationTime": "2019-01-05T17:20:37.300Z"
+            },
+            "units": "UNITLESS",
+            "timeseriesType": "WAVEFORM",
+            "timeseries": [
+              {
+                "type": "WAVEFORM",
+                "startTime": "2019-01-05T17:20:37.300Z",
+                "endTime": "2019-01-05T17:25:37.250Z",
+                "sampleRateHz": 20,
+                "sampleCount": 1,
+                "samples": [ 1.0 ]
+              }
+            ],
+            "maskedBy": [],
+            "missingInputChannels": []
+          },
+          "featureMeasurementType": "PHASE",
+          "measurementValue": {
+            "value": "P",
+            "confidence": null,
+            "referenceTime": "2019-01-05T17:21:37.250Z"
+          },
+          "snr": null
+        },
+        {
+          "channel": {
+            "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+            "effectiveAt": "2019-01-05T17:20:37.300Z"
+          },
+          "measuredChannelSegment": {
+            "id": {
+              "channel": {
+                "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+                "effectiveAt": "2019-01-05T17:20:37.300Z"
+              },
+              "startTime": "2019-01-05T17:20:37.300Z",
+              "endTime": "2019-01-05T17:25:37.250Z",
+              "creationTime": "2019-01-05T17:20:37.300Z"
+            },
+            "units": "UNITLESS",
+            "timeseriesType": "WAVEFORM",
+            "timeseries": [
+              {
+                "type": "WAVEFORM",
+                "startTime": "2019-01-05T17:20:37.300Z",
+                "endTime": "2019-01-05T17:25:37.250Z",
+                "sampleRateHz": 20,
+                "sampleCount": 1,
+                "samples": [ 1.0 ]
+              }
+            ],
+            "maskedBy": [],
+            "missingInputChannels": []
+          },
+          "featureMeasurementType": "RECEIVER_TO_SOURCE_AZIMUTH",
+          "measurementValue": {
+            "referenceTime": null,
+            "measuredValue": {
+              "value": 51.526108,
+              "standardDeviation": 3.3951174,
+              "units": "DEGREES"
+            }
+          },
+          "snr": null
+        },
+        {
+          "channel": {
+            "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+            "effectiveAt": "2019-01-05T17:20:37.300Z"
+          },
+          "measuredChannelSegment": {
+            "id": {
+              "channel": {
+                "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+                "effectiveAt": "2019-01-05T17:20:37.300Z"
+              },
+              "startTime": "2019-01-05T17:20:37.300Z",
+              "endTime": "2019-01-05T17:25:37.250Z",
+              "creationTime": "2019-01-05T17:20:37.300Z"
+            },
+            "units": "UNITLESS",
+            "timeseriesType": "WAVEFORM",
+            "timeseries": [
+              {
+                "type": "WAVEFORM",
+                "startTime": "2019-01-05T17:20:37.300Z",
+                "endTime": "2019-01-05T17:25:37.250Z",
+                "sampleRateHz": 20,
+                "sampleCount": 1,
+                "samples": [ 1.0 ]
+              }
+            ],
+            "maskedBy": [],
+            "missingInputChannels": []
+          },
+          "featureMeasurementType": "SLOWNESS",
+          "measurementValue": {
+            "referenceTime": null,
+            "measuredValue": {
+              "value": 8.9099588,
+              "standardDeviation": 0.53,
+              "units": "SECONDS_PER_DEGREE"
+            }
+          },
+          "snr": null
+        },
+        {
+          "channel": {
+            "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+            "effectiveAt": "2019-01-05T17:20:37.300Z"
+          },
+          "measuredChannelSegment": {
+            "id": {
+              "channel": {
+                "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+                "effectiveAt": "2019-01-05T17:20:37.300Z"
+              },
+              "startTime": "2019-01-05T17:20:37.300Z",
+              "endTime": "2019-01-05T17:25:37.250Z",
+              "creationTime": "2019-01-05T17:20:37.300Z"
+            },
+            "units": "UNITLESS",
+            "timeseriesType": "WAVEFORM",
+            "timeseries": [
+              {
+                "type": "WAVEFORM",
+                "startTime": "2019-01-05T17:20:37.300Z",
+                "endTime": "2019-01-05T17:25:37.250Z",
+                "sampleRateHz": 20,
+                "sampleCount": 1,
+                "samples": [ 1.0 ]
+              }
+            ],
+            "maskedBy": [],
+            "missingInputChannels": []
+          },
+          "featureMeasurementType": "LONG_PERIOD_FIRST_MOTION",
+          "measurementValue": {
+            "value": "INDETERMINATE",
+            "confidence": null,
+            "referenceTime": "2019-01-05T17:21:37.250Z"
+          },
+          "snr": null
+        },
+        {
+          "channel": {
+            "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+            "effectiveAt": "2019-01-05T17:20:37.300Z"
+          },
+          "measuredChannelSegment": {
+            "id": {
+              "channel": {
+                "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+                "effectiveAt": "2019-01-05T17:20:37.300Z"
+              },
+              "startTime": "2019-01-05T17:20:37.300Z",
+              "endTime": "2019-01-05T17:25:37.250Z",
+              "creationTime": "2019-01-05T17:20:37.300Z"
+            },
+            "units": "UNITLESS",
+            "timeseriesType": "WAVEFORM",
+            "timeseries": [
+              {
+                "type": "WAVEFORM",
+                "startTime": "2019-01-05T17:20:37.300Z",
+                "endTime": "2019-01-05T17:25:37.250Z",
+                "sampleRateHz": 20,
+                "sampleCount": 1,
+                "samples": [ 1.0 ]
+              }
+            ],
+            "maskedBy": [],
+            "missingInputChannels": []
+          },
+          "featureMeasurementType": "ARRIVAL_TIME",
+          "measurementValue": {
+            "arrivalTime": {
+              "value": "2019-01-05T17:21:37.250Z",
+              "standardDeviation": "PT1.443S"
+            },
+            "travelTime": null
+          },
+          "snr": {
+            "value": 5.9805093,
+            "standardDeviation": null,
+            "units": "DECIBELS"
+          }
+        },
+        {
+          "channel": {
+            "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+            "effectiveAt": "2019-01-05T17:20:37.300Z"
+          },
+          "measuredChannelSegment": {
+            "id": {
+              "channel": {
+                "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+                "effectiveAt": "2019-01-05T17:20:37.300Z"
+              },
+              "startTime": "2019-01-05T17:20:37.300Z",
+              "endTime": "2019-01-05T17:25:37.250Z",
+              "creationTime": "2019-01-05T17:20:37.300Z"
+            },
+            "units": "UNITLESS",
+            "timeseriesType": "WAVEFORM",
+            "timeseries": [
+              {
+                "type": "WAVEFORM",
+                "startTime": "2019-01-05T17:20:37.300Z",
+                "endTime": "2019-01-05T17:25:37.250Z",
+                "sampleRateHz": 20,
+                "sampleCount": 1,
+                "samples": [ 1.0 ]
+              }
+            ],
+            "maskedBy": [],
+            "missingInputChannels": []
+          },
+          "featureMeasurementType": "RECTILINEARITY",
+          "measurementValue": {
+            "referenceTime": null,
+            "measuredValue": {
+              "value": -1.0,
+              "standardDeviation": null,
+              "units": "UNITLESS"
+            }
+          },
+          "snr": null
+        },
+        {
+          "channel": {
+            "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+            "effectiveAt": "2019-01-05T17:20:37.300Z"
+          },
+          "measuredChannelSegment": {
+            "id": {
+              "channel": {
+                "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+                "effectiveAt": "2019-01-05T17:20:37.300Z"
+              },
+              "startTime": "2019-01-05T17:20:37.300Z",
+              "endTime": "2019-01-05T17:25:37.250Z",
+              "creationTime": "2019-01-05T17:20:37.300Z"
+            },
+            "units": "UNITLESS",
+            "timeseriesType": "WAVEFORM",
+            "timeseries": [
+              {
+                "type": "WAVEFORM",
+                "startTime": "2019-01-05T17:20:37.300Z",
+                "endTime": "2019-01-05T17:25:37.250Z",
+                "sampleRateHz": 20,
+                "sampleCount": 1,
+                "samples": [ 1.0 ]
+              }
+            ],
+            "maskedBy": [],
+            "missingInputChannels": []
+          },
+          "featureMeasurementType": "EMERGENCE_ANGLE",
+          "measurementValue": {
+            "referenceTime": null,
+            "measuredValue": {
+              "value": -1.0,
+              "standardDeviation": null,
+              "units": "DEGREES"
+            }
+          },
+          "snr": null
+        },
+        {
+          "channel": {
+            "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+            "effectiveAt": "2019-01-05T17:20:37.300Z"
+          },
+          "measuredChannelSegment": {
+            "id": {
+              "channel": {
+                "name": "ASAR.beam.SHZ/beam,fk,coherent/steer,az_51.526deg,slow_8.910s_per_deg/8465d4f8-801d-3f94-b87a-7178fc8048cd",
+                "effectiveAt": "2019-01-05T17:20:37.300Z"
+              },
+              "startTime": "2019-01-05T17:20:37.300Z",
+              "endTime": "2019-01-05T17:25:37.250Z",
+              "creationTime": "2019-01-05T17:20:37.300Z"
+            },
+            "units": "UNITLESS",
+            "timeseriesType": "WAVEFORM",
+            "timeseries": [
+              {
+                "type": "WAVEFORM",
+                "startTime": "2019-01-05T17:20:37.300Z",
+                "endTime": "2019-01-05T17:25:37.250Z",
+                "sampleRateHz": 20,
+                "sampleCount": 1,
+                "samples": [ 1.0 ]
+              }
+            ],
+            "maskedBy": [],
+            "missingInputChannels": []
+          },
+          "featureMeasurementType": "SHORT_PERIOD_FIRST_MOTION",
+          "measurementValue": {
+            "value": "INDETERMINATE",
+            "confidence": null,
+            "referenceTime": "2019-01-05T17:21:37.250Z"
+          },
+          "snr": null
+        }
+      ],
+      "station": {
+        "name": "ASAR",
+        "effectiveAt": "2019-01-05T17:21:37.250Z"
+      }
+    }
+  ],
+  "station": {
+    "name": "ASAR",
+    "effectiveAt": "2019-01-05T17:21:37.250Z"
+  }
+}

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stage Expansion Button matches snapshot 1`] = `
+<body>
+  <div>
+    <button
+      class="bp5-button stage-row__expand-button"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="bp5-icon bp5-icon-standard bp5-icon-small-plus"
+        data-icon="small-plus"
+      />
+    </button>
+  </div>
+</body>
+`;

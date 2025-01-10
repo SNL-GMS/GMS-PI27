@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: event-relocator-path-config
+  annotations:
+    "helm.sh/resource-policy": keep
+data:
+  event-relocator: {{ .Values.eventRelocatorPath | quote }}

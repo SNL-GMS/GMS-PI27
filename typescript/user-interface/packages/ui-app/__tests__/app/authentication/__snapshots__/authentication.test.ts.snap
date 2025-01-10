@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ian-authentication authenticateWith('test') should return an authenticated session 1`] = `
+{
+  "authenticated": true,
+  "authenticationCheckComplete": true,
+  "failedToConnect": false,
+  "userName": "test",
+}
+`;
+
+exports[`ian-authentication authenticateWith() should return an authenticated session 1`] = `
+{
+  "authenticated": true,
+  "authenticationCheckComplete": true,
+  "failedToConnect": false,
+  "userName": "username",
+}
+`;
+
+exports[`ian-authentication authenticateWith() should return an unauthenticated session 1`] = `
+{
+  "authenticated": false,
+  "authenticationCheckComplete": true,
+  "failedToConnect": false,
+  "userName": "",
+}
+`;
+
+exports[`ian-authentication checkIsAuthenticated should return an authenticated session 1`] = `
+{
+  "authenticated": true,
+  "authenticationCheckComplete": true,
+  "failedToConnect": false,
+  "userName": "username",
+}
+`;
+
+exports[`ian-authentication checkIsAuthenticated should return an unauthenticated session 1`] = `
+{
+  "authenticated": false,
+  "authenticationCheckComplete": true,
+  "failedToConnect": false,
+  "userName": "",
+}
+`;
+
+exports[`ian-authentication logout should call back with an unauthenticated session 1`] = `
+{
+  "authenticated": false,
+  "authenticationCheckComplete": true,
+  "failedToConnect": false,
+  "userName": "default",
+}
+`;

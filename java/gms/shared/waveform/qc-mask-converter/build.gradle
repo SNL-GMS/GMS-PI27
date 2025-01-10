@@ -1,0 +1,33 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation project(':qc-mask-dao')
+    implementation project(':waveform-api')
+    implementation project(':waveform-coi')
+    implementation project(':waveform-converter') 
+
+    // ignite
+    api libs.org.apache.ignite.ignite.core
+    api libs.org.apache.ignite.ignite.slf4j
+
+    //Google autovalue
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    //Spring dependencies
+    implementation libs.com.google.guava.guava
+
+    implementation project(':metrics')
+    implementation project(':frameworks-utilities-jpa')
+    implementation project(':caching-utils')
+    implementation project(':java-utilities')
+    implementation project(':frameworks-configuration-repository')
+
+
+    // Testing.
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation project(':test-utils')
+    testImplementation libs.com.h2database.h2
+}

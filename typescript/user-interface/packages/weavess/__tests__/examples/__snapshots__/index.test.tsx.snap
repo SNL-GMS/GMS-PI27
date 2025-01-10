@@ -1,0 +1,330 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a component 1`] = `
+<div
+  id="app-content"
+>
+  <div
+    className="bp5-dark"
+    style={
+      {
+        "color": "#ABB3BF",
+        "height": "100%",
+        "padding": "0.5rem",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="bp5-button-group bp5-minimal"
+    >
+      <button
+        className="bp5-button"
+        disabled={false}
+        onBlur={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="button"
+      >
+        <span
+          aria-hidden={true}
+          className="bp5-icon bp5-icon-standard bp5-icon-home"
+          data-icon="home"
+        />
+        <span
+          className="bp5-button-text"
+        >
+          <a
+            href="#/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </span>
+      </button>
+      <button
+        className="bp5-button"
+        disabled={false}
+        onBlur={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="button"
+      >
+        <span
+          aria-hidden={true}
+          className="bp5-icon bp5-icon-standard bp5-icon-chart"
+          data-icon="chart"
+        />
+        <span
+          className="bp5-button-text"
+        >
+          <a
+            href="#/WeavessExample"
+            onClick={[Function]}
+          >
+             Weavess Example
+          </a>
+        </span>
+      </button>
+      <button
+        className="bp5-button"
+        disabled={false}
+        onBlur={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="button"
+      >
+        <span
+          aria-hidden={true}
+          className="bp5-icon bp5-icon-standard bp5-icon-chart"
+          data-icon="chart"
+        />
+        <span
+          className="bp5-button-text"
+        >
+          <a
+            href="#/WeavessFlatLineExample"
+            onClick={[Function]}
+          >
+             Weavess Flat Line Example
+          </a>
+        </span>
+      </button>
+      <button
+        className="bp5-button"
+        disabled={false}
+        onBlur={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="button"
+      >
+        <span
+          aria-hidden={true}
+          className="bp5-icon bp5-icon-standard bp5-icon-chart"
+          data-icon="chart"
+        />
+        <span
+          className="bp5-button-text"
+        >
+          <a
+            href="#/WeavessLineChartExample"
+            onClick={[Function]}
+          >
+             Weavess Line Chart Example
+          </a>
+        </span>
+      </button>
+      <button
+        className="bp5-button"
+        disabled={false}
+        onBlur={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="button"
+      >
+        <span
+          aria-hidden={true}
+          className="bp5-icon bp5-icon-standard bp5-icon-multi-select"
+          data-icon="multi-select"
+        />
+        <span
+          className="bp5-button-text"
+        >
+          <a
+            href="#/MultipleDisplaysExample"
+            onClick={[Function]}
+          >
+             Multiple Displays Example
+          </a>
+        </span>
+      </button>
+      <button
+        className="bp5-button"
+        disabled={false}
+        onBlur={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="button"
+      >
+        <span
+          aria-hidden={true}
+          className="bp5-icon bp5-icon-standard bp5-icon-timeline-events"
+          data-icon="timeline-events"
+        />
+        <span
+          className="bp5-button-text"
+        >
+          <a
+            href="#/EventsExample"
+            onClick={[Function]}
+          >
+             Events
+          </a>
+        </span>
+      </button>
+      <button
+        className="bp5-button"
+        disabled={false}
+        onBlur={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="button"
+      >
+        <span
+          aria-hidden={true}
+          className="bp5-icon bp5-icon-standard bp5-icon-record"
+          data-icon="record"
+        />
+        <span
+          className="bp5-button-text"
+        >
+          <a
+            href="#/RecordSectionExample"
+            onClick={[Function]}
+          >
+             Record Section Example
+          </a>
+        </span>
+      </button>
+    </div>
+    <hr />
+    <div>
+      <div>
+        <h3
+          className="bp5-heading"
+        >
+          Examples
+        </h3>
+        <p>
+          If this project is cloned or downloaded, these examples can be loaded as files in the browser. Otherwise, peruse the source code for ideas on how to use WEAVESS in various ways.
+        </p>
+        <h3
+          className="bp5-heading"
+        >
+          Documentation
+        </h3>
+        <p>
+          Currently, no formal API Docs exist. Hopefully they will be coming soon. For now, these examples and the source code are your only hope.
+        </p>
+      </div>
+      <br />
+      <div>
+        <h4
+          className="bp5-heading"
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-standard bp5-icon-chart"
+            data-icon="chart"
+          />
+          <a
+            href="#/WeavessExample"
+            onClick={[Function]}
+          >
+             Weavess Example
+          </a>
+        </h4>
+        <p>
+          Basic introduction to using Weavess. Start here first.
+        </p>
+        <br />
+        <h4
+          className="bp5-heading"
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-standard bp5-icon-chart"
+            data-icon="chart"
+          />
+          <a
+            href="#/WeavessFlatLineExample"
+            onClick={[Function]}
+          >
+             Weavess Flat Line Example
+          </a>
+        </h4>
+        <p>
+          Weavess displaying a flat line with data segments defined by time.
+        </p>
+        <br />
+        <h4
+          className="bp5-heading"
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-standard bp5-icon-chart"
+            data-icon="chart"
+          />
+          <a
+            href="#/WeavessLineChartExample"
+            onClick={[Function]}
+          >
+             Weavess Line Chart Example
+          </a>
+        </h4>
+        <p>
+          Weavess displaying a line chart example.
+        </p>
+        <br />
+        <h4
+          className="bp5-heading"
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-standard bp5-icon-multi-select"
+            data-icon="multi-select"
+          />
+          <a
+            href="#/MultipleDisplaysExample"
+            onClick={[Function]}
+          >
+             Multiple Displays Example
+          </a>
+        </h4>
+        <p>
+          Multiple Weavess displays can be displayed anywhere on the screen and operate completely independent of each other
+        </p>
+        <br />
+        <h4
+          className="bp5-heading"
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-standard bp5-icon-timeline-events"
+            data-icon="timeline-events"
+          />
+          <a
+            href="#/EventsExample"
+            onClick={[Function]}
+          >
+             Events Example
+          </a>
+        </h4>
+        <p>
+          Register callbacks for various events triggered by the Weavess display
+        </p>
+        <br />
+        <h4
+          className="bp5-heading"
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-standard bp5-icon-record"
+            data-icon="record"
+          />
+          <a
+            href="#/RecordSectionExample"
+            onClick={[Function]}
+          >
+             Record Section Example
+          </a>
+        </h4>
+        <p>
+          Record Section-style waveform display
+        </p>
+        <br />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,22 @@
+{
+    "name": "asar-default",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "ASAR"
+            ],
+            "priority": 100
+        }
+    ],
+    "parameters": {
+        "sampleRateToleranceHz": 0.12,
+        "locationToleranceKm": 0.12,
+        "orientationAngleToleranceDeg": 0.12
+    }
+}

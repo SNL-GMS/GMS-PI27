@@ -1,0 +1,53 @@
+.help-text {
+  left: 0.25em;
+  padding: 2px;
+  line-height: 0;
+  position: absolute;
+  margin: 0;
+  opacity: 0;
+  background: var(--help-text-background, --gms-background);
+  border-radius: 100%;
+  cursor: help;
+  &--align-top {
+    top: 0;
+  }
+  &--align-center {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &--align-bottom {
+    bottom: 0;
+  }
+  &--wrap {
+    max-width: 55ch;
+    margin: 0;
+    padding: 0;
+  }
+  &__hover-container {
+    position: relative;
+    padding-left: 1.5rem;
+    &:hover {
+      .help-text {
+        display: block;
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+}
+
+/// Makes it so that hovering over the parent reveals the help text icon at 50% opacity
+///
+/// Target the help-text element when hovering over its direct parent
+*:has(> .help-text):hover .help-text {
+  opacity: 0.5;
+}
+
+/// Makes it so that hovering over the parent and then hovering over the help text icon
+/// will increase the opacity of the icon up to 75%
+///
+/// Target the help-text element when both it and its parent are being hovered
+*:has(.help-text):hover .help-text:hover {
+  opacity: 0.75;
+}

@@ -1,0 +1,165 @@
+/* Offset used to space top or bottom label and vertical marker */
+$labelAndVerticalOffset: 5%;
+$selectedOpacity: 1;
+$unSelectedOpacity: 0.5;
+:root {
+  --selected-sd-opacity: #{$selectedOpacity};
+  --hovered-sd-opacity: #{$selectedOpacity};
+  --unselected-sd-opacity: #{$unSelectedOpacity};
+  --sd-opacity: #{$selectedOpacity};
+  --text-shadow-color: var(--gms-recessed, var(--label-background-color));
+}
+
+[data-key-mode='uncertainty-editing'] {
+  --hovered-sd-opacity: #{$unSelectedOpacity};
+}
+.weavess-wp {
+  &:has(.pick-marker--action-target) {
+    --sd-opacity: #{$unSelectedOpacity};
+    .pick-marker:hover {
+      --sd-opacity: #{$selectedOpacity};
+    }
+  }
+  .pick-marker--action-target {
+    --sd-opacity: #{$selectedOpacity};
+  }
+  .pick-marker:hover {
+    --sd-opacity: #{$selectedOpacity};
+  }
+}
+.pick-marker {
+  z-index: 2;
+  width: 1px;
+  min-width: 1px;
+
+  opacity: var(--sd-opacity);
+  .pick-marker--action-target {
+    --sd-opacity: #{$selectedOpacity};
+  }
+
+  &--action-target &__vertical {
+    box-shadow: 0px 0px 10px 1px var(--pick-marker-color, white);
+  }
+  &--action-target &__label {
+    font-weight: bold;
+  }
+  &--action-target.pick-marker--selected &__label {
+    box-shadow: 0px 0px 10px 1px var(--pick-marker-color, white) !important;
+  }
+  &--action-target:not(.pick-marker--selected) &__label {
+    --text-shadow-color: var(--pick-marker-color);
+    text-shadow: var(--text-shadow-color) 1px 1px 10px;
+  }
+  & &__vertical {
+    position: absolute;
+    height: 90%;
+    top: $labelAndVerticalOffset;
+    cursor: pointer;
+    .high-zoom & {
+      // ! Hack to prevent the 1px wide element from disappearing at very high zoom levels
+      // ! This may cause a performance hit, so only enabled on high zoom where sig fig
+      // ! rounding occurs
+      will-change: opacity;
+    }
+  }
+
+  &__label {
+    color: var(--pick-marker-color, white);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 400;
+    border-radius: 3px;
+    line-height: 1;
+    padding: 2px;
+    z-index: 1;
+    --label-background-color: rgba(25, 32, 37, 0.75);
+    text-shadow: var(--text-shadow-color) 0px 0px 2px, var(--text-shadow-color) 1px 1px 3px,
+      var(--text-shadow-color) 1px 1px 10px;
+
+    .pick-marker & {
+      cursor: pointer;
+    }
+
+    &--top {
+      top: $labelAndVerticalOffset;
+      bottom: initial;
+    }
+    &--bottom {
+      top: initial;
+      bottom: $labelAndVerticalOffset;
+    }
+  }
+
+  &--selectable:not(.pick-marker--selected):has(.pick-marker__vertical:hover, .pick-marker__label:hover) {
+    z-index: 4;
+    .pick-marker__vertical {
+      box-shadow: 0px 0px 10px 1px var(--pick-marker-color, white);
+    }
+    .pick-marker__label {
+      font-weight: bold;
+    }
+    [data-key-mode='uncertainty-editing'] & {
+      .pick-marker__vertical {
+        box-shadow: none;
+      }
+      .pick-marker__label {
+        font-weight: initial;
+      }
+    }
+  }
+
+  .contentrenderer--selected &:hover:not(.pick-marker--selected) {
+    --sd-opacity: #{$selectedOpacity};
+    opacity: var(--hovered-sd-opacity, $selectedOpacity);
+  }
+
+  .contentrenderer--selected &--selected {
+    opacity: var(--sd-opacity);
+    z-index: 3;
+    .pick-marker__label {
+      font-weight: bold;
+      background: var(--pick-marker-color);
+      border-radius: 2px;
+      color: var(--gms-recessed, --label-background-color);
+      box-shadow: 2px 0 6px var(--gms-recessed);
+      text-shadow: none;
+      z-index: 3;
+    }
+    .pick-marker--action-target .pick-marker__vertical {
+      box-shadow: 0px 0px 10px 1px var(--pick-marker-color, white);
+    }
+    .pick-marker__conflict {
+      color: var(--gms-recessed, --label-background-color);
+    }
+  }
+
+  &__conflict {
+    margin-left: 2px;
+    color: red;
+  }
+
+  [data-key-mode='uncertainty-editing'] & {
+    &__label {
+      cursor: default;
+    }
+    &__vertical {
+      cursor: default;
+    }
+  }
+}
+
+.pick-marker__vertical::after {
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-width: 1px;
+  height: 100%;
+  position: absolute;
+  background-color: var(--pick-marker-color, white);
+  box-shadow: 0 2px 6px 1px var(--gms-recessed, --label-background-color);
+  z-index: 3;
+}

@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RowLabel correctly generates Azimuth label for FK display 1`] = `
+<div>
+  <div
+    style="white-space: nowrap;"
+  >
+    Azimuth 
+    <sup>
+      (°)
+    </sup>
+  </div>
+</div>
+`;
+
+exports[`RowLabel correctly generates Slowness label for FK display 1`] = `
+<div>
+  <div
+    style="white-space: nowrap;"
+  >
+    Slowness (
+    <sup>
+      s
+    </sup>
+    ∕
+    <sub>
+      °
+    </sub>
+    )
+  </div>
+</div>
+`;
+
+exports[`RowLabel creates labels for signal detections on a single raw channel 1`] = `
+<div>
+  <div
+    class="label-channel-name-row"
+  >
+    <span
+      class="station-name__channel-name"
+    >
+      ASAR.AS01.SHZ
+    </span>
+    <span
+      class="station-name__channel-name"
+    >
+       
+    </span>
+  </div>
+</div>
+`;
+
+exports[`RowLabel renders a label for default channel given a channelLabel 1`] = `
+<div>
+  <div
+    class="label-channel-name-row"
+  >
+    <span
+      class="station-name"
+    >
+      ASAR
+    </span>
+    <span
+      class="station-name__channel-name"
+    >
+       
+      beam.SHZ
+    </span>
+  </div>
+</div>
+`;
+
+exports[`RowLabel renders a label for default channel in split mode without phase label 1`] = `
+<div>
+  <div
+    class="label-channel-name-row"
+  >
+    <span
+      class="station-name"
+    >
+      ASAR
+    </span>
+    <span
+      class="station-name__channel-name"
+    >
+       
+      beam.SHZ
+    </span>
+  </div>
+</div>
+`;
+
+exports[`RowLabel renders a label for default channel without a channelLabel (normally for station with no data) 1`] = `
+<div>
+  <div
+    class="label-channel-name-row"
+  >
+    <span
+      class="station-name"
+    >
+      ASAR
+    </span>
+    <span
+      class="station-name__channel-name"
+    >
+       
+    </span>
+  </div>
+</div>
+`;
+
+exports[`RowLabel renders a label for non-default channel in split mode with phase label 1`] = `
+<div>
+  <div
+    class="label-channel-name-row"
+  >
+    <span
+      class="station-name__channel-name"
+    >
+      ASAR
+    </span>
+    <span
+      class="station-name__channel-name"
+    >
+       
+      beam.SHZ
+    </span>
+    <span
+      class="station-name__phase-name"
+    >
+      /PP
+    </span>
+  </div>
+</div>
+`;

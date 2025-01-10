@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`station definition hooks can use get all stations query 1`] = `
+<div>
+  [{"name":"station name","description":"station description","type":"HYDROACOUSTIC","effectiveAt":123,"effectiveUntil":456,"relativePositionsByChannel":{},"location":{"depthKm":3,"elevationKm":3,"latitudeDegrees":1,"longitudeDegrees":3},"allRawChannels":[],"channelGroups":[]}]
+</div>
+`;

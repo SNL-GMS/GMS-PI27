@@ -1,0 +1,19 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api project(':bridged-data-source-simulator-api')
+    api project(':bridged-data-source-simulator-jpa')
+    api 'gms:workflow-repository:LATEST'
+
+    //3rd Party Libraries
+    implementation libs.org.springframework.spring.context
+    implementation libs.com.google.guava.guava
+    implementation libs.io.projectreactor.reactor.core
+
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    testImplementation libs.io.projectreactor.reactor.test
+    testImplementation(testFixtures('gms:station-definition-coi:LATEST'))
+    testImplementation 'gms:test-utils:LATEST'
+}

@@ -1,0 +1,114 @@
+[versions]
+apache-commons-math3 = '3.6.1'
+apache-commons-text = '1.9'
+apache-httpclient = '4.5.14'
+c3p0 = '0.9.5.5'
+equalsverifier = '3.10'
+github-ffpojo = '1.0'
+github-tomakehurst-wiremock-standalone = '3.0.0-beta-8'
+google-auto-value = '1.10.1'
+google-auto-service = '1.1.1'
+google-guava = '32.1.1-jre'
+hypersistence-utils-hibernate-62 = '3.6.1'
+jetcd-core = '0.7.5'
+jib = '3.4.1'
+jmx-prometheus-javaagent = '0.16.1'
+jodah-failsafe = '2.4.4'
+jtransforms = '3.1'
+minio-minio = '8.5.9'
+logstash-logback-encoder = '7.1.1'
+org-apache-ignite = '2.15.0'
+org-msgpack = '0.9.1'
+org-owasp-encoder = '1.2.3'
+org-springdoc = '2.2.0'
+sonarqube = '4.2.0.3129'
+spotless = '6.19.0'
+springframework-boot = '3.2.0'
+swagger = '2.2.0'
+
+# Build Script Version Configuration
+google-java-format = '1.17.0'
+jacocoVersion = '0.8.10'
+
+[libraries]
+# Versioned Platform BOM
+org-springframework-boot-spring-boot-dependencies = { module = 'org.springframework.boot:spring-boot-dependencies', version.ref = 'springframework-boot'}
+
+# Versioned Dependencies
+com-github-ffpojo-ffpojo = { module = 'com.github.ffpojo:ffpojo', version.ref='github-ffpojo'}
+com-github-tomakehurst-wiremock-standalone = { module = 'com.github.tomakehurst:wiremock-standalone', version.ref = 'github-tomakehurst-wiremock-standalone'}
+com-github-wendykierp-jtransforms = { module = 'com.github.wendykierp:JTransforms', version.ref = 'jtransforms'}
+com-google-auto-service-auto-service = { module = 'com.google.auto.service:auto-service', version.ref = 'google-auto-service'}
+com-google-auto-value-auto-value-base = { module = 'com.google.auto.value:auto-value', version.ref = 'google-auto-value'}
+com-google-auto-value-auto-value-annotations = { module = 'com.google.auto.value:auto-value-annotations', version.ref = 'google-auto-value'}
+com-google-guava-guava = { module = 'com.google.guava:guava', version.ref = 'google-guava'}
+com-mchange-c3p0 = { module = 'com.mchange:c3p0', version.ref = 'c3p0'}
+io-etcd-jetcd-core = { module = 'io.etcd:jetcd-core', version.ref = 'jetcd-core'}
+io-hypersistence-hypersistence-utils-hibernate62 = {module = 'io.hypersistence:hypersistence-utils-hibernate-62', version.ref = 'hypersistence-utils-hibernate-62'}
+io-minio-minio = { module = 'io.minio:minio', version.ref='minio-minio'}
+io-prometheus-jmx-jmx_prometheus_javaagent = { module = 'io.prometheus.jmx:jmx_prometheus_javaagent', version.ref = 'jmx-prometheus-javaagent'}
+io-swagger-core-v3-swagger-core = { module = 'io.swagger.core.v3:swagger-core', version.ref = 'swagger'}
+net-jodah-failsafe = { module = 'net.jodah:failsafe', version.ref = 'jodah-failsafe'}
+net-logstash-logback-logstash-logback-encoder = { module = 'net.logstash.logback:logstash-logback-encoder', version.ref = 'logstash-logback-encoder'}
+nl-jqno-equalsverifier = { module = 'nl.jqno.equalsverifier:equalsverifier', version.ref='equalsverifier'}
+org-apache-commons-commons-math3 = { module = 'org.apache.commons:commons-math3', version.ref = 'apache-commons-math3'}
+org-apache-commons-commons-text = { module = 'org.apache.commons:commons-text', version.ref = 'apache-commons-text'}
+org-apache-httpcomponents-httpclient = { module = 'org.apache.httpcomponents:httpclient', version.ref = 'apache-httpclient'}
+org-apache-ignite-ignite-core = { module = 'org.apache.ignite:ignite-core', version.ref = 'org-apache-ignite'}
+org-apache-ignite-ignite-kubernetes = { module = 'org.apache.ignite:ignite-kubernetes', version.ref = 'org-apache-ignite'}
+org-apache-ignite-ignite-slf4j = { module = 'org.apache.ignite:ignite-slf4j', version.ref = 'org-apache-ignite'}
+org-msgpack-jackson-dataformat-msgpack = { module = 'org.msgpack:jackson-dataformat-msgpack', version.ref = 'org-msgpack'}
+org-owasp-encoder-encoder = { module = 'org.owasp.encoder:encoder', version.ref = 'org-owasp-encoder'}
+org-springdoc-springdoc-openapi-starter-webmvc-ui = { module = 'org.springdoc:springdoc-openapi-starter-webmvc-ui', version.ref = 'org-springdoc'}
+
+# Unversioned Dependencies Managed by Platform Constraints
+ch-qos-logback-logback-classic = { module = 'ch.qos.logback:logback-classic'}
+com-fasterxml-jackson-core-jackson-databind = { module = 'com.fasterxml.jackson.core:jackson-databind'}
+com-fasterxml-jackson-dataformat-jackson-dataformat-yaml = { module = 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'}
+com-fasterxml-jackson-datatype-jackson-datatype-guava = { module = 'com.fasterxml.jackson.datatype:jackson-datatype-guava'}
+com-fasterxml-jackson-datatype-jackson-datatype-jdk8 = { module = 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8'}
+com-fasterxml-jackson-datatype-jackson-datatype-jsr310 = { module = 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'}
+com-h2database-h2 = { module = 'com.h2database:h2'}
+com-oracle-database-jdbc-ojdbc11 = { module = 'com.oracle.database.jdbc:ojdbc11'}
+com-oracle-database-security-oraclepki = { module = 'com.oracle.database.security:oraclepki'}
+commons-cli-commons-cli = { module = 'commons-cli:commons-cli'}
+commons-io-commons-io = { module = 'commons-io:commons-io'}
+io-projectreactor-kafka-reactor-kafka = { module = 'io.projectreactor.kafka:reactor-kafka'}
+io-projectreactor-netty-reactor-netty = { module = 'io.projectreactor.netty:reactor-netty'}
+io-projectreactor-reactor-core = { module = 'io.projectreactor:reactor-core'}
+io-projectreactor-reactor-test = { module = 'io.projectreactor:reactor-test'}
+io-projectreactor-reactor-tools = { module = 'io.projectreactor:reactor-tools'}
+io-projectreactor-tools-blockhound = { module = 'io.projectreactor.tools:blockhound'}
+jakarta-persistence-jakarta-persistence-api = { module = 'jakarta.persistence:jakarta.persistence-api'}
+jakarta-annotation-api = {module = 'jakarta.annotation:jakarta.annotation-api'}
+jakarta-ws-rs-jakarta-ws-rs-api = { module = 'jakarta.ws.rs:jakarta.ws.rs-api'}
+org-apache-commons-commons-lang3 = { module = 'org.apache.commons:commons-lang3'}
+org-apache-kafka-kafka-clients = { module = 'org.apache.kafka:kafka-clients'}
+org-assertj-assertj-core = { module = 'org.assertj:assertj-core'}
+org-hibernate-orm-hibernate-c3p0 = { module = 'org.hibernate.orm:hibernate-c3p0'}
+org-hibernate-orm-hibernate-core = { module = 'org.hibernate.orm:hibernate-core'}
+org-junit-jupiter-junit-jupiter-base = { module = 'org.junit.jupiter:junit-jupiter'}
+org-mockito-mockito-core = { module = 'org.mockito:mockito-core'}
+org-mockito-mockito-junit-jupiter = { module = 'org.mockito:mockito-junit-jupiter'}
+org-postgresql-postgresql = { module = 'org.postgresql:postgresql'}
+org-slf4j-slf4j-api = { module = 'org.slf4j:slf4j-api'}
+org-springframework-boot-spring-boot-autoconfigure = { module = 'org.springframework.boot:spring-boot-autoconfigure'}
+org-springframework-boot-spring-boot-starter = { module = 'org.springframework.boot:spring-boot-starter'}
+org-springframework-boot-spring-boot-starter-actuator = { module = 'org.springframework.boot:spring-boot-starter-actuator'}
+org-springframework-boot-spring-boot-starter-aop = { module = 'org.springframework.boot:spring-boot-starter-aop'}
+org-springframework-boot-spring-boot-starter-data-jpa = { module = 'org.springframework.boot:spring-boot-starter-data-jpa'}
+org-springframework-boot-spring-boot-starter-test = { module = 'org.springframework.boot:spring-boot-starter-test'}
+org-springframework-boot-spring-boot-starter-web = { module = 'org.springframework.boot:spring-boot-starter-web'}
+org-springframework-retry-spring-retry = { module = 'org.springframework.retry:spring-retry'}
+org-springframework-spring-beans = { module = 'org.springframework:spring-beans'}
+org-springframework-spring-context = { module = 'org.springframework:spring-context'}
+org-springframework-spring-jdbc = { module = 'org.springframework:spring-jdbc'}
+org-springframework-spring-orm = { module = 'org.springframework:spring-orm'}
+org-springframework-spring-webflux = { module = 'org.springframework:spring-webflux'}
+
+[plugins]
+com-diffplug-spotless = {id = 'com.diffplug.spotless', version.ref = 'spotless'}
+com-google-jib = {id = 'com.google.cloud.tools.jib', version.ref = 'jib'}
+io-swagger-core-v3-swagger-gradle = {id = 'io.swagger.core.v3.swagger-gradle-plugin', version.ref = 'swagger'}
+org-sonarqube = {id = 'org.sonarqube', version.ref = 'sonarqube'}
+org-springframework-boot = {id = 'org.springframework.boot', version.ref = 'springframework-boot'}

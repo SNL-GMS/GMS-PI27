@@ -1,0 +1,22 @@
+apply plugin: 'java-library'
+
+dependencies {    
+    api 'gms:bridge-utilities:LATEST'
+    api 'gms:station-definition-repository:LATEST'
+    api 'gms:signal-detection-database-connector:LATEST'
+    api 'gms:event-connector:LATEST'
+    api 'gms:frameworks-configuration-repository:LATEST'
+
+    implementation libs.org.springframework.spring.context    
+    api libs.org.hibernate.orm.hibernate.core
+
+    implementation project(':bridged-data-source-simulator-api')
+    implementation project(':bridged-data-source-simulator-jpa')
+
+    implementation libs.io.projectreactor.reactor.core
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    testImplementation libs.com.h2database.h2
+    testImplementation(testFixtures('gms:station-definition-coi:LATEST'))
+}

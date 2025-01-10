@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading bar matches a snapshot for a percentage loading indicator 1`] = `
+<div>
+  <div
+    class="loading-bar__outer-wrapper loading-bar__outer-wrapper--fade-in loading-bar__outer-wrapper--visible"
+    style="--transition-duration-ms: 300;"
+  >
+    <div
+      class="loading-bar__inner-wrapper"
+      style="width: 100%; transform: translateX(-33.333%);"
+    >
+      <div
+        class="loading-bar__indicator"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Loading bar matches a snapshot for non-percentage loading indicator 1`] = `
+<div>
+  <div
+    class="loading-bar__outer-wrapper loading-bar__outer-wrapper--fade-in loading-bar__outer-wrapper--visible"
+    style="--transition-duration-ms: 300;"
+  >
+    <div
+      class="loading-bar__inner-wrapper"
+      style="width: 100%; transform: translateX(0);"
+    >
+      <div
+        class="loading-bar__indicator loading-bar__indicator--animated "
+      />
+    </div>
+  </div>
+</div>
+`;

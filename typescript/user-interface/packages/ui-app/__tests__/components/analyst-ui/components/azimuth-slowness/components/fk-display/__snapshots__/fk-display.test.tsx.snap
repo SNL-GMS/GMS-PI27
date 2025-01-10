@@ -1,0 +1,2963 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FkDisplay FkDisplay renders & matches snapshot 1`] = `
+<div>
+  <div
+    class="azimuth-slowness-data-display"
+  >
+    <div
+      class="fk-label"
+    >
+      <label
+        title="ASAR P"
+      >
+        ASAR P
+      </label>
+      <div
+        class="fk-label__buttons"
+      >
+        <button
+          class="bp5-button bp5-intent-success fk-label__accept fk-label__accept--non-interactive"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="bp5-icon bp5-icon-standard bp5-icon-confirm"
+            data-icon="confirm"
+          />
+          <span
+            class="bp5-button-text"
+          >
+            Accept
+          </span>
+        </button>
+        <button
+          class="bp5-button bp5-disabled fk-label__revert"
+          disabled=""
+          tabindex="-1"
+          title="Revert to last accepted FK"
+          type="button"
+        >
+          <span
+            class="bp5-button-text"
+          >
+            Use Last Accepted
+          </span>
+        </button>
+        <div
+          aria-expanded="false"
+          class="core-tooltip bp5-popover-target"
+        >
+          <button
+            class="bp5-button"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-cog"
+              data-icon="cog"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="azimuth-slowness-data-display__wrapper"
+    >
+      <div
+        class="fk-image-and-details-container"
+      >
+        <div
+          class="fk"
+          style="width: 465px;"
+        >
+          <div
+            class="fk-rendering"
+          >
+            <div
+              class="fk-rendering__y-axis-label-container"
+            >
+              <div
+                class="fk-rendering__y-axis-label"
+              >
+                Slowness Sy N-S (s/°)
+              </div>
+            </div>
+            <div
+              class="fk-rendering__y-axis"
+              style="height: 450px;"
+            />
+            <canvas
+              class="fk-rendering__canvas"
+              data-cy="primary-fk-rendering"
+              height="430"
+              width="430"
+            />
+            <div
+              class="fk-rendering__x-axis"
+            />
+            <div
+              class="fk-rendering__slowness"
+            >
+              <div>
+                Slowness Sx E-W (s/°)
+              </div>
+            </div>
+            <div
+              class="fk-rendering__legend"
+            >
+              <span
+                aria-expanded="false"
+                aria-haspopup="true"
+                class="bp5-popover-target"
+              >
+                <div
+                  class="fk-color-scale__button"
+                >
+                  LEGEND
+                </div>
+              </span>
+            </div>
+            <div
+              class="fk-rendering-footer"
+            >
+              <div
+                class="bp5-radio-group fk-rendering-footer__radio"
+              >
+                <label
+                  class="bp5-control bp5-radio bp5-inline"
+                >
+                  <input
+                    checked=""
+                    name="Blueprint5.RadioGroup-0"
+                    type="radio"
+                    value="FSTAT"
+                  />
+                  <span
+                    class="bp5-control-indicator"
+                  />
+                  Fstat
+                </label>
+                <label
+                  class="bp5-control bp5-radio bp5-inline"
+                >
+                  <input
+                    name="Blueprint5.RadioGroup-0"
+                    type="radio"
+                    value="POWER"
+                  />
+                  <span
+                    class="bp5-control-indicator"
+                  />
+                  Power
+                </label>
+              </div>
+              <div
+                class="fk-rendering-footer__info"
+              >
+                <span
+                  class="fk-rendering-footer__info-prefilter"
+                >
+                  Prefilter: 
+                  N/A
+                </span>
+                <span
+                  class="fk-rendering-footer__info-fk-band"
+                  title="0.5 - 2 Hz"
+                >
+                  FK Band: 
+                  0.5 - 2 Hz
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="fk-frequency-thumbnails-container contracted"
+          style="height: auto;"
+        >
+          <div
+            class="fk-frequency-thumbnails"
+          >
+            <div
+              class="fk-thumbnail"
+              style="max-width: 104px;"
+            >
+              <div
+                class="fk-thumbnail__header"
+              >
+                <label
+                  class="fk-thumbnail__label fk-thumbnail__label--unassociated"
+                  title="0.1 - 1 Hz"
+                >
+                  0.1 - 1 Hz
+                </label>
+              </div>
+              <canvas
+                class="fk-thumbnail__content"
+                data-testid="fk-thumbnail"
+                height="100"
+                width="100"
+              />
+            </div>
+            <div
+              class="fk-thumbnail is-displayed"
+              style="max-width: 104px;"
+            >
+              <div
+                class="fk-thumbnail__header"
+              >
+                <label
+                  class="fk-thumbnail__label fk-thumbnail__label--unassociated"
+                  title="0.5 - 2 Hz"
+                >
+                  0.5 - 2 Hz
+                </label>
+              </div>
+              <canvas
+                class="fk-thumbnail__content"
+                data-testid="fk-thumbnail"
+                height="100"
+                width="100"
+              />
+            </div>
+            <div
+              class="fk-thumbnail"
+              style="max-width: 104px;"
+            >
+              <div
+                class="fk-thumbnail__header"
+              >
+                <label
+                  class="fk-thumbnail__label fk-thumbnail__label--unassociated"
+                  title="1 - 3 Hz"
+                >
+                  1 - 3 Hz
+                </label>
+              </div>
+              <canvas
+                class="fk-thumbnail__content"
+                data-testid="fk-thumbnail"
+                height="100"
+                width="100"
+              />
+            </div>
+            <div
+              class="fk-thumbnail"
+              style="max-width: 104px;"
+            >
+              <div
+                class="fk-thumbnail__header"
+              >
+                <label
+                  class="fk-thumbnail__label fk-thumbnail__label--unassociated"
+                  title="2 - 4 Hz"
+                >
+                  2 - 4 Hz
+                </label>
+              </div>
+              <canvas
+                class="fk-thumbnail__content"
+                data-testid="fk-thumbnail"
+                height="100"
+                width="100"
+              />
+            </div>
+            <div
+              class="fk-thumbnail"
+              style="max-width: 104px;"
+            >
+              <div
+                class="fk-thumbnail__header"
+              >
+                <label
+                  class="fk-thumbnail__label fk-thumbnail__label--unassociated"
+                  title="3 - 6 Hz"
+                >
+                  3 - 6 Hz
+                </label>
+              </div>
+              <canvas
+                class="fk-thumbnail__content"
+                data-testid="fk-thumbnail"
+                height="100"
+                width="100"
+              />
+            </div>
+            <div
+              class="fk-thumbnail"
+              style="max-width: 104px;"
+            >
+              <div
+                class="fk-thumbnail__header"
+              >
+                <label
+                  class="fk-thumbnail__label fk-thumbnail__label--unassociated"
+                  title="4 - 8 Hz"
+                >
+                  4 - 8 Hz
+                </label>
+              </div>
+              <canvas
+                class="fk-thumbnail__content"
+                data-testid="fk-thumbnail"
+                height="100"
+                width="100"
+              />
+            </div>
+            <div
+              class="fk-thumbnail"
+              style="max-width: 104px;"
+            >
+              <div
+                class="fk-thumbnail__header"
+              >
+                <label
+                  class="fk-thumbnail__label fk-thumbnail__label--unassociated"
+                  title="6 - 12 Hz"
+                >
+                  6 - 12 Hz
+                </label>
+              </div>
+              <canvas
+                class="fk-thumbnail__content"
+                data-testid="fk-thumbnail"
+                height="100"
+                width="100"
+              />
+            </div>
+            <div
+              class="fk-thumbnail"
+              style="max-width: 104px;"
+            >
+              <div
+                class="fk-thumbnail__header"
+              >
+                <label
+                  class="fk-thumbnail__label fk-thumbnail__label--unassociated"
+                  title="8 - 16 Hz"
+                >
+                  8 - 16 Hz
+                </label>
+              </div>
+              <canvas
+                class="fk-thumbnail__content"
+                data-testid="fk-thumbnail"
+                height="100"
+                width="100"
+              />
+            </div>
+            <div
+              class="fk-thumbnail"
+              style="max-width: 104px;"
+            >
+              <div
+                class="fk-thumbnail__header"
+              >
+                <label
+                  class="fk-thumbnail__label fk-thumbnail__label--unassociated"
+                  title="0.5 - 8 Hz"
+                >
+                  0.5 - 8 Hz
+                </label>
+              </div>
+              <canvas
+                class="fk-thumbnail__content"
+                data-testid="fk-thumbnail"
+                height="100"
+                width="100"
+              />
+            </div>
+          </div>
+          <div
+            aria-expanded="false"
+            class="core-tooltip bp5-popover-target"
+          >
+            <button
+              aria-label="FK Frequency Thumbnails"
+              class="bp5-button fk-frequency-thumbnails-accordion-button"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+                class="bp5-icon bp5-icon-standard bp5-icon-grid-view"
+                data-icon="grid-view"
+              />
+              <span
+                class="bp5-button-text"
+              >
+                FK Bands
+              </span>
+              <span
+                aria-hidden="true"
+                class="bp5-icon bp5-icon-standard bp5-icon-chevron-down"
+                data-icon="chevron-down"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="ag-theme-dark fk-properties"
+        >
+          <div
+            class="fk-properties__column"
+          >
+            <div
+              class="fk-properties-label-row"
+            >
+              <div
+                class="fk-properties-label-row__left"
+              >
+                <div>
+                  Station:
+                  <span
+                    class="fk-properties__label"
+                  >
+                    ASAR
+                  </span>
+                </div>
+                <div>
+                  Phase:
+                  <span
+                    class="fk-properties__label"
+                  >
+                    P
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="fk-properties__table"
+            >
+              <div
+                class="max"
+              >
+                <div
+                  style="height: 100%;"
+                >
+                  <!-- AG Grid -->
+                  <div
+                    class="ag-root-wrapper ag-ltr ag-layout-normal"
+                  >
+                    <div
+                      class="ag-root-wrapper-body ag-focus-managed ag-layout-normal"
+                    >
+                      <div
+                        class="ag-tab-guard ag-tab-guard-top"
+                        role="presentation"
+                        tabindex="0"
+                      />
+                      <!-- AG Grid Body -->
+                      <div
+                        aria-colcount="5"
+                        aria-rowcount="7"
+                        class="ag-root ag-unselectable ag-layout-normal"
+                        role="grid"
+                      >
+                        <div
+                          class="ag-header ag-pivot-off"
+                          role="presentation"
+                          style="height: 26px; min-height: 26px;"
+                        >
+                          <div
+                            class="ag-pinned-left-header ag-hidden"
+                            role="presentation"
+                            style="width: 0px; min-width: 0px; max-width: 0px;"
+                          >
+                            <div
+                              aria-rowindex="1"
+                              class="ag-header-row ag-header-row-column"
+                              role="row"
+                              style="height: 25px; top: 0px; width: 0px;"
+                            />
+                          </div>
+                          <div
+                            class="ag-header-viewport "
+                            role="presentation"
+                          >
+                            <div
+                              class="ag-header-container"
+                              role="rowgroup"
+                              style="width: 450px;"
+                            >
+                              <div
+                                aria-rowindex="1"
+                                class="ag-header-row ag-header-row-column"
+                                role="row"
+                                style="height: 25px; top: 0px; width: 450px;"
+                              >
+                                <div
+                                  aria-colindex="1"
+                                  class="ag-header-cell ag-focus-managed"
+                                  col-id="description"
+                                  role="columnheader"
+                                  style="left: 0px; width: 110px;"
+                                  tabindex="-1"
+                                >
+                                  <div
+                                    class="ag-header-cell-resize"
+                                    role="presentation"
+                                  />
+                                  <div
+                                    class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                    role="presentation"
+                                  >
+                                    
+                
+                                    <div
+                                      class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                      ref="eLabel"
+                                      role="presentation"
+                                    />
+                                    
+                
+                                    <div
+                                      class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                      ref="eWrapper"
+                                      role="presentation"
+                                    >
+                                      
+                    
+                                      <input
+                                        class="ag-input-field-input ag-checkbox-input"
+                                        id="ag-3-input"
+                                        ref="eInput"
+                                        tabindex="-1"
+                                        type="checkbox"
+                                      />
+                                      
+                
+                                    </div>
+                                    
+            
+                                  </div>
+                                  <div
+                                    class="ag-cell-label-container"
+                                    role="presentation"
+                                  >
+                                    
+            
+                                    
+            
+                                    <div
+                                      class="ag-header-cell-label"
+                                      ref="eLabel"
+                                      role="presentation"
+                                    >
+                                      
+                
+                                      <span
+                                        class="ag-header-cell-text"
+                                        ref="eText"
+                                      />
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                        ref="eFilter"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-filter"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+                
+                                      
+                
+                                      
+                
+                                      
+                
+                                      
+            
+                                    </div>
+                                    
+        
+                                  </div>
+                                </div>
+                                <div
+                                  aria-colindex="2"
+                                  aria-description="Press ENTER to sort."
+                                  aria-sort="none"
+                                  class="ag-header-cell ag-header-cell-sortable ag-focus-managed"
+                                  col-id="peak"
+                                  role="columnheader"
+                                  style="left: 110px; width: 85px;"
+                                  tabindex="-1"
+                                >
+                                  <div
+                                    class="ag-header-cell-resize"
+                                    role="presentation"
+                                  />
+                                  <div
+                                    class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                    role="presentation"
+                                  >
+                                    
+                
+                                    <div
+                                      class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                      ref="eLabel"
+                                      role="presentation"
+                                    />
+                                    
+                
+                                    <div
+                                      class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                      ref="eWrapper"
+                                      role="presentation"
+                                    >
+                                      
+                    
+                                      <input
+                                        class="ag-input-field-input ag-checkbox-input"
+                                        id="ag-4-input"
+                                        ref="eInput"
+                                        tabindex="-1"
+                                        type="checkbox"
+                                      />
+                                      
+                
+                                    </div>
+                                    
+            
+                                  </div>
+                                  <div
+                                    class="ag-cell-label-container ag-header-cell-sorted-none"
+                                    role="presentation"
+                                  >
+                                    
+            
+                                    
+            
+                                    <div
+                                      class="ag-header-cell-label"
+                                      ref="eLabel"
+                                      role="presentation"
+                                    >
+                                      
+                
+                                      <span
+                                        class="ag-header-cell-text"
+                                        ref="eText"
+                                      >
+                                        Peak
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                        ref="eFilter"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-filter"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-order ag-hidden"
+                                        ref="eSortOrder"
+                                      />
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-ascending-icon ag-hidden"
+                                        ref="eSortAsc"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-asc"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-descending-icon ag-hidden"
+                                        ref="eSortDesc"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-desc"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-none-icon ag-hidden"
+                                        ref="eSortNone"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-none"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+            
+                                    </div>
+                                    
+        
+                                  </div>
+                                </div>
+                                <div
+                                  aria-colindex="3"
+                                  aria-description="Press ENTER to sort."
+                                  aria-sort="none"
+                                  class="ag-header-cell ag-header-cell-sortable ag-focus-managed"
+                                  col-id="predicted"
+                                  role="columnheader"
+                                  style="left: 195px; width: 85px;"
+                                  tabindex="-1"
+                                >
+                                  <div
+                                    class="ag-header-cell-resize"
+                                    role="presentation"
+                                  />
+                                  <div
+                                    class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                    role="presentation"
+                                  >
+                                    
+                
+                                    <div
+                                      class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                      ref="eLabel"
+                                      role="presentation"
+                                    />
+                                    
+                
+                                    <div
+                                      class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                      ref="eWrapper"
+                                      role="presentation"
+                                    >
+                                      
+                    
+                                      <input
+                                        class="ag-input-field-input ag-checkbox-input"
+                                        id="ag-5-input"
+                                        ref="eInput"
+                                        tabindex="-1"
+                                        type="checkbox"
+                                      />
+                                      
+                
+                                    </div>
+                                    
+            
+                                  </div>
+                                  <div
+                                    class="ag-cell-label-container ag-header-cell-sorted-none"
+                                    role="presentation"
+                                  >
+                                    
+            
+                                    
+            
+                                    <div
+                                      class="ag-header-cell-label"
+                                      ref="eLabel"
+                                      role="presentation"
+                                    >
+                                      
+                
+                                      <span
+                                        class="ag-header-cell-text"
+                                        ref="eText"
+                                      >
+                                        Predicted
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                        ref="eFilter"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-filter"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-order ag-hidden"
+                                        ref="eSortOrder"
+                                      />
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-ascending-icon ag-hidden"
+                                        ref="eSortAsc"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-asc"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-descending-icon ag-hidden"
+                                        ref="eSortDesc"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-desc"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-none-icon ag-hidden"
+                                        ref="eSortNone"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-none"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+            
+                                    </div>
+                                    
+        
+                                  </div>
+                                </div>
+                                <div
+                                  aria-colindex="4"
+                                  aria-description="Press ENTER to sort."
+                                  aria-sort="none"
+                                  class="ag-header-cell ag-header-cell-sortable ag-focus-managed"
+                                  col-id="measured"
+                                  role="columnheader"
+                                  style="left: 280px; width: 85px;"
+                                  tabindex="-1"
+                                >
+                                  <div
+                                    class="ag-header-cell-resize"
+                                    role="presentation"
+                                  />
+                                  <div
+                                    class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                    role="presentation"
+                                  >
+                                    
+                
+                                    <div
+                                      class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                      ref="eLabel"
+                                      role="presentation"
+                                    />
+                                    
+                
+                                    <div
+                                      class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                      ref="eWrapper"
+                                      role="presentation"
+                                    >
+                                      
+                    
+                                      <input
+                                        class="ag-input-field-input ag-checkbox-input"
+                                        id="ag-6-input"
+                                        ref="eInput"
+                                        tabindex="-1"
+                                        type="checkbox"
+                                      />
+                                      
+                
+                                    </div>
+                                    
+            
+                                  </div>
+                                  <div
+                                    class="ag-cell-label-container ag-header-cell-sorted-none"
+                                    role="presentation"
+                                  >
+                                    
+            
+                                    
+            
+                                    <div
+                                      class="ag-header-cell-label"
+                                      ref="eLabel"
+                                      role="presentation"
+                                    >
+                                      
+                
+                                      <span
+                                        class="ag-header-cell-text"
+                                        ref="eText"
+                                      >
+                                        Measured
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                        ref="eFilter"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-filter"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-order ag-hidden"
+                                        ref="eSortOrder"
+                                      />
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-ascending-icon ag-hidden"
+                                        ref="eSortAsc"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-asc"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-descending-icon ag-hidden"
+                                        ref="eSortDesc"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-desc"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-none-icon ag-hidden"
+                                        ref="eSortNone"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-none"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+            
+                                    </div>
+                                    
+        
+                                  </div>
+                                </div>
+                                <div
+                                  aria-colindex="5"
+                                  aria-description="Press ENTER to sort."
+                                  aria-sort="none"
+                                  class="ag-header-cell ag-header-cell-sortable ag-focus-managed"
+                                  col-id="residual"
+                                  role="columnheader"
+                                  style="left: 365px; width: 85px;"
+                                  tabindex="-1"
+                                >
+                                  <div
+                                    class="ag-header-cell-resize"
+                                    role="presentation"
+                                  />
+                                  <div
+                                    class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                    role="presentation"
+                                  >
+                                    
+                
+                                    <div
+                                      class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                      ref="eLabel"
+                                      role="presentation"
+                                    />
+                                    
+                
+                                    <div
+                                      class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                      ref="eWrapper"
+                                      role="presentation"
+                                    >
+                                      
+                    
+                                      <input
+                                        class="ag-input-field-input ag-checkbox-input"
+                                        id="ag-7-input"
+                                        ref="eInput"
+                                        tabindex="-1"
+                                        type="checkbox"
+                                      />
+                                      
+                
+                                    </div>
+                                    
+            
+                                  </div>
+                                  <div
+                                    class="ag-cell-label-container ag-header-cell-sorted-none"
+                                    role="presentation"
+                                  >
+                                    
+            
+                                    
+            
+                                    <div
+                                      class="ag-header-cell-label"
+                                      ref="eLabel"
+                                      role="presentation"
+                                    >
+                                      
+                
+                                      <span
+                                        class="ag-header-cell-text"
+                                        ref="eText"
+                                      >
+                                        Residual
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-filter-icon ag-hidden"
+                                        ref="eFilter"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-filter"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-order ag-hidden"
+                                        ref="eSortOrder"
+                                      />
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-ascending-icon ag-hidden"
+                                        ref="eSortAsc"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-asc"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-descending-icon ag-hidden"
+                                        ref="eSortDesc"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-desc"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+                
+                                      <span
+                                        aria-hidden="true"
+                                        class="ag-header-icon ag-header-label-icon ag-sort-none-icon ag-hidden"
+                                        ref="eSortNone"
+                                      >
+                                        <span
+                                          class="ag-icon ag-icon-none"
+                                          role="presentation"
+                                          unselectable="on"
+                                        />
+                                      </span>
+                                      
+            
+                                    </div>
+                                    
+        
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="ag-pinned-right-header ag-hidden"
+                            role="presentation"
+                            style="width: 0px; min-width: 0px; max-width: 0px;"
+                          >
+                            <div
+                              aria-rowindex="1"
+                              class="ag-header-row ag-header-row-column"
+                              role="row"
+                              style="height: 25px; top: 0px; width: 0px;"
+                            />
+                          </div>
+                        </div>
+                        <!-- AG Pinned Top -->
+                        <div
+                          class="ag-floating-top"
+                          role="presentation"
+                          style="height: 0px; min-height: 0; display: none; overflow-y: hidden;"
+                        >
+                          <!-- AG Row Container topLeft -->
+                          <div
+                            class="ag-pinned-left-floating-top ag-hidden"
+                            role="presentation"
+                          />
+                          <!-- AG Row Container topCenter -->
+                          <div
+                            class="ag-floating-top-viewport"
+                            role="presentation"
+                          >
+                            <div
+                              class="ag-floating-top-container"
+                              role="presentation"
+                              style="width: 450px;"
+                            />
+                          </div>
+                          <!-- AG Row Container topRight -->
+                          <div
+                            class="ag-pinned-right-floating-top ag-hidden"
+                            role="presentation"
+                          />
+                          <!-- AG Row Container topFullWidth -->
+                          <div
+                            class="ag-floating-top-full-width-container"
+                            role="presentation"
+                          />
+                        </div>
+                        <!-- AG Middle -->
+                        <div
+                          class="ag-body-viewport ag-row-no-animation ag-layout-normal"
+                          role="presentation"
+                        >
+                          <!-- AG Row Container left -->
+                          <div
+                            class="ag-pinned-left-cols-container ag-hidden"
+                            role="rowgroup"
+                            style="height: 150px;"
+                          >
+                            <div
+                              aria-rowindex="2"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute ag-row-first"
+                              role="row"
+                              row-id="Azimuth"
+                              row-index="0"
+                              style="transform: translateY(0px); height: 25px;"
+                            />
+                            <div
+                              aria-rowindex="3"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute"
+                              role="row"
+                              row-id="Slowness s/deg"
+                              row-index="1"
+                              style="transform: translateY(25px); height: 25px;"
+                            />
+                            <div
+                              aria-rowindex="4"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute"
+                              role="row"
+                              row-id="Slowness s/km"
+                              row-index="2"
+                              style="transform: translateY(50px); height: 25px;"
+                            />
+                            <div
+                              aria-rowindex="5"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute"
+                              role="row"
+                              row-id="Velocity"
+                              row-index="3"
+                              style="transform: translateY(75px); height: 25px;"
+                            />
+                            <div
+                              aria-rowindex="6"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute"
+                              role="row"
+                              row-id="Fstat"
+                              row-index="4"
+                              style="transform: translateY(100px); height: 25px;"
+                            />
+                            <div
+                              aria-rowindex="7"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute ag-row-last"
+                              role="row"
+                              row-id="Power"
+                              row-index="5"
+                              style="transform: translateY(125px); height: 25px;"
+                            />
+                          </div>
+                          <!-- AG Row Container center -->
+                          <div
+                            class="ag-center-cols-clipper"
+                            role="presentation"
+                            style="height: 150px;"
+                          >
+                            <div
+                              class="ag-center-cols-viewport"
+                              role="presentation"
+                              style="height: 100%;"
+                            >
+                              <div
+                                class="ag-center-cols-container"
+                                role="rowgroup"
+                                style="height: 150px; width: 450px;"
+                              >
+                                <div
+                                  aria-rowindex="2"
+                                  class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute ag-row-first"
+                                  role="row"
+                                  row-id="Azimuth"
+                                  row-index="0"
+                                  style="transform: translateY(0px); height: 25px;"
+                                >
+                                  <div
+                                    aria-colindex="1"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="description"
+                                    role="gridcell"
+                                    style="left: 0px; width: 110px;"
+                                    tabindex="-1"
+                                  >
+                                    Azimuth (°)
+                                  </div>
+                                  <div
+                                    aria-colindex="2"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="peak"
+                                    role="gridcell"
+                                    style="left: 110px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    120.551
+                                  </div>
+                                  <div
+                                    aria-colindex="3"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="predicted"
+                                    role="gridcell"
+                                    style="left: 195px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    N/A
+                                  </div>
+                                  <div
+                                    aria-colindex="4"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="measured"
+                                    role="gridcell"
+                                    style="left: 280px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    90.142
+                                  </div>
+                                  <div
+                                    aria-colindex="5"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="residual"
+                                    role="gridcell"
+                                    style="left: 365px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    N/A
+                                  </div>
+                                </div>
+                                <div
+                                  aria-rowindex="3"
+                                  class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute"
+                                  role="row"
+                                  row-id="Slowness s/deg"
+                                  row-index="1"
+                                  style="transform: translateY(25px); height: 25px;"
+                                >
+                                  <div
+                                    aria-colindex="1"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="description"
+                                    role="gridcell"
+                                    style="left: 0px; width: 110px;"
+                                    tabindex="-1"
+                                  >
+                                    Slowness (s/°)
+                                  </div>
+                                  <div
+                                    aria-colindex="2"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="peak"
+                                    role="gridcell"
+                                    style="left: 110px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    13071.373
+                                  </div>
+                                  <div
+                                    aria-colindex="3"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="predicted"
+                                    role="gridcell"
+                                    style="left: 195px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    N/A
+                                  </div>
+                                  <div
+                                    aria-colindex="4"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="measured"
+                                    role="gridcell"
+                                    style="left: 280px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    7.122
+                                  </div>
+                                  <div
+                                    aria-colindex="5"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="residual"
+                                    role="gridcell"
+                                    style="left: 365px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    N/A
+                                  </div>
+                                </div>
+                                <div
+                                  aria-rowindex="4"
+                                  class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute"
+                                  role="row"
+                                  row-id="Slowness s/km"
+                                  row-index="2"
+                                  style="transform: translateY(50px); height: 25px;"
+                                >
+                                  <div
+                                    aria-colindex="1"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="description"
+                                    role="gridcell"
+                                    style="left: 0px; width: 110px;"
+                                    tabindex="-1"
+                                  >
+                                    Slowness (s/km)
+                                  </div>
+                                  <div
+                                    aria-colindex="2"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="peak"
+                                    role="gridcell"
+                                    style="left: 110px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    117.554
+                                  </div>
+                                  <div
+                                    aria-colindex="3"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="predicted"
+                                    role="gridcell"
+                                    style="left: 195px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    N/A
+                                  </div>
+                                  <div
+                                    aria-colindex="4"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="measured"
+                                    role="gridcell"
+                                    style="left: 280px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    0.064
+                                  </div>
+                                  <div
+                                    aria-colindex="5"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="residual"
+                                    role="gridcell"
+                                    style="left: 365px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    N/A
+                                  </div>
+                                </div>
+                                <div
+                                  aria-rowindex="5"
+                                  class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute"
+                                  role="row"
+                                  row-id="Velocity"
+                                  row-index="3"
+                                  style="transform: translateY(75px); height: 25px;"
+                                >
+                                  <div
+                                    aria-colindex="1"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="description"
+                                    role="gridcell"
+                                    style="left: 0px; width: 110px;"
+                                    tabindex="-1"
+                                  >
+                                    Velocity (km/s)
+                                  </div>
+                                  <div
+                                    aria-colindex="2"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="peak"
+                                    role="gridcell"
+                                    style="left: 110px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    0.009
+                                  </div>
+                                  <div
+                                    aria-colindex="3"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="predicted"
+                                    role="gridcell"
+                                    style="left: 195px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    N/A
+                                  </div>
+                                  <div
+                                    aria-colindex="4"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="measured"
+                                    role="gridcell"
+                                    style="left: 280px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    15.613
+                                  </div>
+                                  <div
+                                    aria-colindex="5"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="residual"
+                                    role="gridcell"
+                                    style="left: 365px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    N/A
+                                  </div>
+                                </div>
+                                <div
+                                  aria-rowindex="6"
+                                  class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute"
+                                  role="row"
+                                  row-id="Fstat"
+                                  row-index="4"
+                                  style="transform: translateY(100px); height: 25px;"
+                                >
+                                  <div
+                                    aria-colindex="1"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="description"
+                                    role="gridcell"
+                                    style="left: 0px; width: 110px;"
+                                    tabindex="-1"
+                                  >
+                                    Fstat
+                                  </div>
+                                  <div
+                                    aria-colindex="2"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="peak"
+                                    role="gridcell"
+                                    style="left: 110px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    Unknown
+                                  </div>
+                                  <div
+                                    aria-colindex="3"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="predicted"
+                                    role="gridcell"
+                                    style="left: 195px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    N/A
+                                  </div>
+                                  <div
+                                    aria-colindex="4"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="measured"
+                                    role="gridcell"
+                                    style="left: 280px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    1.295
+                                  </div>
+                                  <div
+                                    aria-colindex="5"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="residual"
+                                    role="gridcell"
+                                    style="left: 365px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    N/A
+                                  </div>
+                                </div>
+                                <div
+                                  aria-rowindex="7"
+                                  class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute ag-row-last"
+                                  role="row"
+                                  row-id="Power"
+                                  row-index="5"
+                                  style="transform: translateY(125px); height: 25px;"
+                                >
+                                  <div
+                                    aria-colindex="1"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="description"
+                                    role="gridcell"
+                                    style="left: 0px; width: 110px;"
+                                    tabindex="-1"
+                                  >
+                                    Power (dB)
+                                  </div>
+                                  <div
+                                    aria-colindex="2"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="peak"
+                                    role="gridcell"
+                                    style="left: 110px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    Unknown
+                                  </div>
+                                  <div
+                                    aria-colindex="3"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="predicted"
+                                    role="gridcell"
+                                    style="left: 195px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    N/A
+                                  </div>
+                                  <div
+                                    aria-colindex="4"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="measured"
+                                    role="gridcell"
+                                    style="left: 280px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    0.508
+                                  </div>
+                                  <div
+                                    aria-colindex="5"
+                                    class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value"
+                                    col-id="residual"
+                                    role="gridcell"
+                                    style="left: 365px; width: 85px; text-align: right;"
+                                    tabindex="-1"
+                                  >
+                                    N/A
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- AG Row Container right -->
+                          <div
+                            class="ag-pinned-right-cols-container ag-hidden"
+                            role="rowgroup"
+                            style="height: 150px;"
+                          >
+                            <div
+                              aria-rowindex="2"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute ag-row-first"
+                              role="row"
+                              row-id="Azimuth"
+                              row-index="0"
+                              style="transform: translateY(0px); height: 25px;"
+                            />
+                            <div
+                              aria-rowindex="3"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute"
+                              role="row"
+                              row-id="Slowness s/deg"
+                              row-index="1"
+                              style="transform: translateY(25px); height: 25px;"
+                            />
+                            <div
+                              aria-rowindex="4"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute"
+                              role="row"
+                              row-id="Slowness s/km"
+                              row-index="2"
+                              style="transform: translateY(50px); height: 25px;"
+                            />
+                            <div
+                              aria-rowindex="5"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute"
+                              role="row"
+                              row-id="Velocity"
+                              row-index="3"
+                              style="transform: translateY(75px); height: 25px;"
+                            />
+                            <div
+                              aria-rowindex="6"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute"
+                              role="row"
+                              row-id="Fstat"
+                              row-index="4"
+                              style="transform: translateY(100px); height: 25px;"
+                            />
+                            <div
+                              aria-rowindex="7"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute ag-row-last"
+                              role="row"
+                              row-id="Power"
+                              row-index="5"
+                              style="transform: translateY(125px); height: 25px;"
+                            />
+                          </div>
+                          <!-- AG Row Container fullWidth -->
+                          <div
+                            class="ag-full-width-container"
+                            role="presentation"
+                            style="height: 150px;"
+                          />
+                        </div>
+                        <!-- AG Pinned Bottom -->
+                        <div
+                          class="ag-floating-bottom"
+                          role="presentation"
+                          style="height: 0px; min-height: 0; display: none; overflow-y: hidden;"
+                        >
+                          <!-- AG Row Container bottomLeft -->
+                          <div
+                            class="ag-pinned-left-floating-bottom ag-hidden"
+                            role="presentation"
+                          />
+                          <!-- AG Row Container bottomCenter -->
+                          <div
+                            class="ag-floating-bottom-viewport"
+                            role="presentation"
+                          >
+                            <div
+                              class="ag-floating-bottom-container"
+                              role="presentation"
+                              style="width: 450px;"
+                            />
+                          </div>
+                          <!-- AG Row Container bottomRight -->
+                          <div
+                            class="ag-pinned-right-floating-bottom ag-hidden"
+                            role="presentation"
+                          />
+                          <!-- AG Row Container bottomFullWidth -->
+                          <div
+                            class="ag-floating-bottom-full-width-container"
+                            role="presentation"
+                          />
+                        </div>
+                        <!-- AG Fake Horizontal Scroll -->
+                        <div
+                          aria-hidden="true"
+                          class="ag-body-horizontal-scroll"
+                          style="height: 0px; max-height: 0px; min-height: 0px;"
+                        >
+                          
+            
+                          <div
+                            class="ag-horizontal-left-spacer"
+                            ref="eLeftSpacer"
+                            style="width: 0px; max-width: 0px; min-width: 0px;"
+                          />
+                          
+            
+                          <div
+                            class="ag-body-horizontal-scroll-viewport"
+                            ref="eViewport"
+                            style="height: 0px; max-height: 0px; min-height: 0px;"
+                          >
+                            
+                
+                            <div
+                              class="ag-body-horizontal-scroll-container"
+                              ref="eContainer"
+                              style="height: 0px; max-height: 0px; min-height: 0px; width: 450px;"
+                            />
+                            
+            
+                          </div>
+                          
+            
+                          <div
+                            class="ag-horizontal-right-spacer"
+                            ref="eRightSpacer"
+                            style="width: 0px; max-width: 0px; min-width: 0px;"
+                          />
+                          
+        
+                        </div>
+                        <!-- AG Overlay Wrapper -->
+                        <div
+                          aria-hidden="true"
+                          class="ag-overlay ag-hidden"
+                        >
+                          
+            
+                          <div
+                            class="ag-overlay-panel"
+                          >
+                            
+                
+                            <div
+                              class="ag-overlay-wrapper ag-layout-normal"
+                              ref="eOverlayWrapper"
+                            />
+                            
+            
+                          </div>
+                          
+        
+                        </div>
+                      </div>
+                      <div
+                        class="ag-tab-guard ag-tab-guard-bottom"
+                        role="presentation"
+                        tabindex="0"
+                      />
+                    </div>
+                    <div
+                      class="ag-paging-panel ag-unselectable ag-hidden"
+                      id="ag-2"
+                    >
+                      
+                
+                      <span
+                        class="ag-paging-row-summary-panel"
+                        role="status"
+                      >
+                        
+                    
+                        <span
+                          class="ag-paging-row-summary-panel-number"
+                          id="ag-2-first-row"
+                          ref="lbFirstRowOnPage"
+                        />
+                        
+                    
+                        <span
+                          id="ag-2-to"
+                        >
+                          to
+                        </span>
+                        
+                    
+                        <span
+                          class="ag-paging-row-summary-panel-number"
+                          id="ag-2-last-row"
+                          ref="lbLastRowOnPage"
+                        />
+                        
+                    
+                        <span
+                          id="ag-2-of"
+                        >
+                          of
+                        </span>
+                        
+                    
+                        <span
+                          class="ag-paging-row-summary-panel-number"
+                          id="ag-2-row-count"
+                          ref="lbRecordCount"
+                        />
+                        
+                
+                      </span>
+                      
+                
+                      <span
+                        class="ag-paging-page-summary-panel"
+                        role="presentation"
+                      >
+                        
+                    
+                        <div
+                          aria-label="First Page"
+                          class="ag-paging-button"
+                          ref="btFirst"
+                          role="button"
+                        >
+                          <span
+                            class="ag-icon ag-icon-first"
+                            role="presentation"
+                            unselectable="on"
+                          />
+                        </div>
+                        
+                    
+                        <div
+                          aria-label="Previous Page"
+                          class="ag-paging-button"
+                          ref="btPrevious"
+                          role="button"
+                        >
+                          <span
+                            class="ag-icon ag-icon-previous"
+                            role="presentation"
+                            unselectable="on"
+                          />
+                        </div>
+                        
+                    
+                        <span
+                          class="ag-paging-description"
+                          role="status"
+                        >
+                          
+                        
+                          <span
+                            id="ag-2-start-page"
+                          >
+                            Page
+                          </span>
+                          
+                        
+                          <span
+                            class="ag-paging-number"
+                            id="ag-2-start-page-number"
+                            ref="lbCurrent"
+                          />
+                          
+                        
+                          <span
+                            id="ag-2-of-page"
+                          >
+                            of
+                          </span>
+                          
+                        
+                          <span
+                            class="ag-paging-number"
+                            id="ag-2-of-page-number"
+                            ref="lbTotal"
+                          />
+                          
+                    
+                        </span>
+                        
+                    
+                        <div
+                          aria-label="Next Page"
+                          class="ag-paging-button"
+                          ref="btNext"
+                          role="button"
+                        >
+                          <span
+                            class="ag-icon ag-icon-next"
+                            role="presentation"
+                            unselectable="on"
+                          />
+                        </div>
+                        
+                    
+                        <div
+                          aria-label="Last Page"
+                          class="ag-paging-button"
+                          ref="btLast"
+                          role="button"
+                        >
+                          <span
+                            class="ag-icon ag-icon-last"
+                            role="presentation"
+                            unselectable="on"
+                          />
+                        </div>
+                        
+                
+                      </span>
+                      
+            
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="fk-plots__toolbar-container"
+      >
+        <div
+          class="toolbar"
+          style="width: 20px;"
+        >
+          <div
+            class="toolbar__left-group"
+          >
+            <div
+              class="toolbar-item toolbar-item__left"
+            >
+              <button
+                class="bp5-button"
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  class="bp5-icon bp5-icon-standard bp5-icon-chevron-up"
+                  data-icon="chevron-up"
+                />
+              </button>
+            </div>
+            <div
+              class="toolbar-item toolbar-item__left"
+            >
+              <span
+                class="fk-plots__toolbar__title"
+              >
+                FK Beams and Traces
+              </span>
+            </div>
+            <div
+              class="toolbar-item toolbar-item__left"
+            >
+              <div>
+                <button
+                  class="bp5-button bp5-disabled bp5-align-left toolbar-button"
+                  disabled=""
+                  tabindex="-1"
+                  title="Compute FK using parameters"
+                  type="button"
+                >
+                  <span
+                    class="bp5-button-text"
+                  >
+                    <span>
+                      Compute
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="toolbar__center-group"
+          >
+            <div
+              class="toolbar__whitespace"
+              style="width: 20px;"
+            />
+          </div>
+          <div
+            class="toolbar__right-group"
+          >
+            <div
+              class="toolbar-item
+                  "
+            >
+              <div>
+                <div
+                  class="dropdown-container"
+                >
+                  <span
+                    class="dropdown-label"
+                  >
+                    Beam Filter: 
+                  </span>
+                  <span
+                    class="dropdown-selector"
+                    data-cy="beam-filter-dropdown"
+                  >
+                    <div
+                      class="bp5-html-select"
+                    >
+                      <select
+                        style="min-width: 140px; width: 140px;"
+                        title="Select a beam filter"
+                      >
+                        <option
+                          value="Unfiltered"
+                        >
+                          Unfiltered
+                        </option>
+                        <option
+                          value="HYDRO - for testing"
+                        >
+                          HYDRO - for testing
+                        </option>
+                        <option
+                          value="DETECTION"
+                        >
+                          DETECTION
+                        </option>
+                        <option
+                          value="ONSET"
+                        >
+                          ONSET
+                        </option>
+                        <option
+                          value="FK"
+                        >
+                          FK
+                        </option>
+                        <option
+                          value="HAM FIR BP 0.70-2.00 Hz"
+                        >
+                          HAM FIR BP 0.70-2.00 Hz
+                        </option>
+                      </select>
+                      <span
+                        class="bp5-icon bp5-icon-double-caret-vertical"
+                      >
+                        <svg
+                          data-icon="double-caret-vertical"
+                          height="16"
+                          role="img"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <title>
+                            Open dropdown
+                          </title>
+                          <path
+                            d="M100 180H220C231 180 240 189 240 200C240 205.6 237.8 210.6 234.2 214.2L174.2 274.2C170.6 277.8 165.6 280 160 280S149.4 277.8 145.8 274.2L85.8 214.2C82.2 210.6 80 205.6 80 200C80 189 89 180 100 180zM220 140H100C89 140 80 131 80 120C80 114.4 82.2 109.4 85.8 105.8L145.8 45.8C149.4 42.2 154.4 40 160 40S170.6 42.2 174.2 45.8L234.2 105.8C237.8 109.4 240 114.4 240 120C240 131 231 140 220 140z"
+                            fill-rule="evenodd"
+                            transform="scale(0.05, -0.05) translate(-160, -160)"
+                            transform-origin="center"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="toolbar-item
+                  "
+            >
+              <div
+                class="toolbar-switch"
+                title="Show/hide FK steps"
+              >
+                <div
+                  class="toolbar-switch-label"
+                >
+                  FK Steps:
+                </div>
+                <label
+                  class="bp5-control bp5-switch bp5-large toolbar-switch__blueprint fk-steps"
+                >
+                  <input
+                    title="Show/hide FK steps"
+                    type="checkbox"
+                  />
+                  <span
+                    class="bp5-control-indicator"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bp5-collapse"
+        style="height: auto; overflow-y: visible; transition: none;"
+      >
+        <div
+          aria-hidden="false"
+          class="bp5-collapse-body"
+          style="transform: translateY(0); transition: none;"
+        >
+          <div
+            class="ag-dark fk-plots-wrapper-1"
+            style="height: 70px;"
+            tabindex="0"
+          >
+            <div
+              class="fk-plots-wrapper-2"
+            >
+              <div
+                class="weavess-container"
+              >
+                <div
+                  class="weavess-container__wrapper"
+                >
+                  <div
+                    class="weavess"
+                    data-cy="weavess-container"
+                    data-end-time="1636503646"
+                    data-start-time="1636503344"
+                    style=""
+                  >
+                    <div
+                      class="horizontal-divider__bottom weavess-waveform-display"
+                      data-cy="weavess-waveform-display"
+                      style="height: 100%;"
+                    >
+                      <div
+                        class="weavess-hotkey-handler"
+                        data-testid="hotkey-handler"
+                        role="tab"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="weavess-wp"
+                          style="height: 100%; position: relative; width: 100%; box-sizing: content-box; --weavess-scrollbar-track-margin: 180px; --weavess-panel-scrollbar-width: 8px; --weavess-canvas-height: 0px;"
+                        >
+                          <div
+                            class="weavess-wp-container"
+                          >
+                            <div
+                              class="weavess-wp-container-1"
+                            >
+                              <div
+                                class="weavess-wp-container-2"
+                              >
+                                <div
+                                  class="weavess-wp-container-3"
+                                >
+                                  <aside
+                                    style="width: 9007199254740991px; height: 1px; position: absolute; pointer-events: none; background: none;"
+                                  />
+                                  <aside
+                                    class="browser-sig-fig-checker"
+                                  >
+                                    <div
+                                      class="browser-sig-fig-checker--small"
+                                      style="width: 7625999px; height: 1px; position: absolute; pointer-events: none; background: none;"
+                                    />
+                                    <div
+                                      class="browser-sig-fig-checker--medium"
+                                      style="width: 7626000px; height: 1px; position: absolute; pointer-events: none; background: none;"
+                                    />
+                                    <div
+                                      class="browser-sig-fig-checker--large"
+                                      style="width: 7626001px; height: 1px; position: absolute; pointer-events: none; background: none;"
+                                    />
+                                  </aside>
+                                  <div
+                                    class="weavess-wp-container-viewport"
+                                    tabindex="0"
+                                  >
+                                    <div
+                                      class="scroll-limiter"
+                                      style="width: 100%; overflow: hidden;"
+                                    >
+                                      <canvas
+                                        class="weavess-wp-canvas"
+                                        style="width: calc(100% - 180px); left: 180px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="weavess-wp-container-viewport-content"
+                                    >
+                                      <div
+                                        class="station"
+                                        style="height: 71px;"
+                                      >
+                                        <div
+                                          class="channel"
+                                          data-cy="Beam-ASAR-channel"
+                                          data-testid="channel-wrapper"
+                                          style="height: 70px; max-height: 70px;"
+                                          tabindex="0"
+                                        >
+                                          <div
+                                            class="channel-label-container"
+                                            data-cy="Beam-ASAR-label"
+                                            style="height: 70px; width: 180px;"
+                                            tabindex="0"
+                                          >
+                                            <div
+                                              class="label"
+                                              tabindex="0"
+                                            >
+                                              <div
+                                                class="label-container"
+                                              >
+                                                <div
+                                                  class="label-container-left-parent"
+                                                />
+                                                <div
+                                                  class="label-container-content"
+                                                >
+                                                  <div
+                                                    class="label-container-content-label"
+                                                    data-cy="channel-label-Beam-ASAR"
+                                                  >
+                                                    <div>
+                                                      <span
+                                                        class="weavess-tooltip__target label-container-content"
+                                                      >
+                                                        <span
+                                                          aria-expanded="false"
+                                                          class="weavess-tooltip bp5-popover-target"
+                                                        >
+                                                          <span
+                                                            class="station-label-container"
+                                                            tabindex="0"
+                                                          >
+                                                            <div
+                                                              class="label-channel-name-row"
+                                                            >
+                                                              <span
+                                                                class="station-name"
+                                                              >
+                                                                Beam
+                                                              </span>
+                                                              <span
+                                                                class="station-name__channel-name"
+                                                              >
+                                                                 
+                                                              </span>
+                                                            </div>
+                                                          </span>
+                                                        </span>
+                                                        <div
+                                                          class="distance-azimuth"
+                                                        >
+                                                          <p>
+                                                            <span
+                                                              class="label-container-content-mask-indicator"
+                                                            />
+                                                          </p>
+                                                        </div>
+                                                      </span>
+                                                    </div>
+                                                  </div>
+                                                  <div
+                                                    data-cy-contains-amplitude-markers="true"
+                                                    style="height: 100%;"
+                                                  >
+                                                    <div
+                                                      class="y-axis"
+                                                      data-cy="y-axis"
+                                                      data-max="1"
+                                                      data-min="-1"
+                                                      style="height: calc(100% - 4px); margin: 2px 0px 2px 0px;"
+                                                    >
+                                                      <svg
+                                                        height="100%"
+                                                        width="50"
+                                                      >
+                                                        <g
+                                                          class="y-axis__ordinate"
+                                                          height="100%"
+                                                          transform="translate(49,0)"
+                                                        />
+                                                      </svg>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div
+                                            class="channel-content-container"
+                                            style="height: 70px; width: calc(100% - 180px); left: 180px;"
+                                          >
+                                            <div
+                                              class="contentrenderer"
+                                              tabindex="0"
+                                            >
+                                              <div
+                                                class="contentrenderer-content contentrenderer-content--sticky"
+                                                style="width: 0px;"
+                                              >
+                                                <div
+                                                  class="channel-description__container"
+                                                  data-cy="filtered-channel-label"
+                                                >
+                                                  <span
+                                                    class="channel-description"
+                                                  >
+                                                    <span
+                                                      class="channel-description__message-container"
+                                                    >
+                                                      <span
+                                                        class="channel-description__message"
+                                                      >
+                                                        FK
+                                                      </span>
+                                                    </span>
+                                                  </span>
+                                                </div>
+                                              </div>
+                                              <div
+                                                class="contentrenderer-content"
+                                                data-cy-station-waveform="Beam-ASAR"
+                                                style="left: 180px; width: calc(100% - 180px);"
+                                              >
+                                                <div
+                                                  class="contentrenderer-content-drag-indicator"
+                                                />
+                                                <div
+                                                  class="measure-window-selection measure-window-selection__container "
+                                                  style="display: none; transform: translateX(-50%);"
+                                                >
+                                                  <div
+                                                    class="measure-window-selection__overlay"
+                                                    data-cy="measure-window-selection"
+                                                    draggable="true"
+                                                    style="display: none; left: 50%; width: 0%;"
+                                                  />
+                                                </div>
+                                                <div
+                                                  class="contentrenderer-content-markers"
+                                                >
+                                                  <div
+                                                    class="selection-window"
+                                                    data-testid="selection-window"
+                                                  >
+                                                    <div
+                                                      class="selection-window-selection"
+                                                      style="background-color: rgba(200, 200, 200, 0.2); left: 19.503311289856764%; right: 78.80794701986756%; cursor: move;"
+                                                    />
+                                                    <div
+                                                      class="moveable-marker"
+                                                      data-testid="selection-window-boundary-marker"
+                                                      style="left: 19.503311289856764%;"
+                                                    />
+                                                    <div
+                                                      class="moveable-marker"
+                                                      data-testid="selection-window-boundary-marker"
+                                                      style="left: 21.192052980132452%;"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="signal-detection__pick"
+                                                >
+                                                  <div
+                                                    class="pick-marker pick-marker--selectable"
+                                                    data-testid="pick-marker"
+                                                    style="--pick-marker-color: #C23030;"
+                                                  >
+                                                    <div
+                                                      class="pick-marker__vertical"
+                                                      data-cy-predicted="pick-marker-pick-predicted-false"
+                                                      style="left: 19.867549668874172%;"
+                                                    />
+                                                    <div
+                                                      class="pick-marker__label pick-marker__label--top"
+                                                      data-cy="pick-marker-012de1b9-8ae3-3fd4-800d-58665c3152cc"
+                                                      data-cy-color="pick-marker-#C23030"
+                                                      data-cy-is-predicted-phase="false"
+                                                      data-cy-phase="P"
+                                                      data-cy-style-left="19.867549668874172"
+                                                      style="left: calc(4px + 19.867549668874172%);"
+                                                    >
+                                                      P
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="signal-detection__pick"
+                                                >
+                                                  <div
+                                                    class="pick-marker pick-marker--selectable"
+                                                    data-testid="pick-marker"
+                                                    style="--pick-marker-color: #C23030;"
+                                                  >
+                                                    <div
+                                                      class="pick-marker__vertical"
+                                                      data-cy-predicted="pick-marker-pick-predicted-false"
+                                                      style="left: 25.165562913907287%;"
+                                                    />
+                                                    <div
+                                                      class="pick-marker__label pick-marker__label--top"
+                                                      data-cy="pick-marker-012de1b9-8ae3-3fd4-800d-58123c3152cc"
+                                                      data-cy-color="pick-marker-#C23030"
+                                                      data-cy-is-predicted-phase="false"
+                                                      data-cy-phase="Pg"
+                                                      data-cy-style-left="25.165562913907287"
+                                                      style="left: calc(4px + 25.165562913907287%);"
+                                                    >
+                                                      Pg
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="signal-detection__pick"
+                                                >
+                                                  <div
+                                                    class="pick-marker pick-marker--selectable"
+                                                    data-testid="pick-marker"
+                                                    style="--pick-marker-color: #C23030;"
+                                                  >
+                                                    <div
+                                                      class="pick-marker__vertical"
+                                                      data-cy-predicted="pick-marker-pick-predicted-false"
+                                                      style="left: 19.867549668874172%;"
+                                                    />
+                                                    <div
+                                                      class="pick-marker__label pick-marker__label--top"
+                                                      data-cy="pick-marker-012de1b9-8ae3-3fd4-800d-58165c3152cc"
+                                                      data-cy-color="pick-marker-#C23030"
+                                                      data-cy-is-predicted-phase="false"
+                                                      data-cy-phase="P"
+                                                      data-cy-style-left="19.867549668874172"
+                                                      style="left: calc(4px + 19.867549668874172%);"
+                                                    >
+                                                      P
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="station"
+                                        style="height: 71px;"
+                                      >
+                                        <div
+                                          class="channel"
+                                          data-cy="Fstat-ASAR-channel"
+                                          data-testid="channel-wrapper"
+                                          style="height: 70px; max-height: 70px;"
+                                          tabindex="0"
+                                        >
+                                          <div
+                                            class="channel-label-container"
+                                            data-cy="Fstat-ASAR-label"
+                                            style="height: 70px; width: 180px;"
+                                            tabindex="0"
+                                          >
+                                            <div
+                                              class="label"
+                                              tabindex="0"
+                                            >
+                                              <div
+                                                class="label-container"
+                                              >
+                                                <div
+                                                  class="label-container-left-parent"
+                                                />
+                                                <div
+                                                  class="label-container-content"
+                                                >
+                                                  <div
+                                                    class="label-container-content-label"
+                                                    data-cy="channel-label-Fstat-ASAR"
+                                                  >
+                                                    <div>
+                                                      <span
+                                                        class="weavess-tooltip__target label-container-content"
+                                                      >
+                                                        <span
+                                                          aria-expanded="false"
+                                                          class="weavess-tooltip bp5-popover-target"
+                                                        >
+                                                          <span
+                                                            class="station-label-container"
+                                                            tabindex="0"
+                                                          >
+                                                            <div
+                                                              class="label-channel-name-row"
+                                                            >
+                                                              <span
+                                                                class="station-name"
+                                                              >
+                                                                Fstat
+                                                              </span>
+                                                              <span
+                                                                class="station-name__channel-name"
+                                                              >
+                                                                 
+                                                              </span>
+                                                            </div>
+                                                          </span>
+                                                        </span>
+                                                        <div
+                                                          class="distance-azimuth"
+                                                        >
+                                                          <p>
+                                                            <span
+                                                              class="label-container-content-mask-indicator"
+                                                            />
+                                                          </p>
+                                                        </div>
+                                                      </span>
+                                                    </div>
+                                                  </div>
+                                                  <div
+                                                    data-cy-contains-amplitude-markers="true"
+                                                    style="height: 100%;"
+                                                  >
+                                                    <div
+                                                      class="y-axis"
+                                                      data-cy="y-axis"
+                                                      data-max="1"
+                                                      data-min="-1"
+                                                      style="height: calc(100% - 4px); margin: 2px 0px 2px 0px;"
+                                                    >
+                                                      <svg
+                                                        height="100%"
+                                                        width="50"
+                                                      >
+                                                        <g
+                                                          class="y-axis__ordinate"
+                                                          height="100%"
+                                                          transform="translate(49,0)"
+                                                        />
+                                                      </svg>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div
+                                            class="channel-content-container"
+                                            style="height: 70px; width: calc(100% - 180px); left: 180px;"
+                                          >
+                                            <div
+                                              class="contentrenderer"
+                                              tabindex="0"
+                                            >
+                                              <div
+                                                class="contentrenderer-content contentrenderer-content--sticky"
+                                                style="width: 0px;"
+                                              />
+                                              <div
+                                                class="contentrenderer-content"
+                                                data-cy-station-waveform="Fstat-ASAR"
+                                                style="left: 180px; width: calc(100% - 180px);"
+                                              >
+                                                <div
+                                                  class="contentrenderer-content-drag-indicator"
+                                                />
+                                                <div
+                                                  class="measure-window-selection measure-window-selection__container "
+                                                  style="display: none; transform: translateX(-50%);"
+                                                >
+                                                  <div
+                                                    class="measure-window-selection__overlay"
+                                                    data-cy="measure-window-selection"
+                                                    draggable="true"
+                                                    style="display: none; left: 50%; width: 0%;"
+                                                  />
+                                                </div>
+                                                <div
+                                                  class="contentrenderer-content-markers"
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="station"
+                                        style="height: 71px;"
+                                      >
+                                        <div
+                                          class="channel"
+                                          data-cy="Azimuth-ASAR-channel"
+                                          data-testid="channel-wrapper"
+                                          style="height: 70px; max-height: 70px;"
+                                          tabindex="0"
+                                        >
+                                          <div
+                                            class="channel-label-container"
+                                            data-cy="Azimuth-ASAR-label"
+                                            style="height: 70px; width: 180px;"
+                                            tabindex="0"
+                                          >
+                                            <div
+                                              class="label"
+                                              tabindex="0"
+                                            >
+                                              <div
+                                                class="label-container"
+                                              >
+                                                <div
+                                                  class="label-container-left-parent"
+                                                />
+                                                <div
+                                                  class="label-container-content"
+                                                >
+                                                  <div
+                                                    class="label-container-content-label"
+                                                    data-cy="channel-label-Azimuth-ASAR"
+                                                  >
+                                                    <div>
+                                                      <span
+                                                        class="weavess-tooltip__target label-container-content"
+                                                      >
+                                                        <span
+                                                          aria-expanded="false"
+                                                          class="weavess-tooltip bp5-popover-target"
+                                                        >
+                                                          <span
+                                                            class="station-label-container"
+                                                            tabindex="0"
+                                                          >
+                                                            <div
+                                                              style="white-space: nowrap;"
+                                                            >
+                                                              Azimuth 
+                                                              <sup>
+                                                                (°)
+                                                              </sup>
+                                                            </div>
+                                                          </span>
+                                                        </span>
+                                                        <div
+                                                          class="distance-azimuth"
+                                                        >
+                                                          <p>
+                                                            <span
+                                                              class="label-container-content-mask-indicator"
+                                                            />
+                                                          </p>
+                                                        </div>
+                                                      </span>
+                                                    </div>
+                                                  </div>
+                                                  <div
+                                                    data-cy-contains-amplitude-markers="true"
+                                                    style="height: 100%;"
+                                                  >
+                                                    <div
+                                                      class="y-axis"
+                                                      data-cy="y-axis"
+                                                      data-max="1"
+                                                      data-min="-1"
+                                                      style="height: calc(100% - 4px); margin: 2px 0px 2px 0px;"
+                                                    >
+                                                      <svg
+                                                        height="100%"
+                                                        width="50"
+                                                      >
+                                                        <g
+                                                          class="y-axis__ordinate"
+                                                          height="100%"
+                                                          transform="translate(49,0)"
+                                                        />
+                                                      </svg>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div
+                                            class="channel-content-container"
+                                            style="height: 70px; width: calc(100% - 180px); left: 180px;"
+                                          >
+                                            <div
+                                              class="contentrenderer"
+                                              tabindex="0"
+                                            >
+                                              <div
+                                                class="contentrenderer-content contentrenderer-content--sticky"
+                                                style="width: 0px;"
+                                              />
+                                              <div
+                                                class="contentrenderer-content"
+                                                data-cy-station-waveform="Azimuth-ASAR"
+                                                style="left: 180px; width: calc(100% - 180px);"
+                                              >
+                                                <div
+                                                  class="contentrenderer-content-drag-indicator"
+                                                />
+                                                <div
+                                                  class="measure-window-selection measure-window-selection__container "
+                                                  style="display: none; transform: translateX(-50%);"
+                                                >
+                                                  <div
+                                                    class="measure-window-selection__overlay"
+                                                    data-cy="measure-window-selection"
+                                                    draggable="true"
+                                                    style="display: none; left: 50%; width: 0%;"
+                                                  />
+                                                </div>
+                                                <div
+                                                  class="contentrenderer-content-markers"
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="station"
+                                        style="height: 71px;"
+                                      >
+                                        <div
+                                          class="channel"
+                                          data-cy="Slowness-ASAR-channel"
+                                          data-testid="channel-wrapper"
+                                          style="height: 70px; max-height: 70px;"
+                                          tabindex="0"
+                                        >
+                                          <div
+                                            class="channel-label-container"
+                                            data-cy="Slowness-ASAR-label"
+                                            style="height: 70px; width: 180px;"
+                                            tabindex="0"
+                                          >
+                                            <div
+                                              class="label"
+                                              tabindex="0"
+                                            >
+                                              <div
+                                                class="label-container"
+                                              >
+                                                <div
+                                                  class="label-container-left-parent"
+                                                />
+                                                <div
+                                                  class="label-container-content"
+                                                >
+                                                  <div
+                                                    class="label-container-content-label"
+                                                    data-cy="channel-label-Slowness-ASAR"
+                                                  >
+                                                    <div>
+                                                      <span
+                                                        class="weavess-tooltip__target label-container-content"
+                                                      >
+                                                        <span
+                                                          aria-expanded="false"
+                                                          class="weavess-tooltip bp5-popover-target"
+                                                        >
+                                                          <span
+                                                            class="station-label-container"
+                                                            tabindex="0"
+                                                          >
+                                                            <div
+                                                              style="white-space: nowrap;"
+                                                            >
+                                                              Slowness (
+                                                              <sup>
+                                                                s
+                                                              </sup>
+                                                              ∕
+                                                              <sub>
+                                                                °
+                                                              </sub>
+                                                              )
+                                                            </div>
+                                                          </span>
+                                                        </span>
+                                                        <div
+                                                          class="distance-azimuth"
+                                                        >
+                                                          <p>
+                                                            <span
+                                                              class="label-container-content-mask-indicator"
+                                                            />
+                                                          </p>
+                                                        </div>
+                                                      </span>
+                                                    </div>
+                                                  </div>
+                                                  <div
+                                                    data-cy-contains-amplitude-markers="true"
+                                                    style="height: 100%;"
+                                                  >
+                                                    <div
+                                                      class="y-axis"
+                                                      data-cy="y-axis"
+                                                      data-max="1"
+                                                      data-min="-1"
+                                                      style="height: calc(100% - 4px); margin: 2px 0px 2px 0px;"
+                                                    >
+                                                      <svg
+                                                        height="100%"
+                                                        width="50"
+                                                      >
+                                                        <g
+                                                          class="y-axis__ordinate"
+                                                          height="100%"
+                                                          transform="translate(49,0)"
+                                                        />
+                                                      </svg>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div
+                                            class="channel-content-container"
+                                            style="height: 70px; width: calc(100% - 180px); left: 180px;"
+                                          >
+                                            <div
+                                              class="contentrenderer"
+                                              tabindex="0"
+                                            >
+                                              <div
+                                                class="contentrenderer-content contentrenderer-content--sticky"
+                                                style="width: 0px;"
+                                              />
+                                              <div
+                                                class="contentrenderer-content"
+                                                data-cy-station-waveform="Slowness-ASAR"
+                                                style="left: 180px; width: calc(100% - 180px);"
+                                              >
+                                                <div
+                                                  class="contentrenderer-content-drag-indicator"
+                                                />
+                                                <div
+                                                  class="measure-window-selection measure-window-selection__container "
+                                                  style="display: none; transform: translateX(-50%);"
+                                                >
+                                                  <div
+                                                    class="measure-window-selection__overlay"
+                                                    data-cy="measure-window-selection"
+                                                    draggable="true"
+                                                    style="display: none; left: 50%; width: 0%;"
+                                                  />
+                                                </div>
+                                                <div
+                                                  class="contentrenderer-content-markers"
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="weavess-wp-container-viewport-content-markers"
+                                        style="width: calc(100% - 188px); left: 180px;"
+                                      />
+                                    </div>
+                                    <object
+                                      class="resize-sensor"
+                                      data="about:blank"
+                                      style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; pointer-events: none; z-index: -1; opacity: 0;"
+                                      tabindex="-1"
+                                      type="text/html"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="weavess-wp-container-overlay"
+                                style="width: calc(100% - 188px);"
+                              >
+                                <div
+                                  class="weavess-wp-container-overlay-cross-hair"
+                                />
+                                <div
+                                  class="weavess-wp-container-overlay-selection-area"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="x-axis"
+                              data-cy="x-axis"
+                              data-end-time="1636503646"
+                              data-start-time="1636503344"
+                              style="height: 35px;"
+                            >
+                              <div
+                                style="width: 100%;"
+                              >
+                                <svg
+                                  height="35"
+                                  style="fill: #F6F7F9;"
+                                  width="100%"
+                                >
+                                  <g
+                                    class="x-axis-axis"
+                                    fill="none"
+                                    font-family="sans-serif"
+                                    font-size="10"
+                                    text-anchor="middle"
+                                  >
+                                    <path
+                                      class="domain"
+                                      d="M180.5,7V0.5H-7.5V7"
+                                      stroke="currentColor"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                              <div
+                                style="text-align: center;"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="weavess-wp-time-range"
+                            style="left: 180px;"
+                          >
+                            <span
+                              class="very-short-time"
+                            >
+                              5 minutes 2 seconds
+                            </span>
+                            <span
+                              class="short-time"
+                            >
+                              00:15:44.000 - 00:20:46.000, 5 minutes 2 seconds
+                            </span>
+                            <span
+                              class="full-time"
+                            >
+                              2021-11-10 00:15:44.000 - 2021-11-10 00:20:46.000, 5 minutes 2 seconds
+                            </span>
+                          </div>
+                          <div
+                            class="weavess-wp-info-bar"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

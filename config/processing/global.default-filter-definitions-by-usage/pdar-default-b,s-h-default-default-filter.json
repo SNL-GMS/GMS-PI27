@@ -1,0 +1,110 @@
+{
+    "name": "pdar-default-b,s-h-default-default-filter.json",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "PDAR"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelBand",
+            "operator": {
+                "type": "IN",
+                "negated": false
+            },
+            "value": [
+                "B",
+                "S"
+            ],
+            "priority": 80
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channelInstrument",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "H"
+            ],
+            "priority": 70
+        }
+    ],
+    "parameters": {
+        "filterDefinitionsForDistanceRangesByUsage": {
+            "ONSET": [
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 20,
+                        "maxDistanceDeg": 100
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "4.09 4.39 4 BR non-causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "FK": [
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 20,
+                        "maxDistanceDeg": 100
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "4.09 4.39 4 BR non-causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "DETECTION": [
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 20,
+                        "maxDistanceDeg": 100
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "4.09 4.39 4 BR non-causal"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "AMPLITUDE": [
+                {
+                    "distanceRange": {
+                        "minDistanceDeg": 20,
+                        "maxDistanceDeg": 100
+                    },
+                    "filterDefinition": {
+                        "$ref=global.filter-definition": [
+                            {
+                                "criterion": "name",
+                                "value": "4.09 4.39 4 BR non-causal"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

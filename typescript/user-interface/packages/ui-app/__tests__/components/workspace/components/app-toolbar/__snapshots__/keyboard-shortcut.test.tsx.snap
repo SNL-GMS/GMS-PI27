@@ -1,0 +1,4167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Keyboard Shortcuts KeyboardShortcuts component matches a snapshot 1`] = `
+<aside
+  className="keyboard-shortcuts"
+>
+  <div
+    className="keyboard-shortcuts__search-container"
+  >
+    <div
+      className="bp5-input-group bp5-large keyboard-shortcuts__input"
+    >
+      <span
+        aria-hidden={true}
+        className="bp5-icon bp5-icon-standard bp5-icon-search"
+        data-icon="search"
+        tabIndex={-1}
+      />
+      <input
+        autoFocus={true}
+        className="bp5-input"
+        dir="ltr"
+        onChange={[Function]}
+        placeholder="Search"
+        style={
+          {
+            "paddingLeft": undefined,
+            "paddingRight": undefined,
+          }
+        }
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="keyboard-shortcuts__shortcuts-container"
+  >
+    <section
+      className="keyboard-shortcuts__category"
+    >
+      <h5
+        className="bp5-heading keyboard-shortcuts__group-title"
+      >
+        App
+      </h5>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Command palette
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              x
+            </mark>
+          </span>
+          <span
+            className="keyboard-shortcuts__conjunction-junction"
+          >
+             or 
+          </span>
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ⌘
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              x
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Keyboard shortcuts
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              /
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Redo previous undone action
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              z
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Redo previous undone event action
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              z
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Toggle event mode for history undo/redo
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Undo previous action
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              z
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Undo previous event action
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              z
+            </mark>
+          </span>
+        </ul>
+      </div>
+    </section>
+    <section
+      className="keyboard-shortcuts__category"
+    >
+      <h5
+        className="bp5-heading keyboard-shortcuts__group-title"
+      >
+        Azimuth Slowness Display
+      </h5>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Next FK
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              n
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Reset all waveform amplitude scaling (Y values)
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              y
+            </mark>
+          </span>
+        </ul>
+      </div>
+    </section>
+    <section
+      className="keyboard-shortcuts__category"
+    >
+      <h5
+        className="bp5-heading keyboard-shortcuts__group-title"
+      >
+        Events List Display
+      </h5>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Create a new event
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              c
+            </mark>
+          </span>
+        </ul>
+      </div>
+    </section>
+    <section
+      className="keyboard-shortcuts__category"
+    >
+      <h5
+        className="bp5-heading keyboard-shortcuts__group-title"
+      >
+        Filters
+      </h5>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Select next filter
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              f
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Select previous filter
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              f
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Select unfiltered
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              f
+            </mark>
+          </span>
+        </ul>
+      </div>
+    </section>
+    <section
+      className="keyboard-shortcuts__category"
+    >
+      <h5
+        className="bp5-heading keyboard-shortcuts__group-title"
+      >
+        Map Display
+      </h5>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Create a new event
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              c
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Delete selected signal detections
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              backspace
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Open the set phase menu
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              e
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Set selected signal detections phase label to current phase
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              q
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Set selected signal detections phase label to default phase
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              q
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Show event details
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Show signal detection details
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Show station/site details
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+    </section>
+    <section
+      className="keyboard-shortcuts__category"
+    >
+      <h5
+        className="bp5-heading keyboard-shortcuts__group-title"
+      >
+        Signal Detections List Display
+      </h5>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Associate selected signal detections to open event
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              double click
+            </mark>
+          </span>
+          <span
+            className="keyboard-shortcuts__conjunction-junction"
+          >
+             or 
+          </span>
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              g
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Create a new event
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              c
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Delete selected signal detections
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              backspace
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Open the set phase menu
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              e
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Set selected signal detections phase label to current phase
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              q
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Set selected signal detections phase label to default phase
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              q
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Show signal detection details
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Unassociate selected signal detections from open event
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              double click
+            </mark>
+          </span>
+          <span
+            className="keyboard-shortcuts__conjunction-junction"
+          >
+             or 
+          </span>
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              g
+            </mark>
+          </span>
+        </ul>
+      </div>
+    </section>
+    <section
+      className="keyboard-shortcuts__category"
+    >
+      <h5
+        className="bp5-heading keyboard-shortcuts__group-title"
+      >
+        Waveform Display
+      </h5>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Associate selected signal detections to open event
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              double click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Close the create signal detection overlay
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              esc
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Create a new event
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              c
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Create event beams
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              b
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Create new QC segments
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              m 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               drag
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Create new signal detection with chosen phase
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              e 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Create new signal detection with chosen phase & no waveform
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              e 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Create new signal detection with current phase
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              e 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Create new signal detection with current phase & no waveform
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              e 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Create new signal detection with default phase
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              e 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Create new signal detection with default phase & no waveform
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              alt
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              e 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Decrease visible waveforms
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              down
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Delete selected signal detections
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              backspace
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Draw measure window
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               drag
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Edit signal detection time uncertainty
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              e
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Hide measure window
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              esc
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Increase visible waveforms
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              up
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Load data left
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              a
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Load data right
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              d
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Open the current phase menu
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              p
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Open the set phase menu
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              e
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Page down
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              s
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Page up
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              w
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Pan left
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              a
+            </mark>
+          </span>
+          <span
+            className="keyboard-shortcuts__conjunction-junction"
+          >
+             or 
+          </span>
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              left
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Pan right
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              d
+            </mark>
+          </span>
+          <span
+            className="keyboard-shortcuts__conjunction-junction"
+          >
+             or 
+          </span>
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              right
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Reset all waveform amplitude scaling (Y values)
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              y
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Reset selected waveform manual amplitude scaling (Y values)
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              y
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Rotate
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              r
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Scale all amplitudes to selected channel
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              y
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Scale waveform amplitude (Y values)
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              y 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               drag
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Select channel and children
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Select channel range and children
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              alt 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Set selected signal detections phase label to current phase
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              q
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Set selected signal detections phase label to default phase
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              q
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Show ruler
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              drag
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Show signal detection details
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Toggle alignment
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              p
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Toggle QC mask visibility
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              m
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Toggle uncertainty
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              u
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Unassociate selected signal detections from open event
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              double click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          View QC segment details
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              alt 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               click
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Zoom - smooth
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               mouse wheel
+            </mark>
+          </span>
+          <span
+            className="keyboard-shortcuts__conjunction-junction"
+          >
+             or 
+          </span>
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ⌘ 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               mouse wheel
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Zoom in one step
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              w
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Zoom out fully
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              space
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Zoom out one step
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              s
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Zoom to range
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ctrl 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               drag
+            </mark>
+          </span>
+          <span
+            className="keyboard-shortcuts__conjunction-junction"
+          >
+             or 
+          </span>
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              ⌘ 
+            </mark>
+            <mark
+              className="key-mark"
+            >
+               drag
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Zoom, align, sort (ZAS)
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              z
+            </mark>
+          </span>
+        </ul>
+      </div>
+    </section>
+    <section
+      className="keyboard-shortcuts__category"
+    >
+      <h5
+        className="bp5-heading keyboard-shortcuts__group-title"
+      >
+        Workflow Display
+      </h5>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Pan left one day
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              left
+            </mark>
+          </span>
+          <span
+            className="keyboard-shortcuts__conjunction-junction"
+          >
+             or 
+          </span>
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              a
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Pan right one day
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              right
+            </mark>
+          </span>
+          <span
+            className="keyboard-shortcuts__conjunction-junction"
+          >
+             or 
+          </span>
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              d
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Step left one week
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              left
+            </mark>
+          </span>
+          <span
+            className="keyboard-shortcuts__conjunction-junction"
+          >
+             or 
+          </span>
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              a
+            </mark>
+          </span>
+        </ul>
+      </div>
+      <div
+        className="help-text__hover-container keyboard-shortcuts__hotkey-entry"
+        style={
+          {
+            "--help-text-background": undefined,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="help-text bp5-popover-target"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="bp5-icon bp5-icon-info-sign"
+            data-icon="info-sign"
+            tabIndex={0}
+          />
+        </div>
+        <span
+          className="keyboard-shortcuts__description"
+        >
+          Step right one week
+          : 
+        </span>
+        <ul
+          className="keyboard-shortcuts__hotkey-list"
+        >
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              right
+            </mark>
+          </span>
+          <span
+            className="keyboard-shortcuts__conjunction-junction"
+          >
+             or 
+          </span>
+          <span
+            className="keyboard-shortcuts__hotkey-combo"
+          >
+            <mark
+              className="key-mark"
+            >
+              shift
+            </mark>
+            <mark
+              className="key-mark"
+            >
+              d
+            </mark>
+          </span>
+        </ul>
+      </div>
+    </section>
+  </div>
+</aside>
+`;

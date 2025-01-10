@@ -1,0 +1,1284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimePicker opens the calendar popover 1`] = `
+<div>
+  <div
+    class="time-picker"
+  >
+    <div
+      class="bp5-input-group time-picker__input-group"
+    >
+      <input
+        class="bp5-input time-picker__input"
+        inputmode="text"
+        type="text"
+        value="2021-01-20T14:34:31.425"
+      />
+    </div>
+    <div
+      class="bp5-datepicker time-picker__date-picker time-picker__date-picker--bottom"
+    >
+      <div
+        class="bp5-datepicker-content"
+      >
+        <div
+          class="rdp "
+        >
+          <div
+            class="rdp-months"
+          >
+            <div
+              class="rdp-month rdp-caption_start rdp-caption_end"
+            >
+              <div
+                class="rdp-caption"
+              >
+                <div
+                  class="rdp-caption_dropdowns"
+                >
+                  <div
+                    class="rdp-vhidden"
+                  >
+                    <div
+                      aria-live="polite"
+                      class="rdp-caption_label"
+                      id="react-day-picker-1"
+                      role="presentation"
+                    >
+                      January 2021
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="bp5-html-select bp5-minimal bp5-datepicker-month-select"
+                    >
+                      <select
+                        aria-label="Month: "
+                        name="months"
+                      >
+                        <option
+                          value="0"
+                        >
+                          January
+                        </option>
+                        <option
+                          value="1"
+                        >
+                          February
+                        </option>
+                        <option
+                          value="2"
+                        >
+                          March
+                        </option>
+                        <option
+                          value="3"
+                        >
+                          April
+                        </option>
+                        <option
+                          value="4"
+                        >
+                          May
+                        </option>
+                        <option
+                          value="5"
+                        >
+                          June
+                        </option>
+                        <option
+                          value="6"
+                        >
+                          July
+                        </option>
+                        <option
+                          value="7"
+                        >
+                          August
+                        </option>
+                        <option
+                          value="8"
+                        >
+                          September
+                        </option>
+                        <option
+                          value="9"
+                        >
+                          October
+                        </option>
+                        <option
+                          value="10"
+                        >
+                          November
+                        </option>
+                        <option
+                          value="11"
+                        >
+                          December
+                        </option>
+                      </select>
+                      <span
+                        class="bp5-icon bp5-icon-double-caret-vertical"
+                        style="right: 2px;"
+                      >
+                        <svg
+                          data-icon="double-caret-vertical"
+                          height="16"
+                          role="img"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <title>
+                            Open dropdown
+                          </title>
+                          <path
+                            d="M100 180H220C231 180 240 189 240 200C240 205.6 237.8 210.6 234.2 214.2L174.2 274.2C170.6 277.8 165.6 280 160 280S149.4 277.8 145.8 274.2L85.8 214.2C82.2 210.6 80 205.6 80 200C80 189 89 180 100 180zM220 140H100C89 140 80 131 80 120C80 114.4 82.2 109.4 85.8 105.8L145.8 45.8C149.4 42.2 154.4 40 160 40S170.6 42.2 174.2 45.8L234.2 105.8C237.8 109.4 240 114.4 240 120C240 131 231 140 220 140z"
+                            fill-rule="evenodd"
+                            transform="scale(0.05, -0.05) translate(-160, -160)"
+                            transform-origin="center"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="bp5-html-select bp5-minimal bp5-datepicker-year-select"
+                    >
+                      <select
+                        aria-label="Year: "
+                        name="years"
+                      >
+                        <option
+                          value="2004"
+                        >
+                          2004
+                        </option>
+                        <option
+                          value="2005"
+                        >
+                          2005
+                        </option>
+                        <option
+                          value="2006"
+                        >
+                          2006
+                        </option>
+                        <option
+                          value="2007"
+                        >
+                          2007
+                        </option>
+                        <option
+                          value="2008"
+                        >
+                          2008
+                        </option>
+                        <option
+                          value="2009"
+                        >
+                          2009
+                        </option>
+                        <option
+                          value="2010"
+                        >
+                          2010
+                        </option>
+                        <option
+                          value="2011"
+                        >
+                          2011
+                        </option>
+                        <option
+                          value="2012"
+                        >
+                          2012
+                        </option>
+                        <option
+                          value="2013"
+                        >
+                          2013
+                        </option>
+                        <option
+                          value="2014"
+                        >
+                          2014
+                        </option>
+                        <option
+                          value="2015"
+                        >
+                          2015
+                        </option>
+                        <option
+                          value="2016"
+                        >
+                          2016
+                        </option>
+                        <option
+                          value="2017"
+                        >
+                          2017
+                        </option>
+                        <option
+                          value="2018"
+                        >
+                          2018
+                        </option>
+                        <option
+                          value="2019"
+                        >
+                          2019
+                        </option>
+                        <option
+                          value="2020"
+                        >
+                          2020
+                        </option>
+                        <option
+                          value="2021"
+                        >
+                          2021
+                        </option>
+                        <option
+                          value="2022"
+                        >
+                          2022
+                        </option>
+                        <option
+                          value="2023"
+                        >
+                          2023
+                        </option>
+                        <option
+                          value="2024"
+                        >
+                          2024
+                        </option>
+                      </select>
+                      <span
+                        class="bp5-icon bp5-icon-double-caret-vertical"
+                      >
+                        <svg
+                          data-icon="double-caret-vertical"
+                          height="16"
+                          role="img"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <title>
+                            Open dropdown
+                          </title>
+                          <path
+                            d="M100 180H220C231 180 240 189 240 200C240 205.6 237.8 210.6 234.2 214.2L174.2 274.2C170.6 277.8 165.6 280 160 280S149.4 277.8 145.8 274.2L85.8 214.2C82.2 210.6 80 205.6 80 200C80 189 89 180 100 180zM220 140H100C89 140 80 131 80 120C80 114.4 82.2 109.4 85.8 105.8L145.8 45.8C149.4 42.2 154.4 40 160 40S170.6 42.2 174.2 45.8L234.2 105.8C237.8 109.4 240 114.4 240 120C240 131 231 140 220 140z"
+                            fill-rule="evenodd"
+                            transform="scale(0.05, -0.05) translate(-160, -160)"
+                            transform-origin="center"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rdp-nav"
+                >
+                  <button
+                    aria-label="Go to previous month"
+                    class=" bp5-button bp5-minimal bp5-datepicker-nav-button bp5-datepicker-nav-button-previous"
+                    name="previous-month"
+                    type="button"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="bp5-icon bp5-icon-chevron-left rdp-nav_icon"
+                    >
+                      <svg
+                        data-icon="chevron-left"
+                        height="16"
+                        role="img"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M148.2 160L214 225.8C217.8 229.4 220 234.4 220 240C220 251 211 260 200 260C194.4 260 189.4 257.8 185.8 254.2L105.8 174.2C102.2 170.6 100 165.6 100 160C100 154.4 102.2 149.4 105.8 145.8L185.8 65.8C189.4 62.2 194.4 60 200 60C211 60 220 69 220 80C220 85.6 217.8 90.6 214.2 94.2L148.2 160z"
+                          fill-rule="evenodd"
+                          transform="scale(0.05, -0.05) translate(-160, -160)"
+                          transform-origin="center"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                  <button
+                    aria-label="Go to next month"
+                    class=" bp5-button bp5-minimal bp5-datepicker-nav-button bp5-datepicker-nav-button-next"
+                    name="next-month"
+                    type="button"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="bp5-icon bp5-icon-chevron-right rdp-nav_icon"
+                    >
+                      <svg
+                        data-icon="chevron-right"
+                        height="16"
+                        role="img"
+                        viewBox="0 0 16 16"
+                        width="16"
+                      >
+                        <path
+                          d="M214.2 174.2L134.2 254.2C130.6 257.8 125.6 260 120 260C109 260 100 251 100 240C100 234.4 102.2 229.4 105.8 225.8L171.8 160L106 94.2C102.2 90.6 100 85.6 100 80C100 69 109 60 120 60C125.6 60 130.6 62.2 134.2 65.8L214.2 145.8C217.8 149.4 220 154.4 220 160C220 165.6 217.8 170.6 214.2 174.2z"
+                          fill-rule="evenodd"
+                          transform="scale(0.05, -0.05) translate(-160, -160)"
+                          transform-origin="center"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <table
+                aria-labelledby="react-day-picker-1"
+                class="rdp-table"
+                role="grid"
+              >
+                <thead
+                  class="rdp-head"
+                >
+                  <tr
+                    class="rdp-head_row"
+                  >
+                    <th
+                      aria-label="Sunday"
+                      class="rdp-head_cell"
+                      scope="col"
+                    >
+                      Su
+                    </th>
+                    <th
+                      aria-label="Monday"
+                      class="rdp-head_cell"
+                      scope="col"
+                    >
+                      Mo
+                    </th>
+                    <th
+                      aria-label="Tuesday"
+                      class="rdp-head_cell"
+                      scope="col"
+                    >
+                      Tu
+                    </th>
+                    <th
+                      aria-label="Wednesday"
+                      class="rdp-head_cell"
+                      scope="col"
+                    >
+                      We
+                    </th>
+                    <th
+                      aria-label="Thursday"
+                      class="rdp-head_cell"
+                      scope="col"
+                    >
+                      Th
+                    </th>
+                    <th
+                      aria-label="Friday"
+                      class="rdp-head_cell"
+                      scope="col"
+                    >
+                      Fr
+                    </th>
+                    <th
+                      aria-label="Saturday"
+                      class="rdp-head_cell"
+                      scope="col"
+                    >
+                      Sa
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="rdp-tbody"
+                >
+                  <tr
+                    class="rdp-row"
+                  >
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day rdp-day_outside"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        27
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day rdp-day_outside"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        28
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day rdp-day_outside"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        29
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day rdp-day_outside"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        30
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day rdp-day_outside"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        31
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        1
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        2
+                      </button>
+                    </td>
+                  </tr>
+                  <tr
+                    class="rdp-row"
+                  >
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        3
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        4
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        5
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        6
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        7
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        8
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        9
+                      </button>
+                    </td>
+                  </tr>
+                  <tr
+                    class="rdp-row"
+                  >
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        10
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        11
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        12
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        13
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        14
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        15
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        16
+                      </button>
+                    </td>
+                  </tr>
+                  <tr
+                    class="rdp-row"
+                  >
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        17
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        18
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        19
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        aria-selected="true"
+                        class=" bp5-button bp5-minimal rdp-day rdp-day_selected"
+                        name="day"
+                        role="gridcell"
+                        tabindex="0"
+                        type="button"
+                      >
+                        20
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        21
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        22
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        23
+                      </button>
+                    </td>
+                  </tr>
+                  <tr
+                    class="rdp-row"
+                  >
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        24
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        25
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        26
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        27
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        28
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        29
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        30
+                      </button>
+                    </td>
+                  </tr>
+                  <tr
+                    class="rdp-row"
+                  >
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        31
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day rdp-day_outside"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        1
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day rdp-day_outside"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        2
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day rdp-day_outside"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        3
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day rdp-day_outside"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        4
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day rdp-day_outside"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        5
+                      </button>
+                    </td>
+                    <td
+                      class="rdp-cell"
+                      role="presentation"
+                    >
+                      <button
+                        class=" bp5-button bp5-minimal rdp-day rdp-day_outside"
+                        name="day"
+                        role="gridcell"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        6
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bp5-datepicker-timepicker-wrapper"
+        >
+          <div
+            class="bp5-timepicker"
+          >
+            <div
+              class="bp5-timepicker-arrow-row"
+            >
+              <span
+                aria-controls="hour24-input-0"
+                aria-label="Increase hours (24hr clock)"
+                class="bp5-timepicker-arrow-button bp5-timepicker-hour"
+                tabindex="-1"
+              >
+                <span
+                  class="bp5-icon bp5-icon-standard bp5-icon-chevron-up"
+                  data-icon="chevron-up"
+                />
+              </span>
+              <span
+                aria-controls="minute-input-0"
+                aria-label="Increase minutes"
+                class="bp5-timepicker-arrow-button bp5-timepicker-minute"
+                tabindex="-1"
+              >
+                <span
+                  class="bp5-icon bp5-icon-standard bp5-icon-chevron-up"
+                  data-icon="chevron-up"
+                />
+              </span>
+              <span
+                aria-controls="second-input-0"
+                aria-label="Increase seconds"
+                class="bp5-timepicker-arrow-button bp5-timepicker-second"
+                tabindex="-1"
+              >
+                <span
+                  class="bp5-icon bp5-icon-standard bp5-icon-chevron-up"
+                  data-icon="chevron-up"
+                />
+              </span>
+              <span
+                aria-controls="ms-input-0"
+                aria-label="Increase milliseconds"
+                class="bp5-timepicker-arrow-button bp5-timepicker-millisecond"
+                tabindex="-1"
+              >
+                <span
+                  class="bp5-icon bp5-icon-standard bp5-icon-chevron-up"
+                  data-icon="chevron-up"
+                />
+              </span>
+            </div>
+            <div
+              class="bp5-timepicker-input-row"
+            >
+              <input
+                aria-label="hours (24hr clock)"
+                class="bp5-timepicker-input bp5-timepicker-hour"
+                id="hour24-input-0"
+                max="23"
+                min="0"
+                role="spinbutton"
+                type="number"
+                value="14"
+              />
+              <span
+                class="bp5-timepicker-divider-text"
+              >
+                :
+              </span>
+              <input
+                aria-label="minutes"
+                class="bp5-timepicker-input bp5-timepicker-minute"
+                id="minute-input-0"
+                max="59"
+                min="0"
+                role="spinbutton"
+                type="number"
+                value="34"
+              />
+              <span
+                class="bp5-timepicker-divider-text"
+              >
+                :
+              </span>
+              <input
+                aria-label="seconds"
+                class="bp5-timepicker-input bp5-timepicker-second"
+                id="second-input-0"
+                max="59"
+                min="0"
+                role="spinbutton"
+                type="number"
+                value="31"
+              />
+              <span
+                class="bp5-timepicker-divider-text"
+              >
+                .
+              </span>
+              <input
+                aria-label="milliseconds"
+                class="bp5-timepicker-input bp5-timepicker-millisecond"
+                id="ms-input-0"
+                max="999"
+                min="0"
+                role="spinbutton"
+                type="number"
+                value="425"
+              />
+            </div>
+            <div
+              class="bp5-timepicker-arrow-row"
+            >
+              <span
+                aria-controls="hour24-input-0"
+                aria-label="Decrease hours (24hr clock)"
+                class="bp5-timepicker-arrow-button bp5-timepicker-hour"
+                tabindex="-1"
+              >
+                <span
+                  class="bp5-icon bp5-icon-standard bp5-icon-chevron-down"
+                  data-icon="chevron-down"
+                />
+              </span>
+              <span
+                aria-controls="minute-input-0"
+                aria-label="Decrease minutes"
+                class="bp5-timepicker-arrow-button bp5-timepicker-minute"
+                tabindex="-1"
+              >
+                <span
+                  class="bp5-icon bp5-icon-standard bp5-icon-chevron-down"
+                  data-icon="chevron-down"
+                />
+              </span>
+              <span
+                aria-controls="second-input-0"
+                aria-label="Decrease seconds"
+                class="bp5-timepicker-arrow-button bp5-timepicker-second"
+                tabindex="-1"
+              >
+                <span
+                  class="bp5-icon bp5-icon-standard bp5-icon-chevron-down"
+                  data-icon="chevron-down"
+                />
+              </span>
+              <span
+                aria-controls="ms-input-0"
+                aria-label="Decrease milliseconds"
+                class="bp5-timepicker-arrow-button bp5-timepicker-millisecond"
+                tabindex="-1"
+              >
+                <span
+                  class="bp5-icon bp5-icon-standard bp5-icon-chevron-down"
+                  data-icon="chevron-down"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="bp5-button time-picker__date-picker-button time-picker__date-picker-button--active"
+      title="Choose a date and time"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="bp5-icon bp5-icon-calendar"
+      >
+        <svg
+          data-icon="calendar"
+          height="16"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`TimePicker renders 1`] = `
+<div>
+  <div
+    class="time-picker"
+  >
+    <div
+      class="bp5-input-group time-picker__input-group"
+    >
+      <input
+        class="bp5-input time-picker__input"
+        inputmode="text"
+        type="text"
+        value="2021-01-20T14:34:31.425"
+      />
+    </div>
+    <button
+      class="bp5-button time-picker__date-picker-button"
+      title="Choose a date and time"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="bp5-icon bp5-icon-standard bp5-icon-calendar"
+        data-icon="calendar"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`TimePicker renders with short format 1`] = `
+<div>
+  <div
+    class="time-picker"
+  >
+    <div
+      class="bp5-input-group time-picker__input-group--short-format"
+    >
+      <input
+        class="bp5-input time-picker__input"
+        inputmode="text"
+        type="text"
+        value="2021-01-20T14:34"
+      />
+    </div>
+    <button
+      class="bp5-button time-picker__date-picker-button"
+      title="Choose a date and time"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="bp5-icon bp5-icon-calendar"
+      >
+        <svg
+          data-icon="calendar"
+          height="16"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,27 @@
+{
+    "name": "bw-iir-0.8-4.5-3-bp-causal-description",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "0.8 4.5 3 BP causal Description"
+            ]
+        }
+    ],
+    "parameters": {
+        "comments": "0.8 4.5 3 BP causal",
+        "causal": true,
+        "filterType": "LINEAR",
+        "lowFrequencyHz": 0.8,
+        "highFrequencyHz": 4.5,
+        "order": 3,
+        "zeroPhase": false,
+        "passBandType": "BAND_PASS",
+        "linearFilterType": "IIR_BUTTERWORTH"
+    }
+}

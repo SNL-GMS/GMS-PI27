@@ -1,0 +1,39 @@
+{
+    "name": "asar-al1-event-review",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "ASAR"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "activity",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "AL1 Event Review"
+            ],
+            "priority": 100
+        }
+    ],
+    "parameters": {
+        "phases": [
+            "NP_1",
+            "P",
+            "Pg",
+            "PKKSab",
+            "S",
+            "sP"
+        ]
+    }
+}

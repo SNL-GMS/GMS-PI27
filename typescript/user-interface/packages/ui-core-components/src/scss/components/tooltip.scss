@@ -1,0 +1,98 @@
+.tooltip {
+  .bp5-heading {
+    margin-top: 0;
+    margin-left: 0;
+    font-weight: bold;
+    &:last-child {
+      // in case there is no content below
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+  .tooltip-content {
+    display: grid;
+    width: 420px;
+    margin: 0 auto;
+    background-color: var(--core-grid-background, $core-grid-background);
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    .label-value__label {
+      display: none;
+    }
+
+    .label-value__value {
+      background: $core-transparent;
+      font-size: 14px;
+      padding: 0;
+      margin: 0;
+      font-family: monospace;
+
+      ul {
+        display: grid;
+        grid-template-rows: auto;
+        grid-column-start: 1;
+        justify-self: left;
+        margin-top: 0;
+        padding-inline-start: 0px;
+        width: 100%;
+
+        li {
+          display: grid;
+          grid-template-columns: 1fr;
+          justify-content: space-evenly;
+          box-sizing: border-box;
+          padding: 0 7px;
+          margin-bottom: 0.15em;
+          background-color: rgba(255, 255, 255, 0.5);
+
+          span {
+            justify-self: center;
+          }
+
+          &.overflow {
+            grid-template-columns: 1fr;
+            span {
+              justify-self: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.events-conflict-tooltip {
+    .tooltip-content {
+      .label-value__value {
+        ul li {
+          //                    {phase} | on | {station} | at | {time}
+          grid-template-columns: 1.5fr 0.5fr 1.25fr 0.5fr 4.1fr;
+          &.overflow {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+    }
+  }
+
+  &.signal-detections-conflict-tooltip {
+    .tooltip-content {
+      width: 210px;
+      .label-value__value {
+        ul li {
+          span {
+            justify-self: start;
+          }
+          &.overflow {
+            grid-template-columns: 1fr;
+            span {
+              justify-self: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

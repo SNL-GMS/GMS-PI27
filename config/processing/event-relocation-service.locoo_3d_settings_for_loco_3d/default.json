@@ -1,0 +1,58 @@
+{
+    "name": "locoo-3d-settings",
+    "constraints": [
+        {
+            "constraintType": "DEFAULT"
+        }
+    ],
+    "parameters": {
+        "azModelUncertainty": true,
+        "azPathCorrections": true,
+        "locOo3d2dLookupSettings": {
+            "azSloUncertaintyFile": "/data/eventRelocator/loco3d/predictors/lookup2d/azimuth_slowness_uncertainty.dat",
+            "maxIterationCount": 0,
+            "model": "ak135",
+            "sedimentaryVelocityS": 0.0,
+            "sedimentaryVeloctiyP": 0.0,
+            "seismicBaseData": "",
+            "ttModelUncertaintyScale": 0.0,
+            "ttModelUncertaintyOffset": 0.0,
+            "useElevationCorrections": true,
+            "useEllipticityCorrections": true 
+        },
+        "locOo3dBenderSettings": {
+            "allowCMBDiffraction": true,
+            "allowMohoDiffraction": true,
+            "azSloUncertaintyFile": "/data/eventRelocator/loco3d/predictors/lookup2d/azimuth_slowness_uncertainty.dat",
+            "benderUncertaintyType": "DISTANCE_DEPENDENT",
+            "model": "ak135",
+            "ttModelUncertaintyScaleScale": 1.0,
+            "ttModelUncertaintyScaleOffset": 2.0    
+        },
+        "locOo3dRSTTSettings": {
+            "azSloUncertaintyFile": "/data/eventRelocator/loco3d/predictors/rstt/azimuth_slowness_uncertainty.dat",
+            "chMax": 0.0,
+            "depthMax": 0.0,
+            "distanceMax": 0.0,
+            "model": "pdu202009Du",
+            "ttModelUncertaintyScale": 1.0,
+            "ttModelUncertaintyOffset": 2.0,
+            "ttUncertaintyType": "DISTANCE_DEPENDENT"
+        },
+        "predictorToLibCorrSettings": {
+            "predictor 1": {
+                "interpolatorType": "LINEAR",
+                "matchOnRefsta": true,
+                "maxModels": 0,
+                "maxSiteSeparation": 0.0,
+                "pathCorrectionsRelativePath": "libcorr3d",
+                "pathCorrectionsRoot": "/data/eventRelocator/loco3d",
+                "preloadModels": true
+            }
+        },
+        "shModelUncertainty": true,
+        "shPathCorrections": true,
+        "ttModelUncertainty": true,
+        "ttPathCorrections": true
+    }
+}

@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FiltersPanel FilterListNonIdealState matches a snapshot if given an empty list of filter lists 1`] = `
+<div
+  className="bp5-non-ideal-state bp5-non-ideal-state-vertical"
+>
+  <div
+    className="bp5-non-ideal-state-visual"
+    style={
+      {
+        "fontSize": "48px",
+        "lineHeight": "48px",
+      }
+    }
+  >
+    <span
+      aria-hidden={true}
+      className="bp5-icon bp5-icon-exclude-row"
+      tabIndex={-1}
+    >
+      <svg
+        data-icon="exclude-row"
+        height={48}
+        role="img"
+        viewBox="0 0 20 20"
+        width={48}
+      >
+        <path
+          d="M1 3h18c.55 0 1-.45 1-1s-.45-1-1-1H1c-.55 0-1 .45-1 1s.45 1 1 1zM0 13a1.003 1.003 0 001.71.71L4 11.41l2.29 2.29c.18.19.43.3.71.3a1.003 1.003 0 00.71-1.71L5.41 10 7.7 7.71c.19-.18.3-.43.3-.71a1.003 1.003 0 00-1.71-.71L4 8.59l-2.29-2.3A1.003 1.003 0 00.29 7.71L2.59 10 .3 12.29c-.19.18-.3.43-.3.71zm18-5h-7c-1.1 0-2 .9-2 2s.9 2 2 2h7c1.1 0 2-.9 2-2s-.9-2-2-2zm1 9H1c-.55 0-1 .45-1 1s.45 1 1 1h18c.55 0 1-.45 1-1s-.45-1-1-1z"
+          fillRule="evenodd"
+        />
+      </svg>
+    </span>
+  </div>
+  <div
+    className="bp5-non-ideal-state-text"
+  >
+    <h4
+      className="bp5-heading"
+    >
+      No Filter List Data
+    </h4>
+    <div>
+      There is no filter list data available for this interval
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FiltersPanel FilterListNonIdealState matches a snapshot if given an error 1`] = `
+<div
+  className="bp5-non-ideal-state bp5-non-ideal-state-vertical non-ideal-intent-icon"
+>
+  <div
+    className="bp5-non-ideal-state-visual"
+    style={
+      {
+        "fontSize": "48px",
+        "lineHeight": "48px",
+      }
+    }
+  >
+    <span
+      aria-hidden={true}
+      className="bp5-icon bp5-icon-issue bp5-intent-danger"
+      data-icon="issue"
+    />
+  </div>
+  <div
+    className="bp5-non-ideal-state-text"
+  >
+    <h4
+      className="bp5-heading"
+    >
+      Error
+    </h4>
+    <div>
+      Problem loading filter lists
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FiltersPanel FilterListNonIdealState matches a snapshot if given everything it needs 1`] = `
+<div>
+  Here goes the filter list
+</div>
+`;
+
+exports[`FiltersPanel FilterListNonIdealState matches a snapshot if not given filter lists 1`] = `
+<div
+  className="bp5-non-ideal-state bp5-non-ideal-state-vertical"
+>
+  <div
+    className="bp5-non-ideal-state-visual"
+    style={
+      {
+        "fontSize": "48px",
+        "lineHeight": "48px",
+      }
+    }
+  >
+    <span
+      aria-hidden={true}
+      className="bp5-icon bp5-icon-exclude-row"
+      data-icon="exclude-row"
+      tabIndex={-1}
+    />
+  </div>
+  <div
+    className="bp5-non-ideal-state-text"
+  >
+    <h4
+      className="bp5-heading"
+    >
+      No Filter List Data
+    </h4>
+    <div>
+      There is no filter list data available for this interval
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FiltersPanel matches a snapshot 1`] = `
+[
+  <section
+    className="filter-list__container filter-list-picker__container"
+  >
+    <h6
+      className="bp5-heading filter-list__header"
+    >
+      Filter List
+    </h6>
+    <div
+      aria-controls="listbox-0"
+      aria-expanded={false}
+      aria-haspopup="listbox"
+      className="bp5-popover-target bp5-fill"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      role="combobox"
+    >
+      <button
+        className="bp5-button bp5-fill bp5-large bp5-align-left"
+        disabled={false}
+        onBlur={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        tabIndex={-1}
+        type="button"
+      >
+        <span
+          className="bp5-button-text"
+        >
+          Select a filter list
+        </span>
+        <span
+          aria-hidden={true}
+          className="bp5-icon bp5-icon-standard bp5-icon-double-caret-vertical"
+          data-icon="double-caret-vertical"
+        />
+      </button>
+    </div>
+  </section>,
+  <div
+    className="bp5-non-ideal-state bp5-non-ideal-state-vertical"
+  >
+    <div
+      className="bp5-non-ideal-state-visual"
+      style={
+        {
+          "fontSize": "48px",
+          "lineHeight": "48px",
+        }
+      }
+    >
+      <span
+        aria-hidden={true}
+        className="bp5-icon bp5-icon-exclude-row"
+        tabIndex={-1}
+      >
+        <svg
+          data-icon="exclude-row"
+          height={48}
+          role="img"
+          viewBox="0 0 20 20"
+          width={48}
+        >
+          <path
+            d="M1 3h18c.55 0 1-.45 1-1s-.45-1-1-1H1c-.55 0-1 .45-1 1s.45 1 1 1zM0 13a1.003 1.003 0 001.71.71L4 11.41l2.29 2.29c.18.19.43.3.71.3a1.003 1.003 0 00.71-1.71L5.41 10 7.7 7.71c.19-.18.3-.43.3-.71a1.003 1.003 0 00-1.71-.71L4 8.59l-2.29-2.3A1.003 1.003 0 00.29 7.71L2.59 10 .3 12.29c-.19.18-.3.43-.3.71zm18-5h-7c-1.1 0-2 .9-2 2s.9 2 2 2h7c1.1 0 2-.9 2-2s-.9-2-2-2zm1 9H1c-.55 0-1 .45-1 1s.45 1 1 1h18c.55 0 1-.45 1-1s-.45-1-1-1z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      className="bp5-non-ideal-state-text"
+    >
+      <h4
+        className="bp5-heading"
+      >
+        No Filter List Data
+      </h4>
+      <div>
+        There is no filter list data available for this interval
+      </div>
+    </div>
+  </div>,
+]
+`;

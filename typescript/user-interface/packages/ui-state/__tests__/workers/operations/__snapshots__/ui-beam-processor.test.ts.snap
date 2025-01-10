@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`maskAndBeamWaveformsWorker makes calls to maskAndBeamWaveforms and post processes 1`] = `
+{
+  "channel": {
+    "canonicalName": "ASAR.AS01.SHZ",
+    "channelBandType": "HIGH_BROADBAND",
+    "channelDataType": "SEISMIC",
+    "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+    "channelOrientationCode": "E",
+    "channelOrientationType": "EAST_WEST",
+    "configuredInputs": [],
+    "description": "Raw Channel created from ReferenceChannel 55ec5a5c-0280-3d57-9128-87dce456e38b with version 2b8715d3-f39b-3a36-adff-6ec262f565d1",
+    "effectiveAt": 1636503404,
+    "effectiveUntil": 1660701599.984,
+    "location": {
+      "depthKm": 0,
+      "elevationKm": 2.312,
+      "latitudeDegrees": 37.53,
+      "longitudeDegrees": 71.66,
+    },
+    "name": "ASAR.AS01.SHZ",
+    "nominalSampleRateHz": 100,
+    "orientationAngles": {
+      "horizontalAngleDeg": 90,
+      "verticalAngleDeg": 90,
+    },
+    "processingDefinition": {},
+    "processingMetadata": {
+      "CHANNEL_GROUP": "ASAR",
+    },
+    "station": {
+      "name": "ASAR",
+    },
+    "units": "NANOMETERS_PER_COUNT",
+  },
+  "uiChannelSegment": {
+    "channelSegment": {
+      "_uiFilterId": "Unfiltered",
+      "id": {
+        "channel": {
+          "effectiveAt": 1636503404,
+          "name": "ASAR.AS01.SHZ",
+        },
+        "creationTime": 0.25,
+        "endTime": 1636503704,
+        "startTime": 1636503404,
+      },
+      "maskedBy": [],
+      "missingInputChannels": [
+        {
+          "channel": {
+            "canonicalName": "PDAR.PD02.SHZ",
+            "channelBandType": "SHORT_PERIOD",
+            "channelDataType": "SEISMIC",
+            "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+            "channelOrientationCode": "Z",
+            "channelOrientationType": "VERTICAL",
+            "configuredInputs": [],
+            "description": "Raw Channel created from ReferenceChannel 04abdfb2-0fac-37cd-8b9e-18a997362ea6 with version d621a702-3f21-34ba-8bae-fd242438152b",
+            "effectiveAt": 1636503404,
+            "effectiveForRequestTime": 1636503405,
+            "effectiveUntil": 1660701599.984,
+            "location": {
+              "depthKm": 0.0381,
+              "elevationKm": 2.207,
+              "latitudeDegrees": 42.77818,
+              "longitudeDegrees": -109.5663,
+            },
+            "name": "PDAR.PD02.SHZ",
+            "nominalSampleRateHz": 20,
+            "orientationAngles": {
+              "horizontalAngleDeg": -1,
+              "verticalAngleDeg": 0,
+            },
+            "processingDefinition": {},
+            "processingMetadata": {
+              "CHANNEL_GROUP": "PD02",
+            },
+            "station": {
+              "name": "PDAR",
+            },
+            "units": "NANOMETERS_PER_COUNT",
+          },
+          "timeRanges": [
+            {
+              "endTime": 1636503804,
+              "startTime": 1636503304,
+            },
+          ],
+        },
+        {
+          "channel": {
+            "canonicalName": "PDAR.PD03.SHZ",
+            "channelBandType": "SHORT_PERIOD",
+            "channelDataType": "SEISMIC",
+            "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+            "channelOrientationCode": "Z",
+            "channelOrientationType": "VERTICAL",
+            "configuredInputs": [],
+            "description": "Raw Channel created from ReferenceChannel a8c4a1f5-ff8c-330d-8e83-cb07b88da81f with version 11105cfd-4a56-38f6-82b4-0c56caec0057",
+            "effectiveAt": 1636503404,
+            "effectiveUntil": 1660701599.984,
+            "location": {
+              "depthKm": 0.0381,
+              "elevationKm": 2.286,
+              "latitudeDegrees": 42.77582,
+              "longitudeDegrees": -109.5495,
+            },
+            "name": "PDAR.PD03.SHZ",
+            "nominalSampleRateHz": 20,
+            "orientationAngles": {
+              "horizontalAngleDeg": -1,
+              "verticalAngleDeg": 0,
+            },
+            "processingDefinition": {},
+            "processingMetadata": {
+              "CHANNEL_GROUP": "PD03",
+            },
+            "station": {
+              "name": "PDAR",
+            },
+            "units": "NANOMETERS_PER_COUNT",
+          },
+          "timeRanges": [
+            {
+              "endTime": 1636503804,
+              "startTime": 1636503304,
+            },
+          ],
+        },
+      ],
+      "timeseries": [
+        {
+          "_uiClaimCheckId": "{"domain":{"startTimeSecs":1636503404,"endTimeSecs":1636503704},"id":{"channel":{"name":"ASAR.AS01.SHZ","effectiveAt":1636503404},"startTime":1636503404,"endTime":1636503704,"creationTime":0.25},"type":"WAVEFORM","filter":"Unfiltered","waveform":{"type":"WAVEFORM","startTime":1638297900,"endTime":1638298200,"sampleCount":12000,"sampleRateHz":40}}",
+          "endTime": 1638298200,
+          "sampleCount": 12000,
+          "sampleRateHz": 40,
+          "startTime": 1638297900,
+          "type": "WAVEFORM",
+        },
+      ],
+      "timeseriesType": "WAVEFORM",
+      "units": "NANOMETERS_PER_COUNT",
+    },
+    "channelSegmentDescriptor": {
+      "channel": {
+        "effectiveAt": 1636503404,
+        "name": "ASAR.AS01.SHZ",
+      },
+      "creationTime": 0.25,
+      "endTime": 1636503704,
+      "startTime": 1636503404,
+    },
+    "domainTimeRange": {
+      "endTimeSecs": 1636503704,
+      "startTimeSecs": 1636503404,
+    },
+  },
+}
+`;

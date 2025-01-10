@@ -1,0 +1,17 @@
+plugins {
+    id('java-library')
+    id('java-test-fixtures')
+}
+
+dependencies {
+    // GMS Dependencies
+    api project(':station-definition-coi')
+
+    // Google AutoValue
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    testImplementation project(':test-utils')
+    
+    testFixturesApi platform(libs.org.springframework.boot.spring.boot.dependencies)
+}

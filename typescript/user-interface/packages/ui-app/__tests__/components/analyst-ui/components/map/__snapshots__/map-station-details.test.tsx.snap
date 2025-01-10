@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MapStationDetails matches snapshot 1`] = `
+<div
+  className="map-station-details__container"
+>
+  <div
+    className="form"
+  >
+    <h6
+      className="bp5-heading form__header"
+    >
+      <div>
+        Station Details
+      </div>
+    </h6>
+    <div
+      className="form__panel-selector"
+    />
+    <div
+      className="form-content"
+    >
+      <div
+        className="form-label"
+      >
+        Name:
+      </div>
+      <div
+        className="form-value form-value--uneditable form-value--time"
+        title=""
+      >
+        STA1
+      </div>
+      <div
+        className="form-label"
+      >
+        Lat (°):
+      </div>
+      <div
+        className="form-value form-value--uneditable form-value--time"
+        title=""
+      >
+        100
+      </div>
+      <div
+        className="form-label"
+      >
+        Lon (°):
+      </div>
+      <div
+        className="form-value form-value--uneditable form-value--time"
+        title=""
+      >
+        100
+      </div>
+      <div
+        className="form-label"
+      >
+        Elevation (km):
+      </div>
+      <div
+        className="form-value form-value--uneditable form-value--time"
+        title=""
+      >
+        1000
+      </div>
+      <div
+        className="form-label"
+      >
+        Type:
+      </div>
+      <div
+        className="form-value form-value--uneditable"
+        title=""
+      >
+        Single Station
+      </div>
+    </div>
+    <div
+      className="form__buttons"
+    >
+      <div
+        className="form__buttons--right"
+      >
+        <button
+          className="bp5-button form__button"
+          data-cy="cancel-station-details"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          type="button"
+        >
+          <span
+            className="bp5-button-text"
+          >
+            Close
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MapStationDetails matches snapshot with a site type 1`] = `
+<div
+  className="map-station-details__container"
+>
+  <div
+    className="form"
+  >
+    <h6
+      className="bp5-heading form__header"
+    >
+      <div>
+        Site Details
+      </div>
+    </h6>
+    <div
+      className="form__panel-selector"
+    />
+    <div
+      className="form-content"
+    >
+      <div
+        className="form-label"
+      >
+        Name:
+      </div>
+      <div
+        className="form-value form-value--uneditable form-value--time"
+        title=""
+      >
+        STA1
+      </div>
+      <div
+        className="form-label"
+      >
+        Lat (°):
+      </div>
+      <div
+        className="form-value form-value--uneditable form-value--time"
+        title=""
+      >
+        100
+      </div>
+      <div
+        className="form-label"
+      >
+        Lon (°):
+      </div>
+      <div
+        className="form-value form-value--uneditable form-value--time"
+        title=""
+      >
+        100
+      </div>
+      <div
+        className="form-label"
+      >
+        Elevation (km):
+      </div>
+      <div
+        className="form-value form-value--uneditable form-value--time"
+        title=""
+      >
+        1000
+      </div>
+    </div>
+    <div
+      className="form__buttons"
+    >
+      <div
+        className="form__buttons--right"
+      >
+        <button
+          className="bp5-button form__button"
+          data-cy="cancel-site-details"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          type="button"
+        >
+          <span
+            className="bp5-button-text"
+          >
+            Close
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

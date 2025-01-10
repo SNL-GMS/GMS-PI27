@@ -1,0 +1,44 @@
+{
+    "name": "detection-default",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "beamType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "DETECTION"
+            ],
+            "priority": 100
+        }
+    ],
+    "parameters": {
+        "leadDuration": "PT30S",
+        "beamDuration": "PT3M",
+        "orientationAngleToleranceDeg": 5.0,
+        "sampleRateToleranceHz": 0.5,
+        "minWaveformsToBeam": 2,
+        "inputChannelGroups": [
+            "*"
+        ],
+        "inputChannels": [
+            "SHZ"
+        ],
+        "beamDescriptionParams": {
+            "beamSummation": "RMS",
+            "beamType": "DETECTION",
+            "preFilterDefinition": {
+                "$ref=global.filter-definition": [
+                    {
+                        "criterion": "name",
+                        "value": "0.5 4.0 3 BP non-causal"
+                    }
+                ]
+            },
+            "samplingType": "NEAREST_SAMPLE",
+            "twoDimensional": true
+        }
+    }
+}

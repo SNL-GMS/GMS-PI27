@@ -1,0 +1,93 @@
+{
+    "name": "fk-spectra-template-asar-p",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "ASAR"
+            ],
+			"priority": 200
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "phaseType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "P"
+            ],
+			"priority": 100
+        }
+    ],
+    "parameters": {
+        "fkSpectraWindow": {
+            "duration": "PT300S",
+            "lead": "PT60S"
+        },
+        "inputChannels": [
+            "SHZ"
+        ],
+        "inputChannelGroups": [
+            "AS01",
+            "AS02",
+            "AS03",
+            "AS04",
+            "AS05",
+            "AS06",
+            "AS07",
+            "AS08",
+            "AS09",
+            "AS10",
+            "AS11",
+            "AS12",
+            "AS13",
+            "AS14",
+            "AS15",
+            "AS16",
+            "AS17",
+            "AS18",
+            "AS19"
+        ],
+        "fkSpectraParameters": {
+            "preFilter": {
+                "$ref=global.filter-definition": [
+                    {
+                        "criterion": "name",
+                        "value": "0.4 3.5 3 BP causal"
+                    }
+                ]
+            },
+            "slownessGrid": {
+                "maxSlowness": 40,
+                "numPoints": 81
+            },
+            "fftTaperFunction": "BLACKMAN",
+            "fkSpectrumWindow": {
+                "duration": "PT4S",
+                "lead": "PT1S"
+            },
+            "fkFrequencyRange": {
+                "lowFrequencyHz": 1.0,
+                "highFrequencyHz": 3.0
+            },
+            "fkUncertaintyOption": "EMPIRICAL",
+            "waveformSampleRate": {
+                "waveformSampleRateHz": 20,
+                "waveformSampleRateToleranceHz": 0.0001
+            },
+            "spectrumStepDuration": "PT1S",
+            "orientationAngleToleranceDeg": 0.5,
+            "minimumWaveformsForSpectra": 2,
+            "normalizeWaveforms": false,
+            "twoDimensional": true,
+            "fftTaperPercent": 5.0
+        }
+    }
+}

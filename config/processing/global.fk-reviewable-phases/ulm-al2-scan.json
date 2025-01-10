@@ -1,0 +1,35 @@
+{
+    "name": "ulm-al2-scan",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "ULM"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "activity",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "AL2 Scan"
+            ],
+            "priority": 80
+        }
+    ],
+    "parameters": {
+        "phases": [
+            "PKP2bc",
+            "PKP2ab"
+        ]
+    }
+}

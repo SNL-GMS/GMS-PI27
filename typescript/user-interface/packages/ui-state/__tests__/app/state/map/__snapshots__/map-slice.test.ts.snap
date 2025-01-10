@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`state user session slice should return the initial state 1`] = `
+{
+  "coordinates": null,
+  "isSyncedWithWaveformZoom": false,
+  "layerVisibility": {
+    "associatedCompleteDetection": true,
+    "associatedOpenDetection": true,
+    "associatedOtherDetection": true,
+    "confidenceEllipse": true,
+    "coverageEllipse": true,
+    "deletedDetection": false,
+    "edgeDetectionAfter": true,
+    "edgeDetectionBefore": true,
+    "edgeEventsAfterInterval": true,
+    "edgeEventsBeforeInterval": true,
+    "events": true,
+    "eventsDeleted": false,
+    "eventsRejected": false,
+    "nonPreferredLocationSolution": false,
+    "preferredLocationSolution": true,
+    "signalDetections": true,
+    "sites": false,
+    "stations": true,
+    "unassociatedDetection": true,
+  },
+}
+`;
+
+exports[`state user session slice should return the initial state 2`] = `
+{
+  "coordinates": null,
+  "isSyncedWithWaveformZoom": false,
+  "layerVisibility": {
+    "associatedCompleteDetection": true,
+    "associatedOpenDetection": true,
+    "associatedOtherDetection": true,
+    "confidenceEllipse": true,
+    "coverageEllipse": true,
+    "deletedDetection": false,
+    "edgeDetectionAfter": true,
+    "edgeDetectionBefore": true,
+    "edgeEventsAfterInterval": true,
+    "edgeEventsBeforeInterval": true,
+    "events": true,
+    "eventsDeleted": false,
+    "eventsRejected": false,
+    "nonPreferredLocationSolution": false,
+    "preferredLocationSolution": true,
+    "signalDetections": true,
+    "sites": false,
+    "stations": true,
+    "unassociatedDetection": true,
+  },
+}
+`;
+
+exports[`state user session slice should return the initial state 3`] = `
+{
+  "coordinates": null,
+  "isSyncedWithWaveformZoom": false,
+  "layerVisibility": {
+    "associatedCompleteDetection": true,
+    "associatedOpenDetection": true,
+    "associatedOtherDetection": true,
+    "confidenceEllipse": true,
+    "coverageEllipse": true,
+    "deletedDetection": false,
+    "edgeDetectionAfter": true,
+    "edgeDetectionBefore": true,
+    "edgeEventsAfterInterval": true,
+    "edgeEventsBeforeInterval": true,
+    "events": true,
+    "eventsDeleted": false,
+    "eventsRejected": false,
+    "nonPreferredLocationSolution": false,
+    "preferredLocationSolution": true,
+    "signalDetections": true,
+    "sites": false,
+    "stations": true,
+    "unassociatedDetection": true,
+  },
+}
+`;
+
+exports[`state user session slice should return the initial state 4`] = `
+{
+  "coordinates": null,
+  "isSyncedWithWaveformZoom": false,
+  "layerVisibility": {
+    "associatedCompleteDetection": true,
+    "associatedOpenDetection": true,
+    "associatedOtherDetection": true,
+    "confidenceEllipse": true,
+    "coverageEllipse": true,
+    "deletedDetection": false,
+    "edgeDetectionAfter": true,
+    "edgeDetectionBefore": true,
+    "edgeEventsAfterInterval": true,
+    "edgeEventsBeforeInterval": true,
+    "events": true,
+    "eventsDeleted": false,
+    "eventsRejected": false,
+    "nonPreferredLocationSolution": false,
+    "preferredLocationSolution": true,
+    "signalDetections": true,
+    "sites": false,
+    "stations": true,
+    "unassociatedDetection": true,
+  },
+}
+`;

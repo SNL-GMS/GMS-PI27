@@ -1,0 +1,219 @@
+{
+    "beamType": "EVENT",
+    "phases": [
+        "Iw",
+        "Lg",
+        "P",
+        "PKP",
+        "PKPab",
+        "PKPbc",
+        "PKPdf",
+        "PcP",
+        "Pg",
+        "Pn",
+        "Rg",
+        "S",
+        "ScP",
+        "Sn",
+        "pP",
+        "sP"
+    ],
+    "stations": [
+        {
+            "name": "AKASG",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "AKTO",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "ASF",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "BDFB",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "BELG",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "BRDH",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "BVAR",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "CMIG",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "DAVOX",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "EKA",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "ESDC",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "GERES",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "HFS",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "JAY",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "JKA",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "JNU",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "KBZ",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "KDAK",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "KIRV",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "KMBO",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "KURK",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "KVAR",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "LPIG",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "MA2",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "MAW",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "MJAR",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "MKAR",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "MMAI",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "NRIK",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "NVAR",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "OBN",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "PCRV",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "PETK",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "PPT",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "ROSC",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "SCHQ",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "SEY",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "SONM",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "STKA",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "TGY",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "TORD",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "ULM",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "USRK",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "VRAC",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "WRA",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "WSAR",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "YAK",
+            "effectiveAt": "2024-03-17T04:34:17.437Z"
+        },
+        {
+            "name": "YKA",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        },
+        {
+            "name": "ZALV",
+            "effectiveAt": "2024-03-17T04:00:00.000Z"
+        }
+    ]
+}

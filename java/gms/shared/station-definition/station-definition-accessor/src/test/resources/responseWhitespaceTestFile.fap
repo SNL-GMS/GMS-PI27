@@ -1,0 +1,10 @@
+##File for testing various spacing configuration
+   #comment line
+theoretical	1	instrument	fap	texthere
+4
+1.000000e-01    1.000000e-01	101.01	0.0	0.0
+2.000000e-02	2.000000e-02    202.02	0.0	0.0
+3.000000e-03	3.000000e-03	303.03     0.0	0.0
+
+
+    4.000000e-04	4.000000e-04	404.04	0.0	0.0     

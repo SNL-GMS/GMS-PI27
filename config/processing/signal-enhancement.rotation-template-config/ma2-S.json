@@ -1,0 +1,46 @@
+{
+    "name": "ma2-S",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "MA2"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "phase",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "S"
+            ],
+            "priority": 90
+        }
+    ],
+    "parameters": {
+        "inputChannels": [
+            {
+                "name": "MA2.MA2.BHN"
+            },
+            {
+                "name": "MA2.MA2.BHE"
+            }
+        ],
+        "leadDuration": "PT60S",
+        "duration": "PT5M",
+        "sampleRateToleranceHz": 0.1,
+        "locationToleranceKm": 0.1,
+        "orientationAngleToleranceDeg": 0.1,
+        "twoDimensional": true,
+        "samplingType": "NEAREST_SAMPLE"
+    }
+}

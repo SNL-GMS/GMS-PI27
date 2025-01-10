@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`state user session slice should return the initial state 1`] = `
+{
+  "currentFkThumbnailFilter": "Key Activity Phases",
+  "displayedSDMeasuredValues": undefined,
+  "displayedSignalDetectionId": "",
+  "fkChannelFilters": {},
+  "fkPlotsExpandToolbar": true,
+  "sdIdsToShowFk": [],
+}
+`;
+
+exports[`state user session slice should return the initial state 2`] = `
+{
+  "currentFkThumbnailFilter": "Key Activity Phases",
+  "displayedSDMeasuredValues": undefined,
+  "displayedSignalDetectionId": "",
+  "fkChannelFilters": {},
+  "fkPlotsExpandToolbar": true,
+  "sdIdsToShowFk": [],
+}
+`;
+
+exports[`state user session slice should return the initial state 3`] = `
+{
+  "currentFkThumbnailFilter": "Key Activity Phases",
+  "displayedSDMeasuredValues": undefined,
+  "displayedSignalDetectionId": "",
+  "fkChannelFilters": {},
+  "fkPlotsExpandToolbar": true,
+  "sdIdsToShowFk": [],
+}
+`;
+
+exports[`state user session slice should return the initial state 4`] = `
+{
+  "currentFkThumbnailFilter": "Key Activity Phases",
+  "displayedSDMeasuredValues": undefined,
+  "displayedSignalDetectionId": "",
+  "fkChannelFilters": {},
+  "fkPlotsExpandToolbar": true,
+  "sdIdsToShowFk": [],
+}
+`;

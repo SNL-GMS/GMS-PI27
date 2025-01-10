@@ -1,0 +1,13 @@
+{
+    "stations": [
+      {
+        "name": "ASAR"
+      }
+    ],
+    "startTime": "2019-01-05T18:00:00Z",
+    "endTime": "2019-01-05T20:00:00Z",
+    "stageId": {
+      "name": "Auto Network"
+    },
+    "excludedSignalDetections": []
+  }

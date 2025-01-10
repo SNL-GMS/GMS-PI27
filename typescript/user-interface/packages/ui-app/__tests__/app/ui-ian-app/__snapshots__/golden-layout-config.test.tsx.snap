@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App matches a snapshot 1`] = `
+{
+  "config": {
+    "components": {
+      "azimuth-slowness": {
+        "component": "azimuth-slowness",
+        "title": "Azimuth Slowness",
+        "type": "react-component",
+      },
+      "events": {
+        "component": "events",
+        "title": "Events",
+        "type": "react-component",
+      },
+      "filters": {
+        "component": "filters",
+        "title": "Filters",
+        "type": "react-component",
+      },
+      "map": {
+        "component": "map",
+        "title": "Map",
+        "type": "react-component",
+      },
+      "signal-detections-list": {
+        "component": "signal-detections-list",
+        "title": "Signal Detections List",
+        "type": "react-component",
+      },
+      "station-properties": {
+        "component": "station-properties",
+        "title": "Station Properties",
+        "type": "react-component",
+      },
+      "undo-redo": {
+        "component": "undo-redo",
+        "title": "Undo/Redo",
+        "type": "react-component",
+      },
+      "waveform": {
+        "component": "waveform",
+        "title": "Waveform",
+        "type": "react-component",
+      },
+      "workflow": {
+        "component": "workflow",
+        "title": "Workflow",
+        "type": "react-component",
+      },
+    },
+    "workspace": {
+      "content": [
+        {
+          "content": [
+            {
+              "content": [
+                {
+                  "content": [
+                    {
+                      "component": "workflow",
+                      "title": "Workflow",
+                      "type": "react-component",
+                    },
+                  ],
+                  "type": "column",
+                },
+              ],
+              "type": "row",
+            },
+            {
+              "content": [
+                {
+                  "content": [
+                    {
+                      "component": "map",
+                      "title": "Map",
+                      "type": "react-component",
+                    },
+                  ],
+                  "type": "column",
+                },
+              ],
+              "type": "row",
+            },
+            {
+              "content": [
+                {
+                  "content": [
+                    {
+                      "component": "signal-detections-list",
+                      "title": "Signal Detections List",
+                      "type": "react-component",
+                    },
+                  ],
+                  "type": "column",
+                },
+              ],
+              "type": "row",
+            },
+            {
+              "content": [
+                {
+                  "content": [
+                    {
+                      "component": "station-properties",
+                      "title": "Station Properties",
+                      "type": "react-component",
+                    },
+                  ],
+                  "type": "column",
+                },
+              ],
+              "type": "row",
+            },
+            {
+              "content": [
+                {
+                  "component": "waveform",
+                  "height": 70,
+                  "title": "Waveform",
+                  "type": "react-component",
+                },
+              ],
+              "type": "column",
+            },
+          ],
+          "type": "row",
+        },
+      ],
+      "dimensions": {
+        "borderWidth": 2,
+        "headerHeight": 30,
+        "minItemHeight": 30,
+        "minItemWidth": 30,
+      },
+      "settings": {
+        "showCloseIcon": true,
+        "showMaximiseIcon": true,
+        "showPopoutIcon": false,
+      },
+    },
+  },
+  "gl": undefined,
+  "glComponents": Map {
+    "Analyst Displays" => Map {
+      "events" => {
+        "id": {
+          "component": "events",
+          "title": "Events",
+          "type": "react-component",
+        },
+        "value": [Function],
+      },
+      "map" => {
+        "id": {
+          "component": "map",
+          "title": "Map",
+          "type": "react-component",
+        },
+        "value": [Function],
+      },
+      "signal-detections-list" => {
+        "id": {
+          "component": "signal-detections-list",
+          "title": "Signal Detections List",
+          "type": "react-component",
+        },
+        "value": [Function],
+      },
+      "station-properties" => {
+        "id": {
+          "component": "station-properties",
+          "title": "Station Properties",
+          "type": "react-component",
+        },
+        "value": [Function],
+      },
+      "waveform" => {
+        "id": {
+          "component": "waveform",
+          "title": "Waveform",
+          "type": "react-component",
+        },
+        "value": [Function],
+      },
+      "workflow" => {
+        "id": {
+          "component": "workflow",
+          "title": "Workflow",
+          "type": "react-component",
+        },
+        "value": [Function],
+      },
+      "filters" => {
+        "id": {
+          "component": "filters",
+          "title": "Filters",
+          "type": "react-component",
+        },
+        "value": [Function],
+      },
+      "undo-redo" => {
+        "id": {
+          "component": "undo-redo",
+          "title": "Undo/Redo",
+          "type": "react-component",
+        },
+        "value": [Function],
+      },
+      "azimuth-slowness" => {
+        "id": {
+          "component": "azimuth-slowness",
+          "title": "Azimuth Slowness",
+          "type": "react-component",
+        },
+        "value": [Function],
+      },
+    },
+  },
+  "glRef": undefined,
+  "supportedUserInterfaceMode": "IAN",
+}
+`;

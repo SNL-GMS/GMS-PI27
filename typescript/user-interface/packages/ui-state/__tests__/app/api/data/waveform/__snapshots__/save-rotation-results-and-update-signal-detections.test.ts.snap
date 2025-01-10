@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mutate-rotation-results handleSDHypothesisUpdate performs as expected 1`] = `
+{
+  "id": "012de1b9-8ae3-3fd4-800d-58665c3152cc",
+  "monitoringOrganization": "GMS",
+  "signalDetectionHypotheses": [
+    {
+      "deleted": false,
+      "featureMeasurements": [
+        {
+          "analysisWaveform": {
+            "filterDefinition": undefined,
+            "filterDefinitionUsage": undefined,
+            "waveform": {
+              "id": {
+                "channel": {
+                  "effectiveAt": 1636503404,
+                  "name": "PDAR.PD01.SHZ/rotate/phase_s/123",
+                },
+                "creationTime": 423,
+                "endTime": 10,
+                "startTime": 0,
+              },
+            },
+          },
+          "channel": {
+            "canonicalName": "PDAR.PD01.SHZ",
+            "channelBandType": "SHORT_PERIOD",
+            "channelDataType": "SEISMIC",
+            "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+            "channelOrientationCode": "Z",
+            "channelOrientationType": "VERTICAL",
+            "configuredInputs": [],
+            "description": "Raw Channel created from ReferenceChannel 2fabc2d3-858b-3e85-9f47-e2ee72060f0b with version d767395c-850e-36f8-a6f2-a1c7398440e4",
+            "effectiveAt": 1636503404,
+            "effectiveForRequestTime": 1636503405,
+            "effectiveUntil": 1660701599.984,
+            "location": {
+              "depthKm": 0.0381,
+              "elevationKm": 2.192,
+              "latitudeDegrees": 42.7765,
+              "longitudeDegrees": -109.58314,
+            },
+            "name": "PDAR.PD01.SHZ/rotate/phase_s/123",
+            "nominalSampleRateHz": 20,
+            "orientationAngles": {
+              "horizontalAngleDeg": -1,
+              "verticalAngleDeg": 0,
+            },
+            "processingDefinition": {},
+            "processingMetadata": {
+              "STEERING_BACK_AZIMUTH": 1,
+            },
+            "station": {
+              "name": "PDAR",
+            },
+            "units": "NANOMETERS_PER_COUNT",
+          },
+          "featureMeasurementType": "PHASE",
+          "measuredChannelSegment": {
+            "id": {
+              "channel": {
+                "canonicalName": "PDAR.PD01.SHZ",
+                "channelBandType": "SHORT_PERIOD",
+                "channelDataType": "SEISMIC",
+                "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+                "channelOrientationCode": "Z",
+                "channelOrientationType": "VERTICAL",
+                "configuredInputs": [],
+                "description": "Raw Channel created from ReferenceChannel 2fabc2d3-858b-3e85-9f47-e2ee72060f0b with version d767395c-850e-36f8-a6f2-a1c7398440e4",
+                "effectiveAt": 1636503404,
+                "effectiveForRequestTime": 1636503405,
+                "effectiveUntil": 1660701599.984,
+                "location": {
+                  "depthKm": 0.0381,
+                  "elevationKm": 2.192,
+                  "latitudeDegrees": 42.7765,
+                  "longitudeDegrees": -109.58314,
+                },
+                "name": "PDAR.PD01.SHZ/rotate/phase_s/123",
+                "nominalSampleRateHz": 20,
+                "orientationAngles": {
+                  "horizontalAngleDeg": -1,
+                  "verticalAngleDeg": 0,
+                },
+                "processingDefinition": {},
+                "processingMetadata": {
+                  "STEERING_BACK_AZIMUTH": 1,
+                },
+                "station": {
+                  "name": "PDAR",
+                },
+                "units": "NANOMETERS_PER_COUNT",
+              },
+              "creationTime": 423,
+              "endTime": 10,
+              "startTime": 0,
+            },
+          },
+          "measurementValue": {
+            "arrivalTime": {
+              "standardDeviation": 1,
+              "units": "SECONDS",
+              "value": 5,
+            },
+            "value": "P",
+          },
+          "snr": undefined,
+        },
+      ],
+      "id": {
+        "id": "20cc9505-efe3-3068-b7d5-59196f37992c",
+        "signalDetectionId": "012de1b9-8ae3-3fd4-800d-58665c3152cc",
+      },
+      "monitoringOrganization": "GMS",
+      "parentSignalDetectionHypothesis": null,
+      "station": {
+        "effectiveAt": 123,
+        "name": "ASAR",
+      },
+    },
+  ],
+  "station": {
+    "name": "ASAR",
+  },
+}
+`;
+
+exports[`mutate-rotation-results updateUnsavedSignalDetectionHypothesis performs as expected 1`] = `
+{
+  "channels": {
+    "beamed": {
+      "PDAR": {
+        "canonicalName": "PDAR.PD01.SHZ",
+        "channelBandType": "SHORT_PERIOD",
+        "channelDataType": "SEISMIC",
+        "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+        "channelOrientationCode": "Z",
+        "channelOrientationType": "VERTICAL",
+        "configuredInputs": [],
+        "description": "Raw Channel created from ReferenceChannel 2fabc2d3-858b-3e85-9f47-e2ee72060f0b with version d767395c-850e-36f8-a6f2-a1c7398440e4",
+        "effectiveAt": 1636503404,
+        "effectiveForRequestTime": 1636503405,
+        "effectiveUntil": 1660701599.984,
+        "location": {
+          "depthKm": 0.0381,
+          "elevationKm": 2.192,
+          "latitudeDegrees": 42.7765,
+          "longitudeDegrees": -109.58314,
+        },
+        "name": "PDAR.PD01.SHZ/rotate/phase_s/123",
+        "nominalSampleRateHz": 20,
+        "orientationAngles": {
+          "horizontalAngleDeg": -1,
+          "verticalAngleDeg": 0,
+        },
+        "processingDefinition": {},
+        "processingMetadata": {
+          "STEERING_BACK_AZIMUTH": 1,
+        },
+        "station": {
+          "name": "PDAR",
+        },
+        "units": "NANOMETERS_PER_COUNT",
+      },
+    },
+    "filtered": {
+      "PDAR": {
+        "canonicalName": "PDAR.PD01.SHZ",
+        "channelBandType": "SHORT_PERIOD",
+        "channelDataType": "SEISMIC",
+        "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+        "channelOrientationCode": "Z",
+        "channelOrientationType": "VERTICAL",
+        "configuredInputs": [],
+        "description": "Raw Channel created from ReferenceChannel 2fabc2d3-858b-3e85-9f47-e2ee72060f0b with version d767395c-850e-36f8-a6f2-a1c7398440e4",
+        "effectiveAt": 1636503404,
+        "effectiveForRequestTime": 1636503405,
+        "effectiveUntil": 1660701599.984,
+        "location": {
+          "depthKm": 0.0381,
+          "elevationKm": 2.192,
+          "latitudeDegrees": 42.7765,
+          "longitudeDegrees": -109.58314,
+        },
+        "name": "PDAR.PD01.SHZ/rotate/phase_s/123",
+        "nominalSampleRateHz": 20,
+        "orientationAngles": {
+          "horizontalAngleDeg": -1,
+          "verticalAngleDeg": 0,
+        },
+        "processingDefinition": {},
+        "processingMetadata": {
+          "STEERING_BACK_AZIMUTH": 1,
+        },
+        "station": {
+          "name": "PDAR",
+        },
+        "units": "NANOMETERS_PER_COUNT",
+      },
+    },
+  },
+  "uiChannelSegments": {
+    "PDAR": {
+      "Unfiltered": [],
+    },
+  },
+}
+`;
+
+exports[`mutate-rotation-results updateUnsavedSignalDetectionHypothesis performs as expected 2`] = `
+[
+  {
+    "analysisWaveform": {
+      "filterDefinition": undefined,
+      "filterDefinitionUsage": undefined,
+      "waveform": {
+        "id": {
+          "channel": {
+            "effectiveAt": 1636503404,
+            "name": "PDAR.PD01.SHZ/rotate/phase_s/123",
+          },
+          "creationTime": 423,
+          "endTime": 10,
+          "startTime": 0,
+        },
+      },
+    },
+    "channel": {
+      "canonicalName": "PDAR.PD01.SHZ",
+      "channelBandType": "SHORT_PERIOD",
+      "channelDataType": "SEISMIC",
+      "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+      "channelOrientationCode": "Z",
+      "channelOrientationType": "VERTICAL",
+      "configuredInputs": [],
+      "description": "Raw Channel created from ReferenceChannel 2fabc2d3-858b-3e85-9f47-e2ee72060f0b with version d767395c-850e-36f8-a6f2-a1c7398440e4",
+      "effectiveAt": 1636503404,
+      "effectiveForRequestTime": 1636503405,
+      "effectiveUntil": 1660701599.984,
+      "location": {
+        "depthKm": 0.0381,
+        "elevationKm": 2.192,
+        "latitudeDegrees": 42.7765,
+        "longitudeDegrees": -109.58314,
+      },
+      "name": "PDAR.PD01.SHZ/rotate/phase_s/123",
+      "nominalSampleRateHz": 20,
+      "orientationAngles": {
+        "horizontalAngleDeg": -1,
+        "verticalAngleDeg": 0,
+      },
+      "processingDefinition": {},
+      "processingMetadata": {
+        "STEERING_BACK_AZIMUTH": 1,
+      },
+      "station": {
+        "name": "PDAR",
+      },
+      "units": "NANOMETERS_PER_COUNT",
+    },
+    "featureMeasurementType": "PHASE",
+    "measuredChannelSegment": {
+      "id": {
+        "channel": {
+          "canonicalName": "PDAR.PD01.SHZ",
+          "channelBandType": "SHORT_PERIOD",
+          "channelDataType": "SEISMIC",
+          "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+          "channelOrientationCode": "Z",
+          "channelOrientationType": "VERTICAL",
+          "configuredInputs": [],
+          "description": "Raw Channel created from ReferenceChannel 2fabc2d3-858b-3e85-9f47-e2ee72060f0b with version d767395c-850e-36f8-a6f2-a1c7398440e4",
+          "effectiveAt": 1636503404,
+          "effectiveForRequestTime": 1636503405,
+          "effectiveUntil": 1660701599.984,
+          "location": {
+            "depthKm": 0.0381,
+            "elevationKm": 2.192,
+            "latitudeDegrees": 42.7765,
+            "longitudeDegrees": -109.58314,
+          },
+          "name": "PDAR.PD01.SHZ/rotate/phase_s/123",
+          "nominalSampleRateHz": 20,
+          "orientationAngles": {
+            "horizontalAngleDeg": -1,
+            "verticalAngleDeg": 0,
+          },
+          "processingDefinition": {},
+          "processingMetadata": {
+            "STEERING_BACK_AZIMUTH": 1,
+          },
+          "station": {
+            "name": "PDAR",
+          },
+          "units": "NANOMETERS_PER_COUNT",
+        },
+        "creationTime": 423,
+        "endTime": 10,
+        "startTime": 0,
+      },
+    },
+    "measurementValue": {
+      "arrivalTime": {
+        "standardDeviation": 1,
+        "units": "SECONDS",
+        "value": 5,
+      },
+      "value": "P",
+    },
+    "snr": undefined,
+  },
+]
+`;

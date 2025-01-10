@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./.cache/.tsbuildinfo",
+    "rootDir": "src/ts",
+    "paths": {
+      "@gms/common-model": ["../common-model/src/ts/common-model.ts"],
+      "@gms/common-model/lib/*": ["../common-model/src/ts/*"]
+    }
+  },
+  "references": [
+    {
+      "path": "../common-model/tsconfig-build.json"
+    }
+  ],
+  "include": ["src/**/*"]
+}

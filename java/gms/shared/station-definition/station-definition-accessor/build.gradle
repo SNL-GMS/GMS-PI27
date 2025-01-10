@@ -1,0 +1,38 @@
+apply plugin: 'java-library'
+
+dependencies {
+    
+    api project(':station-definition-api')
+    api project(':station-definition-repository')
+    api project(':common-coi-types')
+
+    api libs.jakarta.annotation.api
+    api libs.org.springframework.spring.context
+    
+    implementation project(':caching-utils')    
+    implementation project(':spring-framework-utilities')
+    implementation project(':station-definition-converter')
+    implementation project(':station-definition-configuration')
+    implementation project(':station-definition-coi')
+    implementation project(':derived-channel-coi')
+    implementation project(':event-coi')
+    implementation project(':fk-coi')
+
+    //Google autovalue
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    implementation libs.com.google.guava.guava
+    implementation libs.net.jodah.failsafe
+    implementation libs.org.apache.commons.commons.math3
+
+    // unit testing dependencies
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation testFixtures(project(':station-definition-dao'))
+    testImplementation libs.org.springframework.boot.spring.boot.starter.test
+    testImplementation(testFixtures(project(':fk-coi')))
+    testImplementation(testFixtures(project(':waveform-coi')))
+    testImplementation(testFixtures(project(':derived-channel-coi')))
+    testImplementation project(':station-definition-coi')
+    testImplementation project(':test-utils')
+}

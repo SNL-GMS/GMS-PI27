@@ -1,0 +1,55 @@
+{
+    "name": "jnu-station-receiver-to-source-azimuth",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "JNU"
+            ],
+            "priority": 100 
+
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "channel",
+            "operator": {
+                "type": "IN",
+                "negated": false
+            },
+            "value": [
+                "BHZ",
+                "BHN",
+                "BHE"
+            ],
+            "priority": 90 
+
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "phaseType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "P"
+            ],
+            "priority": 80 
+
+        }
+    ],
+    "parameters": {
+                "definingFeatureByFeatureMeasurementType": {
+            "RECEIVER_TO_SOURCE_AZIMUTH": {
+                "analystOverridable": true,
+                "defining": true,
+                "systemOverridable": true
+            }
+        }
+    }
+}

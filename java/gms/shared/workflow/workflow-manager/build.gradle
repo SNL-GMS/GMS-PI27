@@ -1,0 +1,42 @@
+plugins {
+    id('java')
+    alias(libs.plugins.org.springframework.boot)
+    id('com.google.cloud.tools.jib')
+}
+
+dependencies {
+
+    implementation project(':workflow-api')
+    implementation project(':workflow-coi')
+    implementation project(':workflow-accessor')
+    implementation project(':workflow-repository')
+    implementation project(':frameworks-control')
+    implementation project(':frameworks-osd-api')
+    implementation project(':system-events')
+    implementation project(':spring-framework-utilities')
+    implementation project(':spring-persistence-oracle')
+
+    //Spring Dependencies
+    implementation libs.org.springframework.boot.spring.boot.starter.actuator
+    implementation libs.org.springframework.boot.spring.boot.starter.web
+    implementation libs.org.springdoc.springdoc.openapi.starter.webmvc.ui
+
+    //Retry
+    implementation libs.net.jodah.failsafe
+
+    // Kafka
+    implementation libs.org.apache.kafka.kafka.clients
+
+    // Google AutoValue
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+
+    // Logging
+    runtimeOnly libs.net.logstash.logback.logstash.logback.encoder
+
+    testImplementation project(':test-utils')
+    testImplementation testFixtures(project(':workflow-coi'))
+    testImplementation libs.org.springframework.boot.spring.boot.starter.test
+    testImplementation project(':spring-framework-utilities').sourceSets.test.output
+}
+

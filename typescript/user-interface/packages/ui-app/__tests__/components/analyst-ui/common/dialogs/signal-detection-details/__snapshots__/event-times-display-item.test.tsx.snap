@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventTimesDisplayItem Renders tooltip on mouseover 1`] = `
+<div>
+  <div
+    aria-expanded="true"
+    class="core-tooltip bp5-popover-target bp5-popover-open"
+  >
+    <div
+      class="signal-detection-details__event-time-content"
+      tabindex="0"
+    >
+      <span>
+        2023-06-07 21:50:16.291
+      </span>
+      <span>
+        2023-06-07 22:04:38.044
+      </span>
+      <span>
+        2023-06-07 22:01:49.839
+      </span>
+      <span>
+        . . . 
+        2
+         more . . .
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EventTimesDisplayItem Renders with 2 time entries 1`] = `
+<div>
+  <div
+    class="signal-detection-details__event-time-content"
+  >
+    <span>
+      2023-06-07 21:50:16.291
+    </span>
+    <span>
+      2023-06-07 22:04:38.044
+    </span>
+  </div>
+</div>
+`;
+
+exports[`EventTimesDisplayItem Renders with 3 time entires and an overflow of 2 1`] = `
+<div>
+  <div
+    aria-expanded="false"
+    class="core-tooltip bp5-popover-target"
+  >
+    <div
+      class="signal-detection-details__event-time-content"
+      tabindex="0"
+    >
+      <span>
+        2023-06-07 21:50:16.291
+      </span>
+      <span>
+        2023-06-07 22:04:38.044
+      </span>
+      <span>
+        2023-06-07 22:01:49.839
+      </span>
+      <span>
+        . . . 
+        3
+         more . . .
+      </span>
+    </div>
+  </div>
+</div>
+`;

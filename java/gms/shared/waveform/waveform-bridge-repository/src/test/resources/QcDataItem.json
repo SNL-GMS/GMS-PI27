@@ -1,0 +1,15 @@
+{
+  "qcMaskId":1000000000001,
+  "sta":"ASAR.AS01",
+  "chan":"SHZ",
+  "startTime":1546704000,
+  "endTime":1546711200,
+  "sampRate":20,
+  "nseg":68,
+  "qcDefId":5000000000555,
+  "lddate":"2022-09-08T17:34:46Z",
+  "createdBy": "aTestUser",
+  "startSample":1900,
+  "endSample":1900,
+  "maskType":60
+}

@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HotkeyHandler useHotkeys is called with the proper configuration 1`] = `
+[
+  [
+    [
+      {
+        "combo": "Space",
+        "disabled": false,
+        "global": false,
+        "group": "Waveform Display",
+        "label": "Fully zoom out on the waveform display",
+        "onKeyDown": [Function],
+        "onKeyUp": undefined,
+      },
+      {
+        "combo": "W",
+        "disabled": false,
+        "global": false,
+        "group": "Waveform Display",
+        "label": "Zoom in by one step",
+        "onKeyDown": [Function],
+        "onKeyUp": [Function],
+      },
+      {
+        "combo": "S",
+        "disabled": false,
+        "global": false,
+        "group": "Waveform Display",
+        "label": "Zoom out by one step",
+        "onKeyDown": [Function],
+        "onKeyUp": [Function],
+      },
+      {
+        "combo": "shift+s",
+        "disabled": false,
+        "global": false,
+        "group": undefined,
+        "label": undefined,
+        "onKeyDown": [Function],
+        "onKeyUp": [Function],
+      },
+      {
+        "combo": "shift+w",
+        "disabled": false,
+        "global": false,
+        "group": undefined,
+        "label": undefined,
+        "onKeyDown": [Function],
+        "onKeyUp": [Function],
+      },
+      {
+        "combo": "A",
+        "disabled": false,
+        "global": false,
+        "group": "Waveform Display",
+        "label": "Pan left",
+        "onKeyDown": [Function],
+        "onKeyUp": undefined,
+      },
+      {
+        "combo": "D",
+        "disabled": false,
+        "global": false,
+        "group": "Waveform Display",
+        "label": "Pan right",
+        "onKeyDown": [Function],
+        "onKeyUp": undefined,
+      },
+      {
+        "combo": "M",
+        "disabled": false,
+        "global": false,
+        "group": "Waveform Display",
+        "label": "Create a new QC segment on the selected raw channel",
+        "onKeyDown": [MockFunction],
+        "onKeyUp": [MockFunction],
+      },
+    ],
+  ],
+]
+`;

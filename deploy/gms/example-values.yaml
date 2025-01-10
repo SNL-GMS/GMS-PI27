@@ -1,0 +1,104 @@
+# Make a copy of this values.yaml file and customize it for each cluster.
+# Use `--values` to provide it to gmskube
+
+# Ingress information
+ingress:
+  # Base FQDN where the cluster is accessable, this is the wildcard DNS name.
+  baseDomain: "cluster.example.com"
+
+  # Port where Istio ingress gateway is accessable from outside the cluster.
+  istioPort: 8443
+
+  # Port where Nginx ingress is accessable from outside the cluster.
+  nginxPort: 443
+
+  # Signed wildcard SSL certificate for the baseDomain above
+  wildcardCrt: |
+    -----BEGIN CERTIFICATE-----
+    <cert data>
+    -----END CERTIFICATE-----
+
+  # Private key for SSL certificate
+  wildcardKey: |
+    -----BEGIN KEY-----
+    key data here
+    -----END KEY-----
+
+
+# Bridge paths
+bridgePath:
+  # Path where bridge responses are present on the host machine (outside container)
+  responses: "/data/bridge-responses"
+
+  # Path where bridge responses are mounted inside the container (must match paths in the DB)
+  responsesMount: "/data/bridge-responses"
+
+  # Path where bridge waveforms are present on the host machine (outside container)
+  waveforms: "/data/bridge-waveforms"
+
+  # Path where bridge waveforms are mounted inside the container (must match paths in the DB)
+  waveformsMount: "/data/bridge-waveforms"
+
+# Path where Event relocator data is present on the host machine (outside container)
+eventRelocatorPath: "/data/eventRelocator"
+
+# Keycloak configuration
+keycloak:
+  # Client ID for keycloak
+  clientId: "gms-development"
+
+  # Keycloak realm
+  realm: "gms"
+
+  # URL where keycloak is available
+  url: "https://keycloak.example.com/"
+
+
+# Logging config
+logging:
+  # LDAP configuration for logging apache httpd reverse proxy.
+  #   - Usually only AuthLDAPURL and AuthLDAPBindDN need to change.
+  #   - LDAPTrustedGlobalCert is the CA cert for LDAP, this is set via configmap. If running insecure ldap,
+  #     then delete this entire line.
+  #   - AuthLDAPBindPassword is set to an env variable that is set via a secret.
+  #   - ProxyPass and ProxyPassReverse should not be changed
+  ldapProxyConfig: |
+    # ldap CA cert for ldaps. Delete this line for insecure ldap.
+    LDAPTrustedGlobalCert CA_BASE64 "/etc/config/sec-ldap.crt"
+
+    ErrorLog /dev/stderr
+    TransferLog /dev/stdout
+    LogLevel ${LOG_LEVEL}
+
+    ServerName 0.0.0.0
+    <VirtualHost *:*>
+        DocumentRoot "/www/proxy"
+        ProxyRequests Off
+        ProxyPreserveHost On
+
+        <Location />
+            AuthType Basic
+            AuthName "LDAP Protected"
+            AuthBasicProvider ldap
+            AuthLDAPURL "ldaps://ldap.example.com:636/ou=mydomain,dc=example,dc=com?uid?sub?(&(objectClass=person)(memberof=cn=some-group,ou=Groups,ou=mydomain,dc=example,dc=com))"
+            AuthLDAPBindDN "cn=binduser,ou=local config,dc=com"
+            AuthLDAPBindPassword "${BIND_PASS}"
+            Require valid-user
+        </Location>
+
+        ProxyPass / http://logging-kibana:5601/
+        ProxyPassReverse / http://logging-kibana:5601/
+
+    </VirtualHost>
+
+
+# LDAP config
+ldap:
+  # The trusted root CA for LDAP
+  caCert: |
+    -----BEGIN CERTIFICATE-----
+    <cert data>
+    -----END CERTIFICATE-----
+
+  # The bind password for accessing LDAP information
+  bindPass: your-ldap-bind-pass

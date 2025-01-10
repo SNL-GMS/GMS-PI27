@@ -1,0 +1,47 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "./lib",
+    "strictFunctionTypes": false,
+    "strictNullChecks": false,
+    "paths": {
+      "~analyst-ui": ["./src/ts/components/analyst-ui"],
+      "~analyst-ui/": ["./src/ts/components/analyst-ui"],
+      "~analyst-ui/*": ["./src/ts/components/analyst-ui/*"],
+      "~app": ["./src/ts/app"],
+      "~app/": ["./src/ts/app"],
+      "~app/*": ["./src/ts/app/*"],
+      "~config": ["./src/ts/config"],
+      "~config/": ["./src/ts/config"],
+      "~config/*": ["./src/ts/config/*"],
+      "~env": ["./src/ts/env"],
+      "~env/": ["./src/ts/env"],
+      "~env/*": ["./src/ts/env/*"],
+      "~common-ui": ["./src/ts/components/common-ui"],
+      "~common-ui/": ["./src/ts/components/common-ui"],
+      "~common-ui/*": ["./src/ts/components/common-ui/*"],
+      "~components": ["./src/ts/components"],
+      "~components/": ["./src/ts/components"],
+      "~components/*": ["./src/ts/components/*"],
+      "~css": ["./src/css"],
+      "~css/": ["./src/css"],
+      "~css/*": ["./src/css/*"],
+      "~resources": ["./src/ts/resources"],
+      "~resources/": ["./src/ts/resources"],
+      "~resources/*": ["./src/ts/resources/*"],
+      "~scss-config": ["./src/ts/scss-config"],
+      "~scss-config/": ["./src/ts/scss-config"],
+      "~scss-config/*": ["./src/ts/scss-config/*"]
+    }
+  },
+  "ts-node": {
+    // tell ts-node CLI to install the --loader automatically (used for webpack)
+    "esm": true,
+    "compilerOptions": {
+      "module": "CommonJS",
+      "moduleResolution": "NodeNext"
+    }
+  },
+  "include": ["src/**/*", "__tests__/**/*", "__mocks__/**/*"]
+}

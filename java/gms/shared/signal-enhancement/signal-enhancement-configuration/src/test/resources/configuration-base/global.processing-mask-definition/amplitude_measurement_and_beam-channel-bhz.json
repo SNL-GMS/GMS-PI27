@@ -1,0 +1,125 @@
+{
+  "name": "amplitude_measurement_and_beam-bhz",
+  "constraints": [
+    {
+      "constraintType": "STRING",
+      "criterion": "processingOperation",
+      "operator": {
+        "type": "EQ",
+        "negated": false
+      },
+      "value": [
+        "AMPLITUDE_MEASUREMENT_AND_BEAM"
+      ],
+      "priority": 100
+    },
+    {
+      "constraintType": "STRING",
+      "criterion": "channel",
+      "operator": {
+        "type": "EQ",
+        "negated": false
+      },
+      "value": [
+        "BHZ"
+      ],
+      "priority": 60      
+    }
+  ],
+  "parameters": {
+    "appliedQcSegmentCategoryAndTypes": [
+      {
+        "category": "WAVEFORM",
+        "type": "AGGREGATE"
+      },
+      {
+        "category": "WAVEFORM",
+        "type": "FLAT"
+      },
+      {
+        "category": "WAVEFORM",
+        "type": "GAP"
+      },
+      {
+        "category": "WAVEFORM",
+        "type": "NOISY"
+      },
+      {
+        "category": "WAVEFORM",
+        "type": "SPIKE"
+      },
+      {
+        "category": "LONG_TERM"
+      },
+      {
+        "category": "ANALYST_DEFINED"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "AGGREGATE"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "CALIBRATION"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "FLAT"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "GAP"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "NOISY"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "SENSOR_PROBLEM"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "SPIKE"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "STATION_PROBLEM"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "STATION_SECURITY"
+      },
+      {
+        "category": "ANALYST_DEFINED",
+        "type": "TIMING"
+      },
+      {
+        "category": "STATION_SOH",
+        "type": "CALIBRATION"
+      },
+      {
+        "category": "STATION_SOH",
+        "type": "NOISY"
+      },
+      {
+        "category": "STATION_SOH",
+        "type": "STATION_PROBLEM"
+      },
+      {
+        "category": "STATION_SOH",
+        "type": "STATION_SECURITY"
+      },
+      {
+        "category": "STATION_SOH",
+        "type": "TIMING"
+      },
+      {
+        "category": "UNPROCESSED"
+      },
+      {
+        "category": "DATA_AUTHENTICATION"
+      }
+    ]
+  }
+}

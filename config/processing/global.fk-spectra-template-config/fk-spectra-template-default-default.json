@@ -1,0 +1,57 @@
+{
+    "name": "fk-spectra-template-default-default",
+    "constraints": [
+        {
+            "constraintType": "DEFAULT"
+        }
+    ],
+    "parameters": {
+        "fkSpectraWindow": {
+            "duration": "PT300S",
+            "lead": "PT60S"
+        },
+        "inputChannels": [
+            "SHZ",
+            "BHZ",
+            "HHZ",
+            "EHZ"
+        ],
+        "inputChannelGroups": [
+            "*"
+        ],
+        "fkSpectraParameters": {
+            "preFilter": {
+                "$ref=global.filter-definition": [
+                    {
+                        "criterion": "name",
+                        "value": "0.4 3.5 3 BP causal"
+                    }
+                ]
+            },
+            "slownessGrid": {
+                "maxSlowness": 40,
+                "numPoints": 81
+            },
+            "fftTaperFunction": "BLACKMAN",
+            "fkSpectrumWindow": {
+                "duration": "PT5S",
+                "lead": "PT1S"
+            },
+            "fkFrequencyRange": {
+                "lowFrequencyHz": 0.5,
+                "highFrequencyHz": 2.0
+            },
+            "fkUncertaintyOption": "EMPIRICAL",
+            "waveformSampleRate": {
+                "waveformSampleRateHz": 20,
+                "waveformSampleRateToleranceHz": 0.01
+            },
+            "spectrumStepDuration": "PT1S",
+            "orientationAngleToleranceDeg": 0.5,
+            "minimumWaveformsForSpectra": 2,
+            "normalizeWaveforms": false,
+            "twoDimensional": true,
+            "fftTaperPercent": 5.0
+        }
+    }
+}

@@ -1,0 +1,15 @@
+#ifndef STATION_TYPE_H
+#define STATION_TYPE_H
+
+enum class StationType {
+    SEISMIC_1_COMPONENT = 0,
+    SEISMIC_3_COMPONENT = 1,
+    SEISMIC_ARRAY = 2,
+    SEISMIC_3_COMPONENT_ARRAY = 3,
+    HYDROACOUSTIC = 4,
+    INFRASOUND = 5,
+    INFRASOUND_ARRAY = 6,
+    WEATHER = 7
+};
+
+#endif //STATION_TYPE_H

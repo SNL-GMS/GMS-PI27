@@ -1,0 +1,790 @@
+#!/usr/bin/env python3
+
+# -----------------------------------------------------------------------------
+# gms-curls-config-sb test script
+#
+# gms-curls-config-sb executes curl commands for SB.
+# These curls do not reach out to the database but instead retrieve 
+# information from files contained within gms-common/config
+# The deployment name must be provided.
+# The cluster name can be determined by running kubeconfig.
+# Curl commands can be run at various sites.
+# -----------------------------------------------------------------------------
+
+import argparse
+import json
+import os
+import re
+import requests
+import shutil
+import subprocess
+import sys
+import time
+import yaml
+from argparse import ArgumentParser, RawDescriptionHelpFormatter
+from collections import defaultdict
+from datetime import datetime, timedelta
+from pathlib import Path
+from rich.console import Console
+
+console_kwargs = {"log_path": False}
+if os.getenv("CI"):
+    console_kwargs["force_terminal"] = True
+if os.getenv("RICH_LOG_PATH"):
+    console_kwargs["log_path"] = True
+console = Console(**console_kwargs)
+
+
+##################### MAIN #######################
+def main():
+
+    # -- verify kubectl is available
+    if shutil.which('kubectl') is None:
+        print(
+            "ERROR: 'kubectl' executable not found in PATH."
+            "Please install kubectl."
+        )
+        sys.exit(1)
+
+    # -- verify helm is available
+    if shutil.which('gmskube') is None:
+        print(
+            "ERROR: 'gmskube' executable not found in PATH."
+            "Please install gmskube."
+        )
+        sys.exit(1)
+
+    # -- verify KUBECONFIG is set
+    if "KUBECONFIG" not in os.environ:
+        print(
+            "ERROR: Variable 'KUBECONFIG' must be set to "
+            "the kubernetes configuration."
+        )
+        sys.exit(1)
+
+    if ":" in os.environ["KUBECONFIG"]:
+        msg = (
+            "It looks like your `KUBECONFIG` environment variable points "
+            "to multiple configuration files.  Ensure you run `kubeconfig "
+            "<cluster_name>` to activate a particular cluster, and then "
+            "re-run this script."
+        )
+        raise SystemExit(msg)
+
+    try:
+        with open(os.environ["KUBECONFIG"]) as file:
+            kubeconfig = yaml.load(file, Loader=yaml.FullLoader)
+            if 'clusters' not in kubeconfig:
+                print(
+                    "ERROR: No clusters defined in file "
+                    f"'{os.environ['KUBECONFIG']}"
+                )
+                sys.exit(1)
+
+    except FileNotFoundError as e:
+        print(
+            "ERROR: Failed to open KUBECONFIG file "
+            f"'{os.environ['KUBECONFIG']}': {e}"
+        )
+        sys.exit(1)
+    except AttributeError as e:
+        print(f"ERROR: {e.__class__.__name__}: {e}")
+        print(
+            "Did you forget to activate the 'gms' conda environment "
+            "with 'conda activate gms'?"
+        )
+        sys.exit(1)
+    except Exception as e:
+        print(f"ERROR: {e.__class__.__name__}: {e}")
+        sys.exit(1)
+
+    args = get_args()
+
+    instance = get_instance_info(args.name)
+
+    if not instance:
+        print(f"{ args.name } instance not found.")
+        sys.exit(1)
+
+    pods = get_pod_info(instance)
+
+    data_times = {}
+
+    data_times = set_fixed_times()
+
+    # Declare base URL for service requests
+    # This includes instance name, cluster, domain, and port
+    # https://<instance-name>.<cluster>.<???>:<port-number>
+    try:
+        base_url = get_ingress_domain_url(args.name)
+    except RuntimeError:
+        raise RuntimeError("Unable to get domain name.")
+
+    default_headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    }
+
+    bad_curl_resps = dict()
+
+    ###########################################################################
+    #                        POST CURL COMMANDS                               #
+
+    post_curl_commands = {
+
+        # ##################### Intervals/Workflow Manager ####################
+
+        # Verifies the Workflow Manager Service - Get Workflow Definition -
+        # Configuration Only
+        "Workflow Manager Service - "
+        "Get Workflow Definition - "
+        "Configuration Only": {
+            "url":
+            f"{base_url}/workflow-manager-service/workflow-manager/"
+            "workflow-definition",
+            "data": ""
+        },
+
+        # ############## Signal Enhancement Configuration Service #############
+
+        # Verifies the Signal Enhancement Configuration Service
+        # - Get Default Filter Definitions By Usage Map - Configuration Only
+        "Signal Enhancement Configuration Service - "
+        "Get Default Filter Definitions By Usage Map - "
+        "Configuration Only": {
+            "url":
+            f"{base_url}/signal-enhancement-configuration-service/"
+            f"signal-enhancement-configuration/"
+            f"default-filter-definitions-by-usage-map",
+            "data": {
+                "channels": [
+                    { "name": "ASAR.AS01.SHZ" }
+                ],
+                "phases": [ "P" ]
+            } 
+        },
+
+        # Verifies the Signal Enhancement Configuration Service -
+        # Processing Mask Definitions - Configuration Only
+        "Signal Enhancement Configuration Service - "
+        "Processing Mask Definitions - "
+        "Configuration Only": {
+            "url":
+            f"{base_url}/signal-enhancement-configuration-service/"
+            f"signal-enhancement-configuration/processing-mask-definitions",
+            "data": {
+                "stationGroup": {
+                    "name": "Primary",
+                    "effectiveAt": data_times['effective_time'],
+                    "effectiveUntil": data_times['effective_until']
+                },
+                "processingOperations": [
+                    "FK_SPECTRA"
+                ],
+                "channels": [
+                    {
+                        "effectiveAt": data_times['effective_time'],
+                        "name": "ASAR.AS01.SHZ"
+                    }
+                ],
+                "phaseTypes": [
+                    "P"
+                ]
+            }
+        },
+
+        # Verifies the Signal Enhancement Configuration Service -
+        # Get Beamforming Templates - Configuration Only
+        "Signal Enhancement Configuration Service - "
+        "Get Beamforming Templates - "
+        "Configuration Only": {
+            "url":
+            f"{base_url}/signal-enhancement-configuration-service/"
+            f"signal-enhancement-configuration/beamforming-template",
+            "data": {
+                "phases": [
+                     "P"
+                 ],
+                 "stations": [
+                     {
+                         "effectiveAt": "2019-01-05T19:45:00Z",
+                         "name": "PDAR"
+                     }
+                 ],
+                 "beamType": "EVENT"
+            }
+        },
+
+        # Verifies the Signal Enhancement Configuration Service
+        # - Get FK Reviewable Phases - Configuration Only
+        "Signal Enhancement Configuration Service - "
+        "Get FK Reviewable Phases - "
+        "Configuration Only": {
+            "url":
+            f"{base_url}/signal-enhancement-configuration-service/"
+            f"signal-enhancement-configuration/fk-reviewable-phases",
+            "data": {
+                "stations": [
+                    { "name": "AKTO" }
+                ],
+                "activity": { "name": "AL1 Event Review" }
+            } 
+        },
+
+        # Verifies the Signal Enhancement Configuration Service
+        # - Get FK Spectra Templates - Configuration Only
+        "Signal Enhancement Configuration Service - "
+        "Get FK Spectra Templates - "
+        "Configuration Only": {
+            "url":
+            f"{base_url}/signal-enhancement-configuration-service/"
+            f"signal-enhancement-configuration/fk-spectra-templates",
+            "data": {
+                "stations": [
+                    { "name": "ASAR" }
+                ],
+                "phases": [ "P" ]
+            } 
+        },
+
+        # Verifies the Signal Enhancement Configuration Service
+        # - Get Rotation Templates - Configuration Only
+        "Signal Enhancement Configuration Service - "
+        "Get Rotation Templates - "
+        "Configuration Only": {
+            "url":
+            f"{base_url}/signal-enhancement-configuration-service/"
+            f"signal-enhancement-configuration/rotation-templates",
+            "data": {
+                "stations": [
+                    { "name": "ASAR" }
+                ],
+                "phases": [ "S" ]
+            } 
+        },
+
+        # ######## Signal Feature Measurement Configuration Service ##########
+
+        # Verifies the Signal Feature Measurement Configuration Service
+        # - Get Default Stations to Measure by Amplitude Type 
+        # - Configuration Only
+        "Signal Feature Measurement Configuration Service - "
+        "Get Default Stations to Measure by Amplitude Type - "
+        "Configuration Only": {
+            "url":
+            f"{base_url}/signal-feature-measurement-configuration-service/"
+            f"signal-feature-measurement-configuration/default-stations-by-amplitude-type",
+            "data": {
+                "amplitudeMeasurementTypes": 
+                [
+                    "AMPLITUDE_A5_OVER_2",
+                    "AMPLITUDE_ALR_OVER_2",
+                    "ROOT_MEAN_SQUARE"
+                ]
+            } 
+        },
+
+        # Verifies the Signal Feature Measurement Configuration Service
+        # - Get Amplitude Measurement Definitions
+        # - Configuration Only
+        "Signal Feature Measurement Configuration Service - "
+        "Get Amplitude Measurement Definitions - "
+        "Configuration Only": {
+            "url":
+            f"{base_url}/signal-feature-measurement-configuration-service/"
+            f"signal-feature-measurement-configuration/amplitude-measurement-definition",
+            "data": {
+                "amplitudeMeasurementTypes": 
+                [
+                    "AMPLITUDE_A5_OVER_2",
+                    "AMPLITUDE_ALR_OVER_2",
+                    "ROOT_MEAN_SQUARE"
+                ]
+            } 
+        },
+
+        # Verifies the Signal Feature Measurement Configuration Service
+        # - Get Amplitude Measurement Conditioning Templates
+        # - Configuration Only
+        "Signal Feature Measurement Configuration Service - "
+        "Get Amplitude Measurement Conditioning Templates - "
+        "Configuration Only": {
+            "url":
+            f"{base_url}/signal-feature-measurement-configuration-service/"
+            f"signal-feature-measurement-configuration/amplitude-measurement-conditioning-template",
+            "data": {
+                "stations": [
+                    { "name": "ASAR" },
+                    { "name": "MKAR" },
+                    { "name": "CMAR" }
+                ],
+                "amplitudeMeasurementTypes": 
+                [
+                    "AMPLITUDE_A5_OVER_2",
+                    "AMPLITUDE_ALR_OVER_2",
+                    "ROOT_MEAN_SQUARE"
+                ]
+            } 
+        },
+
+    }
+
+    #                         END POST CURL COMMANDS                          #
+    ###########################################################################
+
+    ###########################################################################
+    #                         GET CURL COMMANDS                               #
+
+    get_curl_commands = {
+            
+        # ############## Signal Enhancement Configuration Service #############
+
+        # Verifies the Signal Enhancement Configuration Service
+        # - Get Filter Lists Definition - Configuration Only
+        "Signal Enhancement Configuration Service - "
+        "Get Filter Lists Definition - "
+        "Configuration Only": {
+            "url":
+            f"{base_url}/signal-enhancement-configuration-service/"
+            f"signal-enhancement-configuration/filter-lists-definition"
+        },
+
+        # ###################### Event Relocator Service #####################
+
+        # Verifies the Event Relocator Service
+        # - Get Event Relocation Prediction Definition - Configuration Only
+        "Event Relocator Service - "
+        "Get Event Relocation Prediction Definition - "
+        "Configuration Only": {
+            "url":
+            f"{base_url}/event-relocation-service/relocation/event-relocation-processing-definition"
+        },
+
+    }
+
+    #                        END GET CURL COMMANDS                            #
+    ###########################################################################
+
+    console.log(
+        f" Executing curl commands at this url: "
+        f"{base_url}"
+    )
+
+    # Make POST curl requests to service endpoints
+    execute_curl_request("post", post_curl_commands.items(), args, default_headers, base_url)
+
+    # Make GET curl requests to service endpoints
+    execute_curl_request("get", get_curl_commands.items(), args, default_headers, base_url)
+
+    # Print a list error messages for commands that didn't
+    # return a successful response code
+    if bad_curl_resps:
+        console.log(
+            "[bold red]The following curl commands did not execute "
+            "as anticipated: \n"
+        )
+
+        for description, err in bad_curl_resps.items():
+            console.log(f"[magenta]{description}: [red]{err}")
+
+    else:
+        console.log(
+            "[green]All curl commands successfully executed "
+            "and returned a valid response."
+        )
+
+    sys.exit(0)
+
+
+def run(command: str, print_output: bool = False) -> tuple[int, str, str]:
+    """
+    Execute the specified command and return when the execution is complete.
+
+    Args:
+        command (str): A shell command to run.
+        print_output (bool, optional): Enable printing of stdout and stderr
+            immediately. Defaults to False.
+
+    Returns:
+        tuple: Return code, stdout, and stderr of the command
+
+    """
+    cmd = subprocess.Popen(
+        command,
+        shell=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        stdin=subprocess.PIPE
+    )
+    out, err = cmd.communicate(input=None)
+    out = out.decode()
+    err = err.decode()
+
+    if print_output:
+        print(out)
+        if len(err) > 0:
+            print(err)
+
+    return cmd.returncode, out, err
+
+
+def get_args() -> argparse.Namespace:
+    """
+    Get command-line arguments.
+
+    Returns:
+        argparse.Namespace: A namespace of command line arguments
+
+    """
+
+    description = """
+    description:
+      gms-curls-config-sb executes curl commands for installed SB instances.
+      These curls do not reach out to the database but instead retrieve
+      information from files contained within gms-common/config.
+      The instance name must be provided. The cluster name can be determined by
+      running kubeconfig. Curl commands can be run at various sites.
+    """
+
+    parser = ArgumentParser(
+        description=description,
+        formatter_class=RawDescriptionHelpFormatter
+    )
+
+    parser.add_argument(
+        '-n',
+        '--name',
+        help="Name of the deployment."
+    )
+
+    parser.add_argument(
+        '-v',
+        '--verbose',
+        action='store_true',
+        help="Print info about executing curl commands."
+    )
+
+    parser.add_argument(
+        '-r',
+        '--response',
+        action='store_true',
+        help="Print response data returned by curl commands."
+    )
+
+    parser.add_argument(
+        '-f',
+        '--files',
+        type=str,
+        help="Destination directory for output files."
+    )
+
+    parser.add_argument(
+        '-t',
+        '--timeout',
+        type=int,
+        default=120,
+        help="Sets the timeout (in seconds) for requests. Default = 120."
+    )
+
+    args = parser.parse_args()
+
+    # Create the destination directory (for output files), if necessary
+    if args.files:
+        if not os.path.exists(args.files):
+            try:
+                os.mkdir(args.files)
+            except Exception:
+                print(
+                    f"Failed to create output files directory '{args.files}'.  "
+                    "Defaulting to './'"
+                )
+                args.files = './'
+
+    return args
+
+
+def get_ingress_domain_url(instance_name: str) -> str:
+    """
+    Use ``gmskube ingress`` to get the ingress URL for the
+    ``user-manager-service``, which is common to various instance types.
+
+    Args:
+        instance_name:  The name of the instance.
+
+    Raises:
+        RuntimeError:  If something goes wrong with ``gmskube ingress``.
+
+    Returns:
+        Returns the URL through the port (which is appended to domain
+        via ":<port_number>"), stripping off anything following
+    """
+
+    ingress_url = ""
+    _, out, _ = run(f"gmskube ingress {instance_name}")
+
+    for line in out.splitlines():
+        if "user-manager-service" in line:
+            ingress_url = line.split()[1]
+
+    if ingress_url == "":
+        raise RuntimeError(
+            "Unable to get the ingress URL for the "
+            "`user-manager-service`."
+        )
+
+    return re.search(r"^(https://.*:.*)/.*$", ingress_url).group(1)
+
+
+def get_instance_info(name):
+    """
+    Gather a dictionary of information about a named instance.
+    """
+    summary = run_json_command(f"helm list --all -n { name } --output json")
+
+    if not summary:
+        return None
+
+    instance = {}
+    instance['name'] = summary[0]['name']
+    instance['status'] = summary[0]['status']
+    instance['updated'] = summary[0]['updated']
+
+    return instance
+
+
+def run_json_command(command):
+    """
+    Run a command that produces JSON output
+    and return the result as a dictionary.
+    """
+    result = None
+    try:
+        cmd = subprocess.Popen(
+            command.split(),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            stdin=subprocess.PIPE
+        )
+        out, err = cmd.communicate()
+        out = out.decode()
+        err = err.decode()
+
+        if cmd.returncode != 0:
+            print(
+                f"ERROR: '{ command.split()[0] }' returned { cmd.returncode }."
+            )
+            print(out)
+            console.out(f'[yellow]{err}')
+            return None
+
+        result = json.loads(out)
+    except Exception as ex:
+        print(ex)
+        sys.exit(1)
+
+    return result
+
+
+def get_pod_info(instance):
+    """
+    Gather a dictionary of running pods for the given instance name.
+    """
+
+    rc, out, err = run(f"kubectl get pods -n {instance['name']} --no-headers")
+
+    if rc != 0:
+        print("   ----------ERROR getting pods ----------")
+    else:
+        pods = defaultdict(list)
+        for line in out.splitlines():
+            columns = line.split()
+            deployment_name = columns[0].rsplit('-', 2)[0]
+            pod = {}
+            pod['deployment_name'] = deployment_name
+            pod['name'] = columns[0]
+            pod['ready'] = columns[1]
+            pod['status'] = columns[2]
+            pod['restarts'] = columns[3]
+            pod['age'] = columns[4]
+            pods[deployment_name].append(pod)
+
+    return pods
+
+
+def set_fixed_times():
+    """
+    Set start/end/creation/effective times to fixed
+    values to work when simulator is not installed
+    """
+
+    # Note 1:  SME says "If you’re not running a simulator,
+    #     you could use any time on 2019-01-05.
+    #   For start and end times, it’s really dependent on the curl.
+    #   For curls that return a ton of data (e.g., events)
+    #     you’d want to use a very short time period.
+    #   For curls that return only a little data (e.g., intervals)
+    #     you can use the entire day."
+    # Note 2:  SME now says "Seed data we use exists
+    #     2019-01-05T16:00 – 2019-01-05T22:00 "
+    # Note 3:  SME also now says "The seed data for SB deployments
+    #     is mostly in 6 hours in 2019, 2019-01-05 16:00-22:00.
+    #     You need to adjust the start and end times in your
+    #     query to be in this time frame. Try 16:00-17:00"
+    # Note 4:  SME now saying "I’ve picked a seed data time that
+    #     will work for both AL1 and AL2 stages. If you use these
+    #     times for any sb query that requires a time range, it
+    #     should work."
+    #       "startTime": "2019-01-05T19:25:00Z"
+    #       "endTime": "2019-01-05T19:29:00Z"
+
+    fixed_times = {}
+
+    start_time = "2019-01-05T19:25:00Z"
+
+    # set end_time to 4 hrs after start_time
+    end_time = "2019-01-05T19:29:00Z"
+
+    # set short_end_time to 1 min after start_time
+    # short_end_time = "2019-01-05T19:26:00Z"
+
+    creation_time = start_time
+    effective_time = start_time
+    effective_until = end_time
+
+    fixed_times['start_time'] = start_time
+    fixed_times['end_time'] = end_time
+    fixed_times['creation_time'] = creation_time
+    fixed_times['effective_time'] = effective_time
+    fixed_times['effective_until'] = effective_until
+
+    return fixed_times
+
+
+def print_curl_response(response_text, service_description):
+    """
+    Print curl response json to stdout
+    """
+
+    print("\nExecuting curl commands at this service endpoint: " )
+    print(service_description)
+    print("\n")
+    print(response_text)
+    print("\n")
+
+
+def write_response_to_file(file_name, response_text):
+    """
+    Append curl response json to output file
+    """
+
+    f = open(file_name,"a")
+    f.write("\n")
+    f.write(response_text)
+    f.write("\n")
+    f.close()
+
+
+def write_text_to_file(file_name, text_string1, text_string2):
+    """
+    Append text to output file
+    """
+
+    f = open(file_name,"a")
+    f.write("\n")
+    f.write(text_string1)
+    f.write(text_string2)
+    f.write("\n")
+    f.close()
+
+
+def execute_curl_request(curl_request_type, curl_commands_list, args, default_headers, base_url):
+    """
+    Look through list of post/get curl requests to service endpoints 
+    """
+
+    for description, query in curl_commands_list:
+        if args.verbose:
+            console.log(
+                f"[cyan]\n Executing", curl_request_type.upper(), "curl command at this service endpoint: \n "
+                f"[magenta]{description} \n"
+            )
+            start = time.time()
+
+        # Create output data file in destination directory
+        if args.files:
+            description_name = description.replace(" ", "") + ".txt"
+            output_filename = args.files + "/" + str(description_name)
+            f = open(output_filename, "w")
+            f.write("Executing curl command at this url: ")
+            f.write(base_url)
+            f.write("\n")
+            f.close()
+
+            console.log(
+                f"*Output file {output_filename} created. \n"
+            )
+
+            write_text_to_file(output_filename,
+                    " Executing curl command at this service endpoint: \n ",
+                    description)
+        try:
+            # Use appropriate POST or GET method for requests
+            if curl_request_type == "post":
+                resp = requests.post(
+                    query["url"],
+                    headers=default_headers,
+                    data=json.dumps(query["data"]),
+                    timeout=args.timeout
+                )
+            elif curl_request_type == "get":
+                resp = requests.get(
+                    query["url"],
+                    headers=default_headers,
+                    timeout=args.timeout
+                )
+            else:
+                raise Exception('ERROR: must use POST or GET method with curl request')
+
+            if args.verbose:
+                elapsed_time = time.time() - start
+                console.log(f"- {elapsed_time:.3f} s")
+
+            # Print data to stdout
+            if args.response:
+                print_curl_response(resp.text, description)
+
+                # Write response data to output file
+                if args.files:
+                    write_response_to_file(output_filename, resp.text)
+
+            if resp.text == "{}" or resp.text == "[]":
+                print("           *Empty List Returned From: ", description)
+                print("                 *At This URL: ", query["url"])
+                print(" ")
+                resp.raise_for_status()
+
+                # Write empty list info to output file
+                if args.files:
+                    write_text_to_file(output_filename,
+                            "         *Empty List Returned From: ", description)
+                    write_text_to_file(output_filename,
+                            "               *At This URL: ", query["url"])
+
+            resp.raise_for_status()
+
+        # Handles bad urls, unsuccessful response codes, timeouts,
+        # and connection errors
+        except requests.exceptions.RequestException as err:
+            bad_curl_resps[description] = err
+
+            if args.verbose:
+                print()
+
+            # Write error data to output file
+            if args.files:
+                write_text_to_file(output_filename, description, str(err))
+
+
+##################### MAIN #######################
+if __name__ == "__main__":
+    main()

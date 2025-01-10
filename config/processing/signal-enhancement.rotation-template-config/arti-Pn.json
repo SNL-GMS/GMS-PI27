@@ -1,0 +1,46 @@
+{
+    "name": "arti-Pn",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "ARTI"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "phase",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "Pn"
+            ],
+            "priority": 90
+        }
+    ],
+    "parameters": {
+        "inputChannels": [
+            {
+                "name": "ARTI.ARTI.BHN"
+            },
+            {
+                "name": "ARTI.ARTI.BHE"
+            }
+        ],
+        "leadDuration": "PT90S",
+        "duration": "PT10M",
+        "sampleRateToleranceHz": 0.5,
+        "locationToleranceKm": 0.5,
+        "orientationAngleToleranceDeg": 0.5,
+        "twoDimensional": true,
+        "samplingType": "INTERPOLATED"
+    }
+}

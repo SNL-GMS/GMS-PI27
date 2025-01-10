@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Scaling Options Toolbar Item should return a ToolbarItem element that matches a snapshot 1`] = `
+<div>
+  <span
+    aria-expanded="false"
+    aria-haspopup="true"
+    class="bp5-popover-target"
+  >
+    <button
+      class="bp5-button bp5-align-left"
+      data-cy="scaling-option-selector"
+      title="Waveform amplitude scaling options"
+      type="button"
+      value="Auto"
+    >
+      <span
+        class="bp5-button-text"
+      >
+        Scale: 
+        Auto
+      </span>
+      <span
+        aria-hidden="true"
+        class="bp5-icon bp5-icon-standard bp5-icon-caret-down"
+        data-icon="caret-down"
+      />
+    </button>
+  </span>
+</div>
+`;

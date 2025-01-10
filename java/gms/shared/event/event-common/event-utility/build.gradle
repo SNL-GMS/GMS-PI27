@@ -1,0 +1,16 @@
+plugins {
+    id('java-library')
+}
+
+dependencies {
+    api libs.org.apache.commons.commons.lang3
+    api libs.org.springframework.spring.context
+
+    implementation project(':spring-framework-utilities')
+    implementation project(':caching-utils')
+    implementation project(':workflow-coi')
+    implementation project(':signal-detection-database-connector')
+
+    implementation libs.com.google.auto.value.auto.value.annotations
+    annotationProcessor libs.com.google.auto.value.auto.value.base
+}

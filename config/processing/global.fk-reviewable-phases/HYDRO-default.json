@@ -1,0 +1,55 @@
+{
+    "name": "hydro-default",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "IN",
+                "negated": false
+            },
+            "value": [
+                "H01W",
+                "H02N",
+                "H02S",
+                "H03N",
+                "H03S",
+                "H04N",
+                "H04S",
+                "H05N",
+                "H05S",
+                "H06E",
+                "H06S",
+                "H07N",
+                "H07S",
+                "H09N",
+                "H09W",
+                "H10N",
+                "H10S",
+                "H11N",
+                "H11S"
+            ],
+            "priority": 100
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "activity",
+            "operator": {
+                "type": "IN",
+                "negated": false
+            },
+            "value": [
+                "AL1 Event Review",
+                "AL1 Scan",
+                "AL2 Event Review",
+                "AL2 Scan"
+            ],
+            "priority": 80
+        }
+    ],
+    "parameters": {
+        "phases": [
+            "H"
+        ]
+    }
+}

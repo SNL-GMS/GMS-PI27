@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test station util can find parent and child channels 1`] = `
+{
+  "height": 24.8,
+  "id": "AKASG.AKASG.HHZ",
+  "isSelected": false,
+  "name": "name",
+  "timeOffsetSeconds": 0,
+  "waveform": {
+    "channelSegmentId": "unfiltered",
+    "channelSegmentsRecord": {},
+    "markers": {
+      "verticalMarkers": [
+        {
+          "color": "#fff",
+          "id": "startTime",
+          "lineStyle": "solid",
+          "timeSecs": 1274392801,
+        },
+        {
+          "color": "#fff",
+          "id": "endTime",
+          "lineStyle": "solid",
+          "timeSecs": 1274400000,
+        },
+      ],
+    },
+    "masks": [],
+    "signalDetections": [],
+  },
+}
+`;
+
+exports[`test station util can find parent and child channels 2`] = `
+{
+  "height": 24.8,
+  "id": "AKASG",
+  "isSelected": false,
+  "name": "name",
+  "timeOffsetSeconds": 0,
+  "waveform": {
+    "channelSegmentId": "unfiltered",
+    "channelSegmentsRecord": {},
+    "markers": {
+      "selectionWindows": [],
+      "verticalMarkers": [
+        {
+          "color": "#fff",
+          "id": "startTime",
+          "lineStyle": "solid",
+          "timeSecs": 1274392801,
+        },
+        {
+          "color": "#fff",
+          "id": "endTime",
+          "lineStyle": "solid",
+          "timeSecs": 1274400000,
+        },
+      ],
+    },
+    "predictedPhases": [],
+    "signalDetections": [],
+  },
+}
+`;

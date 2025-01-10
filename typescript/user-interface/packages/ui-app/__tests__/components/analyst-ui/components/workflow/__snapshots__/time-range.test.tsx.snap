@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`workflow time axis tests matches snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="workflow-time-range"
+    >
+      <span
+        class="time-range-left"
+      >
+        1970-01-01
+      </span>
+      <span
+        class="time-range-right"
+      >
+        1970-01-02
+      </span>
+    </div>
+  </div>
+</body>
+`;

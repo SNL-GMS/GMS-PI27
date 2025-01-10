@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`state user session slice should return the initial state 1`] = `
+{
+  "authenticationStatus": {
+    "authenticated": false,
+    "authenticationCheckComplete": false,
+    "failedToConnect": false,
+    "userName": "",
+  },
+  "connected": true,
+}
+`;
+
+exports[`state user session slice should return the initial state 2`] = `
+{
+  "authenticationStatus": {
+    "authenticated": false,
+    "authenticationCheckComplete": false,
+    "failedToConnect": false,
+    "userName": "",
+  },
+  "connected": true,
+}
+`;
+
+exports[`state user session slice should return the initial state 3`] = `
+{
+  "authenticationStatus": {
+    "authenticated": false,
+    "authenticationCheckComplete": false,
+    "failedToConnect": false,
+    "userName": "",
+  },
+  "connected": true,
+}
+`;
+
+exports[`state user session slice should return the initial state 4`] = `
+{
+  "authenticationStatus": {
+    "authenticated": false,
+    "authenticationCheckComplete": false,
+    "failedToConnect": false,
+    "userName": "",
+  },
+  "connected": true,
+}
+`;

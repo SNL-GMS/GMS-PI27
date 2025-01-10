@@ -1,0 +1,111 @@
+.form-label {
+  font-size: 0.9rem;
+  position: relative;
+  padding-top: 0.82em;
+  padding-bottom: 0.6em;
+}
+.gms-form-group {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.33rem 0.5rem;
+  margin-bottom: 2px;
+  &__label {
+    font-size: 1rem;
+    color: var(--core-main, var(--gms-main, $core-main));
+  }
+  &__label-info {
+    color: var(--core-soft, var(--gms-soft, $core-soft));
+  }
+  &__content {
+    display: flex;
+    position: relative;
+    & > * {
+      flex-grow: 1;
+    }
+    &--fill {
+      grid-column: span 2;
+    }
+  }
+  &__helper-text {
+    font-size: 1em;
+  }
+}
+.gms-form-group__content--accordion {
+  background: var(--core-grid-background, var(--gms-grid-background, rgba(255, 255, 255, 0.05)));
+  margin-top: -3px;
+}
+.gms-form-group__content--hidden {
+  display: none;
+}
+.gms-group__label:has(.bp5-button) {
+  cursor: pointer;
+}
+
+@mixin createLeftIndentLine {
+  content: ' ';
+  position: absolute;
+  top: 0.25rem;
+  left: 0;
+  bottom: 0;
+  width: 0.75rem;
+  background-color: var(
+    --core-grid-background,
+    var(--gms-grid-background, rgba(255, 255, 255, 0.1))
+  );
+}
+
+/// Creates a structure where the outer form group takes up the full width of the form, and the inner ones get embedded in the gms-form-group__content element
+/// This is added as a mixin so that it is clear that this block of code is specifically for this purpose.
+@mixin createNestedFormGroupStyles {
+  /// Style the outer label
+  .gms-group__label:has(+ .gms-form-group__content > .gms-group__label) {
+    padding-top: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+  /// The outer group and content should take up two columns
+  .gms-group__label:has(+ .gms-form-group__content > .gms-group__label),
+  .gms-group__label + .gms-form-group__content:has(.gms-group__label),
+  .gms-form-group__content--accordion {
+    grid-column: span 2;
+    width: 100%;
+  }
+
+  /// The outer content should create a form grid
+  .gms-group__label + .gms-form-group__content:has(.gms-group__label),
+  .gms-form-group__content--accordion .bp5-collapse-body {
+    @include createFormGrid;
+    border-top: none;
+    margin-top: -3px; // no visible gap
+    padding: 3px 8px 3px 16px;
+    &::before {
+      @include createLeftIndentLine;
+    }
+  }
+
+  /// Style the inner label
+  .gms-group__label + .gms-form-group__content:has(.gms-group__label) > .gms-group__label,
+  .gms-form-group__content--accordion .gms-group__label {
+    background: none;
+    border-top: 3px solid var(--gms-prominent-background); // looks like it has punched through
+    padding-left: 1.5rem;
+    margin-left: -0.25rem; // so that the help text gets pushed left
+    font-size: 0.9rem;
+    align-items: flex-start;
+  }
+
+  /// Style the inner content
+  .gms-group__label + .gms-form-group__content:has(.gms-group__label) > .gms-form-group__content,
+  .gms-form-group__content--accordion .gms-form-group__content {
+    background: none;
+    border-top: 3px solid var(--gms-prominent-background);
+    padding-right: 0;
+  }
+}
+@include createNestedFormGroupStyles; // immediately invoked
+
+/// Line on left side to visually group elements
+.gms-form-group__content--accordion .bp5-collapse-body::before {
+  @include createLeftIndentLine;
+}

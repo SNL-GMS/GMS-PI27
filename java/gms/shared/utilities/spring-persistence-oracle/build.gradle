@@ -1,0 +1,20 @@
+apply plugin: 'java-library'
+
+dependencies {
+  api project(':spring-persistence-api')
+  api project(':java-utilities')
+  
+  api libs.com.mchange.c3p0
+  api libs.com.oracle.database.jdbc.ojdbc11
+  api libs.com.oracle.database.security.oraclepki
+  api libs.org.hibernate.orm.hibernate.c3p0
+  api libs.org.springframework.boot.spring.boot.autoconfigure
+  
+  implementation project(':frameworks-system-config')
+  implementation project(':workflow-coi')
+
+  // Google AutoValue
+  api libs.com.google.guava.guava
+  implementation libs.com.google.auto.value.auto.value.annotations
+  annotationProcessor libs.com.google.auto.value.auto.value.base
+}

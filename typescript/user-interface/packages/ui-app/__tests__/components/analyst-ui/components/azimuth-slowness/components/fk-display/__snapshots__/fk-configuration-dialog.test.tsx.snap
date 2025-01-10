@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FKConfigurationDialog renders & matches snapshot 1`] = `
+<div>
+  <div
+    style="border: 1px solid #111; resize: both; overflow: auto; height: 700px; width: 1000px;"
+  />
+</div>
+`;

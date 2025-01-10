@@ -1,0 +1,1 @@
+Istio namespace present: {{ ternary "No" "Yes" (empty (lookup "v1" "Namespace" "" "istio-system")) }}

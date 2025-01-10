@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`checkbox dropdown matches the snapshot 1`] = `
+<div>
+  <div
+    class="checkbox-list__body"
+  >
+    <div
+      class="checkbox-list__row"
+    >
+      <div
+        class="checkbox-list__box-and-label"
+      >
+        <label
+          class="bp5-control bp5-checkbox checkbox-list__checkbox"
+        >
+          <input
+            data-cy="checkbox-list-firstBox"
+            type="checkbox"
+          />
+          <span
+            class="bp5-control-indicator"
+          />
+          <div
+            class="checkbox-list__label"
+          />
+          <div
+            class="checkbox-list__legend-box"
+            style="background-color: rgb(18, 49, 35);"
+          />
+        </label>
+      </div>
+    </div>
+    <div
+      class="checkbox-list__row"
+    >
+      <div
+        class="checkbox-list__box-and-label"
+      >
+        <label
+          class="bp5-control bp5-checkbox checkbox-list__checkbox"
+        >
+          <input
+            checked=""
+            data-cy="checkbox-list-secondBox"
+            type="checkbox"
+          />
+          <span
+            class="bp5-control-indicator"
+          />
+          <div
+            class="checkbox-list__label"
+          />
+          <div
+            class="checkbox-list__legend-box"
+            style="background-color: rgb(171, 193, 35);"
+          />
+        </label>
+      </div>
+    </div>
+    <div
+      class="checkbox-list__row"
+    >
+      <div
+        class="checkbox-list__box-and-label"
+      >
+        <label
+          class="bp5-control bp5-checkbox checkbox-list__checkbox"
+        >
+          <input
+            data-cy="checkbox-list-thirdBox"
+            type="checkbox"
+          />
+          <span
+            class="bp5-control-indicator"
+          />
+          <div
+            class="checkbox-list__label"
+          />
+          <div
+            class="checkbox-list__legend-box"
+            style="background-color: rgb(0, 0, 0);"
+          />
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;

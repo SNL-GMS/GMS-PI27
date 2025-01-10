@@ -1,0 +1,11 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api project(':spring-persistence-api')
+    api project(':frameworks-system-config')
+    api libs.com.mchange.c3p0
+    api libs.org.hibernate.orm.hibernate.c3p0
+    api libs.org.hibernate.orm.hibernate.core
+    api libs.org.postgresql.postgresql
+    // implementation project(':java-utilities')
+}

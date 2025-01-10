@@ -1,0 +1,24 @@
+apply plugin: 'java-library'
+
+dependencies {
+    
+    api project(':user-preferences-dao')
+    api project(':user-preferences-api')
+
+    // Spring dependencies
+    implementation project(':spring-framework-utilities')
+
+    implementation project(':user-preferences-coi')
+    implementation project(':metrics')
+    implementation project(':frameworks-utilities-jpa')
+    implementation project(':java-utilities')
+
+    // RepositoryException
+    implementation project(':frameworks-osd-commonobjects')
+
+    // Spring import
+    implementation libs.org.springframework.spring.context
+
+    // Testing.
+    testImplementation(testFixtures(project(':user-preferences-coi')))
+}

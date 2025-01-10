@@ -1,0 +1,73 @@
+{
+    "name": "fk-spectra-template-bad",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "station",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "BAD"
+            ],
+            "priority": 1
+        },
+        {
+            "constraintType": "STRING",
+            "criterion": "phaseType",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "P"
+            ],
+            "priority": 1
+        }
+    ],
+    "parameters": {
+        "fkSpectraWindow": {
+            "duration": "PT1S",
+            "lead": "PT0S"
+        },
+        "inputChannels": [
+            "BHZ"
+        ],
+        "inputChannelGroups": [
+            "*"
+        ],
+        "fkSpectraParameters": {
+            "preFilter": {
+                "name": "MY_AMAZING_FILTER",
+                "filterDescription": {
+                    "causal": true,
+                    "filterType": "LINEAR",
+                    "lowFrequencyHz": 1.0,
+                    "highFrequencyHz": 2.0,
+                    "order": 1,
+                    "zeroPhase": false,
+                    "passBandType": "BAND_PASS",
+                    "linearFilterType": "FIR_HAMMING"
+                }
+            },
+            "slownessGrid": {
+                "maxSlowness": 8.883,
+                "numPoints": 10.0
+            },
+            "fftTaperFunction": "BLACKMAN",
+            
+            "fkUncertaintyOption": "EMPIRICAL",
+            "waveformSampleRate": {
+                "waveformSampleRateHz": 4.9,
+                "waveformSampleRateToleranceHz": 9.9737
+            },
+            "spectrumStepDuration": "PT1S",
+            "orientationAngleToleranceDeg": 0.0,
+            "minimumWaveformsForSpectra": 1,
+            "normalizeWaveforms": false,
+            "twoDimensional": true,
+            "fftTaperPercent": 5.0
+        }
+    }
+}

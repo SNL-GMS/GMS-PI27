@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI FK Processor computeFkSpectraWorker computeFkSpectra called with all props and returns a defined result 1`] = `
+{
+  "id": {
+    "channel": {
+      "canonicalName": "PDAR.FK.SHZ/fk/P",
+      "channelBandType": "SHORT_PERIOD",
+      "channelDataType": "SEISMIC",
+      "channelInstrumentType": "HIGH_GAIN_SEISMOMETER",
+      "channelOrientationCode": "Z",
+      "channelOrientationType": "VERTICAL",
+      "configuredInputs": [
+        {
+          "effectiveAt": 1636503404,
+          "name": "PDAR.PD01.SHZ",
+        },
+      ],
+      "description": "Raw Channel created from ReferenceChannel 2fabc2d3-858b-3e85-9f47-e2ee72060f0b with version d767395c-850e-36f8-a6f2-a1c7398440e4 FK spectra channel, Phase P, Frequency range 0.5 to 2, Prefilter undefined, location 42.76738/-109.5579 elevation 2.215 depth 0",
+      "effectiveAt": 1636503404,
+      "effectiveForRequestTime": 1636503405,
+      "effectiveUntil": 1660701599.984,
+      "location": {
+        "depthKm": 0,
+        "elevationKm": 2.215,
+        "latitudeDegrees": 42.76738,
+        "longitudeDegrees": -109.5579,
+      },
+      "name": "PDAR.FK.SHZ/fk/P",
+      "nominalSampleRateHz": 20,
+      "orientationAngles": {
+        "horizontalAngleDeg": 0,
+        "verticalAngleDeg": 0,
+      },
+      "processingDefinition": {
+        "fftTaperFunction": "BLACKMAN",
+        "fftTaperPercent": 75,
+        "fkFrequencyRange": {
+          "highFrequencyHz": 2,
+          "lowFrequencyHz": 0.5,
+        },
+        "fkSpectrumWindow": {
+          "duration": 5.1,
+          "lead": 1.1,
+        },
+        "fkUncertaintyOption": "EMPIRICAL",
+        "horizontalAngleDeg": 0,
+        "minimumWaveformsForSpectra": 1,
+        "normalizeWaveforms": false,
+        "orientationAngleToleranceDeg": 0,
+        "phase": "P",
+        "preFilter": undefined,
+        "slownessGrid": {
+          "maxSlowness": 40,
+          "numPoints": 81,
+        },
+        "spectrumStepDuration": 10,
+        "twoDimensional": true,
+        "verticalAngleDeg": 0,
+        "waveformSampleRate": {
+          "waveformSampleRateHz": 20,
+          "waveformSampleRateToleranceHz": 1,
+        },
+      },
+      "processingMetadata": {
+        "CHANNEL_GROUP": "FK",
+      },
+      "response": undefined,
+      "station": {
+        "effectiveAt": 1636503404,
+        "name": "PDAR",
+      },
+      "units": "DECIBELS",
+    },
+    "creationTime": 0.25,
+    "endTime": 1636503644,
+    "startTime": 1636503344,
+  },
+  "maskedBy": [],
+  "missingInputChannels": [],
+  "timeseries": [
+    {
+      "endTime": 310,
+      "fkSpectraMetadata": {
+        "fkSpectrumWindow": {
+          "duration": 5.1,
+          "lead": 1.1,
+        },
+        "phase": "P",
+        "slownessGrid": {
+          "maxSlowness": 40,
+          "numPoints": 81,
+        },
+      },
+      "sampleCount": 1,
+      "sampleRateHz": 20,
+      "samples": [],
+      "startTime": 100,
+      "type": "FK_SPECTRA",
+    },
+  ],
+  "timeseriesType": "FK_SPECTRA",
+  "units": "DECIBELS",
+}
+`;
+
+exports[`getPeakFkAttributesWorker getPeakFkAttributesWorker 1`] = `
+{
+  "peakFStat": 11.1391088585,
+  "receiverToSourceAzimuth": {
+    "standardDeviation": 0.007000210384022968,
+    "units": "DEGREES",
+    "value": 120.55096987354057,
+  },
+  "slowness": {
+    "standardDeviation": 1.597017531000969,
+    "units": "SECONDS",
+    "value": 13071.373483361533,
+  },
+}
+`;

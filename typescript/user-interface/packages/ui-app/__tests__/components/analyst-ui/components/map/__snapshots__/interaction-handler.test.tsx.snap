@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InteractionHandler can create a mouse move handler 1`] = `
+{
+  "rerender": [Function],
+  "result": {
+    "current": <InteractionHandler
+      viewer={
+        {
+          "entities": {
+            "add": [MockFunction],
+            "getById": [MockFunction],
+          },
+          "scene": {
+            "pickPosition": [MockFunction],
+          },
+        }
+      }
+    />,
+  },
+  "unmount": [Function],
+}
+`;
+
+exports[`InteractionHandler can handle an undefined viewer 1`] = `
+{
+  "rerender": [Function],
+  "result": {
+    "current": <InteractionHandler />,
+  },
+  "unmount": [Function],
+}
+`;

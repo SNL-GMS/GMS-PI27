@@ -1,0 +1,306 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`history stack can get correct history 1`] = `
+{
+  "current": [
+    [
+      {
+        "changes": [
+          {
+            "description": "desc 1",
+            "historyId": "1",
+            "id": "e1",
+            "isApplied": true,
+            "isAssociated": undefined,
+            "isAssociatedToOther": true,
+            "isCompleted": false,
+            "isConflictCreated": false,
+            "isConflictResolved": true,
+            "isDeletion": false,
+            "isIncluded": true,
+            "isRejection": false,
+            "isRelatedToEvent": false,
+            "isUnAssociated": false,
+            "label": "label 1",
+            "type": "undo",
+          },
+          {
+            "description": "desc 1",
+            "historyId": "1",
+            "id": "s1",
+            "isApplied": true,
+            "isAssociated": undefined,
+            "isAssociatedToOther": true,
+            "isCompleted": false,
+            "isConflictCreated": false,
+            "isConflictResolved": false,
+            "isDeletion": false,
+            "isIncluded": true,
+            "isRejection": false,
+            "isRelatedToEvent": false,
+            "isUnAssociated": false,
+            "label": "label 1",
+            "type": "undo",
+          },
+        ],
+        "description": "desc 1",
+        "historyId": "1",
+        "id": "h1",
+        "isApplied": true,
+        "isAssociated": false,
+        "isAssociatedToOther": true,
+        "isCompleted": false,
+        "isConflictCreated": false,
+        "isConflictResolved": true,
+        "isDeletion": false,
+        "isIncluded": true,
+        "isRejection": false,
+        "isRelatedToEvent": false,
+        "isUnAssociated": false,
+        "label": "label 1",
+        "type": "undo",
+      },
+      {
+        "changes": [
+          {
+            "description": "desc 2",
+            "historyId": "2",
+            "id": "e2",
+            "isApplied": true,
+            "isAssociated": undefined,
+            "isAssociatedToOther": true,
+            "isCompleted": false,
+            "isConflictCreated": true,
+            "isConflictResolved": false,
+            "isDeletion": false,
+            "isIncluded": true,
+            "isRejection": false,
+            "isRelatedToEvent": false,
+            "isUnAssociated": false,
+            "label": "label 2",
+            "type": "undo",
+          },
+          {
+            "description": "desc 2",
+            "historyId": "2",
+            "id": "s2",
+            "isApplied": true,
+            "isAssociated": undefined,
+            "isAssociatedToOther": true,
+            "isCompleted": false,
+            "isConflictCreated": true,
+            "isConflictResolved": false,
+            "isDeletion": false,
+            "isIncluded": true,
+            "isRejection": false,
+            "isRelatedToEvent": false,
+            "isUnAssociated": false,
+            "label": "label 2",
+            "type": "undo",
+          },
+          {
+            "description": "desc 2",
+            "historyId": "2",
+            "id": "s2",
+            "isApplied": true,
+            "isAssociated": undefined,
+            "isAssociatedToOther": true,
+            "isCompleted": false,
+            "isConflictCreated": true,
+            "isConflictResolved": false,
+            "isDeletion": true,
+            "isIncluded": true,
+            "isRejection": true,
+            "isRelatedToEvent": false,
+            "isUnAssociated": false,
+            "label": "label 2",
+            "type": "undo",
+          },
+        ],
+        "description": "desc 2",
+        "historyId": "2",
+        "id": "h2",
+        "isApplied": true,
+        "isAssociated": false,
+        "isAssociatedToOther": true,
+        "isCompleted": false,
+        "isConflictCreated": true,
+        "isConflictResolved": false,
+        "isDeletion": true,
+        "isIncluded": true,
+        "isRejection": true,
+        "isRelatedToEvent": false,
+        "isUnAssociated": false,
+        "label": "label 2",
+        "type": "undo",
+      },
+    ],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    false,
+    false,
+    -1,
+    0,
+    false,
+  ],
+}
+`;
+
+exports[`history stack can render history stack 1`] = `
+<div>
+  <div
+    class="list list--history"
+  >
+    <li
+      class="list__row entry-row
+      
+      action-indicator-top "
+    >
+      <div
+        class="list__column list__column--meta-container
+        bottom
+        move-up
+        "
+      >
+        <span
+          class="action-indicator__text"
+        >
+          REDO
+        </span>
+        <span
+          class="action-indicator__text"
+        />
+      </div>
+      <div
+        class="history-row--multi"
+      >
+        <div
+          class="list__column history-entry history-entry--undo is-applied is-included is-associated-to-other is-conflict-resolved"
+          tabindex="0"
+        >
+          <span
+            class="history-entry__label"
+          >
+            label 1:
+          </span>
+          <span
+            class="history-entry__description"
+          >
+            desc 1
+          </span>
+          <span
+            aria-expanded="false"
+            class="bp5-popover-target"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-issue-closed bp5-intent-success history-entry__icon"
+              data-icon="issue-closed"
+              tabindex="0"
+            />
+          </span>
+          <span
+            aria-expanded="false"
+            class="bp5-popover-target"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-undo history-entry__icon"
+              data-icon="undo"
+              tabindex="0"
+            />
+          </span>
+        </div>
+        <div
+          class="history-row__child-container "
+        />
+        <div
+          class="toggle-button
+          toggle-button--undo"
+        >
+          <span
+            aria-hidden="true"
+            class="bp5-icon bp5-icon-standard bp5-icon-chevron-down"
+            data-icon="chevron-down"
+          />
+        </div>
+      </div>
+    </li>
+    <li
+      class="list__row entry-row
+      
+      "
+    >
+      <div
+        class="list__column list__column--meta-container
+        
+        
+        "
+      >
+        <span
+          class="action-indicator__text"
+        />
+        <span
+          class="action-indicator__text"
+        />
+      </div>
+      <div
+        class="history-row--multi"
+      >
+        <div
+          class="list__column history-entry history-entry--undo is-applied is-included is-associated-to-other is-conflict-created is-deletion is-rejection"
+          tabindex="0"
+        >
+          <span
+            class="history-entry__label"
+          >
+            label 2:
+          </span>
+          <span
+            class="history-entry__description"
+          >
+            desc 2
+          </span>
+          <span
+            aria-expanded="false"
+            class="bp5-popover-target"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-issue bp5-intent-danger history-entry__icon"
+              data-icon="issue"
+              tabindex="0"
+            />
+          </span>
+          <span
+            aria-expanded="false"
+            class="bp5-popover-target"
+          >
+            <span
+              aria-hidden="true"
+              class="bp5-icon bp5-icon-standard bp5-icon-undo history-entry__icon"
+              data-icon="undo"
+              tabindex="0"
+            />
+          </span>
+        </div>
+        <div
+          class="history-row__child-container "
+        />
+        <div
+          class="toggle-button
+          toggle-button--undo"
+        >
+          <span
+            aria-hidden="true"
+            class="bp5-icon bp5-icon-standard bp5-icon-chevron-down"
+            data-icon="chevron-down"
+          />
+        </div>
+      </div>
+    </li>
+  </div>
+</div>
+`;

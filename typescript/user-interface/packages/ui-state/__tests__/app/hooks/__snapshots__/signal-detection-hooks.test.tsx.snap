@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`signal detection hooks useGetSignalDetections calls useDetermineActionTargetsByType 1`] = `null`;
+
+exports[`signal detection hooks useGetSignalDetections calls useDetermineActionTargetsByType 2`] = `undefined`;
+
+exports[`signal detection hooks useGetSignalDetections calls useGetSignalDetections 1`] = `null`;
+
+exports[`signal detection hooks useGetSignalDetections calls useGetSignalDetections 2`] = `undefined`;
+
+exports[`signal detection hooks useGetSignalDetections hook query for signal detections 1`] = `null`;
+
+exports[`signal detection hooks useGetSignalDetections hook query for signal detections 2`] = `null`;
+
+exports[`signal detection hooks useGetSignalDetections hook query for signal detections for current stations 1`] = `null`;
+
+exports[`signal detection hooks useGetSignalDetections hook query for signal detections for current stations with initial state 1`] = `null`;

@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`workflow operations should close a stage interval 1`] = `[]`;
+
+exports[`workflow operations should close an activity and remove selected 1`] = `
+[
+  {
+    "payload": "",
+    "type": "analyst/setSelectedFilterList",
+  },
+  {
+    "payload": [
+      "3",
+    ],
+    "type": "workflow/setOpenActivityNames",
+  },
+]
+`;
+
+exports[`workflow operations should close an activity and remove selected 2`] = `
+[
+  {
+    "payload": "",
+    "type": "analyst/setSelectedFilterList",
+  },
+  {
+    "payload": [
+      "3",
+    ],
+    "type": "workflow/setOpenActivityNames",
+  },
+  {
+    "payload": {
+      "endTimeSecs": null,
+      "startTimeSecs": null,
+    },
+    "type": "workflow/setTimeRange",
+  },
+  {
+    "payload": undefined,
+    "type": "stationDefinitionApi/resetApiState",
+  },
+  {
+    "payload": 0.25,
+    "type": "analyst/setEffectiveNowTime",
+  },
+  {
+    "payload": "",
+    "type": "analyst/setSelectedFilterList",
+  },
+  {
+    "payload": [],
+    "type": "analyst/setSelectedSdIds",
+  },
+  {
+    "payload": "",
+    "type": "analyst/setOpenEventId",
+  },
+  {
+    "payload": [],
+    "type": "analyst/setSelectedEventIds",
+  },
+  {
+    "payload": "Default",
+    "type": "analyst/setMode",
+  },
+  {
+    "payload": {},
+    "type": "analyst/setMeasurementModeEntries",
+  },
+  {
+    "payload": "Station: A-Z",
+    "type": "analyst/setSelectedSortType",
+  },
+  {
+    "payload": {
+      "description": "",
+      "effectiveAt": -1,
+      "name": "",
+    },
+    "type": "workflow/setStationGroup",
+  },
+  {
+    "payload": "",
+    "type": "workflow/setOpenIntervalName",
+  },
+  {
+    "payload": [],
+    "type": "workflow/setOpenActivityNames",
+  },
+  {
+    "payload": undefined,
+    "type": "workflow/setAnalysisMode",
+  },
+  {
+    "payload": [],
+    "type": "common/setSelectedStationIds",
+  },
+  {
+    "payload": [],
+    "type": "waveform/setCurrentStationGroupStationNames",
+  },
+  {
+    "payload": "",
+    "type": "analyst/setCurrentPhase",
+  },
+  {
+    "payload": [],
+    "type": "analyst/setActionTargetEventIds",
+  },
+  {
+    "payload": {
+      "fileHandle": null,
+      "workflowUniqueId": "",
+    },
+    "type": "analyst/setFileId",
+  },
+  {
+    "payload": [],
+    "type": "fks/setSdIdsToShowFk",
+  },
+  {
+    "payload": {},
+    "type": "waveform/setStationsVisibility",
+  },
+  {
+    "payload": {
+      "endTimeSecs": null,
+      "startTimeSecs": null,
+    },
+    "type": "waveform/setViewableInterval",
+  },
+  {
+    "payload": {
+      "endTimeSecs": null,
+      "startTimeSecs": null,
+    },
+    "type": "waveform/setZoomInterval",
+  },
+  {
+    "payload": undefined,
+    "type": "eventManagerApi/resetApiState",
+  },
+  {
+    "payload": undefined,
+    "type": "data/clearAll",
+  },
+  {
+    "payload": undefined,
+    "type": "history/clear",
+  },
+]
+`;
+
+exports[`workflow operations should close an interval activity 1`] = `[]`;

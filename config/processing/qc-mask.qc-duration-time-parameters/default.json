@@ -1,0 +1,13 @@
+{
+  "name": "qc-duration-time-default",
+  "constraints": [
+    {
+      "constraintType": "DEFAULT" 
+    }
+  ],
+  "parameters": {
+    "maxQcSegmentDuration": "PT12H",
+    "seedQcMaskInfoStartTime": "13:30:30",
+    "seedQcMaskInfoDuration": "PT6H"
+  }
+}

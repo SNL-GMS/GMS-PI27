@@ -1,0 +1,633 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a component 1`] = `
+<div>
+  <div
+    class="bp5-dark"
+    style="height: 90%; width: 100%; padding: 0.5rem; color: rgb(171, 179, 191); display: flex; justify-content: center; align-items: center;"
+  >
+    <div
+      class="bp5-dark"
+      style="height: 100%; width: 100%;"
+    >
+      <div
+        style="height: 100%; width: 100%; display: flex; flex-direction: column;"
+      >
+        <div
+          style="display: block;"
+        >
+          <div
+            class="bp5-form-group bp5-inline"
+          >
+            <div
+              class="bp5-form-content"
+            >
+              <label
+                class="bp5-control bp5-checkbox"
+              >
+                <input
+                  checked=""
+                  type="checkbox"
+                />
+                <span
+                  class="bp5-control-indicator"
+                />
+                Use Typed Array
+              </label>
+              <label
+                class="bp5-label bp5-inline"
+              >
+                Number of Hours (1 - 1152 (48 days)):
+                <div
+                  class="bp5-control-group bp5-numeric-input bp5-inline"
+                >
+                  <div
+                    class="bp5-input-group"
+                  >
+                    <input
+                      aria-valuemax="1152"
+                      aria-valuemin="1"
+                      aria-valuenow="24"
+                      autocomplete="off"
+                      class="bp5-input"
+                      id="numericInput-0"
+                      max="1152"
+                      min="1"
+                      placeholder="Enter a number"
+                      role="spinbutton"
+                      type="text"
+                      value="24"
+                    />
+                  </div>
+                  <div
+                    class="bp5-button-group bp5-vertical bp5-fixed"
+                  >
+                    <button
+                      aria-controls="numericInput-0"
+                      aria-label="increment"
+                      class="bp5-button"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="bp5-icon bp5-icon-chevron-up"
+                      >
+                        <svg
+                          data-icon="chevron-up"
+                          height="16"
+                          role="img"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <path
+                            d="M254.2 134.2L174.2 214.2C170.6 217.8 165.6 220 160 220S149.4 217.8 145.8 214.2L65.8 134.2C62.2 130.6 60 125.6 60 120C60 109 69 100 80 100C85.6 100 90.6 102.2 94.2 105.8L160 171.8L225.8 106C229.4 102.2 234.4 100 240 100C251 100 260 109 260 120C260 125.6 257.8 130.6 254.2 134.2z"
+                            fill-rule="evenodd"
+                            transform="scale(0.05, -0.05) translate(-160, -160)"
+                            transform-origin="center"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <button
+                      aria-controls="numericInput-0"
+                      aria-label="decrement"
+                      class="bp5-button"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="bp5-icon bp5-icon-chevron-down"
+                      >
+                        <svg
+                          data-icon="chevron-down"
+                          height="16"
+                          role="img"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <path
+                            d="M240 220C234.4 220 229.4 217.8 225.8 214.2L160 148.2L94.2 214.2C90.6 217.8 85.6 220 80 220C69 220 60 211 60 200C60 194.4 62.2 189.4 65.8 185.8L145.8 105.8C149.4 102.2 154.4 100 160 100S170.6 102.2 174.2 105.8L254.2 185.8C257.8 189.4 260 194.4 260 200C260 211 251 220 240 220z"
+                            fill-rule="evenodd"
+                            transform="scale(0.05, -0.05) translate(-160, -160)"
+                            transform-origin="center"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </label>
+              <label
+                class="bp5-label bp5-inline"
+              >
+                Number of Lines (1 - 150):
+                <div
+                  class="bp5-control-group bp5-numeric-input bp5-inline"
+                >
+                  <div
+                    class="bp5-input-group"
+                  >
+                    <input
+                      aria-valuemax="150"
+                      aria-valuemin="1"
+                      aria-valuenow="10"
+                      autocomplete="off"
+                      class="bp5-input"
+                      id="numericInput-1"
+                      max="150"
+                      min="1"
+                      placeholder="Enter a number"
+                      role="spinbutton"
+                      type="text"
+                      value="10"
+                    />
+                  </div>
+                  <div
+                    class="bp5-button-group bp5-vertical bp5-fixed"
+                  >
+                    <button
+                      aria-controls="numericInput-1"
+                      aria-label="increment"
+                      class="bp5-button"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="bp5-icon bp5-icon-chevron-up"
+                      >
+                        <svg
+                          data-icon="chevron-up"
+                          height="16"
+                          role="img"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <path
+                            d="M254.2 134.2L174.2 214.2C170.6 217.8 165.6 220 160 220S149.4 217.8 145.8 214.2L65.8 134.2C62.2 130.6 60 125.6 60 120C60 109 69 100 80 100C85.6 100 90.6 102.2 94.2 105.8L160 171.8L225.8 106C229.4 102.2 234.4 100 240 100C251 100 260 109 260 120C260 125.6 257.8 130.6 254.2 134.2z"
+                            fill-rule="evenodd"
+                            transform="scale(0.05, -0.05) translate(-160, -160)"
+                            transform-origin="center"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <button
+                      aria-controls="numericInput-1"
+                      aria-label="decrement"
+                      class="bp5-button"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="bp5-icon bp5-icon-chevron-down"
+                      >
+                        <svg
+                          data-icon="chevron-down"
+                          height="16"
+                          role="img"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <path
+                            d="M240 220C234.4 220 229.4 217.8 225.8 214.2L160 148.2L94.2 214.2C90.6 217.8 85.6 220 80 220C69 220 60 211 60 200C60 194.4 62.2 189.4 65.8 185.8L145.8 105.8C149.4 102.2 154.4 100 160 100S170.6 102.2 174.2 105.8L254.2 185.8C257.8 189.4 260 194.4 260 200C260 211 251 220 240 220z"
+                            fill-rule="evenodd"
+                            transform="scale(0.05, -0.05) translate(-160, -160)"
+                            transform-origin="center"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </label>
+              <label
+                class="bp5-label bp5-inline"
+              >
+                Time Offset Seconds (0 - 1800):
+                <div
+                  class="bp5-control-group bp5-numeric-input bp5-inline"
+                >
+                  <div
+                    class="bp5-input-group"
+                  >
+                    <input
+                      aria-valuemax="1800"
+                      aria-valuemin="0"
+                      aria-valuenow="0"
+                      autocomplete="off"
+                      class="bp5-input"
+                      id="numericInput-2"
+                      max="1800"
+                      min="0"
+                      placeholder="Enter a number"
+                      role="spinbutton"
+                      type="text"
+                      value="0"
+                    />
+                  </div>
+                  <div
+                    class="bp5-button-group bp5-vertical bp5-fixed"
+                  >
+                    <button
+                      aria-controls="numericInput-2"
+                      aria-label="increment"
+                      class="bp5-button"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="bp5-icon bp5-icon-chevron-up"
+                      >
+                        <svg
+                          data-icon="chevron-up"
+                          height="16"
+                          role="img"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <path
+                            d="M254.2 134.2L174.2 214.2C170.6 217.8 165.6 220 160 220S149.4 217.8 145.8 214.2L65.8 134.2C62.2 130.6 60 125.6 60 120C60 109 69 100 80 100C85.6 100 90.6 102.2 94.2 105.8L160 171.8L225.8 106C229.4 102.2 234.4 100 240 100C251 100 260 109 260 120C260 125.6 257.8 130.6 254.2 134.2z"
+                            fill-rule="evenodd"
+                            transform="scale(0.05, -0.05) translate(-160, -160)"
+                            transform-origin="center"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <button
+                      aria-controls="numericInput-2"
+                      aria-label="decrement"
+                      class="bp5-button bp5-disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="bp5-icon bp5-icon-chevron-down"
+                      >
+                        <svg
+                          data-icon="chevron-down"
+                          height="16"
+                          role="img"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <path
+                            d="M240 220C234.4 220 229.4 217.8 225.8 214.2L160 148.2L94.2 214.2C90.6 217.8 85.6 220 80 220C69 220 60 211 60 200C60 194.4 62.2 189.4 65.8 185.8L145.8 105.8C149.4 102.2 154.4 100 160 100S170.6 102.2 174.2 105.8L254.2 185.8C257.8 189.4 260 194.4 260 200C260 211 251 220 240 220z"
+                            fill-rule="evenodd"
+                            transform="scale(0.05, -0.05) translate(-160, -160)"
+                            transform-origin="center"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </label>
+              <label
+                class="bp5-label bp5-inline"
+              >
+                Point Frequency (1 - 60):
+                <div
+                  class="bp5-control-group bp5-numeric-input bp5-inline"
+                >
+                  <div
+                    class="bp5-input-group"
+                  >
+                    <input
+                      aria-valuemax="60"
+                      aria-valuemin="1"
+                      aria-valuenow="10"
+                      autocomplete="off"
+                      class="bp5-input"
+                      id="numericInput-3"
+                      max="60"
+                      min="1"
+                      placeholder="Enter a number"
+                      role="spinbutton"
+                      type="text"
+                      value="10"
+                    />
+                  </div>
+                  <div
+                    class="bp5-button-group bp5-vertical bp5-fixed"
+                  >
+                    <button
+                      aria-controls="numericInput-3"
+                      aria-label="increment"
+                      class="bp5-button"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="bp5-icon bp5-icon-chevron-up"
+                      >
+                        <svg
+                          data-icon="chevron-up"
+                          height="16"
+                          role="img"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <path
+                            d="M254.2 134.2L174.2 214.2C170.6 217.8 165.6 220 160 220S149.4 217.8 145.8 214.2L65.8 134.2C62.2 130.6 60 125.6 60 120C60 109 69 100 80 100C85.6 100 90.6 102.2 94.2 105.8L160 171.8L225.8 106C229.4 102.2 234.4 100 240 100C251 100 260 109 260 120C260 125.6 257.8 130.6 254.2 134.2z"
+                            fill-rule="evenodd"
+                            transform="scale(0.05, -0.05) translate(-160, -160)"
+                            transform-origin="center"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <button
+                      aria-controls="numericInput-3"
+                      aria-label="decrement"
+                      class="bp5-button"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="bp5-icon bp5-icon-chevron-down"
+                      >
+                        <svg
+                          data-icon="chevron-down"
+                          height="16"
+                          role="img"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <path
+                            d="M240 220C234.4 220 229.4 217.8 225.8 214.2L160 148.2L94.2 214.2C90.6 217.8 85.6 220 80 220C69 220 60 211 60 200C60 194.4 62.2 189.4 65.8 185.8L145.8 105.8C149.4 102.2 154.4 100 160 100S170.6 102.2 174.2 105.8L254.2 185.8C257.8 189.4 260 194.4 260 200C260 211 251 220 240 220z"
+                            fill-rule="evenodd"
+                            transform="scale(0.05, -0.05) translate(-160, -160)"
+                            transform-origin="center"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div>
+            Number of Points per line:
+             
+            8640
+          </div>
+          <div>
+            Total number of Points:
+             
+            86400
+          </div>
+        </div>
+        <div
+          style="flex: 1 1 auto; position: relative;"
+        >
+          <div
+            style="position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px;"
+          >
+            <div
+              class="weavess"
+              data-cy="weavess-container"
+              data-end-time="1507680000"
+              data-start-time="1507593600"
+            >
+              <div
+                class="horizontal-divider__bottom weavess-waveform-display"
+                data-cy="weavess-waveform-display"
+                style="height: 100%;"
+              >
+                <div
+                  class="weavess-hotkey-handler"
+                  data-testid="hotkey-handler"
+                  role="tab"
+                  tabindex="-1"
+                >
+                  <div
+                    class="weavess-wp"
+                    style="height: 100%; position: relative; width: 100%; box-sizing: content-box; --weavess-scrollbar-track-margin: 184px; --weavess-panel-scrollbar-width: 8px; --weavess-canvas-height: 0px;"
+                  >
+                    <div
+                      class="weavess-wp-container"
+                    >
+                      <div
+                        class="weavess-wp-container-1"
+                      >
+                        <div
+                          class="weavess-wp-container-2"
+                        >
+                          <div
+                            class="weavess-wp-container-3"
+                          >
+                            <aside
+                              style="width: 9007199254740991px; height: 1px; position: absolute; pointer-events: none; background: none;"
+                            />
+                            <aside
+                              class="browser-sig-fig-checker"
+                            >
+                              <div
+                                class="browser-sig-fig-checker--small"
+                                style="width: 15251998px; height: 1px; position: absolute; pointer-events: none; background: none;"
+                              />
+                              <div
+                                class="browser-sig-fig-checker--medium"
+                                style="width: 15251999px; height: 1px; position: absolute; pointer-events: none; background: none;"
+                              />
+                              <div
+                                class="browser-sig-fig-checker--large"
+                                style="width: 15252000px; height: 1px; position: absolute; pointer-events: none; background: none;"
+                              />
+                            </aside>
+                            <div
+                              class="weavess-wp-container-viewport"
+                              tabindex="0"
+                            >
+                              <div
+                                class="scroll-limiter"
+                                style="width: 100%; overflow: hidden;"
+                              >
+                                <canvas
+                                  class="weavess-wp-canvas"
+                                  style="width: calc(100% - 184px); left: 184px;"
+                                />
+                              </div>
+                              <div
+                                class="weavess-wp-container-viewport-content"
+                              >
+                                <div
+                                  class="station"
+                                  style="height: 751px;"
+                                >
+                                  <div
+                                    class="channel"
+                                    data-cy="id-channel"
+                                    data-testid="channel-wrapper"
+                                    style="height: 750px; max-height: 750px;"
+                                    tabindex="0"
+                                  >
+                                    <div
+                                      class="channel-label-container"
+                                      data-cy="id-label"
+                                      style="height: 750px; width: 184px;"
+                                      tabindex="0"
+                                    >
+                                      <div
+                                        class="label"
+                                        tabindex="0"
+                                      >
+                                        <div
+                                          class="label-container"
+                                        >
+                                          <div
+                                            class="label-container-left-parent"
+                                          />
+                                          <div
+                                            class="label-container-content"
+                                          >
+                                            <div
+                                              class="label-container-content-label"
+                                              data-cy="channel-label-id"
+                                            >
+                                              <div
+                                                style="width: 150px; transform: rotate(270deg); transform-origin: left top 0;"
+                                              >
+                                                Example Line Chart
+                                              </div>
+                                            </div>
+                                            <div
+                                              data-cy-contains-amplitude-markers="false"
+                                              style="height: 100%;"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="channel-content-container"
+                                      style="height: 750px; width: calc(100% - 184px); left: 184px;"
+                                    >
+                                      <div
+                                        class="contentrenderer"
+                                        tabindex="0"
+                                      >
+                                        <div
+                                          class="contentrenderer-content contentrenderer-content--sticky"
+                                          style="width: calc(100% - 184);"
+                                        />
+                                        <div
+                                          class="contentrenderer-content"
+                                          data-cy-station-waveform="id"
+                                          style="left: 184px; width: calc(100% - 184px);"
+                                        >
+                                          <div
+                                            class="contentrenderer-content-drag-indicator"
+                                          />
+                                          <div
+                                            class="contentrenderer-content-markers"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="weavess-wp-container-viewport-content-markers"
+                                  style="width: calc(100% - 192px); left: 184px;"
+                                />
+                              </div>
+                              <object
+                                class="resize-sensor"
+                                data="about:blank"
+                                style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; pointer-events: none; z-index: -1; opacity: 0;"
+                                tabindex="-1"
+                                type="text/html"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="weavess-wp-container-overlay"
+                          style="width: calc(100% - 192px);"
+                        >
+                          <div
+                            class="weavess-wp-container-overlay-cross-hair"
+                          />
+                          <div
+                            class="weavess-wp-container-overlay-selection-area"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="x-axis"
+                        data-cy="x-axis"
+                        data-end-time="1507680000"
+                        data-start-time="1507593600"
+                        style="height: 35px;"
+                      >
+                        <div
+                          style="width: 100%;"
+                        >
+                          <svg
+                            height="35"
+                            style="fill: #F6F7F9;"
+                            width="100%"
+                          >
+                            <g
+                              class="x-axis-axis"
+                              fill="none"
+                              font-family="sans-serif"
+                              font-size="10"
+                              text-anchor="middle"
+                            >
+                              <path
+                                class="domain"
+                                d="M184.5,7V0.5H-7.5V7"
+                                stroke="currentColor"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                        <div
+                          style="text-align: center;"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="weavess-wp-time-range"
+                      style="left: 184px;"
+                    >
+                      <span
+                        class="very-short-time"
+                      >
+                        1 day
+                      </span>
+                      <span
+                        class="short-time"
+                      >
+                        00:00:00.000 - 00:00:00.000, 1 day
+                      </span>
+                      <span
+                        class="full-time"
+                      >
+                        2017-10-10 00:00:00.000 - 2017-10-11 00:00:00.000, 1 day
+                      </span>
+                    </div>
+                    <div
+                      class="weavess-wp-info-bar"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="Toastify"
+                id="Weavess-Toast-Container"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

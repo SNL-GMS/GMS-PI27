@@ -1,0 +1,26 @@
+{
+    "name": "ham-fir-0.5-1.5-48-bp-noncausal",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "HAM FIR 0.5 1.5 48 BP non-causal"
+            ]
+        }
+    ],
+    "parameters": {
+        "name": "HAM FIR 0.5 1.5 48 BP non-causal",
+        "comments": "Hamming FIR band-pass, 0.5-1.5 Hz, order 48, non-causal",
+        "filterDescription": {
+            "$ref=global.filter-description":[{
+                "criterion": "name",
+                "value": "HAM FIR 0.5 1.5 48 BP non-causal Description"
+            }]
+        }
+    }
+}

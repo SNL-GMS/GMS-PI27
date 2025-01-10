@@ -1,0 +1,35 @@
+{
+    "name": "pm-0.0167-0.0667-100-lr-description",
+    "constraints": [
+        {
+            "constraintType": "STRING",
+            "criterion": "name",
+            "operator": {
+                "type": "EQ",
+                "negated": false
+            },
+            "value": [
+                "PM 0.0167 0.0667 100 LR Description"
+            ]
+        }
+    ],
+    "parameters": {
+    "causal": true,
+    "comments": "Phase match, 0.0167-0.0667 Hz, numfreq 100, phase LR",
+    "dispersionModelName": "LP_vel.LR",
+    "expansionDuration": "PT240S",
+    "filterType": "PHASE_MATCH",
+    "highFrequencyHz": 0.0667,
+    "highFrequencyTaperWidthHz": 0.0050,
+    "lowFrequencyHz": 0.0167,
+    "lowFrequencyTaperWidthHz": 0.0050,
+    "frequencyTaperFunction":"COSINE",
+    "numFrequencies": 100,
+    "phase": "LR",
+    "referencePeriod": "PT20S",
+    "timeDomainTaperDefinition": {
+        "taperDuration": "PT0.5S",
+        "taperFunction": "COSINE"
+        }
+    }
+}

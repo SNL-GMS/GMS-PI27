@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a component 1`] = `
+<div>
+  <div
+    class="ag-dark"
+    style="flex: 1 1 auto; position: relative; width: 700px;"
+  >
+    <div
+      class="form"
+    >
+      <h6
+        class="bp5-heading form__header"
+      >
+        <div>
+          Document Builder
+        </div>
+      </h6>
+      <div
+        class="form__panel-selector"
+      />
+      <div
+        class="form-content"
+      >
+        <div
+          class="form-label"
+        >
+          Name:
+        </div>
+        <div
+          class="form-value"
+        >
+          <div>
+            <textarea
+              class="form__text-input"
+              data-cy="textarea"
+              rows="4"
+              title=""
+            />
+          </div>
+        </div>
+        <div
+          class="form-label"
+        >
+          Details:
+        </div>
+        <div
+          class="form-value"
+        >
+          <div
+            class="dropdown-container"
+          >
+            <span
+              class="dropdown-selector"
+              data-cy="-dropdown"
+            >
+              <div
+                class="bp5-html-select"
+              >
+                <select
+                  title=""
+                >
+                  <option
+                    value="Example Value One"
+                  >
+                    Example Value One
+                  </option>
+                  <option
+                    value="Example Value Two"
+                  >
+                    Example Value Two
+                  </option>
+                  <option
+                    value="Example Value Three"
+                  >
+                    Example Value Three
+                  </option>
+                </select>
+                <span
+                  class="bp5-icon bp5-icon-double-caret-vertical"
+                >
+                  <svg
+                    data-icon="double-caret-vertical"
+                    height="16"
+                    role="img"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <title>
+                      Open dropdown
+                    </title>
+                    <path
+                      d="M100 180H220C231 180 240 189 240 200C240 205.6 237.8 210.6 234.2 214.2L174.2 274.2C170.6 277.8 165.6 280 160 280S149.4 277.8 145.8 274.2L85.8 214.2C82.2 210.6 80 205.6 80 200C80 189 89 180 100 180zM220 140H100C89 140 80 131 80 120C80 114.4 82.2 109.4 85.8 105.8L145.8 45.8C149.4 42.2 154.4 40 160 40S170.6 42.2 174.2 45.8L234.2 105.8C237.8 109.4 240 114.4 240 120C240 131 231 140 220 140z"
+                      fill-rule="evenodd"
+                      transform="scale(0.05, -0.05) translate(-160, -160)"
+                      transform-origin="center"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="form__buttons"
+      >
+        <div
+          class="form__buttons--right"
+        >
+          <button
+            class="bp5-button bp5-disabled form__button"
+            data-cy="submit-document-builder"
+            disabled=""
+            tabindex="-1"
+            title="Must modify a field to save"
+            type="button"
+          >
+            <span
+              class="bp5-button-text"
+            >
+              Submit
+            </span>
+          </button>
+          <button
+            class="bp5-button form__button"
+            data-cy="cancel-document-builder"
+            type="button"
+          >
+            <span
+              class="bp5-button-text"
+            >
+              Cancel
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

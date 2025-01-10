@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConflictMarkerCellRenderer matches the snapshot 1`] = `
+<div>
+  <div
+    class="table-cell events__conflict-marker"
+  >
+    <div
+      aria-expanded="false"
+      class="core-tooltip bp5-popover-target"
+    >
+      <span
+        aria-hidden="true"
+        class="bp5-icon bp5-icon-large bp5-icon-issue bp5-intent-danger"
+        data-icon="issue"
+        tabindex="0"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ConflictMarkerCellRenderer matches the snapshot 2`] = `
+<div>
+  <div
+    class="table-cell events__conflict-marker"
+  >
+    <div
+      aria-expanded="false"
+      class="core-tooltip bp5-popover-target"
+    >
+      <span
+        aria-hidden="true"
+        class="bp5-icon bp5-icon-large bp5-icon-issue bp5-intent-danger"
+        data-icon="issue"
+        tabindex="0"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StatusCellRenderer matches the snapshot 1`] = `
+<div>
+  <div
+    class="table-cell "
+    data-cy="table-cell"
+    style="height: 36px; overflow: hidden;"
+    title="Complete"
+  >
+    <div
+      class=" table-cell__value table-cell__value--complete"
+      data-cy="table-cell__value"
+    >
+      <span>
+        Complete
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StatusCellRenderer matches the snapshot 2`] = `
+<div>
+  <div
+    class="table-cell "
+    data-cy="table-cell"
+    style="height: 36px; overflow: hidden;"
+    title="In progress"
+  >
+    <div
+      class=" table-cell__value "
+      data-cy="table-cell__value"
+    >
+      <span>
+        In progress
+      </span>
+    </div>
+  </div>
+</div>
+`;

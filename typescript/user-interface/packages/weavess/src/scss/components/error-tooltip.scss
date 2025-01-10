@@ -1,0 +1,9 @@
+.error-tooltip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  &__title {
+    font-weight: bold;
+    color: darkred;
+  }
+}

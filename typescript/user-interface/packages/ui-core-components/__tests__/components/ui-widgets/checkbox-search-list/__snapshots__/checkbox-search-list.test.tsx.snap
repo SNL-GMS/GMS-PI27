@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxSearchList CheckboxSearchList renders 1`] = `
+<div>
+  <div
+    class="checkbox-search-list"
+    style="height: 300px;"
+  >
+    <input
+      class="checkbox-search-list__search"
+      placeholder="Search input"
+      tabindex="0"
+      type="search"
+      value=""
+    />
+    <div
+      class="checkbox-search-list-item"
+    >
+      <label
+        class="bp5-control bp5-checkbox"
+      >
+        <input
+          checked=""
+          data-cy-station-checkbox="first"
+          type="checkbox"
+        />
+        <span
+          class="bp5-control-indicator"
+        />
+      </label>
+      <span
+        class="checkbox-search-list-item__label"
+      >
+        first
+      </span>
+    </div>
+    <div
+      class="checkbox-search-list-item"
+    >
+      <label
+        class="bp5-control bp5-checkbox"
+      >
+        <input
+          data-cy-station-checkbox="second"
+          type="checkbox"
+        />
+        <span
+          class="bp5-control-indicator"
+        />
+      </label>
+      <span
+        class="checkbox-search-list-item__label"
+      >
+        second
+      </span>
+    </div>
+    <div
+      class="checkbox-search-list-item"
+    >
+      <label
+        class="bp5-control bp5-checkbox"
+      >
+        <input
+          data-cy-station-checkbox="third"
+          type="checkbox"
+        />
+        <span
+          class="bp5-control-indicator"
+        />
+      </label>
+      <span
+        class="checkbox-search-list-item__label"
+      >
+        third
+      </span>
+    </div>
+  </div>
+</div>
+`;

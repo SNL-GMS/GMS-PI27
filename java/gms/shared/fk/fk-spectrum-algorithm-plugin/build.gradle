@@ -1,0 +1,22 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation project(':common-coi-types')
+    implementation project(':station-definition-coi')
+    implementation project(':waveform-coi')
+    implementation project(':fk-coi')
+    implementation project(':plugin-registry')
+    implementation project(':fk-plugin')
+    implementation project(':signal-processing-utility')
+
+    // Google AutoService
+    annotationProcessor libs.com.google.auto.service.auto.service
+    implementation libs.com.google.auto.service.auto.service
+    
+    implementation libs.org.apache.commons.commons.math3
+    implementation libs.com.github.wendykierp.jtransforms
+
+    testImplementation(testFixtures(project(':station-definition-coi')))
+    testImplementation(testFixtures(project(':waveform-coi')))
+    testImplementation(testFixtures(project(':fk-coi')))
+}

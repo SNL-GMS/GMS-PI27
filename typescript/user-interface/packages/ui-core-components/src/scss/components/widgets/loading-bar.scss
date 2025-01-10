@@ -1,0 +1,107 @@
+$loading-bar-height: 0.2rem;
+$loading-blur-size: 0.125rem;
+$core-loading-bar-background: rgba(16, 107, 163, 1);
+$core-loading-bar-gutter: rgba(16, 107, 163, 0.5);
+$core-loading-bar-glow: #caebff;
+$loading-bar-z-index: 12;
+
+@mixin loadingBarTerminators {
+  aspect-ratio: 16/9;
+  content: ' ';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: $loading-bar-z-index + 1;
+}
+
+@mixin animate($animation, $duration, $easing, $delay) {
+  animation: $animation $duration $easing $delay;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@include keyframes(load-right) {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.loading-bar {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  &__outer-wrapper {
+    background-color: var(--core-loading-bar-gutter, $core-loading-bar-gutter);
+    display: none; // hide this by default, only show with --loading or --transitioning modifier
+    contain: strict;
+    height: var(--loading-bar-height, $loading-bar-height);
+    left: 0;
+    opacity: 0; // start hidden, and only show if something has happened to make this visible
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    transition: opacity calc(var(--transition-duration-ms, 500) * 1ms);
+    width: 100%;
+    z-index: $loading-bar-z-index;
+    &--visible {
+      display: block;
+      opacity: 1;
+    }
+    &--fade-in {
+      opacity: 1;
+    }
+    &--fade-out {
+      opacity: 0;
+    }
+    &::before {
+      @include loadingBarTerminators;
+      background-color: var(--core-loading-bar-background, $core-loading-bar-background);
+      box-shadow: 0px 0px 0.5rem 0.25rem
+        var(--core-loading-bar-background, $core-loading-bar-background);
+      left: 0;
+    }
+  }
+  &__inner-wrapper {
+    background-color: var(--core-loading-bar-background, $core-loading-bar-background);
+    height: var(--loading-bar-height, $loading-bar-height);
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    position: relative;
+    top: 0;
+    transition: transform 0.25s ease;
+  }
+  &__indicator {
+    --ease-in-out-quartic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    background-color: var(--core-loading-bar, $core-loading-bar);
+    min-width: 0.5rem;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 0px 0.5rem 0.25rem var(--core-loading-bar, $core-loading-bar);
+    position: relative;
+    left: 0;
+    transition: transform 0.25s ease;
+    &::after {
+      @include loadingBarTerminators;
+      background-color: var(--core-loading-bar-glow, $core-loading-bar-glow);
+      box-shadow: 0px 0px 0.5rem 0.25rem var(--core-loading-bar-glow, $core-loading-bar-glow);
+      right: 0;
+    }
+    &--animated {
+      @include animate(load-right, 2s, var(--ease-in-out-quartic), 1s);
+      animation-iteration-count: infinite;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`workflow slice exists exists 1`] = `
+{
+  "analysisMode": null,
+  "openActivityNames": [],
+  "openIntervalName": "",
+  "stationGroup": {
+    "description": "",
+    "effectiveAt": -1,
+    "name": "",
+  },
+  "timeRange": {
+    "endTimeSecs": null,
+    "startTimeSecs": null,
+  },
+}
+`;
