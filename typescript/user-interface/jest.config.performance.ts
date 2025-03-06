@@ -7,7 +7,6 @@ const performanceConfig: Config = {
   projects: [
     '<rootDir>/packages/common-model/jest.config.performance.ts',
     '<rootDir>/packages/common-util/jest.config.performance.ts',
-    '<rootDir>/packages/mock-data-server/jest.config.performance.ts',
     '<rootDir>/packages/ui-app/jest.config.performance.ts',
     '<rootDir>/packages/ui-core-components/jest.config.performance.ts',
     '<rootDir>/packages/ui-electron/jest.config.performance.ts',

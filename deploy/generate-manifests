@@ -66,11 +66,11 @@ mkdir -p ${OUTPUT_DIR}
 # augmentations are applied to instances such that each augmentation is applied at least once in istio and non-isto
 
 echo Generating Kubernetes YAML manifest for ian...
-eval "gmskube install --dry-run --chart ian --tag ${TAG} --augment bastion --augment bridged-data-source-simulator --augment mock-data-server --augment mock-waveform-service --augment oracle name | ${SANITIZER} > ${OUTPUT_DIR}/ian"
+eval "gmskube install --dry-run --chart ian --tag ${TAG} --augment bastion --augment bridged-data-source-simulator --augment mock-waveform-service --augment oracle name | ${SANITIZER} > ${OUTPUT_DIR}/ian"
 filter_output "${OUTPUT_DIR}/ian"
 
 echo Generating Kubernetes YAML manifest for ian-no-istio...
-eval "gmskube install --dry-run --chart ian --tag ${TAG} --no-istio --augment bastion --augment bridged-data-source-simulator --augment mock-data-server --augment mock-waveform-service --augment oracle name | ${SANITIZER} > ${OUTPUT_DIR}/ian-no-istio"
+eval "gmskube install --dry-run --chart ian --tag ${TAG} --no-istio --augment bastion --augment bridged-data-source-simulator --augment mock-waveform-service --augment oracle name | ${SANITIZER} > ${OUTPUT_DIR}/ian-no-istio"
 filter_output "${OUTPUT_DIR}/ian-no-istio"
 
 echo Generating Kubernetes YAML manifest for logging...
