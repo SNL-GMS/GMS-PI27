@@ -13,7 +13,6 @@ const config: Config = {
     '<rootDir>',
     '<rootDir>/packages/common-model',
     '<rootDir>/packages/common-util',
-    '<rootDir>/packages/mock-data-server',
     '<rootDir>/packages/ui-app',
     '<rootDir>/packages/ui-core-components',
     '<rootDir>/packages/ui-electron',
@@ -27,7 +26,6 @@ const config: Config = {
   projects: [
     '<rootDir>/packages/common-model/jest.config.ts',
     '<rootDir>/packages/common-util/jest.config.ts',
-    '<rootDir>/packages/mock-data-server/jest.config.ts',
     '<rootDir>/packages/ui-app/jest.config.ts',
     '<rootDir>/packages/ui-core-components/jest.config.ts',
     '<rootDir>/packages/ui-electron/jest.config.ts',
